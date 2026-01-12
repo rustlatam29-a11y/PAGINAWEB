@@ -3,7 +3,7 @@ import { Download, Users, Server, Shield } from 'lucide-react';
 
 const SEOContent: React.FC = () => {
   return (
-    <section className="relative py-4 lg:py-6 bg-gradient-to-b from-black via-gray-900 to-black">
+    <section className="relative py-4 lg:py-6">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Main SEO Section */}

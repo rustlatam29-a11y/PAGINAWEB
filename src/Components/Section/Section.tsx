@@ -79,7 +79,7 @@ const About: React.FC<AboutProps> = () => {
   return (
     <section
       ref={sectionRef}
-      className="relative py-6 sm:py-8 lg:py-10 bg-gradient-to-b from-slate-900 via-gray-900 to-black overflow-hidden"
+      className="relative py-6 sm:py-8 lg:py-10 overflow-hidden"
     >
       {/* Animated Background - Optimizado */}
       <div className="absolute inset-0">

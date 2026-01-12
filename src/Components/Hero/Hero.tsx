@@ -26,12 +26,8 @@ const Hero: React.FC = () => {
 
   return (
     <section className="hero-section">
-      {/* Background animado */}
-      <div className="hero-background">
-        <div className="grid-overlay"></div>
-        <div className="particles-container" ref={particlesRef}></div>
-        <div className="gradient-overlay"></div>
-      </div>
+      {/* Partículas */}
+      <div className="particles-container" ref={particlesRef}></div>
 
       <div className="hero-container-center">
         
@@ -88,39 +84,17 @@ const Hero: React.FC = () => {
           display: flex;
           align-items: center;
           overflow: hidden;
-          background: #000000;
           padding: 6rem 0 2rem 0;
         }
 
-        .hero-background {
-          position: absolute;
+        .particles-container {
+          position: fixed;
           top: 0;
           left: 0;
           width: 100%;
           height: 100%;
           z-index: 1;
-        }
-
-        .grid-overlay {
-          position: absolute;
-          width: 100%;
-          height: 100%;
-          background-image: 
-            linear-gradient(rgba(220, 38, 38, 0.08) 1px, transparent 1px),
-            linear-gradient(90deg, rgba(220, 38, 38, 0.08) 1px, transparent 1px);
-          background-size: 50px 50px;
-          animation: gridScroll 20s linear infinite;
-        }
-
-        @keyframes gridScroll {
-          0% { transform: translate(0, 0); }
-          100% { transform: translate(50px, 50px); }
-        }
-
-        .particles-container {
-          position: absolute;
-          width: 100%;
-          height: 100%;
+          pointer-events: none;
         }
 
         .hero-particle {
@@ -144,19 +118,6 @@ const Hero: React.FC = () => {
             transform: translateY(-100vh) translateX(50px);
             opacity: 0;
           }
-        }
-
-        .gradient-overlay {
-          position: absolute;
-          width: 100%;
-          height: 100%;
-          background: radial-gradient(circle at 30% 50%, rgba(220, 38, 38, 0.15) 0%, transparent 50%);
-          animation: gradientPulse 4s ease-in-out infinite;
-        }
-
-        @keyframes gradientPulse {
-          0%, 100% { opacity: 0.5; }
-          50% { opacity: 1; }
         }
 
         .hero-container-center {
