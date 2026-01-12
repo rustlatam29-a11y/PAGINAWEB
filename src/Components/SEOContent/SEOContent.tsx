@@ -3,11 +3,11 @@ import { Download, Users, Server, Shield } from 'lucide-react';
 
 const SEOContent: React.FC = () => {
   return (
-    <section className="relative py-16 lg:py-20 bg-gradient-to-b from-black via-gray-900 to-black">
+    <section className="relative py-12 lg:py-16 bg-gradient-to-b from-black via-gray-900 to-black">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Main SEO Section */}
-        <div className="text-center mb-12 fade-in-up">
+        <div className="text-center mb-8 fade-in-up">
           <h2 className="text-3xl lg:text-5xl font-black text-white mb-6">
             Descarga <span className="text-red-500">Rust Gratis</span> y Únete a LATAMRUST
           </h2>
@@ -18,7 +18,7 @@ const SEOContent: React.FC = () => {
         </div>
 
         {/* Benefits Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-6 mb-8">
           <div className="bg-gray-800/50 backdrop-blur-lg rounded-xl p-6 border border-red-900/30 card-hover">
             <Download className="w-12 h-12 text-red-500 mb-4 icon-bounce" />
             <h3 className="text-xl font-bold text-white mb-2">Gratis para Siempre</h3>
@@ -45,12 +45,12 @@ const SEOContent: React.FC = () => {
         </div>
 
         {/* How to Download Section */}
-        <div className="bg-gradient-to-r from-red-900/20 to-gray-900/20 backdrop-blur-lg rounded-2xl p-8 lg:p-12 border border-red-900/30 mb-16 fade-in-up">
-          <h2 className="text-2xl lg:text-4xl font-black text-white mb-8 text-center">
+        <div className="bg-gradient-to-r from-red-900/20 to-gray-900/20 backdrop-blur-lg rounded-2xl p-6 lg:p-10 border border-red-900/30 mb-8 fade-in-up">
+          <h2 className="text-2xl lg:text-4xl font-black text-white mb-6 text-center">
             ¿Cómo Descargar Rust Gratis?
           </h2>
           
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-3 gap-6">
             <div className="text-center">
               <div className="w-16 h-16 bg-red-600 rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-black text-white">
                 1
@@ -84,12 +84,12 @@ const SEOContent: React.FC = () => {
         </div>
 
         {/* FAQ Section */}
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl lg:text-4xl font-black text-white mb-8 text-center">
+        <div className="max-w-4xl mx-auto mt-8">
+          <h2 className="text-3xl lg:text-4xl font-black text-white mb-6 text-center">
             Preguntas Frecuentes
           </h2>
           
-          <div className="space-y-4">
+          <div className="space-y-3">
             <div className="bg-gray-800/50 backdrop-blur-lg rounded-xl p-6 border border-gray-700/50">
               <h3 className="text-xl font-bold text-red-400 mb-3">¿Es gratis jugar Rust en LATAMRUST?</h3>
               <p className="text-gray-300">
@@ -126,7 +126,7 @@ const SEOContent: React.FC = () => {
         </div>
 
         {/* CTA Section */}
-        <div className="text-center mt-16">
+        <div className="text-center mt-10 lg:mt-12">
           <a
             href="https://discord.gg/dT8u5b3jga"
             target="_blank"
