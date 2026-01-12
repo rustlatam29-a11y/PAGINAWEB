@@ -696,13 +696,14 @@ const Hero: React.FC = () => {
           }
           
           .hero-actions {
-            flex-direction: column;
-            width: 100%;
+            flex-wrap: wrap;
+            gap: 1rem;
           }
           
           .btn-primary,
           .btn-secondary {
-            width: 100%;
+            flex: 1;
+            min-width: 140px;
             justify-content: center;
           }
         }
@@ -714,6 +715,15 @@ const Hero: React.FC = () => {
           
           .title-line:nth-child(2) {
             font-size: 2.5rem;
+          }
+          
+          .hero-actions {
+            flex-direction: column;
+          }
+          
+          .btn-primary,
+          .btn-secondary {
+            width: 100%;
           }
         }
           
