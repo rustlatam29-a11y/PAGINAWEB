@@ -74,7 +74,7 @@ const Loader: React.FC<LoaderProps> = ({ logoUrl = "/img1.webp", onLoadComplete 
         </h1>
         
         {/* Subtítulo */}
-        <p className="loading-subtitle">● ● ● SERVIDOR PREMIUM ● ● ●</p>
+        <p className="loading-subtitle">● ● ● SERVIDORES PIRATAS ● ● ●</p>
         
         {/* Barra de progreso moderna */}
         <div className="progress-container">
