@@ -1,5 +1,7 @@
 import React, { useState, useEffect, useMemo, useCallback } from "react";
 import { Menu, X, Users, Settings, Zap, MessageSquare, ExternalLink, Gamepad2, Phone } from "lucide-react";
+import LanguageSelector from "../LanguageSelector/LanguageSelector";
+import { useLanguage } from "../../context/LanguageContext";
 
 interface HeaderProps {
   discordInviteUrl?: string;
@@ -79,6 +81,7 @@ const Header: React.FC<HeaderProps> = ({
   discordInviteUrl = "https://discord.gg/M9ud76fnYu",
   logoUrl = "/img1.webp",
 }) => {
+  const { t } = useLanguage();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isLoaded, setIsLoaded] = useState(false);
   const [lettersVisible, setLettersVisible] = useState(false);
@@ -141,16 +144,16 @@ const Header: React.FC<HeaderProps> = ({
     () => [
       {
         icon: <Gamepad2 className="w-4 h-4 md:w-5 md:h-5" />,
-        text: "SERVIDOR DE DAYZ",
+        text: t('headerButton1'),
         href: "https://discord.gg/54zHAYmtzp",
       },
       {
         icon: <Phone className="w-4 h-4 md:w-5 md:h-5" />,
-        text: "COMPRA DE VIPS",
+        text: t('headerButton2'),
         href: "https://wa.me/+595972610336",
       },
     ],
-    [scrollToSection]
+    [scrollToSection, t]
   );
 
   const mobileNavigationItems: MobileNavItemProps[] = useMemo(
@@ -349,6 +352,8 @@ const Header: React.FC<HeaderProps> = ({
                   href={item.href}
                 />
               ))}
+              
+              <LanguageSelector />
 
               {/* Botón de Discord con estilo especial */}
               <button
