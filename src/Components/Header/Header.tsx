@@ -140,15 +140,8 @@ const Header: React.FC<HeaderProps> = ({
   const navigationItems: NavItemProps[] = useMemo(
     () => [
       {
-        icon: <Zap className="w-4 h-4 md:w-5 md:h-5" />,
-        text: "VER VIPS",
-        onClick: () => {
-          window.location.href = "/vips";
-        },
-      },
-      {
         icon: <Phone className="w-4 h-4 md:w-5 md:h-5" />,
-        text: "COMPRA DE VIPS",
+        text: "CONTACTO",
         href: "https://wa.me/+595972610336",
       },
     ],
@@ -158,17 +151,9 @@ const Header: React.FC<HeaderProps> = ({
   const mobileNavigationItems: MobileNavItemProps[] = useMemo(
     () => [
       {
-        icon: <Zap className="w-5 h-5" />,
-        text: "Ver VIPs",
-        delay: "0.1",
-        onClick: () => {
-          window.location.href = "/vips";
-        },
-      },
-      {
         icon: <Phone className="w-5 h-5" />,
-        text: "Compra de VIPs",
-        delay: "0.2",
+        text: "Contacto",
+        delay: "0.1",
         href: "https://wa.me/+595972610336",
       },
     ],

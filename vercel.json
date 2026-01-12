@@ -8,13 +8,6 @@
       "destination": "/index.html"
     }
   ],
-  "routes": [
-    {
-      "src": "/[^.]+",
-      "dest": "/",
-      "status": 200
-    }
-  ],
   "env": {
     "NODE_VERSION": "20.19.0"
   }
