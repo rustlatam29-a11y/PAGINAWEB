@@ -1,9 +1,63 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  
+  <!-- Home Page - Rust Pirata y DayZ Pirata -->
   <url>
     <loc>https://latamrust.vercel.app/</loc>
     <lastmod>2026-01-12</lastmod>
-    <changefreq>weekly</changefreq>
+    <changefreq>daily</changefreq>
     <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://latamrust.vercel.app/" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://latamrust.vercel.app/" />
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://latamrust.vercel.app/" />
+    <xhtml:link rel="alternate" hreflang="es-MX" href="https://latamrust.vercel.app/" />
+    <image:image>
+      <image:loc>https://latamrust.vercel.app/LATAMLOGO.webp</image:loc>
+      <image:title>LATAMRUST - Rust Pirata 2275 y DayZ 1.28 Gratis</image:title>
+      <image:caption>Servidor de Rust Pirata v2275 y DayZ 1.28 gratis para Brasil y LATAM</image:caption>
+    </image:image>
   </url>
+  
+  <!-- DayZ Server Page -->
+  <url>
+    <loc>https://latamrust.vercel.app/dayz</loc>
+    <lastmod>2026-01-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://latamrust.vercel.app/dayz" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://latamrust.vercel.app/dayz" />
+  </url>
+  
+  <!-- Reglas del Servidor -->
+  <url>
+    <loc>https://latamrust.vercel.app/reglas</loc>
+    <lastmod>2026-01-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://latamrust.vercel.app/reglas" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://latamrust.vercel.app/reglas" />
+  </url>
+  
+  <!-- Terms of Service -->
+  <url>
+    <loc>https://latamrust.vercel.app/terms</loc>
+    <lastmod>2026-01-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://latamrust.vercel.app/terms" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://latamrust.vercel.app/terms" />
+  </url>
+  
+  <!-- Privacy Policy -->
+  <url>
+    <loc>https://latamrust.vercel.app/privacy</loc>
+    <lastmod>2026-01-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://latamrust.vercel.app/privacy" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://latamrust.vercel.app/privacy" />
+  </url>
+  
 </urlset>

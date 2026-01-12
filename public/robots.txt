@@ -1,4 +1,26 @@
+# robots.txt for LATAMRUST - Rust Pirata 2275 y DayZ 1.28
 User-agent: *
 Allow: /
+Allow: /dayz
+Allow: /reglas
+Allow: /terms
+Allow: /privacy
 
+# Crawl delay (optional, be nice to bots)
+Crawl-delay: 1
+
+# Disallow admin/config if needed (none currently)
+# Disallow: /admin
+
+# Sitemap
 Sitemap: https://latamrust.vercel.app/sitemap.xml
+
+# User-agent specific (optional)
+User-agent: Googlebot
+Allow: /
+
+User-agent: Googlebot-Image
+Allow: /
+
+User-agent: Bingbot
+Allow: /
