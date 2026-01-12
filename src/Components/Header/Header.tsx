@@ -137,17 +137,12 @@ const Header: React.FC<HeaderProps> = ({
   );
 
   // Configuración de navegación
-  const navigationItems = useMemo(
+  const navigationItems: NavItemProps[] = useMemo(
     () => [
       {
         icon: <Trophy className="w-4 h-4 md:w-5 md:h-5" />,
         text: "Habla con nosotros",
         href: "https://discord.gg/dT8u5b3jga",
-      },
-      {
-        icon: <Settings className="w-4 h-4 md:w-5 md:h-5" />,
-        text: "SkyHosting",
-        onClick: () => scrollToSection("collaboration"),
       },
       {
         icon: <Trophy className="w-4 h-4 md:w-5 md:h-5" />,
@@ -158,7 +153,7 @@ const Header: React.FC<HeaderProps> = ({
     [scrollToSection]
   );
 
-  const mobileNavigationItems = useMemo(
+  const mobileNavigationItems: MobileNavItemProps[] = useMemo(
     () => [
       {
         icon: <Users className="w-5 h-5" />,
@@ -167,15 +162,9 @@ const Header: React.FC<HeaderProps> = ({
         onClick: () => scrollToSection("players"),
       },
       {
-        icon: <Trophy className="w-5 h-5" />,
-        text: "SkyHosting",
-        delay: "0.2",
-        onClick: () => scrollToSection("collaboration"),
-      },
-      {
         icon: <Settings className="w-5 h-5" />,
         text: "Reglas del servidor",
-        delay: "0.3",
+        delay: "0.2",
         onClick: () => scrollToSection("server"),
       },
     ],
@@ -403,6 +392,7 @@ const Header: React.FC<HeaderProps> = ({
                   text={item.text}
                   delay={item.delay}
                   onClick={item.onClick}
+                  href={item.href}
                 />
               ))}
 
