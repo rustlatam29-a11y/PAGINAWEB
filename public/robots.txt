@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://latamrust.vercel.app/sitemap.xml
