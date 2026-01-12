@@ -6,12 +6,10 @@ import {
   Users,
   Zap,
   Star,
-  Github,
-  Twitter,
-  Instagram,
   Award,
   Gamepad2,
   Coffee,
+  Bug,
 } from "lucide-react";
 
 interface AboutProps {
@@ -176,8 +174,8 @@ const About: React.FC<AboutProps> = () => {
         {/* Team Cards - Grid responsivo */}
         <div
           className={`grid ${
-            isMobile ? "grid-cols-1 gap-8" : "grid-cols-2 gap-8 lg:gap-12"
-          } max-w-5xl mx-auto`}
+            isMobile ? "grid-cols-1 gap-8" : "grid-cols-3 gap-8 lg:gap-10"
+          } max-w-7xl mx-auto`}
         >
           {/* Owner Card */}
           <TeamMemberCard
@@ -197,11 +195,7 @@ const About: React.FC<AboutProps> = () => {
               { label: "Jugadores Gestionados", value: "10K+" },
               { label: "Eventos Organizados", value: "200+" },
             ]}
-            socialLinks={[
-              { icon: <Twitter className="w-4 lg:w-5 h-4 lg:h-5" />, url: "#", color: "hover:text-blue-400" },
-              { icon: <Instagram className="w-4 lg:w-5 h-4 lg:h-5" />, url: "#", color: "hover:text-pink-400" },
-              { icon: <Gamepad2 className="w-4 lg:w-5 h-4 lg:h-5" />, url: "#", color: "hover:text-green-400" },
-            ]}
+            socialLinks={[]}
             isVisible={isVisible}
             delay="0.5s"
             onHover={() => !isMobile && setActiveCard(1)}
@@ -228,16 +222,39 @@ const About: React.FC<AboutProps> = () => {
               { label: "Cafés por Día", value: "∞" },
               { label: "Bugs Solucionados", value: "9,999+" },
             ]}
-            socialLinks={[
-              { icon: <Github className="w-4 lg:w-5 h-4 lg:h-5" />, url: "#", color: "hover:text-gray-400" },
-              { icon: <Twitter className="w-4 lg:w-5 h-4 lg:h-5" />, url: "#", color: "hover:text-blue-400" },
-              { icon: <Code className="w-4 lg:w-5 h-4 lg:h-5" />, url: "#", color: "hover:text-purple-400" },
-            ]}
+            socialLinks={[]}
             isVisible={isVisible}
             delay={isMobile ? "0.7s" : "0.8s"}
             onHover={() => !isMobile && setActiveCard(2)}
             onLeave={() => !isMobile && setActiveCard(null)}
             isActive={activeCard === 2}
+            isMobile={isMobile}
+          />
+
+          {/* AntiCheat Developer Card */}
+          <TeamMemberCard
+            name="Sergioklv"
+            role="Desarrollador de AntiCheat"
+            description="Experto en seguridad y sistemas anticheat. Mantiene el servidor limpio y libre de hackers, desarrollando soluciones personalizadas para proteger la experiencia de juego."
+            avatar="/Sergioklv.png"
+            specialties={[
+              { icon: <Shield className="w-4 lg:w-5 h-4 lg:h-5" />, text: "AntiCheat Dev" },
+              { icon: <Bug className="w-4 lg:w-5 h-4 lg:h-5" />, text: "Bug Hunter" },
+              { icon: <Code className="w-4 lg:w-5 h-4 lg:h-5" />, text: "Security Expert" },
+              { icon: <Zap className="w-4 lg:w-5 h-4 lg:h-5" />, text: "Performance" },
+            ]}
+            stats={[
+              { label: "Hackers Baneados", value: "5,000+" },
+              { label: "Sistemas Creados", value: "20+" },
+              { label: "Uptime del Sistema", value: "99.9%" },
+              { label: "Detecciones/Día", value: "500+" },
+            ]}
+            socialLinks={[]}
+            isVisible={isVisible}
+            delay={isMobile ? "0.9s" : "1.1s"}
+            onHover={() => !isMobile && setActiveCard(3)}
+            onLeave={() => !isMobile && setActiveCard(null)}
+            isActive={activeCard === 3}
             isMobile={isMobile}
           />
 
@@ -276,6 +293,13 @@ const About: React.FC<AboutProps> = () => {
               <div className="text-center">
                 <div className="text-purple-300 font-semibold text-base lg:text-lg mb-1">GalpónTech</div>
                 <div className="text-gray-400/75 text-xs lg:text-sm tracking-wide">Developer</div>
+              </div>
+              {!isMobile && (
+                <div className="w-px h-10 bg-gradient-to-b from-transparent via-gray-500/30 to-transparent"></div>
+              )}
+              <div className="text-center">
+                <div className="text-green-300 font-semibold text-base lg:text-lg mb-1">Sergioklv</div>
+                <div className="text-gray-400/75 text-xs lg:text-sm tracking-wide">AntiCheat Dev</div>
               </div>
             </div>
           </div>
@@ -568,17 +592,19 @@ const TeamMemberCard: React.FC<TeamMemberCardProps> = ({
         </div>
 
         {/* Social Links - Touch friendly */}
-        <div className="flex justify-center space-x-3 lg:space-x-4">
-          {socialLinks.map((link, index) => (
-            <a
-              key={index}
-              href={link.url}
-              className={`p-2 lg:p-3 bg-white/10 rounded-full text-gray-400 transition-all duration-300 transform hover:scale-110 active:scale-95 touch-manipulation ${link.color}`}
-            >
-              {link.icon}
-            </a>
-          ))}
-        </div>
+        {socialLinks.length > 0 && (
+          <div className="flex justify-center space-x-3 lg:space-x-4">
+            {socialLinks.map((link, index) => (
+              <a
+                key={index}
+                href={link.url}
+                className={`p-2 lg:p-3 bg-white/10 rounded-full text-gray-400 transition-all duration-300 transform hover:scale-110 active:scale-95 touch-manipulation ${link.color}`}
+              >
+                {link.icon}
+              </a>
+            ))}
+          </div>
+        )}
       </div>
     </div>
   );
