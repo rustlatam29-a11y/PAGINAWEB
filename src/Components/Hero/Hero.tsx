@@ -1,315 +1,881 @@
-import React, { useState, useEffect, useMemo, useCallback } from "react";
-import { Play, Users, Server, Zap, Trophy, Shield, Sword, Target, ArrowRight, Star } from "lucide-react";
-
-// Componentes separados para mejor organización y re-renderizado
-const FeatureIcon: React.FC<{ icon: React.ReactNode; text: string }> = React.memo(({ icon, text }) => (
-  <div className="flex items-center space-x-2 bg-black/40 backdrop-blur-sm px-4 py-2 rounded-full border border-red-900/30 hover:bg-red-950/40 hover:border-red-800/50 transition-all duration-300 transform hover:scale-110">
-    <div className="text-red-400">{icon}</div>
-    <span className="text-gray-100 font-bold">{text}</span>
-  </div>
-));
-
-const StatCard: React.FC<{
-  icon: React.ReactNode;
-  value: string | number;
-  label: string;
-  max?: string;
-  animate: boolean;
-}> = React.memo(({ icon, value, label, max, animate }) => (
-  <div
-    className={`text-center p-4 bg-black/30 rounded-xl border border-red-900/20 hover:bg-black/40 hover:border-red-800/30 transition-all duration-300 transform ${
-      animate ? "hover:scale-105" : ""
-    }`}
-  >
-    <div className="flex justify-center mb-2">{icon}</div>
-    <div className="text-2xl font-black text-white">
-      {value}
-      {max && <span className="text-sm text-gray-400">/{max}</span>}
-    </div>
-    <div className="text-gray-300 text-sm font-medium">{label}</div>
-  </div>
-));
-
-const FeatureCard: React.FC<{
-  title: string;
-  subtitle: string;
-  color: string;
-}> = React.memo(({ title, subtitle, color }) => (
-  <div
-    className={`bg-gradient-to-r ${color} p-4 rounded-xl shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 border border-red-900/20`}
-  >
-    <h4 className="text-white font-bold text-lg">{title}</h4>
-    <p className="text-white/80 text-sm">{subtitle}</p>
-  </div>
-));
+import React, { useState, useEffect, useRef } from "react";
+import { Download, Play, Users, Server, Activity, Star } from "lucide-react";
 
 const Hero: React.FC = () => {
-  const [textVisible, setTextVisible] = useState(false);
-  const [statsVisible, setStatsVisible] = useState(false);
-  const [currentPlayer, setCurrentPlayer] = useState(105);
-  const [currentLatency, setCurrentLatency] = useState(32);
-  const [isLoaded, setIsLoaded] = useState(false);
+  const [playerCount, setPlayerCount] = useState(0);
+  const particlesRef = useRef<HTMLDivElement>(null);
 
-  // Memoizar valores que no cambian
-  const heroText = useMemo(() => "RUST GRATIS".split(""), []);
-  const subText = useMemo(() => "Servidor Pirata v2275 • Grátis BR•ES • Jogue Agora!".split(""), []);
-
-  // Optimización del intervalo de jugadores
-  const updatePlayerCount = useCallback(() => {
-    setCurrentPlayer((prev) => {
-      const change = Math.floor(Math.random() * 3) - 1;
-      return Math.max(50, Math.min(160, prev + change)); // Limitar entre 50 y 160
-    });
-  }, []);
-
-  // Optimización del intervalo de latencia
-  const updateLatency = useCallback(() => {
-    setCurrentLatency((prev) => {
-      const change = Math.floor(Math.random() * 3) - 1;
-      return Math.max(20, Math.min(50, prev + change)); // Limitar entre 20ms y 50ms
-    });
-  }, []);
-
+  // Animación del contador de jugadores
   useEffect(() => {
-    const loadTimer = setTimeout(() => setIsLoaded(true), 200);
-    const textTimer = setTimeout(() => setTextVisible(true), 800);
-    const statsTimer = setTimeout(() => setStatsVisible(true), 1400);
-
-    const playerInterval = setInterval(updatePlayerCount, 3000);
-    const latencyInterval = setInterval(updateLatency, 3000);
-
-    return () => {
-      clearTimeout(loadTimer);
-      clearTimeout(textTimer);
-      clearTimeout(statsTimer);
-      clearInterval(playerInterval);
-      clearInterval(latencyInterval);
+    const animateCounter = (start: number, end: number, duration: number) => {
+      const range = end - start;
+      const increment = range / (duration / 16);
+      let current = start;
+      
+      const timer = setInterval(() => {
+        current += increment;
+        if (current >= end) {
+          current = end;
+          clearInterval(timer);
+        }
+        setPlayerCount(Math.floor(current));
+      }, 16);
     };
-  }, [updatePlayerCount, updateLatency]);
 
-  // Generar partículas una sola vez
-  const particles = useMemo(
-    () =>
-      Array.from({ length: 30 }, (_, i) => ({
-        id: i,
-        left: `${Math.random() * 100}%`,
-        top: `${Math.random() * 100}%`,
-        delay: `${Math.random() * 5}s`,
-        duration: `${4 + Math.random() * 4}s`,
-      })),
-    []
-  );
+    animateCounter(0, 107, 2000);
+
+    // Simular cambios de jugadores cada 10 segundos
+    const interval = setInterval(() => {
+      const newCount = playerCount + Math.floor(Math.random() * 5) - 2;
+      const clampedCount = Math.max(95, Math.min(160, newCount));
+      animateCounter(playerCount, clampedCount, 1000);
+    }, 10000);
+
+    return () => clearInterval(interval);
+  }, [playerCount]);
+
+  // Crear partículas
+  useEffect(() => {
+    if (!particlesRef.current) return;
+    
+    const container = particlesRef.current;
+    const particleCount = 30;
+    
+    for (let i = 0; i < particleCount; i++) {
+      const particle = document.createElement('div');
+      particle.className = 'hero-particle';
+      particle.style.cssText = `
+        left: ${Math.random() * 100}%;
+        top: ${Math.random() * 100}%;
+        animation-delay: ${Math.random() * 5}s;
+        animation-duration: ${Math.random() * 20 + 10}s;
+      `;
+      container.appendChild(particle);
+    }
+  }, []);
+
+  const percentage = (playerCount / 160) * 100;
 
   return (
-    <section className="relative min-h-screen bg-gradient-to-br from-black via-red-950 to-neutral-950 overflow-hidden flex items-center">
-      {/* Animated Background Elements */}
-      <div className="absolute inset-0">
-        {/* Rust-themed background */}
-        <div className="absolute inset-0 opacity-30 bg-[url('data:image/svg+xml,%3Csvg width=\'100\' height=\'100\' viewBox=\'0 0 100 100\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cg fill=\'none\' fill-rule=\'evenodd\'%3E%3Cg fill=\'%23ff6b35\' fill-opacity=\'0.03\'%3E%3Cpath d=\'M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z\'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')]" />
-
-        {/* Floating particles */}
-        {particles.map(({ id, left, top, delay, duration }) => (
-          <div
-            key={id}
-            className={`absolute w-1 h-1 bg-gradient-to-r from-red-800 to-red-950 rounded-full ${
-              isLoaded ? "animate-float-random" : "opacity-0"
-            }`}
-            style={{
-              left,
-              top,
-              animationDelay: delay,
-              animationDuration: duration,
-            }}
-          />
-        ))}
-
-        {/* Glowing orbs */}
-        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-red-900/10 rounded-full blur-3xl animate-pulse" />
-        <div
-          className="absolute top-1/2 right-1/4 w-80 h-80 bg-red-950/15 rounded-full blur-3xl animate-pulse"
-          style={{ animationDelay: "2s" }}
-        />
-        <div
-          className="absolute bottom-1/4 left-1/2 w-64 h-64 bg-neutral-900/10 rounded-full blur-3xl animate-pulse"
-          style={{ animationDelay: "4s" }}
-        />
+    <section className="hero-section">
+      {/* Background animado */}
+      <div className="hero-background">
+        <div className="grid-overlay"></div>
+        <div className="particles-container" ref={particlesRef}></div>
+        <div className="gradient-overlay"></div>
       </div>
 
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 w-full">
-        <div className="grid lg:grid-cols-2 gap-8 md:gap-12 items-center">
-          {/* Left Column - Text Content */}
-          <div className="text-center lg:text-left space-y-6 md:space-y-8">
-            {/* Main Title */}
-            <div className="space-y-4">
-              <div className="flex flex-wrap justify-center lg:justify-start gap-1 md:gap-2">
-                {heroText.map((letter, index) => (
-                  <span
-                    key={index}
-                    className={`inline-block text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-black transform transition-all duration-700 ${
-                      textVisible ? "translate-y-0 opacity-100 text-white" : "translate-y-16 opacity-0"
-                    } hover:scale-110 hover:text-red-400 cursor-default ${letter === " " ? "w-4 md:w-6" : ""}`}
-                    style={{
-                      transitionDelay: `${index * 100}ms`,
-                      textShadow: "0 0 30px rgba(127, 29, 29, 0.8), 0 0 60px rgba(0, 0, 0, 0.6)",
-                      fontFamily: "Impact, Arial Black, sans-serif",
-                    }}
-                  >
-                    {letter}
-                  </span>
-                ))}
-              </div>
-
-              {/* Subtitle */}
-              <div className="flex flex-wrap justify-center lg:justify-start gap-1">
-                {subText.map((letter, index) => (
-                  <span
-                    key={index}
-                    className={`inline-block text-lg sm:text-xl lg:text-2xl font-bold transform transition-all duration-500 ${
-                      textVisible ? "translate-y-0 opacity-100 text-gray-300" : "translate-y-8 opacity-0"
-                    } ${letter === " " ? "w-1 md:w-2" : ""}`}
-                    style={{
-                      transitionDelay: `${800 + index * 30}ms`,
-                    }}
-                  >
-                    {letter}
-                  </span>
-                ))}
-              </div>
-            </div>
-
-            {/* Feature Icons */}
-            <div
-              className={`flex flex-wrap justify-center lg:justify-start gap-4 md:gap-6 transform transition-all duration-1000 ${
-                textVisible ? "translate-y-0 opacity-100" : "translate-y-12 opacity-0"
-              }`}
-              style={{ transitionDelay: "1.5s" }}
-            >
-              <FeatureIcon icon={<Sword className="w-5 h-5 md:w-6 md:h-6" />} text="PVP" />
-              <FeatureIcon icon={<Shield className="w-5 h-5 md:w-6 md:h-6" />} text="Clanes" />
-              <FeatureIcon icon={<Target className="w-5 h-5 md:w-6 md:h-6" />} text="Raids" />
-              <FeatureIcon icon={<Trophy className="w-5 h-5 md:w-6 md:h-6" />} text="Eventos" />
-            </div>
-
-            {/* Action Buttons */}
-            <div
-              className={`flex flex-col sm:flex-row gap-4 md:gap-6 justify-center lg:justify-start transform transition-all duration-1000 ${
-                textVisible ? "translate-y-0 opacity-100" : "translate-y-16 opacity-0"
-              }`}
-              style={{ transitionDelay: "2s" }}
-            >
-              <a
-                href="https://gofile.io/d/SR1o8T"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="group relative px-6 py-3 sm:px-8 sm:py-4 md:px-10 md:py-5 bg-gradient-to-r from-green-600 via-green-700 to-emerald-700 text-white font-bold sm:font-black text-lg md:text-xl rounded-xl md:rounded-2xl shadow-lg md:shadow-2xl transform hover:scale-105 sm:hover:scale-110 transition-all duration-300 overflow-hidden inline-block border border-green-800/30"
-              >
-                <div className="absolute inset-0 bg-gradient-to-r from-green-500 to-emerald-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                <div className="absolute inset-0 -translate-x-full group-hover:translate-x-full bg-gradient-to-r from-transparent via-white/30 to-transparent skew-x-12 transition-transform duration-1000" />
-                <span className="relative flex items-center space-x-5 sm:space-x-5">
-                  <Play className="w-10 h-10 md:w-10 md:h-10 group-hover:animate-pulse" />
-                  <span>DESCARGAR - BAIXAR</span>
-                  <ArrowRight className="w-5 h-5 md:w-6 md:h-6 group-hover:translate-x-1 sm:group-hover:translate-x-2 transition-transform duration-300" />
-                </span>
-              </a>
-              <a
-                href="https://www.youtube.com/watch?v=ZNTfR90nPtg"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="group relative px-6 py-3 sm:px-8 sm:py-4 md:px-10 md:py-5 bg-black/40 text-white font-bold text-lg md:text-xl rounded-xl md:rounded-2xl backdrop-blur-sm border-2 border-red-900/40 hover:border-red-700 hover:bg-red-950/40 transform hover:scale-105 transition-all duration-300 inline-block"
-              >
-                <span className="flex items-center space-x-2 sm:space-x-3">
-                  <div className="w-5 h-5 md:w-6 md:h-6 border-2 border-current rounded-full flex items-center justify-center">
-                    <div className="w-0 h-0 border-l-4 border-l-current border-y-2 border-y-transparent ml-0.5 md:ml-1" />
-                  </div>
-                  <span>VER TRAILER</span>
-                </span>
-              </a>
-            </div>
+      <div className="hero-container">
+        
+        {/* Lado Izquierdo: Contenido Principal */}
+        <div className="hero-content">
+          
+          {/* Título Principal con Animación */}
+          <div className="hero-title-wrapper">
+            <h1 className="hero-title">
+              <span className="title-line">RUST</span>
+              <span className="title-line gradient-text">GRATIS</span>
+            </h1>
+            <div className="title-underline"></div>
           </div>
-
-          {/* Right Column - Stats */}
-          <div className="space-y-6 md:space-y-8">
-            <div
-              className={`bg-black/50 backdrop-blur-lg rounded-2xl md:rounded-3xl p-6 md:p-8 border border-red-900/30 shadow-xl md:shadow-2xl transform transition-all duration-1000 ${
-                statsVisible ? "translate-x-0 opacity-100" : "translate-x-16 opacity-0"
-              }`}
-            >
-              <div className="flex items-center justify-between mb-4 md:mb-6">
-                <h3 className="text-xl md:text-2xl font-bold text-white">Estado del Servidor</h3>
-                <div className="flex items-center space-x-2">
-                  <div className="w-3 h-3 md:w-4 md:h-4 bg-green-500 rounded-full animate-ping" />
-                  <span className="text-green-400 font-bold text-sm md:text-base">ONLINE</span>
-                </div>
-              </div>
-
-              <div className="grid grid-cols-2 gap-4 md:gap-6">
-                <StatCard
-                  icon={<Users className="w-6 h-6 md:w-8 md:h-8 text-red-400" />}
-                  value={currentPlayer}
-                  label="Jugadores"
-                  max="160"
-                  animate={statsVisible}
-                />
-                <StatCard
-                  icon={<Server className="w-6 h-6 md:w-8 md:h-8 text-red-500" />}
-                  value={`${currentLatency}ms`}
-                  label="Latencia"
-                  animate={statsVisible}
-                />
-                <StatCard
-                  icon={<Zap className="w-6 h-6 md:w-8 md:h-8 text-red-400" />}
-                  value="99.9%"
-                  label="Uptime"
-                  animate={statsVisible}
-                />
-                <StatCard
-                  icon={<Star className="w-6 h-6 md:w-8 md:h-8 text-red-500" />}
-                  value="4.9/5"
-                  label="Rating"
-                  animate={statsVisible}
-                />
-              </div>
-            </div>
-
-            {/* Server Features */}
-            <div
-              className={`grid grid-cols-1 sm:grid-cols-2 gap-3 md:gap-4 transform transition-all duration-1000 ${
-                statsVisible ? "translate-x-0 opacity-100" : "translate-x-20 opacity-0"
-              }`}
-              style={{ transitionDelay: "0.3s" }}
-            >
-              <FeatureCard title="Reinicio Semanal" subtitle="Mundo renovado cada 7 días" color="from-red-900 to-red-950" />
-              <FeatureCard title="ANTI-DDOS" subtitle="Sistema anti-trampas avanzado" color="from-neutral-900 to-red-950" />
-              <FeatureCard title="Actividades Diarias" subtitle="Eventos programados" color="from-red-950 to-black" />
-              <FeatureCard title="Asistencia 24/7" subtitle="Equipo de soporte disponible" color="from-black to-red-900" />
-            </div>
+          
+          {/* Subtítulo */}
+          <div className="hero-subtitle">
+            <p className="subtitle-text">
+              Servidor Pirata v2275 • Gratis BR•ES
+            </p>
+            <p className="subtitle-cta">• Jogue Agora!</p>
           </div>
+          
+          {/* Botones de Acción */}
+          <div className="hero-actions">
+            <a href="https://discord.gg/dT8u5b3jga" target="_blank" rel="noopener noreferrer" className="btn-primary">
+              <span className="btn-icon">
+                <Download className="w-6 h-6" />
+              </span>
+              <span className="btn-text">
+                <span className="btn-label">DESCARGAR</span>
+                <span className="btn-subtitle">Baixar Agora</span>
+              </span>
+              <span className="btn-arrow">→</span>
+            </a>
+            
+            <button className="btn-secondary">
+              <span className="btn-icon">
+                <Play className="w-5 h-5" fill="currentColor" />
+              </span>
+              <span className="btn-text">Ver Tráiler</span>
+            </button>
+          </div>
+          
         </div>
+        
+        {/* Lado Derecho: Estado del Servidor (ANIMADO) */}
+        <div className="server-status-card">
+          
+          {/* Header con pulse */}
+          <div className="status-header">
+            <h3 className="status-title">Estado del Servidor</h3>
+            <div className="status-indicator">
+              <div className="pulse-dot"></div>
+              <span className="status-text">ONLINE</span>
+            </div>
+          </div>
+          
+          {/* Stats Grid con animaciones */}
+          <div className="stats-grid">
+            
+            {/* Stat 1: Jugadores */}
+            <div className="stat-item">
+              <div className="stat-icon">
+                <Users className="w-10 h-10" />
+              </div>
+              <div className="stat-content">
+                <div className="stat-value">{playerCount}</div>
+                <div className="stat-max">/160</div>
+              </div>
+              <div className="stat-label">Jugadores</div>
+              <div className="stat-bar">
+                <div className="stat-bar-fill" style={{ width: `${percentage}%` }}></div>
+              </div>
+            </div>
+            
+            {/* Stat 2: Latencia */}
+            <div className="stat-item">
+              <div className="stat-icon">
+                <Server className="w-10 h-10" />
+              </div>
+              <div className="stat-content">
+                <div className="stat-value">33<span className="stat-unit">ms</span></div>
+              </div>
+              <div className="stat-label">Latencia</div>
+              <div className="latency-indicator excellent">
+                <div className="latency-bar"></div>
+                <div className="latency-bar"></div>
+                <div className="latency-bar"></div>
+                <div className="latency-bar"></div>
+              </div>
+            </div>
+            
+            {/* Stat 3: Uptime */}
+            <div className="stat-item">
+              <div className="stat-icon">
+                <Activity className="w-10 h-10" />
+              </div>
+              <div className="stat-content">
+                <div className="stat-value">99.9<span className="stat-unit">%</span></div>
+              </div>
+              <div className="stat-label">Uptime</div>
+              <div className="uptime-ring">
+                <svg viewBox="0 0 36 36" className="w-10 h-10">
+                  <path className="uptime-bg" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"/>
+                  <path className="uptime-progress" strokeDasharray="99.9, 100" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"/>
+                </svg>
+              </div>
+            </div>
+            
+            {/* Stat 4: Rating */}
+            <div className="stat-item">
+              <div className="stat-icon">
+                <Star className="w-10 h-10" fill="currentColor" />
+              </div>
+              <div className="stat-content">
+                <div className="stat-value">4.9<span className="stat-unit">/5</span></div>
+              </div>
+              <div className="stat-label">Rating</div>
+              <div className="rating-stars">
+                <span className="star filled">★</span>
+                <span className="star filled">★</span>
+                <span className="star filled">★</span>
+                <span className="star filled">★</span>
+                <span className="star half">★</span>
+              </div>
+            </div>
+            
+          </div>
+          
+          {/* Footer con info adicional */}
+          <div className="status-footer">
+            <div className="footer-item">
+              <div className="footer-icon">🔄</div>
+              <div className="footer-text">
+                <div className="footer-label">Reinicio Semanal</div>
+                <div className="footer-value">Mundo renovado cada 7 días</div>
+              </div>
+            </div>
+            
+            <div className="footer-item">
+              <div className="footer-icon">🛡️</div>
+              <div className="footer-text">
+                <div className="footer-label">ANTI-DDOS</div>
+                <div className="footer-value">Sistema anti-trampas avanzado</div>
+              </div>
+            </div>
+            
+            <div className="footer-item">
+              <div className="footer-icon">📅</div>
+              <div className="footer-text">
+                <div className="footer-label">Actividades Diarias</div>
+                <div className="footer-value">Eventos programados</div>
+              </div>
+            </div>
+            
+            <div className="footer-item">
+              <div className="footer-icon">💬</div>
+              <div className="footer-text">
+                <div className="footer-label">Asistencia 24/7</div>
+                <div className="footer-value">Equipo de soporte disponible</div>
+              </div>
+            </div>
+          </div>
+          
+        </div>
+        
       </div>
 
-      {/* Custom animations */}
+      {/* Estilos CSS integrados */}
       <style>{`
-        @keyframes float-random {
-          0%, 100% {
-            transform: translate(0, 0) rotate(0deg);
-            opacity: 0.5;
+        .hero-section {
+          position: relative;
+          min-height: 100vh;
+          display: flex;
+          align-items: center;
+          overflow: hidden;
+          background: #000000;
+          padding: 6rem 0 2rem 0;
+        }
+
+        .hero-background {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          z-index: 1;
+        }
+
+        .grid-overlay {
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          background-image: 
+            linear-gradient(rgba(220, 38, 38, 0.08) 1px, transparent 1px),
+            linear-gradient(90deg, rgba(220, 38, 38, 0.08) 1px, transparent 1px);
+          background-size: 50px 50px;
+          animation: gridScroll 20s linear infinite;
+        }
+
+        @keyframes gridScroll {
+          0% { transform: translate(0, 0); }
+          100% { transform: translate(50px, 50px); }
+        }
+
+        .particles-container {
+          position: absolute;
+          width: 100%;
+          height: 100%;
+        }
+
+        .hero-particle {
+          position: absolute;
+          width: 2px;
+          height: 2px;
+          background: #dc2626;
+          border-radius: 50%;
+          opacity: 0.3;
+          animation: particleFloat 15s linear infinite;
+        }
+
+        @keyframes particleFloat {
+          0% {
+            transform: translateY(0) translateX(0);
+            opacity: 0;
           }
-          25% {
-            transform: translate(10px, -15px) rotate(90deg);
-            opacity: 1;
-          }
-          50% {
-            transform: translate(-5px, -25px) rotate(180deg);
-            opacity: 0.7;
-          }
-          75% {
-            transform: translate(-15px, -10px) rotate(270deg);
-            opacity: 1;
+          10% { opacity: 0.5; }
+          90% { opacity: 0.5; }
+          100% {
+            transform: translateY(-100vh) translateX(50px);
+            opacity: 0;
           }
         }
 
-        .animate-float-random {
-          animation: float-random 6s ease-in-out infinite;
+        .gradient-overlay {
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          background: radial-gradient(circle at 30% 50%, rgba(220, 38, 38, 0.15) 0%, transparent 50%);
+          animation: gradientPulse 4s ease-in-out infinite;
+        }
+
+        @keyframes gradientPulse {
+          0%, 100% { opacity: 0.5; }
+          50% { opacity: 1; }
+        }
+
+        .hero-container {
+          position: relative;
+          z-index: 10;
+          max-width: 1400px;
+          margin: 0 auto;
+          padding: 0 2rem;
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          gap: 4rem;
+          align-items: center;
+        }
+
+        .hero-content {
+          display: flex;
+          flex-direction: column;
+          gap: 2rem;
+        }
+
+        .hero-title {
+          margin: 0;
+          line-height: 0.9;
+        }
+
+        .title-line {
+          display: block;
+          font-size: 5rem;
+          font-weight: 900;
+          letter-spacing: -2px;
+          color: #ffffff;
+          text-shadow: 
+            0 0 20px rgba(255, 255, 255, 0.3),
+            0 0 40px rgba(220, 38, 38, 0.2);
+          animation: titleAppear 1s ease-out both;
+        }
+
+        .title-line:nth-child(2) {
+          animation-delay: 0.2s;
+        }
+
+        @keyframes titleAppear {
+          from {
+            opacity: 0;
+            transform: translateY(30px);
+          }
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+
+        .gradient-text {
+          background: linear-gradient(135deg, #dc2626 0%, #ff4444 50%, #dc2626 100%);
+          background-size: 200% auto;
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          background-clip: text;
+          animation: textShine 3s linear infinite;
+        }
+
+        @keyframes textShine {
+          0% { background-position: 0% center; }
+          100% { background-position: 200% center; }
+        }
+
+        .title-underline {
+          height: 6px;
+          background: linear-gradient(90deg, #dc2626, transparent);
+          margin-top: 1rem;
+          border-radius: 3px;
+          animation: underlineGrow 1s ease-out 0.5s both;
+        }
+
+        @keyframes underlineGrow {
+          from { width: 0; }
+          to { width: 100%; }
+        }
+
+        .hero-subtitle {
+          animation: fadeIn 1s ease-out 0.7s both;
+        }
+
+        .subtitle-text {
+          font-size: 1.25rem;
+          color: rgba(255, 255, 255, 0.8);
+          margin: 0 0 0.5rem 0;
+          font-weight: 500;
+          letter-spacing: 1px;
+        }
+
+        .subtitle-cta {
+          font-size: 1.1rem;
+          color: #dc2626;
+          margin: 0;
+          font-weight: 700;
+          text-shadow: 0 0 10px rgba(220, 38, 38, 0.5);
+        }
+
+        @keyframes fadeIn {
+          from { opacity: 0; transform: translateY(20px); }
+          to { opacity: 1; transform: translateY(0); }
+        }
+
+        .hero-actions {
+          display: flex;
+          gap: 1rem;
+          flex-wrap: wrap;
+          animation: fadeIn 1s ease-out 0.9s both;
+        }
+
+        .btn-primary {
+          display: flex;
+          align-items: center;
+          gap: 1rem;
+          padding: 1.25rem 2rem;
+          background: linear-gradient(135deg, #16a34a 0%, #15803d 100%);
+          border: none;
+          border-radius: 12px;
+          text-decoration: none;
+          color: #ffffff;
+          font-weight: 700;
+          transition: all 0.3s ease;
+          position: relative;
+          overflow: hidden;
+          box-shadow: 0 10px 30px rgba(22, 163, 74, 0.3);
+          cursor: pointer;
+        }
+
+        .btn-primary::before {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: -100%;
+          width: 100%;
+          height: 100%;
+          background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+          transition: left 0.5s ease;
+        }
+
+        .btn-primary:hover::before {
+          left: 100%;
+        }
+
+        .btn-primary:hover {
+          transform: translateY(-3px);
+          box-shadow: 0 15px 40px rgba(22, 163, 74, 0.5);
+        }
+
+        .btn-icon {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+
+        .btn-text {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 0.15rem;
+        }
+
+        .btn-label {
+          font-size: 1.1rem;
+          letter-spacing: 1px;
+        }
+
+        .btn-subtitle {
+          font-size: 0.75rem;
+          opacity: 0.9;
+          font-weight: 500;
+        }
+
+        .btn-arrow {
+          font-size: 1.5rem;
+          transition: transform 0.3s ease;
+        }
+
+        .btn-primary:hover .btn-arrow {
+          transform: translateX(5px);
+        }
+
+        .btn-secondary {
+          display: flex;
+          align-items: center;
+          gap: 0.75rem;
+          padding: 1.25rem 2rem;
+          background: rgba(255, 255, 255, 0.05);
+          border: 2px solid rgba(220, 38, 38, 0.3);
+          border-radius: 12px;
+          color: #ffffff;
+          font-weight: 700;
+          font-size: 1rem;
+          transition: all 0.3s ease;
+          backdrop-filter: blur(10px);
+          cursor: pointer;
+        }
+
+        .btn-secondary:hover {
+          background: rgba(220, 38, 38, 0.1);
+          border-color: rgba(220, 38, 38, 0.6);
+          transform: translateY(-3px);
+          box-shadow: 0 10px 30px rgba(220, 38, 38, 0.3);
+        }
+
+        .server-status-card {
+          background: rgba(0, 0, 0, 0.7);
+          border: 1px solid rgba(220, 38, 38, 0.3);
+          border-radius: 16px;
+          padding: 2rem;
+          backdrop-filter: blur(20px);
+          box-shadow: 
+            0 20px 60px rgba(0, 0, 0, 0.5),
+            inset 0 0 40px rgba(220, 38, 38, 0.05);
+          animation: cardFloat 3s ease-in-out infinite;
+        }
+
+        @keyframes cardFloat {
+          0%, 100% { transform: translateY(0); }
+          50% { transform: translateY(-10px); }
+        }
+
+        .status-header {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          margin-bottom: 2rem;
+          padding-bottom: 1rem;
+          border-bottom: 1px solid rgba(220, 38, 38, 0.2);
+        }
+
+        .status-title {
+          margin: 0;
+          font-size: 1.5rem;
+          font-weight: 700;
+          color: #ffffff;
+        }
+
+        .status-indicator {
+          display: flex;
+          align-items: center;
+          gap: 0.5rem;
+        }
+
+        .pulse-dot {
+          width: 12px;
+          height: 12px;
+          background: #16a34a;
+          border-radius: 50%;
+          box-shadow: 0 0 20px #16a34a;
+          animation: pulse 2s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+          0%, 100% {
+            transform: scale(1);
+            opacity: 1;
+          }
+          50% {
+            transform: scale(1.2);
+            opacity: 0.8;
+          }
+        }
+
+        .status-text {
+          font-size: 0.9rem;
+          font-weight: 700;
+          color: #16a34a;
+          text-transform: uppercase;
+          letter-spacing: 1px;
+          text-shadow: 0 0 10px rgba(22, 163, 74, 0.5);
+        }
+
+        .stats-grid {
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          gap: 1.5rem;
+          margin-bottom: 2rem;
+        }
+
+        .stat-item {
+          background: rgba(255, 255, 255, 0.03);
+          border: 1px solid rgba(220, 38, 38, 0.2);
+          border-radius: 12px;
+          padding: 1.5rem;
+          transition: all 0.3s ease;
+          position: relative;
+          overflow: hidden;
+        }
+
+        .stat-item::before {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: -100%;
+          width: 100%;
+          height: 100%;
+          background: linear-gradient(90deg, transparent, rgba(220, 38, 38, 0.1), transparent);
+          transition: left 0.5s ease;
+        }
+
+        .stat-item:hover::before {
+          left: 100%;
+        }
+
+        .stat-item:hover {
+          background: rgba(220, 38, 38, 0.08);
+          border-color: rgba(220, 38, 38, 0.4);
+          transform: translateY(-3px);
+        }
+
+        .stat-icon {
+          color: #dc2626;
+          margin-bottom: 1rem;
+          filter: drop-shadow(0 0 8px rgba(220, 38, 38, 0.6));
+        }
+
+        .stat-content {
+          display: flex;
+          align-items: baseline;
+          gap: 0.5rem;
+          margin-bottom: 0.5rem;
+        }
+
+        .stat-value {
+          font-size: 2rem;
+          font-weight: 900;
+          color: #ffffff;
+          text-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+        }
+
+        .stat-max {
+          font-size: 1.2rem;
+          color: rgba(255, 255, 255, 0.5);
+          font-weight: 700;
+        }
+
+        .stat-unit {
+          font-size: 1.2rem;
+          color: rgba(255, 255, 255, 0.6);
+          font-weight: 600;
+        }
+
+        .stat-label {
+          font-size: 0.85rem;
+          color: rgba(255, 255, 255, 0.6);
+          text-transform: uppercase;
+          letter-spacing: 1px;
+          font-weight: 500;
+          margin-bottom: 0.5rem;
+        }
+
+        .stat-bar {
+          width: 100%;
+          height: 6px;
+          background: rgba(255, 255, 255, 0.1);
+          border-radius: 3px;
+          overflow: hidden;
+        }
+
+        .stat-bar-fill {
+          height: 100%;
+          background: linear-gradient(90deg, #dc2626, #ff4444);
+          border-radius: 3px;
+          transition: width 1s ease;
+          box-shadow: 0 0 10px rgba(220, 38, 38, 0.8);
+          animation: barPulse 2s ease-in-out infinite;
+        }
+
+        @keyframes barPulse {
+          0%, 100% { opacity: 1; }
+          50% { opacity: 0.8; }
+        }
+
+        .latency-indicator {
+          display: flex;
+          gap: 0.25rem;
+          align-items: flex-end;
+          height: 30px;
+        }
+
+        .latency-bar {
+          width: 8px;
+          background: rgba(220, 38, 38, 0.3);
+          border-radius: 2px;
+          transition: all 0.3s ease;
+        }
+
+        .latency-indicator.excellent .latency-bar:nth-child(1) {
+          height: 40%;
+          background: #16a34a;
+          animation: barBounce 1s ease-in-out infinite;
+        }
+
+        .latency-indicator.excellent .latency-bar:nth-child(2) {
+          height: 60%;
+          background: #16a34a;
+          animation: barBounce 1s ease-in-out 0.1s infinite;
+        }
+
+        .latency-indicator.excellent .latency-bar:nth-child(3) {
+          height: 80%;
+          background: #16a34a;
+          animation: barBounce 1s ease-in-out 0.2s infinite;
+        }
+
+        .latency-indicator.excellent .latency-bar:nth-child(4) {
+          height: 100%;
+          background: #16a34a;
+          animation: barBounce 1s ease-in-out 0.3s infinite;
+        }
+
+        @keyframes barBounce {
+          0%, 100% { transform: scaleY(1); }
+          50% { transform: scaleY(0.8); }
+        }
+
+        .uptime-ring svg {
+          transform: rotate(-90deg);
+        }
+
+        .uptime-bg {
+          fill: none;
+          stroke: rgba(255, 255, 255, 0.1);
+          stroke-width: 3;
+        }
+
+        .uptime-progress {
+          fill: none;
+          stroke: #16a34a;
+          stroke-width: 3;
+          stroke-linecap: round;
+          filter: drop-shadow(0 0 5px #16a34a);
+          animation: ringGrow 2s ease-out;
+        }
+
+        @keyframes ringGrow {
+          from { stroke-dasharray: 0, 100; }
+        }
+
+        .rating-stars {
+          display: flex;
+          gap: 0.25rem;
+        }
+
+        .star {
+          font-size: 1.2rem;
+          color: rgba(255, 255, 255, 0.2);
+        }
+
+        .star.filled {
+          color: #fbbf24;
+          text-shadow: 0 0 10px rgba(251, 191, 36, 0.5);
+          animation: starTwinkle 2s ease-in-out infinite;
+        }
+
+        .star.half {
+          background: linear-gradient(90deg, #fbbf24 50%, rgba(255, 255, 255, 0.2) 50%);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          background-clip: text;
+        }
+
+        @keyframes starTwinkle {
+          0%, 100% { transform: scale(1); }
+          50% { transform: scale(1.1); }
+        }
+
+        .star:nth-child(1) { animation-delay: 0s; }
+        .star:nth-child(2) { animation-delay: 0.2s; }
+        .star:nth-child(3) { animation-delay: 0.4s; }
+        .star:nth-child(4) { animation-delay: 0.6s; }
+        .star:nth-child(5) { animation-delay: 0.8s; }
+
+        .status-footer {
+          display: grid;
+          grid-template-columns: 1fr;
+          gap: 0.75rem;
+        }
+
+        .footer-item {
+          display: flex;
+          align-items: center;
+          gap: 1rem;
+          padding: 1rem;
+          background: rgba(255, 255, 255, 0.02);
+          border: 1px solid rgba(220, 38, 38, 0.15);
+          border-radius: 8px;
+          transition: all 0.3s ease;
+        }
+
+        .footer-item:hover {
+          background: rgba(220, 38, 38, 0.05);
+          border-color: rgba(220, 38, 38, 0.3);
+        }
+
+        .footer-icon {
+          font-size: 1.5rem;
+          filter: drop-shadow(0 0 5px rgba(220, 38, 38, 0.5));
+        }
+
+        .footer-text {
+          flex: 1;
+        }
+
+        .footer-label {
+          font-size: 0.75rem;
+          color: #dc2626;
+          font-weight: 700;
+          text-transform: uppercase;
+          letter-spacing: 1px;
+          margin-bottom: 0.25rem;
+        }
+
+        .footer-value {
+          font-size: 0.85rem;
+          color: rgba(255, 255, 255, 0.7);
+        }
+
+        @media (max-width: 1200px) {
+          .hero-container {
+            grid-template-columns: 1fr;
+            gap: 3rem;
+          }
+          
+          .title-line {
+            font-size: 4rem;
+          }
+        }
+
+        @media (max-width: 768px) {
+          .hero-section {
+            padding: 5rem 0 1rem 0;
+          }
+          
+          .hero-container {
+            padding: 0 1rem;
+            gap: 2rem;
+          }
+          
+          .title-line {
+            font-size: 3rem;
+          }
+          
+          .subtitle-text {
+            font-size: 1rem;
+          }
+          
+          .hero-actions {
+            flex-direction: column;
+          }
+          
+          .btn-primary,
+          .btn-secondary {
+            width: 100%;
+            justify-content: center;
+          }
+          
+          .stats-grid {
+            grid-template-columns: 1fr;
+            gap: 1rem;
+          }
+          
+          .server-status-card {
+            padding: 1.5rem;
+          }
         }
       `}</style>
     </section>
