@@ -45,7 +45,7 @@ const SEOContent: React.FC = () => {
         </div>
 
         {/* How to Download Section */}
-        <div className="bg-gradient-to-r from-red-900/20 to-gray-900/20 backdrop-blur-lg rounded-2xl p-6 lg:p-10 border border-red-900/30 mb-6 fade-in-up">
+        <div className="bg-gradient-to-r from-red-900/20 to-gray-900/20 backdrop-blur-lg rounded-2xl p-6 lg:p-10 border border-red-900/30 mb-4 fade-in-up">
           <h2 className="text-2xl lg:text-4xl font-black text-white mb-6 text-center">
             ¿Cómo Descargar Rust Gratis?
           </h2>
@@ -84,7 +84,7 @@ const SEOContent: React.FC = () => {
         </div>
 
         {/* FAQ Section */}
-        <div className="max-w-4xl mx-auto mt-4">
+        <div className="max-w-4xl mx-auto mt-2">
           <h2 className="text-3xl lg:text-4xl font-black text-white mb-6 text-center">
             Preguntas Frecuentes
           </h2>
