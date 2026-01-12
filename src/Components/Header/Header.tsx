@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useMemo, useCallback } from "react";
-import { Menu, X, Users, Settings, Zap, MessageSquare, ExternalLink, Gamepad2, Phone } from "lucide-react";
+import { Menu, X, Users, Settings, Zap, MessageSquare, Gamepad2, Phone } from "lucide-react";
 
 interface HeaderProps {
   discordInviteUrl?: string;
@@ -84,7 +84,7 @@ const Header: React.FC<HeaderProps> = ({
   const [lettersVisible, setLettersVisible] = useState(false);
 
   // Memoizar valores estáticos
-  const animatedText = useMemo(() => "LATAM RUST".split(""), []);
+  const animatedText = useMemo(() => "LATAMRUST".split(""), []);
 
   // Callbacks optimizados
   const toggleMenu = useCallback(() => {
@@ -173,7 +173,7 @@ const Header: React.FC<HeaderProps> = ({
 
   return (
     <>
-      <header className="fixed top-0 left-0 w-full z-40 overflow-hidden bg-gradient-to-r from-black via-red-950 to-neutral-950 shadow-xl md:shadow-2xl border-b border-red-900/20">
+      <header className="fixed top-0 left-0 w-full z-40 overflow-hidden bg-gradient-to-r from-black via-red-950/80 to-black shadow-2xl border-b border-red-900/30 backdrop-blur-sm">
         {/* Fondo animado con partículas */}
         <div className="absolute inset-0">
           <div className="absolute inset-0 bg-black/50">
@@ -292,12 +292,14 @@ const Header: React.FC<HeaderProps> = ({
                         lettersVisible
                           ? "translate-y-0 opacity-100"
                           : "translate-y-8 opacity-0"
-                      } ${letter === " " ? "w-2 md:w-3" : ""} ${
-                        index >= 6 ? "text-gray-300" : "text-white"
+                      } ${
+                        index < 5 ? "text-white" : "text-red-600"
                       } hover:scale-110 md:hover:scale-125 hover:text-red-400 cursor-default relative group/letter`}
                       style={{
                         transitionDelay: `${index * 80}ms`,
-                        textShadow: "0 2px 10px rgba(127, 29, 29, 0.5), 0 0 20px rgba(0, 0, 0, 0.6)",
+                        textShadow: index < 5 
+                          ? "0 2px 10px rgba(0, 0, 0, 0.8), 0 0 15px rgba(255, 255, 255, 0.3)" 
+                          : "0 2px 15px rgba(220, 38, 38, 0.8), 0 0 25px rgba(220, 38, 38, 0.5)",
                         fontFamily: "Impact, 'Arial Black', sans-serif",
                       }}
                     >
@@ -308,26 +310,18 @@ const Header: React.FC<HeaderProps> = ({
                   ))}
                 </div>
 
-                {/* Subtítulo mejorado */}
+                {/* Subtítulo mejorado - Badge minimalista */}
                 <div
                   className={`flex items-center space-x-2 transform transition-all duration-1000 ${
                     isLoaded ? "translate-x-0 opacity-100" : "translate-x-10 opacity-0"
                   }`}
                   style={{ transitionDelay: "1s" }}
                 >
-                  <div className="flex items-center space-x-2 bg-gradient-to-r from-black/80 to-red-950/80 px-3 py-1 rounded-full border border-red-900/40 backdrop-blur-sm">
-                    <p className="text-gray-300 text-xs md:text-sm font-bold tracking-widest uppercase">
+                  <div className="flex items-center space-x-2 bg-black/60 px-3 py-1 rounded border border-red-900/30 backdrop-blur-sm">
+                    <p className="text-gray-400 text-xs md:text-sm font-semibold tracking-[0.2em] uppercase">
                       Free Rust Server
                     </p>
-                    <div className="flex space-x-1">
-                      {[...Array(3)].map((_, i) => (
-                        <div
-                          key={i}
-                          className="w-1 h-1 md:w-1.5 md:h-1.5 bg-gradient-to-r from-red-500 to-red-700 rounded-full animate-pulse"
-                          style={{ animationDelay: `${i * 0.2}s` }}
-                        />
-                      ))}
-                    </div>
+                    <div className="w-1.5 h-1.5 bg-red-600 rounded-full animate-pulse shadow-[0_0_8px_rgba(220,38,38,0.6)]" />
                   </div>
                 </div>
               </div>
@@ -350,14 +344,14 @@ const Header: React.FC<HeaderProps> = ({
                 />
               ))}
 
-              {/* Botón de Discord con estilo especial */}
+              {/* Botón de Discord - UNIFICADO con mismo estilo que otros botones */}
               <button
                 onClick={handleDiscordClick}
-                className="group flex items-center space-x-2 md:space-x-3 px-4 py-2 md:px-6 md:py-3 bg-gradient-to-r from-purple-600 to-blue-600 text-white font-bold rounded-lg md:rounded-xl hover:from-purple-500 hover:to-blue-500 transition-all duration-300 transform hover:scale-105 hover:shadow-lg border-2 border-purple-700/30 hover:border-purple-600/50 relative"
+                className="group flex items-center space-x-3 px-4 py-2 md:px-5 md:py-3 text-white/90 hover:text-white transition-all duration-300 rounded-xl hover:bg-red-950/30 transform hover:scale-105 hover:shadow-lg backdrop-blur-sm border border-transparent hover:border-red-900/40"
               >
-                <MessageSquare className="w-4 h-4 md:w-5 md:h-5 group-hover:animate-bounce" />
-                <span className="tracking-wide text-sm md:text-base">DISCORD</span>
-                <ExternalLink className="w-3 h-3 md:w-4 md:h-4 group-hover:translate-x-0.5 md:group-hover:translate-x-1 group-hover:-translate-y-0.5 md:group-hover:-translate-y-1 transition-transform duration-300" />
+                <MessageSquare className="w-4 h-4 md:w-5 md:h-5 group-hover:scale-125 group-hover:rotate-12 transition-all duration-300" />
+                <span className="font-bold tracking-wide text-sm md:text-base">DISCORD</span>
+                <div className="w-0 group-hover:w-2 h-2 bg-red-400 rounded-full transition-all duration-300" />
               </button>
             </div>
 
@@ -396,23 +390,19 @@ const Header: React.FC<HeaderProps> = ({
                 />
               ))}
 
-              {/* Botón de Discord móvil */}
-              <div
-                className={`transform transition-all duration-300 ${
-                  isMenuOpen ? "translate-y-0 opacity-100" : "translate-y-4 opacity-0"
+              {/* Botón de Discord móvil - UNIFICADO */}
+              <button
+                onClick={handleDiscordClick}
+                className={`w-full flex items-center space-x-4 px-4 py-3 text-white/90 hover:text-white transition-all duration-300 rounded-xl hover:bg-red-950/30 transform hover:scale-105 ${
+                  isMenuOpen ? "translate-x-0 opacity-100" : "translate-x-8 opacity-0"
                 }`}
-                style={{ transitionDelay: "0.35s" }}
+                style={{ transitionDelay: "0.3s" }}
               >
-                <button
-                  onClick={handleDiscordClick}
-                  className="w-full flex items-center space-x-3 px-4 py-3 bg-gradient-to-r from-purple-600 to-blue-600 text-white font-bold rounded-lg hover:from-purple-500 hover:to-blue-500 transition-all duration-300 transform hover:scale-[1.02] text-sm relative"
-                >
-                  <MessageSquare className="w-5 h-5" />
-                  <span>ÚNETE AL DISCORD</span>
-                  <div className="flex-1" />
-                  <ExternalLink className="w-4 h-4" />
-                </button>
-              </div>
+                <MessageSquare className="w-5 h-5 transform transition-all duration-300 hover:scale-125 hover:rotate-12" />
+                <span className="font-bold">DISCORD</span>
+                <div className="flex-1" />
+                <div className="w-2 h-2 bg-red-400 rounded-full animate-pulse" />
+              </button>
             </div>
           </div>
         </nav>
