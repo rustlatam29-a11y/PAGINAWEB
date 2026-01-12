@@ -621,7 +621,7 @@ const Hero: React.FC = () => {
 
         .stats-grid {
           display: grid;
-          grid-template-columns: 1fr;
+          grid-template-columns: repeat(2, 1fr);
           gap: 1rem;
           margin-bottom: 2rem;
         }
@@ -634,9 +634,6 @@ const Hero: React.FC = () => {
           transition: all 0.3s ease;
           position: relative;
           overflow: hidden;
-          display: flex;
-          align-items: center;
-          gap: 1rem;
         }
 
         .stat-item::before {
@@ -663,20 +660,20 @@ const Hero: React.FC = () => {
         .stat-icon {
           color: #dc2626;
           filter: drop-shadow(0 0 8px rgba(220, 38, 38, 0.6));
-          flex-shrink: 0;
+          margin-bottom: 0.75rem;
         }
 
         .stat-content {
           display: flex;
           flex-direction: column;
           gap: 0.25rem;
-          flex: 1;
         }
         
         .stat-values {
           display: flex;
           align-items: baseline;
           gap: 0.5rem;
+          margin-bottom: 0.5rem;
         }
 
         .stat-value {
@@ -704,6 +701,7 @@ const Hero: React.FC = () => {
           text-transform: uppercase;
           letter-spacing: 1px;
           font-weight: 500;
+          margin-bottom: 0.5rem;
         }
 
         .stat-bar {
