@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { ArrowLeft, Server, Users, Shield, MessageSquare, Copy, CheckCircle } from "lucide-react";
+import Breadcrumbs from "../../Components/Breadcrumbs/Breadcrumbs";
 
 const DayZ: React.FC = () => {
   const [copied, setCopied] = React.useState(false);
@@ -14,6 +15,7 @@ const DayZ: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-black via-gray-950 to-black text-white">
+      <Breadcrumbs />
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         {/* Back button */}
         <Link 

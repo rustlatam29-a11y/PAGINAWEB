@@ -5,11 +5,13 @@ import VIPSection from "../../Components/VIPSection/VIPSection";
 import SEOContent from "../../Components/SEOContent/SEOContent";
 import Footer from "../../Components/Footer/Footer";
 import GlobalBackground from "../../Components/GlobalBackground/GlobalBackground";
+import Breadcrumbs from "../../Components/Breadcrumbs/Breadcrumbs";
 
 function HomePage() {
   return (
     <GlobalBackground>
       <Header />
+      <Breadcrumbs />
       <Hero />
       <Section />
       <VIPSection />
