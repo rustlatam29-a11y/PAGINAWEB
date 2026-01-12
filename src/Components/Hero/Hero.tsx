@@ -555,12 +555,13 @@ const Hero: React.FC = () => {
           background: rgba(0, 0, 0, 0.7);
           border: 1px solid rgba(220, 38, 38, 0.3);
           border-radius: 16px;
-          padding: 2rem;
+          padding: 1.5rem;
           backdrop-filter: blur(20px);
           box-shadow: 
             0 20px 60px rgba(0, 0, 0, 0.5),
             inset 0 0 40px rgba(220, 38, 38, 0.05);
           animation: cardFloat 3s ease-in-out infinite;
+          max-width: 450px;
         }
 
         @keyframes cardFloat {
@@ -572,14 +573,14 @@ const Hero: React.FC = () => {
           display: flex;
           justify-content: space-between;
           align-items: center;
-          margin-bottom: 2rem;
-          padding-bottom: 1rem;
+          margin-bottom: 1.25rem;
+          padding-bottom: 0.75rem;
           border-bottom: 1px solid rgba(220, 38, 38, 0.2);
         }
 
         .status-title {
           margin: 0;
-          font-size: 1.5rem;
+          font-size: 1.25rem;
           font-weight: 700;
           color: #ffffff;
         }
@@ -622,15 +623,15 @@ const Hero: React.FC = () => {
         .stats-grid {
           display: grid;
           grid-template-columns: repeat(2, 1fr);
-          gap: 1rem;
-          margin-bottom: 2rem;
+          gap: 0.75rem;
+          margin-bottom: 1.25rem;
         }
 
         .stat-item {
           background: rgba(255, 255, 255, 0.03);
           border: 1px solid rgba(220, 38, 38, 0.2);
-          border-radius: 12px;
-          padding: 1.25rem;
+          border-radius: 10px;
+          padding: 1rem;
           transition: all 0.3s ease;
           position: relative;
           overflow: hidden;
@@ -660,7 +661,12 @@ const Hero: React.FC = () => {
         .stat-icon {
           color: #dc2626;
           filter: drop-shadow(0 0 8px rgba(220, 38, 38, 0.6));
-          margin-bottom: 0.75rem;
+          margin-bottom: 0.5rem;
+        }
+        
+        .stat-icon svg {
+          width: 32px;
+          height: 32px;
         }
 
         .stat-content {
@@ -677,20 +683,20 @@ const Hero: React.FC = () => {
         }
 
         .stat-value {
-          font-size: 2rem;
+          font-size: 1.5rem;
           font-weight: 900;
           color: #ffffff;
           text-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
         }
 
         .stat-max {
-          font-size: 1.2rem;
+          font-size: 1rem;
           color: rgba(255, 255, 255, 0.5);
           font-weight: 700;
         }
 
         .stat-unit {
-          font-size: 1.2rem;
+          font-size: 1rem;
           color: rgba(255, 255, 255, 0.6);
           font-weight: 600;
         }
@@ -829,14 +835,14 @@ const Hero: React.FC = () => {
         .status-footer {
           display: grid;
           grid-template-columns: 1fr;
-          gap: 0.75rem;
+          gap: 0.5rem;
         }
 
         .footer-item {
           display: flex;
           align-items: center;
-          gap: 1rem;
-          padding: 1rem;
+          gap: 0.75rem;
+          padding: 0.75rem;
           background: rgba(255, 255, 255, 0.02);
           border: 1px solid rgba(220, 38, 38, 0.15);
           border-radius: 8px;
@@ -849,7 +855,7 @@ const Hero: React.FC = () => {
         }
 
         .footer-icon {
-          font-size: 1.5rem;
+          font-size: 1.25rem;
           filter: drop-shadow(0 0 5px rgba(220, 38, 38, 0.5));
         }
 
@@ -858,16 +864,16 @@ const Hero: React.FC = () => {
         }
 
         .footer-label {
-          font-size: 0.75rem;
+          font-size: 0.7rem;
           color: #dc2626;
           font-weight: 700;
           text-transform: uppercase;
-          letter-spacing: 1px;
-          margin-bottom: 0.25rem;
+          letter-spacing: 0.5px;
+          margin-bottom: 0.15rem;
         }
 
         .footer-value {
-          font-size: 0.85rem;
+          font-size: 0.75rem;
           color: rgba(255, 255, 255, 0.7);
         }
 
