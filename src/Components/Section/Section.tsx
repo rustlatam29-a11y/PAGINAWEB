@@ -250,22 +250,32 @@ const About: React.FC<AboutProps> = () => {
           }`}
           style={{ transitionDelay: isMobile ? "1.5s" : "2s" }}
         >
-          <div className="bg-gradient-to-r from-purple-900/40 to-blue-900/40 backdrop-blur-lg rounded-2xl lg:rounded-3xl p-5 lg:p-6 border border-white/10 max-w-4xl mx-auto">
-            <Star className="w-8 lg:w-12 h-8 lg:h-12 text-yellow-400 mx-auto mb-4 animate-spin-slow" />
-            <blockquote className="text-xl sm:text-2xl lg:text-3xl font-bold text-white mb-4 lg:mb-6 italic px-2">
-              "La comunidad más grande de Rust Pirata en toda LATAM."
+          <div className="relative bg-gradient-to-r from-purple-900/30 to-blue-900/30 backdrop-blur-lg rounded-2xl lg:rounded-3xl p-6 lg:p-8 border border-white/5 max-w-4xl mx-auto shadow-lg shadow-black/20">
+            {/* Subtle noise overlay for premium feel */}
+            <div className="absolute inset-0 rounded-2xl lg:rounded-3xl opacity-[0.03] pointer-events-none" style={{ backgroundImage: "url('data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' /%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' /%3E%3C/svg%3E')" }}></div>
+            
+            {/* Star icon - refined */}
+            <div className="relative mb-5 lg:mb-6">
+              <Star className="w-7 lg:w-10 h-7 lg:h-10 text-yellow-400 mx-auto animate-spin-slow" style={{ strokeWidth: 1.5, filter: "drop-shadow(0 0 8px rgba(250, 204, 21, 0.15))" }} />
+            </div>
+            
+            {/* Quote - editorial typography */}
+            <blockquote className="relative text-xl sm:text-2xl lg:text-3xl font-semibold text-white/95 mb-5 lg:mb-7 px-2 leading-tight tracking-[-0.02em]">
+              "La comunidad de Rust pirata más grande de LATAM"
             </blockquote>
-            <div className={`flex ${isMobile ? "flex-col space-y-4" : "justify-center items-center space-x-8"}`}>
+            
+            {/* Names and roles - refined */}
+            <div className={`flex ${isMobile ? "flex-col space-y-4" : "justify-center items-center space-x-10"}`}>
               <div className="text-center">
-                <div className="text-cyan-400 font-black text-base lg:text-lg">ParaguayRAIDER</div>
-                <div className="text-gray-400 text-sm">Fundador</div>
+                <div className="text-cyan-300 font-semibold text-base lg:text-lg mb-1">ParaguayRAIDER</div>
+                <div className="text-gray-400/75 text-xs lg:text-sm tracking-wide">Fundador</div>
               </div>
               {!isMobile && (
-                <div className="w-px h-12 bg-gradient-to-b from-transparent via-gray-400 to-transparent"></div>
+                <div className="w-px h-10 bg-gradient-to-b from-transparent via-gray-500/30 to-transparent"></div>
               )}
               <div className="text-center">
-                <div className="text-purple-400 font-black text-base lg:text-lg">GalpónTech</div>
-                <div className="text-gray-400 text-sm">Developer</div>
+                <div className="text-purple-300 font-semibold text-base lg:text-lg mb-1">GalpónTech</div>
+                <div className="text-gray-400/75 text-xs lg:text-sm tracking-wide">Developer</div>
               </div>
             </div>
           </div>
