@@ -2,37 +2,23 @@ import React, { useState, useEffect, useRef } from "react";
 import { Download, Play, Users, Server, Activity, Star } from "lucide-react";
 
 const Hero: React.FC = () => {
-  const [playerCount, setPlayerCount] = useState(0);
+  const [playerCount, setPlayerCount] = useState(74);
   const particlesRef = useRef<HTMLDivElement>(null);
 
-  // Animación del contador de jugadores
+  // Simular cambios de jugadores cada 30 segundos (más lento y sutil)
   useEffect(() => {
-    const animateCounter = (start: number, end: number, duration: number) => {
-      const range = end - start;
-      const increment = range / (duration / 16);
-      let current = start;
-      
-      const timer = setInterval(() => {
-        current += increment;
-        if (current >= end) {
-          current = end;
-          clearInterval(timer);
-        }
-        setPlayerCount(Math.floor(current));
-      }, 16);
-    };
-
-    animateCounter(0, 107, 2000);
-
-    // Simular cambios de jugadores cada 10 segundos
     const interval = setInterval(() => {
-      const newCount = playerCount + Math.floor(Math.random() * 5) - 2;
-      const clampedCount = Math.max(95, Math.min(160, newCount));
-      animateCounter(playerCount, clampedCount, 1000);
-    }, 10000);
+      setPlayerCount(prevCount => {
+        // Cambios más pequeños: +1 o -1 jugador
+        const change = Math.random() > 0.5 ? 1 : -1;
+        const newCount = prevCount + change;
+        // Mantener entre 70 y 90 jugadores
+        return Math.max(70, Math.min(90, newCount));
+      });
+    }, 30000); // 30 segundos
 
     return () => clearInterval(interval);
-  }, [playerCount]);
+  }, []);
 
   // Crear partículas
   useEffect(() => {
