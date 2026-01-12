@@ -128,22 +128,22 @@ const Hero: React.FC = () => {
                 
                 {/* Botones de Acción - DAYZ */}
                 <div className="hero-actions">
-                  <a href="/dayz" className="btn-primary">
+                  <a href="https://discord.gg/54zHAYmtzp" target="_blank" rel="noopener noreferrer" className="btn-primary">
                     <span className="btn-icon">
                       <Server className="w-6 h-6" />
                     </span>
                     <span className="btn-text">
                       <span className="btn-label">UNIRSE AL SERVIDOR</span>
-                      <span className="btn-subtitle">Ver Info</span>
+                      <span className="btn-subtitle">Discord DayZ</span>
                     </span>
                     <span className="btn-arrow">→</span>
                   </a>
                   
-                  <a href="https://store.steampowered.com/app/221100/DayZ/" target="_blank" rel="noopener noreferrer" className="btn-secondary">
+                  <a href="https://gofile.io/d/ILwOvH" target="_blank" rel="noopener noreferrer" className="btn-secondary">
                     <span className="btn-icon">
                       <Download className="w-5 h-5" />
                     </span>
-                    <span className="btn-text">Descargar Oficial</span>
+                    <span className="btn-text">Descargar DayZ</span>
                   </a>
                 </div>
               </>
