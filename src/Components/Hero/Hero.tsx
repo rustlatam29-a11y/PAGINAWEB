@@ -1,8 +1,20 @@
-import React, { useEffect, useRef } from "react";
-import { Download, Play } from "lucide-react";
+import React, { useEffect, useRef, useState } from "react";
+import { Download, Play, Server } from "lucide-react";
+
+type GameType = "rust" | "dayz";
 
 const Hero: React.FC = () => {
   const particlesRef = useRef<HTMLDivElement>(null);
+  const [selectedGame, setSelectedGame] = useState<GameType>("rust");
+  const [isAnimating, setIsAnimating] = useState(false);
+
+  // Handler para cambio de juego con animación
+  const handleGameChange = (game: GameType) => {
+    if (game === selectedGame || isAnimating) return;
+    setIsAnimating(true);
+    setSelectedGame(game);
+    setTimeout(() => setIsAnimating(false), 200);
+  };
 
   // Crear partículas
   useEffect(() => {
@@ -35,46 +47,108 @@ const Hero: React.FC = () => {
         {/* Contenido Principal Centrado */}
         <div className="hero-content-center">
           
-          {/* Contenido dinámico */}
-          <div className="hero-dynamic-content fade-in">
+          {/* Selector de Juegos - Tabs */}
+          <div className="game-selector">
+            <button 
+              className={`game-tab ${selectedGame === "rust" ? "active" : ""}`}
+              onClick={() => handleGameChange("rust")}
+            >
+              RUST
+            </button>
+            <button 
+              className={`game-tab ${selectedGame === "dayz" ? "active" : ""}`}
+              onClick={() => handleGameChange("dayz")}
+            >
+              DAYZ
+            </button>
+          </div>
+
+          {/* Contenido dinámico con animación */}
+          <div className={`hero-dynamic-content ${isAnimating ? "fade-out" : "fade-in"}`}>
             
-            {/* Título Principal con Animación - RUST */}
-            <div className="hero-title-wrapper">
-              <h1 className="hero-title">
-                <span className="title-line">RUST</span>
-                <span className="title-line gradient-text">GRATIS</span>
-              </h1>
-              <div className="title-underline"></div>
-            </div>
-            
-            {/* Subtítulo - RUST */}
-            <div className="hero-subtitle">
-              <p className="subtitle-text">
-                Servidor Pirata v2275 • Gratis BR•ES
-              </p>
-              <p className="subtitle-cta">• Jogue Agora!</p>
-            </div>
-            
-            {/* Botones de Acción - RUST */}
-            <div className="hero-actions">
-              <a href="https://discord.gg/dT8u5b3jga" target="_blank" rel="noopener noreferrer" className="btn-primary">
-                <span className="btn-icon">
-                  <Download className="w-6 h-6" />
-                </span>
-                <span className="btn-text">
-                  <span className="btn-label">DESCARGAR</span>
-                  <span className="btn-subtitle">Baixar Agora</span>
-                </span>
-                <span className="btn-arrow">→</span>
-              </a>
-              
-              <a href="https://www.youtube.com/watch?v=ZNTfR90nPtg" target="_blank" rel="noopener noreferrer" className="btn-secondary">
-                <span className="btn-icon">
-                  <Play className="w-5 h-5" fill="currentColor" />
-                </span>
-                <span className="btn-text">Ver Tráiler</span>
-              </a>
-            </div>
+            {selectedGame === "rust" && (
+              <>
+                {/* Título Principal con Animación - RUST */}
+                <div className="hero-title-wrapper">
+                  <h1 className="hero-title">
+                    <span className="title-line">RUST</span>
+                    <span className="title-line gradient-text">GRATIS</span>
+                  </h1>
+                  <div className="title-underline"></div>
+                </div>
+                
+                {/* Subtítulo - RUST */}
+                <div className="hero-subtitle">
+                  <p className="subtitle-text">
+                    Servidor Pirata v2275 • Gratis BR•ES
+                  </p>
+                  <p className="subtitle-cta">• Jogue Agora!</p>
+                </div>
+                
+                {/* Botones de Acción - RUST */}
+                <div className="hero-actions">
+                  <a href="https://discord.gg/dT8u5b3jga" target="_blank" rel="noopener noreferrer" className="btn-primary">
+                    <span className="btn-icon">
+                      <Download className="w-6 h-6" />
+                    </span>
+                    <span className="btn-text">
+                      <span className="btn-label">DESCARGAR</span>
+                      <span className="btn-subtitle">Baixar Agora</span>
+                    </span>
+                    <span className="btn-arrow">→</span>
+                  </a>
+                  
+                  <a href="https://www.youtube.com/watch?v=ZNTfR90nPtg" target="_blank" rel="noopener noreferrer" className="btn-secondary">
+                    <span className="btn-icon">
+                      <Play className="w-5 h-5" fill="currentColor" />
+                    </span>
+                    <span className="btn-text">Ver Tráiler</span>
+                  </a>
+                </div>
+              </>
+            )}
+
+            {selectedGame === "dayz" && (
+              <>
+                {/* Título Principal con Animación - DAYZ */}
+                <div className="hero-title-wrapper">
+                  <h1 className="hero-title">
+                    <span className="title-line">DAYZ</span>
+                    <span className="title-line gradient-text">GRATIS</span>
+                  </h1>
+                  <div className="title-underline"></div>
+                </div>
+                
+                {/* Subtítulo - DAYZ */}
+                <div className="hero-subtitle">
+                  <p className="subtitle-text">
+                    Servidor DayZ • LATAM • 24/7
+                  </p>
+                  <p className="subtitle-cta">• Únete Ahora!</p>
+                </div>
+                
+                {/* Botones de Acción - DAYZ */}
+                <div className="hero-actions">
+                  <a href="https://discord.gg/54zHAYmtzp" target="_blank" rel="noopener noreferrer" className="btn-primary">
+                    <span className="btn-icon">
+                      <Server className="w-6 h-6" />
+                    </span>
+                    <span className="btn-text">
+                      <span className="btn-label">UNIRSE AL SERVIDOR</span>
+                      <span className="btn-subtitle">Discord DayZ</span>
+                    </span>
+                    <span className="btn-arrow">→</span>
+                  </a>
+                  
+                  <a href="https://gofile.io/d/ILwOvH" target="_blank" rel="noopener noreferrer" className="btn-secondary">
+                    <span className="btn-icon">
+                      <Download className="w-5 h-5" />
+                    </span>
+                    <span className="btn-text">Descargar DayZ</span>
+                  </a>
+                </div>
+              </>
+            )}
             
           </div>
           
