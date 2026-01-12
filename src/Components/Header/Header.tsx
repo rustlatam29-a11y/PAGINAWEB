@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useMemo, useCallback } from "react";
-import { Menu, X, Zap, MessageSquare, Gamepad2, Phone } from "lucide-react";
+import { Menu, X, Zap, MessageSquare, Phone } from "lucide-react";
 
 interface HeaderProps {
   discordInviteUrl?: string;
@@ -140,13 +140,6 @@ const Header: React.FC<HeaderProps> = ({
   const navigationItems: NavItemProps[] = useMemo(
     () => [
       {
-        icon: <Gamepad2 className="w-4 h-4 md:w-5 md:h-5" />,
-        text: "SERVIDOR DAYZ",
-        onClick: () => {
-          window.location.href = "/dayz";
-        },
-      },
-      {
         icon: <Phone className="w-4 h-4 md:w-5 md:h-5" />,
         text: "COMPRA DE VIPS",
         href: "https://wa.me/+595972610336",
@@ -158,17 +151,9 @@ const Header: React.FC<HeaderProps> = ({
   const mobileNavigationItems: MobileNavItemProps[] = useMemo(
     () => [
       {
-        icon: <Gamepad2 className="w-5 h-5" />,
-        text: "Servidor DayZ",
-        delay: "0.1",
-        onClick: () => {
-          window.location.href = "/dayz";
-        },
-      },
-      {
         icon: <Phone className="w-5 h-5" />,
         text: "Compra de VIPs",
-        delay: "0.2",
+        delay: "0.1",
         href: "https://wa.me/+595972610336",
       },
     ],
