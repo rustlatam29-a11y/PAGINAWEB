@@ -141,22 +141,18 @@ const Hero: React.FC = () => {
         {/* Lado Derecho: Estado del Servidor (ANIMADO) */}
         <div className="server-status-card">
           
-          {/* Header con pulse */}
+          {/* Header */}
           <div className="status-header">
             <h3 className="status-title">Estado del Servidor</h3>
-            <div className="status-indicator">
-              <div className="pulse-dot"></div>
-              <span className="status-text">ONLINE</span>
-            </div>
           </div>
           
-          {/* Stats Grid con animaciones */}
+          {/* Stats Grid 2x2 + Rating Full Width */}
           <div className="stats-grid">
             
             {/* Stat 1: Jugadores */}
             <div className="stat-item">
               <div className="stat-icon">
-                <Users className="w-10 h-10" />
+                <Users className="w-8 h-8" />
               </div>
               <div className="stat-content">
                 <div className="stat-label">Jugadores</div>
@@ -173,7 +169,7 @@ const Hero: React.FC = () => {
             {/* Stat 2: Latencia */}
             <div className="stat-item">
               <div className="stat-icon">
-                <Server className="w-10 h-10" />
+                <Server className="w-8 h-8" />
               </div>
               <div className="stat-content">
                 <div className="stat-label">Latencia</div>
@@ -190,24 +186,35 @@ const Hero: React.FC = () => {
             {/* Stat 3: Uptime */}
             <div className="stat-item">
               <div className="stat-icon">
-                <Activity className="w-10 h-10" />
+                <Activity className="w-8 h-8" />
               </div>
               <div className="stat-content">
                 <div className="stat-label">Uptime</div>
                 <div className="stat-value">99.9<span className="stat-unit">%</span></div>
               </div>
               <div className="uptime-ring">
-                <svg viewBox="0 0 36 36" className="w-10 h-10">
+                <svg viewBox="0 0 36 36" className="w-8 h-8">
                   <path className="uptime-bg" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"/>
                   <path className="uptime-progress" strokeDasharray="99.9, 100" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"/>
                 </svg>
               </div>
             </div>
             
-            {/* Stat 4: Rating */}
+            {/* Stat 4: Status Online */}
             <div className="stat-item">
               <div className="stat-icon">
-                <Star className="w-10 h-10" fill="currentColor" />
+                <div className="pulse-dot-large"></div>
+              </div>
+              <div className="stat-content">
+                <div className="stat-label">Estado</div>
+                <div className="stat-value status-online">ONLINE</div>
+              </div>
+            </div>
+            
+            {/* Stat 5: Rating (Full Width) */}
+            <div className="stat-item stat-item-full">
+              <div className="stat-icon">
+                <Star className="w-8 h-8" fill="currentColor" />
               </div>
               <div className="stat-content">
                 <div className="stat-label">Rating</div>
@@ -555,13 +562,14 @@ const Hero: React.FC = () => {
           background: rgba(0, 0, 0, 0.7);
           border: 1px solid rgba(220, 38, 38, 0.3);
           border-radius: 16px;
-          padding: 1.5rem;
+          padding: 1.25rem;
           backdrop-filter: blur(20px);
           box-shadow: 
             0 20px 60px rgba(0, 0, 0, 0.5),
             inset 0 0 40px rgba(220, 38, 38, 0.05);
           animation: cardFloat 3s ease-in-out infinite;
-          max-width: 450px;
+          max-width: 400px;
+          width: 100%;
         }
 
         @keyframes cardFloat {
@@ -570,30 +578,22 @@ const Hero: React.FC = () => {
         }
 
         .status-header {
-          display: flex;
-          justify-content: space-between;
-          align-items: center;
-          margin-bottom: 1.25rem;
+          margin-bottom: 1rem;
           padding-bottom: 0.75rem;
           border-bottom: 1px solid rgba(220, 38, 38, 0.2);
         }
 
         .status-title {
           margin: 0;
-          font-size: 1.25rem;
+          font-size: 1.15rem;
           font-weight: 700;
           color: #ffffff;
+          text-align: center;
         }
 
-        .status-indicator {
-          display: flex;
-          align-items: center;
-          gap: 0.5rem;
-        }
-
-        .pulse-dot {
-          width: 12px;
-          height: 12px;
+        .pulse-dot-large {
+          width: 32px;
+          height: 32px;
           background: #16a34a;
           border-radius: 50%;
           box-shadow: 0 0 20px #16a34a;
@@ -606,25 +606,21 @@ const Hero: React.FC = () => {
             opacity: 1;
           }
           50% {
-            transform: scale(1.2);
+            transform: scale(1.1);
             opacity: 0.8;
           }
         }
 
-        .status-text {
-          font-size: 0.9rem;
-          font-weight: 700;
-          color: #16a34a;
-          text-transform: uppercase;
-          letter-spacing: 1px;
+        .status-online {
+          color: #16a34a !important;
           text-shadow: 0 0 10px rgba(22, 163, 74, 0.5);
+          font-size: 1.25rem !important;
         }
 
         .stats-grid {
           display: grid;
           grid-template-columns: repeat(2, 1fr);
           gap: 0.75rem;
-          margin-bottom: 1.25rem;
         }
 
         .stat-item {
@@ -635,6 +631,18 @@ const Hero: React.FC = () => {
           transition: all 0.3s ease;
           position: relative;
           overflow: hidden;
+          aspect-ratio: 1 / 1;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+        }
+
+        .stat-item-full {
+          grid-column: 1 / -1;
+          aspect-ratio: auto;
+          flex-direction: row;
+          align-items: center;
+          gap: 1rem;
         }
 
         .stat-item::before {
@@ -661,32 +669,36 @@ const Hero: React.FC = () => {
         .stat-icon {
           color: #dc2626;
           filter: drop-shadow(0 0 8px rgba(220, 38, 38, 0.6));
-          margin-bottom: 0.5rem;
+          flex-shrink: 0;
         }
         
-        .stat-icon svg {
-          width: 32px;
-          height: 32px;
+        .stat-item-full .stat-icon {
+          margin-bottom: 0;
         }
 
         .stat-content {
           display: flex;
           flex-direction: column;
           gap: 0.25rem;
+          flex: 1;
+        }
+        
+        .stat-item-full .stat-content {
+          flex: 1;
         }
         
         .stat-values {
           display: flex;
           align-items: baseline;
           gap: 0.5rem;
-          margin-bottom: 0.5rem;
         }
 
         .stat-value {
-          font-size: 1.5rem;
+          font-size: 1.4rem;
           font-weight: 900;
           color: #ffffff;
           text-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+          line-height: 1.2;
         }
 
         .stat-max {
@@ -702,12 +714,11 @@ const Hero: React.FC = () => {
         }
 
         .stat-label {
-          font-size: 0.75rem;
+          font-size: 0.7rem;
           color: rgba(255, 255, 255, 0.6);
           text-transform: uppercase;
-          letter-spacing: 1px;
+          letter-spacing: 0.5px;
           font-weight: 500;
-          margin-bottom: 0.5rem;
         }
 
         .stat-bar {
@@ -801,6 +812,11 @@ const Hero: React.FC = () => {
         .rating-stars {
           display: flex;
           gap: 0.25rem;
+          flex-shrink: 0;
+        }
+        
+        .stat-item-full .rating-stars {
+          margin-left: auto;
         }
 
         .star {
