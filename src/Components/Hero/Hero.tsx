@@ -271,7 +271,7 @@ const Hero: React.FC = () => {
         .hero-actions {
           display: flex;
           gap: 1.5rem;
-          flex-wrap: wrap;
+          flex-wrap: nowrap;
           animation: fadeIn 1s ease-out 0.9s both;
           justify-content: center;
         }
@@ -361,6 +361,8 @@ const Hero: React.FC = () => {
           transition: all 0.3s ease;
           backdrop-filter: blur(10px);
           cursor: pointer;
+          text-decoration: none;
+          flex-shrink: 0;
         }
 
         .btn-secondary:hover {
