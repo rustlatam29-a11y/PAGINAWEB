@@ -35,7 +35,7 @@ const VIPSection: React.FC = () => {
             </div>
             <div className="flex items-center space-x-2">
               <Award className="w-5 h-5 text-red-500" />
-              <span>Acceso de Por Vida</span>
+              <span>Pago Mensual</span>
             </div>
           </div>
         </div>
@@ -76,9 +76,9 @@ const VIPSection: React.FC = () => {
                   <div className="absolute inset-0 bg-gradient-to-r from-red-600/10 via-red-500/20 to-red-600/10 animate-pulse" />
                   <div className="relative z-10">
                     <div className="text-5xl md:text-6xl font-black text-transparent bg-clip-text bg-gradient-to-r from-red-400 via-red-500 to-red-600 mb-2">$10.00</div>
-                    <div className="text-gray-300 text-sm uppercase tracking-widest font-semibold">USD • Acceso de Por Vida</div>
+                    <div className="text-gray-300 text-sm uppercase tracking-widest font-semibold">USD / Mes</div>
                     <div className="mt-3 inline-block px-4 py-1 bg-red-600/20 border border-red-500/30 rounded-full">
-                      <span className="text-red-400 text-xs font-bold">✓ Pago único, sin renovaciones</span>
+                      <span className="text-red-400 text-xs font-bold">✓ Suscripción mensual</span>
                     </div>
                   </div>
                 </div>
@@ -193,9 +193,9 @@ const VIPSection: React.FC = () => {
                   <div className="absolute inset-0 bg-gradient-to-r from-gray-700/10 via-gray-600/20 to-gray-700/10" />
                   <div className="relative z-10">
                     <div className="text-5xl md:text-6xl font-black text-transparent bg-clip-text bg-gradient-to-r from-red-300 via-red-400 to-red-500 mb-2">$5.00</div>
-                    <div className="text-gray-300 text-sm uppercase tracking-widest font-semibold">USD • Acceso de Por Vida</div>
+                    <div className="text-gray-300 text-sm uppercase tracking-widest font-semibold">USD / Mes</div>
                     <div className="mt-3 inline-block px-4 py-1 bg-gray-700/30 border border-gray-600/30 rounded-full">
-                      <span className="text-red-400 text-xs font-bold">✓ Pago único, sin renovaciones</span>
+                      <span className="text-red-400 text-xs font-bold">✓ Suscripción mensual</span>
                     </div>
                   </div>
                 </div>
