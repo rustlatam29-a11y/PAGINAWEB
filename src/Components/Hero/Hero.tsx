@@ -1,66 +1,8 @@
-import React, { useState, useEffect, useRef } from "react";
-import { Download, Play, Users, Server, Activity, Star } from "lucide-react";
+import React, { useEffect, useRef } from "react";
+import { Download, Play } from "lucide-react";
 
 const Hero: React.FC = () => {
-  const [playerCount, setPlayerCount] = useState(74);
   const particlesRef = useRef<HTMLDivElement>(null);
-
-  // Sistema realista de jugadores basado en horarios
-  useEffect(() => {
-    const getRealisticPlayerCount = () => {
-      const now = new Date();
-      const hour = now.getHours();
-      
-      let baseCount;
-      
-      // Horarios PICO (18:00 - 22:59) → 80-100 jugadores
-      if (hour >= 18 && hour <= 22) {
-        baseCount = 80 + Math.floor(Math.random() * 21); // 80-100
-      }
-      // Horarios BAJOS (03:00 - 06:59) → 25-40 jugadores
-      else if (hour >= 3 && hour < 7) {
-        baseCount = 25 + Math.floor(Math.random() * 16); // 25-40
-      }
-      // Madrugada temprana (00:00 - 02:59) → 40-60 jugadores
-      else if (hour >= 0 && hour < 3) {
-        baseCount = 40 + Math.floor(Math.random() * 21); // 40-60
-      }
-      // Mañana (07:00 - 11:59) → 45-65 jugadores
-      else if (hour >= 7 && hour < 12) {
-        baseCount = 45 + Math.floor(Math.random() * 21); // 45-65
-      }
-      // Mediodía (12:00 - 14:59) → 60-75 jugadores
-      else if (hour >= 12 && hour < 15) {
-        baseCount = 60 + Math.floor(Math.random() * 16); // 60-75
-      }
-      // Tarde (15:00 - 17:59) → 70-85 jugadores
-      else if (hour >= 15 && hour < 18) {
-        baseCount = 70 + Math.floor(Math.random() * 16); // 70-85
-      }
-      // Noche tardía (23:00) → 65-80 jugadores
-      else {
-        baseCount = 65 + Math.floor(Math.random() * 16); // 65-80
-      }
-      
-      // Agregar variación pequeña (+/- 3)
-      const variation = Math.floor(Math.random() * 7) - 3;
-      let finalCount = baseCount + variation;
-      
-      // Limitar entre 25 y 160
-      return Math.max(25, Math.min(160, finalCount));
-    };
-
-    // Actualizar cada 30 segundos
-    const interval = setInterval(() => {
-      const newCount = getRealisticPlayerCount();
-      setPlayerCount(newCount);
-    }, 30000); // 30 segundos
-
-    // Establecer valor inicial basado en hora actual
-    setPlayerCount(getRealisticPlayerCount());
-
-    return () => clearInterval(interval);
-  }, []);
 
   // Crear partículas
   useEffect(() => {
@@ -82,8 +24,6 @@ const Hero: React.FC = () => {
     }
   }, []);
 
-  const percentage = (playerCount / 160) * 100;
-
   return (
     <section className="hero-section">
       {/* Background animado */}
@@ -93,10 +33,10 @@ const Hero: React.FC = () => {
         <div className="gradient-overlay"></div>
       </div>
 
-      <div className="hero-container">
+      <div className="hero-container-center">
         
-        {/* Lado Izquierdo: Contenido Principal */}
-        <div className="hero-content">
+        {/* Contenido Principal Centrado */}
+        <div className="hero-content-center">
           
           {/* Título Principal con Animación */}
           <div className="hero-title-wrapper">
@@ -136,100 +76,6 @@ const Hero: React.FC = () => {
             </button>
           </div>
           
-        </div>
-        
-        {/* Lado Derecho: Estado del Servidor (ANIMADO) */}
-        <div className="server-status-card">
-          
-          {/* Header */}
-          <div className="status-header">
-            <h3 className="status-title">Estado del Servidor</h3>
-          </div>
-          
-          {/* Stats Grid 2x2 + Rating Full Width */}
-          <div className="stats-grid">
-            
-            {/* Stat 1: Jugadores */}
-            <div className="stat-item">
-              <div className="stat-icon">
-                <Users className="w-8 h-8" />
-              </div>
-              <div className="stat-content">
-                <div className="stat-label">Jugadores</div>
-                <div className="stat-values">
-                  <div className="stat-value">{playerCount}</div>
-                  <div className="stat-max">/160</div>
-                </div>
-                <div className="stat-bar">
-                  <div className="stat-bar-fill" style={{ width: `${percentage}%` }}></div>
-                </div>
-              </div>
-            </div>
-            
-            {/* Stat 2: Latencia */}
-            <div className="stat-item">
-              <div className="stat-icon">
-                <Server className="w-8 h-8" />
-              </div>
-              <div className="stat-content">
-                <div className="stat-label">Latencia</div>
-                <div className="stat-value">33<span className="stat-unit">ms</span></div>
-              </div>
-              <div className="latency-indicator excellent">
-                <div className="latency-bar"></div>
-                <div className="latency-bar"></div>
-                <div className="latency-bar"></div>
-                <div className="latency-bar"></div>
-              </div>
-            </div>
-            
-            {/* Stat 3: Uptime */}
-            <div className="stat-item">
-              <div className="stat-icon">
-                <Activity className="w-8 h-8" />
-              </div>
-              <div className="stat-content">
-                <div className="stat-label">Uptime</div>
-                <div className="stat-value">99.9<span className="stat-unit">%</span></div>
-              </div>
-              <div className="uptime-ring">
-                <svg viewBox="0 0 36 36" className="w-8 h-8">
-                  <path className="uptime-bg" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"/>
-                  <path className="uptime-progress" strokeDasharray="99.9, 100" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"/>
-                </svg>
-              </div>
-            </div>
-            
-            {/* Stat 4: Status Online */}
-            <div className="stat-item">
-              <div className="stat-icon">
-                <div className="pulse-dot-large"></div>
-              </div>
-              <div className="stat-content">
-                <div className="stat-label">Estado</div>
-                <div className="stat-value status-online">ONLINE</div>
-              </div>
-            </div>
-            
-            {/* Stat 5: Rating (Full Width) */}
-            <div className="stat-item stat-item-full">
-              <div className="stat-icon">
-                <Star className="w-8 h-8" fill="currentColor" />
-              </div>
-              <div className="stat-content">
-                <div className="stat-label">Rating</div>
-                <div className="stat-value">4.9<span className="stat-unit">/5</span></div>
-              </div>
-              <div className="rating-stars">
-                <span className="star filled">★</span>
-                <span className="star filled">★</span>
-                <span className="star filled">★</span>
-                <span className="star filled">★</span>
-                <span className="star half">★</span>
-              </div>
-            </div>
-            
-          </div>
         </div>
         
       </div>
@@ -313,22 +159,23 @@ const Hero: React.FC = () => {
           50% { opacity: 1; }
         }
 
-        .hero-container {
+        .hero-container-center {
           position: relative;
           z-index: 10;
-          max-width: 1400px;
+          max-width: 900px;
           margin: 0 auto;
           padding: 0 2rem;
-          display: grid;
-          grid-template-columns: 1fr 1fr;
-          gap: 4rem;
+          display: flex;
           align-items: center;
+          justify-content: center;
         }
 
-        .hero-content {
+        .hero-content-center {
           display: flex;
           flex-direction: column;
-          gap: 2rem;
+          gap: 2.5rem;
+          text-align: center;
+          align-items: center;
         }
 
         .hero-title {
@@ -348,13 +195,13 @@ const Hero: React.FC = () => {
 
         /* RUST - MÁS GRANDE */
         .title-line:nth-child(1) {
-          font-size: 6rem;
+          font-size: 7rem;
           color: #ffffff;
         }
 
         /* GRATIS - MÁS PEQUEÑO */
         .title-line:nth-child(2) {
-          font-size: 4rem;
+          font-size: 5rem;
           animation-delay: 0.2s;
         }
 
@@ -423,9 +270,10 @@ const Hero: React.FC = () => {
 
         .hero-actions {
           display: flex;
-          gap: 1rem;
+          gap: 1.5rem;
           flex-wrap: wrap;
           animation: fadeIn 1s ease-out 0.9s both;
+          justify-content: center;
         }
 
         .btn-primary {
@@ -858,17 +706,12 @@ const Hero: React.FC = () => {
         }
 
         @media (max-width: 1200px) {
-          .hero-container {
-            grid-template-columns: 1fr;
-            gap: 3rem;
-          }
-          
           .title-line:nth-child(1) {
-            font-size: 5rem;
+            font-size: 6rem;
           }
           
           .title-line:nth-child(2) {
-            font-size: 3.5rem;
+            font-size: 4rem;
           }
         }
 
@@ -877,27 +720,37 @@ const Hero: React.FC = () => {
             padding: 5rem 0 1rem 0;
           }
           
-          .hero-container {
+          .hero-container-center {
             padding: 0 1rem;
-            gap: 2rem;
           }
           
           .title-line:nth-child(1) {
-            font-size: 4rem;
+            font-size: 4.5rem;
           }
           
           .title-line:nth-child(2) {
-            font-size: 2.5rem;
+            font-size: 3rem;
+          }
+          
+          .hero-actions {
+            flex-direction: column;
+            width: 100%;
+          }
+          
+          .btn-primary,
+          .btn-secondary {
+            width: 100%;
+            justify-content: center;
           }
         }
 
         @media (max-width: 480px) {
           .title-line:nth-child(1) {
-            font-size: 3rem;
+            font-size: 3.5rem;
           }
           
           .title-line:nth-child(2) {
-            font-size: 2rem;
+            font-size: 2.5rem;
           }
         }
           
