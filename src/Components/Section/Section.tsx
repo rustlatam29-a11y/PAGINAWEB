@@ -77,10 +77,16 @@ const About: React.FC<AboutProps> = () => {
   }, [isMobile]);
 
   return (
-    <section
-      ref={sectionRef}
-      className="relative py-6 sm:py-8 lg:py-10 overflow-hidden"
-    >
+    <>
+      {/* Divider Line */}
+      <div className="section-divider">
+        <div className="divider-line"></div>
+      </div>
+      
+      <section
+        ref={sectionRef}
+        className="relative py-6 sm:py-8 lg:py-10 overflow-hidden"
+      >
       {/* Animated Background - Optimizado */}
       <div className="absolute inset-0">
         {/* Matrix-style grid - Simplificado en móviles */}
@@ -380,8 +386,31 @@ const About: React.FC<AboutProps> = () => {
             line-height: 2rem;
           }
         }
+        
+        .section-divider {
+          width: 100%;
+          padding: 2rem 0;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+        
+        .divider-line {
+          width: 80%;
+          max-width: 1200px;
+          height: 2px;
+          background: linear-gradient(90deg, transparent, #dc2626, transparent);
+          box-shadow: 0 0 20px rgba(220, 38, 38, 0.5);
+          animation: dividerPulse 3s ease-in-out infinite;
+        }
+        
+        @keyframes dividerPulse {
+          0%, 100% { opacity: 0.6; }
+          50% { opacity: 1; }
+        }
       `}</style>
     </section>
+    </>
   );
 };
 

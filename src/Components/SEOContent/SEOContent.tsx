@@ -3,7 +3,13 @@ import { Download, Users, Server, Shield } from 'lucide-react';
 
 const SEOContent: React.FC = () => {
   return (
-    <section className="relative py-4 lg:py-6">
+    <>
+      {/* Divider Line */}
+      <div className="section-divider">
+        <div className="divider-line"></div>
+      </div>
+      
+      <section className="relative py-4 lg:py-6">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Main SEO Section */}
@@ -137,7 +143,33 @@ const SEOContent: React.FC = () => {
           </a>
         </div>
       </div>
+      
+      {/* Styles for divider */}
+      <style>{`
+        .section-divider {
+          width: 100%;
+          padding: 2rem 0;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+        
+        .divider-line {
+          width: 80%;
+          max-width: 1200px;
+          height: 2px;
+          background: linear-gradient(90deg, transparent, #dc2626, transparent);
+          box-shadow: 0 0 20px rgba(220, 38, 38, 0.5);
+          animation: dividerPulse 3s ease-in-out infinite;
+        }
+        
+        @keyframes dividerPulse {
+          0%, 100% { opacity: 0.6; }
+          50% { opacity: 1; }
+        }
+      `}</style>
     </section>
+    </>
   );
 };
 
