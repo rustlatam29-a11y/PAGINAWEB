@@ -97,12 +97,12 @@ const Hero: React.FC = () => {
                     <span className="btn-arrow">→</span>
                   </a>
                   
-                  <button className="btn-secondary">
+                  <a href="https://www.youtube.com/watch?v=ZNTfR90nPtg" target="_blank" rel="noopener noreferrer" className="btn-secondary">
                     <span className="btn-icon">
                       <Play className="w-5 h-5" fill="currentColor" />
                     </span>
                     <span className="btn-text">Ver Tráiler</span>
-                  </button>
+                  </a>
                 </div>
               </>
             )}
