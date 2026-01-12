@@ -159,12 +159,14 @@ const Hero: React.FC = () => {
                 <Users className="w-10 h-10" />
               </div>
               <div className="stat-content">
-                <div className="stat-value">{playerCount}</div>
-                <div className="stat-max">/160</div>
-              </div>
-              <div className="stat-label">Jugadores</div>
-              <div className="stat-bar">
-                <div className="stat-bar-fill" style={{ width: `${percentage}%` }}></div>
+                <div className="stat-label">Jugadores</div>
+                <div className="stat-values">
+                  <div className="stat-value">{playerCount}</div>
+                  <div className="stat-max">/160</div>
+                </div>
+                <div className="stat-bar">
+                  <div className="stat-bar-fill" style={{ width: `${percentage}%` }}></div>
+                </div>
               </div>
             </div>
             
@@ -174,9 +176,9 @@ const Hero: React.FC = () => {
                 <Server className="w-10 h-10" />
               </div>
               <div className="stat-content">
+                <div className="stat-label">Latencia</div>
                 <div className="stat-value">33<span className="stat-unit">ms</span></div>
               </div>
-              <div className="stat-label">Latencia</div>
               <div className="latency-indicator excellent">
                 <div className="latency-bar"></div>
                 <div className="latency-bar"></div>
@@ -191,9 +193,9 @@ const Hero: React.FC = () => {
                 <Activity className="w-10 h-10" />
               </div>
               <div className="stat-content">
+                <div className="stat-label">Uptime</div>
                 <div className="stat-value">99.9<span className="stat-unit">%</span></div>
               </div>
-              <div className="stat-label">Uptime</div>
               <div className="uptime-ring">
                 <svg viewBox="0 0 36 36" className="w-10 h-10">
                   <path className="uptime-bg" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"/>
@@ -208,9 +210,9 @@ const Hero: React.FC = () => {
                 <Star className="w-10 h-10" fill="currentColor" />
               </div>
               <div className="stat-content">
+                <div className="stat-label">Rating</div>
                 <div className="stat-value">4.9<span className="stat-unit">/5</span></div>
               </div>
-              <div className="stat-label">Rating</div>
               <div className="rating-stars">
                 <span className="star filled">★</span>
                 <span className="star filled">★</span>
@@ -619,8 +621,8 @@ const Hero: React.FC = () => {
 
         .stats-grid {
           display: grid;
-          grid-template-columns: repeat(2, 1fr);
-          gap: 1.5rem;
+          grid-template-columns: 1fr;
+          gap: 1rem;
           margin-bottom: 2rem;
         }
 
@@ -628,10 +630,13 @@ const Hero: React.FC = () => {
           background: rgba(255, 255, 255, 0.03);
           border: 1px solid rgba(220, 38, 38, 0.2);
           border-radius: 12px;
-          padding: 1.5rem;
+          padding: 1.25rem;
           transition: all 0.3s ease;
           position: relative;
           overflow: hidden;
+          display: flex;
+          align-items: center;
+          gap: 1rem;
         }
 
         .stat-item::before {
@@ -657,15 +662,21 @@ const Hero: React.FC = () => {
 
         .stat-icon {
           color: #dc2626;
-          margin-bottom: 1rem;
           filter: drop-shadow(0 0 8px rgba(220, 38, 38, 0.6));
+          flex-shrink: 0;
         }
 
         .stat-content {
           display: flex;
+          flex-direction: column;
+          gap: 0.25rem;
+          flex: 1;
+        }
+        
+        .stat-values {
+          display: flex;
           align-items: baseline;
           gap: 0.5rem;
-          margin-bottom: 0.5rem;
         }
 
         .stat-value {
@@ -688,12 +699,11 @@ const Hero: React.FC = () => {
         }
 
         .stat-label {
-          font-size: 0.85rem;
+          font-size: 0.75rem;
           color: rgba(255, 255, 255, 0.6);
           text-transform: uppercase;
           letter-spacing: 1px;
           font-weight: 500;
-          margin-bottom: 0.5rem;
         }
 
         .stat-bar {
