@@ -82,34 +82,42 @@ const VIPs: React.FC = () => {
             
             {/* PLAN SUPREMO */}
             <div className="relative group">
-              {/* Badge Destacado */}
+              {/* Badge Destacado con mejor animación */}
               <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 z-10">
-                <div className="bg-gradient-to-r from-red-600 to-red-800 text-white px-6 py-2 rounded-full text-xs font-bold shadow-2xl flex items-center space-x-2 animate-pulse">
-                  <Star className="w-4 h-4" />
-                  <span>RECOMENDADO</span>
+                <div className="bg-gradient-to-r from-red-600 via-red-500 to-red-600 text-white px-8 py-2.5 rounded-full text-xs font-bold shadow-2xl flex items-center space-x-2 animate-pulse">
+                  <Star className="w-4 h-4 fill-current" />
+                  <span className="tracking-wide">MÁS POPULAR</span>
                 </div>
               </div>
 
-              <div className="relative bg-gradient-to-br from-red-950/50 via-black/70 to-black/70 backdrop-blur-2xl rounded-3xl p-6 md:p-8 border-2 border-red-600/50 hover:border-red-500/80 transition-all duration-500 hover:shadow-2xl hover:shadow-red-600/50 transform hover:scale-[1.02]">
+              <div className="relative bg-gradient-to-br from-red-950/60 via-black/80 to-black/80 backdrop-blur-2xl rounded-3xl p-6 md:p-8 border-2 border-red-600/60 hover:border-red-500/90 transition-all duration-500 hover:shadow-2xl hover:shadow-red-600/60 transform hover:scale-[1.03]">
                 
                 {/* Efectos de Fondo Mejorados */}
-                <div className="absolute inset-0 bg-gradient-to-br from-red-900/20 via-transparent to-transparent rounded-3xl" />
-                <div className="absolute -inset-1 bg-gradient-to-r from-red-600/30 to-red-900/30 rounded-3xl blur-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                <div className="absolute inset-0 bg-gradient-to-br from-red-900/30 via-transparent to-transparent rounded-3xl" />
+                <div className="absolute -inset-1 bg-gradient-to-r from-red-600/40 to-red-900/40 rounded-3xl blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                <div className="absolute top-0 left-1/2 -translate-x-1/2 w-3/4 h-32 bg-red-600/20 blur-3xl rounded-full" />
                 
                 <div className="relative z-10">
                   {/* Header del Plan Mejorado */}
                   <div className="text-center mb-6">
-                    <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-red-600 to-red-800 rounded-2xl mb-3 shadow-2xl transform group-hover:rotate-12 transition-transform duration-300">
-                      <Crown className="w-8 h-8 text-white" />
+                    <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-red-500 via-red-600 to-red-800 rounded-2xl mb-4 shadow-2xl transform group-hover:rotate-12 transition-transform duration-300 relative">
+                      <Crown className="w-10 h-10 text-white" />
+                      <div className="absolute inset-0 bg-gradient-to-br from-red-400/50 to-transparent rounded-2xl animate-pulse" />
                     </div>
-                    <h2 className="text-2xl md:text-3xl font-black text-white mb-2">PLAN SUPREMO</h2>
-                    <p className="text-gray-400 text-xs md:text-sm">Experiencia VIP completa y exclusiva</p>
+                    <h2 className="text-3xl md:text-4xl font-black text-white mb-3 tracking-tight">PLAN SUPREMO</h2>
+                    <p className="text-gray-300 text-sm md:text-base font-medium">La experiencia VIP definitiva</p>
                   </div>
 
-                  {/* Precio Destacado */}
-                  <div className="text-center mb-6 p-5 bg-gradient-to-br from-red-950/50 to-black/50 rounded-2xl border border-red-600/30 shadow-xl">
-                    <div className="text-4xl md:text-5xl font-black text-red-500 mb-1">$10.00</div>
-                    <div className="text-gray-400 text-xs uppercase tracking-wider">USD / Permanente</div>
+                  {/* Precio Destacado con mejor diseño */}
+                  <div className="text-center mb-8 p-6 bg-gradient-to-br from-red-950/70 to-black/70 rounded-2xl border-2 border-red-600/40 shadow-2xl relative overflow-hidden">
+                    <div className="absolute inset-0 bg-gradient-to-r from-red-600/10 via-red-500/20 to-red-600/10 animate-pulse" />
+                    <div className="relative z-10">
+                      <div className="text-5xl md:text-6xl font-black text-transparent bg-clip-text bg-gradient-to-r from-red-400 via-red-500 to-red-600 mb-2">$10.00</div>
+                      <div className="text-gray-300 text-sm uppercase tracking-widest font-semibold">USD • Acceso Permanente</div>
+                      <div className="mt-3 inline-block px-4 py-1 bg-red-600/20 border border-red-500/30 rounded-full">
+                        <span className="text-red-400 text-xs font-bold">✓ Pago único, sin renovaciones</span>
+                      </div>
+                    </div>
                   </div>
 
                   {/* Imagen Mejorada */}
@@ -199,26 +207,34 @@ const VIPs: React.FC = () => {
 
             {/* PLAN VIP BASIC */}
             <div className="relative group">
-              <div className="relative bg-gradient-to-br from-gray-900/50 via-black/70 to-black/70 backdrop-blur-2xl rounded-3xl p-6 md:p-8 border-2 border-gray-700/50 hover:border-red-500/60 transition-all duration-500 hover:shadow-2xl hover:shadow-red-500/30 transform hover:scale-[1.02]">
+              <div className="relative bg-gradient-to-br from-gray-900/60 via-black/80 to-black/80 backdrop-blur-2xl rounded-3xl p-6 md:p-8 border-2 border-gray-700/60 hover:border-red-500/70 transition-all duration-500 hover:shadow-2xl hover:shadow-red-500/40 transform hover:scale-[1.03]">
                 
                 {/* Efectos de Fondo */}
-                <div className="absolute inset-0 bg-gradient-to-br from-gray-800/10 via-transparent to-transparent rounded-3xl" />
-                <div className="absolute -inset-1 bg-gradient-to-r from-red-500/20 to-gray-700/20 rounded-3xl blur-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                <div className="absolute inset-0 bg-gradient-to-br from-gray-800/20 via-transparent to-transparent rounded-3xl" />
+                <div className="absolute -inset-1 bg-gradient-to-r from-red-500/30 to-gray-700/30 rounded-3xl blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                <div className="absolute top-0 left-1/2 -translate-x-1/2 w-3/4 h-32 bg-red-500/10 blur-3xl rounded-full" />
                 
                 <div className="relative z-10">
                   {/* Header del Plan */}
                   <div className="text-center mb-6">
-                    <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-gray-700 to-gray-900 rounded-2xl mb-3 shadow-2xl transform group-hover:rotate-12 transition-transform duration-300">
-                      <Zap className="w-8 h-8 text-red-400" />
+                    <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-gray-600 via-gray-700 to-gray-900 rounded-2xl mb-4 shadow-2xl transform group-hover:rotate-12 transition-transform duration-300 relative">
+                      <Zap className="w-10 h-10 text-red-400" />
+                      <div className="absolute inset-0 bg-gradient-to-br from-gray-500/30 to-transparent rounded-2xl" />
                     </div>
-                    <h2 className="text-2xl md:text-3xl font-black text-white mb-2">PLAN VIP BASIC</h2>
-                    <p className="text-gray-400 text-xs md:text-sm">Plan esencial para comenzar tu aventura VIP</p>
+                    <h2 className="text-3xl md:text-4xl font-black text-white mb-3 tracking-tight">PLAN VIP BASIC</h2>
+                    <p className="text-gray-300 text-sm md:text-base font-medium">Tu primer paso al mundo VIP</p>
                   </div>
 
-                  {/* Precio Destacado */}
-                  <div className="text-center mb-6 p-5 bg-gradient-to-br from-gray-900/50 to-black/50 rounded-2xl border border-gray-700/30 shadow-xl">
-                    <div className="text-4xl md:text-5xl font-black text-red-400 mb-1">$5.00</div>
-                    <div className="text-gray-400 text-xs uppercase tracking-wider">USD / Permanente</div>
+                  {/* Precio Destacado con mejor diseño */}
+                  <div className="text-center mb-8 p-6 bg-gradient-to-br from-gray-900/70 to-black/70 rounded-2xl border-2 border-gray-700/40 shadow-2xl relative overflow-hidden">
+                    <div className="absolute inset-0 bg-gradient-to-r from-gray-700/10 via-gray-600/20 to-gray-700/10" />
+                    <div className="relative z-10">
+                      <div className="text-5xl md:text-6xl font-black text-transparent bg-clip-text bg-gradient-to-r from-red-300 via-red-400 to-red-500 mb-2">$5.00</div>
+                      <div className="text-gray-300 text-sm uppercase tracking-widest font-semibold">USD • Acceso Permanente</div>
+                      <div className="mt-3 inline-block px-4 py-1 bg-gray-700/30 border border-gray-600/30 rounded-full">
+                        <span className="text-red-400 text-xs font-bold">✓ Pago único, sin renovaciones</span>
+                      </div>
+                    </div>
                   </div>
 
                   {/* Imagen */}
@@ -332,7 +348,7 @@ const VIPs: React.FC = () => {
               <div className="text-center p-4">
                 <Gift className="w-10 h-10 text-red-400 mx-auto mb-3" />
                 <h4 className="text-white font-semibold mb-2">Acceso Permanente</h4>
-                <p className="text-gray-400 text-sm">Un solo pago, beneficios para siempre</p>
+                <p className="text-gray-400 text-sm">Pago único, beneficios de por vida</p>
               </div>
             </div>
 
