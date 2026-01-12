@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useMemo, useCallback } from "react";
-import { Menu, X, Users, Trophy, Settings, Zap, MessageSquare, ExternalLink } from "lucide-react";
+import { Menu, X, Users, Settings, Zap, MessageSquare, ExternalLink, Gamepad2, Phone } from "lucide-react";
 
 interface HeaderProps {
   discordInviteUrl?: string;
@@ -140,14 +140,14 @@ const Header: React.FC<HeaderProps> = ({
   const navigationItems: NavItemProps[] = useMemo(
     () => [
       {
-        icon: <Trophy className="w-4 h-4 md:w-5 md:h-5" />,
-        text: "Habla con nosotros",
-        href: "https://discord.gg/dT8u5b3jga",
+        icon: <Gamepad2 className="w-4 h-4 md:w-5 md:h-5" />,
+        text: "SERVIDOR DE DAYZ",
+        href: "https://discord.gg/54zHAYmtzp",
       },
       {
-        icon: <Trophy className="w-4 h-4 md:w-5 md:h-5" />,
-        text: "Canal de Telegram",
-        href: "https://t.me/latamrust",
+        icon: <Phone className="w-4 h-4 md:w-5 md:h-5" />,
+        text: "COMPRA DE VIPS",
+        href: "https://wa.me/+595972610336",
       },
     ],
     [scrollToSection]
