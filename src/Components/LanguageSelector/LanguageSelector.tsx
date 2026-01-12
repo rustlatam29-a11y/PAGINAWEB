@@ -1,10 +1,12 @@
-import React, { useState } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { useLanguage } from '../../context/LanguageContext';
 import { Globe } from 'lucide-react';
 
 const LanguageSelector: React.FC = () => {
   const { language, setLanguage } = useLanguage();
   const [isOpen, setIsOpen] = useState(false);
+  const [dropdownStyle, setDropdownStyle] = useState({});
+  const buttonRef = useRef<HTMLButtonElement>(null);
 
   const languages = [
     { code: 'es' as const, name: 'Español', flag: '🇪🇸' },
@@ -14,6 +16,16 @@ const LanguageSelector: React.FC = () => {
 
   const currentLanguage = languages.find(lang => lang.code === language);
 
+  useEffect(() => {
+    if (isOpen && buttonRef.current) {
+      const rect = buttonRef.current.getBoundingClientRect();
+      setDropdownStyle({
+        top: `${rect.bottom + 8}px`,
+        right: `${window.innerWidth - rect.right}px`,
+      });
+    }
+  }, [isOpen]);
+
   const handleClickOutside = (e: MouseEvent) => {
     const target = e.target as HTMLElement;
     if (!target.closest('.language-selector')) {
@@ -21,7 +33,7 @@ const LanguageSelector: React.FC = () => {
     }
   };
 
-  React.useEffect(() => {
+  useEffect(() => {
     if (isOpen) {
       document.addEventListener('click', handleClickOutside);
       return () => document.removeEventListener('click', handleClickOutside);
@@ -31,6 +43,7 @@ const LanguageSelector: React.FC = () => {
   return (
     <div className="language-selector">
       <button
+        ref={buttonRef}
         className="language-button"
         onClick={(e) => {
           e.stopPropagation();
@@ -43,7 +56,7 @@ const LanguageSelector: React.FC = () => {
       </button>
 
       {isOpen && (
-        <div className="language-dropdown" onClick={(e) => e.stopPropagation()}>
+        <div className="language-dropdown" style={dropdownStyle} onClick={(e) => e.stopPropagation()}>
           {languages.map((lang) => (
             <button
               key={lang.code}
@@ -91,19 +104,17 @@ const LanguageSelector: React.FC = () => {
         }
 
         .language-dropdown {
-          position: fixed;
-          top: auto;
-          right: 1rem;
-          margin-top: 0.5rem;
-          background: rgba(0, 0, 0, 0.95);
-          border: 2px solid rgba(220, 38, 38, 0.5);
+          position: fixed !important;
+          background: rgba(0, 0, 0, 0.98) !important;
+          border: 2px solid rgba(220, 38, 38, 0.6) !important;
           border-radius: 8px;
-          padding: 0.5rem;
-          min-width: 160px;
+          padding: 0.75rem;
+          min-width: 180px;
           backdrop-filter: blur(20px);
-          box-shadow: 0 10px 40px rgba(0, 0, 0, 0.8), 0 0 20px rgba(220, 38, 38, 0.3);
+          box-shadow: 0 15px 50px rgba(0, 0, 0, 0.9), 0 0 30px rgba(220, 38, 38, 0.5) !important;
           animation: dropdownAppear 0.2s ease-out;
-          z-index: 99999;
+          z-index: 999999 !important;
+          pointer-events: auto !important;
         }
 
         @keyframes dropdownAppear {
