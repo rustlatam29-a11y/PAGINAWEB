@@ -717,16 +717,6 @@ const Hero: React.FC = () => {
             font-size: 2.5rem;
           }
           
-          .hero-actions {
-            flex-direction: column;
-          }
-          
-          .btn-primary,
-          .btn-secondary {
-            width: 100%;
-          }
-        }
-          
           .subtitle-text {
             font-size: 1rem;
           }
@@ -739,15 +729,6 @@ const Hero: React.FC = () => {
           .btn-secondary {
             width: 100%;
             justify-content: center;
-          }
-          
-          .stats-grid {
-            grid-template-columns: 1fr;
-            gap: 1rem;
-          }
-          
-          .server-status-card {
-            padding: 1.5rem;
           }
         }
       `}</style>
