@@ -79,7 +79,7 @@ const About: React.FC<AboutProps> = () => {
   return (
     <section
       ref={sectionRef}
-      className="relative py-12 sm:py-16 lg:py-20 bg-gradient-to-b from-slate-900 via-gray-900 to-black overflow-hidden"
+      className="relative py-6 sm:py-8 lg:py-10 bg-gradient-to-b from-slate-900 via-gray-900 to-black overflow-hidden"
     >
       {/* Animated Background - Optimizado */}
       <div className="absolute inset-0">
@@ -239,12 +239,12 @@ const About: React.FC<AboutProps> = () => {
 
         {/* Bottom Quote Section - Responsive */}
         <div
-          className={`mt-12 lg:mt-20 text-center transform transition-all duration-1000 ${
+          className={`mt-6 lg:mt-8 text-center transform transition-all duration-1000 ${
             isVisible ? "translate-y-0 opacity-100" : "translate-y-12 opacity-0"
           }`}
           style={{ transitionDelay: isMobile ? "1.5s" : "2s" }}
         >
-          <div className="bg-gradient-to-r from-purple-900/40 to-blue-900/40 backdrop-blur-lg rounded-2xl lg:rounded-3xl p-6 lg:p-8 border border-white/10 max-w-4xl mx-auto">
+          <div className="bg-gradient-to-r from-purple-900/40 to-blue-900/40 backdrop-blur-lg rounded-2xl lg:rounded-3xl p-5 lg:p-6 border border-white/10 max-w-4xl mx-auto">
             <Star className="w-8 lg:w-12 h-8 lg:h-12 text-yellow-400 mx-auto mb-4 animate-spin-slow" />
             <blockquote className="text-xl sm:text-2xl lg:text-3xl font-bold text-white mb-4 lg:mb-6 italic px-2">
               "La comunidad más grande de Rust Pirata en toda LATAM."
