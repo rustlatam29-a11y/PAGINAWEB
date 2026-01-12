@@ -5,6 +5,7 @@ import Reglas  from "../Pages/Reglas/Reglas";
 import Terms from "../Pages/Terms/Terms";
 import Privacy from "../Pages/Privacy/Privacy";
 import DayZ from "../Pages/DayZ/DayZ";
+import VIPs from "../Pages/VIPs/VIPs";
 
 function AppRoutes() {
   return (
@@ -12,6 +13,7 @@ function AppRoutes() {
       <Route path="/" element={<HomePage />} />
       <Route path="/reglas" element={<Reglas />} />
       <Route path="/dayz" element={<DayZ />} />
+      <Route path="/vips" element={<VIPs />} />
       <Route path="/terms" element={<Terms />} />
       <Route path="/privacy" element={<Privacy />} />
       <Route path="*" element={<NotFound />} />
