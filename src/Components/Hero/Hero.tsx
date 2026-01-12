@@ -230,42 +230,6 @@ const Hero: React.FC = () => {
             </div>
             
           </div>
-          
-          {/* Footer con info adicional */}
-          <div className="status-footer">
-            <div className="footer-item">
-              <div className="footer-icon">🔄</div>
-              <div className="footer-text">
-                <div className="footer-label">Reinicio Semanal</div>
-                <div className="footer-value">Mundo renovado cada 7 días</div>
-              </div>
-            </div>
-            
-            <div className="footer-item">
-              <div className="footer-icon">🛡️</div>
-              <div className="footer-text">
-                <div className="footer-label">ANTI-DDOS</div>
-                <div className="footer-value">Sistema anti-trampas avanzado</div>
-              </div>
-            </div>
-            
-            <div className="footer-item">
-              <div className="footer-icon">📅</div>
-              <div className="footer-text">
-                <div className="footer-label">Actividades Diarias</div>
-                <div className="footer-value">Eventos programados</div>
-              </div>
-            </div>
-            
-            <div className="footer-item">
-              <div className="footer-icon">💬</div>
-              <div className="footer-text">
-                <div className="footer-label">Asistencia 24/7</div>
-                <div className="footer-value">Equipo de soporte disponible</div>
-              </div>
-            </div>
-          </div>
-          
         </div>
         
       </div>
