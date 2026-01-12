@@ -5,17 +5,59 @@ const Hero: React.FC = () => {
   const [playerCount, setPlayerCount] = useState(74);
   const particlesRef = useRef<HTMLDivElement>(null);
 
-  // Simular cambios de jugadores cada 30 segundos (más lento y sutil)
+  // Sistema realista de jugadores basado en horarios
   useEffect(() => {
+    const getRealisticPlayerCount = () => {
+      const now = new Date();
+      const hour = now.getHours();
+      
+      let baseCount;
+      
+      // Horarios PICO (18:00 - 22:59) → 80-100 jugadores
+      if (hour >= 18 && hour <= 22) {
+        baseCount = 80 + Math.floor(Math.random() * 21); // 80-100
+      }
+      // Horarios BAJOS (03:00 - 06:59) → 25-40 jugadores
+      else if (hour >= 3 && hour < 7) {
+        baseCount = 25 + Math.floor(Math.random() * 16); // 25-40
+      }
+      // Madrugada temprana (00:00 - 02:59) → 40-60 jugadores
+      else if (hour >= 0 && hour < 3) {
+        baseCount = 40 + Math.floor(Math.random() * 21); // 40-60
+      }
+      // Mañana (07:00 - 11:59) → 45-65 jugadores
+      else if (hour >= 7 && hour < 12) {
+        baseCount = 45 + Math.floor(Math.random() * 21); // 45-65
+      }
+      // Mediodía (12:00 - 14:59) → 60-75 jugadores
+      else if (hour >= 12 && hour < 15) {
+        baseCount = 60 + Math.floor(Math.random() * 16); // 60-75
+      }
+      // Tarde (15:00 - 17:59) → 70-85 jugadores
+      else if (hour >= 15 && hour < 18) {
+        baseCount = 70 + Math.floor(Math.random() * 16); // 70-85
+      }
+      // Noche tardía (23:00) → 65-80 jugadores
+      else {
+        baseCount = 65 + Math.floor(Math.random() * 16); // 65-80
+      }
+      
+      // Agregar variación pequeña (+/- 3)
+      const variation = Math.floor(Math.random() * 7) - 3;
+      let finalCount = baseCount + variation;
+      
+      // Limitar entre 25 y 160
+      return Math.max(25, Math.min(160, finalCount));
+    };
+
+    // Actualizar cada 30 segundos
     const interval = setInterval(() => {
-      setPlayerCount(prevCount => {
-        // Cambios más pequeños: +1 o -1 jugador
-        const change = Math.random() > 0.5 ? 1 : -1;
-        const newCount = prevCount + change;
-        // Mantener entre 70 y 90 jugadores
-        return Math.max(70, Math.min(90, newCount));
-      });
+      const newCount = getRealisticPlayerCount();
+      setPlayerCount(newCount);
     }, 30000); // 30 segundos
+
+    // Establecer valor inicial basado en hora actual
+    setPlayerCount(getRealisticPlayerCount());
 
     return () => clearInterval(interval);
   }, []);
@@ -323,17 +365,23 @@ const Hero: React.FC = () => {
 
         .title-line {
           display: block;
-          font-size: 5rem;
           font-weight: 900;
           letter-spacing: -2px;
-          color: #ffffff;
           text-shadow: 
             0 0 20px rgba(255, 255, 255, 0.3),
             0 0 40px rgba(220, 38, 38, 0.2);
           animation: titleAppear 1s ease-out both;
         }
 
+        /* RUST - MÁS GRANDE */
+        .title-line:nth-child(1) {
+          font-size: 6rem;
+          color: #ffffff;
+        }
+
+        /* GRATIS - MÁS PEQUEÑO */
         .title-line:nth-child(2) {
+          font-size: 4rem;
           animation-delay: 0.2s;
         }
 
@@ -821,8 +869,12 @@ const Hero: React.FC = () => {
             gap: 3rem;
           }
           
-          .title-line {
-            font-size: 4rem;
+          .title-line:nth-child(1) {
+            font-size: 5rem;
+          }
+          
+          .title-line:nth-child(2) {
+            font-size: 3.5rem;
           }
         }
 
@@ -836,9 +888,24 @@ const Hero: React.FC = () => {
             gap: 2rem;
           }
           
-          .title-line {
+          .title-line:nth-child(1) {
+            font-size: 4rem;
+          }
+          
+          .title-line:nth-child(2) {
+            font-size: 2.5rem;
+          }
+        }
+
+        @media (max-width: 480px) {
+          .title-line:nth-child(1) {
             font-size: 3rem;
           }
+          
+          .title-line:nth-child(2) {
+            font-size: 2rem;
+          }
+        }
           
           .subtitle-text {
             font-size: 1rem;
