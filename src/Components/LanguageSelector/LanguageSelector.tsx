@@ -14,11 +14,28 @@ const LanguageSelector: React.FC = () => {
 
   const currentLanguage = languages.find(lang => lang.code === language);
 
+  const handleClickOutside = (e: MouseEvent) => {
+    const target = e.target as HTMLElement;
+    if (!target.closest('.language-selector')) {
+      setIsOpen(false);
+    }
+  };
+
+  React.useEffect(() => {
+    if (isOpen) {
+      document.addEventListener('click', handleClickOutside);
+      return () => document.removeEventListener('click', handleClickOutside);
+    }
+  }, [isOpen]);
+
   return (
     <div className="language-selector">
       <button
         className="language-button"
-        onClick={() => setIsOpen(!isOpen)}
+        onClick={(e) => {
+          e.stopPropagation();
+          setIsOpen(!isOpen);
+        }}
         aria-label="Select language"
       >
         <Globe className="w-5 h-5" />
@@ -26,7 +43,7 @@ const LanguageSelector: React.FC = () => {
       </button>
 
       {isOpen && (
-        <div className="language-dropdown">
+        <div className="language-dropdown" onClick={(e) => e.stopPropagation()}>
           {languages.map((lang) => (
             <button
               key={lang.code}
@@ -46,7 +63,7 @@ const LanguageSelector: React.FC = () => {
       <style>{`
         .language-selector {
           position: relative;
-          z-index: 1000;
+          z-index: 9999;
         }
 
         .language-button {
@@ -74,17 +91,19 @@ const LanguageSelector: React.FC = () => {
         }
 
         .language-dropdown {
-          position: absolute;
-          top: calc(100% + 0.5rem);
-          right: 0;
-          background: rgba(0, 0, 0, 0.9);
-          border: 1px solid rgba(220, 38, 38, 0.3);
+          position: fixed;
+          top: auto;
+          right: 1rem;
+          margin-top: 0.5rem;
+          background: rgba(0, 0, 0, 0.95);
+          border: 2px solid rgba(220, 38, 38, 0.5);
           border-radius: 8px;
           padding: 0.5rem;
           min-width: 160px;
           backdrop-filter: blur(20px);
-          box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+          box-shadow: 0 10px 40px rgba(0, 0, 0, 0.8), 0 0 20px rgba(220, 38, 38, 0.3);
           animation: dropdownAppear 0.2s ease-out;
+          z-index: 99999;
         }
 
         @keyframes dropdownAppear {
