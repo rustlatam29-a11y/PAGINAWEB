@@ -1,8 +1,12 @@
-import React, { useEffect, useRef } from "react";
-import { Download, Play } from "lucide-react";
+import React, { useEffect, useRef, useState } from "react";
+import { Download, Play, Server } from "lucide-react";
+
+type GameType = "rust" | "dayz";
 
 const Hero: React.FC = () => {
   const particlesRef = useRef<HTMLDivElement>(null);
+  const [selectedGame, setSelectedGame] = useState<GameType>("rust");
+  const [isAnimating, setIsAnimating] = useState(false);
 
   // Crear partículas
   useEffect(() => {
@@ -24,6 +28,14 @@ const Hero: React.FC = () => {
     }
   }, []);
 
+  // Handler para cambio de juego con animación
+  const handleGameChange = (game: GameType) => {
+    if (game === selectedGame || isAnimating) return;
+    setIsAnimating(true);
+    setSelectedGame(game);
+    setTimeout(() => setIsAnimating(false), 200);
+  };
+
   return (
     <section className="hero-section">
       {/* Partículas */}
@@ -34,42 +46,109 @@ const Hero: React.FC = () => {
         {/* Contenido Principal Centrado */}
         <div className="hero-content-center">
           
-          {/* Título Principal con Animación */}
-          <div className="hero-title-wrapper">
-            <h1 className="hero-title">
-              <span className="title-line">RUST</span>
-              <span className="title-line gradient-text">GRATIS</span>
-            </h1>
-            <div className="title-underline"></div>
-          </div>
-          
-          {/* Subtítulo */}
-          <div className="hero-subtitle">
-            <p className="subtitle-text">
-              Servidor Pirata v2275 • Gratis BR•ES
-            </p>
-            <p className="subtitle-cta">• Jogue Agora!</p>
-          </div>
-          
-          {/* Botones de Acción */}
-          <div className="hero-actions">
-            <a href="https://discord.gg/dT8u5b3jga" target="_blank" rel="noopener noreferrer" className="btn-primary">
-              <span className="btn-icon">
-                <Download className="w-6 h-6" />
-              </span>
-              <span className="btn-text">
-                <span className="btn-label">DESCARGAR</span>
-                <span className="btn-subtitle">Baixar Agora</span>
-              </span>
-              <span className="btn-arrow">→</span>
-            </a>
-            
-            <button className="btn-secondary">
-              <span className="btn-icon">
-                <Play className="w-5 h-5" fill="currentColor" />
-              </span>
-              <span className="btn-text">Ver Tráiler</span>
+          {/* Selector de Juegos - Tabs */}
+          <div className="game-selector">
+            <button 
+              className={`game-tab ${selectedGame === "rust" ? "active" : ""}`}
+              onClick={() => handleGameChange("rust")}
+            >
+              RUST
             </button>
+            <button 
+              className={`game-tab ${selectedGame === "dayz" ? "active" : ""}`}
+              onClick={() => handleGameChange("dayz")}
+            >
+              DAYZ
+            </button>
+          </div>
+
+          {/* Contenido dinámico con animación */}
+          <div className={`hero-dynamic-content ${isAnimating ? "fade-out" : "fade-in"}`}>
+            
+            {selectedGame === "rust" && (
+              <>
+                {/* Título Principal con Animación - RUST */}
+                <div className="hero-title-wrapper">
+                  <h1 className="hero-title">
+                    <span className="title-line">RUST</span>
+                    <span className="title-line gradient-text">GRATIS</span>
+                  </h1>
+                  <div className="title-underline"></div>
+                </div>
+                
+                {/* Subtítulo - RUST */}
+                <div className="hero-subtitle">
+                  <p className="subtitle-text">
+                    Servidor Pirata v2275 • Gratis BR•ES
+                  </p>
+                  <p className="subtitle-cta">• Jogue Agora!</p>
+                </div>
+                
+                {/* Botones de Acción - RUST */}
+                <div className="hero-actions">
+                  <a href="https://discord.gg/dT8u5b3jga" target="_blank" rel="noopener noreferrer" className="btn-primary">
+                    <span className="btn-icon">
+                      <Download className="w-6 h-6" />
+                    </span>
+                    <span className="btn-text">
+                      <span className="btn-label">DESCARGAR</span>
+                      <span className="btn-subtitle">Baixar Agora</span>
+                    </span>
+                    <span className="btn-arrow">→</span>
+                  </a>
+                  
+                  <button className="btn-secondary">
+                    <span className="btn-icon">
+                      <Play className="w-5 h-5" fill="currentColor" />
+                    </span>
+                    <span className="btn-text">Ver Tráiler</span>
+                  </button>
+                </div>
+              </>
+            )}
+
+            {selectedGame === "dayz" && (
+              <>
+                {/* Título Principal con Animación - DAYZ */}
+                <div className="hero-title-wrapper">
+                  <h1 className="hero-title">
+                    <span className="title-line">DAYZ</span>
+                    <span className="title-line gradient-text">GRATIS</span>
+                  </h1>
+                  <div className="title-underline"></div>
+                </div>
+                
+                {/* Subtítulo - DAYZ */}
+                <div className="hero-subtitle">
+                  <p className="subtitle-text">
+                    Servidor DayZ • LATAM • 24/7
+                  </p>
+                  <p className="subtitle-cta">• Únete Ahora!</p>
+                </div>
+                
+                {/* Botones de Acción - DAYZ */}
+                <div className="hero-actions">
+                  <a href="/dayz" className="btn-primary">
+                    <span className="btn-icon">
+                      <Server className="w-6 h-6" />
+                    </span>
+                    <span className="btn-text">
+                      <span className="btn-label">UNIRSE AL SERVIDOR</span>
+                      <span className="btn-subtitle">Ver Info</span>
+                    </span>
+                    <span className="btn-arrow">→</span>
+                  </a>
+                  
+                  <a href="https://store.steampowered.com/app/221100/DayZ/" target="_blank" rel="noopener noreferrer" className="btn-secondary">
+                    <span className="btn-icon">
+                      <Download className="w-5 h-5" />
+                    </span>
+                    <span className="btn-text">Descargar Oficial</span>
+                  </a>
+                </div>
+              </>
+            )}
+            
           </div>
           
         </div>
@@ -137,6 +216,94 @@ const Hero: React.FC = () => {
           gap: 2.5rem;
           text-align: center;
           align-items: center;
+        }
+
+        /* Game Selector Tabs */
+        .game-selector {
+          display: flex;
+          gap: 0.75rem;
+          padding: 0.5rem;
+          background: rgba(0, 0, 0, 0.4);
+          border-radius: 12px;
+          border: 1px solid rgba(220, 38, 38, 0.2);
+          backdrop-filter: blur(10px);
+        }
+
+        .game-tab {
+          padding: 0.75rem 2rem;
+          background: transparent;
+          border: none;
+          color: rgba(255, 255, 255, 0.5);
+          font-weight: 700;
+          font-size: 1rem;
+          letter-spacing: 1px;
+          cursor: pointer;
+          border-radius: 8px;
+          transition: all 0.3s ease;
+          position: relative;
+        }
+
+        .game-tab:hover {
+          color: rgba(255, 255, 255, 0.8);
+          background: rgba(255, 255, 255, 0.05);
+        }
+
+        .game-tab.active {
+          color: #ffffff;
+          background: linear-gradient(135deg, rgba(220, 38, 38, 0.3), rgba(220, 38, 38, 0.2));
+          box-shadow: 0 0 20px rgba(220, 38, 38, 0.3);
+        }
+
+        .game-tab.active::after {
+          content: '';
+          position: absolute;
+          bottom: -0.5rem;
+          left: 50%;
+          transform: translateX(-50%);
+          width: 6px;
+          height: 6px;
+          background: #dc2626;
+          border-radius: 50%;
+          box-shadow: 0 0 10px rgba(220, 38, 38, 0.8);
+        }
+
+        /* Dynamic Content Animations */
+        .hero-dynamic-content {
+          display: flex;
+          flex-direction: column;
+          gap: 2.5rem;
+          width: 100%;
+          align-items: center;
+        }
+
+        .fade-in {
+          animation: fadeInContent 0.2s ease-in both;
+        }
+
+        .fade-out {
+          animation: fadeOutContent 0.15s ease-out both;
+        }
+
+        @keyframes fadeInContent {
+          from {
+            opacity: 0;
+            transform: translateY(10px);
+          }
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+
+        @keyframes fadeOutContent {
+          from {
+            opacity: 1;
+            transform: translateY(0);
+          }
+          to {
+            opacity: 0;
+            transform: translateY(-10px);
+          }
         }
 
         .hero-title {

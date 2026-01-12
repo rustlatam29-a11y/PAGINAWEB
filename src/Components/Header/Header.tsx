@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useMemo, useCallback } from "react";
-import { Menu, X, Users, Settings, Zap, MessageSquare, Gamepad2, Phone } from "lucide-react";
+import { Menu, X, Zap, MessageSquare, Gamepad2, Phone } from "lucide-react";
 
 interface HeaderProps {
   discordInviteUrl?: string;
@@ -141,8 +141,10 @@ const Header: React.FC<HeaderProps> = ({
     () => [
       {
         icon: <Gamepad2 className="w-4 h-4 md:w-5 md:h-5" />,
-        text: "SERVIDOR DE DAYZ",
-        href: "https://discord.gg/54zHAYmtzp",
+        text: "SERVIDOR DAYZ",
+        onClick: () => {
+          window.location.href = "/dayz";
+        },
       },
       {
         icon: <Phone className="w-4 h-4 md:w-5 md:h-5" />,
@@ -156,16 +158,18 @@ const Header: React.FC<HeaderProps> = ({
   const mobileNavigationItems: MobileNavItemProps[] = useMemo(
     () => [
       {
-        icon: <Users className="w-5 h-5" />,
-        text: "Jugadores",
+        icon: <Gamepad2 className="w-5 h-5" />,
+        text: "Servidor DayZ",
         delay: "0.1",
-        onClick: () => scrollToSection("players"),
+        onClick: () => {
+          window.location.href = "/dayz";
+        },
       },
       {
-        icon: <Settings className="w-5 h-5" />,
-        text: "Reglas del servidor",
+        icon: <Phone className="w-5 h-5" />,
+        text: "Compra de VIPs",
         delay: "0.2",
-        onClick: () => scrollToSection("server"),
+        href: "https://wa.me/+595972610336",
       },
     ],
     [scrollToSection]
