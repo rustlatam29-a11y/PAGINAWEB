@@ -5,6 +5,18 @@ Allow: /dayz
 Allow: /reglas
 Allow: /terms
 Allow: /privacy
+Allow: /vip
+Allow: /vips
+Allow: /rp
+Allow: /rust-pirata-brasil
+Allow: /rust-pirata-argentina
+Allow: /rust-pirata-mexico
+Allow: /rust-pirata-chile
+Allow: /rust-pirata-colombia
+Allow: /rust-family
+Allow: /servidores-rust-pirata
+Allow: /comunidade-rust-family
+Allow: /servidor-rust-family
 
 # Crawl delay (optional, be nice to bots)
 Crawl-delay: 1

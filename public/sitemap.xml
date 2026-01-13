@@ -60,4 +60,138 @@
     <xhtml:link rel="alternate" hreflang="pt" href="https://latamrust.vercel.app/privacy" />
   </url>
   
+  <!-- SEO Landing Pages - HIGH PRIORITY -->
+  <!-- Rust Pirata Brasil - Main Landing -->
+  <url>
+    <loc>https://latamrust.vercel.app/rust-pirata-brasil</loc>
+    <lastmod>2026-01-13</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://latamrust.vercel.app/rust-pirata-brasil" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://latamrust.vercel.app/rust-pirata-brasil" />
+    <image:image>
+      <image:loc>https://latamrust.vercel.app/LATAMLOGO.webp</image:loc>
+      <image:title>Rust Pirata 2275 Brasil - LATAMRUST</image:title>
+      <image:caption>Servidor #1 de Rust Pirata no Brasil com mais de 10.000 jogadores</image:caption>
+    </image:image>
+  </url>
+  
+  <!-- Rust Pirata Argentina - Landing Argentina -->
+  <url>
+    <loc>https://latamrust.vercel.app/rust-pirata-argentina</loc>
+    <lastmod>2026-01-13</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="es-AR" href="https://latamrust.vercel.app/rust-pirata-argentina" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://latamrust.vercel.app/rust-pirata-argentina" />
+    <image:image>
+      <image:loc>https://latamrust.vercel.app/LATAMLOGO.webp</image:loc>
+      <image:title>Rust Pirata Argentina - Servidor #1 LATAMRUST</image:title>
+      <image:caption>Mejor servidor Rust Pirata Argentina con ping bajo y 10.000+ jugadores</image:caption>
+    </image:image>
+  </url>
+  
+  <!-- Rust Pirata Mexico -->
+  <url>
+    <loc>https://latamrust.vercel.app/rust-pirata-mexico</loc>
+    <lastmod>2026-01-13</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="es-MX" href="https://latamrust.vercel.app/rust-pirata-mexico" />
+    <image:image>
+      <image:loc>https://latamrust.vercel.app/LATAMLOGO.webp</image:loc>
+      <image:title>Rust Pirata México - Servidor LATAMRUST</image:title>
+    </image:image>
+  </url>
+  
+  <!-- Rust Pirata Chile -->
+  <url>
+    <loc>https://latamrust.vercel.app/rust-pirata-chile</loc>
+    <lastmod>2026-01-13</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="es-CL" href="https://latamrust.vercel.app/rust-pirata-chile" />
+    <image:image>
+      <image:loc>https://latamrust.vercel.app/LATAMLOGO.webp</image:loc>
+      <image:title>Rust Pirata Chile - Servidor LATAMRUST</image:title>
+    </image:image>
+  </url>
+  
+  <!-- Rust Pirata Colombia -->
+  <url>
+    <loc>https://latamrust.vercel.app/rust-pirata-colombia</loc>
+    <lastmod>2026-01-13</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="es-CO" href="https://latamrust.vercel.app/rust-pirata-colombia" />
+    <image:image>
+      <image:loc>https://latamrust.vercel.app/LATAMLOGO.webp</image:loc>
+      <image:title>Rust Pirata Colombia - Servidor LATAMRUST</image:title>
+    </image:image>
+  </url>
+  
+  <!-- Rust Family - Community Landing -->
+  <url>
+    <loc>https://latamrust.vercel.app/rust-family</loc>
+    <lastmod>2026-01-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://latamrust.vercel.app/rust-family" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://latamrust.vercel.app/rust-family" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://latamrust.vercel.app/rust-family" />
+    <image:image>
+      <image:loc>https://latamrust.vercel.app/LATAMLOGO.webp</image:loc>
+      <image:title>Rust Family LATAMRUST - Maior Família de Rust do Brasil</image:title>
+      <image:caption>Comunidade com mais de 10.000 membros ativos</image:caption>
+    </image:image>
+  </url>
+  
+  <!-- Servidores Rust Pirata - Server List -->
+  <url>
+    <loc>https://latamrust.vercel.app/servidores-rust-pirata</loc>
+    <lastmod>2026-01-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://latamrust.vercel.app/servidores-rust-pirata" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://latamrust.vercel.app/servidores-rust-pirata" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://latamrust.vercel.app/servidores-rust-pirata" />
+    <image:image>
+      <image:loc>https://latamrust.vercel.app/LATAMLOGO.webp</image:loc>
+      <image:title>Lista Completa de Servidores Rust Pirata Brasil 2026</image:title>
+      <image:caption>Top 10 melhores servidores de Rust Pirata - LATAMRUST #1</image:caption>
+    </image:image>
+  </url>
+  
+  <!-- Comunidade Rust Family - ATTACK rustfamily.com.br -->
+  <url>
+    <loc>https://latamrust.vercel.app/comunidade-rust-family</loc>
+    <lastmod>2026-01-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.98</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://latamrust.vercel.app/comunidade-rust-family" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://latamrust.vercel.app/comunidade-rust-family" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://latamrust.vercel.app/comunidade-rust-family" />
+    <image:image>
+      <image:loc>https://latamrust.vercel.app/LATAMLOGO.webp</image:loc>
+      <image:title>Comunidade Rust Family LATAMRUST - Maior do Brasil</image:title>
+      <image:caption>A melhor comunidade rust family da América Latina com 10,000+ membros</image:caption>
+    </image:image>
+  </url>
+  
+  <!-- Servidor Rust Family - Technical Page -->
+  <url>
+    <loc>https://latamrust.vercel.app/servidor-rust-family</loc>
+    <lastmod>2026-01-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.98</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://latamrust.vercel.app/servidor-rust-family" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://latamrust.vercel.app/servidor-rust-family" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://latamrust.vercel.app/servidor-rust-family" />
+    <image:image>
+      <image:loc>https://latamrust.vercel.app/LATAMLOGO.webp</image:loc>
+      <image:title>Servidor Rust Family LATAMRUST - Hardware Premium Brasil</image:title>
+      <image:caption>O melhor servidor rust family do Brasil - Ping 15-30ms, Uptime 99.9%</image:caption>
+    </image:image>
+  </url>
+  
 </urlset>

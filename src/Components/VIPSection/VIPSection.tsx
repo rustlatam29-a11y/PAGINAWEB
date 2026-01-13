@@ -3,24 +3,24 @@ import { Zap, CreditCard, Globe, Star, Sparkles, Shield, Check, Crown, Rocket, A
 
 const VIPSection: React.FC = () => {
   return (
-    <section id="vip-section" className="relative pt-20 pb-20 px-4 sm:px-6 lg:px-8">
+    <section id="vip-section" className="relative pt-12 pb-12 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
         
         {/* Header Premium con Animaciones */}
-        <div className="text-center mb-12 animate-fade-in">
-          <div className="inline-flex items-center justify-center mb-6">
+        <div className="text-center mb-8 animate-fade-in">
+          <div className="inline-flex items-center justify-center mb-4">
             <div className="relative">
               <Crown className="w-16 h-16 md:w-20 md:h-20 text-red-600 animate-pulse" />
               <div className="absolute inset-0 bg-red-600/20 blur-2xl animate-pulse"></div>
             </div>
           </div>
           
-          <h2 className="text-5xl md:text-7xl font-black mb-6 tracking-tight">
+          <h2 className="text-5xl md:text-7xl font-black mb-4 tracking-tight">
             <span className="text-white">PLANES </span>
             <span className="bg-gradient-to-r from-red-600 via-red-500 to-red-700 bg-clip-text text-transparent">VIP</span>
           </h2>
           
-          <p className="text-gray-300 text-xl md:text-2xl max-w-3xl mx-auto font-light leading-relaxed mb-6">
+          <p className="text-gray-300 text-xl md:text-2xl max-w-3xl mx-auto font-light leading-relaxed mb-4">
             Desbloquea todo el potencial de LATAMRUST con nuestros planes premium
           </p>
           
@@ -41,7 +41,7 @@ const VIPSection: React.FC = () => {
         </div>
 
         {/* Planes Grid */}
-        <div className="grid md:grid-cols-2 gap-8 lg:gap-12 max-w-6xl mx-auto">
+        <div className="grid md:grid-cols-2 gap-6 lg:gap-8 max-w-6xl mx-auto">
           
           {/* PLAN SUPREMO */}
           <div className="relative group">
@@ -67,12 +67,12 @@ const VIPSection: React.FC = () => {
                     <Crown className="w-10 h-10 text-white" />
                     <div className="absolute inset-0 bg-gradient-to-br from-red-400/50 to-transparent rounded-2xl animate-pulse" />
                   </div>
-                  <h3 className="text-3xl md:text-4xl font-black text-white mb-3 tracking-tight">PLAN SUPREMO</h3>
+                  <h3 className="text-3xl md:text-4xl font-black text-white mb-2 tracking-tight">PLAN SUPREMO</h3>
                   <p className="text-gray-300 text-sm md:text-base font-medium">La experiencia VIP definitiva</p>
                 </div>
 
                 {/* Precio Destacado con mejor diseño */}
-                <div className="text-center mb-8 p-6 bg-gradient-to-br from-red-950/70 to-black/70 rounded-2xl border-2 border-red-600/40 shadow-2xl relative overflow-hidden">
+                <div className="text-center mb-4 p-4 bg-gradient-to-br from-red-950/70 to-black/70 rounded-2xl border-2 border-red-600/40 shadow-2xl relative overflow-hidden">
                   <div className="absolute inset-0 bg-gradient-to-r from-red-600/10 via-red-500/20 to-red-600/10 animate-pulse" />
                   <div className="relative z-10">
                     <div className="text-5xl md:text-6xl font-black text-transparent bg-clip-text bg-gradient-to-r from-red-400 via-red-500 to-red-600 mb-2">$10.00</div>
@@ -84,7 +84,7 @@ const VIPSection: React.FC = () => {
                 </div>
 
                 {/* Imagen */}
-                <div className="mb-6 rounded-2xl overflow-hidden border-2 border-red-600/30 shadow-2xl transform group-hover:scale-105 transition-transform duration-500">
+                <div className="mb-4 rounded-2xl overflow-hidden border-2 border-red-600/30 shadow-2xl transform group-hover:scale-105 transition-transform duration-500">
                   <img 
                     src="/vip-supremo.png" 
                     alt="VIP Supremo" 
@@ -93,8 +93,8 @@ const VIPSection: React.FC = () => {
                 </div>
 
                 {/* Beneficios Destacados */}
-                <div className="mb-6 p-4 bg-gradient-to-br from-red-950/40 to-black/50 rounded-xl border border-red-600/30">
-                  <div className="flex items-center space-x-2 mb-4">
+                <div className="mb-4 p-3 bg-gradient-to-br from-red-950/40 to-black/50 rounded-xl border border-red-600/30">
+                  <div className="flex items-center space-x-2 mb-3">
                     <Sparkles className="w-5 h-5 text-red-400" />
                     <span className="text-white font-bold text-sm">Características Incluidas</span>
                   </div>
@@ -116,7 +116,7 @@ const VIPSection: React.FC = () => {
                 </div>
 
                 {/* Disponibilidad Compacta */}
-                <div className="mb-6 p-4 bg-black/40 rounded-xl border border-red-900/30">
+                <div className="mb-4 p-3 bg-black/40 rounded-xl border border-red-900/30">
                   <div className="flex items-center space-x-2 mb-3">
                     <Globe className="w-4 h-4 text-red-400" />
                     <span className="text-white font-semibold text-sm">Disponible en</span>
@@ -131,7 +131,7 @@ const VIPSection: React.FC = () => {
                 </div>
 
                 {/* Métodos de Pago Mejorados */}
-                <div className="mb-6 p-4 bg-black/40 rounded-xl border border-red-900/30">
+                <div className="mb-4 p-3 bg-black/40 rounded-xl border border-red-900/30">
                   <div className="flex items-center space-x-2 mb-3">
                     <CreditCard className="w-4 h-4 text-red-400" />
                     <span className="text-white font-semibold text-sm">Métodos de Pago</span>
@@ -208,12 +208,12 @@ const VIPSection: React.FC = () => {
                     <Zap className="w-10 h-10 text-red-400" />
                     <div className="absolute inset-0 bg-gradient-to-br from-gray-500/30 to-transparent rounded-2xl" />
                   </div>
-                  <h3 className="text-3xl md:text-4xl font-black text-white mb-3 tracking-tight">PLAN VIP BASIC</h3>
+                  <h3 className="text-3xl md:text-4xl font-black text-white mb-2 tracking-tight">PLAN VIP BASIC</h3>
                   <p className="text-gray-300 text-sm md:text-base font-medium">Tu primer paso al mundo VIP</p>
                 </div>
 
                 {/* Precio Destacado con mejor diseño */}
-                <div className="text-center mb-8 p-6 bg-gradient-to-br from-gray-900/70 to-black/70 rounded-2xl border-2 border-gray-700/40 shadow-2xl relative overflow-hidden">
+                <div className="text-center mb-4 p-4 bg-gradient-to-br from-gray-900/70 to-black/70 rounded-2xl border-2 border-gray-700/40 shadow-2xl relative overflow-hidden">
                   <div className="absolute inset-0 bg-gradient-to-r from-gray-700/10 via-gray-600/20 to-gray-700/10" />
                   <div className="relative z-10">
                     <div className="text-5xl md:text-6xl font-black text-transparent bg-clip-text bg-gradient-to-r from-red-300 via-red-400 to-red-500 mb-2">$5.00</div>
@@ -335,30 +335,6 @@ const VIPSection: React.FC = () => {
 
         </div>
 
-        {/* CTA Final Mejorado */}
-        <div className="max-w-3xl mx-auto mt-16 text-center">
-          <div className="bg-gradient-to-br from-red-950/30 to-black/50 backdrop-blur-xl rounded-3xl p-8 border border-red-900/30">
-            <Shield className="w-12 h-12 text-red-500 mx-auto mb-4" />
-            <h3 className="text-2xl md:text-3xl font-bold text-white mb-3">¿Tienes Dudas?</h3>
-            <p className="text-gray-300 mb-6">Contáctanos por WhatsApp y te ayudamos a elegir el plan perfecto</p>
-            
-            <a 
-              href="https://wa.link/duxkp1?text=Hola!%20Tengo%20dudas%20sobre%20los%20planes%20VIP%20de%20LATAMRUST" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="inline-flex items-center space-x-3 px-8 py-4 bg-gradient-to-r from-red-600 to-red-800 hover:from-red-700 hover:to-red-900 text-white font-bold rounded-xl transition-all duration-300 transform hover:scale-105 shadow-2xl hover:shadow-red-900/50 text-lg"
-            >
-              <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
-              </svg>
-              <span>Contáctanos por WhatsApp</span>
-            </a>
-            
-            <p className="text-gray-400 text-sm mt-4">
-              ⚡ Respondemos en menos de 5 minutos
-            </p>
-          </div>
-        </div>
       </div>
     </section>
   );

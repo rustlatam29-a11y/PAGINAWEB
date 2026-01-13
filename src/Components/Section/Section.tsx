@@ -42,12 +42,15 @@ const About: React.FC<AboutProps> = () => {
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
-          setIsVisible(true);
+          // Delay mínimo para evitar parpadeo
+          requestAnimationFrame(() => {
+            setIsVisible(true);
+          });
         }
       },
       {
-        threshold: isMobile ? 0.1 : 0.3,
-        rootMargin: isMobile ? "50px" : "0px",
+        threshold: isMobile ? 0.05 : 0.2,
+        rootMargin: isMobile ? "100px" : "50px",
       }
     );
 
@@ -83,21 +86,20 @@ const About: React.FC<AboutProps> = () => {
       
       <section
         ref={sectionRef}
-        className="relative py-6 sm:py-8 lg:py-10 overflow-hidden"
+        className="relative py-8 sm:py-10 lg:py-12 overflow-hidden"
       >
       {/* Animated Background - Optimizado */}
       <div className="absolute inset-0">
         {/* Matrix-style grid - Simplificado en móviles */}
         <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width=\'80\' height=\'80\' viewBox=\'0 0 80 80\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cg fill=\'none\' fill-rule=\'evenodd\'%3E%3Cg fill=\'%23ffffff\' fill-opacity=\'0.02\'%3E%3Cpath d=\'M0 0h40v40H0zM40 40h40v40H40z\'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-50"></div>
 
-        {/* Floating code symbols - Optimizados */}
-        {floatingElements.map((element) => (
+        {/* Floating code symbols - Optimizados con transición suave */}
+        {isVisible && floatingElements.map((element) => (
           <div
             key={element.id}
-            className={`absolute text-lg sm:text-xl lg:text-2xl font-mono text-green-400/20 ${
-              isVisible ? "animate-float-code" : "opacity-0"
-            }`}
+            className="absolute text-lg sm:text-xl lg:text-2xl font-mono text-green-400/20 animate-float-code"
             style={{
+              opacity: 0.2,
               left: `${element.left}%`,
               top: `${element.top}%`,
               animationDelay: `${element.delay}s`,
@@ -423,7 +425,7 @@ const About: React.FC<AboutProps> = () => {
         
         .section-divider {
           width: 100%;
-          padding: 2rem 0;
+          padding: 1rem 0;
           display: flex;
           justify-content: center;
           align-items: center;

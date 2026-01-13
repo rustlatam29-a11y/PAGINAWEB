@@ -5,10 +5,32 @@
     <link rel="icon" type="image/svg+xml" href="/public/logo_latam_embed.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     
+    <!-- DNS Prefetch & Preconnect for External Resources -->
+    <link rel="dns-prefetch" href="https://api.exchangerate-api.com" />
+    <link rel="preconnect" href="https://api.exchangerate-api.com" crossorigin />
+    
+    <!-- Preload Critical Resources -->
+    <link rel="preload" href="/img1.webp" as="image" type="image/webp" fetchpriority="high" />
+    <link rel="preload" href="/LATAMLOGO.webp" as="image" type="image/webp" />
+    
+    <!-- Font Display Optimization -->
+    <style>
+      @font-face {
+        font-family: system-ui;
+        font-display: swap;
+      }
+    </style>
+    
+    <!-- Theme Color for Mobile -->
+    <meta name="theme-color" content="#000000" />
+    <meta name="msapplication-TileColor" content="#000000" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    
     <!-- SEO Meta Tags - Optimizado para búsquedas BR/ES -->
-    <title>✅ Rust Pirata 2025 GRATIS + DayZ Pirata 1.28 | Descargar LATAM BR【2026】</title>
-    <meta name="description" content="⚡ RUST PIRATA 2275 GRATIS + DAYZ PIRATA 1.28 ⚡ Baixar AHORA! Servidor BR-LATAM #1 con +10K jugadores ✓ Sin Lag ✓ Anti-Cheat ✓ Soporte 24/7 PT-ES ✓ Entra YA!" />
-    <meta name="keywords" content="rust pirata, rust pirata 2025, rust pirata gratis, rust pirata descargar, rust pirata download, baixar rust pirata, rust pirata 2275, rust gratis, rust free, rust cracked, como descargar rust pirata, rust pirata brasil, rust pirata latino, rust pirata argentina, rust pirata mexico, rust pirata chile, servidor rust pirata, server rust pirata, dayz pirata, dayz pirata 1.28, dayz pirata gratis, dayz pirata descargar, baixar dayz pirata, dayz gratis, dayz free, dayz cracked, como descargar dayz pirata, dayz pirata brasil, dayz pirata latino, servidor dayz pirata, latamrust, rust br, rust latam, dayz br, rust português, rust español, rust pirata 2026, dayz pirata 2026" />
+    <title>Rust Pirata Brasil 2275 Grátis | Baixar Download Servidor #1 LATAMRUST</title>
+    <meta name="description" content="⚡ Baixar Rust Pirata Brasil 2275 GRÁTIS! Servidor #1 LATAMRUST com 10.000+ jogadores. Ping 15-30ms Brasil. Tutorial completo, download seguro. Jogue agora!" />
+    <meta name="keywords" content="rust pirata brasil, rust pirata argentina, baixar rust pirata, descargar rust pirata, rust pirata 2275, servidor rust pirata brasil, servidor rust argentina, rust pirata gratis, rust pirata 2026, rust family brasil, rust family argentina, servidores rust pirata, rust pirata latino, rust pirata latam, como baixar rust pirata, como descargar rust pirata gratis, rust pirata 2025, servidor rust family, comunidade rust family, rust brasil, rust argentina 2026, dayz pirata, dayz pirata brasil, dayz pirata argentina, servidor dayz pirata latam" />
     <meta name="author" content="LATAMRUST" />
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
     <meta name="googlebot" content="index, follow" />
@@ -32,8 +54,8 @@
     <!-- Open Graph / Facebook - Optimizado -->
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://latamrust.vercel.app/" />
-    <meta property="og:title" content="⚡ RUST PIRATA GRATIS + DAYZ PIRATA 2026 | Descargar #1 LATAM BR-ES" />
-    <meta property="og:description" content="✅ Rust Pirata 2275 + DayZ 1.28 GRATIS! +10K Jugadores BR-LATAM ⚡ Baixar AHORA ⚡ Sin Lag, Anti-Cheat, Soporte PT-ES 24/7" />
+    <meta property="og:title" content="LATAMRUST - Rust Pirata 2275 y DayZ Pirata 1.28 | Servidor Premium LATAM" />
+    <meta property="og:description" content="Servidor profesional de Rust Pirata 2275 y DayZ Pirata 1.28. Más de 10,000 jugadores, ping bajo Brasil-LATAM, anti-cheat activo, soporte bilingüe 24/7." />
     <meta property="og:image" content="https://latamrust.vercel.app/LATAMLOGO.webp" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
@@ -45,16 +67,18 @@
     <!-- Twitter Cards - Optimizado -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:url" content="https://latamrust.vercel.app/" />
-    <meta name="twitter:title" content="⚡ RUST PIRATA + DAYZ PIRATA GRATIS 2026 | #1 BR-LATAM" />
-    <meta name="twitter:description" content="✅ Rust 2275 + DayZ 1.28 GRATIS! Baixar AHORA! +10K Players ⚡ Sin Lag ⚡ Anti-Cheat ⚡ PT-ES 24/7" />
+    <meta name="twitter:title" content="LATAMRUST - Rust Pirata 2275 y DayZ Pirata 1.28 Servidor Premium" />
+    <meta name="twitter:description" content="Servidor Rust Pirata y DayZ Pirata #1 en LATAM. 10,000+ jugadores activos, ping bajo, anti-cheat profesional. Brasil, Argentina, México, Chile." />
     <meta name="twitter:image" content="https://latamrust.vercel.app/LATAMLOGO.webp" />
     <meta name="twitter:image:alt" content="LATAMRUST - Rust y DayZ Gratis" />
     
-    <!-- Additional SEO -->
-    <meta name="theme-color" content="#dc2626" />
-    <meta name="apple-mobile-web-app-capable" content="yes" />
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <!-- Additional SEO & Performance -->
     <meta name="format-detection" content="telephone=no" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    
+    <!-- Security Headers -->
+    <meta http-equiv="X-Content-Type-Options" content="nosniff" />
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
     
     <!-- Structured Data (Schema.org) - Enhanced -->
     <script type="application/ld+json">
@@ -226,7 +250,21 @@
     </script>
   </head>
   <body>
+    <!-- Skip to main content for accessibility -->
+    <a href="#root" class="skip-link" style="position:absolute;left:-9999px;top:0;z-index:999;padding:1em;background:#dc2626;color:#fff;text-decoration:none;">Skip to main content</a>
+    
     <div id="root"></div>
     <script type="module" src="/src/App/main.tsx"></script>
+    
+    <!-- No JavaScript Fallback -->
+    <noscript>
+      <div style="position:fixed;top:0;left:0;right:0;bottom:0;background:#000;color:#fff;display:flex;align-items:center;justify-content:center;z-index:9999;text-align:center;padding:20px;">
+        <div>
+          <h1 style="color:#dc2626;margin-bottom:20px;">JavaScript Required</h1>
+          <p>Por favor habilita JavaScript en tu navegador para acceder a LATAMRUST.</p>
+          <p style="margin-top:10px;">Please enable JavaScript in your browser to access LATAMRUST.</p>
+        </div>
+      </div>
+    </noscript>
   </body>
 </html>

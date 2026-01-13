@@ -1,5 +1,11 @@
 @import "tailwindcss";
 
+/* ===== PREVENT HORIZONTAL SCROLL ===== */
+html, body {
+  overflow-x: hidden;
+  max-width: 100vw;
+}
+
 /* ===== SMOOTH SCROLL ===== */
 html {
   scroll-behavior: smooth;

@@ -164,7 +164,7 @@ const Hero: React.FC = () => {
           display: flex;
           align-items: center;
           overflow: hidden;
-          padding: 6rem 0 2rem 0;
+          padding: 4rem 0 2rem 0;
         }
 
         .particles-container {

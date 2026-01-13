@@ -63,7 +63,15 @@ const Loader: React.FC<LoaderProps> = ({ logoUrl = "/img1.webp", onLoadComplete 
         
         {/* Logo con efecto glow */}
         <div className="logo-wrapper">
-          <img src={logoUrl} alt="LATAMRUST Logo" className="loading-logo" />
+          <img 
+            src={logoUrl} 
+            alt="LATAMRUST Logo" 
+            className="loading-logo"
+            width="175"
+            height="175"
+            fetchPriority="high"
+            loading="eager"
+          />
           <div className="logo-glow"></div>
         </div>
         
