@@ -2,12 +2,15 @@ import React from "react";
 import Header from "../../Components/Header/Header";
 import Footer from "../../Components/Footer/Footer";
 import GlobalBackground from "../../Components/GlobalBackground/GlobalBackground";
+import Breadcrumbs from "../../Components/Breadcrumbs/Breadcrumbs";
+import PriceDisplay from "../../Components/PriceDisplay/PriceDisplay";
 import { Zap, CreditCard, Globe, Star, Sparkles, Shield, Check, Crown, Rocket, Award, Gift } from "lucide-react";
 
 const VIPs: React.FC = () => {
   return (
     <GlobalBackground>
       <Header />
+      <Breadcrumbs />
       
       {/* Hero Section Premium */}
       <section className="relative pt-32 pb-12 px-4 sm:px-6 lg:px-8">
@@ -112,8 +115,12 @@ const VIPs: React.FC = () => {
                   <div className="text-center mb-8 p-6 bg-gradient-to-br from-red-950/70 to-black/70 rounded-2xl border-2 border-red-600/40 shadow-2xl relative overflow-hidden">
                     <div className="absolute inset-0 bg-gradient-to-r from-red-600/10 via-red-500/20 to-red-600/10 animate-pulse" />
                     <div className="relative z-10">
-                      <div className="text-5xl md:text-6xl font-black text-transparent bg-clip-text bg-gradient-to-r from-red-400 via-red-500 to-red-600 mb-2">$10.00</div>
-                      <div className="text-gray-300 text-sm uppercase tracking-widest font-semibold">USD / Mes</div>
+                      <PriceDisplay 
+                        priceUSD={10.00} 
+                        className="text-5xl md:text-6xl font-black text-transparent bg-clip-text bg-gradient-to-r from-red-400 via-red-500 to-red-600"
+                        showOriginal={true}
+                      />
+                      <div className="text-gray-300 text-sm uppercase tracking-widest font-semibold mt-2">/ Mes</div>
                       <div className="mt-3 inline-block px-4 py-1 bg-red-600/20 border border-red-500/30 rounded-full">
                         <span className="text-red-400 text-xs font-bold">✓ Suscripción mensual</span>
                       </div>
@@ -253,8 +260,12 @@ const VIPs: React.FC = () => {
                   <div className="text-center mb-8 p-6 bg-gradient-to-br from-gray-900/70 to-black/70 rounded-2xl border-2 border-gray-700/40 shadow-2xl relative overflow-hidden">
                     <div className="absolute inset-0 bg-gradient-to-r from-gray-700/10 via-gray-600/20 to-gray-700/10" />
                     <div className="relative z-10">
-                      <div className="text-5xl md:text-6xl font-black text-transparent bg-clip-text bg-gradient-to-r from-red-300 via-red-400 to-red-500 mb-2">$5.00</div>
-                      <div className="text-gray-300 text-sm uppercase tracking-widest font-semibold">USD / Mes</div>
+                      <PriceDisplay 
+                        priceUSD={5.00} 
+                        className="text-5xl md:text-6xl font-black text-transparent bg-clip-text bg-gradient-to-r from-red-300 via-red-400 to-red-500"
+                        showOriginal={true}
+                      />
+                      <div className="text-gray-300 text-sm uppercase tracking-widest font-semibold mt-2">/ Mes</div>
                       <div className="mt-3 inline-block px-4 py-1 bg-gray-700/30 border border-gray-600/30 rounded-full">
                         <span className="text-red-400 text-xs font-bold">✓ Suscripción mensual</span>
                       </div>

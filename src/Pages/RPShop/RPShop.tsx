@@ -3,6 +3,7 @@ import Header from "../../Components/Header/Header";
 import Footer from "../../Components/Footer/Footer";
 import GlobalBackground from "../../Components/GlobalBackground/GlobalBackground";
 import Breadcrumbs from "../../Components/Breadcrumbs/Breadcrumbs";
+import PriceDisplay from "../../Components/PriceDisplay/PriceDisplay";
 import { ShoppingCart, Gem, Zap, Sparkles, Crown, Rocket, CreditCard, Gift, Star, Award } from "lucide-react";
 
 const RPShop: React.FC = () => {
@@ -154,11 +155,14 @@ const RPShop: React.FC = () => {
 
                     {/* RP Amount */}
                     <div className={`text-center mb-4 p-4 bg-gradient-to-br from-gray-900/70 to-black/70 rounded-xl border ${pkg.borderColor} shadow-xl`}>
-                      <div className={`text-4xl font-black bg-gradient-to-r ${pkg.color} bg-clip-text text-transparent mb-1`}>
+                      <div className={`text-4xl font-black bg-gradient-to-r ${pkg.color} bg-clip-text text-transparent mb-3`}>
                         {pkg.rp} RP
                       </div>
-                      <div className="text-2xl font-bold text-white">{pkg.price}</div>
-                      <div className="text-xs text-gray-400 mt-1">USD</div>
+                      <PriceDisplay 
+                        priceUSD={parseFloat(pkg.price.replace('$', ''))} 
+                        className="text-2xl font-bold text-white"
+                        showOriginal={true}
+                      />
                     </div>
 
                     {/* Description */}
