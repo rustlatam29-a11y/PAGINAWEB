@@ -1,7 +1,6 @@
 import React, { useState, useEffect, useMemo, useCallback } from "react";
 import { Menu, X, Zap, MessageSquare, Phone, Crown, Gem } from "lucide-react";
 import { useNavigate } from "react-router-dom";
-import CurrencySelector from "../CurrencySelector/CurrencySelector";
 
 interface HeaderProps {
   discordInviteUrl?: string;
@@ -353,12 +352,11 @@ const Header: React.FC<HeaderProps> = ({
 
             {/* Navegación de escritorio */}
             <div
-              className={`hidden md:flex items-center space-x-1 lg:space-x-2 transform transition-all duration-1000 relative z-[999] ${
+              className={`hidden md:flex items-center space-x-1 lg:space-x-2 transform transition-all duration-1000 ${
                 isLoaded ? "translate-y-0 opacity-100" : "-translate-y-10 opacity-0"
               }`}
               style={{ transitionDelay: "1.2s" }}
             >
-              <CurrencySelector />
               {navigationItems.map((item, index) => (
                 <NavItem
                   key={`nav-${index}`}
