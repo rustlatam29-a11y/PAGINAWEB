@@ -197,7 +197,7 @@ const Header: React.FC<HeaderProps> = ({
 
   return (
     <>
-      <header className="fixed top-0 left-0 w-full z-40 overflow-hidden bg-gradient-to-r from-black via-red-950/80 to-black shadow-2xl border-b border-red-900/30 backdrop-blur-sm">
+      <header className="fixed top-0 left-0 w-full z-40 bg-gradient-to-r from-black via-red-950/80 to-black shadow-2xl border-b border-red-900/30 backdrop-blur-sm">
         {/* Fondo animado con partículas */}
         <div className="absolute inset-0">
           <div className="absolute inset-0 bg-black/50">
@@ -249,7 +249,7 @@ const Header: React.FC<HeaderProps> = ({
           ))}
         </div>
 
-        <nav className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 z-10">
+        <nav className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 z-10 overflow-visible">
           <div className="flex justify-between items-center h-16 md:h-20">
             {/* Logo animado MEJORADO */}
             <div
@@ -353,7 +353,7 @@ const Header: React.FC<HeaderProps> = ({
 
             {/* Navegación de escritorio */}
             <div
-              className={`hidden md:flex items-center space-x-1 lg:space-x-2 transform transition-all duration-1000 ${
+              className={`hidden md:flex items-center space-x-1 lg:space-x-2 transform transition-all duration-1000 relative z-[999] ${
                 isLoaded ? "translate-y-0 opacity-100" : "-translate-y-10 opacity-0"
               }`}
               style={{ transitionDelay: "1.2s" }}

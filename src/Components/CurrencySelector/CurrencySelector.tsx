@@ -33,11 +33,11 @@ const CurrencySelector: React.FC = () => {
   };
 
   return (
-    <div className="relative" ref={dropdownRef}>
+    <div className="relative z-[1000]" ref={dropdownRef}>
       {/* Selector Button */}
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="flex items-center space-x-2 px-3 py-2 bg-gradient-to-r from-gray-800/80 to-gray-900/80 hover:from-gray-700/80 hover:to-gray-800/80 backdrop-blur-sm border border-gray-700/50 rounded-lg transition-all duration-300 group"
+        className="flex items-center space-x-2 px-3 py-2 bg-gradient-to-r from-gray-800/80 to-gray-900/80 hover:from-gray-700/80 hover:to-gray-800/80 backdrop-blur-sm border border-gray-700/50 rounded-lg transition-all duration-300 group relative z-[1001]"
         aria-label="Seleccionar moneda"
       >
         <DollarSign className="w-4 h-4 text-red-400" />
@@ -52,7 +52,7 @@ const CurrencySelector: React.FC = () => {
 
       {/* Dropdown Menu */}
       {isOpen && (
-        <div className="absolute top-full right-0 mt-2 w-64 bg-gradient-to-br from-gray-900/95 to-black/95 backdrop-blur-xl border border-gray-700/50 rounded-xl shadow-2xl overflow-hidden z-50 animate-fade-in">
+        <div className="fixed top-[4.5rem] right-4 md:absolute md:top-full md:right-0 mt-2 w-64 bg-gradient-to-br from-gray-900/98 to-black/98 backdrop-blur-xl border border-gray-700/50 rounded-xl shadow-2xl overflow-hidden z-[1002] animate-fade-in">
           <div className="p-2">
             <div className="text-xs text-gray-400 px-3 py-2 font-semibold uppercase tracking-wider">
               Selecciona tu moneda
