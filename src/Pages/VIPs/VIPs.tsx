@@ -174,17 +174,29 @@ const VIPs: React.FC = () => {
                       <span className="text-white font-semibold text-sm">Métodos de Pago</span>
                     </div>
                     <div className="space-y-2.5 text-sm">
-                      <div className="flex items-center justify-between p-2 bg-red-950/20 rounded-lg">
-                        <span className="text-red-400 font-semibold text-xs">PIX (Brasil)</span>
-                        <span className="text-gray-400 text-xs">Instantáneo</span>
+                      <div className="p-2 bg-red-950/20 rounded-lg">
+                        <div className="flex items-center justify-between mb-2">
+                          <span className="text-red-400 font-semibold text-xs">🇧🇷 PIX (Brasil)</span>
+                          <span className="text-gray-400 text-xs">Instantáneo</span>
+                        </div>
+                        <div className="bg-black/40 p-2 rounded">
+                          <div className="text-xs text-gray-400">
+                            <span className="text-red-300 font-semibold">Chave:</span>
+                            <span className="ml-1 text-white font-mono text-[10px]">financeiro.cambiobrasil@gmail.com</span>
+                          </div>
+                        </div>
                       </div>
                       <div className="flex items-center justify-between p-2 bg-red-950/20 rounded-lg">
-                        <span className="text-red-400 font-semibold text-xs">Belo App</span>
+                        <span className="text-red-400 font-semibold text-xs">💎 Belo App</span>
                         <span className="text-xs bg-red-600/80 px-2 py-0.5 rounded text-white">Recomendado</span>
+                      </div>
+                      <div className="flex items-center justify-between p-2 bg-red-950/20 rounded-lg">
+                        <span className="text-red-400 font-semibold text-xs">💳 AstroPay</span>
+                        <span className="text-gray-400 text-xs">LATAM</span>
                       </div>
                       <div className="p-2 bg-red-950/20 rounded-lg">
                         <div className="flex items-center justify-between mb-2">
-                          <span className="text-red-400 font-semibold text-xs">Mercado Pago</span>
+                          <span className="text-red-400 font-semibold text-xs">💰 Mercado Pago</span>
                           <span className="text-gray-400 text-xs">Seguro</span>
                         </div>
                         <div className="bg-black/40 p-2 rounded space-y-1">
@@ -303,17 +315,29 @@ const VIPs: React.FC = () => {
                       <span className="text-white font-semibold text-sm">Métodos de Pago</span>
                     </div>
                     <div className="space-y-2.5 text-sm">
-                      <div className="flex items-center justify-between p-2 bg-gray-900/20 rounded-lg">
-                        <span className="text-red-400 font-semibold text-xs">PIX (Brasil)</span>
-                        <span className="text-gray-400 text-xs">Instantáneo</span>
+                      <div className="p-2 bg-gray-900/20 rounded-lg">
+                        <div className="flex items-center justify-between mb-2">
+                          <span className="text-red-400 font-semibold text-xs">🇧🇷 PIX (Brasil)</span>
+                          <span className="text-gray-400 text-xs">Instantáneo</span>
+                        </div>
+                        <div className="bg-black/40 p-2 rounded">
+                          <div className="text-xs text-gray-400">
+                            <span className="text-red-300 font-semibold">Chave:</span>
+                            <span className="ml-1 text-white font-mono text-[10px]">financeiro.cambiobrasil@gmail.com</span>
+                          </div>
+                        </div>
                       </div>
                       <div className="flex items-center justify-between p-2 bg-gray-900/20 rounded-lg">
-                        <span className="text-red-400 font-semibold text-xs">Belo App</span>
+                        <span className="text-red-400 font-semibold text-xs">💎 Belo App</span>
                         <span className="text-xs bg-red-600/80 px-2 py-0.5 rounded text-white">Recomendado</span>
+                      </div>
+                      <div className="flex items-center justify-between p-2 bg-gray-900/20 rounded-lg">
+                        <span className="text-red-400 font-semibold text-xs">💳 AstroPay</span>
+                        <span className="text-gray-400 text-xs">LATAM</span>
                       </div>
                       <div className="p-2 bg-gray-900/20 rounded-lg">
                         <div className="flex items-center justify-between mb-2">
-                          <span className="text-red-400 font-semibold text-xs">Mercado Pago</span>
+                          <span className="text-red-400 font-semibold text-xs">💰 Mercado Pago</span>
                           <span className="text-gray-400 text-xs">Seguro</span>
                         </div>
                         <div className="bg-black/40 p-2 rounded space-y-1">

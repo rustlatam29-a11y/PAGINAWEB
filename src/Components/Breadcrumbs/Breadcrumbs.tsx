@@ -15,6 +15,7 @@ const Breadcrumbs: React.FC = () => {
     '': 'Inicio - Rust Pirata & DayZ Pirata LATAM',
     'dayz': 'DayZ Pirata 1.28 Gratis - Servidor BR-LATAM',
     'vips': 'Planes VIP - LATAMRUST',
+    'rp': 'Tienda RP - LATAMRUST',
     'reglas': 'Reglas del Servidor - LATAMRUST',
     'terms': 'Términos de Servicio',
     'privacy': 'Política de Privacidad',

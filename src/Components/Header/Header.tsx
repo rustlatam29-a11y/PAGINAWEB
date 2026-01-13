@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useMemo, useCallback } from "react";
-import { Menu, X, Zap, MessageSquare, Phone } from "lucide-react";
+import { Menu, X, Zap, MessageSquare, Phone, Crown, Gem } from "lucide-react";
+import { useNavigate, useLocation } from "react-router-dom";
 
 interface HeaderProps {
   discordInviteUrl?: string;
@@ -82,6 +83,8 @@ const Header: React.FC<HeaderProps> = ({
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isLoaded, setIsLoaded] = useState(false);
   const [lettersVisible, setLettersVisible] = useState(false);
+  const navigate = useNavigate();
+  const location = useLocation();
 
   // Memoizar valores estáticos
   const animatedText = useMemo(() => "LATAMRUST".split(""), []);
@@ -102,6 +105,26 @@ const Header: React.FC<HeaderProps> = ({
     }
     setIsMenuOpen(false);
   }, []);
+
+  const handleVIPClick = useCallback(() => {
+    if (location.pathname === '/') {
+      // Si estamos en home, hacer scroll a la sección VIP
+      const vipSection = document.querySelector('section[class*="VIPSection"]') || 
+                         document.querySelector('[id*="vip"]');
+      if (vipSection) {
+        vipSection.scrollIntoView({ behavior: "smooth" });
+      }
+    } else {
+      // Si estamos en otra página, navegar a /vips
+      navigate('/vips');
+    }
+    setIsMenuOpen(false);
+  }, [location.pathname, navigate]);
+
+  const handleRPClick = useCallback(() => {
+    navigate('/rp');
+    setIsMenuOpen(false);
+  }, [navigate]);
 
   // Efectos optimizados
   useEffect(() => {
@@ -140,24 +163,46 @@ const Header: React.FC<HeaderProps> = ({
   const navigationItems: NavItemProps[] = useMemo(
     () => [
       {
+        icon: <Crown className="w-4 h-4 md:w-5 md:h-5" />,
+        text: "VIP",
+        onClick: handleVIPClick,
+      },
+      {
+        icon: <Gem className="w-4 h-4 md:w-5 md:h-5" />,
+        text: "RP",
+        onClick: handleRPClick,
+      },
+      {
         icon: <Phone className="w-4 h-4 md:w-5 md:h-5" />,
         text: "CONTACTO",
         href: "https://wa.me/+595972610336",
       },
     ],
-    [scrollToSection]
+    [handleVIPClick, handleRPClick]
   );
 
   const mobileNavigationItems: MobileNavItemProps[] = useMemo(
     () => [
       {
+        icon: <Crown className="w-5 h-5" />,
+        text: "VIP",
+        delay: "0.1",
+        onClick: handleVIPClick,
+      },
+      {
+        icon: <Gem className="w-5 h-5" />,
+        text: "RP Shop",
+        delay: "0.2",
+        onClick: handleRPClick,
+      },
+      {
         icon: <Phone className="w-5 h-5" />,
         text: "Contacto",
-        delay: "0.1",
+        delay: "0.3",
         href: "https://wa.me/+595972610336",
       },
     ],
-    [scrollToSection]
+    [handleVIPClick, handleRPClick]
   );
 
   return (
