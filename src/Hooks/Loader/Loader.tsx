@@ -5,7 +5,7 @@ interface LoaderProps {
   onLoadComplete?: () => void;
 }
 
-const Loader: React.FC<LoaderProps> = ({ logoUrl = "/img1.webp", onLoadComplete }) => {
+const Loader: React.FC<LoaderProps> = ({ logoUrl = "/galpontech.webp", onLoadComplete }) => {
   const [progress, setProgress] = useState(0);
   const [status, setStatus] = useState("Preparando experiencia...");
   const [isVisible, setIsVisible] = useState(true);
