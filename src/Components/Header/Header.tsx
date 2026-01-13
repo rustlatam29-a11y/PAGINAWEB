@@ -165,7 +165,7 @@ const Header: React.FC<HeaderProps> = ({
       {
         icon: <Phone className="w-4 h-4 md:w-5 md:h-5" />,
         text: "CONTACTO",
-        href: "https://wa.me/+595972610336",
+        href: "https://wa.link/duxkp1",
       },
     ],
     [handleVIPClick, handleRPClick]
@@ -189,7 +189,7 @@ const Header: React.FC<HeaderProps> = ({
         icon: <Phone className="w-5 h-5" />,
         text: "Contacto",
         delay: "0.3",
-        href: "https://wa.me/+595972610336",
+        href: "https://wa.link/duxkp1",
       },
     ],
     [handleVIPClick, handleRPClick]

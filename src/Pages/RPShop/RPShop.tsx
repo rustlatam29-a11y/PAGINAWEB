@@ -173,7 +173,7 @@ const RPShop: React.FC = () => {
 
                     {/* CTA Button */}
                     <a 
-                      href={`https://wa.me/+595972610336?text=Hola!%20Quiero%20comprar%20${pkg.rp}%20RP%20por%20${pkg.price}`}
+                      href="https://wa.link/duxkp1"
                       target="_blank" 
                       rel="noopener noreferrer"
                       className={`block w-full text-center py-3 bg-gradient-to-r ${pkg.color} hover:opacity-90 text-white font-bold rounded-xl transition-all duration-300 transform hover:scale-105 shadow-xl mt-auto`}
@@ -251,7 +251,7 @@ const RPShop: React.FC = () => {
             {/* Contact CTA */}
             <div className="text-center mt-8">
               <a 
-                href="https://wa.me/+595972610336?text=Hola!%20Tengo%20dudas%20sobre%20la%20compra%20de%20RP" 
+                href="https://wa.link/duxkp1" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="inline-flex items-center space-x-3 px-8 py-4 bg-gradient-to-r from-purple-600 to-purple-800 hover:from-purple-700 hover:to-purple-900 text-white font-bold rounded-xl transition-all duration-300 transform hover:scale-105 shadow-2xl"

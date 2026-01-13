@@ -178,7 +178,7 @@ const VIPSection: React.FC = () => {
 
                 {/* CTA Button */}
                 <a 
-                  href="https://wa.me/+595972610336?text=Hola!%20Quiero%20comprar%20el%20Plan%20Supremo%20VIP" 
+                  href="https://wa.link/duxkp1" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="block w-full text-center py-4 bg-gradient-to-r from-red-600 to-red-800 hover:from-red-700 hover:to-red-900 text-white font-bold rounded-xl transition-all duration-300 transform hover:scale-105 shadow-xl hover:shadow-2xl"
@@ -319,7 +319,7 @@ const VIPSection: React.FC = () => {
 
                 {/* CTA Button */}
                 <a 
-                  href="https://wa.me/+595972610336?text=Hola!%20Quiero%20comprar%20el%20Plan%20VIP%20Basic" 
+                  href="https://wa.link/duxkp1" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="block w-full text-center py-4 bg-gradient-to-r from-gray-700 to-gray-900 hover:from-red-600 hover:to-red-800 text-white font-bold rounded-xl transition-all duration-300 transform hover:scale-105 shadow-xl hover:shadow-2xl"
@@ -343,7 +343,7 @@ const VIPSection: React.FC = () => {
             <p className="text-gray-300 mb-6">Contáctanos por WhatsApp y te ayudamos a elegir el plan perfecto</p>
             
             <a 
-              href="https://wa.me/+595972610336?text=Hola!%20Tengo%20dudas%20sobre%20los%20planes%20VIP" 
+              href="https://wa.link/duxkp1" 
               target="_blank" 
               rel="noopener noreferrer"
               className="inline-flex items-center space-x-3 px-8 py-4 bg-gradient-to-r from-red-600 to-red-800 hover:from-red-700 hover:to-red-900 text-white font-bold rounded-xl transition-all duration-300 transform hover:scale-105 shadow-2xl hover:shadow-red-900/50 text-lg"
