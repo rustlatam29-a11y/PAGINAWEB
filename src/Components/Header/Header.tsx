@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useMemo, useCallback } from "react";
 import { Menu, X, Zap, MessageSquare, Phone, Crown, Gem } from "lucide-react";
-import { useNavigate, useLocation } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 interface HeaderProps {
   discordInviteUrl?: string;
@@ -84,7 +84,6 @@ const Header: React.FC<HeaderProps> = ({
   const [isLoaded, setIsLoaded] = useState(false);
   const [lettersVisible, setLettersVisible] = useState(false);
   const navigate = useNavigate();
-  const location = useLocation();
 
   // Memoizar valores estáticos
   const animatedText = useMemo(() => "LATAMRUST".split(""), []);
