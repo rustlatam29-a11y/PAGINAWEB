@@ -182,9 +182,21 @@ const VIPs: React.FC = () => {
                         <span className="text-red-400 font-semibold text-xs">Belo App</span>
                         <span className="text-xs bg-red-600/80 px-2 py-0.5 rounded text-white">Recomendado</span>
                       </div>
-                      <div className="flex items-center justify-between p-2 bg-red-950/20 rounded-lg">
-                        <span className="text-red-400 font-semibold text-xs">Mercado Pago</span>
-                        <span className="text-gray-400 text-xs">Seguro</span>
+                      <div className="p-2 bg-red-950/20 rounded-lg">
+                        <div className="flex items-center justify-between mb-2">
+                          <span className="text-red-400 font-semibold text-xs">Mercado Pago</span>
+                          <span className="text-gray-400 text-xs">Seguro</span>
+                        </div>
+                        <div className="bg-black/40 p-2 rounded space-y-1">
+                          <div className="text-xs text-gray-400">
+                            <span className="text-red-300 font-semibold">CVU:</span>
+                            <span className="ml-1 text-white font-mono">0000184305010002618771</span>
+                          </div>
+                          <div className="text-xs text-gray-400">
+                            <span className="text-red-300 font-semibold">Alias:</span>
+                            <span className="ml-1 text-white">paraguayraider</span>
+                          </div>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -299,9 +311,21 @@ const VIPs: React.FC = () => {
                         <span className="text-red-400 font-semibold text-xs">Belo App</span>
                         <span className="text-xs bg-red-600/80 px-2 py-0.5 rounded text-white">Recomendado</span>
                       </div>
-                      <div className="flex items-center justify-between p-2 bg-gray-900/20 rounded-lg">
-                        <span className="text-red-400 font-semibold text-xs">Mercado Pago</span>
-                        <span className="text-gray-400 text-xs">Seguro</span>
+                      <div className="p-2 bg-gray-900/20 rounded-lg">
+                        <div className="flex items-center justify-between mb-2">
+                          <span className="text-red-400 font-semibold text-xs">Mercado Pago</span>
+                          <span className="text-gray-400 text-xs">Seguro</span>
+                        </div>
+                        <div className="bg-black/40 p-2 rounded space-y-1">
+                          <div className="text-xs text-gray-400">
+                            <span className="text-red-300 font-semibold">CVU:</span>
+                            <span className="ml-1 text-white font-mono">0000184305010002618771</span>
+                          </div>
+                          <div className="text-xs text-gray-400">
+                            <span className="text-red-300 font-semibold">Alias:</span>
+                            <span className="ml-1 text-white">paraguayraider</span>
+                          </div>
+                        </div>
                       </div>
                     </div>
                   </div>
