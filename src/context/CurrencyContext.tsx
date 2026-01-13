@@ -1,5 +1,7 @@
-import React, { createContext, useContext, useState, useEffect, ReactNode } from 'react';
-import { getExchangeRates, convertPrice, formatPrice, ExchangeRates, SUPPORTED_CURRENCIES } from '../Libs/currencyService';
+import React, { createContext, useContext, useState, useEffect } from 'react';
+import type { ReactNode } from 'react';
+import { getExchangeRates, convertPrice, formatPrice, SUPPORTED_CURRENCIES } from '../Libs/currencyService';
+import type { ExchangeRates } from '../Libs/currencyService';
 
 interface CurrencyContextType {
   selectedCurrency: string;
