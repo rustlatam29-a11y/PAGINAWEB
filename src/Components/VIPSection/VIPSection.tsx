@@ -3,7 +3,7 @@ import { Zap, CreditCard, Globe, Star, Sparkles, Shield, Check, Crown, Rocket, A
 
 const VIPSection: React.FC = () => {
   return (
-    <section className="relative pt-20 pb-20 px-4 sm:px-6 lg:px-8">
+    <section id="vip-section" className="relative pt-20 pb-20 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
         
         {/* Header Premium con Animaciones */}

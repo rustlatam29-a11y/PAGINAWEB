@@ -109,10 +109,16 @@ const Header: React.FC<HeaderProps> = ({
   const handleVIPClick = useCallback(() => {
     if (location.pathname === '/') {
       // Si estamos en home, hacer scroll a la sección VIP
-      const vipSection = document.querySelector('section[class*="VIPSection"]') || 
-                         document.querySelector('[id*="vip"]');
+      // Intentar múltiples selectores para encontrar la sección VIP
+      const vipSection = document.getElementById('vip-section') ||
+                         document.querySelector('[class*="vip"]') ||
+                         document.querySelector('section h2[class*="VIP"]')?.closest('section') ||
+                         document.querySelector('section');
+      
       if (vipSection) {
-        vipSection.scrollIntoView({ behavior: "smooth" });
+        const yOffset = -80; // Offset para el header fijo
+        const y = vipSection.getBoundingClientRect().top + window.pageYOffset + yOffset;
+        window.scrollTo({ top: y, behavior: 'smooth' });
       }
     } else {
       // Si estamos en otra página, navegar a /vips
