@@ -215,7 +215,7 @@ const VIPs: React.FC = () => {
 
                   {/* CTA Button */}
                   <a 
-                    href="https://wa.link/duxkp1" 
+                    href="https://wa.link/duxkp1?text=Hola!%20Quiero%20comprar%20el%20Plan%20Supremo%20VIP%20de%20$10.00/mes" 
                     target="_blank" 
                     rel="noopener noreferrer"
                     className="block w-full text-center py-4 bg-gradient-to-r from-red-600 to-red-800 hover:from-red-700 hover:to-red-900 text-white font-bold rounded-xl transition-all duration-300 transform hover:scale-105 shadow-xl hover:shadow-2xl"
@@ -356,7 +356,7 @@ const VIPs: React.FC = () => {
 
                   {/* CTA Button */}
                   <a 
-                    href="https://wa.link/duxkp1" 
+                    href="https://wa.link/duxkp1?text=Hola!%20Quiero%20comprar%20el%20Plan%20VIP%20Basic%20de%20$5.00/mes" 
                     target="_blank" 
                     rel="noopener noreferrer"
                     className="block w-full text-center py-4 bg-gradient-to-r from-gray-700 to-gray-900 hover:from-red-600 hover:to-red-800 text-white font-bold rounded-xl transition-all duration-300 transform hover:scale-105 shadow-xl hover:shadow-2xl"
@@ -403,7 +403,7 @@ const VIPs: React.FC = () => {
             {/* CTA Final Mejorado */}
             <div className="text-center">
               <a 
-                href="https://wa.link/duxkp1" 
+                href="https://wa.link/duxkp1?text=Hola!%20Tengo%20dudas%20sobre%20los%20planes%20VIP%20de%20LATAMRUST" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="inline-flex items-center space-x-3 px-10 py-5 bg-gradient-to-r from-red-600 to-red-800 hover:from-red-700 hover:to-red-900 text-white font-bold rounded-2xl transition-all duration-300 transform hover:scale-105 shadow-2xl hover:shadow-red-900/50 text-lg"
