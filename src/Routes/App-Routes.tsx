@@ -14,6 +14,7 @@ function AppRoutes() {
       <Route path="/" element={<HomePage />} />
       <Route path="/reglas" element={<Reglas />} />
       <Route path="/dayz" element={<DayZ />} />
+      <Route path="/vip" element={<VIPs />} />
       <Route path="/vips" element={<VIPs />} />
       <Route path="/rp" element={<RPShop />} />
       <Route path="/terms" element={<Terms />} />

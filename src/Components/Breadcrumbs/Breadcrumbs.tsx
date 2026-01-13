@@ -14,6 +14,7 @@ const Breadcrumbs: React.FC = () => {
   const breadcrumbMap: { [key: string]: string } = {
     '': 'Inicio - Rust Pirata & DayZ Pirata LATAM',
     'dayz': 'DayZ Pirata 1.28 Gratis - Servidor BR-LATAM',
+    'vip': 'Planes VIP - LATAMRUST',
     'vips': 'Planes VIP - LATAMRUST',
     'rp': 'Tienda RP - LATAMRUST',
     'reglas': 'Reglas del Servidor - LATAMRUST',
