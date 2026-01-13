@@ -78,7 +78,7 @@ MobileNavItem.displayName = "MobileNavItem";
 
 const Header: React.FC<HeaderProps> = ({
   discordInviteUrl = "https://discord.gg/M9ud76fnYu",
-  logoUrl = "/galpontech.webp",
+  logoUrl = "/img1.webp",
 }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isLoaded, setIsLoaded] = useState(false);
