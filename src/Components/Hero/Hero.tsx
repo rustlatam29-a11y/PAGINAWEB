@@ -87,7 +87,7 @@ const Hero: React.FC = () => {
                 
                 {/* Botones de Acción - RUST */}
                 <div className="hero-actions">
-                  <a href="https://discord.gg/dT8u5b3jga" target="_blank" rel="noopener noreferrer" className="btn-primary">
+                  <a href="https://gofile.io/d/GJTCzW" target="_blank" rel="noopener noreferrer" className="btn-primary">
                     <span className="btn-icon">
                       <Download className="w-6 h-6" />
                     </span>
