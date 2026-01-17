@@ -52,17 +52,66 @@ const RustPirataMexico: React.FC = () => {
       </section>
 
       <article className="max-w-4xl mx-auto px-4 py-12">
+        {/* SECCIÓN 1: Introducción Expandida México */}
         <section className="mb-12">
-          <h2 className="text-3xl font-bold mb-6 text-red-500">¿Qué es Rust Pirata México?</h2>
+          <h2 className="text-3xl font-bold mb-6 text-red-500">¿Qué es Rust Pirata México? - Guía Completa 2026</h2>
+          
           <p className="text-lg text-gray-300 leading-relaxed mb-4">
-            <strong>Rust Pirata México</strong> es la versión gratuita del popular juego <strong>Rust pirata</strong> optimizada específicamente para jugadores mexicanos. 
-            LATAMRUST ofrece el <strong>mejor servidor de Rust Pirata en México</strong> con ping ultra bajo de 50-70ms desde CDMX, 
-            Monterrey, Guadalajara, Tijuana y todo México wey. Más de 10,000 jugadores activos, incluyendo miles de mexicanos jugando <strong>rust pirata gratis</strong> todos los días.
+            <strong>Rust Pirata México</strong> es la versión gratuita y completamente funcional del famoso juego de supervivencia Rust, 
+            especialmente optimizada para jugadores mexicanos. Actualizada a la build 2275 de 2026, esta versión pirata ofrece todas las 
+            funcionalidades del Rust original: construcción de bases, crafting avanzado, combate PvP intenso, raids, clanes, vehículos, 
+            helicópteros y todo el contenido completo del juego. Es la experiencia de Rust al 100%, totalmente gratis wey.
           </p>
+
           <p className="text-lg text-gray-300 leading-relaxed mb-4">
-            Si buscas <strong>descargar rust pirata mexico</strong> o <strong>rust pirata mexicano</strong>, LATAMRUST es tu mejor opción. 
-            Somos el <strong>servidor rust pirata</strong> #1 en México con la comunidad más grande, mejor ping, y soporte en español 24/7. 
-            Juega <strong>rust pirata 2275</strong> completamente gratis sin lag y con miles de mexicanos online wey.
+            El <strong>Rust Pirata México</strong> se ha vuelto súper popular en el país porque permite jugar gratuitamente sin necesidad 
+            de comprar el juego en Steam. Con más de 10.000 jugadores activos diariamente en LATAM, miles son mexicanos que disfrutan del 
+            mejor servidor de Rust Pirata de la región. LATAMRUST garantiza excelente conectividad para México con ping bajo de 50-70ms 
+            desde CDMX, Monterrey, Guadalajara, Tijuana, Puebla, León, Querétaro y todos los estados de México.
+          </p>
+
+          <p className="text-lg text-gray-300 leading-relaxed mb-4">
+            A diferencia de otros servidores piratas inseguros, LATAMRUST es profesional y confiable. Tenemos sistema anti-cheat que banea 
+            hackers automáticamente, moderación en español mexicano que entiende el slang y la cultura local, soporte técnico 24/7 en español, 
+            actualizaciones constantes y hardware dedicado. Puedes <strong>descargar Rust pirata gratis</strong> con total seguridad, sin 
+            virus, sin malware. Es 100% gratuito para siempre compa.
+          </p>
+
+          <p className="text-lg text-gray-300 leading-relaxed mb-4">
+            La build 2275 del Rust Pirata incluye todo el contenido más reciente: nuevas armas, vehículos, helicóptero de patrulla, 
+            Bradley APC, Oil Rig, Cargo Ship, underwater labs, sistema de electricidad completo, farming, animales y todas las 
+            actualizaciones de 2026. No te pierdes nada comparado con el Rust oficial wey.
+          </p>
+        </section>
+
+        {/* SECCIÓN 2: Por Qué LATAMRUST México */}
+        <section className="mb-12">
+          <h2 className="text-3xl font-bold mb-6 text-red-500">Por Qué LATAMRUST es el Mejor Servidor Rust Pirata de México</h2>
+          
+          <h3 className="text-2xl font-bold mb-4 text-white">1. Conectividad Optimizada para México - Ping Bajo</h3>
+          <p className="text-lg text-gray-300 mb-6 leading-relaxed">
+            LATAMRUST utiliza routing optimizado para garantizar excelente conectividad desde México. El ping promedio es de 50-70ms 
+            desde CDMX, Monterrey, Guadalajara y Tijuana. Esto es mucho mejor que servidores gringos con 150-300ms. Con ping bajo 
+            tienes ventaja en PvP, construcción rápida y experiencia sin lag wey.
+          </p>
+
+          <h3 className="text-2xl font-bold mb-4 text-white">2. Comunidad Mexicana Activa - Miles de Jugadores</h3>
+          <p className="text-lg text-gray-300 mb-6 leading-relaxed">
+            LATAMRUST tiene la comunidad mexicana más grande de Rust Pirata. Miles de mexicanos conectados diariamente, siempre 
+            hay gente para armar clanes, hacer trades y raids. Discord con canales en español mexicano, moderación que entiende 
+            el slang local y torneos especiales para la comunidad mexicana.
+          </p>
+
+          <h3 className="text-2xl font-bold mb-4 text-white">3. Anti-Cheat Profesional - Sin Hackers</h3>
+          <p className="text-lg text-gray-300 mb-6 leading-relaxed">
+            Sistema anti-cheat que detecta y banea hackers automáticamente. Equipo de moderadores 24/7 que analiza reportes y toma 
+            acción inmediata. Baneos permanentes con hardware ID ban. Juego limpio donde la habilidad es lo que cuenta.
+          </p>
+
+          <h3 className="text-2xl font-bold mb-4 text-white">4. Soporte en Español Mexicano 24/7</h3>
+          <p className="text-lg text-gray-300 mb-6 leading-relaxed">
+            Soporte completo en español mexicano. Moderadores que entienden el slang, la cultura y las expresiones locales. 
+            Puedes abrir tickets en Discord en español y recibir ayuda rápida. Tiempo de respuesta: menos de 30 minutos wey.
           </p>
         </section>
 
