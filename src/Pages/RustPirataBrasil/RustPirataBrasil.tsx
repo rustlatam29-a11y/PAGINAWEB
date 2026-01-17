@@ -1,10 +1,62 @@
 import React from "react";
 import { Download, CheckCircle, AlertCircle, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 
 const RustPirataBrasil: React.FC = () => {
   return (
     <div className="min-h-screen bg-black text-white">
+      <Helmet>
+        <title>Rust Pirata 2275 Brasil 🇧🇷 Baixar Grátis 2026 - LATAMRUST #1</title>
+        <meta name="description" content="Servidor #1 de Rust Pirata no Brasil. Ping baixo 15-30ms, +10.000 jogadores ativos. 100% grátis, sem vírus, anti-cheat profissional. Jogue agora!" />
+        
+        {/* Open Graph / Facebook */}
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://latamrust.vercel.app/rust-pirata-brasil" />
+        <meta property="og:title" content="Rust Pirata 2275 Brasil 🇧🇷 - Servidor #1 LATAMRUST" />
+        <meta property="og:description" content="A maior comunidade de Rust Pirata do Brasil com mais de 10.000 jogadores ativos. Ping baixo, 100% grátis e seguro." />
+        <meta property="og:image" content="https://latamrust.vercel.app/LATAMLOGO.webp" />
+        <meta property="og:locale" content="pt_BR" />
+        
+        {/* Twitter */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:url" content="https://latamrust.vercel.app/rust-pirata-brasil" />
+        <meta name="twitter:title" content="Rust Pirata 2275 Brasil 🇧🇷 - Servidor #1 LATAMRUST" />
+        <meta name="twitter:description" content="A maior comunidade de Rust Pirata do Brasil com mais de 10.000 jogadores ativos. Ping baixo, 100% grátis e seguro." />
+        <meta name="twitter:image" content="https://latamrust.vercel.app/LATAMLOGO.webp" />
+        
+        {/* Additional SEO */}
+        <meta name="keywords" content="rust pirata brasil, rust pirata 2275 brasil, baixar rust pirata gratis brasil, servidor rust pirata brasil, rust pirata download brasil, rust pirata 2026 brasil, rust pirata sao paulo, rust pirata rio de janeiro" />
+        <link rel="canonical" href="https://latamrust.vercel.app/rust-pirata-brasil" />
+        <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+        
+        {/* Structured Data - VideoGame */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "VideoGame",
+            "name": "Rust Pirata 2275 Brasil - LATAMRUST",
+            "description": "Servidor #1 de Rust Pirata no Brasil com ping baixo e mais de 10.000 jogadores ativos",
+            "url": "https://latamrust.vercel.app/rust-pirata-brasil",
+            "operatingSystem": "Windows",
+            "applicationCategory": "Game",
+            "offers": {
+              "@type": "Offer",
+              "price": "0",
+              "priceCurrency": "BRL"
+            },
+            "aggregateRating": {
+              "@type": "AggregateRating",
+              "ratingValue": "4.9",
+              "ratingCount": "10000",
+              "bestRating": "5",
+              "worstRating": "1"
+            },
+            "inLanguage": "pt-BR",
+            "countryOfOrigin": "Brazil"
+          })}
+        </script>
+      </Helmet>
       {/* Hero Section */}
       <section className="relative py-20 px-4 bg-gradient-to-b from-red-950/20 to-black">
         <div className="max-w-4xl mx-auto text-center">
