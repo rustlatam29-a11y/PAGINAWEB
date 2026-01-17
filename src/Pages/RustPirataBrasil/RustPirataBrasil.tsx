@@ -88,18 +88,92 @@ const RustPirataBrasil: React.FC = () => {
       {/* Main Content */}
       <article className="max-w-4xl mx-auto px-4 py-12">
         
-        {/* Intro */}
+        {/* SECCIÓN 1: Introducción Expandida */}
         <section className="mb-12">
-          <h2 className="text-3xl font-bold mb-6 text-red-500">O que é Rust Pirata 2275?</h2>
+          <h2 className="text-3xl font-bold mb-6 text-red-500">O que é Rust Pirata 2275 Brasil? - Guia Completo 2026</h2>
+          
           <p className="text-lg text-gray-300 leading-relaxed mb-4">
-            <strong>Rust Pirata 2275</strong> é a versão gratuita e completamente funcional do jogo Rust, atualizada para a build 2275 de 2025. 
-            O LATAMRUST oferece o melhor servidor de <strong>Rust Pirata no Brasil</strong>, com ping baixo, anti-cheat profissional e uma 
-            comunidade ativa de mais de 10.000 jogadores brasileiros e latino-americanos.
+            <strong>Rust Pirata 2275 Brasil</strong> é a versão gratuita e completamente funcional do famoso jogo de sobrevivência Rust, 
+            especialmente otimizada para jogadores brasileiros. Atualizada para a build 2275 de 2026, esta versão pirata oferece todas as 
+            funcionalidades do Rust original, incluindo construção de bases, crafting avançado, combate PvP intenso, raids estratégicas, 
+            sistema de clãs, economia dinâmica e muito mais.
           </p>
+
           <p className="text-lg text-gray-300 leading-relaxed mb-4">
-            Diferente de outros servidores piratas, o LATAMRUST é 100% seguro, sem vírus, sem malware, e com suporte em português 
-            disponível 24 horas por dia, 7 dias por semana. Você pode <strong>baixar Rust pirata grátis</strong> e começar a jogar 
-            imediatamente sem custos ocultos.
+            O <strong>Rust Pirata Brasil</strong> se tornou extremamente popular no país devido à possibilidade de jogar gratuitamente sem 
+            precisar comprar o jogo na Steam. Com mais de 10.000 jogadores brasileiros ativos diariamente, nossa comunidade é a maior de 
+            Rust Pirata em toda América Latina. Os servidores LATAMRUST estão localizados estrategicamente no Brasil, garantindo ping 
+            baixíssimo de apenas 15-30ms para jogadores de São Paulo, Rio de Janeiro, Minas Gerais, Paraná, Santa Catarina, Rio Grande 
+            do Sul, Bahia e todos os estados brasileiros.
+          </p>
+
+          <p className="text-lg text-gray-300 leading-relaxed mb-4">
+            Diferente de outros servidores piratas inseguros, o LATAMRUST investe pesadamente em segurança e qualidade. Nosso sistema 
+            anti-cheat profissional bane hackers automaticamente, garantindo um jogo justo para todos. Além disso, contamos com moderação 
+            brasileira 24/7, suporte técnico em português via Discord, atualizações constantes, backup diário de dados e hardware dedicado 
+            de última geração. Você pode <strong>baixar Rust pirata grátis</strong> com total segurança, sem vírus, sem malware e sem custos 
+            ocultos. É completamente gratuito para sempre.
+          </p>
+
+          <p className="text-lg text-gray-300 leading-relaxed mb-4">
+            A build 2275 do Rust Pirata traz todas as atualizações mais recentes do jogo oficial, incluindo novos itens, armas, veículos, 
+            construções, sistema de eletricidade melhorado, animais selvagens, helicóptero de patrulha, Bradley APC, Oil Rig, Cargo Ship, 
+            underwater labs, e muito mais. Você não perde nenhuma funcionalidade comparado ao Rust oficial da Steam - é a experiência 
+            completa, totalmente grátis.
+          </p>
+        </section>
+
+        {/* SECCIÓN 2: Por Qué LATAMRUST */}
+        <section className="mb-12">
+          <h2 className="text-3xl font-bold mb-6 text-red-500">Por Que LATAMRUST é o Melhor Servidor Rust Pirata do Brasil</h2>
+          
+          <h3 className="text-2xl font-bold mb-4 text-white">1. Servidores Localizados no Brasil - Ping Baixíssimo Garantido</h3>
+          <p className="text-lg text-gray-300 mb-6 leading-relaxed">
+            LATAMRUST mantém infraestrutura de servidores física localizada diretamente no Brasil, especificamente em data centers de 
+            São Paulo. Isso garante que jogadores brasileiros experimentem ping entre 15-30ms em média, dependendo da localização. 
+            Jogadores de SP capital frequentemente reportam ping de 10-15ms, enquanto jogadores do Sul (RS, SC, PR) têm 20-25ms, 
+            Nordeste (BA, PE, CE) 25-35ms, e outras regiões 30-40ms. Este é o melhor ping possível para Rust Pirata no Brasil, 
+            comparado a servidores internacionais que frequentemente apresentam 150-300ms de latência. Com ping baixo, você tem vantagem 
+            competitiva em combates PvP, construção rápida, movimento fluido e uma experiência de jogo muito superior sem lag ou 
+            travamentos.
+          </p>
+
+          <h3 className="text-2xl font-bold mb-4 text-white">2. Comunidade Brasileira Massiva - Mais de 10.000 Jogadores Ativos</h3>
+          <p className="text-lg text-gray-300 mb-6 leading-relaxed">
+            Nossa comunidade brasileira de Rust Pirata é a maior e mais ativa de toda América Latina. Com mais de 10.000 jogadores 
+            registrados e milhares online simultaneamente todos os dias, você sempre encontrará brasileiros para jogar, formar clãs, 
+            fazer trades, participar de eventos e raids. O Discord oficial LATAMRUST tem mais de 8.000 membros brasileiros ativos, 
+            com canais específicos em português para recrutamento de clãs, trading, suporte técnico, eventos, memes e socialização. 
+            Realizamos torneios semanais com prêmios, eventos especiais mensais, raids organizadas e muito mais. A comunidade é ativa, 
+            amigável e sempre disposta a ajudar novos jogadores brasileiros que estão começando no Rust Pirata 2275.
+          </p>
+
+          <h3 className="text-2xl font-bold mb-4 text-white">3. Sistema Anti-Cheat Profissional - Jogo Limpo e Justo</h3>
+          <p className="text-lg text-gray-300 mb-6 leading-relaxed">
+            LATAMRUST investe pesadamente em segurança e fair play. Nosso sistema anti-cheat detecta e bane automaticamente jogadores 
+            usando hacks, aimbots, ESP, wall hacks, speed hacks e qualquer tipo de trapaça. Temos uma equipe de moderadores brasileiros 
+            dedicados que analisam reports 24/7 e tomam ação imediata contra hackers. Além disso, implementamos sistemas de detecção 
+            comportamental que identificam padrões suspeitos e investigam automaticamente. Banimentos são permanentes e incluem hardware 
+            ID ban para prevenir que hackers criem novas contas. Resultado: um ambiente de jogo limpo onde habilidade verdadeira é 
+            recompensada, não trapaças.
+          </p>
+
+          <h3 className="text-2xl font-bold mb-4 text-white">4. Atualizações Constantes - Sempre na Build Mais Recente</h3>
+          <p className="text-lg text-gray-300 mb-6 leading-relaxed">
+            LATAMRUST mantém o Rust Pirata sempre atualizado para a build 2275, a versão mais recente e estável disponível. 
+            Aplicamos patches de segurança semanalmente, corrigimos bugs reportados pela comunidade e implementamos novas features 
+            assim que são disponibilizadas. Nosso time técnico monitora 24/7 o desempenho dos servidores e realiza manutenções 
+            programadas durante horários de baixo tráfego (geralmente de madrugada) para minimizar impacto nos jogadores. Você nunca 
+            ficará preso em versões antigas - sempre terá acesso ao conteúdo mais novo do Rust.
+          </p>
+
+          <h3 className="text-2xl font-bold mb-4 text-white">5. Suporte em Português 24/7 - Moderação Brasileira Sempre Disponível</h3>
+          <p className="text-lg text-gray-300 mb-6 leading-relaxed">
+            Diferente de servidores internacionais onde você precisa se comunicar em inglês ou espanhol, LATAMRUST oferece suporte 
+            completo em português brasileiro. Nossa equipe de moderadores e administradores são todos brasileiros que entendem a 
+            cultura, gírias e necessidades específicas da comunidade BR. Você pode abrir tickets no Discord em português, reportar 
+            problemas, pedir ajuda técnica, solicitar reembolso de bugs, reportar hackers e receber assistência rápida e eficiente. 
+            Tempo médio de resposta é inferior a 30 minutos para problemas urgentes e 2-4 horas para questões gerais.
           </p>
         </section>
 
@@ -200,9 +274,15 @@ const RustPirataBrasil: React.FC = () => {
           </div>
         </section>
 
-        {/* Requisitos */}
+        {/* SECCIÓN 3: Requisitos Expandidos */}
         <section className="mb-12">
-          <h2 className="text-3xl font-bold mb-6 text-red-500">Requisitos do Sistema para Rust Pirata 2275</h2>
+          <h2 className="text-3xl font-bold mb-6 text-red-500">Requisitos do Sistema para Rust Pirata 2275 Brasil</h2>
+          
+          <p className="text-lg text-gray-300 mb-6 leading-relaxed">
+            Antes de baixar o Rust Pirata 2275, é importante verificar se seu computador atende aos requisitos mínimos. O Rust é um jogo 
+            exigente que requer hardware razoavelmente potente para funcionar corretamente, especialmente em servidores com muitos jogadores 
+            como o LATAMRUST. Abaixo estão os requisitos detalhados:
+          </p>
           
           <div className="grid md:grid-cols-2 gap-6">
             <div className="bg-gray-900/50 rounded-xl p-6">
@@ -259,50 +339,178 @@ const RustPirataBrasil: React.FC = () => {
           </div>
         </section>
 
-        {/* FAQ */}
+        {/* FAQ EXPANDIDO - 20+ Preguntas */}
         <section className="mb-12">
-          <h2 className="text-3xl font-bold mb-6 text-red-500">Perguntas Frequentes (FAQ)</h2>
+          <h2 className="text-3xl font-bold mb-6 text-red-500">Perguntas Frequentes - Rust Pirata Brasil 2026 (FAQ Completo)</h2>
           
-          <div className="space-y-4">
-            {[
-              {
-                q: "Rust Pirata 2275 é seguro para baixar?",
-                a: "Sim, quando baixado dos links oficiais no nosso Discord, o Rust Pirata 2275 é 100% seguro e livre de vírus. Nunca baixe de sites externos ou links não verificados."
-              },
-              {
-                q: "Posso jogar Rust Pirata online com amigos?",
-                a: "Sim! O servidor LATAMRUST suporta multiplayer completo. Você pode jogar com amigos, formar clãs, construir bases e participar de raids, exatamente como no Rust original."
-              },
-              {
-                q: "Rust Pirata funciona em Windows 7?",
-                a: "Não recomendamos. O Rust Pirata 2275 requer Windows 10 64-bit ou superior para funcionar corretamente. Windows 7 não é mais suportado."
-              },
-              {
-                q: "Posso ser banido por jogar Rust Pirata?",
-                a: "Rust Pirata é uma versão separada do Rust original. Você não será banido no Rust oficial por jogar no servidor pirata. No entanto, respeite as regras do servidor LATAMRUST para não ser banido do nosso servidor."
-              },
-              {
-                q: "Qual a diferença entre Rust Pirata e Rust Original?",
-                a: "Rust Pirata é idêntico ao Rust original em gameplay e recursos. A principal diferença é que é gratuito e usa servidores comunitários como o LATAMRUST ao invés dos servidores oficiais da Steam."
-              },
-              {
-                q: "Como atualizo o Rust Pirata para a versão 2275?",
-                a: "Se você tem uma versão antiga, baixe a versão 2275 mais recente do Discord. Geralmente é melhor fazer uma instalação limpa para evitar problemas de compatibilidade."
-              },
-              {
-                q: "O servidor LATAMRUST tem lag?",
-                a: "Não. Nossos servidores são hospedados no Brasil com hardware dedicado de alta performance. A maioria dos jogadores brasileiros tem ping abaixo de 50ms."
-              },
-              {
-                q: "Preciso pagar alguma coisa?",
-                a: "Não! O Rust Pirata 2275 e o servidor LATAMRUST são 100% gratuitos para sempre. Não há custos ocultos, pagamentos ou sistemas pay-to-win."
-              }
-            ].map((item, i) => (
-              <div key={i} className="bg-gray-900/50 rounded-xl p-6">
-                <h3 className="text-xl font-bold mb-3 text-white">{item.q}</h3>
-                <p className="text-gray-300 leading-relaxed">{item.a}</p>
-              </div>
-            ))}
+          <div className="space-y-6">
+            <div className="bg-gray-800/50 rounded-xl p-6">
+              <h3 className="text-xl font-bold text-red-400 mb-3">1. Como baixar Rust Pirata 2275 grátis no Brasil?</h3>
+              <p className="text-gray-300 leading-relaxed">
+                Para baixar Rust Pirata 2275 grátis: 1) Entre no Discord oficial LATAMRUST (discord.gg/dT8u5b3jga), 2) Vá ao canal #downloads, 
+                3) Baixe o instalador completo (8-10 GB), 4) Execute o setup.exe como administrador, 5) Siga as instruções de instalação, 
+                6) Aguarde a instalação completa (15-30 minutos), 7) Abra o jogo e conecte ao servidor LATAMRUST. O processo é 100% seguro, 
+                sem vírus, e totalmente grátis. Milhares de brasileiros já baixaram e jogam diariamente sem problemas.
+              </p>
+            </div>
+
+            <div className="bg-gray-800/50 rounded-xl p-6">
+              <h3 className="text-xl font-bold text-red-400 mb-3">2. É seguro jogar Rust Pirata? Tem vírus?</h3>
+              <p className="text-gray-300 leading-relaxed">
+                Sim, Rust Pirata 2275 do LATAMRUST é 100% seguro. Nossos arquivos são escaneados regularmente por antivírus e não contêm 
+                malware, vírus, trojans ou spyware. Alguns antivírus podem dar falso positivo por causa dos arquivos crackeados, mas isso 
+                é normal em jogos piratas. Recomendamos adicionar exceção na pasta do jogo. Mais de 10.000 jogadores brasileiros confiam 
+                no LATAMRUST há anos sem nenhum problema de segurança.
+              </p>
+            </div>
+
+            <div className="bg-gray-800/50 rounded-xl p-6">
+              <h3 className="text-xl font-bold text-red-400 mb-3">3. Qual é o ping do Rust Pirata Brasil no LATAMRUST?</h3>
+              <p className="text-gray-300 leading-relaxed">
+                O ping médio para jogadores brasileiros no LATAMRUST é de 15-30ms. Jogadores de São Paulo capital têm 10-15ms, Sul do Brasil 
+                20-25ms, Nordeste 25-35ms, e outras regiões 30-40ms. Servidores físicos localizados no Brasil garantem o melhor ping possível.
+              </p>
+            </div>
+
+            <div className="bg-gray-800/50 rounded-xl p-6">
+              <h3 className="text-xl font-bold text-red-400 mb-3">4. Rust Pirata funciona igual ao Rust oficial da Steam?</h3>
+              <p className="text-gray-300 leading-relaxed">
+                Sim! Rust Pirata 2275 oferece experiência completa e idêntica ao Rust oficial. Você tem acesso a todas as funcionalidades: 
+                construção de bases, crafting, PvP, raids, clãs, veículos, helicóptero, Bradley, Oil Rig, Cargo Ship, underwater labs, 
+                sistema de eletricidade e todos os itens. A única diferença é que é gratuito e joga em servidores piratas.
+              </p>
+            </div>
+
+            <div className="bg-gray-800/50 rounded-xl p-6">
+              <h3 className="text-xl font-bold text-red-400 mb-3">5. Posso jogar Rust Pirata com amigos?</h3>
+              <p className="text-gray-300 leading-relaxed">
+                Sim! Você pode formar clãs, criar bases compartilhadas e jogar cooperativamente. Basta todos baixarem o Rust Pirata 2275 e 
+                conectarem ao servidor LATAMRUST. Podem adicionar como amigos, compartilhar códigos de porta, criar sacos de dormir e construir 
+                bases juntos. Discord LATAMRUST tem canais de voz para coordenação de clãs.
+              </p>
+            </div>
+
+            <div className="bg-gray-800/50 rounded-xl p-6">
+              <h3 className="text-xl font-bold text-red-400 mb-3">6. Quantos jogadores tem online no servidor Brasil?</h3>
+              <p className="text-gray-300 leading-relaxed">
+                O servidor LATAMRUST Brasil tem em média 500-1000 jogadores online nos horários de pico (18h-23h). Nos finais de semana pode 
+                chegar a 1500+ jogadores. Durante madrugada ainda há 200-400 ativos. Com mais de 10.000 registrados, sempre há atividade intensa.
+              </p>
+            </div>
+
+            <div className="bg-gray-800/50 rounded-xl p-6">
+              <h3 className="text-xl font-bold text-red-400 mb-3">7. Tem wipe no servidor? Com que frequência?</h3>
+              <p className="text-gray-300 leading-relaxed">
+                Sim, wipes seguem o calendário oficial do Rust. Wipe obrigatório ocorre na primeira quinta-feira de cada mês (forced wipe), 
+                resetando mapa mas mantendo blueprints. Wipe completo (incluindo blueprints) a cada 2 meses. Sempre anunciamos no Discord com 
+                antecedência.
+              </p>
+            </div>
+
+            <div className="bg-gray-800/50 rounded-xl p-6">
+              <h3 className="text-xl font-bold text-red-400 mb-3">8. Rust Pirata roda em notebook? Precisa de PC gamer?</h3>
+              <p className="text-gray-300 leading-relaxed">
+                Rust roda em notebooks gamers intermediários com Core i5/Ryzen 5, 8GB RAM, e GTX 1050+ dedicada. Notebooks conseguem rodar em 
+                gráficos baixos/médios a 30-50 FPS. Para melhor experiência, recomendamos GTX 1660 Ti, 16GB RAM e SSD. Desktop sempre tem melhor 
+                custo-benefício.
+              </p>
+            </div>
+
+            <div className="bg-gray-800/50 rounded-xl p-6">
+              <h3 className="text-xl font-bold text-red-400 mb-3">9. Como reportar hackers no servidor Brasil?</h3>
+              <p className="text-gray-300 leading-relaxed">
+                Grave vídeo do hacker (use OBS ou Windows Game Bar), anote nome e horário, abra ticket no Discord #reports, envie vídeo e 
+                informações. Moderadores analisam em até 2 horas. Hackers recebem ban permanente + hardware ID ban.
+              </p>
+            </div>
+
+            <div className="bg-gray-800/50 rounded-xl p-6">
+              <h3 className="text-xl font-bold text-red-400 mb-3">10. Posso hospedar meu próprio servidor Rust Pirata?</h3>
+              <p className="text-gray-300 leading-relaxed">
+                Tecnicamente sim, mas requer VPS com 8GB+ RAM, conhecimento de Linux, configuração de ports e custo de 100-300 reais mensais. 
+                É mais fácil e econômico jogar em servidores como LATAMRUST com infraestrutura profissional.
+              </p>
+            </div>
+
+            <div className="bg-gray-800/50 rounded-xl p-6">
+              <h3 className="text-xl font-bold text-red-400 mb-3">11. Rust Pirata tem suporte a mods e plugins?</h3>
+              <p className="text-gray-300 leading-relaxed">
+                Sim! LATAMRUST suporta mods Oxide e plugins personalizados. Temos kits de início, teleporte, remoção de entidades, sistema de 
+                economia, loja de itens e muito mais. Mods são otimizados para não causar lag ou bugs.
+              </p>
+            </div>
+
+            <div className="bg-gray-800/50 rounded-xl p-6">
+              <h3 className="text-xl font-bold text-red-400 mb-3">12. Como faço backup da minha base no Rust Pirata?</h3>
+              <p className="text-gray-300 leading-relaxed">
+                LATAMRUST faz backup automático do servidor a cada 6 horas. Se perder base por bug ou rollback, abra ticket no Discord com 
+                coordenadas e prova (screenshots). Equipe pode restaurar estruturas perdidas em até 24 horas.
+              </p>
+            </div>
+
+            <div className="bg-gray-800/50 rounded-xl p-6">
+              <h3 className="text-xl font-bold text-red-400 mb-3">13. Posso jogar Rust Pirata sem internet?</h3>
+              <p className="text-gray-300 leading-relaxed">
+                Não. Rust Pirata é multiplayer online e requer conexão constante à internet. Não há modo single-player ou offline. Você precisa 
+                de mínimo 10 Mbps de internet estável para jogar sem problemas.
+              </p>
+            </div>
+
+            <div className="bg-gray-800/50 rounded-xl p-6">
+              <h3 className="text-xl font-bold text-red-400 mb-3">14. Quanto tempo leva para baixar Rust Pirata 2275?</h3>
+              <p className="text-gray-300 leading-relaxed">
+                Com internet de 100 Mbps, download leva 15-20 minutos. Com 50 Mbps, 30-40 minutos. Com 10 Mbps, 2-3 horas. Arquivo tem 8-10 GB. 
+                Instalação adicional leva 10-15 minutos.
+              </p>
+            </div>
+
+            <div className="bg-gray-800/50 rounded-xl p-6">
+              <h3 className="text-xl font-bold text-red-400 mb-3">15. Rust Pirata Brasil tem eventos especiais?</h3>
+              <p className="text-gray-300 leading-relaxed">
+                Sim! LATAMRUST realiza torneios semanais, eventos de raid, drops aéreos aumentados, Halloween especial, Natal com presentes, 
+                aniversário do servidor e muito mais. Prêmios incluem VIP temporário, kits exclusivos e reconhecimento na comunidade.
+              </p>
+            </div>
+
+            <div className="bg-gray-800/50 rounded-xl p-6">
+              <h3 className="text-xl font-bold text-red-400 mb-3">16. Como consigo VIP no servidor LATAMRUST?</h3>
+              <p className="text-gray-300 leading-relaxed">
+                VIP pode ser adquirido com doação voluntária via Pix ou PayPal (valores no Discord #vip-info). Também oferecemos VIP gratuito 
+                temporário para vencedores de torneios, membros ativos da comunidade e criadores de conteúdo.
+              </p>
+            </div>
+
+            <div className="bg-gray-800/50 rounded-xl p-6">
+              <h3 className="text-xl font-bold text-red-400 mb-3">17. Rust Pirata consome muita internet?</h3>
+              <p className="text-gray-300 leading-relaxed">
+                Em gameplay normal, Rust usa 50-100 MB por hora de jogo. Em áreas com muitos jogadores ou raids intensas, pode chegar a 150-200 MB/hora. 
+                Não é excessivo, mas evite jogar com franquia de internet limitada.
+              </p>
+            </div>
+
+            <div className="bg-gray-800/50 rounded-xl p-6">
+              <h3 className="text-xl font-bold text-red-400 mb-3">18. Posso transferir meu progresso para outro servidor?</h3>
+              <p className="text-gray-300 leading-relaxed">
+                Não. Progresso, bases e blueprints são salvos localmente em cada servidor. Se mudar de servidor, começa do zero. Por isso 
+                recomendamos escolher um servidor estável como LATAMRUST e ficar nele.
+              </p>
+            </div>
+
+            <div className="bg-gray-800/50 rounded-xl p-6">
+              <h3 className="text-xl font-bold text-red-400 mb-3">19. Como otimizar FPS no Rust Pirata Brasil?</h3>
+              <p className="text-gray-300 leading-relaxed">
+                Dicas: Baixe qualidade gráfica para Medium, desative sombras e efeitos, reduza draw distance, feche programas em segundo plano, 
+                atualize drivers da GPU, instale em SSD, adicione mais RAM (16GB ideal), limpe arquivos temporários e use modo Performance no Windows.
+              </p>
+            </div>
+
+            <div className="bg-gray-800/50 rounded-xl p-6">
+              <h3 className="text-xl font-bold text-red-400 mb-3">20. Rust Pirata recebe atualizações do jogo oficial?</h3>
+              <p className="text-gray-300 leading-relaxed">
+                Sim! LATAMRUST mantém Rust Pirata sempre atualizado para build 2275. Quando Facepunch lança updates oficiais, nossa equipe adapta 
+                e implementa no servidor pirata em 1-2 semanas. Você nunca fica preso em versões antigas.
+              </p>
+            </div>
           </div>
         </section>
 
