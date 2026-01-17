@@ -41,6 +41,41 @@ const seoPages = {
     keywords: 'rust pirata colombia, rust pirata gratis colombia, servidor rust pirata colombia, descargar rust pirata colombia, rust pirata 2026 colombia',
     locale: 'es_CO',
     image: 'https://latamrust.vercel.app/LATAMLOGO.webp'
+  },
+  'rust-family': {
+    title: 'Rust Family LATAMRUST - Comunidad #1 de Rust Pirata LATAM 2026',
+    description: 'Únete a Rust Family LATAMRUST, la mayor comunidad de Rust Pirata en LATAM con más de 10.000 miembros activos. Discord, eventos, torneos y más.',
+    keywords: 'rust family, rust family brasil, rust family argentina, comunidad rust pirata, rust family latam, rust family 2026',
+    locale: 'es_ES',
+    image: 'https://latamrust.vercel.app/LATAMLOGO.webp'
+  },
+  'servidores-rust-pirata': {
+    title: 'Servidores Rust Pirata 2026 - Top 10 Mejores Servidores LATAM',
+    description: 'Lista completa de los mejores servidores Rust Pirata 2026 en LATAM. Comparativa, reviews, ping, jugadores. LATAMRUST #1 ranking.',
+    keywords: 'servidores rust pirata, mejores servidores rust pirata, servidores rust pirata brasil, servidores rust pirata argentina, top servidores rust',
+    locale: 'es_ES',
+    image: 'https://latamrust.vercel.app/LATAMLOGO.webp'
+  },
+  'comunidade-rust-family': {
+    title: 'Comunidade Rust Family Brasil - LATAMRUST #1 com 10.000+ Membros',
+    description: 'A maior comunidade Rust Family do Brasil. Entre no Discord LATAMRUST com mais de 10.000 jogadores ativos. Eventos, torneios e suporte 24/7.',
+    keywords: 'comunidade rust family, rust family brasil, comunidade rust pirata brasil, discord rust family, rust family latam',
+    locale: 'pt_BR',
+    image: 'https://latamrust.vercel.app/LATAMLOGO.webp'
+  },
+  'servidor-rust-family': {
+    title: 'Servidor Rust Family Premium - LATAMRUST Hardware Dedicado',
+    description: 'Servidor Rust Family premium con hardware dedicado, ping bajo 15-30ms Brasil, uptime 99.9%, anti-cheat profesional. El mejor servidor técnico.',
+    keywords: 'servidor rust family, servidor rust pirata premium, servidor rust dedicado, rust family server',
+    locale: 'pt_BR',
+    image: 'https://latamrust.vercel.app/LATAMLOGO.webp'
+  },
+  'dayz': {
+    title: 'DayZ Pirata 1.28 Gratis 2026 - Servidor LATAMRUST LATAM',
+    description: 'Servidor DayZ Pirata 1.28 gratis para LATAM. Descargar DayZ pirata, ping bajo, +1000 jugadores. Survival, zombies, PvP. ¡Juega ahora!',
+    keywords: 'dayz pirata, dayz 1.28, dayz gratis, descargar dayz pirata, servidor dayz pirata, dayz pirata brasil, dayz pirata argentina',
+    locale: 'es_ES',
+    image: 'https://latamrust.vercel.app/LATAMLOGO.webp'
   }
 };
 
