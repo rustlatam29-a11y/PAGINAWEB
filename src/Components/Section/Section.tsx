@@ -179,15 +179,42 @@ const About: React.FC<AboutProps> = () => {
             isMobile ? "grid-cols-1 gap-8" : "grid-cols-3 gap-8 lg:gap-10"
           } max-w-7xl mx-auto`}
         >
-          {/* Owner Card */}
+          {/* Server Programmer Card */}
+          <TeamMemberCard
+            name="RafaFiorito"
+            role="Programador del Servidor"
+            description="Experto en desarrollo de plugins y sistemas de servidor. Crea y mantiene todas las mecánicas personalizadas, eventos y características únicas que hacen especial a LATAMRUST."
+            avatar="/rafafiorito.jpg"
+            specialties={[
+              { icon: <Code className="w-4 lg:w-5 h-4 lg:h-5" />, text: "Plugin Dev" },
+              { icon: <Zap className="w-4 lg:w-5 h-4 lg:h-5" />, text: "Server Systems" },
+              { icon: <Award className="w-4 lg:w-5 h-4 lg:h-5" />, text: "Game Logic" },
+              { icon: <Gamepad2 className="w-4 lg:w-5 h-4 lg:h-5" />, text: "Custom Events" },
+            ]}
+            stats={[
+              { label: "Plugins Creados", value: "50+" },
+              { label: "Eventos Programados", value: "100+" },
+              { label: "Líneas de Código", value: "80K+" },
+              { label: "Bugs Resueltos", value: "5,000+" },
+            ]}
+            socialLinks={[]}
+            isVisible={isVisible}
+            delay="0.5s"
+            onHover={() => !isMobile && setActiveCard(1)}
+            onLeave={() => !isMobile && setActiveCard(null)}
+            isActive={activeCard === 1}
+            isMobile={isMobile}
+          />
+
+          {/* Founder Card */}
           <TeamMemberCard
             name="ParaguayRAIDER"
-            role="Dueño & Fundador del Servidor"
+            role="Fundador"
             description="Veterano de Rust con más de 10000 horas de juego. Fundó LATAM RUST en 2021 con la visión de crear la mejor experiencia de supervivencia en Latinoamérica."
-            avatar="/LATAMLOGO.webp"
+            avatar="/paraguayraider.jpg"
             specialties={[
-              { icon: <Crown className="w-4 lg:w-5 h-4 lg:h-5" />, text: "Administración" },
-              { icon: <Shield className="w-4 lg:w-5 h-4 lg:h-5" />, text: "Moderación" },
+              { icon: <Crown className="w-4 lg:w-5 h-4 lg:h-5" />, text: "Fundador" },
+              { icon: <Shield className="w-4 lg:w-5 h-4 lg:h-5" />, text: "Administración" },
               { icon: <Users className="w-4 lg:w-5 h-4 lg:h-5" />, text: "Comunidad" },
               { icon: <Gamepad2 className="w-4 lg:w-5 h-4 lg:h-5" />, text: "Gaming Expert" },
             ]}
@@ -199,10 +226,10 @@ const About: React.FC<AboutProps> = () => {
             ]}
             socialLinks={[]}
             isVisible={isVisible}
-            delay="0.5s"
-            onHover={() => !isMobile && setActiveCard(1)}
+            delay={isMobile ? "0.7s" : "0.8s"}
+            onHover={() => !isMobile && setActiveCard(2)}
             onLeave={() => !isMobile && setActiveCard(null)}
-            isActive={activeCard === 1}
+            isActive={activeCard === 2}
             isMobile={isMobile}
           />
 
@@ -226,10 +253,10 @@ const About: React.FC<AboutProps> = () => {
             ]}
             socialLinks={[]}
             isVisible={isVisible}
-            delay={isMobile ? "0.7s" : "0.8s"}
-            onHover={() => !isMobile && setActiveCard(2)}
+            delay={isMobile ? "0.9s" : "1.1s"}
+            onHover={() => !isMobile && setActiveCard(3)}
             onLeave={() => !isMobile && setActiveCard(null)}
-            isActive={activeCard === 2}
+            isActive={activeCard === 3}
             isMobile={isMobile}
           />
 
@@ -253,10 +280,10 @@ const About: React.FC<AboutProps> = () => {
             ]}
             socialLinks={[]}
             isVisible={isVisible}
-            delay={isMobile ? "0.9s" : "1.1s"}
-            onHover={() => !isMobile && setActiveCard(3)}
+            delay={isMobile ? "1.1s" : "1.4s"}
+            onHover={() => !isMobile && setActiveCard(4)}
             onLeave={() => !isMobile && setActiveCard(null)}
-            isActive={activeCard === 3}
+            isActive={activeCard === 4}
             isMobile={isMobile}
           />
 
@@ -284,7 +311,14 @@ const About: React.FC<AboutProps> = () => {
             </blockquote>
             
             {/* Names and roles - refined */}
-            <div className={`flex ${isMobile ? "flex-col space-y-4" : "justify-center items-center space-x-10"}`}>
+            <div className={`flex ${isMobile ? "flex-col space-y-4" : "justify-center items-center space-x-8"}`}>
+              <div className="text-center">
+                <div className="text-blue-300 font-semibold text-base lg:text-lg mb-1">RafaFiorito</div>
+                <div className="text-gray-400/75 text-xs lg:text-sm tracking-wide">Server Dev</div>
+              </div>
+              {!isMobile && (
+                <div className="w-px h-10 bg-gradient-to-b from-transparent via-gray-500/30 to-transparent"></div>
+              )}
               <div className="text-center">
                 <div className="text-cyan-300 font-semibold text-base lg:text-lg mb-1">ParaguayRAIDER</div>
                 <div className="text-gray-400/75 text-xs lg:text-sm tracking-wide">Fundador</div>
@@ -294,7 +328,7 @@ const About: React.FC<AboutProps> = () => {
               )}
               <div className="text-center">
                 <div className="text-purple-300 font-semibold text-base lg:text-lg mb-1">GalpónTech</div>
-                <div className="text-gray-400/75 text-xs lg:text-sm tracking-wide">Developer</div>
+                <div className="text-gray-400/75 text-xs lg:text-sm tracking-wide">Web Dev</div>
               </div>
               {!isMobile && (
                 <div className="w-px h-10 bg-gradient-to-b from-transparent via-gray-500/30 to-transparent"></div>
