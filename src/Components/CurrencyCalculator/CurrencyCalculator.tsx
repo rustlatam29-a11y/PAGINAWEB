@@ -281,7 +281,7 @@ const CurrencyCalculator: React.FC = () => {
 
                 {/* CTA Button */}
                 <a
-                  href={`https://wa.link/duxkp1?text=Hola!%20Quiero%20comprar%20el%20${
+                  href={`https://wa.link/6wker8?text=Hola!%20Quiero%20comprar%20el%20${
                     selectedPlan === "basic" ? "Plan%20VIP%20Basic" : "Plan%20Supremo"
                   }%20(${formatNumber(calculatePrice())}%20${selectedCurrency})`}
                   target="_blank"
@@ -297,7 +297,7 @@ const CurrencyCalculator: React.FC = () => {
                 </a>
 
                 <p className="text-center text-gray-400 text-sm">
-                  💳 Aceptamos PIX, Belo App, AstroPay y Mercado Pago
+                  💬 Contáctanos por WhatsApp para coordinar el pago
                 </p>
               </div>
             </>

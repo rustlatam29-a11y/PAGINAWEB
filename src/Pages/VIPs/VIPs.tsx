@@ -3,7 +3,7 @@ import Header from "../../Components/Header/Header";
 import Footer from "../../Components/Footer/Footer";
 import GlobalBackground from "../../Components/GlobalBackground/GlobalBackground";
 import Breadcrumbs from "../../Components/Breadcrumbs/Breadcrumbs";
-import { Zap, CreditCard, Globe, Star, Sparkles, Shield, Check, Crown, Rocket, Award, Gift } from "lucide-react";
+import { Zap, Globe, Star, Sparkles, Shield, Check, Crown, Rocket, Award, Gift } from "lucide-react";
 
 const VIPs: React.FC = () => {
   return (
@@ -169,55 +169,10 @@ const VIPs: React.FC = () => {
                     </div>
                   </div>
 
-                  {/* Métodos de Pago Mejorados */}
-                  <div className="mb-6 p-4 bg-black/40 rounded-xl border border-red-900/30">
-                    <div className="flex items-center space-x-2 mb-3">
-                      <CreditCard className="w-4 h-4 text-red-400" />
-                      <span className="text-white font-semibold text-sm">Métodos de Pago</span>
-                    </div>
-                    <div className="space-y-2.5 text-sm">
-                      <div className="p-2 bg-red-950/20 rounded-lg">
-                        <div className="flex items-center justify-between mb-2">
-                          <span className="text-red-400 font-semibold text-xs">🇧🇷 PIX (Brasil)</span>
-                          <span className="text-gray-400 text-xs">Instantáneo</span>
-                        </div>
-                        <div className="bg-black/40 p-2 rounded">
-                          <div className="text-xs text-gray-400">
-                            <span className="text-red-300 font-semibold">Chave:</span>
-                            <span className="ml-1 text-white font-mono text-[10px]">financeiro.cambiobrasil@gmail.com</span>
-                          </div>
-                        </div>
-                      </div>
-                      <div className="flex items-center justify-between p-2 bg-red-950/20 rounded-lg">
-                        <span className="text-red-400 font-semibold text-xs">💎 Belo App</span>
-                        <span className="text-xs bg-red-600/80 px-2 py-0.5 rounded text-white">Recomendado</span>
-                      </div>
-                      <div className="flex items-center justify-between p-2 bg-red-950/20 rounded-lg">
-                        <span className="text-red-400 font-semibold text-xs">💳 AstroPay</span>
-                        <span className="text-gray-400 text-xs">LATAM</span>
-                      </div>
-                      <div className="p-2 bg-red-950/20 rounded-lg">
-                        <div className="flex items-center justify-between mb-2">
-                          <span className="text-red-400 font-semibold text-xs">💰 Mercado Pago</span>
-                          <span className="text-gray-400 text-xs">Seguro</span>
-                        </div>
-                        <div className="bg-black/40 p-2 rounded space-y-1">
-                          <div className="text-xs text-gray-400">
-                            <span className="text-red-300 font-semibold">CVU:</span>
-                            <span className="ml-1 text-white font-mono">0000184305010002618771</span>
-                          </div>
-                          <div className="text-xs text-gray-400">
-                            <span className="text-red-300 font-semibold">Alias:</span>
-                            <span className="ml-1 text-white">paraguayraider</span>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
 
                   {/* CTA Button */}
                   <a 
-                    href="https://wa.link/duxkp1?text=Hola!%20Quiero%20comprar%20el%20Plan%20Supremo%20VIP%20de%20$10.00/mes" 
+                    href="https://wa.link/6wker8?text=Hola!%20Quiero%20comprar%20el%20Plan%20Supremo%20VIP%20de%20$10.00/mes" 
                     target="_blank" 
                     rel="noopener noreferrer"
                     className="block w-full text-center py-4 bg-gradient-to-r from-red-600 to-red-800 hover:from-red-700 hover:to-red-900 text-white font-bold rounded-xl transition-all duration-300 transform hover:scale-105 shadow-xl hover:shadow-2xl"
@@ -310,55 +265,10 @@ const VIPs: React.FC = () => {
                     </div>
                   </div>
 
-                  {/* Métodos de Pago */}
-                  <div className="mb-6 p-4 bg-black/40 rounded-xl border border-gray-700/30">
-                    <div className="flex items-center space-x-2 mb-3">
-                      <CreditCard className="w-4 h-4 text-red-400" />
-                      <span className="text-white font-semibold text-sm">Métodos de Pago</span>
-                    </div>
-                    <div className="space-y-2.5 text-sm">
-                      <div className="p-2 bg-gray-900/20 rounded-lg">
-                        <div className="flex items-center justify-between mb-2">
-                          <span className="text-red-400 font-semibold text-xs">🇧🇷 PIX (Brasil)</span>
-                          <span className="text-gray-400 text-xs">Instantáneo</span>
-                        </div>
-                        <div className="bg-black/40 p-2 rounded">
-                          <div className="text-xs text-gray-400">
-                            <span className="text-red-300 font-semibold">Chave:</span>
-                            <span className="ml-1 text-white font-mono text-[10px]">financeiro.cambiobrasil@gmail.com</span>
-                          </div>
-                        </div>
-                      </div>
-                      <div className="flex items-center justify-between p-2 bg-gray-900/20 rounded-lg">
-                        <span className="text-red-400 font-semibold text-xs">💎 Belo App</span>
-                        <span className="text-xs bg-red-600/80 px-2 py-0.5 rounded text-white">Recomendado</span>
-                      </div>
-                      <div className="flex items-center justify-between p-2 bg-gray-900/20 rounded-lg">
-                        <span className="text-red-400 font-semibold text-xs">💳 AstroPay</span>
-                        <span className="text-gray-400 text-xs">LATAM</span>
-                      </div>
-                      <div className="p-2 bg-gray-900/20 rounded-lg">
-                        <div className="flex items-center justify-between mb-2">
-                          <span className="text-red-400 font-semibold text-xs">💰 Mercado Pago</span>
-                          <span className="text-gray-400 text-xs">Seguro</span>
-                        </div>
-                        <div className="bg-black/40 p-2 rounded space-y-1">
-                          <div className="text-xs text-gray-400">
-                            <span className="text-red-300 font-semibold">CVU:</span>
-                            <span className="ml-1 text-white font-mono">0000184305010002618771</span>
-                          </div>
-                          <div className="text-xs text-gray-400">
-                            <span className="text-red-300 font-semibold">Alias:</span>
-                            <span className="ml-1 text-white">paraguayraider</span>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
 
                   {/* CTA Button */}
                   <a 
-                    href="https://wa.link/duxkp1?text=Hola!%20Quiero%20comprar%20el%20Plan%20VIP%20Basic%20de%20$5.00/mes" 
+                    href="https://wa.link/6wker8?text=Hola!%20Quiero%20comprar%20el%20Plan%20VIP%20Basic%20de%20$5.00/mes" 
                     target="_blank" 
                     rel="noopener noreferrer"
                     className="block w-full text-center py-4 bg-gradient-to-r from-gray-700 to-gray-900 hover:from-red-600 hover:to-red-800 text-white font-bold rounded-xl transition-all duration-300 transform hover:scale-105 shadow-xl hover:shadow-2xl"
@@ -405,7 +315,7 @@ const VIPs: React.FC = () => {
             {/* CTA Final Mejorado */}
             <div className="text-center">
               <a 
-                href="https://wa.link/duxkp1?text=Hola!%20Tengo%20dudas%20sobre%20los%20planes%20VIP%20de%20LATAMRUST" 
+                href="https://wa.link/6wker8?text=Hola!%20Tengo%20dudas%20sobre%20los%20planes%20VIP%20de%20LATAMRUST" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="inline-flex items-center space-x-3 px-10 py-5 bg-gradient-to-r from-red-600 to-red-800 hover:from-red-700 hover:to-red-900 text-white font-bold rounded-2xl transition-all duration-300 transform hover:scale-105 shadow-2xl hover:shadow-red-900/50 text-lg"
