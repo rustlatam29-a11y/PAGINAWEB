@@ -211,7 +211,7 @@ const About: React.FC<AboutProps> = () => {
             name="ParaguayRAIDER"
             role="Fundador"
             description="Veterano de Rust con más de 10000 horas de juego. Fundó LATAM RUST en 2021 con la visión de crear la mejor experiencia de supervivencia en Latinoamérica."
-            avatar="/paraguayraider.jpg"
+            avatar="/paraguayraider.png"
             specialties={[
               { icon: <Crown className="w-4 lg:w-5 h-4 lg:h-5" />, text: "Fundador" },
               { icon: <Shield className="w-4 lg:w-5 h-4 lg:h-5" />, text: "Administración" },
