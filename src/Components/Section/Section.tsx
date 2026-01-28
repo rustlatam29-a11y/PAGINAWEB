@@ -179,10 +179,10 @@ const About: React.FC<AboutProps> = () => {
             isMobile ? "grid-cols-1 gap-8" : "grid-cols-3 gap-8 lg:gap-10"
           } max-w-7xl mx-auto`}
         >
-          {/* Server Programmer Card */}
+          {/* Owner Card */}
           <TeamMemberCard
             name="RafaFiorito"
-            role="Programador del Servidor"
+            role="Dueño"
             description="Experto en desarrollo de plugins y sistemas de servidor. Crea y mantiene todas las mecánicas personalizadas, eventos y características únicas que hacen especial a LATAMRUST."
             avatar="/rafafiorito.jpg"
             specialties={[
@@ -314,7 +314,7 @@ const About: React.FC<AboutProps> = () => {
             <div className={`flex ${isMobile ? "flex-col space-y-4" : "justify-center items-center space-x-8"}`}>
               <div className="text-center">
                 <div className="text-blue-300 font-semibold text-base lg:text-lg mb-1">RafaFiorito</div>
-                <div className="text-gray-400/75 text-xs lg:text-sm tracking-wide">Server Dev</div>
+                <div className="text-gray-400/75 text-xs lg:text-sm tracking-wide">Dueño</div>
               </div>
               {!isMobile && (
                 <div className="w-px h-10 bg-gradient-to-b from-transparent via-gray-500/30 to-transparent"></div>
