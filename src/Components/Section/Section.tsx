@@ -1,15 +1,10 @@
 import React, { useState, useEffect, useRef, useCallback, useMemo } from "react";
 import {
   Crown,
-  Code,
   Shield,
   Users,
-  Zap,
   Star,
-  Award,
   Gamepad2,
-  Coffee,
-  Bug,
 } from "lucide-react";
 
 interface AboutProps {
@@ -61,7 +56,7 @@ const About: React.FC<AboutProps> = () => {
     return () => observer.disconnect();
   }, [isMobile]);
 
-  const titleText = useMemo(() => "CONOCE AL EQUIPO".split(""), []);
+  const titleText = useMemo(() => "FUNDADOR".split(""), []);
 
   // Optimización de elementos flotantes - reducidos en móviles
   const floatingElements = useMemo(() => {
@@ -168,7 +163,7 @@ const About: React.FC<AboutProps> = () => {
           >
             <div className="w-20 sm:w-24 lg:w-32 h-1 bg-gradient-to-r from-cyan-400 to-purple-500 mx-auto rounded-full mb-3 lg:mb-4"></div>
             <p className="text-lg lg:text-xl text-gray-300 font-medium px-4">
-              Los cerebros detrás de la experiencia LATAM RUST
+              FUNDADOR DE LATAMRUST Y SERVIDORES DE RUST PIRATA
             </p>
           </div>
         </div>
@@ -176,41 +171,14 @@ const About: React.FC<AboutProps> = () => {
         {/* Team Cards - Grid responsivo */}
         <div
           className={`grid ${
-            isMobile ? "grid-cols-1 gap-8" : "grid-cols-3 gap-8 lg:gap-10"
+            isMobile ? "grid-cols-1 gap-8" : "grid-cols-1 gap-8 lg:gap-10 max-w-md mx-auto"
           } max-w-7xl mx-auto`}
         >
-          {/* Owner Card */}
-          <TeamMemberCard
-            name="RafaFiorito"
-            role="Dueño"
-            description="Experto en desarrollo de plugins y sistemas de servidor. Crea y mantiene todas las mecánicas personalizadas, eventos y características únicas que hacen especial a LATAMRUST."
-            avatar="/rafafiorito.jpg"
-            specialties={[
-              { icon: <Code className="w-4 lg:w-5 h-4 lg:h-5" />, text: "Plugin Dev" },
-              { icon: <Zap className="w-4 lg:w-5 h-4 lg:h-5" />, text: "Server Systems" },
-              { icon: <Award className="w-4 lg:w-5 h-4 lg:h-5" />, text: "Game Logic" },
-              { icon: <Gamepad2 className="w-4 lg:w-5 h-4 lg:h-5" />, text: "Custom Events" },
-            ]}
-            stats={[
-              { label: "Plugins Creados", value: "50+" },
-              { label: "Eventos Programados", value: "100+" },
-              { label: "Líneas de Código", value: "80K+" },
-              { label: "Bugs Resueltos", value: "5,000+" },
-            ]}
-            socialLinks={[]}
-            isVisible={isVisible}
-            delay="0.5s"
-            onHover={() => !isMobile && setActiveCard(1)}
-            onLeave={() => !isMobile && setActiveCard(null)}
-            isActive={activeCard === 1}
-            isMobile={isMobile}
-          />
-
           {/* Founder Card */}
           <TeamMemberCard
             name="ParaguayRAIDER"
             role="Fundador"
-            description="Veterano de Rust con más de 10000 horas de juego. Fundó LATAM RUST en 2021 con la visión de crear la mejor experiencia de supervivencia en Latinoamérica."
+            description="Veterano de Rust con más de 10,000 horas de juego. Fundó LATAMRUST en 2021 con la visión de crear la mejor experiencia de supervivencia en Latinoamérica. Programador experimentado y médico de profesión."
             avatar="/paraguayraider.png"
             specialties={[
               { icon: <Crown className="w-4 lg:w-5 h-4 lg:h-5" />, text: "Fundador" },
@@ -230,60 +198,6 @@ const About: React.FC<AboutProps> = () => {
             onHover={() => !isMobile && setActiveCard(2)}
             onLeave={() => !isMobile && setActiveCard(null)}
             isActive={activeCard === 2}
-            isMobile={isMobile}
-          />
-
-          {/* Developer Card */}
-          <TeamMemberCard
-            name="GalpónTech"
-            role="Desarrollador Web"
-            description="Full-stack developer especializado en React, Node.js y sistemas de alta disponibilidad. Creó esta web épica y mantiene toda la infraestructura técnica del servidor."
-            avatar="/galpon.webp"
-            specialties={[
-              { icon: <Code className="w-4 lg:w-5 h-4 lg:h-5" />, text: "Full-Stack Dev" },
-              { icon: <Zap className="w-4 lg:w-5 h-4 lg:h-5" />, text: "Performance" },
-              { icon: <Award className="w-4 lg:w-5 h-4 lg:h-5" />, text: "UI/UX Design" },
-              { icon: <Coffee className="w-4 lg:w-5 h-4 lg:h-5" />, text: "Café Adicto" },
-            ]}
-            stats={[
-              { label: "Líneas de Código", value: "100K+" },
-              { label: "Proyectos Completados", value: "50+" },
-              { label: "Cafés por Día", value: "∞" },
-              { label: "Bugs Solucionados", value: "9,999+" },
-            ]}
-            socialLinks={[]}
-            isVisible={isVisible}
-            delay={isMobile ? "0.9s" : "1.1s"}
-            onHover={() => !isMobile && setActiveCard(3)}
-            onLeave={() => !isMobile && setActiveCard(null)}
-            isActive={activeCard === 3}
-            isMobile={isMobile}
-          />
-
-          {/* AntiCheat Developer Card */}
-          <TeamMemberCard
-            name="Sergioklv"
-            role="Desarrollador de AntiCheat"
-            description="Experto en seguridad y sistemas anticheat. Mantiene el servidor limpio y libre de hackers, desarrollando soluciones personalizadas para proteger la experiencia de juego."
-            avatar="/Sergioklv.png"
-            specialties={[
-              { icon: <Shield className="w-4 lg:w-5 h-4 lg:h-5" />, text: "AntiCheat Dev" },
-              { icon: <Bug className="w-4 lg:w-5 h-4 lg:h-5" />, text: "Bug Hunter" },
-              { icon: <Code className="w-4 lg:w-5 h-4 lg:h-5" />, text: "Security Expert" },
-              { icon: <Zap className="w-4 lg:w-5 h-4 lg:h-5" />, text: "Performance" },
-            ]}
-            stats={[
-              { label: "Hackers Baneados", value: "5,000+" },
-              { label: "Sistemas Creados", value: "20+" },
-              { label: "Uptime del Sistema", value: "99.9%" },
-              { label: "Detecciones/Día", value: "500+" },
-            ]}
-            socialLinks={[]}
-            isVisible={isVisible}
-            delay={isMobile ? "1.1s" : "1.4s"}
-            onHover={() => !isMobile && setActiveCard(4)}
-            onLeave={() => !isMobile && setActiveCard(null)}
-            isActive={activeCard === 4}
             isMobile={isMobile}
           />
 
@@ -307,35 +221,14 @@ const About: React.FC<AboutProps> = () => {
             
             {/* Quote - editorial typography */}
             <blockquote className="relative text-xl sm:text-2xl lg:text-3xl font-semibold text-white/95 mb-5 lg:mb-7 px-2 leading-tight tracking-[-0.02em]">
-              "La comunidad de Rust pirata más grande de LATAM"
+              "FUNDADOR DE LATAMRUST Y SERVIDORES DE RUST PIRATA"
             </blockquote>
             
             {/* Names and roles - refined */}
             <div className={`flex ${isMobile ? "flex-col space-y-4" : "justify-center items-center space-x-8"}`}>
               <div className="text-center">
-                <div className="text-blue-300 font-semibold text-base lg:text-lg mb-1">RafaFiorito</div>
-                <div className="text-gray-400/75 text-xs lg:text-sm tracking-wide">Dueño</div>
-              </div>
-              {!isMobile && (
-                <div className="w-px h-10 bg-gradient-to-b from-transparent via-gray-500/30 to-transparent"></div>
-              )}
-              <div className="text-center">
                 <div className="text-cyan-300 font-semibold text-base lg:text-lg mb-1">ParaguayRAIDER</div>
-                <div className="text-gray-400/75 text-xs lg:text-sm tracking-wide">Fundador</div>
-              </div>
-              {!isMobile && (
-                <div className="w-px h-10 bg-gradient-to-b from-transparent via-gray-500/30 to-transparent"></div>
-              )}
-              <div className="text-center">
-                <div className="text-purple-300 font-semibold text-base lg:text-lg mb-1">GalpónTech</div>
-                <div className="text-gray-400/75 text-xs lg:text-sm tracking-wide">Web Dev</div>
-              </div>
-              {!isMobile && (
-                <div className="w-px h-10 bg-gradient-to-b from-transparent via-gray-500/30 to-transparent"></div>
-              )}
-              <div className="text-center">
-                <div className="text-green-300 font-semibold text-base lg:text-lg mb-1">Sergioklv</div>
-                <div className="text-gray-400/75 text-xs lg:text-sm tracking-wide">AntiCheat Dev</div>
+                <div className="text-gray-400/75 text-xs lg:text-sm tracking-wide">FUNDADOR</div>
               </div>
             </div>
           </div>

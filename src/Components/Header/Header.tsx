@@ -1,119 +1,26 @@
 import React, { useState, useEffect, useMemo, useCallback } from "react";
-import { Menu, X, Zap, MessageSquare, Phone, Crown, Gem } from "lucide-react";
-import { useNavigate } from "react-router-dom";
+import { Zap } from "lucide-react";
 
 interface HeaderProps {
   discordInviteUrl?: string;
   logoUrl?: string;
 }
 
-interface NavItemProps {
-  icon: React.ReactNode;
-  text: string;
-  onClick?: () => void;
-  href?: string;
-}
-
-interface MobileNavItemProps extends NavItemProps {
-  delay: string;
-}
-
-// Componente NavItem optimizado
-const NavItem: React.FC<NavItemProps> = React.memo(({ icon, text, onClick, href }) => {
-  const handleClick = useCallback(() => {
-    if (href && href.startsWith("http")) {
-      window.open(href, "_blank", "noopener,noreferrer");
-    } else if (onClick) {
-      onClick();
-    }
-  }, [href, onClick]);
-
-  return (
-    <button
-      onClick={handleClick}
-      className="group flex items-center space-x-3 px-4 py-2 md:px-5 md:py-3 text-white/90 hover:text-white transition-all duration-300 rounded-xl hover:bg-red-950/30 transform hover:scale-105 hover:shadow-lg backdrop-blur-sm border border-transparent hover:border-red-900/40"
-    >
-      <span className="group-hover:scale-125 group-hover:rotate-12 transition-all duration-300">{icon}</span>
-      <span className="font-bold tracking-wide text-sm md:text-base">{text}</span>
-      <div className="w-0 group-hover:w-2 h-2 bg-red-400 rounded-full transition-all duration-300" />
-    </button>
-  );
-});
-
-NavItem.displayName = "NavItem";
-
-// Componente MobileNavItem optimizado
-const MobileNavItem: React.FC<MobileNavItemProps> = React.memo(({ icon, text, delay, onClick, href }) => {
-  const [isVisible, setIsVisible] = useState(false);
-
-  const handleClick = useCallback(() => {
-    if (href && href.startsWith("http")) {
-      window.open(href, "_blank", "noopener,noreferrer");
-    } else if (onClick) {
-      onClick();
-    }
-  }, [href, onClick]);
-
-  useEffect(() => {
-    const timer = setTimeout(() => setIsVisible(true), parseFloat(delay) * 1000);
-    return () => clearTimeout(timer);
-  }, [delay]);
-
-  return (
-    <button
-      onClick={handleClick}
-      className={`w-full flex items-center space-x-4 px-4 py-3 text-white/90 hover:text-white transition-all duration-300 rounded-xl hover:bg-red-950/30 transform hover:scale-105 ${
-        isVisible ? "translate-x-0 opacity-100" : "translate-x-8 opacity-0"
-      }`}
-    >
-      <span className="transform transition-all duration-300 hover:scale-125 hover:rotate-12">{icon}</span>
-      <span className="font-bold">{text}</span>
-      <div className="flex-1" />
-      <div className="w-2 h-2 bg-red-400 rounded-full animate-pulse" />
-    </button>
-  );
-});
-
-MobileNavItem.displayName = "MobileNavItem";
-
 const Header: React.FC<HeaderProps> = ({
-  discordInviteUrl = "https://discord.gg/M9ud76fnYu",
   logoUrl = "/img1.webp",
 }) => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isLoaded, setIsLoaded] = useState(false);
   const [lettersVisible, setLettersVisible] = useState(false);
-  const navigate = useNavigate();
 
   // Memoizar valores estáticos
   const animatedText = useMemo(() => "LATAMRUST".split(""), []);
-
-  // Callbacks optimizados
-  const toggleMenu = useCallback(() => {
-    setIsMenuOpen((prev) => !prev);
-  }, []);
-
-  const handleDiscordClick = useCallback(() => {
-    window.open(discordInviteUrl, "_blank", "noopener,noreferrer");
-  }, [discordInviteUrl]);
 
   const scrollToSection = useCallback((sectionId: string) => {
     const element = document.getElementById(sectionId);
     if (element) {
       element.scrollIntoView({ behavior: "smooth" });
     }
-    setIsMenuOpen(false);
   }, []);
-
-  const handleVIPClick = useCallback(() => {
-    navigate('/vip');
-    setIsMenuOpen(false);
-  }, [navigate]);
-
-  const handleRPClick = useCallback(() => {
-    navigate('/rp');
-    setIsMenuOpen(false);
-  }, [navigate]);
 
   // Efectos optimizados
   useEffect(() => {
@@ -146,52 +53,6 @@ const Header: React.FC<HeaderProps> = ({
         delay: `${i * 2}s`,
       })),
     []
-  );
-
-  // Configuración de navegación
-  const navigationItems: NavItemProps[] = useMemo(
-    () => [
-      {
-        icon: <Crown className="w-4 h-4 md:w-5 md:h-5" />,
-        text: "VIP",
-        onClick: handleVIPClick,
-      },
-      {
-        icon: <Gem className="w-4 h-4 md:w-5 md:h-5" />,
-        text: "RP",
-        onClick: handleRPClick,
-      },
-      {
-        icon: <Phone className="w-4 h-4 md:w-5 md:h-5" />,
-        text: "CONTACTO",
-        href: "https://wa.link/6wker8",
-      },
-    ],
-    [handleVIPClick, handleRPClick]
-  );
-
-  const mobileNavigationItems: MobileNavItemProps[] = useMemo(
-    () => [
-      {
-        icon: <Crown className="w-5 h-5" />,
-        text: "VIP",
-        delay: "0.1",
-        onClick: handleVIPClick,
-      },
-      {
-        icon: <Gem className="w-5 h-5" />,
-        text: "RP Shop",
-        delay: "0.2",
-        onClick: handleRPClick,
-      },
-      {
-        icon: <Phone className="w-5 h-5" />,
-        text: "Contacto",
-        delay: "0.3",
-        href: "https://wa.link/6wker8",
-      },
-    ],
-    [handleVIPClick, handleRPClick]
   );
 
   return (
@@ -350,84 +211,10 @@ const Header: React.FC<HeaderProps> = ({
               </div>
             </div>
 
-            {/* Navegación de escritorio */}
-            <div
-              className={`hidden md:flex items-center space-x-1 lg:space-x-2 transform transition-all duration-1000 ${
-                isLoaded ? "translate-y-0 opacity-100" : "-translate-y-10 opacity-0"
-              }`}
-              style={{ transitionDelay: "1.2s" }}
-            >
-              {navigationItems.map((item, index) => (
-                <NavItem
-                  key={`nav-${index}`}
-                  icon={item.icon}
-                  text={item.text}
-                  onClick={item.onClick}
-                  href={item.href}
-                />
-              ))}
 
-              {/* Botón de Discord - UNIFICADO con mismo estilo que otros botones */}
-              <button
-                onClick={handleDiscordClick}
-                className="group flex items-center space-x-3 px-4 py-2 md:px-5 md:py-3 text-white/90 hover:text-white transition-all duration-300 rounded-xl hover:bg-red-950/30 transform hover:scale-105 hover:shadow-lg backdrop-blur-sm border border-transparent hover:border-red-900/40"
-              >
-                <MessageSquare className="w-4 h-4 md:w-5 md:h-5 group-hover:scale-125 group-hover:rotate-12 transition-all duration-300" />
-                <span className="font-bold tracking-wide text-sm md:text-base">DISCORD</span>
-                <div className="w-0 group-hover:w-2 h-2 bg-red-400 rounded-full transition-all duration-300" />
-              </button>
-            </div>
-
-            {/* Botón del menú móvil */}
-            <div
-              className={`md:hidden transform transition-all duration-1000 ${
-                isLoaded ? "rotate-0 opacity-100" : "rotate-180 opacity-0"
-              }`}
-              style={{ transitionDelay: "1.5s" }}
-            >
-              <button
-                onClick={toggleMenu}
-                className="p-2 rounded-lg bg-black/40 text-white hover:bg-red-950/40 transition-all duration-300 transform hover:scale-110 backdrop-blur-sm border border-red-900/30"
-                aria-label={isMenuOpen ? "Cerrar menú" : "Abrir menú"}
-              >
-                {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-              </button>
-            </div>
           </div>
 
-          {/* Navegación móvil */}
-          <div
-            className={`md:hidden transition-all duration-300 overflow-hidden ${
-              isMenuOpen ? "max-h-96 pb-4" : "max-h-0"
-            }`}
-          >
-            <div className="bg-black/70 rounded-xl backdrop-blur-md border border-red-900/30 p-4 space-y-2 shadow-xl">
-              {mobileNavigationItems.map((item, index) => (
-                <MobileNavItem
-                  key={`mobile-nav-${index}`}
-                  icon={item.icon}
-                  text={item.text}
-                  delay={item.delay}
-                  onClick={item.onClick}
-                  href={item.href}
-                />
-              ))}
 
-              {/* Botón de Discord móvil - UNIFICADO */}
-              <button
-                onClick={handleDiscordClick}
-                className={`w-full flex items-center space-x-4 px-4 py-3 text-white/90 hover:text-white transition-all duration-300 rounded-xl hover:bg-red-950/30 transform hover:scale-105 ${
-                  isMenuOpen ? "translate-x-0 opacity-100" : "translate-x-8 opacity-0"
-                }`}
-                style={{ transitionDelay: "0.3s" }}
-              >
-                <MessageSquare className="w-5 h-5 transform transition-all duration-300 hover:scale-125 hover:rotate-12" />
-                <span className="font-bold">DISCORD</span>
-                <div className="flex-1" />
-                <div className="w-2 h-2 bg-red-400 rounded-full animate-pulse" />
-              </button>
-            </div>
-          </div>
         </nav>
       </header>
 

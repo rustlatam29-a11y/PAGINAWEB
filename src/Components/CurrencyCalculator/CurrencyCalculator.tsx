@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { TrendingUp, RefreshCw } from "lucide-react";
+import { TrendingUp, RefreshCw, Server, Zap } from "lucide-react";
 
 interface ExchangeRates {
   USD: number;
@@ -10,27 +10,45 @@ interface ExchangeRates {
   MXN: number;
   PEN: number;
   UYU: number;
-  VES: number;
-  BOB: number;
-  USD_EC: number;
-  PAB: number;
   PYG: number;
 }
+
+interface RustPlan {
+  id: string;
+  name: string;
+  version: string;
+  price: number;
+  icon: React.ReactNode;
+  popular?: boolean;
+}
+
+const rustPlans: RustPlan[] = [
+  {
+    id: "rust2275",
+    name: "Rust 2275",
+    version: "OldRecoil",
+    price: 17.0,
+    icon: <Server className="w-5 h-5" />,
+  },
+  {
+    id: "rust2388",
+    name: "Rust 2388",
+    version: "Actualizado",
+    price: 25.0,
+    icon: <Zap className="w-5 h-5" />,
+    popular: true,
+  },
+];
 
 const CurrencyCalculator: React.FC = () => {
   const [rates, setRates] = useState<ExchangeRates | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
-  const [selectedPlan, setSelectedPlan] = useState<"basic" | "supremo">("supremo");
+  const [selectedPlan, setSelectedPlan] = useState<string>("rust2388");
   const [selectedCurrency, setSelectedCurrency] = useState<keyof ExchangeRates>("USD");
   const [lastUpdate, setLastUpdate] = useState<Date>(new Date());
 
-  const planPrices = {
-    basic: 5.0,
-    supremo: 10.0,
-  };
-
-  const currencyFlags = {
+  const currencyFlags: Record<keyof ExchangeRates, string> = {
     USD: "🇺🇸",
     ARS: "🇦🇷",
     BRL: "🇧🇷",
@@ -39,43 +57,34 @@ const CurrencyCalculator: React.FC = () => {
     MXN: "🇲🇽",
     PEN: "🇵🇪",
     UYU: "🇺🇾",
-    VES: "🇻🇪",
-    BOB: "🇧🇴",
-    USD_EC: "🇪🇨",
-    PAB: "🇵🇦",
     PYG: "🇵🇾",
   };
 
-  const currencyNames = {
-    USD: "Dólar estadounidense",
-    ARS: "Peso argentino",
-    BRL: "Real brasileño",
-    CLP: "Peso chileno",
-    COP: "Peso colombiano",
-    MXN: "Peso mexicano",
-    PEN: "Sol peruano",
-    UYU: "Peso uruguayo",
-    VES: "Bolívar venezolano",
-    BOB: "Boliviano",
-    USD_EC: "Dólar (Ecuador)",
-    PAB: "Balboa panameño",
-    PYG: "Guaraní paraguayo",
+  const currencyNames: Record<keyof ExchangeRates, string> = {
+    USD: "Dólar",
+    ARS: "Peso Argentino",
+    BRL: "Real Brasileño",
+    CLP: "Peso Chileno",
+    COP: "Peso Colombiano",
+    MXN: "Peso Mexicano",
+    PEN: "Sol Peruano",
+    UYU: "Peso Uruguayo",
+    PYG: "Guaraní",
   };
 
   const fetchExchangeRates = async () => {
     setLoading(true);
     setError(null);
-    
+
     try {
-      // Using exchangerate-api.com (free tier: 1,500 requests/month)
       const response = await fetch("https://api.exchangerate-api.com/v4/latest/USD");
-      
+
       if (!response.ok) {
         throw new Error("Error al obtener las tasas de cambio");
       }
 
       const data = await response.json();
-      
+
       setRates({
         USD: 1,
         ARS: data.rates.ARS || 1000,
@@ -85,17 +94,12 @@ const CurrencyCalculator: React.FC = () => {
         MXN: data.rates.MXN || 17,
         PEN: data.rates.PEN || 3.7,
         UYU: data.rates.UYU || 42,
-        VES: data.rates.VES || 36,
-        BOB: data.rates.BOB || 7,
-        USD_EC: 1, // Ecuador usa USD
-        PAB: data.rates.PAB || 1,
         PYG: data.rates.PYG || 7500,
       });
-      
+
       setLastUpdate(new Date());
-    } catch (err) {
-      setError("No se pudieron cargar las tasas de cambio. Usando valores aproximados.");
-      // Fallback rates
+    } catch {
+      setError("No se pudieron cargar las tasas. Usando valores aproximados.");
       setRates({
         USD: 1,
         ARS: 1000,
@@ -105,10 +109,6 @@ const CurrencyCalculator: React.FC = () => {
         MXN: 17,
         PEN: 3.7,
         UYU: 42,
-        VES: 36,
-        BOB: 7,
-        USD_EC: 1, // Ecuador usa USD
-        PAB: 1,
         PYG: 7500,
       });
     } finally {
@@ -117,26 +117,21 @@ const CurrencyCalculator: React.FC = () => {
   };
 
   useEffect(() => {
-    // Diferir la carga de la API para no bloquear el renderizado inicial
-    const timer = setTimeout(() => {
-      fetchExchangeRates();
-    }, 1000); // Cargar después de 1 segundo
-    
-    // Actualizar cada 5 minutos
+    const timer = setTimeout(() => fetchExchangeRates(), 1000);
     const interval = setInterval(fetchExchangeRates, 300000);
-    
     return () => {
       clearTimeout(timer);
       clearInterval(interval);
     };
   }, []);
 
+  const getSelectedPlan = () => rustPlans.find((p) => p.id === selectedPlan) || rustPlans[0];
+
   const calculatePrice = () => {
     if (!rates) return "0.00";
-    const basePrice = planPrices[selectedPlan];
-    // Agregar margen del 3% sobre el tipo de cambio (como Wise)
+    const plan = getSelectedPlan();
     const margin = 1.03;
-    return (basePrice * rates[selectedCurrency] * margin).toFixed(2);
+    return (plan.price * rates[selectedCurrency] * margin).toFixed(2);
   };
 
   const formatNumber = (num: string | number) => {
@@ -150,18 +145,18 @@ const CurrencyCalculator: React.FC = () => {
   return (
     <section className="relative py-8 px-4 sm:px-6 lg:px-8">
       <div className="max-w-5xl mx-auto">
-        {/* Header - Minimalista */}
+        {/* Header */}
         <div className="text-center mb-8">
           <h2 className="text-3xl md:text-4xl font-bold mb-2">
-            <span className="text-white">Convertidor de </span>
+            <span className="text-white">Calculadora de </span>
             <span className="text-red-500">Precios</span>
           </h2>
           <p className="text-gray-400 text-sm">
-            Precios en tiempo real • 13 monedas disponibles
+            Precios en tiempo real • 9 monedas de LATAM
           </p>
         </div>
 
-        {/* Calculator Card - Más compacto */}
+        {/* Calculator Card */}
         <div className="bg-black/60 backdrop-blur-xl rounded-2xl p-5 md:p-6 border border-gray-800/50 shadow-xl">
           {loading ? (
             <div className="text-center py-4">
@@ -170,38 +165,37 @@ const CurrencyCalculator: React.FC = () => {
             </div>
           ) : (
             <>
-              {/* Plan Selection - Compacto */}
+              {/* Plan Selection */}
               <div className="mb-6">
                 <label className="block text-gray-300 font-medium mb-3 text-sm">
-                  Plan
+                  Seleccioná tu servidor
                 </label>
                 <div className="grid grid-cols-2 gap-3">
-                  <button
-                    onClick={() => setSelectedPlan("basic")}
-                    className={`p-3 rounded-lg border transition-all duration-200 ${
-                      selectedPlan === "basic"
-                        ? "border-red-500 bg-red-500/10 shadow-lg shadow-red-500/20"
-                        : "border-gray-700 bg-gray-900/30 hover:border-gray-600"
-                    }`}
-                  >
-                    <div className="text-white font-semibold text-sm mb-1">VIP Basic</div>
-                    <div className="text-red-400 text-xl font-bold">$5</div>
-                  </button>
-
-                  <button
-                    onClick={() => setSelectedPlan("supremo")}
-                    className={`p-3 rounded-lg border transition-all duration-200 relative ${
-                      selectedPlan === "supremo"
-                        ? "border-red-500 bg-red-500/10 shadow-lg shadow-red-500/20"
-                        : "border-gray-700 bg-gray-900/30 hover:border-gray-600"
-                    }`}
-                  >
-                    <div className="absolute -top-1.5 -right-1.5 bg-red-600 text-white text-xs px-1.5 py-0.5 rounded-md font-semibold">
-                      Popular
-                    </div>
-                    <div className="text-white font-semibold text-sm mb-1">Supremo</div>
-                    <div className="text-red-400 text-xl font-bold">$10</div>
-                  </button>
+                  {rustPlans.map((plan) => (
+                    <button
+                      key={plan.id}
+                      onClick={() => setSelectedPlan(plan.id)}
+                      className={`p-4 rounded-xl border transition-all duration-200 relative ${
+                        selectedPlan === plan.id
+                          ? "border-red-500 bg-red-500/10 shadow-lg shadow-red-500/20"
+                          : "border-gray-700 bg-gray-900/30 hover:border-gray-600"
+                      }`}
+                    >
+                      {plan.popular && (
+                        <div className="absolute -top-1.5 -right-1.5 bg-red-600 text-white text-xs px-1.5 py-0.5 rounded-md font-semibold">
+                          Popular
+                        </div>
+                      )}
+                      <div className="flex items-center gap-2 mb-2">
+                        <span className={selectedPlan === plan.id ? "text-red-400" : "text-gray-400"}>
+                          {plan.icon}
+                        </span>
+                        <span className="text-white font-semibold text-sm">{plan.name}</span>
+                      </div>
+                      <div className="text-gray-400 text-xs mb-2">{plan.version}</div>
+                      <div className="text-red-400 text-xl font-bold">${plan.price}</div>
+                    </button>
+                  ))}
                 </div>
               </div>
 
@@ -210,22 +204,24 @@ const CurrencyCalculator: React.FC = () => {
                 <label className="block text-white font-semibold mb-3 text-base">
                   Selecciona tu moneda
                 </label>
-                <div className="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-2">
+                <div className="grid grid-cols-3 md:grid-cols-5 gap-2">
                   {(Object.keys(rates!) as Array<keyof ExchangeRates>).map((currency) => (
                     <button
                       key={currency}
                       onClick={() => setSelectedCurrency(currency)}
-                      className={`group relative p-2.5 rounded-lg border transition-all duration-200 ${
+                      className={`group relative p-3 rounded-xl border transition-all duration-200 ${
                         selectedCurrency === currency
                           ? "border-red-500 bg-red-500/10"
                           : "border-gray-700/50 bg-gray-900/20 hover:border-gray-600 hover:bg-gray-900/40"
                       }`}
                       title={currencyNames[currency]}
                     >
-                      <div className="text-lg mb-0.5">{currencyFlags[currency]}</div>
-                      <div className={`text-xs font-medium ${
-                        selectedCurrency === currency ? "text-red-400" : "text-gray-300"
-                      }`}>
+                      <div className="text-lg mb-1">{currencyFlags[currency]}</div>
+                      <div
+                        className={`text-xs font-medium ${
+                          selectedCurrency === currency ? "text-red-400" : "text-gray-300"
+                        }`}
+                      >
                         {currency}
                       </div>
                     </button>
@@ -233,12 +229,14 @@ const CurrencyCalculator: React.FC = () => {
                 </div>
               </div>
 
-              {/* Result - Minimalista */}
+              {/* Result */}
               <div className="bg-gradient-to-br from-red-950/30 to-black/30 rounded-xl p-6 border border-red-900/30 mb-5">
                 <div className="flex items-center justify-between mb-3">
-                  <span className="text-gray-400 text-sm font-medium">Precio final</span>
-                  {selectedCurrency !== "USD" && selectedCurrency !== "USD_EC" && (
-                    <span className="text-gray-500 text-xs">≈ ${planPrices[selectedPlan].toFixed(2)} USD</span>
+                  <span className="text-gray-400 text-sm font-medium">
+                    {getSelectedPlan().name} ({getSelectedPlan().version})
+                  </span>
+                  {selectedCurrency !== "USD" && (
+                    <span className="text-gray-500 text-xs">≈ ${getSelectedPlan().price.toFixed(2)} USD</span>
                   )}
                 </div>
                 <div className="flex items-baseline space-x-2">
@@ -246,13 +244,9 @@ const CurrencyCalculator: React.FC = () => {
                   <span className="text-4xl md:text-5xl font-bold text-white">
                     {formatNumber(calculatePrice())}
                   </span>
-                  <span className="text-xl text-gray-400 font-medium">
-                    {selectedCurrency}
-                  </span>
+                  <span className="text-xl text-gray-400 font-medium">{selectedCurrency}</span>
                 </div>
-                <div className="mt-2 text-gray-500 text-xs">
-                  por mes
-                </div>
+                <div className="mt-2 text-gray-500 text-xs">por mes</div>
               </div>
 
               {/* Info & Actions */}
@@ -281,23 +275,21 @@ const CurrencyCalculator: React.FC = () => {
 
                 {/* CTA Button */}
                 <a
-                  href={`https://wa.link/6wker8?text=Hola!%20Quiero%20comprar%20el%20${
-                    selectedPlan === "basic" ? "Plan%20VIP%20Basic" : "Plan%20Supremo"
-                  }%20(${formatNumber(calculatePrice())}%20${selectedCurrency})`}
+                  href="https://discord.gg/54zHAYmtzp"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="block w-full text-center py-4 bg-gradient-to-r from-red-600 to-red-800 hover:from-red-700 hover:to-red-900 text-white font-bold rounded-xl transition-all duration-300 transform hover:scale-105 shadow-xl hover:shadow-2xl"
                 >
                   <span className="flex items-center justify-center space-x-2">
                     <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z" />
+                      <path d="M20.317 4.3698a19.7913 19.7913 0 00-4.8851-1.5152.0741.0741 0 00-.0785.0371c-.211.3753-.4447.8648-.6083 1.2495-1.8447-.2762-3.68-.2762-5.4868 0-.1636-.3933-.4058-.8742-.6177-1.2495a.077.077 0 00-.0785-.037 19.7363 19.7363 0 00-4.8852 1.515.0699.0699 0 00-.0321.0277C.5334 9.0458-.319 13.5799.0992 18.0578a.0824.0824 0 00.0312.0561c2.0528 1.5076 4.0413 2.4228 5.9929 3.0294a.0777.0777 0 00.0842-.0276c.4616-.6304.8731-1.2952 1.226-1.9942a.076.076 0 00-.0416-.1057c-.6528-.2476-1.2743-.5495-1.8722-.8923a.077.077 0 01-.0076-.1277c.1258-.0943.2517-.1923.3718-.2914a.0743.0743 0 01.0776-.0105c3.9278 1.7933 8.18 1.7933 12.0614 0a.0739.0739 0 01.0785.0095c.1202.099.246.1981.3728.2924a.077.077 0 01-.0066.1276 12.2986 12.2986 0 01-1.873.8914.0766.0766 0 00-.0407.1067c.3604.698.7719 1.3628 1.225 1.9932a.076.076 0 00.0842.0286c1.961-.6067 3.9495-1.5219 6.0023-3.0294a.077.077 0 00.0313-.0552c.5004-5.177-.8382-9.6739-3.5485-13.6604a.061.061 0 00-.0312-.0286z" />
                     </svg>
-                    <span>Comprar por WhatsApp</span>
+                    <span>Consultar por Discord</span>
                   </span>
                 </a>
 
                 <p className="text-center text-gray-400 text-sm">
-                  💬 Contáctanos por WhatsApp para coordinar el pago
+                  Contactanos por Discord para coordinar el pago
                 </p>
               </div>
             </>
@@ -307,7 +299,7 @@ const CurrencyCalculator: React.FC = () => {
         {/* Disclaimer */}
         <div className="mt-6 text-center">
           <p className="text-gray-500 text-xs">
-            * Las tasas de cambio se actualizan automáticamente cada 5 minutos. Los precios finales pueden variar ligeramente.
+            * Las tasas de cambio se actualizan cada 5 minutos. El precio final incluye un margen del 3% para cubrir comisiones de cambio.
           </p>
         </div>
       </div>

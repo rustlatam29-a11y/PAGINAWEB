@@ -72,7 +72,7 @@ const Hero: React.FC = () => {
                 <div className="hero-title-wrapper">
                   <h1 className="hero-title">
                     <span className="title-line">RUST</span>
-                    <span className="title-line gradient-text">GRATIS</span>
+                    <span className="title-line gradient-text">LATAM</span>
                   </h1>
                   <div className="title-underline"></div>
                 </div>
@@ -80,20 +80,20 @@ const Hero: React.FC = () => {
                 {/* Subtítulo - RUST */}
                 <div className="hero-subtitle">
                   <p className="subtitle-text">
-                    Servidor Pirata v2275 • Gratis BR•ES
+                    Servidor echo por ParaguayRAIDER • LATAM
                   </p>
-                  <p className="subtitle-cta">• Jogue Agora!</p>
+                  <p className="subtitle-cta">• ¡Únete Ahora!</p>
                 </div>
                 
                 {/* Botones de Acción - RUST */}
                 <div className="hero-actions">
-                  <a href="https://gofile.io/d/GJTCzW" target="_blank" rel="noopener noreferrer" className="btn-primary">
+                  <a href="https://discord.gg/54zHAYmtzp" target="_blank" rel="noopener noreferrer" className="btn-primary">
                     <span className="btn-icon">
-                      <Download className="w-6 h-6" />
+                      <Server className="w-6 h-6" />
                     </span>
                     <span className="btn-text">
-                      <span className="btn-label">DESCARGAR</span>
-                      <span className="btn-subtitle">Baixar Agora</span>
+                      <span className="btn-label">SERVIDOR</span>
+                      <span className="btn-subtitle">Echo por ParaguayRAIDER</span>
                     </span>
                     <span className="btn-arrow">→</span>
                   </a>
