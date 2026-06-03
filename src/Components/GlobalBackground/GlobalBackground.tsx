@@ -22,16 +22,10 @@ const GlobalBackground: React.FC<{ children: React.ReactNode }> = ({ children })
           z-index: 0;
           pointer-events: none;
           background-image: 
-            linear-gradient(rgba(220, 38, 38, 0.08) 1px, transparent 1px),
-            linear-gradient(90deg, rgba(220, 38, 38, 0.08) 1px, transparent 1px);
-          background-size: 50px 50px;
-          animation: gridScroll 20s linear infinite;
-          opacity: 0.3;
-        }
-        
-        @keyframes gridScroll {
-          0% { transform: translate(0, 0); }
-          100% { transform: translate(50px, 50px); }
+            linear-gradient(rgba(220, 38, 38, 0.04) 1px, transparent 1px),
+            linear-gradient(90deg, rgba(220, 38, 38, 0.04) 1px, transparent 1px);
+          background-size: 60px 60px;
+          opacity: 0.5;
         }
         
         .global-background::after {
@@ -43,13 +37,7 @@ const GlobalBackground: React.FC<{ children: React.ReactNode }> = ({ children })
           height: 100%;
           z-index: 0;
           pointer-events: none;
-          background: radial-gradient(circle at 30% 50%, rgba(220, 38, 38, 0.15) 0%, transparent 50%);
-          animation: gradientPulse 4s ease-in-out infinite;
-        }
-        
-        @keyframes gradientPulse {
-          0%, 100% { opacity: 0.5; }
-          50% { opacity: 1; }
+          background: radial-gradient(ellipse at 50% 0%, rgba(220, 38, 38, 0.08) 0%, transparent 60%);
         }
         
         .global-background > * {

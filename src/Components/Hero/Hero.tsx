@@ -1,110 +1,77 @@
-import React, { useState } from "react";
-import { Download, Play, Server } from "lucide-react";
-
-type GameType = "rust" | "dayz";
+import React from "react";
+import { ArrowRight, MessageCircle } from "lucide-react";
 
 const Hero: React.FC = () => {
-  const [selectedGame, setSelectedGame] = useState<GameType>("rust");
-
   return (
-    <section className="min-h-screen flex items-center justify-center px-4 pt-20 pb-12">
-      <div className="max-w-4xl mx-auto text-center">
-        
-        {/* Tabs */}
-        <div className="inline-flex gap-2 p-1 bg-white/5 border border-white/10 rounded-xl mb-12">
-          <button 
-            className={`px-6 py-2.5 rounded-lg text-sm font-bold tracking-wide transition-all ${
-              selectedGame === "rust" 
-                ? "bg-white/10 text-white" 
-                : "text-gray-500 hover:text-gray-300"
-            }`}
-            onClick={() => setSelectedGame("rust")}
-          >
-            RUST
-          </button>
-          <button 
-            className={`px-6 py-2.5 rounded-lg text-sm font-bold tracking-wide transition-all ${
-              selectedGame === "dayz" 
-                ? "bg-white/10 text-white" 
-                : "text-gray-500 hover:text-gray-300"
-            }`}
-            onClick={() => setSelectedGame("dayz")}
-          >
-            DAYZ
-          </button>
+    <section className="relative min-h-[90vh] flex items-center justify-center px-4 pt-24 pb-16 overflow-hidden">
+      {/* Background glow */}
+      <div className="absolute inset-0 pointer-events-none">
+        <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-red-500/10 rounded-full blur-[120px]" />
+      </div>
+
+      <div className="relative max-w-5xl mx-auto text-center">
+        {/* Badge */}
+        <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-white/10 bg-white/5 mb-8">
+          <div className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
+          <span className="text-gray-400 text-sm font-medium">Servidores activos 24/7</span>
         </div>
 
-        {/* Rust Content */}
-        {selectedGame === "rust" && (
-          <div className="space-y-8">
-            <div>
-              <h1 className="text-7xl sm:text-8xl lg:text-9xl font-black text-white leading-none tracking-tighter">
-                RUST
-              </h1>
-              <h1 className="text-5xl sm:text-6xl lg:text-7xl font-black text-red-500 leading-none tracking-tighter -mt-2">
-                LATAM
-              </h1>
-            </div>
-            
-            <p className="text-gray-400 text-lg">
-              Servidor echo por ParaguayRAIDER • LATAM
-            </p>
-            
-            {/* Buttons */}
-            <div className="flex items-center justify-center gap-4">
-              <a href="https://api.whatsapp.com/send?phone=595981144534" target="_blank" rel="noopener noreferrer" 
-                className="flex items-center gap-3 bg-green-600 hover:bg-green-700 text-white font-bold px-8 py-4 rounded-xl transition-all">
-                <Server className="w-5 h-5" />
-                <div className="text-left">
-                  <div className="text-sm font-bold">SERVIDOR</div>
-                  <div className="text-xs opacity-80">Echo por ParaguayRAIDER</div>
-                </div>
-              </a>
-              
-              <a href="https://www.youtube.com/watch?v=ZNTfR90nPtg" target="_blank" rel="noopener noreferrer"
-                className="flex items-center gap-2 bg-white/5 border border-white/10 text-white font-bold px-6 py-4 rounded-xl hover:bg-white/10 transition-all">
-                <Play className="w-5 h-5" fill="currentColor" />
-                <span>Ver Tráiler</span>
-              </a>
-            </div>
-          </div>
-        )}
+        {/* Main heading */}
+        <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black text-white leading-[0.9] tracking-tight mb-6">
+          VENDEmos
+          <br />
+          <span className="text-red-500">SERVIDORES</span>
+          <br />
+          <span className="text-gray-500 text-3xl sm:text-4xl md:text-5xl font-bold tracking-normal">
+            de Rust Pirata
+          </span>
+        </h1>
 
-        {/* DayZ Content */}
-        {selectedGame === "dayz" && (
-          <div className="space-y-8">
-            <div>
-              <h1 className="text-7xl sm:text-8xl lg:text-9xl font-black text-white leading-none tracking-tighter">
-                DAYZ
-              </h1>
-              <h1 className="text-5xl sm:text-6xl lg:text-7xl font-black text-red-500 leading-none tracking-tighter -mt-2">
-                GRATIS
-              </h1>
-            </div>
-            
-            <p className="text-gray-400 text-lg">
-              Servidor DayZ • LATAM • 24/7
-            </p>
-            
-            {/* Buttons */}
-            <div className="flex items-center justify-center gap-4">
-              <a href="https://api.whatsapp.com/send?phone=595981144534" target="_blank" rel="noopener noreferrer"
-                className="flex items-center gap-3 bg-green-600 hover:bg-green-700 text-white font-bold px-8 py-4 rounded-xl transition-all">
-                <Server className="w-5 h-5" />
-                <div className="text-left">
-                  <div className="text-sm font-bold">UNIRSE AL SERVIDOR</div>
-                  <div className="text-xs opacity-80">Discord DayZ</div>
-                </div>
-              </a>
-              
-              <a href="https://gofile.io/d/ILwOvH" target="_blank" rel="noopener noreferrer"
-                className="flex items-center gap-2 bg-white/5 border border-white/10 text-white font-bold px-6 py-4 rounded-xl hover:bg-white/10 transition-all">
-                <Download className="w-5 h-5" />
-                <span>Descargar DayZ</span>
-              </a>
-            </div>
+        {/* Subtitle */}
+        <p className="text-gray-400 text-lg sm:text-xl max-w-2xl mx-auto mb-10 leading-relaxed">
+          Licencias, configuración, plugins y soporte para{" "}
+          <span className="text-white font-semibold">Rust 2275</span> y{" "}
+          <span className="text-white font-semibold">Rust 2388</span>.
+          <br className="hidden sm:block" />
+          Todo lo que necesitás para tener tu propio servidor.
+        </p>
+
+        {/* CTAs */}
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+          <a
+            href="https://api.whatsapp.com/send?phone=595981144534"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group flex items-center gap-3 bg-red-600 hover:bg-red-700 text-white font-bold px-8 py-4 rounded-xl transition-all duration-300 hover:shadow-lg hover:shadow-red-500/25"
+          >
+            <MessageCircle className="w-5 h-5" />
+            <span>Consultar por WhatsApp</span>
+            <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
+          </a>
+
+          <a
+            href="#planes"
+            className="flex items-center gap-2 text-gray-400 hover:text-white font-medium px-6 py-4 rounded-xl border border-white/10 hover:border-white/20 transition-all"
+          >
+            Ver planes y precios
+          </a>
+        </div>
+
+        {/* Trust indicators */}
+        <div className="mt-16 grid grid-cols-3 gap-8 max-w-lg mx-auto">
+          <div>
+            <div className="text-2xl sm:text-3xl font-black text-white">30K+</div>
+            <div className="text-gray-500 text-xs sm:text-sm">Plugins</div>
           </div>
-        )}
+          <div>
+            <div className="text-2xl sm:text-3xl font-black text-white">24/7</div>
+            <div className="text-gray-500 text-xs sm:text-sm">Soporte</div>
+          </div>
+          <div>
+            <div className="text-2xl sm:text-3xl font-black text-white">8+</div>
+            <div className="text-gray-500 text-xs sm:text-sm">Años</div>
+          </div>
+        </div>
       </div>
     </section>
   );
