@@ -45,15 +45,14 @@ const Testimonials: React.FC = () => {
   const { elementRef, isVisible } = useScrollAnimation();
 
   return (
-    <section ref={elementRef} className="py-20 px-4" id="testimonios" style={{ background: "linear-gradient(to bottom, #0a1225, #070d1b)" }}>
+    <section ref={elementRef} className="py-20 px-4 bg-[#0a0a0a]" id="testimonios">
       <div className="max-w-6xl mx-auto">
-        {/* Header */}
         <div
-          className={`text-center mb-16 transition-all duration-700 ${
-            isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+          className={`text-center mb-16 transition-all duration-500 ${
+            isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
           }`}
         >
-          <span className="text-orange-500 text-sm font-bold tracking-widest uppercase">
+          <span className="text-red-500 text-sm font-bold tracking-widest uppercase">
             Testimonios
           </span>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-white mt-3 mb-4">
@@ -64,29 +63,25 @@ const Testimonials: React.FC = () => {
           </p>
         </div>
 
-        {/* Testimonials grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
           {testimonials.map((testimonial, index) => (
             <div
               key={index}
-              className={`p-6 rounded-2xl border border-white/5 bg-[#0a1225] hover:border-orange-500/20 transition-all duration-500 ${
-                isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+              className={`p-6 rounded-2xl border border-white/5 bg-white/[0.02] hover:border-red-500/20 transition-all duration-300 ${
+                isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
               }`}
-              style={{ transitionDelay: `${index * 100 + 200}ms` }}
+              style={{ transitionDelay: `${index * 50}ms` }}
             >
-              {/* Stars */}
               <div className="flex gap-1 mb-4">
                 {Array.from({ length: testimonial.rating }).map((_, i) => (
-                  <Star key={i} className="w-4 h-4 text-orange-500" fill="currentColor" />
+                  <Star key={i} className="w-4 h-4 text-red-500" fill="currentColor" />
                 ))}
               </div>
 
-              {/* Text */}
               <p className="text-gray-300 text-sm leading-relaxed mb-5">
                 "{testimonial.text}"
               </p>
 
-              {/* Author */}
               <div className="flex items-center gap-3">
                 <div className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center">
                   <span className="text-white font-bold text-sm">

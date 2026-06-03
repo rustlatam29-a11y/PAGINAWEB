@@ -5,17 +5,15 @@ const Footer: React.FC = () => {
   const year = new Date().getFullYear();
 
   return (
-    <footer className="relative" style={{ background: "#1e293b" }}>
+    <footer className="bg-[#111] border-t border-white/5">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="flex flex-col items-center">
-          {/* Logo */}
           <div className="mb-6">
             <span className="text-white font-black text-2xl">
-              Paraguay<span className="text-orange-500">RAIDER</span>
+              Paraguay<span className="text-red-500">RAIDER</span>
             </span>
           </div>
 
-          {/* Links */}
           <div className="flex items-center gap-6 mb-6 text-sm text-gray-400">
             <Link to="/terms" className="hover:text-white transition-colors">
               Términos
@@ -37,7 +35,6 @@ const Footer: React.FC = () => {
             <span className="text-gray-400">Discord: paraguayservers</span>
           </div>
 
-          {/* Copyright */}
           <p className="text-gray-500 text-sm">
             &copy; {year} ParaguayRAIDER. Todos los derechos reservados.
           </p>

@@ -42,15 +42,14 @@ const FAQ: React.FC = () => {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   return (
-    <section ref={elementRef} className="py-20 px-4" id="faq" style={{ background: "linear-gradient(to bottom, #070d1b, #0a1225)" }}>
+    <section ref={elementRef} className="py-20 px-4 bg-[#0a0a0a]" id="faq">
       <div className="max-w-3xl mx-auto">
-        {/* Header */}
         <div
-          className={`text-center mb-16 transition-all duration-700 ${
-            isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+          className={`text-center mb-16 transition-all duration-500 ${
+            isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
           }`}
         >
-          <span className="text-orange-500 text-sm font-bold tracking-widest uppercase">
+          <span className="text-red-500 text-sm font-bold tracking-widest uppercase">
             Preguntas frecuentes
           </span>
           <h2 className="text-3xl sm:text-4xl font-black text-white mt-3 mb-4">
@@ -58,15 +57,14 @@ const FAQ: React.FC = () => {
           </h2>
         </div>
 
-        {/* FAQ items */}
         <div className="space-y-3">
           {faqs.map((faq, index) => (
             <div
               key={index}
-              className={`border border-white/5 rounded-xl overflow-hidden transition-all duration-500 ${
-                openIndex === index ? "bg-[#0a1225] border-orange-500/20" : "bg-[#0a1225]/50"
-              } ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`}
-              style={{ transitionDelay: `${index * 80 + 200}ms` }}
+              className={`border border-white/5 rounded-xl overflow-hidden transition-all duration-300 ${
+                openIndex === index ? "bg-white/[0.03] border-red-500/20" : "bg-white/[0.01]"
+              } ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-2"}`}
+              style={{ transitionDelay: `${index * 40}ms` }}
             >
               <button
                 onClick={() => setOpenIndex(openIndex === index ? null : index)}
@@ -74,13 +72,13 @@ const FAQ: React.FC = () => {
               >
                 <span className="text-white font-semibold text-sm pr-4">{faq.question}</span>
                 <ChevronDown
-                  className={`w-5 h-5 text-gray-500 flex-shrink-0 transition-transform duration-300 ${
+                  className={`w-5 h-5 text-gray-500 flex-shrink-0 transition-transform duration-200 ${
                     openIndex === index ? "rotate-180" : ""
                   }`}
                 />
               </button>
               <div
-                className={`overflow-hidden transition-all duration-300 ${
+                className={`overflow-hidden transition-all duration-200 ${
                   openIndex === index ? "max-h-40 opacity-100" : "max-h-0 opacity-0"
                 }`}
               >

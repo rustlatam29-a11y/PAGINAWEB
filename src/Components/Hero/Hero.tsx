@@ -14,7 +14,7 @@ const Hero: React.FC = () => {
             e.currentTarget.style.display = "none";
           }}
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-[#070d1b]/80 via-[#070d1b]/60 to-[#070d1b]" />
+        <div className="absolute inset-0 bg-gradient-to-b from-[#0a0a0a]/80 via-[#0a0a0a]/60 to-[#0a0a0a]" />
       </div>
 
       {/* Content */}
@@ -29,9 +29,7 @@ const Hero: React.FC = () => {
         <h1 className="text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-black text-white leading-[0.85] tracking-tight mb-6">
           RUST
           <br />
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-red-600">
-            PIRATA
-          </span>
+          <span className="text-red-500">PIRATA</span>
         </h1>
 
         {/* Subtitle */}
@@ -47,7 +45,7 @@ const Hero: React.FC = () => {
           href="https://api.whatsapp.com/send?phone=595981144534"
           target="_blank"
           rel="noopener noreferrer"
-          className="group inline-flex items-center gap-3 bg-gradient-to-r from-orange-500 to-red-600 hover:from-orange-600 hover:to-red-700 text-white font-bold px-8 py-4 rounded-xl text-lg transition-all duration-300 hover:shadow-lg hover:shadow-orange-500/25"
+          className="group inline-flex items-center gap-3 bg-red-600 hover:bg-red-700 text-white font-bold px-8 py-4 rounded-xl text-lg transition-all duration-300"
         >
           <MessageCircle className="w-5 h-5" />
           <span>CONSULTAR AHORA</span>
@@ -56,7 +54,7 @@ const Hero: React.FC = () => {
       </div>
 
       {/* Bottom gradient fade */}
-      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-[#070d1b] to-transparent" />
+      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-[#0a0a0a] to-transparent" />
     </section>
   );
 };

@@ -22,7 +22,7 @@ const Header: React.FC = () => {
     <header
       className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
         scrolled
-          ? "bg-[#070d1b]/95 backdrop-blur-md border-b border-white/5"
+          ? "bg-[#0a0a0a]/95 backdrop-blur-md border-b border-white/5"
           : "bg-transparent"
       }`}
     >
@@ -39,7 +39,7 @@ const Header: React.FC = () => {
               }}
             />
             <span className="text-white font-black text-xl tracking-tight">
-              Paraguay<span className="text-orange-500">RAIDER</span>
+              Paraguay<span className="text-red-500">RAIDER</span>
             </span>
           </a>
 
@@ -49,7 +49,7 @@ const Header: React.FC = () => {
               <a
                 key={link.href}
                 href={link.href}
-                className="text-gray-300 hover:text-orange-500 text-sm font-bold tracking-wide transition-colors border-b-2 border-transparent hover:border-orange-500 pb-1"
+                className="text-gray-300 hover:text-red-500 text-sm font-bold tracking-wide transition-colors border-b-2 border-transparent hover:border-red-500 pb-1"
               >
                 {link.label}
               </a>
@@ -58,7 +58,7 @@ const Header: React.FC = () => {
               href="https://api.whatsapp.com/send?phone=595981144534"
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-gradient-to-r from-orange-500 to-red-600 hover:from-orange-600 hover:to-red-700 text-white text-sm font-bold px-5 py-2.5 rounded-lg transition-all"
+              className="bg-red-600 hover:bg-red-700 text-white text-sm font-bold px-5 py-2.5 rounded-lg transition-all"
             >
               WhatsApp
             </a>
@@ -81,7 +81,7 @@ const Header: React.FC = () => {
                 key={link.href}
                 href={link.href}
                 onClick={() => setMobileOpen(false)}
-                className="block text-gray-300 hover:text-orange-500 text-sm font-bold py-2 transition-colors"
+                className="block text-gray-300 hover:text-red-500 text-sm font-bold py-2 transition-colors"
               >
                 {link.label}
               </a>
@@ -90,7 +90,7 @@ const Header: React.FC = () => {
               href="https://api.whatsapp.com/send?phone=595981144534"
               target="_blank"
               rel="noopener noreferrer"
-              className="block bg-gradient-to-r from-orange-500 to-red-600 text-white text-sm font-bold px-5 py-2.5 rounded-lg text-center"
+              className="block bg-red-600 text-white text-sm font-bold px-5 py-2.5 rounded-lg text-center"
             >
               WhatsApp
             </a>

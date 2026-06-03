@@ -11,7 +11,7 @@ html {
 }
 
 body {
-  background: #070d1b;
+  background: #0a0a0a;
 }
 
 /* ===== SCROLLBAR ===== */
@@ -20,20 +20,20 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-  background: #070d1b;
+  background: #0a0a0a;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #ff6b00;
+  background: #dc2626;
   border-radius: 3px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #e55d00;
+  background: #b91c1c;
 }
 
 /* ===== SELECTION ===== */
 ::selection {
-  background: rgba(255, 107, 0, 0.3);
+  background: rgba(220, 38, 38, 0.3);
   color: white;
 }

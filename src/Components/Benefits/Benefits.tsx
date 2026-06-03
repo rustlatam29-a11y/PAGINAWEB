@@ -33,16 +33,15 @@ const Benefits: React.FC = () => {
   const { elementRef, isVisible } = useScrollAnimation();
 
   return (
-    <section ref={elementRef} className="py-20 px-4" style={{ background: "linear-gradient(to bottom, #070d1b, #0a1225)" }}>
+    <section ref={elementRef} className="py-20 px-4 bg-[#0a0a0a]">
       <div className="max-w-6xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-          {/* Left: Content */}
           <div
-            className={`transition-all duration-700 ${
-              isVisible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-8"
+            className={`transition-all duration-500 ${
+              isVisible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-4"
             }`}
           >
-            <span className="text-orange-500 text-sm font-bold tracking-widest uppercase">
+            <span className="text-red-500 text-sm font-bold tracking-widest uppercase">
               Por qué elegirme
             </span>
             <h2 className="text-3xl sm:text-4xl font-black text-white mt-3 mb-6">
@@ -59,13 +58,13 @@ const Benefits: React.FC = () => {
               {benefits.map((benefit, index) => (
                 <div
                   key={index}
-                  className={`flex items-start gap-3 transition-all duration-500 ${
-                    isVisible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-4"
+                  className={`flex items-start gap-3 transition-all duration-300 ${
+                    isVisible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-2"
                   }`}
-                  style={{ transitionDelay: `${index * 100 + 300}ms` }}
+                  style={{ transitionDelay: `${index * 50}ms` }}
                 >
-                  <div className="w-5 h-5 rounded-full bg-orange-500/20 flex items-center justify-center flex-shrink-0 mt-0.5">
-                    <Check className="w-3 h-3 text-orange-500" />
+                  <div className="w-5 h-5 rounded-full bg-red-500/20 flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <Check className="w-3 h-3 text-red-500" />
                   </div>
                   <div>
                     <h4 className="text-white font-semibold text-sm">{benefit.title}</h4>
@@ -76,13 +75,12 @@ const Benefits: React.FC = () => {
             </div>
           </div>
 
-          {/* Right: Stats card */}
           <div
-            className={`transition-all duration-700 delay-300 ${
-              isVisible ? "opacity-100 translate-x-0" : "opacity-0 translate-x-8"
+            className={`transition-all duration-500 delay-200 ${
+              isVisible ? "opacity-100 translate-x-0" : "opacity-0 translate-x-4"
             }`}
           >
-            <div className="bg-[#0a1225] border border-white/5 rounded-3xl p-8 sm:p-10">
+            <div className="bg-white/[0.02] border border-white/5 rounded-3xl p-8 sm:p-10">
               <div className="text-center mb-8">
                 <div className="w-20 h-20 rounded-full overflow-hidden border-4 border-white/10 mx-auto mb-4">
                   <img
@@ -98,19 +96,19 @@ const Benefits: React.FC = () => {
 
               <div className="grid grid-cols-2 gap-4 mb-6">
                 <div className="text-center p-4 rounded-xl bg-white/[0.03]">
-                  <div className="text-2xl font-black text-orange-500">8+</div>
+                  <div className="text-2xl font-black text-red-500">8+</div>
                   <div className="text-gray-500 text-xs">Años en Rust</div>
                 </div>
                 <div className="text-center p-4 rounded-xl bg-white/[0.03]">
-                  <div className="text-2xl font-black text-orange-500">10K+</div>
+                  <div className="text-2xl font-black text-red-500">10K+</div>
                   <div className="text-gray-500 text-xs">Horas jugando</div>
                 </div>
                 <div className="text-center p-4 rounded-xl bg-white/[0.03]">
-                  <div className="text-2xl font-black text-orange-500">200+</div>
+                  <div className="text-2xl font-black text-red-500">200+</div>
                   <div className="text-gray-500 text-xs">Servidores armados</div>
                 </div>
                 <div className="text-center p-4 rounded-xl bg-white/[0.03]">
-                  <div className="text-2xl font-black text-orange-500">500+</div>
+                  <div className="text-2xl font-black text-red-500">500+</div>
                   <div className="text-gray-500 text-xs">Clientes satisfechos</div>
                 </div>
               </div>
