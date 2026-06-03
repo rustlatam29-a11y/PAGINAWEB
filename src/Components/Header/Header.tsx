@@ -33,7 +33,7 @@ const Header: React.FC<HeaderProps> = ({
             />
             <div>
               <span className="text-white font-black text-lg tracking-tight">
-                LATAM<span className="text-red-500">RUST</span>
+                Paraguay<span className="text-red-500">RAIDER</span>
               </span>
               <p className="text-gray-500 text-[10px] tracking-widest uppercase -mt-0.5">Ventas de Servidores y Plugins de Rust Pirata</p>
             </div>
