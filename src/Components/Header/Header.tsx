@@ -203,7 +203,7 @@ const Header: React.FC<HeaderProps> = ({
                 >
                   <div className="flex items-center space-x-2 bg-black/60 px-3 py-1 rounded border border-red-900/30 backdrop-blur-sm">
                     <p className="text-gray-400 text-xs md:text-sm font-semibold tracking-[0.2em] uppercase">
-                      Free Rust Server
+                      Servidores Piratas
                     </p>
                     <div className="w-1.5 h-1.5 bg-red-600 rounded-full animate-pulse shadow-[0_0_8px_rgba(220,38,38,0.6)]" />
                   </div>

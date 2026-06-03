@@ -1,5 +1,5 @@
 import React from 'react';
-import { Download, Users, Server, Shield } from 'lucide-react';
+import { Server, Code, ShoppingCart, Wrench } from 'lucide-react';
 
 const SEOContent: React.FC = () => {
   return (
@@ -12,43 +12,46 @@ const SEOContent: React.FC = () => {
       <section className="relative py-12 lg:py-16">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           
-          {/* Simple Benefits Grid */}
+          {/* Benefits Grid */}
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
             <div className="bg-gray-800/50 backdrop-blur-lg rounded-xl p-6 border border-red-900/30 card-hover text-center">
-              <Download className="w-12 h-12 text-red-500 mb-4 mx-auto icon-bounce" />
-              <h3 className="text-xl font-bold text-white mb-2">100% Gratis</h3>
-              <p className="text-gray-400">Descarga y juega sin límites</p>
-            </div>
-            
-            <div className="bg-gray-800/50 backdrop-blur-lg rounded-xl p-6 border border-red-900/30 card-hover text-center">
-              <Users className="w-12 h-12 text-red-500 mb-4 mx-auto icon-bounce" />
-              <h3 className="text-xl font-bold text-white mb-2">+10K Jugadores</h3>
-              <p className="text-gray-400">Comunidad activa BR-LATAM</p>
-            </div>
-            
-            <div className="bg-gray-800/50 backdrop-blur-lg rounded-xl p-6 border border-red-900/30 card-hover text-center">
               <Server className="w-12 h-12 text-red-500 mb-4 mx-auto icon-bounce" />
-              <h3 className="text-xl font-bold text-white mb-2">Ping Bajo</h3>
-              <p className="text-gray-400">Servidores premium 24/7</p>
+              <h3 className="text-xl font-bold text-white mb-2">Creación de Servidores</h3>
+              <p className="text-gray-400">Rust 2275 y 2388</p>
             </div>
             
             <div className="bg-gray-800/50 backdrop-blur-lg rounded-xl p-6 border border-red-900/30 card-hover text-center">
-              <Shield className="w-12 h-12 text-red-500 mb-4 mx-auto icon-bounce" />
-              <h3 className="text-xl font-bold text-white mb-2">Anti-Cheat</h3>
-              <p className="text-gray-400">Moderación profesional</p>
+              <Code className="w-12 h-12 text-red-500 mb-4 mx-auto icon-bounce" />
+              <h3 className="text-xl font-bold text-white mb-2">Desarrollo de Plugins</h3>
+              <p className="text-gray-400">Personalizados a medida</p>
+            </div>
+            
+            <div className="bg-gray-800/50 backdrop-blur-lg rounded-xl p-6 border border-red-900/30 card-hover text-center">
+              <ShoppingCart className="w-12 h-12 text-red-500 mb-4 mx-auto icon-bounce" />
+              <h3 className="text-xl font-bold text-white mb-2">+30K Plugins</h3>
+              <p className="text-gray-400">Para todas las versiones</p>
+            </div>
+            
+            <div className="bg-gray-800/50 backdrop-blur-lg rounded-xl p-6 border border-red-900/30 card-hover text-center">
+              <Wrench className="w-12 h-12 text-red-500 mb-4 mx-auto icon-bounce" />
+              <h3 className="text-xl font-bold text-white mb-2">Soporte 24/7</h3>
+              <p className="text-gray-400">Instalación y configuración</p>
             </div>
           </div>
 
-          {/* Simple CTA */}
+          {/* CTA */}
           <div className="text-center">
             <a
-              href="https://discord.gg/dT8u5b3jga"
+              href="https://api.whatsapp.com/send?phone=595981144534"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-block bg-gradient-to-r from-red-600 to-red-700 hover:from-red-700 hover:to-red-800 text-white font-black text-xl px-12 py-6 rounded-xl transform transition-all duration-300 hover:scale-105 pulse-glow shadow-2xl"
+              className="inline-block bg-gradient-to-r from-green-600 to-green-700 hover:from-green-700 hover:to-green-800 text-white font-black text-xl px-12 py-6 rounded-xl transform transition-all duration-300 hover:scale-105 pulse-glow shadow-2xl"
             >
-              Únete al Discord - Empieza a Jugar
+              Contactar Ahora
             </a>
+            <p className="text-gray-500 text-sm mt-4">
+              WhatsApp directo • Respuesta inmediata
+            </p>
           </div>
         </div>
         

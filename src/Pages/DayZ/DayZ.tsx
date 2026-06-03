@@ -163,7 +163,7 @@ const DayZ: React.FC = () => {
             Conéctate con otros jugadores, reporta bugs y mantente al día con actualizaciones
           </p>
           <a
-            href="https://discord.gg/M9ud76fnYu"
+            href="https://api.whatsapp.com/send?phone=595981144534"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-3 px-8 py-4 bg-purple-600 hover:bg-purple-700 rounded-xl font-bold transition-all duration-300 transform hover:scale-105 shadow-lg"

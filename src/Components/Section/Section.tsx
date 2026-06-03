@@ -1,52 +1,18 @@
-import React, { useState, useEffect, useRef, useCallback, useMemo } from "react";
-import {
-  Crown,
-  Shield,
-  Users,
-  Star,
-  Gamepad2,
-} from "lucide-react";
+import React, { useState, useEffect, useRef } from "react";
+import { Crown, Shield, Gamepad2, Code } from "lucide-react";
 
-interface AboutProps {
-  name?: string;
-}
-
-const About: React.FC<AboutProps> = () => {
+const Section: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);
-  const [activeCard, setActiveCard] = useState<number | null>(null);
-  const [isMobile, setIsMobile] = useState(false);
   const sectionRef = useRef<HTMLElement>(null);
-
-  // Detectar tipo de dispositivo
-  useEffect(() => {
-    const checkDeviceType = () => {
-      const width = window.innerWidth;
-      setIsMobile(width < 768);
-    };
-
-    checkDeviceType();
-    const handleResize = () => {
-      checkDeviceType();
-    };
-
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
-          // Delay mínimo para evitar parpadeo
-          requestAnimationFrame(() => {
-            setIsVisible(true);
-          });
+          setIsVisible(true);
         }
       },
-      {
-        threshold: isMobile ? 0.05 : 0.2,
-        rootMargin: isMobile ? "100px" : "50px",
-      }
+      { threshold: 0.1 }
     );
 
     if (sectionRef.current) {
@@ -54,489 +20,145 @@ const About: React.FC<AboutProps> = () => {
     }
 
     return () => observer.disconnect();
-  }, [isMobile]);
-
-  const titleText = useMemo(() => "FUNDADOR".split(""), []);
-
-  // Optimización de elementos flotantes - reducidos en móviles
-  const floatingElements = useMemo(() => {
-    const symbols = ["</", "/>", "{}", "[]", "()", "<>", "&&", "||", "==", "!="];
-    const count = isMobile ? 8 : 15; // Menos elementos en móviles
-    return Array.from({ length: count }, (_, i) => ({
-      id: i,
-      symbol: symbols[Math.floor(Math.random() * symbols.length)],
-      left: Math.random() * 100,
-      top: Math.random() * 100,
-      delay: Math.random() * 5,
-      duration: 8 + Math.random() * 4,
-    }));
-  }, [isMobile]);
+  }, []);
 
   return (
     <>
-      {/* Divider Line */}
       <div className="section-divider">
         <div className="divider-line"></div>
       </div>
       
       <section
         ref={sectionRef}
-        className="relative py-8 sm:py-10 lg:py-12 overflow-hidden"
+        className="relative py-12 sm:py-16 lg:py-20 overflow-hidden"
       >
-      {/* Animated Background - Optimizado */}
-      <div className="absolute inset-0">
-        {/* Matrix-style grid - Simplificado en móviles */}
-        <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width=\'80\' height=\'80\' viewBox=\'0 0 80 80\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cg fill=\'none\' fill-rule=\'evenodd\'%3E%3Cg fill=\'%23ffffff\' fill-opacity=\'0.02\'%3E%3Cpath d=\'M0 0h40v40H0zM40 40h40v40H40z\'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-50"></div>
+        {/* Simple background */}
+        <div className="absolute inset-0 bg-gradient-to-b from-black via-gray-950 to-black"></div>
 
-        {/* Floating code symbols - Optimizados con transición suave */}
-        {isVisible && floatingElements.map((element) => (
-          <div
-            key={element.id}
-            className="absolute text-lg sm:text-xl lg:text-2xl font-mono text-green-400/20 animate-float-code"
-            style={{
-              opacity: 0.2,
-              left: `${element.left}%`,
-              top: `${element.top}%`,
-              animationDelay: `${element.delay}s`,
-              animationDuration: `${element.duration}s`,
-            }}
-          >
-            {element.symbol}
-          </div>
-        ))}
-
-        {/* Glowing orbs - Reducidos en móviles */}
-        <div className="absolute top-10 sm:top-20 left-10 sm:left-20 w-48 sm:w-72 h-48 sm:h-72 bg-purple-500/10 rounded-full blur-2xl sm:blur-3xl animate-pulse"></div>
-        <div
-          className="absolute bottom-10 sm:bottom-20 right-10 sm:right-20 w-56 sm:w-80 h-56 sm:h-80 bg-blue-500/10 rounded-full blur-2xl sm:blur-3xl animate-pulse"
-          style={{ animationDelay: "2s" }}
-        ></div>
-        <div
-          className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 sm:w-96 h-64 sm:h-96 bg-orange-500/5 rounded-full blur-2xl sm:blur-3xl animate-pulse"
-          style={{ animationDelay: "4s" }}
-        ></div>
-
-        {/* Electric lines - Solo en desktop */}
-        {!isMobile &&
-          [...Array(3)].map((_, i) => (
-            <div
-              key={i}
-              className={`absolute h-px bg-gradient-to-r from-transparent via-cyan-400/30 to-transparent ${
-                isVisible ? "animate-electric-line" : "opacity-0"
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          {/* Title */}
+          <div className="text-center mb-12 lg:mb-16">
+            <h2 
+              className={`text-4xl sm:text-5xl lg:text-6xl font-black text-white mb-4 transition-all duration-700 ${
+                isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
               }`}
-              style={{
-                top: `${20 + i * 30}%`,
-                left: "0",
-                right: "0",
-                animationDelay: `${i * 2}s`,
-                animationDuration: "4s",
-              }}
-            />
-          ))}
-      </div>
-
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Section Title - Responsive */}
-        <div className="text-center mb-12 lg:mb-16">
-          <div className="flex justify-center flex-wrap gap-1 sm:gap-2 mb-4 lg:mb-6">
-            {titleText.map((letter, index) => (
-              <span
-                key={index}
-                className={`inline-block text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-black transform transition-all duration-700 ${
-                  isVisible ? "translate-y-0 opacity-100 text-white" : "translate-y-16 opacity-0"
-                } hover:scale-110 hover:text-cyan-400 cursor-default ${letter === " " ? "w-4 sm:w-6 lg:w-8" : ""}`}
-                style={{
-                  transitionDelay: isMobile ? `${index * 60}ms` : `${index * 100}ms`,
-                  textShadow: "0 0 30px rgba(0, 255, 255, 0.5)",
-                }}
-              >
-                {letter}
-              </span>
-            ))}
-          </div>
-
-          <div
-            className={`transform transition-all duration-1000 ${
-              isVisible ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"
-            }`}
-            style={{ transitionDelay: isMobile ? "1s" : "1.5s" }}
-          >
-            <div className="w-20 sm:w-24 lg:w-32 h-1 bg-gradient-to-r from-cyan-400 to-purple-500 mx-auto rounded-full mb-3 lg:mb-4"></div>
-            <p className="text-lg lg:text-xl text-gray-300 font-medium px-4">
-              FUNDADOR DE LATAMRUST Y SERVIDORES DE RUST PIRATA
-            </p>
-          </div>
-        </div>
-
-        {/* Team Cards - Grid responsivo */}
-        <div
-          className={`grid ${
-            isMobile ? "grid-cols-1 gap-8" : "grid-cols-1 gap-8 lg:gap-10 max-w-md mx-auto"
-          } max-w-7xl mx-auto`}
-        >
-          {/* Founder Card */}
-          <TeamMemberCard
-            name="ParaguayRAIDER"
-            role="Fundador"
-            description="Veterano de Rust con más de 10,000 horas de juego. Fundó LATAMRUST en 2021 con la visión de crear la mejor experiencia de supervivencia en Latinoamérica. Programador experimentado y médico de profesión."
-            avatar="/paraguayraider.png"
-            specialties={[
-              { icon: <Crown className="w-4 lg:w-5 h-4 lg:h-5" />, text: "Fundador" },
-              { icon: <Shield className="w-4 lg:w-5 h-4 lg:h-5" />, text: "Administración" },
-              { icon: <Users className="w-4 lg:w-5 h-4 lg:h-5" />, text: "Comunidad" },
-              { icon: <Gamepad2 className="w-4 lg:w-5 h-4 lg:h-5" />, text: "Gaming Expert" },
-            ]}
-            stats={[
-              { label: "Años de Experiencia", value: "8+" },
-              { label: "Horas en Rust", value: "10,000+" },
-              { label: "Jugadores Gestionados", value: "10K+" },
-              { label: "Eventos Organizados", value: "200+" },
-            ]}
-            socialLinks={[]}
-            isVisible={isVisible}
-            delay={isMobile ? "0.7s" : "0.8s"}
-            onHover={() => !isMobile && setActiveCard(2)}
-            onLeave={() => !isMobile && setActiveCard(null)}
-            isActive={activeCard === 2}
-            isMobile={isMobile}
-          />
-
-        </div>
-
-        {/* Bottom Quote Section - Responsive */}
-        <div
-          className={`mt-6 lg:mt-8 text-center transform transition-all duration-1000 ${
-            isVisible ? "translate-y-0 opacity-100" : "translate-y-12 opacity-0"
-          }`}
-          style={{ transitionDelay: isMobile ? "1.5s" : "2s" }}
-        >
-          <div className="relative bg-gradient-to-r from-purple-900/30 to-blue-900/30 backdrop-blur-lg rounded-2xl lg:rounded-3xl p-6 lg:p-8 border border-white/5 max-w-4xl mx-auto shadow-lg shadow-black/20">
-            {/* Subtle noise overlay for premium feel */}
-            <div className="absolute inset-0 rounded-2xl lg:rounded-3xl opacity-[0.03] pointer-events-none" style={{ backgroundImage: "url('data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' /%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' /%3E%3C/svg%3E')" }}></div>
-            
-            {/* Star icon - refined */}
-            <div className="relative mb-5 lg:mb-6">
-              <Star className="w-7 lg:w-10 h-7 lg:h-10 text-yellow-400 mx-auto animate-spin-slow" style={{ strokeWidth: 1.5, filter: "drop-shadow(0 0 8px rgba(250, 204, 21, 0.15))" }} />
+            >
+              FUNDADOR
+            </h2>
+            <div 
+              className={`transition-all duration-700 delay-200 ${
+                isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
+              }`}
+            >
+              <div className="w-24 h-1 bg-gradient-to-r from-cyan-400 to-purple-500 mx-auto rounded-full mb-4"></div>
+              <p className="text-lg lg:text-xl text-gray-400 font-medium">
+                FUNDADOR DE LATAMRUST Y SERVIDORES DE RUST PIRATA
+              </p>
             </div>
-            
-            {/* Quote - editorial typography */}
-            <blockquote className="relative text-xl sm:text-2xl lg:text-3xl font-semibold text-white/95 mb-5 lg:mb-7 px-2 leading-tight tracking-[-0.02em]">
-              "FUNDADOR DE LATAMRUST Y SERVIDORES DE RUST PIRATA"
-            </blockquote>
-            
-            {/* Names and roles - refined */}
-            <div className={`flex ${isMobile ? "flex-col space-y-4" : "justify-center items-center space-x-8"}`}>
-              <div className="text-center">
-                <div className="text-cyan-300 font-semibold text-base lg:text-lg mb-1">ParaguayRAIDER</div>
-                <div className="text-gray-400/75 text-xs lg:text-sm tracking-wide">FUNDADOR</div>
+          </div>
+
+          {/* Founder Card */}
+          <div 
+            className={`max-w-md mx-auto transition-all duration-700 delay-300 ${
+              isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+            }`}
+          >
+            <div className="relative bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-lg rounded-3xl p-8 border border-white/10">
+              {/* Avatar */}
+              <div className="flex justify-center mb-6">
+                <div className="relative">
+                  <div className="w-28 h-28 rounded-full overflow-hidden border-4 border-white/20">
+                    <img
+                      src="/paraguayraider.png"
+                      alt="ParaguayRAIDER"
+                      className="w-full h-full object-cover"
+                      loading="lazy"
+                    />
+                  </div>
+                  <div className="absolute -bottom-1 -right-1 w-6 h-6 bg-green-500 rounded-full border-4 border-gray-800 flex items-center justify-center">
+                    <div className="w-2 h-2 bg-white rounded-full"></div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Info */}
+              <div className="text-center mb-6">
+                <h3 className="text-2xl font-black text-white mb-1">ParaguayRAIDER</h3>
+                <p className="text-lg font-bold text-purple-400 mb-3">Fundador</p>
+                <p className="text-gray-300 text-sm leading-relaxed">
+                  Veterano de Rust con más de 10,000 horas de juego. Fundó LATAMRUST en 2021 con la visión de crear la mejor experiencia de supervivencia en Latinoamérica.
+                </p>
+              </div>
+
+              {/* Experience Badge */}
+              <div className="bg-gradient-to-r from-red-500/10 to-orange-500/10 border border-red-500/30 rounded-xl p-4 mb-6">
+                <p className="text-center text-sm text-gray-300">
+                  <span className="text-white font-bold">Desarrollador de Plugins</span> para{' '}
+                  <span className="text-red-400 font-bold">RustSpain</span> y{' '}
+                  <span className="text-red-400 font-bold">Brasa.gg</span>
+                </p>
+              </div>
+
+              {/* Specialties */}
+              <div className="grid grid-cols-2 gap-2 mb-6">
+                <div className="flex items-center gap-2 bg-white/5 rounded-lg p-2">
+                  <Crown className="w-4 h-4 text-cyan-400" />
+                  <span className="text-white text-xs font-medium">Fundador</span>
+                </div>
+                <div className="flex items-center gap-2 bg-white/5 rounded-lg p-2">
+                  <Code className="w-4 h-4 text-cyan-400" />
+                  <span className="text-white text-xs font-medium">Dev Plugins</span>
+                </div>
+                <div className="flex items-center gap-2 bg-white/5 rounded-lg p-2">
+                  <Shield className="w-4 h-4 text-cyan-400" />
+                  <span className="text-white text-xs font-medium">RustSpain</span>
+                </div>
+                <div className="flex items-center gap-2 bg-white/5 rounded-lg p-2">
+                  <Gamepad2 className="w-4 h-4 text-cyan-400" />
+                  <span className="text-white text-xs font-medium">Brasa.gg</span>
+                </div>
+              </div>
+
+              {/* Stats */}
+              <div className="grid grid-cols-2 gap-3">
+                <div className="text-center bg-black/20 rounded-lg p-3">
+                  <div className="text-xl font-black text-cyan-400">8+</div>
+                  <div className="text-gray-400 text-xs">Años Experiencia</div>
+                </div>
+                <div className="text-center bg-black/20 rounded-lg p-3">
+                  <div className="text-xl font-black text-cyan-400">10K+</div>
+                  <div className="text-gray-400 text-xs">Horas en Rust</div>
+                </div>
+                <div className="text-center bg-black/20 rounded-lg p-3">
+                  <div className="text-xl font-black text-cyan-400">10K+</div>
+                  <div className="text-gray-400 text-xs">Jugadores</div>
+                </div>
+                <div className="text-center bg-black/20 rounded-lg p-3">
+                  <div className="text-xl font-black text-cyan-400">200+</div>
+                  <div className="text-gray-400 text-xs">Eventos</div>
+                </div>
               </div>
             </div>
           </div>
+
+          {/* Quote */}
+          <div 
+            className={`mt-8 text-center transition-all duration-700 delay-500 ${
+              isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+            }`}
+          >
+            <div className="bg-gradient-to-r from-purple-900/30 to-blue-900/30 backdrop-blur-lg rounded-2xl p-6 border border-white/5 max-w-3xl mx-auto">
+              <blockquote className="text-xl sm:text-2xl font-semibold text-white/95 mb-4">
+                "FUNDADOR DE LATAMRUST Y SERVIDORES DE RUST PIRATA"
+              </blockquote>
+              <div className="text-cyan-300 font-semibold">ParaguayRAIDER</div>
+              <div className="text-gray-400/75 text-sm tracking-wide">FUNDADOR</div>
+            </div>
+          </div>
         </div>
-      </div>
-
-      {/* Custom Animations - Optimizadas */}
-      <style>{`
-        @keyframes float-code {
-          0%, 100% {
-            transform: translateY(0px) rotate(0deg);
-            opacity: 0.3;
-          }
-          25% {
-            transform: translateY(-20px) rotate(90deg);
-            opacity: 0.8;
-          }
-          50% {
-            transform: translateY(-40px) rotate(180deg);
-            opacity: 0.5;
-          }
-          75% {
-            transform: translateY(-20px) rotate(270deg);
-            opacity: 0.8;
-          }
-        }
-
-        @keyframes electric-line {
-          0% {
-            transform: scaleX(0);
-            opacity: 0;
-          }
-          50% {
-            transform: scaleX(1);
-            opacity: 1;
-          }
-          100% {
-            transform: scaleX(0);
-            opacity: 0;
-          }
-        }
-
-        @keyframes spin-slow {
-          from {
-            transform: rotate(0deg);
-          }
-          to {
-            transform: rotate(360deg);
-          }
-        }
-
-        .animate-float-code {
-          animation: float-code 8s ease-in-out infinite;
-          will-change: transform, opacity;
-        }
-
-        .animate-electric-line {
-          animation: electric-line 4s ease-in-out infinite;
-          transform-origin: center;
-          will-change: transform, opacity;
-        }
-
-        .animate-spin-slow {
-          animation: spin-slow 8s linear infinite;
-          will-change: transform;
-        }
-
-        /* Optimizaciones para móviles */
-        @media (max-width: 768px) {
-          .animate-pulse {
-            animation-duration: 3s;
-          }
-          
-          .backdrop-blur-lg {
-            backdrop-filter: blur(8px);
-          }
-        }
-
-        /* Reducir movimiento para usuarios que lo prefieren */
-        @media (prefers-reduced-motion: reduce) {
-          .animate-float-code,
-          .animate-electric-line,
-          .animate-spin-slow,
-          .animate-pulse {
-            animation: none !important;
-          }
-          
-          .transition-all,
-          .transition-transform,
-          .transition-opacity,
-          .transition-colors {
-            transition: none !important;
-          }
-        }
-
-        /* Optimizar rendimiento en dispositivos táctiles */
-        @media (hover: none) and (pointer: coarse) {
-          .group:hover .group-hover\\:scale-110,
-          .hover\\:scale-110 {
-            transform: none;
-          }
-          
-          .group:hover .group-hover\\:border-cyan-400\\/50 {
-            border-color: inherit;
-          }
-        }
-
-        /* Touch-friendly improvements */
-        button, a {
-          min-height: 44px;
-          min-width: 44px;
-        }
-
-        /* Optimizar para pantallas muy pequeñas */
-        @media (max-width: 480px) {
-          .text-3xl {
-            font-size: 1.5rem;
-            line-height: 2rem;
-          }
-        }
-        
-        .section-divider {
-          width: 100%;
-          padding: 1rem 0;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-        }
-        
-        .divider-line {
-          width: 80%;
-          max-width: 1200px;
-          height: 2px;
-          background: linear-gradient(90deg, transparent, #dc2626, transparent);
-          box-shadow: 0 0 20px rgba(220, 38, 38, 0.5);
-          animation: dividerPulse 3s ease-in-out infinite;
-        }
-        
-        @keyframes dividerPulse {
-          0%, 100% { opacity: 0.6; }
-          50% { opacity: 1; }
-        }
-      `}</style>
-    </section>
+      </section>
     </>
   );
 };
 
-// Team Member Card Component - Optimizado
-interface TeamMemberCardProps {
-  name: string;
-  role: string;
-  description: string;
-  avatar: string;
-  specialties: { icon: React.ReactNode; text: string }[];
-  stats: { label: string; value: string }[];
-  socialLinks: { icon: React.ReactNode; url: string; color: string }[];
-  isVisible: boolean;
-  delay: string;
-  onHover: () => void;
-  onLeave: () => void;
-  isActive: boolean;
-  isMobile: boolean;
-}
-
-const TeamMemberCard: React.FC<TeamMemberCardProps> = ({
-  name,
-  role,
-  description,
-  avatar,
-  specialties,
-  stats,
-  socialLinks,
-  isVisible,
-  delay,
-  onHover,
-  onLeave,
-  isActive,
-  isMobile,
-}) => {
-  const handleClick = useCallback(() => {
-    if (isMobile) {
-      onHover();
-      setTimeout(onLeave, 2000); // Auto-hide después de 2 segundos en móviles
-    }
-  }, [isMobile, onHover, onLeave]);
-
-  return (
-    <div
-      className={`group relative transform transition-all duration-1000 ${
-        isVisible ? "translate-y-0 opacity-100" : "translate-y-20 opacity-0"
-      } ${isMobile ? "cursor-pointer" : ""}`}
-      style={{ transitionDelay: delay }}
-      onMouseEnter={onHover}
-      onMouseLeave={onLeave}
-      onClick={handleClick}
-    >
-      <div
-        className={`relative bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-lg rounded-2xl lg:rounded-3xl p-6 lg:p-8 border transition-all duration-500 ${
-          isActive
-            ? "border-cyan-400/50 shadow-2xl shadow-cyan-400/20 scale-105"
-            : "border-white/10 hover:border-white/30"
-        }`}
-      >
-        {/* Glowing background effect */}
-        <div
-          className={`absolute inset-0 bg-gradient-to-r from-cyan-500/10 to-purple-500/10 rounded-2xl lg:rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 ${
-            isActive ? "opacity-100" : ""
-          }`}
-        ></div>
-
-        {/* Avatar Section - Responsive */}
-        <div className="relative mb-6 lg:mb-8">
-          <div className="flex justify-center">
-            <div className="relative">
-              {/* Spinning ring - Solo desktop */}
-              {!isMobile && (
-                <div
-                  className={`absolute -inset-3 lg:-inset-4 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-full opacity-0 group-hover:opacity-75 transition-opacity duration-500 animate-spin-slow ${
-                    isActive ? "opacity-75" : ""
-                  }`}
-                ></div>
-              )}
-
-              {/* Avatar */}
-              <div
-                className={`relative w-24 sm:w-28 lg:w-32 h-24 sm:h-28 lg:h-32 rounded-full overflow-hidden border-4 border-white/20 ${
-                  !isMobile ? "group-hover:border-cyan-400/50" : ""
-                } transition-colors duration-500`}
-              >
-                <img
-                  src={avatar}
-                  alt={name}
-                  className={`w-full h-full object-cover ${
-                    !isMobile ? "transform group-hover:scale-110" : ""
-                  } transition-transform duration-500`}
-                  loading="lazy"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
-              </div>
-
-              {/* Status indicator */}
-              <div className="absolute -bottom-1 lg:-bottom-2 -right-1 lg:-right-2 w-6 lg:w-8 h-6 lg:h-8 bg-green-500 rounded-full border-2 lg:border-4 border-gray-800 flex items-center justify-center">
-                <div className="w-2 lg:w-3 h-2 lg:h-3 bg-white rounded-full animate-pulse"></div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        {/* Info Section - Responsive */}
-        <div className="text-center mb-6 lg:mb-8">
-          <h3
-            className={`text-2xl lg:text-3xl font-black text-white mb-2 ${
-              !isMobile ? "group-hover:text-cyan-400" : ""
-            } transition-colors duration-500`}
-          >
-            {name}
-          </h3>
-          <p className="text-base lg:text-lg font-bold text-purple-400 mb-3 lg:mb-4">{role}</p>
-          <p className="text-gray-300 leading-relaxed text-sm lg:text-base">{description}</p>
-        </div>
-
-        {/* Specialties - Grid responsivo */}
-        <div className="mb-6 lg:mb-8">
-          <h4 className="text-base lg:text-lg font-bold text-white mb-3 lg:mb-4 text-center">Especialidades</h4>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 lg:gap-3">
-            {specialties.map((specialty, index) => (
-              <div
-                key={index}
-                className="flex items-center space-x-2 bg-white/5 rounded-lg p-2 lg:p-3 hover:bg-white/10 transition-colors duration-300"
-              >
-                <div className="text-cyan-400 shrink-0">{specialty.icon}</div>
-                <span className="text-white font-medium text-xs lg:text-sm truncate">{specialty.text}</span>
-              </div>
-            ))}
-          </div>
-        </div>
-
-        {/* Stats - Grid responsivo */}
-        <div className="mb-6 lg:mb-8">
-          <h4 className="text-base lg:text-lg font-bold text-white mb-3 lg:mb-4 text-center">Estadísticas</h4>
-          <div className="grid grid-cols-2 gap-3 lg:gap-4">
-            {stats.map((stat, index) => (
-              <div key={index} className="text-center bg-black/20 rounded-lg p-2 lg:p-3">
-                <div className="text-lg lg:text-2xl font-black text-cyan-400">{stat.value}</div>
-                <div className="text-gray-400 text-xs lg:text-sm leading-tight">{stat.label}</div>
-              </div>
-            ))}
-          </div>
-        </div>
-
-        {/* Social Links - Touch friendly */}
-        {socialLinks.length > 0 && (
-          <div className="flex justify-center space-x-3 lg:space-x-4">
-            {socialLinks.map((link, index) => (
-              <a
-                key={index}
-                href={link.url}
-                className={`p-2 lg:p-3 bg-white/10 rounded-full text-gray-400 transition-all duration-300 transform hover:scale-110 active:scale-95 touch-manipulation ${link.color}`}
-              >
-                {link.icon}
-              </a>
-            ))}
-          </div>
-        )}
-      </div>
-    </div>
-  );
-};
-
-export default About;
+export default Section;

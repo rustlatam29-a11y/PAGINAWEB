@@ -87,7 +87,7 @@ const Hero: React.FC = () => {
                 
                 {/* Botones de Acción - RUST */}
                 <div className="hero-actions">
-                  <a href="https://discord.gg/54zHAYmtzp" target="_blank" rel="noopener noreferrer" className="btn-primary">
+                  <a href="https://api.whatsapp.com/send?phone=595981144534" target="_blank" rel="noopener noreferrer" className="btn-primary">
                     <span className="btn-icon">
                       <Server className="w-6 h-6" />
                     </span>
@@ -129,7 +129,7 @@ const Hero: React.FC = () => {
                 
                 {/* Botones de Acción - DAYZ */}
                 <div className="hero-actions">
-                  <a href="https://discord.gg/54zHAYmtzp" target="_blank" rel="noopener noreferrer" className="btn-primary">
+                  <a href="https://api.whatsapp.com/send?phone=595981144534" target="_blank" rel="noopener noreferrer" className="btn-primary">
                     <span className="btn-icon">
                       <Server className="w-6 h-6" />
                     </span>

@@ -222,7 +222,7 @@ const BlogSEO: React.FC = () => {
               La mejor comunidad BR-LATAM te espera.
             </p>
             <a
-              href="https://discord.gg/dT8u5b3jga"
+              href="https://api.whatsapp.com/send?phone=595981144534"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-block bg-gradient-to-r from-red-600 to-red-700 hover:from-red-700 hover:to-red-800 text-white font-black text-lg px-10 py-4 rounded-xl transform transition-all duration-300 hover:scale-105 shadow-2xl"

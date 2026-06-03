@@ -10,7 +10,7 @@ function App() {
     // Simula carga de datos o espera inicial
     const timer = setTimeout(() => {
       setLoading(false);
-    }, 5000); // 1 segundo de ejemplo
+    }, 2000);
 
     return () => clearTimeout(timer);
   }, []);

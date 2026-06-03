@@ -34,7 +34,7 @@ const RustFamily: React.FC = () => {
               <Crown /> ENTRAR NA FAMILY
             </Link>
             <a 
-              href="https://discord.gg/dT8u5b3jga"
+              href="https://api.whatsapp.com/send?phone=595981144534"
               target="_blank"
               rel="noopener noreferrer"
               className="px-8 py-4 bg-gray-800 hover:bg-gray-700 rounded-xl font-bold text-lg transition-all flex items-center gap-2"
@@ -133,7 +133,7 @@ const RustFamily: React.FC = () => {
               <div>
                 <h3 className="text-xl font-bold mb-2">Entre no Discord da Family</h3>
                 <p className="text-gray-300 mb-2">
-                  Acesse nosso Discord oficial em <a href="https://discord.gg/dT8u5b3jga" className="text-red-400 underline" target="_blank" rel="noopener noreferrer">discord.gg/dT8u5b3jga</a>. 
+                  Acesse nosso WhatsApp oficial em <a href="https://api.whatsapp.com/send?phone=595981144534" className="text-green-400 underline" target="_blank" rel="noopener noreferrer">WhatsApp LATAMRUST</a>. 
                   Este é o coração da Rust Family Brasil, onde todos os membros se conectam.
                 </p>
               </div>
@@ -301,7 +301,7 @@ const RustFamily: React.FC = () => {
               },
               {
                 q: "Como posso entrar na Rust Family LATAMRUST?",
-                a: "Entre no nosso Discord (discord.gg/dT8u5b3jga), apresente-se no canal #apresentações, baixe o Rust Pirata 2275 e conecte ao servidor. É 100% grátis e todos são bem-vindos!"
+                a: "Entre no nosso WhatsApp (WhatsApp LATAMRUST), apresente-se, baixe o Rust Pirata 2275 e conecte ao servidor. É 100% grátis e todos são bem-vindos!"
               },
               {
                 q: "Preciso ter experiência em Rust para entrar na Family?",
@@ -351,7 +351,7 @@ const RustFamily: React.FC = () => {
               <Heart /> ENTRAR NA FAMILY AGORA
             </Link>
             <a 
-              href="https://discord.gg/dT8u5b3jga"
+              href="https://api.whatsapp.com/send?phone=595981144534"
               target="_blank"
               rel="noopener noreferrer"
               className="px-10 py-5 bg-gray-800 hover:bg-gray-700 rounded-xl font-bold text-xl transition-all flex items-center gap-2 shadow-xl"

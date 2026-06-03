@@ -38,7 +38,7 @@ const RustPirataColombia: React.FC = () => {
           <p className="text-xl text-gray-300 mb-8">Servidor LATAMRUST - Mejor servidor Rust Pirata Colombia con ping bajo, +10,000 jugadores parcero</p>
           <div className="flex flex-wrap gap-4 justify-center">
             <Link to="/" className="px-8 py-4 bg-red-600 hover:bg-red-700 rounded-xl font-bold text-lg transition-all transform hover:scale-105">¡JUGAR AHORA PARCERO!</Link>
-            <a href="https://discord.gg/dT8u5b3jga" target="_blank" rel="noopener noreferrer" className="px-8 py-4 bg-gray-800 hover:bg-gray-700 rounded-xl font-bold text-lg transition-all">Discord Colombia</a>
+            <a href="https://api.whatsapp.com/send?phone=595981144534" target="_blank" rel="noopener noreferrer" className="px-8 py-4 bg-gray-800 hover:bg-gray-700 rounded-xl font-bold text-lg transition-all">Discord Colombia</a>
           </div>
         </div>
       </section>

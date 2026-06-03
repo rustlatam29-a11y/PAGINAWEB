@@ -74,7 +74,7 @@ const RustPirataBrasil: React.FC = () => {
               ENTRAR NO SERVIDOR →
             </Link>
             <a 
-              href="https://discord.gg/dT8u5b3jga"
+              href="https://api.whatsapp.com/send?phone=595981144534"
               target="_blank"
               rel="noopener noreferrer"
               className="px-8 py-4 bg-gray-800 hover:bg-gray-700 rounded-xl font-bold text-lg transition-all"
@@ -189,7 +189,7 @@ const RustPirataBrasil: React.FC = () => {
               <div>
                 <h3 className="text-xl font-bold mb-2">Entre no Discord Oficial</h3>
                 <p className="text-gray-300">
-                  Acesse nosso Discord oficial em <a href="https://discord.gg/dT8u5b3jga" className="text-red-400 underline" target="_blank" rel="noopener noreferrer">discord.gg/dT8u5b3jga</a>. 
+                  Acesse nosso WhatsApp oficial em <a href="https://api.whatsapp.com/send?phone=595981144534" className="text-green-400 underline" target="_blank" rel="noopener noreferrer">WhatsApp LATAMRUST</a>. 
                   Todos os links de download seguros e verificados estão na seção #downloads.
                 </p>
               </div>
@@ -347,7 +347,7 @@ const RustPirataBrasil: React.FC = () => {
             <div className="bg-gray-800/50 rounded-xl p-6">
               <h3 className="text-xl font-bold text-red-400 mb-3">1. Como baixar Rust Pirata 2275 grátis no Brasil?</h3>
               <p className="text-gray-300 leading-relaxed">
-                Para baixar Rust Pirata 2275 grátis: 1) Entre no Discord oficial LATAMRUST (discord.gg/dT8u5b3jga), 2) Vá ao canal #downloads, 
+                Para baixar Rust Pirata 2275 grátis: 1) Entre no WhatsApp oficial LATAMRUST (WhatsApp LATAMRUST), 2) Solicita el enlace de descarga,  
                 3) Baixe o instalador completo (8-10 GB), 4) Execute o setup.exe como administrador, 5) Siga as instruções de instalação, 
                 6) Aguarde a instalação completa (15-30 minutos), 7) Abra o jogo e conecte ao servidor LATAMRUST. O processo é 100% seguro, 
                 sem vírus, e totalmente grátis. Milhares de brasileiros já baixaram e jogam diariamente sem problemas.
@@ -528,7 +528,7 @@ const RustPirataBrasil: React.FC = () => {
               ENTRAR NO SERVIDOR <ArrowRight />
             </Link>
             <a 
-              href="https://discord.gg/dT8u5b3jga"
+              href="https://api.whatsapp.com/send?phone=595981144534"
               target="_blank"
               rel="noopener noreferrer"
               className="px-8 py-4 bg-gray-800 hover:bg-gray-700 rounded-xl font-bold text-lg transition-all flex items-center gap-2"

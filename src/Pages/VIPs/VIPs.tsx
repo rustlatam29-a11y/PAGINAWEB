@@ -335,7 +335,7 @@ const VIPs: React.FC = () => {
         </div>
       </section>
 
-      <Footer title="LATAMRUST VIPs" />
+      <Footer />
     </GlobalBackground>
   );
 };

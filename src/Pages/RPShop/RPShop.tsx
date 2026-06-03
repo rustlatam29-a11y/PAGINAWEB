@@ -218,7 +218,7 @@ const RPShop: React.FC = () => {
         </div>
       </section>
 
-      <Footer title="LATAMRUST RP Shop" />
+      <Footer />
     </GlobalBackground>
   );
 };

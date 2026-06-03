@@ -5,546 +5,461 @@ interface LoaderProps {
   onLoadComplete?: () => void;
 }
 
-const Loader: React.FC<LoaderProps> = ({ logoUrl = "/img1.webp", onLoadComplete }) => {
+const Loader: React.FC<LoaderProps> = ({ logoUrl = "/LATAMLOGO.webp", onLoadComplete }) => {
   const [progress, setProgress] = useState(0);
-  const [status, setStatus] = useState("Preparando experiencia...");
+  const [status, setStatus] = useState("Inicializando panel...");
+  const [currentStep, setCurrentStep] = useState(0);
   const [isVisible, setIsVisible] = useState(true);
+  const [terminalLines, setTerminalLines] = useState<string[]>([]);
 
-  const statusMessages = [
-    'Conectando al servidor...',
-    'Cargando recursos...',
-    'Preparando experiencia...',
-    'Optimizando conexión...',
-    'Casi listo...'
+  const steps = [
+    { text: "Conectando al panel de control...", icon: "🔌" },
+    { text: "Cargando plugins del servidor...", icon: "🧩" },
+    { text: "Configurando Rust 2275...", icon: "⚙️" },
+    { text: "Activando AntiCheat...", icon: "🛡️" },
+    { text: "Optimizando rendimiento...", icon: "⚡" },
+    { text: "Servidor listo para usar", icon: "✅" },
+  ];
+
+  const terminalCommands = [
+    "> Iniciando LATAMRUST Panel v3.0...",
+    "> Cargando módulos: [OK]",
+    "> Versión Rust 2275 OldRecoil: [DISPONIBLE]",
+    "> Versión Rust 2388 Actualizado: [DISPONIBLE]",
+    "> Plugins: +30,000 disponibles en la tienda",
+    "> Oxide | Economy | Kits | Shop",
+    "> AntiCheat: RustAdmin [ACTIVO]",
+    "> Servidor: 64GB RAM | NVMe SSD | 1Gbps",
+    "> ¡Creá tu servidor en minutos!",
   ];
 
   useEffect(() => {
+    let lineIndex = 0;
+    const terminalInterval = setInterval(() => {
+      if (lineIndex < terminalCommands.length) {
+        setTerminalLines(prev => [...prev, terminalCommands[lineIndex]]);
+        lineIndex++;
+      }
+    }, 400);
+
     const loadingInterval = setInterval(() => {
       setProgress(prev => {
-        const increment = Math.random() * 15;
+        const increment = Math.random() * 12;
         const newProgress = Math.min(prev + increment, 100);
-        
+
+        const stepIndex = Math.floor((newProgress / 100) * steps.length);
+        if (stepIndex !== currentStep && stepIndex < steps.length) {
+          setCurrentStep(stepIndex);
+          setStatus(steps[stepIndex].text);
+        }
+
         if (newProgress >= 100) {
           clearInterval(loadingInterval);
-          setStatus('¡Listo para jugar!');
-          
+          clearInterval(terminalInterval);
+          setStatus("¡Servidor listo!");
+
           setTimeout(() => {
             setIsVisible(false);
             setTimeout(() => {
               if (onLoadComplete) onLoadComplete();
-            }, 800);
-          }, 1000);
-        } else {
-          const messageIndex = Math.floor((newProgress / 100) * statusMessages.length);
-          if (messageIndex < statusMessages.length) {
-            setStatus(statusMessages[messageIndex]);
-          }
+            }, 600);
+          }, 800);
         }
-        
+
         return newProgress;
       });
-    }, 300);
+    }, 350);
 
-    return () => clearInterval(loadingInterval);
+    return () => {
+      clearInterval(loadingInterval);
+      clearInterval(terminalInterval);
+    };
   }, [onLoadComplete]);
 
   if (!isVisible) return null;
 
   return (
-    <div className={`loading-screen ${!isVisible ? 'fade-out' : ''}`}>
-      {/* Grid de fondo animado */}
-      <div className="grid-background"></div>
-      
-      {/* Partículas sutiles */}
-      <div className="particles"></div>
-      
-      {/* Contenedor principal */}
-      <div className="loading-container">
-        
-        {/* Logo con efecto glow */}
-        <div className="logo-wrapper">
-          <img 
-            src={logoUrl} 
-            alt="LATAMRUST Logo" 
-            className="loading-logo"
-            width="175"
-            height="175"
-            fetchPriority="high"
-            loading="eager"
+    <div className={`loader-root ${!isVisible ? "fade-out" : ""}`}>
+      {/* Animated grid background */}
+      <div className="loader-grid" />
+
+      {/* Floating particles */}
+      <div className="loader-particles">
+        {[...Array(20)].map((_, i) => (
+          <div
+            key={i}
+            className="particle"
+            style={{
+              left: `${Math.random() * 100}%`,
+              top: `${Math.random() * 100}%`,
+              animationDelay: `${Math.random() * 5}s`,
+              animationDuration: `${3 + Math.random() * 4}s`,
+            }}
           />
-          <div className="logo-glow"></div>
+        ))}
+      </div>
+
+      {/* Main content */}
+      <div className="loader-content">
+        {/* Logo with glow */}
+        <div className="logo-container">
+          <img
+            src={logoUrl}
+            alt="LATAMRUST"
+            className="loader-logo"
+            width="140"
+            height="140"
+            fetchPriority="high"
+          />
+          <div className="logo-ring" />
+          <div className="logo-ring logo-ring-2" />
         </div>
-        
-        {/* Título principal */}
-        <h1 className="loading-title">
-          <span className="text-white">LATAM</span>
-          <span className="text-rust">RUST</span>
+
+        {/* Title */}
+        <h1 className="loader-title">
+          <span className="title-white">LATAM</span>
+          <span className="title-rust">RUST</span>
         </h1>
-        
-        {/* Subtítulo */}
-        <p className="loading-subtitle">● ● ● SERVIDORES PIRATAS ● ● ●</p>
-        
-        {/* Barra de progreso moderna */}
-        <div className="progress-container">
-          <div className="progress-bar">
-            <div className="progress-fill" style={{ width: `${progress}%` }}></div>
-            <div className="progress-shine"></div>
+        <p className="loader-tagline">RUST 2275 &bull; 2388 &bull; +30,000 PLUGINS</p>
+
+        {/* Terminal window */}
+        <div className="terminal-window">
+          <div className="terminal-header">
+            <div className="terminal-dots">
+              <span className="dot red" />
+              <span className="dot yellow" />
+              <span className="dot green" />
+            </div>
+            <span className="terminal-title">latamrust@panel:~</span>
           </div>
-          <span className="progress-text">{Math.floor(progress)}%</span>
+          <div className="terminal-body">
+            {terminalLines.map((line, i) => (
+              <div key={i} className="terminal-line">
+                {line}
+              </div>
+            ))}
+            <span className="terminal-cursor">_</span>
+          </div>
         </div>
-        
-        {/* Estado de carga */}
-        <p className="loading-status">{status}</p>
-        
-        {/* Stats Cards */}
-        <div className="stats-grid">
-          
-          {/* Card 1: Conexión */}
-          <div className="stat-card">
-            <div className="stat-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                <path d="M5 12.55a11 11 0 0 1 14.08 0"></path>
-                <path d="M1.42 9a16 16 0 0 1 21.16 0"></path>
-                <path d="M8.53 16.11a6 6 0 0 1 6.95 0"></path>
-                <circle cx="12" cy="20" r="1"></circle>
-              </svg>
-            </div>
-            <span className="stat-label">Conexión</span>
-            <span className="stat-value">Estable</span>
+
+        {/* Progress bar */}
+        <div className="progress-wrapper">
+          <div className="progress-track">
+            <div className="progress-fill" style={{ width: `${progress}%` }} />
+            <div className="progress-glow" />
           </div>
-          
-          {/* Card 2: Jugadores */}
-          <div className="stat-card">
-            <div className="stat-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
-                <circle cx="9" cy="7" r="4"></circle>
-                <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
-                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
-              </svg>
-            </div>
-            <span className="stat-label">Jugadores</span>
-            <span className="stat-value">10K+ Online</span>
+          <div className="progress-info">
+            <span className="progress-status">{steps[currentStep].icon} {status}</span>
+            <span className="progress-percent">{Math.floor(progress)}%</span>
           </div>
-          
-          {/* Card 3: Servidor */}
-          <div className="stat-card">
-            <div className="stat-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                <rect x="2" y="2" width="20" height="8" rx="2" ry="2"></rect>
-                <rect x="2" y="14" width="20" height="8" rx="2" ry="2"></rect>
-                <line x1="6" y1="6" x2="6.01" y2="6"></line>
-                <line x1="6" y1="18" x2="6.01" y2="18"></line>
-              </svg>
-            </div>
-            <span className="stat-label">Servidor</span>
-            <span className="stat-value">Premium</span>
+        </div>
+
+        {/* Feature pills */}
+        <div className="feature-pills">
+          <div className="pill">
+            <span className="pill-icon">🎮</span>
+            <span>Rust 2275</span>
           </div>
-          
+          <div className="pill">
+            <span className="pill-icon">🚀</span>
+            <span>Rust 2388</span>
+          </div>
+          <div className="pill">
+            <span className="pill-icon">🧩</span>
+            <span>+30K Plugins</span>
+          </div>
+          <div className="pill">
+            <span className="pill-icon">⚡</span>
+            <span>Setup en Minutos</span>
+          </div>
         </div>
       </div>
 
-      {/* Estilos integrados */}
+      {/* Styles */}
       <style>{`
-        /* === PANTALLA DE CARGA PRINCIPAL === */
-        .loading-screen {
+        .loader-root {
           position: fixed;
-          top: 0;
-          left: 0;
-          width: 100vw;
-          height: 100vh;
-          background: linear-gradient(135deg, #000000 0%, #1a0000 50%, #000000 100%);
+          inset: 0;
+          background: linear-gradient(135deg, #0a0a0a 0%, #1a0505 50%, #0a0a0a 100%);
           display: flex;
           align-items: center;
           justify-content: center;
           z-index: 9999;
           overflow: hidden;
-          transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+          transition: opacity 0.6s ease-out, transform 0.6s ease-out;
         }
-
-        .loading-screen.fade-out {
+        .loader-root.fade-out {
           opacity: 0;
-          transform: scale(0.95);
+          transform: scale(0.98);
         }
 
-        /* === GRID DE FONDO (EFECTO CYBERPUNK) === */
-        .grid-background {
+        /* Grid */
+        .loader-grid {
           position: absolute;
-          width: 100%;
-          height: 100%;
-          background-image: 
-            linear-gradient(rgba(220, 38, 38, 0.1) 1px, transparent 1px),
-            linear-gradient(90deg, rgba(220, 38, 38, 0.1) 1px, transparent 1px);
-          background-size: 50px 50px;
-          animation: gridMove 20s linear infinite;
-          opacity: 0.3;
+          inset: 0;
+          background-image:
+            linear-gradient(rgba(220, 38, 38, 0.05) 1px, transparent 1px),
+            linear-gradient(90deg, rgba(220, 38, 38, 0.05) 1px, transparent 1px);
+          background-size: 60px 60px;
+          animation: gridScroll 25s linear infinite;
+        }
+        @keyframes gridScroll {
+          0% { transform: translate(0, 0); }
+          100% { transform: translate(60px, 60px); }
         }
 
-        @keyframes gridMove {
-          0% { transform: translateY(0) translateX(0); }
-          100% { transform: translateY(50px) translateX(50px); }
-        }
-
-        /* === PARTÍCULAS SUTILES === */
-        .particles {
+        /* Particles */
+        .loader-particles {
           position: absolute;
-          width: 100%;
-          height: 100%;
-          background-image: 
-            radial-gradient(2px 2px at 20% 30%, rgba(220, 38, 38, 0.4), transparent),
-            radial-gradient(2px 2px at 60% 70%, rgba(255, 255, 255, 0.3), transparent),
-            radial-gradient(1px 1px at 50% 50%, rgba(220, 38, 38, 0.3), transparent),
-            radial-gradient(2px 2px at 80% 10%, rgba(255, 255, 255, 0.2), transparent),
-            radial-gradient(1px 1px at 90% 60%, rgba(220, 38, 38, 0.3), transparent),
-            radial-gradient(2px 2px at 30% 80%, rgba(255, 255, 255, 0.2), transparent);
-          background-size: 200% 200%;
-          background-position: 0% 0%;
-          animation: particlesFloat 20s ease-in-out infinite;
+          inset: 0;
+        }
+        .particle {
+          position: absolute;
+          width: 3px;
+          height: 3px;
+          background: rgba(220, 38, 38, 0.5);
+          border-radius: 50%;
+          animation: particleFloat 4s ease-in-out infinite;
+          box-shadow: 0 0 6px rgba(220, 38, 38, 0.6);
+        }
+        @keyframes particleFloat {
+          0%, 100% { transform: translateY(0) scale(1); opacity: 0.3; }
+          50% { transform: translateY(-30px) scale(1.5); opacity: 1; }
         }
 
-        @keyframes particlesFloat {
-          0%, 100% { 
-            background-position: 0% 0%;
-            opacity: 0.5;
-          }
-          25% { 
-            background-position: 100% 0%;
-            opacity: 0.8;
-          }
-          50% { 
-            background-position: 100% 100%;
-            opacity: 0.6;
-          }
-          75% { 
-            background-position: 0% 100%;
-            opacity: 0.7;
-          }
-        }
-
-        /* === CONTENEDOR PRINCIPAL === */
-        .loading-container {
+        /* Content */
+        .loader-content {
           position: relative;
           z-index: 10;
           text-align: center;
-          max-width: 600px;
-          padding: 2rem;
+          max-width: 500px;
+          padding: 1.5rem;
+          width: 100%;
         }
 
-        /* === LOGO CON EFECTOS === */
-        .logo-wrapper {
+        /* Logo */
+        .logo-container {
           position: relative;
           display: inline-block;
-          margin-bottom: 2rem;
-          animation: logoFloat 3s ease-in-out infinite;
+          margin-bottom: 1.5rem;
         }
-
-        @keyframes logoFloat {
-          0%, 100% { transform: translateY(0) scale(1); }
-          50% { transform: translateY(-15px) scale(1.02); }
-        }
-
-        .loading-logo {
-          width: 150px;
-          height: 150px;
+        .loader-logo {
+          width: 120px;
+          height: 120px;
+          border-radius: 20px;
           position: relative;
           z-index: 2;
-          border-radius: 50%;
-          animation: logoPulse 2s ease-in-out infinite;
+          animation: logoPulse 2.5s ease-in-out infinite;
         }
-
         @keyframes logoPulse {
-          0%, 100% { 
-            filter: drop-shadow(0 0 20px rgba(220, 38, 38, 0.6));
-          }
-          50% { 
-            filter: drop-shadow(0 0 40px rgba(220, 38, 38, 1));
-          }
+          0%, 100% { filter: drop-shadow(0 0 15px rgba(220, 38, 38, 0.5)); transform: scale(1); }
+          50% { filter: drop-shadow(0 0 30px rgba(220, 38, 38, 0.9)); transform: scale(1.03); }
         }
-
-        .logo-glow {
+        .logo-ring {
           position: absolute;
-          top: 50%;
-          left: 50%;
-          transform: translate(-50%, -50%);
-          width: 250px;
-          height: 250px;
-          background: radial-gradient(circle, rgba(220, 38, 38, 0.4) 0%, transparent 70%);
-          animation: glowPulse 2s ease-in-out infinite;
-          pointer-events: none;
-          z-index: 1;
+          inset: -15px;
+          border: 2px solid rgba(220, 38, 38, 0.3);
+          border-radius: 28px;
+          animation: ringPulse 2s ease-in-out infinite;
+        }
+        .logo-ring-2 {
+          inset: -30px;
+          border-color: rgba(220, 38, 38, 0.15);
+          animation-delay: 0.5s;
+        }
+        @keyframes ringPulse {
+          0%, 100% { opacity: 0.3; transform: scale(1); }
+          50% { opacity: 0.8; transform: scale(1.02); }
         }
 
-        @keyframes glowPulse {
-          0%, 100% { 
-            opacity: 0.6;
-            transform: translate(-50%, -50%) scale(1);
-          }
-          50% { 
-            opacity: 1;
-            transform: translate(-50%, -50%) scale(1.1);
-          }
-        }
-
-        /* === TÍTULO PRINCIPAL === */
-        .loading-title {
-          font-size: 3.5rem;
+        /* Title */
+        .loader-title {
+          font-size: 2.8rem;
           font-weight: 900;
-          margin: 0;
-          letter-spacing: 3px;
+          margin: 0 0 0.3rem;
+          letter-spacing: 2px;
           line-height: 1;
-          margin-bottom: 0.5rem;
         }
-
-        .text-white {
-          color: #ffffff;
-          text-shadow: 
-            0 0 10px rgba(255, 255, 255, 0.5),
-            0 0 20px rgba(255, 255, 255, 0.3);
+        .title-white {
+          color: #fff;
+          text-shadow: 0 0 20px rgba(255, 255, 255, 0.4);
         }
-
-        .text-rust {
+        .title-rust {
           color: #dc2626;
-          background: linear-gradient(45deg, #dc2626, #ff4444, #dc2626);
+          background: linear-gradient(90deg, #dc2626, #ff4444, #dc2626);
           background-size: 200% auto;
           -webkit-background-clip: text;
           -webkit-text-fill-color: transparent;
           background-clip: text;
-          animation: textShine 3s linear infinite;
+          animation: shine 2s linear infinite;
         }
-
-        @keyframes textShine {
+        @keyframes shine {
           0% { background-position: 0% center; }
           100% { background-position: 200% center; }
         }
-
-        /* === SUBTÍTULO === */
-        .loading-subtitle {
+        .loader-tagline {
           color: rgba(255, 255, 255, 0.5);
-          font-size: 0.85rem;
-          letter-spacing: 6px;
-          margin: 0;
-          margin-bottom: 3rem;
+          font-size: 0.75rem;
+          letter-spacing: 4px;
           text-transform: uppercase;
+          margin: 0 0 1.5rem;
           font-weight: 500;
         }
 
-        /* === BARRA DE PROGRESO === */
-        .progress-container {
-          width: 100%;
-          max-width: 450px;
-          margin: 0 auto 1rem;
-          position: relative;
+        /* Terminal */
+        .terminal-window {
+          background: rgba(0, 0, 0, 0.7);
+          border: 1px solid rgba(220, 38, 38, 0.3);
+          border-radius: 12px;
+          overflow: hidden;
+          margin-bottom: 1.5rem;
+          backdrop-filter: blur(10px);
+          text-align: left;
+        }
+        .terminal-header {
+          background: rgba(220, 38, 38, 0.1);
+          padding: 0.5rem 0.8rem;
+          display: flex;
+          align-items: center;
+          gap: 0.8rem;
+          border-bottom: 1px solid rgba(220, 38, 38, 0.2);
+        }
+        .terminal-dots {
+          display: flex;
+          gap: 5px;
+        }
+        .dot {
+          width: 8px;
+          height: 8px;
+          border-radius: 50%;
+        }
+        .dot.red { background: #ff5f57; }
+        .dot.yellow { background: #ffbd2e; }
+        .dot.green { background: #28c840; }
+        .terminal-title {
+          color: rgba(255, 255, 255, 0.4);
+          font-size: 0.7rem;
+          font-family: monospace;
+        }
+        .terminal-body {
+          padding: 0.8rem;
+          font-family: 'Courier New', monospace;
+          font-size: 0.65rem;
+          max-height: 120px;
+          overflow-y: auto;
+        }
+        .terminal-line {
+          color: #4ade80;
+          margin-bottom: 0.2rem;
+          opacity: 0;
+          animation: lineAppear 0.3s ease forwards;
+        }
+        @keyframes lineAppear {
+          to { opacity: 1; }
+        }
+        .terminal-cursor {
+          color: #dc2626;
+          animation: blink 1s step-end infinite;
+        }
+        @keyframes blink {
+          50% { opacity: 0; }
         }
 
-        .progress-bar {
+        /* Progress */
+        .progress-wrapper {
+          margin-bottom: 1.5rem;
+        }
+        .progress-track {
           width: 100%;
-          height: 6px;
+          height: 4px;
           background: rgba(255, 255, 255, 0.08);
           border-radius: 10px;
           overflow: hidden;
           position: relative;
-          box-shadow: 
-            inset 0 0 10px rgba(0, 0, 0, 0.8),
-            0 0 10px rgba(220, 38, 38, 0.2);
-          border: 1px solid rgba(220, 38, 38, 0.2);
         }
-
         .progress-fill {
           height: 100%;
-          background: linear-gradient(90deg, 
-            #dc2626 0%, 
-            #ff4444 25%,
-            #ff6b6b 50%,
-            #ff4444 75%,
-            #dc2626 100%
-          );
+          background: linear-gradient(90deg, #dc2626, #ff4444, #dc2626);
           background-size: 200% 100%;
           border-radius: 10px;
           transition: width 0.3s ease;
-          animation: progressShine 2s linear infinite;
-          box-shadow: 
-            0 0 20px rgba(220, 38, 38, 0.8),
-            0 0 40px rgba(220, 38, 38, 0.4);
-          position: relative;
+          animation: progressShine 1.5s linear infinite;
+          box-shadow: 0 0 15px rgba(220, 38, 38, 0.6);
         }
-
         @keyframes progressShine {
           0% { background-position: 200% 0; }
           100% { background-position: -200% 0; }
         }
-
-        .progress-text {
+        .progress-glow {
           position: absolute;
-          top: -30px;
+          top: -5px;
+          left: 0;
           right: 0;
-          color: #dc2626;
-          font-weight: 700;
-          font-size: 1rem;
-          text-shadow: 0 0 10px rgba(220, 38, 38, 0.8);
+          height: 14px;
+          background: linear-gradient(90deg, transparent, rgba(220, 38, 38, 0.3), transparent);
+          filter: blur(5px);
         }
-
-        /* === ESTADO DE CARGA === */
-        .loading-status {
-          color: rgba(255, 255, 255, 0.6);
-          font-size: 0.9rem;
-          margin: 1rem 0 3rem;
-          animation: statusBlink 1.5s ease-in-out infinite;
-          font-weight: 400;
-        }
-
-        @keyframes statusBlink {
-          0%, 100% { opacity: 1; }
-          50% { opacity: 0.4; }
-        }
-
-        /* === STATS CARDS === */
-        .stats-grid {
-          display: grid;
-          grid-template-columns: repeat(3, 1fr);
-          gap: 1rem;
-          margin-top: 3rem;
-          animation: statsAppear 1s ease-out 0.5s both;
-        }
-
-        @keyframes statsAppear {
-          from {
-            opacity: 0;
-            transform: translateY(20px);
-          }
-          to {
-            opacity: 1;
-            transform: translateY(0);
-          }
-        }
-
-        .stat-card {
-          background: rgba(0, 0, 0, 0.5);
-          border: 1px solid rgba(220, 38, 38, 0.3);
-          border-radius: 12px;
-          padding: 1.2rem 0.8rem;
+        .progress-info {
           display: flex;
-          flex-direction: column;
-          align-items: center;
-          gap: 0.5rem;
-          transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-          backdrop-filter: blur(10px);
-          position: relative;
-          overflow: hidden;
+          justify-content: space-between;
+          margin-top: 0.5rem;
         }
-
-        .stat-card::before {
-          content: '';
-          position: absolute;
-          top: 0;
-          left: -100%;
-          width: 100%;
-          height: 100%;
-          background: linear-gradient(90deg, 
-            transparent, 
-            rgba(220, 38, 38, 0.1), 
-            transparent
-          );
-          transition: left 0.5s ease;
+        .progress-status {
+          color: rgba(255, 255, 255, 0.6);
+          font-size: 0.75rem;
         }
-
-        .stat-card:hover::before {
-          left: 100%;
-        }
-
-        .stat-card:hover {
-          background: rgba(220, 38, 38, 0.1);
-          border-color: rgba(220, 38, 38, 0.6);
-          transform: translateY(-5px);
-          box-shadow: 
-            0 10px 30px rgba(220, 38, 38, 0.3),
-            inset 0 0 20px rgba(220, 38, 38, 0.1);
-        }
-
-        .stat-icon {
-          width: 40px;
-          height: 40px;
+        .progress-percent {
           color: #dc2626;
-          margin-bottom: 0.3rem;
-          filter: drop-shadow(0 0 8px rgba(220, 38, 38, 0.6));
-          transition: all 0.3s ease;
-        }
-
-        .stat-card:hover .stat-icon {
-          transform: scale(1.1);
-          filter: drop-shadow(0 0 15px rgba(220, 38, 38, 1));
-        }
-
-        .stat-icon svg {
-          width: 100%;
-          height: 100%;
-        }
-
-        .stat-label {
-          color: rgba(255, 255, 255, 0.5);
-          font-size: 0.7rem;
-          text-transform: uppercase;
-          letter-spacing: 1.5px;
-          font-weight: 500;
-        }
-
-        .stat-value {
-          color: #ffffff;
           font-weight: 700;
-          font-size: 0.95rem;
-          text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+          font-size: 0.85rem;
+          text-shadow: 0 0 10px rgba(220, 38, 38, 0.5);
         }
 
-        /* === RESPONSIVE === */
-        @media (max-width: 768px) {
-          .loading-title {
-            font-size: 2.5rem;
-          }
-          
-          .loading-logo {
-            width: 120px;
-            height: 120px;
-          }
-          
-          .progress-container {
-            max-width: 320px;
-          }
-          
-          .stats-grid {
-            grid-template-columns: 1fr;
-            gap: 0.8rem;
-            max-width: 250px;
-            margin: 2rem auto 0;
-          }
-          
-          .stat-card {
-            padding: 1rem;
-          }
+        /* Feature pills */
+        .feature-pills {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: center;
+          gap: 0.5rem;
+        }
+        .pill {
+          display: flex;
+          align-items: center;
+          gap: 0.3rem;
+          background: rgba(220, 38, 38, 0.1);
+          border: 1px solid rgba(220, 38, 38, 0.25);
+          padding: 0.4rem 0.8rem;
+          border-radius: 50px;
+          color: rgba(255, 255, 255, 0.8);
+          font-size: 0.65rem;
+          font-weight: 500;
+          animation: pillAppear 0.5s ease forwards;
+          opacity: 0;
+        }
+        .pill:nth-child(1) { animation-delay: 0.5s; }
+        .pill:nth-child(2) { animation-delay: 0.7s; }
+        .pill:nth-child(3) { animation-delay: 0.9s; }
+        .pill:nth-child(4) { animation-delay: 1.1s; }
+        @keyframes pillAppear {
+          from { opacity: 0; transform: translateY(10px); }
+          to { opacity: 1; transform: translateY(0); }
+        }
+        .pill-icon {
+          font-size: 0.8rem;
         }
 
-        @media (max-width: 480px) {
-          .loading-title {
-            font-size: 2rem;
-            letter-spacing: 2px;
-          }
-          
-          .loading-subtitle {
-            font-size: 0.7rem;
-            letter-spacing: 4px;
-          }
-          
-          .loading-logo {
-            width: 100px;
-            height: 100px;
-          }
-          
-          .progress-container {
-            max-width: 280px;
-          }
-          
-          .stat-icon {
-            width: 32px;
-            height: 32px;
-          }
+        /* Responsive */
+        @media (max-width: 640px) {
+          .loader-title { font-size: 2.2rem; }
+          .loader-logo { width: 100px; height: 100px; }
+          .terminal-body { font-size: 0.55rem; max-height: 90px; }
+          .feature-pills { gap: 0.4rem; }
+          .pill { font-size: 0.6rem; padding: 0.3rem 0.6rem; }
+        }
+
+        @media (max-width: 380px) {
+          .loader-title { font-size: 1.8rem; }
+          .loader-tagline { font-size: 0.6rem; letter-spacing: 2px; }
         }
       `}</style>
     </div>

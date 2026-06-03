@@ -34,7 +34,7 @@ const ServidoresRustPirata: React.FC = () => {
               JOGAR NO SERVIDOR #1 →
             </Link>
             <a 
-              href="https://discord.gg/dT8u5b3jga"
+              href="https://api.whatsapp.com/send?phone=595981144534"
               target="_blank"
               rel="noopener noreferrer"
               className="px-8 py-4 bg-gray-800 hover:bg-gray-700 rounded-xl font-bold text-lg transition-all"

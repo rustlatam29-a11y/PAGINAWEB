@@ -16,7 +16,7 @@ function HomePage() {
       <CurrencyCalculator />
       <Section />
       <SEOContent />
-      <Footer title="Footer Title" />
+      <Footer />
     </GlobalBackground>
   );
 }
