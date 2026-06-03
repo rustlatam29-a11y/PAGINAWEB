@@ -18,22 +18,18 @@ const Hero: React.FC = () => {
 
         {/* Main heading */}
         <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black text-white leading-[0.9] tracking-tight mb-6">
-          VENDEmos
+          SERVIDORES
           <br />
-          <span className="text-red-500">SERVIDORES</span>
-          <br />
-          <span className="text-gray-500 text-3xl sm:text-4xl md:text-5xl font-bold tracking-normal">
-            de Rust Pirata
-          </span>
+          <span className="text-red-500">RUST PIRATA</span>
         </h1>
 
         {/* Subtitle */}
         <p className="text-gray-400 text-lg sm:text-xl max-w-2xl mx-auto mb-10 leading-relaxed">
-          Licencias, configuración, plugins y soporte para{" "}
+          Venta de servidores, plugins y soporte técnico para{" "}
           <span className="text-white font-semibold">Rust 2275</span> y{" "}
           <span className="text-white font-semibold">Rust 2388</span>.
           <br className="hidden sm:block" />
-          Todo lo que necesitás para tener tu propio servidor.
+          Más de 8 años de experiencia administrando comunidades gaming.
         </p>
 
         {/* CTAs */}
