@@ -31,12 +31,9 @@ const Header: React.FC = () => {
           {/* Logo */}
           <a href="/" className="flex items-center gap-3">
             <img
-              src="/img1.webp"
+              src="/loader-bg.png"
               alt="Logo"
               className="w-10 h-10 rounded-lg object-cover"
-              onError={(e) => {
-                e.currentTarget.style.display = "none";
-              }}
             />
             <span className="text-white font-black text-xl tracking-tight">
               Paraguay<span className="text-red-500">RAIDER</span>

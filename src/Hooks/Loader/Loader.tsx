@@ -1,11 +1,10 @@
 import React, { useState, useEffect } from "react";
 
 interface LoaderProps {
-  logoUrl?: string;
   onLoadComplete?: () => void;
 }
 
-const Loader: React.FC<LoaderProps> = ({ logoUrl = "/LATAMLOGO.webp", onLoadComplete }) => {
+const Loader: React.FC<LoaderProps> = ({ onLoadComplete }) => {
   const [progress, setProgress] = useState(0);
   const [isVisible, setIsVisible] = useState(true);
 
@@ -36,23 +35,12 @@ const Loader: React.FC<LoaderProps> = ({ logoUrl = "/LATAMLOGO.webp", onLoadComp
 
   return (
     <div
-      className="fixed inset-0 flex items-center justify-center z-50 transition-opacity duration-500"
+      className="fixed inset-0 bg-[#0a0a0a] flex items-center justify-center z-50 transition-opacity duration-500"
       style={{ opacity: progress >= 100 ? 0 : 1 }}
     >
-      {/* Background image */}
-      <div className="absolute inset-0">
+      <div className="text-center px-6">
         <img
           src="/loader-bg.png"
-          alt=""
-          className="w-full h-full object-cover"
-        />
-        <div className="absolute inset-0 bg-[#0a0a0a]/70" />
-      </div>
-
-      {/* Content */}
-      <div className="relative z-10 text-center px-6">
-        <img
-          src={logoUrl}
           alt="LATAMRUST"
           className="w-20 h-20 rounded-2xl mx-auto mb-6 object-cover"
         />
@@ -60,7 +48,7 @@ const Loader: React.FC<LoaderProps> = ({ logoUrl = "/LATAMLOGO.webp", onLoadComp
         <h1 className="text-white font-black text-2xl tracking-tight mb-1">
           Paraguay<span className="text-red-500">RAIDER</span>
         </h1>
-        <p className="text-gray-400 text-xs tracking-widest uppercase mb-8">
+        <p className="text-gray-500 text-xs tracking-widest uppercase mb-8">
           Servidores y Plugins de Rust
         </p>
 
@@ -71,7 +59,7 @@ const Loader: React.FC<LoaderProps> = ({ logoUrl = "/LATAMLOGO.webp", onLoadComp
           />
         </div>
 
-        <p className="text-gray-500 text-xs mt-4">ParaguayDev</p>
+        <p className="text-gray-600 text-xs mt-4">ParaguayDev</p>
       </div>
     </div>
   );
