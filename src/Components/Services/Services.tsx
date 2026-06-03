@@ -16,7 +16,7 @@ const services = [
   {
     icon: Code,
     title: "Desarrollo a Medida",
-    description: "Plugins personalizados para tu servidor. Experiencia real con RustSpain y Brasa.gg.",
+    description: "Plugins personalizados para tu servidor. Experiencia real con grandes comunidades Rust.",
   },
   {
     icon: Shield,

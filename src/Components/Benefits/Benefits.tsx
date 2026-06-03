@@ -12,8 +12,8 @@ const benefits = [
     description: "Más de 10,000 horas jugando y administrando servidores. Sé lo que funciona.",
   },
   {
-    title: "Plugins de comunidades grandes",
-    description: "Desarrollé plugins para RustSpain y Brasa.gg, dos de las comunidades más grandes de LATAM.",
+    title: "Experiencia con grandes servidores",
+    description: "Trabajé con las comunidades más reconocidas del ecosistema Rust como RustSpain y Brasa.gg, entre otras.",
   },
   {
     title: "Soporte directo y rápido",
@@ -115,7 +115,7 @@ const Benefits: React.FC = () => {
 
               <div className="border-t border-white/5 pt-6">
                 <p className="text-center text-gray-400 text-sm italic">
-                  "Desarrollador de Plugins para RustSpain y Brasa.gg"
+                  "Experiencia en grandes servidores del ecosistema Rust"
                 </p>
               </div>
             </div>

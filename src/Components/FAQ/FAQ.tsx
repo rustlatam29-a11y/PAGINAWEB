@@ -33,7 +33,7 @@ const faqs = [
   },
   {
     question: "¿Hacés plugins personalizados?",
-    answer: "Sí, desarrollo plugins a medida para tu servidor. Tengo experiencia con RustSpain y Brasa.gg.",
+    answer: "Sí, desarrollo plugins a medida para tu servidor. Tengo experiencia en las comunidades más grandes del ecosistema Rust.",
   },
 ];
 
