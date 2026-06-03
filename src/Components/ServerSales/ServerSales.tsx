@@ -98,6 +98,24 @@ const ServerSales: React.FC = () => {
                 isVisible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
               }`}
             >
+              {/* ===================== BANNER PEDIDO ===================== */}
+              <div className="mb-8 inline-flex flex-col items-center gap-3">
+                <div className="bg-gradient-to-r from-green-600/20 to-green-800/20 border-2 border-green-500/50 rounded-2xl px-6 py-4 shadow-lg shadow-green-500/20">
+                  <p className="text-green-400 font-black text-xl sm:text-2xl tracking-wide">
+                    ⚡ PEDIDOS SOLO POR WHATSAPP ⚡
+                  </p>
+                  <p className="text-gray-400 text-sm mt-1">
+                    Atención personalizada • Respuesta inmediata
+                  </p>
+                </div>
+                <div className="flex items-center gap-4 text-gray-400 text-sm">
+                  <span className="flex items-center gap-1">
+                    <span className="w-2 h-2 bg-purple-500 rounded-full"></span>
+                    Discord: <strong className="text-purple-400">paraguayraider</strong> / <strong className="text-purple-400">paraguayservers</strong>
+                  </span>
+                </div>
+              </div>
+
               <h2 className="text-4xl sm:text-5xl lg:text-6xl font-black text-white mb-4" itemProp="name">
                 VENTAS DE{" "}
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-red-700">

@@ -84,6 +84,16 @@ const Hero: React.FC = () => {
                   </p>
                   <p className="subtitle-cta">• ¡Únete Ahora!</p>
                 </div>
+
+                {/* BANNER PEDIDOS */}
+                <div className="bg-gradient-to-r from-green-600/20 to-green-800/20 border-2 border-green-500/50 rounded-2xl px-6 py-4 shadow-lg shadow-green-500/20">
+                  <p className="text-green-400 font-black text-xl tracking-wide">
+                    ⚡ PEDIDOS SOLO POR WHATSAPP ⚡
+                  </p>
+                  <p className="text-gray-400 text-sm mt-1">
+                    Discord: <strong className="text-purple-400">paraguayraider</strong> / <strong className="text-purple-400">paraguayservers</strong>
+                  </p>
+                </div>
                 
                 {/* Botones de Acción - RUST */}
                 <div className="hero-actions">
@@ -125,6 +135,16 @@ const Hero: React.FC = () => {
                     Servidor DayZ • LATAM • 24/7
                   </p>
                   <p className="subtitle-cta">• Únete Ahora!</p>
+                </div>
+
+                {/* BANNER PEDIDOS */}
+                <div className="bg-gradient-to-r from-green-600/20 to-green-800/20 border-2 border-green-500/50 rounded-2xl px-6 py-4 shadow-lg shadow-green-500/20">
+                  <p className="text-green-400 font-black text-xl tracking-wide">
+                    ⚡ PEDIDOS SOLO POR WHATSAPP ⚡
+                  </p>
+                  <p className="text-gray-400 text-sm mt-1">
+                    Discord: <strong className="text-purple-400">paraguayraider</strong> / <strong className="text-purple-400">paraguayservers</strong>
+                  </p>
                 </div>
                 
                 {/* Botones de Acción - DAYZ */}
