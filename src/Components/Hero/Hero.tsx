@@ -49,15 +49,6 @@ const Hero: React.FC = () => {
             <p className="text-gray-400 text-lg">
               Servidor echo por ParaguayRAIDER • LATAM
             </p>
-
-            {/* WhatsApp CTA */}
-            <div className="flex flex-col items-center gap-3">
-              <a href="https://api.whatsapp.com/send?phone=595981144534" target="_blank" rel="noopener noreferrer" 
-                className="inline-flex items-center gap-2 bg-white/5 border border-white/10 rounded-xl px-6 py-3 text-white font-bold hover:bg-white/10 hover:border-white/20 transition-all">
-                <span className="text-green-400">WhatsApp</span> ParaguayRAIDER
-              </a>
-              <p className="text-gray-500 text-xs">Solo vendemos por WhatsApp y únicamente con ParaguayRAIDER</p>
-            </div>
             
             {/* Buttons */}
             <div className="flex items-center justify-center gap-4">
@@ -94,15 +85,6 @@ const Hero: React.FC = () => {
             <p className="text-gray-400 text-lg">
               Servidor DayZ • LATAM • 24/7
             </p>
-
-            {/* WhatsApp CTA */}
-            <div className="flex flex-col items-center gap-3">
-              <a href="https://api.whatsapp.com/send?phone=595981144534" target="_blank" rel="noopener noreferrer" 
-                className="inline-flex items-center gap-2 bg-white/5 border border-white/10 rounded-xl px-6 py-3 text-white font-bold hover:bg-white/10 hover:border-white/20 transition-all">
-                <span className="text-green-400">WhatsApp</span> ParaguayRAIDER
-              </a>
-              <p className="text-gray-500 text-xs">Solo vendemos por WhatsApp y únicamente con ParaguayRAIDER</p>
-            </div>
             
             {/* Buttons */}
             <div className="flex items-center justify-center gap-4">

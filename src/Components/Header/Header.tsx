@@ -35,6 +35,7 @@ const Header: React.FC<HeaderProps> = ({
               <span className="text-white font-black text-lg tracking-tight">
                 LATAM<span className="text-red-500">RUST</span>
               </span>
+              <p className="text-gray-500 text-[10px] tracking-widest uppercase -mt-0.5">Servidores Piratas</p>
             </div>
           </div>
           <div className="flex items-center gap-4">
