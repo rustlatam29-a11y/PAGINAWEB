@@ -3,24 +3,11 @@ import { ArrowRight, MessageCircle } from "lucide-react";
 
 const Hero: React.FC = () => {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Background image */}
-      <div className="absolute inset-0">
-        <img
-          src="/img1.webp"
-          alt=""
-          className="w-full h-full object-cover"
-          onError={(e) => {
-            e.currentTarget.style.display = "none";
-          }}
-        />
-        <div className="absolute inset-0 bg-gradient-to-b from-[#0a0a0a]/80 via-[#0a0a0a]/60 to-[#0a0a0a]" />
-      </div>
-
+    <section className="relative min-h-[90vh] flex items-center justify-center px-4 pt-24 pb-16">
       {/* Content */}
       <div className="relative z-10 text-center px-4 max-w-5xl mx-auto">
         {/* Badge */}
-        <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-white/10 bg-white/5 mb-8 backdrop-blur-sm">
+        <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-white/10 bg-white/5 mb-8">
           <div className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
           <span className="text-gray-300 text-sm font-medium">Servidores activos 24/7</span>
         </div>
@@ -52,9 +39,6 @@ const Hero: React.FC = () => {
           <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
         </a>
       </div>
-
-      {/* Bottom gradient fade */}
-      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-[#0a0a0a] to-transparent" />
     </section>
   );
 };
