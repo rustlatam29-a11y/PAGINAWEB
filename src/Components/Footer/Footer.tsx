@@ -43,8 +43,7 @@ const Footer: React.FC = () => {
           <div>
             <h4 className="text-white font-bold text-sm mb-4">Comunidad</h4>
             <div className="space-y-2">
-              <p className="text-gray-500 text-sm">Discord: paraguayraider</p>
-              <p className="text-gray-500 text-sm">Discord: paraguayservers</p>
+            <p className="text-gray-500 text-sm">Discord: paraguayservers</p>
             </div>
           </div>
         </div>
