@@ -32,9 +32,6 @@ const Section: React.FC = () => {
         ref={sectionRef}
         className="relative py-12 sm:py-16 lg:py-20 overflow-hidden"
       >
-        {/* Simple background */}
-        <div className="absolute inset-0 bg-gradient-to-b from-black via-gray-950 to-black"></div>
-
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Title */}
           <div className="text-center mb-12 lg:mb-16">

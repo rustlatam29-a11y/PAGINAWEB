@@ -1,284 +1,51 @@
-import React, { useState, useEffect, useMemo, useCallback } from "react";
-import { Zap } from "lucide-react";
+import React, { useState, useEffect } from "react";
 
 interface HeaderProps {
-  discordInviteUrl?: string;
   logoUrl?: string;
 }
 
 const Header: React.FC<HeaderProps> = ({
   logoUrl = "/img1.webp",
 }) => {
-  const [isLoaded, setIsLoaded] = useState(false);
-  const [lettersVisible, setLettersVisible] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
 
-  // Memoizar valores estáticos
-  const animatedText = useMemo(() => "LATAMRUST".split(""), []);
-
-  const scrollToSection = useCallback((sectionId: string) => {
-    const element = document.getElementById(sectionId);
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
-    }
-  }, []);
-
-  // Efectos optimizados
   useEffect(() => {
-    const timer = setTimeout(() => setIsLoaded(true), 100);
-    const lettersTimer = setTimeout(() => setLettersVisible(true), 500);
-
-    return () => {
-      clearTimeout(timer);
-      clearTimeout(lettersTimer);
-    };
+    const handleScroll = () => setScrolled(window.scrollY > 50);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
-
-  // Generar elementos animados una sola vez
-  const particles = useMemo(
-    () =>
-      Array.from({ length: 15 }, (_, i) => ({
-        id: i,
-        left: `${Math.random() * 100}%`,
-        top: `${Math.random() * 100}%`,
-        delay: `${Math.random() * 3}s`,
-        duration: `${3 + Math.random() * 2}s`,
-      })),
-    []
-  );
-
-  const lightningBolts = useMemo(
-    () =>
-      Array.from({ length: 2 }, (_, i) => ({
-        id: i,
-        delay: `${i * 2}s`,
-      })),
-    []
-  );
 
   return (
-    <>
-      <header className="fixed top-0 left-0 w-full z-40 bg-gradient-to-r from-black via-red-950/80 to-black shadow-2xl border-b border-red-900/30 backdrop-blur-sm">
-        {/* Fondo animado con partículas */}
-        <div className="absolute inset-0">
-          <div className="absolute inset-0 bg-black/50">
-            {/* Partículas flotantes */}
-            {particles.map(({ id, left, top, delay, duration }) => (
-              <div
-                key={id}
-                className={`absolute w-1 h-1 bg-red-800 rounded-full animate-pulse ${
-                  isLoaded ? "animate-float" : "opacity-0"
-                }`}
-                style={{
-                  left,
-                  top,
-                  animationDelay: delay,
-                  animationDuration: duration,
-                }}
-              />
-            ))}
-
-            {/* Patrón de cuadrícula animado */}
-            <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg%20width=&#39;40&#39;%20height=&#39;40&#39;%20viewBox=&#39;0%200%2040%2040&#39;%20xmlns=&#39;http://www.w3.org/2000/svg&#39;%3E%3Cg%20fill=&#39;none&#39;%20fill-rule=&#39;evenodd&#39;%3E%3Cg%20fill=&#39;%23ffffff&#39;%20fill-opacity=&#39;0.03&#39;%3E%3Cpath%20d=&#39;M0%200h20v20H0zM20%2020h20v20H20z&#39;/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] animate-pulse opacity-30" />
-
-            {/* Orbes brillantes */}
-            <div className="absolute top-10 left-20 w-24 md:w-32 h-24 md:h-32 bg-red-900/10 rounded-full blur-lg md:blur-xl animate-pulse" />
-            <div
-              className="absolute top-20 right-20 md:right-32 w-16 md:w-24 h-16 md:h-24 bg-red-950/15 rounded-full blur-lg md:blur-xl animate-pulse"
-              style={{ animationDelay: "1s" }}
-            />
-            <div
-              className="absolute bottom-10 left-1/4 md:left-1/3 w-16 md:w-20 h-16 md:h-20 bg-neutral-900/10 rounded-full blur-lg md:blur-xl animate-pulse"
-              style={{ animationDelay: "2s" }}
-            />
-          </div>
-        </div>
-
-        {/* Efectos de rayo */}
-        <div className="absolute inset-0 pointer-events-none">
-          {lightningBolts.map(({ id, delay }) => (
-            <div
-              key={id}
-              className={`absolute inset-0 bg-gradient-to-r from-transparent via-red-900/5 to-transparent transform -skew-x-12 ${
-                isLoaded ? "animate-lightning" : "opacity-0"
-              }`}
-              style={{
-                animationDelay: delay,
-                animationDuration: "3s",
+    <header className={`fixed top-0 left-0 w-full z-40 transition-all duration-300 ${
+      scrolled ? "bg-black/90 backdrop-blur-md border-b border-white/5" : "bg-transparent"
+    }`}>
+      <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex items-center justify-between h-16">
+          <div className="flex items-center gap-3">
+            <img
+              src={logoUrl}
+              alt="Logo LATAMRUST"
+              className="w-10 h-10 rounded-lg object-cover"
+              onError={(e) => {
+                const target = e.currentTarget;
+                target.style.display = "none";
               }}
             />
-          ))}
-        </div>
-
-        <nav className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 z-10 overflow-visible">
-          <div className="flex justify-between items-center h-16 md:h-20">
-            {/* Logo animado MEJORADO */}
-            <div
-              className={`flex items-center space-x-3 md:space-x-5 group cursor-pointer transform transition-all duration-1000 ${
-                isLoaded ? "translate-x-0 opacity-100" : "-translate-x-20 opacity-0"
-              }`}
-              onClick={() => scrollToSection("home")}
-            >
-              <div className="relative">
-                {/* Anillo exterior con degradado profesional */}
-                <div className="absolute -inset-2 md:-inset-3 bg-gradient-to-br from-red-800 via-red-900 to-black rounded-2xl opacity-30 group-hover:opacity-60 blur-sm transition-all duration-500" />
-                
-                {/* Anillo medio giratorio */}
-                <div className="absolute -inset-1.5 md:-inset-2.5 bg-gradient-to-tr from-red-900/20 via-red-800/20 to-red-900/20 rounded-xl animate-spin-slow" />
-                
-                {/* Contenedor del logo con borde metálico */}
-                <div className="relative w-12 h-12 md:w-16 md:h-16 bg-gradient-to-br from-red-950 via-black to-neutral-950 rounded-xl md:rounded-2xl flex items-center justify-center transform group-hover:scale-105 transition-all duration-500 shadow-2xl border border-red-900/50 group-hover:border-red-800/70 overflow-hidden">
-                  
-                  {/* Efecto de brillo interno */}
-                  <div className="absolute inset-0 bg-gradient-to-tr from-red-900/10 via-transparent to-red-800/5" />
-                  
-                  {/* Imagen del logo */}
-                  <img
-                    src={logoUrl}
-                    alt="Logo LATAM RUST"
-                    className="w-8 h-8 md:w-12 md:h-12 object-cover rounded-lg md:rounded-xl z-10 filter group-hover:brightness-110 transition-all duration-500"
-                    onError={(e) => {
-                      const target = e.currentTarget;
-                      target.style.display = "none";
-                      const fallback = target.nextElementSibling as HTMLElement;
-                      if (fallback) fallback.style.display = "flex";
-                    }}
-                  />
-                  
-                  {/* Fallback con diseño mejorado */}
-                  <div
-                    className="w-8 h-8 md:w-12 md:h-12 bg-gradient-to-br from-red-900 to-black rounded-lg md:rounded-xl items-center justify-center text-white font-black text-sm md:text-lg z-10"
-                    style={{ display: "none" }}
-                  >
-                    LR
-                  </div>
-                  
-                  {/* Overlay de hover */}
-                  <div className="absolute inset-0 bg-gradient-to-br from-red-900/0 to-red-800/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-xl md:rounded-2xl" />
-                  
-                  {/* Partículas flotantes alrededor del logo */}
-                  <div className="absolute -top-1 -right-1 w-2 h-2 bg-red-400/40 rounded-full animate-ping" />
-                  <div className="absolute -bottom-1 -left-1 w-1.5 h-1.5 bg-red-600/40 rounded-full animate-ping" style={{ animationDelay: "0.5s" }} />
-                </div>
-
-                {/* Icono decorativo */}
-                <Zap
-                  className="absolute -top-1 -left-1 md:-top-2 md:-left-2 w-4 h-4 md:w-5 md:h-5 text-red-400 opacity-0 group-hover:opacity-100 group-hover:animate-bounce transition-all duration-300"
-                />
-              </div>
-
-              <div className="flex flex-col space-y-1">
-                {/* Título animado con letras escalonadas - MEJORADO */}
-                <div className="text-xl md:text-2xl lg:text-3xl font-black tracking-tight flex items-center">
-                  {animatedText.map((letter, index) => (
-                    <span
-                      key={`${letter}-${index}`}
-                      className={`inline-block transform transition-all duration-500 ${
-                        lettersVisible
-                          ? "translate-y-0 opacity-100"
-                          : "translate-y-8 opacity-0"
-                      } ${
-                        index < 5 ? "text-white" : "text-red-600"
-                      } hover:scale-110 md:hover:scale-125 hover:text-red-400 cursor-default relative group/letter`}
-                      style={{
-                        transitionDelay: `${index * 80}ms`,
-                        textShadow: index < 5 
-                          ? "0 2px 10px rgba(0, 0, 0, 0.8), 0 0 15px rgba(255, 255, 255, 0.3)" 
-                          : "0 2px 15px rgba(220, 38, 38, 0.8), 0 0 25px rgba(220, 38, 38, 0.5)",
-                        fontFamily: "Impact, 'Arial Black', sans-serif",
-                      }}
-                    >
-                      {letter}
-                      {/* Subrayado animado individual */}
-                      <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-red-600 to-red-800 group-hover/letter:w-full transition-all duration-300" />
-                    </span>
-                  ))}
-                </div>
-
-                {/* Subtítulo mejorado - Badge minimalista */}
-                <div
-                  className={`flex items-center space-x-2 transform transition-all duration-1000 ${
-                    isLoaded ? "translate-x-0 opacity-100" : "translate-x-10 opacity-0"
-                  }`}
-                  style={{ transitionDelay: "1s" }}
-                >
-                  <div className="flex items-center space-x-2 bg-black/60 px-3 py-1 rounded border border-red-900/30 backdrop-blur-sm">
-                    <p className="text-gray-400 text-xs md:text-sm font-semibold tracking-[0.2em] uppercase">
-                      Servidores Piratas
-                    </p>
-                    <div className="w-1.5 h-1.5 bg-red-600 rounded-full animate-pulse shadow-[0_0_8px_rgba(220,38,38,0.6)]" />
-                  </div>
-                </div>
-              </div>
+            <div>
+              <span className="text-white font-black text-lg tracking-tight">
+                LATAM<span className="text-red-500">RUST</span>
+              </span>
             </div>
-
-
           </div>
-
-
-        </nav>
-      </header>
-
-      {/* CSS personalizado para animaciones adicionales */}
-      <style>{`
-        @keyframes float {
-          0%,
-          100% {
-            transform: translateY(0px) rotate(0deg);
-          }
-          50% {
-            transform: translateY(-8px) rotate(180deg);
-          }
-        }
-
-        @keyframes lightning {
-          0% {
-            transform: translateX(-100%) skewX(-12deg);
-            opacity: 0;
-          }
-          50% {
-            opacity: 1;
-          }
-          100% {
-            transform: translateX(100%) skewX(-12deg);
-            opacity: 0;
-          }
-        }
-
-        @keyframes spin-slow {
-          from {
-            transform: rotate(0deg);
-          }
-          to {
-            transform: rotate(360deg);
-          }
-        }
-
-        @keyframes spin-reverse {
-          from {
-            transform: rotate(360deg);
-          }
-          to {
-            transform: rotate(0deg);
-          }
-        }
-
-        .animate-float {
-          animation: float 3s ease-in-out infinite;
-        }
-
-        .animate-lightning {
-          animation: lightning 3s ease-in-out infinite;
-        }
-
-        .animate-spin-slow {
-          animation: spin-slow 8s linear infinite;
-        }
-
-        .animate-spin-reverse {
-          animation: spin-reverse 6s linear infinite;
-        }
-      `}</style>
-    </>
+          <div className="flex items-center gap-4">
+            <a href="https://api.whatsapp.com/send?phone=595981144534" target="_blank" rel="noopener noreferrer"
+              className="text-gray-400 hover:text-white text-sm font-medium transition-colors">
+              Contacto
+            </a>
+          </div>
+        </div>
+      </nav>
+    </header>
   );
 };
 

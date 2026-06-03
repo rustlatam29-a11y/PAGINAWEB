@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
-import { Server, Shield, Star, Check } from "lucide-react";
+import { Star, Check, ArrowRight } from "lucide-react";
 
 interface RustPlan {
   name: string;
@@ -53,7 +53,6 @@ const rustPlans: RustPlan[] = [
 
 const ServerSales: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);
-  const [selectedRustPlan, setSelectedRustPlan] = useState<number | null>(null);
   const sectionRef = useRef<HTMLElement>(null);
 
   useEffect(() => {
@@ -92,28 +91,18 @@ const ServerSales: React.FC = () => {
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
           {/* ===================== HEADER ===================== */}
-          <div className="text-center mb-12">
+          <div className="text-center mb-16">
             <div
               className={`transform transition-all duration-700 ${
                 isVisible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
               }`}
             >
               {/* ===================== BANNER PEDIDO ===================== */}
-              <div className="mb-8 inline-flex flex-col items-center gap-3">
-                <div className="bg-gradient-to-r from-green-600/20 to-green-800/20 border-2 border-green-500/50 rounded-2xl px-6 py-4 shadow-lg shadow-green-500/20">
-                  <p className="text-green-400 font-black text-xl sm:text-2xl tracking-wide">
-                    ⚡ PEDIDOS SOLO POR WHATSAPP ⚡
-                  </p>
-                  <p className="text-gray-400 text-sm mt-1">
-                    Atención personalizada • Respuesta inmediata
-                  </p>
-                </div>
-                <div className="flex items-center gap-4 text-gray-400 text-sm">
-                  <span className="flex items-center gap-1">
-                    <span className="w-2 h-2 bg-purple-500 rounded-full"></span>
-                    Discord: <strong className="text-purple-400">paraguayraider</strong> / <strong className="text-purple-400">paraguayservers</strong>
-                  </span>
-                </div>
+              <div className="mb-8 flex flex-col items-center gap-3">
+                <a href="https://api.whatsapp.com/send?phone=595981144534" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 bg-white/5 border border-white/10 rounded-xl px-6 py-3 text-white font-bold hover:bg-white/10 hover:border-white/20 transition-all">
+                  <span className="text-green-400">WhatsApp</span> ParaguayRAIDER
+                </a>
+                <p className="text-gray-500 text-xs">Solo vendemos por WhatsApp y únicamente con ParaguayRAIDER</p>
               </div>
 
               <h2 className="text-4xl sm:text-5xl lg:text-6xl font-black text-white mb-4" itemProp="name">
@@ -132,8 +121,6 @@ const ServerSales: React.FC = () => {
             </div>
           </div>
 
-          {/* ===================== FEATURES BAR ===================== */}
-
           {/* ===================== PLANES RUST ===================== */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8 max-w-4xl mx-auto mb-8">
             {rustPlans.map((plan, index) => (
@@ -143,67 +130,46 @@ const ServerSales: React.FC = () => {
                   isVisible ? "translate-y-0 opacity-100" : "translate-y-20 opacity-0"
                 } ${plan.popular ? "md:-mt-4 md:mb-4" : ""}`}
                 style={{ transitionDelay: `${index * 200 + 400}ms` }}
-                onMouseEnter={() => setSelectedRustPlan(index)}
-                onMouseLeave={() => setSelectedRustPlan(null)}
                 itemProp="offers"
                 itemScope
                 itemType="https://schema.org/Offer"
               >
                 {plan.popular && (
-                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 z-10">
-                    <div className="bg-gradient-to-r from-red-600 to-red-800 text-white text-sm font-bold px-4 py-1 rounded-full flex items-center gap-2 shadow-lg shadow-red-500/30">
-                      <Star className="w-4 h-4" fill="currentColor" />
+                  <div className="absolute -top-3 left-1/2 transform -translate-x-1/2 z-10">
+                    <div className="bg-red-600 text-white text-xs font-bold px-4 py-1.5 rounded-full flex items-center gap-1.5 shadow-lg shadow-red-500/30">
+                      <Star className="w-3.5 h-3.5" fill="currentColor" />
                       MÁS VENDIDO
                     </div>
                   </div>
                 )}
 
                 <div
-                  className={`relative h-full bg-gradient-to-b ${
+                  className={`relative h-full rounded-2xl p-6 lg:p-8 border transition-all duration-300 ${
                     plan.popular
-                      ? "from-gray-800/80 to-gray-900/80 border-red-500/50"
-                      : "from-gray-800/50 to-gray-900/50 border-white/10"
-                  } backdrop-blur-lg rounded-2xl p-6 lg:p-8 border transition-all duration-500 ${
-                    selectedRustPlan === index
-                      ? "scale-105 border-red-500/70 shadow-2xl shadow-red-500/20"
-                      : "hover:border-white/30"
+                      ? "bg-white/[0.03] border-red-500/40"
+                      : "bg-white/[0.02] border-white/10 hover:border-white/20"
                   }`}
                 >
-                  {plan.popular && (
-                    <div className="absolute inset-0 bg-gradient-to-r from-red-500/5 to-transparent rounded-2xl"></div>
-                  )}
-
-                  <div className="text-center mb-6 relative">
-                    <div
-                      className={`inline-flex items-center justify-center w-16 h-16 rounded-full mb-4 ${
-                        plan.popular ? "bg-red-500/20 text-red-400" : "bg-white/10 text-gray-300"
-                      }`}
-                    >
-                      <Server className="w-8 h-8" />
-                    </div>
-                    <h3 className="text-2xl font-bold text-white mb-1">{plan.name}</h3>
-                    <p className={`text-lg font-semibold mb-1 ${plan.popular ? "text-red-400" : "text-gray-400"}`}>
+                  <div className="text-center mb-6">
+                    <div className="text-xs font-bold tracking-widest text-gray-500 uppercase mb-3">
                       {plan.version}
-                    </p>
-                    <p className="text-gray-500 text-sm mb-3">{plan.subtitle}</p>
+                    </div>
+                    <h3 className="text-xl font-bold text-white mb-1">{plan.name}</h3>
+                    <p className="text-gray-500 text-sm mb-4">{plan.subtitle}</p>
                     <meta itemProp="priceCurrency" content="USD" />
                     <meta itemProp="price" content={plan.price.replace("$", "")} />
-                    <div className="flex items-baseline justify-center gap-1">
-                      <span className="text-4xl font-black text-white">{plan.price}</span>
-                      <span className="text-gray-400 text-lg">{plan.period}</span>
+                    <div className="flex items-baseline justify-center gap-2">
+                      <span className="text-5xl font-black text-white">{plan.price}</span>
+                      <span className="text-gray-500 text-sm">{plan.period}</span>
                     </div>
                   </div>
 
-                  <ul className="space-y-3 mb-8 relative">
+                  <div className="w-full h-px bg-white/10 mb-6"></div>
+
+                  <ul className="space-y-3 mb-8">
                     {plan.features.map((feature, i) => (
                       <li key={i} className="flex items-center gap-3">
-                        <div
-                          className={`w-5 h-5 rounded-full flex items-center justify-center flex-shrink-0 ${
-                            plan.popular ? "bg-red-500/20 text-red-400" : "bg-white/10 text-gray-400"
-                          }`}
-                        >
-                          <Check className="w-3 h-3" />
-                        </div>
+                        <Check className={`w-4 h-4 flex-shrink-0 ${plan.popular ? "text-red-400" : "text-gray-500"}`} />
                         <span className="text-gray-300 text-sm">{feature}</span>
                       </li>
                     ))}
@@ -213,13 +179,14 @@ const ServerSales: React.FC = () => {
                     href="https://api.whatsapp.com/send?phone=595981144534"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className={`block w-full text-center py-3 px-6 rounded-xl font-bold text-lg transition-all duration-300 ${
+                    className={`group flex items-center justify-center gap-2 w-full py-3.5 px-6 rounded-xl font-bold text-sm transition-all duration-300 ${
                       plan.popular
-                        ? "bg-gradient-to-r from-green-600 to-green-800 text-white hover:from-green-700 hover:to-green-900 shadow-lg shadow-green-500/30 hover:shadow-green-500/50"
-                        : "bg-white/10 text-white border border-white/20 hover:bg-white/20 hover:border-white/40"
+                        ? "bg-white text-black hover:bg-gray-100"
+                        : "bg-white/10 text-white border border-white/20 hover:bg-white/15 hover:border-white/30"
                     }`}
                   >
-                    {plan.popular ? "Contratar Ahora" : "Contratar Ahora"}
+                    Contratar Ahora
+                    <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
                   </a>
                 </div>
               </div>
@@ -233,15 +200,12 @@ const ServerSales: React.FC = () => {
             }`}
             style={{ transitionDelay: "800ms" }}
           >
-            <div className="bg-gradient-to-r from-yellow-500/10 to-orange-500/10 border border-yellow-500/30 rounded-2xl p-6 text-center">
-              <div className="flex items-center justify-center gap-2 mb-3">
-                <Shield className="w-6 h-6 text-yellow-400" />
-                <span className="text-yellow-400 font-bold text-lg">INFORMACIÓN IMPORTANTE</span>
-              </div>
-              <p className="text-gray-300 text-sm sm:text-base">
-                Los precios incluyen <span className="text-white font-bold">licencia, configuración y soporte del servidor Rust Pirata</span>. 
-                El <span className="text-yellow-400 font-bold">hosting (VPS) NO está incluido</span>. 
-                Te ayudamos a elegir el mejor VPS para tu servidor de Rust.
+            <div className="border border-yellow-500/20 rounded-xl p-5 text-center bg-yellow-500/[0.03]">
+              <p className="text-gray-300 text-sm">
+                <span className="text-yellow-400 font-bold">Nota:</span>{" "}
+                Los precios incluyen <span className="text-white font-semibold">licencia, configuración y soporte</span>. 
+                El <span className="text-yellow-400 font-semibold">hosting (VPS) NO está incluido</span>. 
+                Te ayudamos a elegir el mejor VPS para tu servidor.
               </p>
             </div>
           </div>
@@ -253,8 +217,8 @@ const ServerSales: React.FC = () => {
             }`}
             style={{ transitionDelay: "1000ms" }}
           >
-            <div className="bg-white/5 border border-white/10 rounded-2xl p-6 sm:p-8">
-              <h3 className="text-xl sm:text-2xl font-bold text-white mb-4 text-center">
+            <div className="border border-white/10 rounded-2xl p-6 sm:p-8 bg-white/[0.02]">
+              <h3 className="text-xl sm:text-2xl font-bold text-white mb-6 text-center">
                 ¿Por qué elegir un <span className="text-red-400">Servidor Rust Pirata</span>?
               </h3>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-gray-300 text-sm">
@@ -264,7 +228,7 @@ const ServerSales: React.FC = () => {
                 </div>
                 <div className="flex items-start gap-3">
                   <Check className="w-5 h-5 text-green-400 mt-0.5 flex-shrink-0" />
-                  <p><strong className="text-white">Rust 2388:</strong> La última versión con todos los gráficos y mejoras oficiales. Actualizadoconstantly.</p>
+                  <p><strong className="text-white">Rust 2388:</strong> La última versión con todos los gráficos y mejoras oficiales.</p>
                 </div>
                 <div className="flex items-start gap-3">
                   <Check className="w-5 h-5 text-green-400 mt-0.5 flex-shrink-0" />

@@ -14,7 +14,6 @@ const Footer: React.FC = () => {
             <Link to="/terms" className="hover:text-white transition-colors">Términos</Link>
             <Link to="/privacy" className="hover:text-white transition-colors">Privacidad</Link>
             <a href="https://api.whatsapp.com/send?phone=595981144534" target="_blank" rel="noopener noreferrer" className="hover:text-green-400 transition-colors font-bold">WhatsApp</a>
-            <span className="text-purple-400">Discord: paraguayraider / paraguayservers</span>
           </div>
         </div>
       </div>

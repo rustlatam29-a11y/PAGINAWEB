@@ -143,85 +143,74 @@ const CurrencyCalculator: React.FC = () => {
   };
 
   return (
-    <section className="relative py-8 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-5xl mx-auto">
+    <section className="relative py-12 px-4 sm:px-6 lg:px-8">
+      <div className="max-w-3xl mx-auto">
         {/* Header */}
         <div className="text-center mb-8">
-          <h2 className="text-3xl md:text-4xl font-bold mb-2">
-            <span className="text-white">Calculadora de </span>
-            <span className="text-red-500">Precios</span>
+          <h2 className="text-3xl font-black text-white mb-2">
+            Calculadora de <span className="text-red-500">Precios</span>
           </h2>
-          <p className="text-gray-400 text-sm">
+          <p className="text-gray-500 text-sm">
             Precios en tiempo real • 9 monedas de LATAM
           </p>
         </div>
 
         {/* Calculator Card */}
-        <div className="bg-black/60 backdrop-blur-xl rounded-2xl p-5 md:p-6 border border-gray-800/50 shadow-xl">
+        <div className="border border-white/10 rounded-2xl p-6 bg-white/[0.02]">
           {loading ? (
-            <div className="text-center py-4">
-              <RefreshCw className="w-8 h-8 text-red-500 animate-spin mx-auto mb-3" />
-              <p className="text-gray-400 text-sm">Cargando tasas...</p>
+            <div className="text-center py-8">
+              <RefreshCw className="w-6 h-6 text-gray-500 animate-spin mx-auto mb-3" />
+              <p className="text-gray-500 text-sm">Cargando tasas...</p>
             </div>
           ) : (
             <>
               {/* Plan Selection */}
               <div className="mb-6">
-                <label className="block text-gray-300 font-medium mb-3 text-sm">
-                  Seleccioná tu servidor
-                </label>
+                <label className="block text-gray-400 text-sm mb-3">Seleccioná tu servidor</label>
                 <div className="grid grid-cols-2 gap-3">
                   {rustPlans.map((plan) => (
                     <button
                       key={plan.id}
                       onClick={() => setSelectedPlan(plan.id)}
-                      className={`p-4 rounded-xl border transition-all duration-200 relative ${
+                      className={`p-4 rounded-xl border text-left transition-all ${
                         selectedPlan === plan.id
-                          ? "border-red-500 bg-red-500/10 shadow-lg shadow-red-500/20"
-                          : "border-gray-700 bg-gray-900/30 hover:border-gray-600"
+                          ? "border-red-500/50 bg-red-500/5"
+                          : "border-white/10 bg-white/[0.02] hover:border-white/20"
                       }`}
                     >
                       {plan.popular && (
-                        <div className="absolute -top-1.5 -right-1.5 bg-red-600 text-white text-xs px-1.5 py-0.5 rounded-md font-semibold">
-                          Popular
-                        </div>
+                        <div className="text-xs text-red-400 font-bold mb-2">Popular</div>
                       )}
-                      <div className="flex items-center gap-2 mb-2">
-                        <span className={selectedPlan === plan.id ? "text-red-400" : "text-gray-400"}>
+                      <div className="flex items-center gap-2 mb-1">
+                        <span className={selectedPlan === plan.id ? "text-red-400" : "text-gray-500"}>
                           {plan.icon}
                         </span>
-                        <span className="text-white font-semibold text-sm">{plan.name}</span>
+                        <span className="text-white font-bold text-sm">{plan.name}</span>
                       </div>
-                      <div className="text-gray-400 text-xs mb-2">{plan.version}</div>
-                      <div className="text-red-400 text-xl font-bold">${plan.price}</div>
+                      <div className="text-gray-500 text-xs mb-2">{plan.version}</div>
+                      <div className="text-white text-xl font-black">${plan.price}</div>
                     </button>
                   ))}
                 </div>
               </div>
 
               {/* Currency Selection */}
-              <div className="mb-8">
-                <label className="block text-white font-semibold mb-3 text-base">
-                  Selecciona tu moneda
-                </label>
+              <div className="mb-6">
+                <label className="block text-gray-400 text-sm mb-3">Selecciona tu moneda</label>
                 <div className="grid grid-cols-3 md:grid-cols-5 gap-2">
                   {(Object.keys(rates!) as Array<keyof ExchangeRates>).map((currency) => (
                     <button
                       key={currency}
                       onClick={() => setSelectedCurrency(currency)}
-                      className={`group relative p-3 rounded-xl border transition-all duration-200 ${
+                      className={`p-3 rounded-xl border text-center transition-all ${
                         selectedCurrency === currency
-                          ? "border-red-500 bg-red-500/10"
-                          : "border-gray-700/50 bg-gray-900/20 hover:border-gray-600 hover:bg-gray-900/40"
+                          ? "border-red-500/50 bg-red-500/5"
+                          : "border-white/10 bg-white/[0.02] hover:border-white/20"
                       }`}
                       title={currencyNames[currency]}
                     >
                       <div className="text-lg mb-1">{currencyFlags[currency]}</div>
-                      <div
-                        className={`text-xs font-medium ${
-                          selectedCurrency === currency ? "text-red-400" : "text-gray-300"
-                        }`}
-                      >
+                      <div className={`text-xs font-medium ${selectedCurrency === currency ? "text-red-400" : "text-gray-400"}`}>
                         {currency}
                       </div>
                     </button>
@@ -230,45 +219,45 @@ const CurrencyCalculator: React.FC = () => {
               </div>
 
               {/* Result */}
-              <div className="bg-gradient-to-br from-red-950/30 to-black/30 rounded-xl p-6 border border-red-900/30 mb-5">
+              <div className="border border-white/10 rounded-xl p-6 mb-6 bg-white/[0.02]">
                 <div className="flex items-center justify-between mb-3">
-                  <span className="text-gray-400 text-sm font-medium">
+                  <span className="text-gray-400 text-sm">
                     {getSelectedPlan().name} ({getSelectedPlan().version})
                   </span>
                   {selectedCurrency !== "USD" && (
                     <span className="text-gray-500 text-xs">≈ ${getSelectedPlan().price.toFixed(2)} USD</span>
                   )}
                 </div>
-                <div className="flex items-baseline space-x-2">
+                <div className="flex items-baseline gap-3">
                   <span className="text-3xl">{currencyFlags[selectedCurrency]}</span>
-                  <span className="text-4xl md:text-5xl font-bold text-white">
+                  <span className="text-4xl md:text-5xl font-black text-white">
                     {formatNumber(calculatePrice())}
                   </span>
-                  <span className="text-xl text-gray-400 font-medium">{selectedCurrency}</span>
+                  <span className="text-lg text-gray-500 font-medium">{selectedCurrency}</span>
                 </div>
-                <div className="mt-2 text-gray-500 text-xs">por mes</div>
+                <div className="mt-2 text-gray-500 text-xs">pago único</div>
               </div>
 
               {/* Info & Actions */}
-              <div className="space-y-4">
-                <div className="flex items-center justify-between p-4 bg-black/40 rounded-xl border border-red-900/30">
-                  <div className="flex items-center space-x-2">
-                    <TrendingUp className="w-5 h-5 text-red-400" />
-                    <span className="text-gray-300 text-sm">
+              <div className="space-y-3">
+                <div className="flex items-center justify-between p-4 border border-white/10 rounded-xl bg-white/[0.02]">
+                  <div className="flex items-center gap-2">
+                    <TrendingUp className="w-4 h-4 text-gray-500" />
+                    <span className="text-gray-400 text-sm">
                       Última actualización: {lastUpdate.toLocaleTimeString("es-ES")}
                     </span>
                   </div>
                   <button
                     onClick={fetchExchangeRates}
-                    className="p-2 bg-red-950/50 hover:bg-red-900/50 rounded-lg transition-colors"
+                    className="p-2 border border-white/10 rounded-lg hover:bg-white/5 transition-colors"
                     title="Actualizar tasas"
                   >
-                    <RefreshCw className="w-5 h-5 text-red-400" />
+                    <RefreshCw className="w-4 h-4 text-gray-400" />
                   </button>
                 </div>
 
                 {error && (
-                  <div className="p-4 bg-yellow-950/30 border border-yellow-600/30 rounded-xl">
+                  <div className="p-4 border border-yellow-500/20 rounded-xl bg-yellow-500/5">
                     <p className="text-yellow-400 text-sm">{error}</p>
                   </div>
                 )}
@@ -278,17 +267,15 @@ const CurrencyCalculator: React.FC = () => {
                   href="https://api.whatsapp.com/send?phone=595981144534"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="block w-full text-center py-4 bg-gradient-to-r from-green-600 to-green-700 hover:from-green-700 hover:to-green-800 text-white font-bold rounded-xl transition-all duration-300 transform hover:scale-105 shadow-xl hover:shadow-2xl"
+                  className="flex items-center justify-center gap-2 w-full py-4 bg-green-600 hover:bg-green-700 text-white font-bold rounded-xl transition-all"
                 >
-                  <span className="flex items-center justify-center space-x-2">
-                    <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
-                    </svg>
-                    <span>Consultar por WhatsApp</span>
-                  </span>
+                  <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+                  </svg>
+                  Consultar por WhatsApp
                 </a>
 
-                <p className="text-center text-gray-400 text-sm">
+                <p className="text-center text-gray-500 text-sm">
                   Contactanos para coordinar el pago
                 </p>
               </div>
@@ -297,7 +284,7 @@ const CurrencyCalculator: React.FC = () => {
         </div>
 
         {/* Disclaimer */}
-        <div className="mt-6 text-center">
+        <div className="mt-4 text-center">
           <p className="text-gray-500 text-xs">
             * Las tasas de cambio se actualizan cada 5 minutos. El precio final incluye un margen del 3% para cubrir comisiones de cambio.
           </p>
