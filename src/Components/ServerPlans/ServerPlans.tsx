@@ -42,7 +42,7 @@ const ServerPlans: React.FC = () => {
   const { elementRef, isVisible } = useScrollAnimation();
 
   return (
-    <section ref={elementRef} className="py-20 px-4" id="planes">
+    <section ref={elementRef} className="py-20 px-4" id="planes" style={{ background: "linear-gradient(to bottom, #0a1225, #070d1b)" }}>
       <div className="max-w-5xl mx-auto">
         {/* Header */}
         <div
@@ -50,7 +50,7 @@ const ServerPlans: React.FC = () => {
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
           }`}
         >
-          <span className="text-red-500 text-sm font-bold tracking-widest uppercase">
+          <span className="text-orange-500 text-sm font-bold tracking-widest uppercase">
             Planes
           </span>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-white mt-3 mb-4">
@@ -68,15 +68,15 @@ const ServerPlans: React.FC = () => {
               key={index}
               className={`relative rounded-2xl p-6 sm:p-8 border transition-all duration-500 ${
                 plan.popular
-                  ? "bg-white/[0.04] border-red-500/30"
-                  : "bg-white/[0.02] border-white/10 hover:border-white/20"
+                  ? "bg-[#0a1225] border-orange-500/30"
+                  : "bg-[#0a1225] border-white/5 hover:border-white/10"
               } ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
               style={{ transitionDelay: `${index * 200 + 300}ms` }}
             >
               {/* Popular badge */}
               {plan.popular && (
                 <div className="absolute -top-3 left-1/2 -translate-x-1/2">
-                  <div className="bg-red-600 text-white text-xs font-bold px-4 py-1.5 rounded-full flex items-center gap-1.5">
+                  <div className="bg-gradient-to-r from-orange-500 to-red-600 text-white text-xs font-bold px-4 py-1.5 rounded-full flex items-center gap-1.5">
                     <Star className="w-3 h-3" fill="currentColor" />
                     MÁS VENDIDO
                   </div>
@@ -85,7 +85,7 @@ const ServerPlans: React.FC = () => {
 
               {/* Plan header */}
               <div className="text-center mb-6">
-                <p className="text-gray-500 text-xs font-bold tracking-widest uppercase mb-2">
+                <p className="text-orange-400 text-xs font-bold tracking-widest uppercase mb-2">
                   {plan.subtitle}
                 </p>
                 <h3 className="text-2xl font-black text-white mb-1">{plan.name}</h3>
@@ -97,7 +97,7 @@ const ServerPlans: React.FC = () => {
               </div>
 
               {/* Divider */}
-              <div className="w-full h-px bg-white/10 mb-6" />
+              <div className="w-full h-px bg-white/5 mb-6" />
 
               {/* Features */}
               <ul className="space-y-3 mb-8">
@@ -105,7 +105,7 @@ const ServerPlans: React.FC = () => {
                   <li key={i} className="flex items-center gap-3">
                     <Check
                       className={`w-4 h-4 flex-shrink-0 ${
-                        plan.popular ? "text-red-400" : "text-gray-500"
+                        plan.popular ? "text-orange-400" : "text-gray-500"
                       }`}
                     />
                     <span className="text-gray-300 text-sm">{feature}</span>
@@ -120,8 +120,8 @@ const ServerPlans: React.FC = () => {
                 rel="noopener noreferrer"
                 className={`group flex items-center justify-center gap-2 w-full py-3.5 rounded-xl font-bold text-sm transition-all duration-300 ${
                   plan.popular
-                    ? "bg-white text-black hover:bg-gray-100"
-                    : "bg-white/10 text-white border border-white/20 hover:bg-white/15"
+                    ? "bg-gradient-to-r from-orange-500 to-red-600 hover:from-orange-600 hover:to-red-700 text-white"
+                    : "bg-white/5 text-white border border-white/10 hover:bg-white/10 hover:border-white/20"
                 }`}
               >
                 Contratar ahora

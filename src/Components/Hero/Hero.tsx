@@ -3,72 +3,60 @@ import { ArrowRight, MessageCircle } from "lucide-react";
 
 const Hero: React.FC = () => {
   return (
-    <section className="relative min-h-[90vh] flex items-center justify-center px-4 pt-24 pb-16 overflow-hidden">
-      {/* Background glow */}
-      <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-red-500/10 rounded-full blur-[120px]" />
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+      {/* Background image */}
+      <div className="absolute inset-0">
+        <img
+          src="/img1.webp"
+          alt=""
+          className="w-full h-full object-cover"
+          onError={(e) => {
+            e.currentTarget.style.display = "none";
+          }}
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-[#070d1b]/80 via-[#070d1b]/60 to-[#070d1b]" />
       </div>
 
-      <div className="relative max-w-5xl mx-auto text-center">
+      {/* Content */}
+      <div className="relative z-10 text-center px-4 max-w-5xl mx-auto">
         {/* Badge */}
-        <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-white/10 bg-white/5 mb-8">
+        <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-white/10 bg-white/5 mb-8 backdrop-blur-sm">
           <div className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
-          <span className="text-gray-400 text-sm font-medium">Servidores activos 24/7</span>
+          <span className="text-gray-300 text-sm font-medium">Servidores activos 24/7</span>
         </div>
 
         {/* Main heading */}
-        <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black text-white leading-[0.9] tracking-tight mb-6">
-          SERVIDORES
+        <h1 className="text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-black text-white leading-[0.85] tracking-tight mb-6">
+          RUST
           <br />
-          <span className="text-red-500">RUST PIRATA</span>
+          <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-red-600">
+            PIRATA
+          </span>
         </h1>
 
         {/* Subtitle */}
-        <p className="text-gray-400 text-lg sm:text-xl max-w-2xl mx-auto mb-10 leading-relaxed">
+        <p className="text-gray-300 text-lg sm:text-xl max-w-2xl mx-auto mb-10 leading-relaxed">
           Venta de servidores, plugins y soporte técnico para{" "}
           <span className="text-white font-semibold">Rust 2275</span> y{" "}
           <span className="text-white font-semibold">Rust 2388</span>.
-          <br className="hidden sm:block" />
           Más de 8 años de experiencia administrando comunidades gaming.
         </p>
 
-        {/* CTAs */}
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-          <a
-            href="https://api.whatsapp.com/send?phone=595981144534"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="group flex items-center gap-3 bg-red-600 hover:bg-red-700 text-white font-bold px-8 py-4 rounded-xl transition-all duration-300 hover:shadow-lg hover:shadow-red-500/25"
-          >
-            <MessageCircle className="w-5 h-5" />
-            <span>Consultar por WhatsApp</span>
-            <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
-          </a>
-
-          <a
-            href="#planes"
-            className="flex items-center gap-2 text-gray-400 hover:text-white font-medium px-6 py-4 rounded-xl border border-white/10 hover:border-white/20 transition-all"
-          >
-            Ver planes y precios
-          </a>
-        </div>
-
-        {/* Trust indicators */}
-        <div className="mt-16 grid grid-cols-3 gap-8 max-w-lg mx-auto">
-          <div>
-            <div className="text-2xl sm:text-3xl font-black text-white">30K+</div>
-            <div className="text-gray-500 text-xs sm:text-sm">Plugins</div>
-          </div>
-          <div>
-            <div className="text-2xl sm:text-3xl font-black text-white">24/7</div>
-            <div className="text-gray-500 text-xs sm:text-sm">Soporte</div>
-          </div>
-          <div>
-            <div className="text-2xl sm:text-3xl font-black text-white">8+</div>
-            <div className="text-gray-500 text-xs sm:text-sm">Años</div>
-          </div>
-        </div>
+        {/* CTA */}
+        <a
+          href="https://api.whatsapp.com/send?phone=595981144534"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="group inline-flex items-center gap-3 bg-gradient-to-r from-orange-500 to-red-600 hover:from-orange-600 hover:to-red-700 text-white font-bold px-8 py-4 rounded-xl text-lg transition-all duration-300 hover:shadow-lg hover:shadow-orange-500/25"
+        >
+          <MessageCircle className="w-5 h-5" />
+          <span>CONSULTAR AHORA</span>
+          <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
+        </a>
       </div>
+
+      {/* Bottom gradient fade */}
+      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-[#070d1b] to-transparent" />
     </section>
   );
 };

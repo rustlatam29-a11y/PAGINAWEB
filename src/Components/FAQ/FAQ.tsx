@@ -42,7 +42,7 @@ const FAQ: React.FC = () => {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   return (
-    <section ref={elementRef} className="py-20 px-4" id="faq">
+    <section ref={elementRef} className="py-20 px-4" id="faq" style={{ background: "linear-gradient(to bottom, #070d1b, #0a1225)" }}>
       <div className="max-w-3xl mx-auto">
         {/* Header */}
         <div
@@ -50,7 +50,7 @@ const FAQ: React.FC = () => {
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
           }`}
         >
-          <span className="text-red-500 text-sm font-bold tracking-widest uppercase">
+          <span className="text-orange-500 text-sm font-bold tracking-widest uppercase">
             Preguntas frecuentes
           </span>
           <h2 className="text-3xl sm:text-4xl font-black text-white mt-3 mb-4">
@@ -63,8 +63,8 @@ const FAQ: React.FC = () => {
           {faqs.map((faq, index) => (
             <div
               key={index}
-              className={`border border-white/10 rounded-xl overflow-hidden transition-all duration-500 ${
-                openIndex === index ? "bg-white/[0.04] border-white/20" : "bg-white/[0.02]"
+              className={`border border-white/5 rounded-xl overflow-hidden transition-all duration-500 ${
+                openIndex === index ? "bg-[#0a1225] border-orange-500/20" : "bg-[#0a1225]/50"
               } ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`}
               style={{ transitionDelay: `${index * 80 + 200}ms` }}
             >

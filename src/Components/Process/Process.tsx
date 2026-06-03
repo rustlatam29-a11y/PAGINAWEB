@@ -33,7 +33,7 @@ const Process: React.FC = () => {
   const { elementRef, isVisible } = useScrollAnimation();
 
   return (
-    <section ref={elementRef} className="py-20 px-4" id="proceso">
+    <section ref={elementRef} className="py-20 px-4" id="proceso" style={{ background: "linear-gradient(to bottom, #070d1b, #0a1225)" }}>
       <div className="max-w-6xl mx-auto">
         {/* Header */}
         <div
@@ -41,7 +41,7 @@ const Process: React.FC = () => {
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
           }`}
         >
-          <span className="text-red-500 text-sm font-bold tracking-widest uppercase">
+          <span className="text-orange-500 text-sm font-bold tracking-widest uppercase">
             Proceso
           </span>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-white mt-3 mb-4">
@@ -66,16 +66,16 @@ const Process: React.FC = () => {
               >
                 {/* Connector line */}
                 {index < steps.length - 1 && (
-                  <div className="hidden lg:block absolute top-10 left-[calc(50%+40px)] w-[calc(100%-40px)] h-px bg-white/10" />
+                  <div className="hidden lg:block absolute top-10 left-[calc(50%+40px)] w-[calc(100%-40px)] h-px bg-white/5" />
                 )}
 
                 <div className="text-center">
                   {/* Step number */}
-                  <div className="text-6xl font-black text-white/5 mb-4">{step.step}</div>
+                  <div className="text-6xl font-black text-white/[0.03] mb-4">{step.step}</div>
 
                   {/* Icon */}
-                  <div className="w-16 h-16 rounded-2xl bg-red-500/10 border border-red-500/20 flex items-center justify-center mx-auto mb-5">
-                    <Icon className="w-7 h-7 text-red-500" />
+                  <div className="w-16 h-16 rounded-2xl bg-orange-500/10 border border-orange-500/20 flex items-center justify-center mx-auto mb-5">
+                    <Icon className="w-7 h-7 text-orange-500" />
                   </div>
 
                   {/* Content */}

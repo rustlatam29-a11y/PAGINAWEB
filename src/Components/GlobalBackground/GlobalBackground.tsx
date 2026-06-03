@@ -8,7 +8,7 @@ const GlobalBackground: React.FC<{ children: React.ReactNode }> = ({ children })
       <style>{`
         .global-background {
           position: relative;
-          background: #000000;
+          background: #070d1b;
           min-height: 100vh;
         }
         
@@ -22,10 +22,10 @@ const GlobalBackground: React.FC<{ children: React.ReactNode }> = ({ children })
           z-index: 0;
           pointer-events: none;
           background-image: 
-            linear-gradient(rgba(220, 38, 38, 0.04) 1px, transparent 1px),
-            linear-gradient(90deg, rgba(220, 38, 38, 0.04) 1px, transparent 1px);
+            linear-gradient(rgba(255, 107, 0, 0.03) 1px, transparent 1px),
+            linear-gradient(90deg, rgba(255, 107, 0, 0.03) 1px, transparent 1px);
           background-size: 60px 60px;
-          opacity: 0.5;
+          opacity: 0.4;
         }
         
         .global-background::after {
@@ -37,7 +37,7 @@ const GlobalBackground: React.FC<{ children: React.ReactNode }> = ({ children })
           height: 100%;
           z-index: 0;
           pointer-events: none;
-          background: radial-gradient(ellipse at 50% 0%, rgba(220, 38, 38, 0.08) 0%, transparent 60%);
+          background: radial-gradient(ellipse at 50% 0%, rgba(255, 107, 0, 0.06) 0%, transparent 50%);
         }
         
         .global-background > * {

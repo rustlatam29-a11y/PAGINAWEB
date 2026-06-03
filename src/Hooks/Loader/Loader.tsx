@@ -35,7 +35,7 @@ const Loader: React.FC<LoaderProps> = ({ logoUrl = "/LATAMLOGO.webp", onLoadComp
   if (!isVisible) return null;
 
   return (
-    <div className="fixed inset-0 bg-black flex items-center justify-center z-50 transition-opacity duration-500"
+    <div className="fixed inset-0 bg-[#070d1b] flex items-center justify-center z-50 transition-opacity duration-500"
       style={{ opacity: progress >= 100 ? 0 : 1 }}>
       
       <div className="text-center px-6">
@@ -48,16 +48,16 @@ const Loader: React.FC<LoaderProps> = ({ logoUrl = "/LATAMLOGO.webp", onLoadComp
 
         {/* Text */}
         <h1 className="text-white font-black text-2xl tracking-tight mb-1">
-          LATAM<span className="text-red-500">RUST</span>
+          Paraguay<span className="text-orange-500">RAIDER</span>
         </h1>
         <p className="text-gray-500 text-xs tracking-widest uppercase mb-8">
-          Ventas de Servidores Piratas
+          Servidores y Plugins de Rust
         </p>
 
         {/* Progress bar */}
         <div className="w-48 h-1 bg-white/10 rounded-full mx-auto overflow-hidden">
           <div 
-            className="h-full bg-red-500 rounded-full transition-all duration-300"
+            className="h-full bg-gradient-to-r from-orange-500 to-red-600 rounded-full transition-all duration-300"
             style={{ width: `${progress}%` }}
           />
         </div>

@@ -20,32 +20,27 @@ const Header: React.FC = () => {
 
   return (
     <header
-      className={`fixed top-0 left-0 w-full z-40 transition-all duration-300 ${
+      className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
         scrolled
-          ? "bg-black/90 backdrop-blur-md border-b border-white/5"
+          ? "bg-[#070d1b]/95 backdrop-blur-md border-b border-white/5"
           : "bg-transparent"
       }`}
     >
-      <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16">
+      <nav className="max-w-7xl mx-auto px-5 md:px-10">
+        <div className="flex items-center justify-between h-18">
           {/* Logo */}
           <a href="/" className="flex items-center gap-3">
             <img
               src="/img1.webp"
               alt="Logo"
-              className="w-9 h-9 rounded-lg object-cover"
+              className="w-10 h-10 rounded-lg object-cover"
               onError={(e) => {
                 e.currentTarget.style.display = "none";
               }}
             />
-            <div>
-              <span className="text-white font-black text-lg tracking-tight">
-                Paraguay<span className="text-red-500">RAIDER</span>
-              </span>
-              <p className="text-gray-500 text-[10px] tracking-widest uppercase -mt-0.5">
-                Servidores y Plugins de Rust
-              </p>
-            </div>
+            <span className="text-white font-black text-xl tracking-tight">
+              Paraguay<span className="text-orange-500">RAIDER</span>
+            </span>
           </a>
 
           {/* Desktop nav */}
@@ -54,7 +49,7 @@ const Header: React.FC = () => {
               <a
                 key={link.href}
                 href={link.href}
-                className="text-gray-400 hover:text-white text-sm font-medium transition-colors"
+                className="text-gray-300 hover:text-orange-500 text-sm font-bold tracking-wide transition-colors border-b-2 border-transparent hover:border-orange-500 pb-1"
               >
                 {link.label}
               </a>
@@ -63,7 +58,7 @@ const Header: React.FC = () => {
               href="https://api.whatsapp.com/send?phone=595981144534"
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-red-600 hover:bg-red-700 text-white text-sm font-bold px-5 py-2 rounded-lg transition-all"
+              className="bg-gradient-to-r from-orange-500 to-red-600 hover:from-orange-600 hover:to-red-700 text-white text-sm font-bold px-5 py-2.5 rounded-lg transition-all"
             >
               WhatsApp
             </a>
@@ -72,9 +67,9 @@ const Header: React.FC = () => {
           {/* Mobile toggle */}
           <button
             onClick={() => setMobileOpen(!mobileOpen)}
-            className="md:hidden text-gray-400 hover:text-white transition-colors"
+            className="md:hidden text-white"
           >
-            {mobileOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+            {mobileOpen ? <X className="w-7 h-7" /> : <Menu className="w-7 h-7" />}
           </button>
         </div>
 
@@ -86,7 +81,7 @@ const Header: React.FC = () => {
                 key={link.href}
                 href={link.href}
                 onClick={() => setMobileOpen(false)}
-                className="block text-gray-400 hover:text-white text-sm font-medium py-2 transition-colors"
+                className="block text-gray-300 hover:text-orange-500 text-sm font-bold py-2 transition-colors"
               >
                 {link.label}
               </a>
@@ -95,7 +90,7 @@ const Header: React.FC = () => {
               href="https://api.whatsapp.com/send?phone=595981144534"
               target="_blank"
               rel="noopener noreferrer"
-              className="block bg-red-600 hover:bg-red-700 text-white text-sm font-bold px-5 py-2.5 rounded-lg text-center transition-all"
+              className="block bg-gradient-to-r from-orange-500 to-red-600 text-white text-sm font-bold px-5 py-2.5 rounded-lg text-center"
             >
               WhatsApp
             </a>

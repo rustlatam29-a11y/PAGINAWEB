@@ -10,26 +10,30 @@ html {
   scroll-behavior: smooth;
 }
 
+body {
+  background: #070d1b;
+}
+
 /* ===== SCROLLBAR ===== */
 ::-webkit-scrollbar {
   width: 6px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #000000;
+  background: #070d1b;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #dc2626;
+  background: #ff6b00;
   border-radius: 3px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #b91c1c;
+  background: #e55d00;
 }
 
 /* ===== SELECTION ===== */
 ::selection {
-  background: rgba(220, 38, 38, 0.3);
+  background: rgba(255, 107, 0, 0.3);
   color: white;
 }

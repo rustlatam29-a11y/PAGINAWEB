@@ -39,7 +39,7 @@ const Services: React.FC = () => {
   const { elementRef, isVisible } = useScrollAnimation();
 
   return (
-    <section ref={elementRef} className="py-20 px-4" id="servicios">
+    <section ref={elementRef} className="py-20 px-4" id="servicios" style={{ background: "linear-gradient(to bottom, #070d1b, #0a1225)" }}>
       <div className="max-w-6xl mx-auto">
         {/* Section header */}
         <div
@@ -47,7 +47,7 @@ const Services: React.FC = () => {
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
           }`}
         >
-          <span className="text-red-500 text-sm font-bold tracking-widest uppercase">
+          <span className="text-orange-500 text-sm font-bold tracking-widest uppercase">
             Servicios
           </span>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-white mt-3 mb-4">
@@ -66,13 +66,13 @@ const Services: React.FC = () => {
             return (
               <div
                 key={index}
-                className={`group p-6 rounded-2xl border border-white/10 bg-white/[0.02] hover:bg-white/[0.04] hover:border-white/20 transition-all duration-500 ${
+                className={`group p-6 rounded-2xl border border-white/5 bg-[#0a1225] hover:bg-[#0e1a30] hover:border-orange-500/20 transition-all duration-500 ${
                   isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
                 }`}
                 style={{ transitionDelay: `${index * 100 + 200}ms` }}
               >
-                <div className="w-12 h-12 rounded-xl bg-red-500/10 flex items-center justify-center mb-4 group-hover:bg-red-500/20 transition-colors">
-                  <Icon className="w-6 h-6 text-red-500" />
+                <div className="w-12 h-12 rounded-xl bg-orange-500/10 flex items-center justify-center mb-4 group-hover:bg-orange-500/20 transition-colors">
+                  <Icon className="w-6 h-6 text-orange-500" />
                 </div>
                 <h3 className="text-white font-bold text-lg mb-2">{service.title}</h3>
                 <p className="text-gray-400 text-sm leading-relaxed">{service.description}</p>

@@ -30,7 +30,7 @@ const Projects: React.FC = () => {
   const { elementRef, isVisible } = useScrollAnimation();
 
   return (
-    <section ref={elementRef} className="py-20 px-4" id="proyectos">
+    <section ref={elementRef} className="py-20 px-4" id="proyectos" style={{ background: "linear-gradient(to bottom, #0a1225, #070d1b)" }}>
       <div className="max-w-6xl mx-auto">
         {/* Header */}
         <div
@@ -38,7 +38,7 @@ const Projects: React.FC = () => {
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
           }`}
         >
-          <span className="text-red-500 text-sm font-bold tracking-widest uppercase">
+          <span className="text-orange-500 text-sm font-bold tracking-widest uppercase">
             Proyectos
           </span>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-white mt-3 mb-4">
@@ -54,7 +54,7 @@ const Projects: React.FC = () => {
           {projects.map((project, index) => (
             <div
               key={index}
-              className={`group relative p-6 rounded-2xl border border-white/10 bg-white/[0.02] hover:bg-white/[0.04] hover:border-white/20 transition-all duration-500 ${
+              className={`group relative p-6 rounded-2xl border border-white/5 bg-[#0a1225] hover:bg-[#0e1a30] hover:border-orange-500/20 transition-all duration-500 ${
                 isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
               }`}
               style={{ transitionDelay: `${index * 150 + 200}ms` }}
@@ -66,14 +66,14 @@ const Projects: React.FC = () => {
                   href={project.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-gray-500 hover:text-white transition-colors"
+                  className="text-gray-500 hover:text-orange-500 transition-colors"
                 >
                   <ExternalLink className="w-4 h-4" />
                 </a>
               </div>
 
               {/* Role */}
-              <p className="text-red-400 text-sm font-semibold mb-3">{project.role}</p>
+              <p className="text-orange-400 text-sm font-semibold mb-3">{project.role}</p>
 
               {/* Description */}
               <p className="text-gray-400 text-sm leading-relaxed mb-5">
@@ -85,7 +85,7 @@ const Projects: React.FC = () => {
                 {project.tags.map((tag, i) => (
                   <span
                     key={i}
-                    className="px-3 py-1 text-xs font-medium text-gray-400 bg-white/5 rounded-full border border-white/10"
+                    className="px-3 py-1 text-xs font-medium text-gray-400 bg-white/5 rounded-full border border-white/5"
                   >
                     {tag}
                   </span>

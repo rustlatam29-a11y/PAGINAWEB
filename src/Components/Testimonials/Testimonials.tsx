@@ -45,7 +45,7 @@ const Testimonials: React.FC = () => {
   const { elementRef, isVisible } = useScrollAnimation();
 
   return (
-    <section ref={elementRef} className="py-20 px-4" id="testimonios">
+    <section ref={elementRef} className="py-20 px-4" id="testimonios" style={{ background: "linear-gradient(to bottom, #0a1225, #070d1b)" }}>
       <div className="max-w-6xl mx-auto">
         {/* Header */}
         <div
@@ -53,7 +53,7 @@ const Testimonials: React.FC = () => {
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
           }`}
         >
-          <span className="text-red-500 text-sm font-bold tracking-widest uppercase">
+          <span className="text-orange-500 text-sm font-bold tracking-widest uppercase">
             Testimonios
           </span>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-white mt-3 mb-4">
@@ -69,7 +69,7 @@ const Testimonials: React.FC = () => {
           {testimonials.map((testimonial, index) => (
             <div
               key={index}
-              className={`p-6 rounded-2xl border border-white/10 bg-white/[0.02] hover:border-white/20 transition-all duration-500 ${
+              className={`p-6 rounded-2xl border border-white/5 bg-[#0a1225] hover:border-orange-500/20 transition-all duration-500 ${
                 isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
               }`}
               style={{ transitionDelay: `${index * 100 + 200}ms` }}
@@ -77,7 +77,7 @@ const Testimonials: React.FC = () => {
               {/* Stars */}
               <div className="flex gap-1 mb-4">
                 {Array.from({ length: testimonial.rating }).map((_, i) => (
-                  <Star key={i} className="w-4 h-4 text-yellow-500" fill="currentColor" />
+                  <Star key={i} className="w-4 h-4 text-orange-500" fill="currentColor" />
                 ))}
               </div>
 
@@ -88,7 +88,7 @@ const Testimonials: React.FC = () => {
 
               {/* Author */}
               <div className="flex items-center gap-3">
-                <div className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center">
+                <div className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center">
                   <span className="text-white font-bold text-sm">
                     {testimonial.name.charAt(0)}
                   </span>
