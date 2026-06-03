@@ -90,22 +90,14 @@ const ServerSales: React.FC = () => {
       >
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
-          {/* ===================== HEADER ===================== */}
-          <div className="text-center mb-16">
-            <div
-              className={`transform transition-all duration-700 ${
-                isVisible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
-              }`}
-            >
-              {/* ===================== BANNER PEDIDO ===================== */}
-              <div className="mb-8 flex flex-col items-center gap-3">
-                <a href="https://api.whatsapp.com/send?phone=595981144534" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 bg-white/5 border border-white/10 rounded-xl px-6 py-3 text-white font-bold hover:bg-white/10 hover:border-white/20 transition-all">
-                  <span className="text-green-400">WhatsApp</span> ParaguayRAIDER
-                </a>
-                <p className="text-gray-500 text-xs">Solo vendemos por WhatsApp y únicamente con ParaguayRAIDER</p>
-              </div>
-
-              <h2 className="text-4xl sm:text-5xl lg:text-6xl font-black text-white mb-4" itemProp="name">
+              {/* ===================== HEADER ===================== */}
+              <div className="text-center mb-12">
+                <div
+                  className={`transform transition-all duration-700 ${
+                    isVisible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
+                  }`}
+                >
+                  <h2 className="text-4xl sm:text-5xl lg:text-6xl font-black text-white mb-4" itemProp="name">
                 VENTAS DE{" "}
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-red-700">
                   SERVIDORES RUST PIRATA
