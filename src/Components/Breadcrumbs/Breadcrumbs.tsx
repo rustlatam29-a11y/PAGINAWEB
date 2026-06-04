@@ -40,7 +40,7 @@ const Breadcrumbs: React.FC = () => {
       "@type": "ListItem",
       "position": index + 1,
       "name": item.label,
-      "item": `https://latamrust.online${item.path}`
+      "item": `https://latamrust.vercel.app${item.path}`
     }))
   };
 

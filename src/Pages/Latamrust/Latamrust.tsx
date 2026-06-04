@@ -9,21 +9,21 @@ const Latamrust: React.FC = () => {
         <title>LATAMRUST - Servidores Rust Pirata #1 Latinoamerica | Rust 2275 y 2388</title>
         <meta name="description" content="LATAMRUST es el servicio #1 de servidores Rust Pirata en Latinoamerica. Rust 2275 OldRecoil y Rust 2388 con +30,000 plugins, AntiCheat y soporte 24/7. Ping bajo en Brasil, Argentina, Mexico." />
         <meta name="keywords" content="latamrust, latam rust, rust pirata, servidores rust pirata, rust 2275, rust 2388, servidor rust brasil, servidor rust argentina, rust pirata gratis, crear servidor rust" />
-        <link rel="canonical" href="https://latamrust.online/latamrust" />
+        <link rel="canonical" href="https://latamrust.vercel.app/latamrust" />
         <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
 
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://latamrust.online/latamrust" />
+        <meta property="og:url" content="https://latamrust.vercel.app/latamrust" />
         <meta property="og:title" content="LATAMRUST - Servidores Rust Pirata #1 Latinoamerica" />
         <meta property="og:description" content="El servicio #1 de servidores Rust Pirata en Latinoamerica. Rust 2275 y 2388, +30K plugins, soporte 24/7." />
-        <meta property="og:image" content="https://latamrust.online/LATAMLOGO.webp" />
+        <meta property="og:image" content="https://latamrust.vercel.app/LATAMLOGO.webp" />
         <meta property="og:locale" content="es_ES" />
         <meta property="og:site_name" content="LATAMRUST" />
 
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="LATAMRUST - Servidores Rust Pirata #1" />
         <meta name="twitter:description" content="Servicio #1 de servidores Rust Pirata en LATAM. Rust 2275 y 2388." />
-        <meta name="twitter:image" content="https://latamrust.online/LATAMLOGO.webp" />
+        <meta name="twitter:image" content="https://latamrust.vercel.app/LATAMLOGO.webp" />
 
         <script type="application/ld+json">
           {JSON.stringify({
@@ -31,11 +31,11 @@ const Latamrust: React.FC = () => {
             "@type": "WebPage",
             "name": "LATAMRUST - Servidores Rust Pirata #1 Latinoamerica",
             "description": "LATAMRUST es el servicio #1 de servidores Rust Pirata en Latinoamerica",
-            "url": "https://latamrust.online/latamrust",
+            "url": "https://latamrust.vercel.app/latamrust",
             "mainEntity": {
               "@type": "Organization",
               "name": "LATAMRUST",
-              "url": "https://latamrust.online",
+              "url": "https://latamrust.vercel.app",
               "description": "Servidores de Rust Pirata 2275 y 2388 para Latinoamerica"
             }
           })}
@@ -46,8 +46,8 @@ const Latamrust: React.FC = () => {
             "@context": "https://schema.org",
             "@type": "BreadcrumbList",
             "itemListElement": [
-              {"@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://latamrust.online/"},
-              {"@type": "ListItem", "position": 2, "name": "LATAMRUST", "item": "https://latamrust.online/latamrust"}
+              {"@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://latamrust.vercel.app/"},
+              {"@type": "ListItem", "position": 2, "name": "LATAMRUST", "item": "https://latamrust.vercel.app/latamrust"}
             ]
           })}
         </script>

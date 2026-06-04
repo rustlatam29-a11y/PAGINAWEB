@@ -45,16 +45,16 @@ const MejoresPluginsRust: React.FC = () => {
         <meta name="description" content="Los mejores plugins gratis para Rust Pirata 2275 y 2388. Kits, economia, anti-cheat, tiendas, VIP, mochilas y mas. Lista completa actualizada 2026 con +30 plugins." />
         <meta name="keywords" content="mejores plugins rust pirata, plugins rust 2275, plugins rust 2388, oxide plugins rust, umod plugins, plugins gratis rust, tienda plugins rust, economia rust, kits rust, anti-cheat rust, mochilas rust, plugins server rust" />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://latamrust.online/mejores-plugins-rust-pirata" />
+        <meta property="og:url" content="https://latamrust.vercel.app/mejores-plugins-rust-pirata" />
         <meta property="og:title" content="Mejores Plugins Rust Pirata 2026 - Top 30+ Plugins Gratis" />
         <meta property="og:description" content="Los mejores plugins gratis para servidores Rust Pirata. Kits, economia, tiendas, anti-cheat y mas." />
-        <meta property="og:image" content="https://latamrust.online/LATAMLOGO.webp" />
+        <meta property="og:image" content="https://latamrust.vercel.app/LATAMLOGO.webp" />
         <meta property="og:locale" content="es_ES" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Mejores Plugins Rust Pirata 2026" />
         <meta name="twitter:description" content="Top 30+ plugins gratis para servidores Rust Pirata 2275 y 2388." />
-        <meta name="twitter:image" content="https://latamrust.online/LATAMLOGO.webp" />
-        <link rel="canonical" href="https://latamrust.online/mejores-plugins-rust-pirata" />
+        <meta name="twitter:image" content="https://latamrust.vercel.app/LATAMLOGO.webp" />
+        <link rel="canonical" href="https://latamrust.vercel.app/mejores-plugins-rust-pirata" />
         <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
 
         <script type="application/ld+json">
@@ -98,8 +98,8 @@ const MejoresPluginsRust: React.FC = () => {
             "@context": "https://schema.org",
             "@type": "BreadcrumbList",
             "itemListElement": [
-              {"@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://latamrust.online/"},
-              {"@type": "ListItem", "position": 2, "name": "Mejores Plugins Rust Pirata", "item": "https://latamrust.online/mejores-plugins-rust-pirata"}
+              {"@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://latamrust.vercel.app/"},
+              {"@type": "ListItem", "position": 2, "name": "Mejores Plugins Rust Pirata", "item": "https://latamrust.vercel.app/mejores-plugins-rust-pirata"}
             ]
           })}
         </script>

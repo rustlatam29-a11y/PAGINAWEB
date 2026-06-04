@@ -11,16 +11,16 @@ const Rust2388Actualizado: React.FC = () => {
         <meta name="description" content="Rust 2388 Actualizado, la ultima version de Rust con mejores graficos y optimizaciones. +30,000 plugins premium. Servidores LATAM con ping bajo. Descarga gratis." />
         <meta name="keywords" content="rust 2388, rust 2388 actualizado, rust 2388 descargar, rust ultima version, rust 2026, rust nuevo, rust 2388 gratis, rust 2388 pc, server rust 2388, servidor rust 2388, rust 2388 2026, como jugar rust 2388, rust 2388 online" />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://latamrust.online/rust-2388-actualizado" />
+        <meta property="og:url" content="https://latamrust.vercel.app/rust-2388-actualizado" />
         <meta property="og:title" content="Rust 2388 Actualizado - Descargar Gratis 2026 | LATAMRUST" />
         <meta property="og:description" content="Rust 2388 Actualizado, la ultima version con mejores graficos y optimizaciones. Descarga gratis." />
-        <meta property="og:image" content="https://latamrust.online/LATAMLOGO.webp" />
+        <meta property="og:image" content="https://latamrust.vercel.app/LATAMLOGO.webp" />
         <meta property="og:locale" content="es_ES" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Rust 2388 Actualizado - Descargar Gratis 2026" />
         <meta name="twitter:description" content="La ultima version de Rust con mejores graficos. Descarga gratis y juega en servidores LATAM." />
-        <meta name="twitter:image" content="https://latamrust.online/LATAMLOGO.webp" />
-        <link rel="canonical" href="https://latamrust.online/rust-2388-actualizado" />
+        <meta name="twitter:image" content="https://latamrust.vercel.app/LATAMLOGO.webp" />
+        <link rel="canonical" href="https://latamrust.vercel.app/rust-2388-actualizado" />
         <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
 
         <script type="application/ld+json">
@@ -59,8 +59,8 @@ const Rust2388Actualizado: React.FC = () => {
             "@context": "https://schema.org",
             "@type": "BreadcrumbList",
             "itemListElement": [
-              {"@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://latamrust.online/"},
-              {"@type": "ListItem", "position": 2, "name": "Rust 2388 Actualizado", "item": "https://latamrust.online/rust-2388-actualizado"}
+              {"@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://latamrust.vercel.app/"},
+              {"@type": "ListItem", "position": 2, "name": "Rust 2388 Actualizado", "item": "https://latamrust.vercel.app/rust-2388-actualizado"}
             ]
           })}
         </script>

@@ -10,21 +10,21 @@ const RustPirataColombia: React.FC = () => {
         <title>Rust Pirata Colombia 🇨🇴 Descargar Gratis 2026 - LATAMRUST #1</title>
         <meta name="description" content="Servidor #1 de Rust Pirata en Colombia. Ping bajo 70-90ms desde Bogotá, Medellín, Cali. +10.000 jugadores parcero. 100% gratis chimba. ¡Juega ahora!" />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://latamrust.online/rust-pirata-colombia" />
+        <meta property="og:url" content="https://latamrust.vercel.app/rust-pirata-colombia" />
         <meta property="og:title" content="Rust Pirata Colombia 🇨🇴 - Servidor #1 LATAMRUST" />
         <meta property="og:description" content="El mejor servidor de Rust Pirata en Colombia con ping bajo y más de 10.000 jugadores parcero. 100% gratis chimba." />
-        <meta property="og:image" content="https://latamrust.online/LATAMLOGO.webp" />
+        <meta property="og:image" content="https://latamrust.vercel.app/LATAMLOGO.webp" />
         <meta property="og:locale" content="es_CO" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="keywords" content="rust pirata colombia, rust pirata gratis colombia, servidor rust pirata colombia, descargar rust pirata colombia, rust pirata 2026 colombia, rust pirata bogota, rust pirata medellin, rust pirata cali" />
-        <link rel="canonical" href="https://latamrust.online/rust-pirata-colombia" />
+        <link rel="canonical" href="https://latamrust.vercel.app/rust-pirata-colombia" />
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
             "@type": "VideoGame",
             "name": "Rust Pirata Colombia - LATAMRUST",
             "description": "Servidor #1 de Rust Pirata en Colombia con ping bajo y más de 10.000 jugadores activos",
-            "url": "https://latamrust.online/rust-pirata-colombia",
+            "url": "https://latamrust.vercel.app/rust-pirata-colombia",
             "offers": {"@type": "Offer", "price": "0", "priceCurrency": "COP"},
             "aggregateRating": {"@type": "AggregateRating", "ratingValue": "4.8", "ratingCount": "10000"},
             "inLanguage": "es-CO"

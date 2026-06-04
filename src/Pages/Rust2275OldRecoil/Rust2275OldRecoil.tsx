@@ -11,16 +11,16 @@ const Rust2275OldRecoil: React.FC = () => {
         <meta name="description" content="Rust 2275 OldRecoil la version clasica favorita. Recoil original, +30,000 plugins, AntiCheat profesional. Servidores con ping bajo LATAM. Descarga gratis." />
         <meta name="keywords" content="rust 2275, rust 2275 oldrecoil, rust 2275 descargar, rust oldrecoil, rust clasico, rust recoil original, rust 2275 gratis, rust 2275 pc, server rust 2275, servidor rust 2275, rust 2275 2026, como jugar rust 2275, rust 2275 online" />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://latamrust.online/rust-2275-oldrecoil" />
+        <meta property="og:url" content="https://latamrust.vercel.app/rust-2275-oldrecoil" />
         <meta property="og:title" content="Rust 2275 OldRecoil - Descargar Gratis 2026 | LATAMRUST" />
         <meta property="og:description" content="Rust 2275 OldRecoil, la version clasica favorita. Recoil original, +30,000 plugins. Servidores LATAM." />
-        <meta property="og:image" content="https://latamrust.online/LATAMLOGO.webp" />
+        <meta property="og:image" content="https://latamrust.vercel.app/LATAMLOGO.webp" />
         <meta property="og:locale" content="es_ES" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Rust 2275 OldRecoil - Descargar Gratis 2026" />
         <meta name="twitter:description" content="La version clasica de Rust con recoil original. Descarga gratis y juega en servidores LATAM." />
-        <meta name="twitter:image" content="https://latamrust.online/LATAMLOGO.webp" />
-        <link rel="canonical" href="https://latamrust.online/rust-2275-oldrecoil" />
+        <meta name="twitter:image" content="https://latamrust.vercel.app/LATAMLOGO.webp" />
+        <link rel="canonical" href="https://latamrust.vercel.app/rust-2275-oldrecoil" />
         <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
 
         <script type="application/ld+json">
@@ -59,8 +59,8 @@ const Rust2275OldRecoil: React.FC = () => {
             "@context": "https://schema.org",
             "@type": "BreadcrumbList",
             "itemListElement": [
-              {"@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://latamrust.online/"},
-              {"@type": "ListItem", "position": 2, "name": "Rust 2275 OldRecoil", "item": "https://latamrust.online/rust-2275-oldrecoil"}
+              {"@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://latamrust.vercel.app/"},
+              {"@type": "ListItem", "position": 2, "name": "Rust 2275 OldRecoil", "item": "https://latamrust.vercel.app/rust-2275-oldrecoil"}
             ]
           })}
         </script>

@@ -12,22 +12,22 @@ const RustPirataBrasil: React.FC = () => {
         
         {/* Open Graph / Facebook */}
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://latamrust.online/rust-pirata-brasil" />
+        <meta property="og:url" content="https://latamrust.vercel.app/rust-pirata-brasil" />
         <meta property="og:title" content="Rust Pirata 2275 Brasil 🇧🇷 - Servidor #1 LATAMRUST" />
         <meta property="og:description" content="A maior comunidade de Rust Pirata do Brasil com mais de 10.000 jogadores ativos. Ping baixo, 100% grátis e seguro." />
-        <meta property="og:image" content="https://latamrust.online/LATAMLOGO.webp" />
+        <meta property="og:image" content="https://latamrust.vercel.app/LATAMLOGO.webp" />
         <meta property="og:locale" content="pt_BR" />
         
         {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:url" content="https://latamrust.online/rust-pirata-brasil" />
+        <meta name="twitter:url" content="https://latamrust.vercel.app/rust-pirata-brasil" />
         <meta name="twitter:title" content="Rust Pirata 2275 Brasil 🇧🇷 - Servidor #1 LATAMRUST" />
         <meta name="twitter:description" content="A maior comunidade de Rust Pirata do Brasil com mais de 10.000 jogadores ativos. Ping baixo, 100% grátis e seguro." />
-        <meta name="twitter:image" content="https://latamrust.online/LATAMLOGO.webp" />
+        <meta name="twitter:image" content="https://latamrust.vercel.app/LATAMLOGO.webp" />
         
         {/* Additional SEO */}
         <meta name="keywords" content="rust pirata brasil, rust pirata 2275 brasil, baixar rust pirata gratis brasil, servidor rust pirata brasil, rust pirata download brasil, rust pirata 2026 brasil, rust pirata sao paulo, rust pirata rio de janeiro" />
-        <link rel="canonical" href="https://latamrust.online/rust-pirata-brasil" />
+        <link rel="canonical" href="https://latamrust.vercel.app/rust-pirata-brasil" />
         <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
         
         {/* Structured Data - VideoGame */}
@@ -37,7 +37,7 @@ const RustPirataBrasil: React.FC = () => {
             "@type": "VideoGame",
             "name": "Rust Pirata 2275 Brasil - LATAMRUST",
             "description": "Servidor #1 de Rust Pirata no Brasil com ping baixo e mais de 10.000 jogadores ativos",
-            "url": "https://latamrust.online/rust-pirata-brasil",
+            "url": "https://latamrust.vercel.app/rust-pirata-brasil",
             "operatingSystem": "Windows",
             "applicationCategory": "Game",
             "offers": {

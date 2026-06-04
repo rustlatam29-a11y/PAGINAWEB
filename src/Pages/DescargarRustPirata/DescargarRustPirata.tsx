@@ -11,16 +11,16 @@ const DescargarRustPirata: React.FC = () => {
         <meta name="description" content="Descarga Rust Pirata gratis 2026. Rust 2275 OldRecoil y Rust 2388 Actualizado. Sin Steam, sin Epic Games. Archivo seguro verificado sin virus. Link de descarga directa." />
         <meta name="keywords" content="descargar rust pirata, rust pirata gratis, rust 2275 descargar, rust 2388 descargar, rust pirata pc, rust sin steam, rust sin epic games, rust pirata download, baixar rust pirata, rust gratis, como bajar rust pirata" />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://latamrust.online/descargar-rust-pirata" />
+        <meta property="og:url" content="https://latamrust.vercel.app/descargar-rust-pirata" />
         <meta property="og:title" content="Descargar Rust Pirata Gratis 2026 - Rust 2275 y 2388" />
         <meta property="og:description" content="Descarga Rust Pirata gratis. Rust 2275 OldRecoil y Rust 2388 Actualizado. Sin Steam, sin virus. Link seguro." />
-        <meta property="og:image" content="https://latamrust.online/LATAMLOGO.webp" />
+        <meta property="og:image" content="https://latamrust.vercel.app/LATAMLOGO.webp" />
         <meta property="og:locale" content="es_ES" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Descargar Rust Pirata Gratis 2026" />
         <meta name="twitter:description" content="Descarga Rust 2275 y 2388 gratis. Sin Steam ni Epic Games. Archivo seguro." />
-        <meta name="twitter:image" content="https://latamrust.online/LATAMLOGO.webp" />
-        <link rel="canonical" href="https://latamrust.online/descargar-rust-pirata" />
+        <meta name="twitter:image" content="https://latamrust.vercel.app/LATAMLOGO.webp" />
+        <link rel="canonical" href="https://latamrust.vercel.app/descargar-rust-pirata" />
         <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
 
         <script type="application/ld+json">
@@ -29,7 +29,7 @@ const DescargarRustPirata: React.FC = () => {
             "@type": "HowTo",
             "name": "Como Descargar Rust Pirata Gratis 2026",
             "description": "Guia paso a paso para descargar Rust Pirata 2275 o 2388 gratis de forma segura sin virus.",
-            "image": "https://latamrust.online/LATAMLOGO.webp",
+            "image": "https://latamrust.vercel.app/LATAMLOGO.webp",
             "totalTime": "PT15M",
             "step": [
               {"@type": "HowToStep", "name": "Contactar por WhatsApp", "text": "Escribe por WhatsApp y solicita el enlace de descarga seguro."},
@@ -61,8 +61,8 @@ const DescargarRustPirata: React.FC = () => {
             "@context": "https://schema.org",
             "@type": "BreadcrumbList",
             "itemListElement": [
-              {"@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://latamrust.online/"},
-              {"@type": "ListItem", "position": 2, "name": "Descargar Rust Pirata", "item": "https://latamrust.online/descargar-rust-pirata"}
+              {"@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://latamrust.vercel.app/"},
+              {"@type": "ListItem", "position": 2, "name": "Descargar Rust Pirata", "item": "https://latamrust.vercel.app/descargar-rust-pirata"}
             ]
           })}
         </script>

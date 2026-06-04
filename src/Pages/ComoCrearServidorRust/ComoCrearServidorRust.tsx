@@ -11,16 +11,16 @@ const ComoCrearServidorRust: React.FC = () => {
         <meta name="description" content="Guia completa paso a paso para crear tu servidor de Rust Pirata 2275 o 2388. Configuracion, plugins, AntiCheat, hosting y soporte 24/7. Desde $17 USD." />
         <meta name="keywords" content="crear servidor rust pirata, crear servidor rust 2275, crear servidor rust 2388, montar servidor rust, configurar servidor rust, servidor rust paso a paso, como hacer servidor rust, hosting rust pirata, vps rust server" />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://latamrust.online/como-crear-servidor-rust-pirata" />
+        <meta property="og:url" content="https://latamrust.vercel.app/como-crear-servidor-rust-pirata" />
         <meta property="og:title" content="Como Crear Servidor Rust Pirata 2275/2388 - Guia Completa 2026" />
         <meta property="og:description" content="Guia completa paso a paso para crear tu servidor de Rust Pirata. Configuracion, plugins, AntiCheat y soporte 24/7." />
-        <meta property="og:image" content="https://latamrust.online/LATAMLOGO.webp" />
+        <meta property="og:image" content="https://latamrust.vercel.app/LATAMLOGO.webp" />
         <meta property="og:locale" content="es_ES" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Como Crear Servidor Rust Pirata - Guia Completa 2026" />
         <meta name="twitter:description" content="Guia completa para crear tu servidor de Rust Pirata 2275 o 2388 con plugins, AntiCheat y soporte." />
-        <meta name="twitter:image" content="https://latamrust.online/LATAMLOGO.webp" />
-        <link rel="canonical" href="https://latamrust.online/como-crear-servidor-rust-pirata" />
+        <meta name="twitter:image" content="https://latamrust.vercel.app/LATAMLOGO.webp" />
+        <link rel="canonical" href="https://latamrust.vercel.app/como-crear-servidor-rust-pirata" />
         <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
 
         <script type="application/ld+json">
@@ -29,7 +29,7 @@ const ComoCrearServidorRust: React.FC = () => {
             "@type": "HowTo",
             "name": "Como Crear un Servidor de Rust Pirata 2275/2388",
             "description": "Guia completa paso a paso para crear y configurar tu servidor de Rust Pirata con plugins, AntiCheat y optimizacion para LATAM.",
-            "image": "https://latamrust.online/LATAMLOGO.webp",
+            "image": "https://latamrust.vercel.app/LATAMLOGO.webp",
             "totalTime": "PT30M",
             "step": [
               {"@type": "HowToStep", "name": "Elegir version de Rust", "text": "Elige entre Rust 2275 OldRecoil o Rust 2388 Actualizado segun tu preferencia."},
@@ -64,8 +64,8 @@ const ComoCrearServidorRust: React.FC = () => {
             "@context": "https://schema.org",
             "@type": "BreadcrumbList",
             "itemListElement": [
-              {"@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://latamrust.online/"},
-              {"@type": "ListItem", "position": 2, "name": "Crear Servidor Rust Pirata", "item": "https://latamrust.online/como-crear-servidor-rust-pirata"}
+              {"@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://latamrust.vercel.app/"},
+              {"@type": "ListItem", "position": 2, "name": "Crear Servidor Rust Pirata", "item": "https://latamrust.vercel.app/como-crear-servidor-rust-pirata"}
             ]
           })}
         </script>
