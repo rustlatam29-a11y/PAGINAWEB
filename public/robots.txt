@@ -1,7 +1,7 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://latamrust.vercel.app/sitemap.xml
+Sitemap: https://latamrust.online/sitemap.xml
 
 # Latency reduction - allow all crawlers
 User-agent: Googlebot

@@ -32,7 +32,7 @@ const Header: React.FC = () => {
           <a href="/" className="flex items-center gap-3 flex-shrink-0">
             <img
               src="/loader-bg.png"
-              alt="Logo"
+              alt="LATAMRUST"
               width="40"
               height="40"
               className="w-10 h-10 rounded-lg object-cover"
