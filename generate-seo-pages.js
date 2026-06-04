@@ -13,7 +13,7 @@ const seoPages = {
     description: 'Descarga Rust Pirata gratis en Argentina. Ping bajo 40-60ms desde Buenos Aires, Cordoba, Rosario. +10,000 jugadores activos. Rust 2275 y 2388 disponibles. Juga ahora.',
     keywords: 'rust pirata argentina, rust pirata gratis argentina, servidor rust pirata argentina, descargar rust pirata argentina, rust 2275 argentina, rust 2388 argentina, rust pirata buenos aires, rust pirata cordoba',
     locale: 'es_AR',
-    image: 'https://latamrust.vercel.app/LATAMLOGO.webp',
+    image: 'https://latamrust.online/LATAMLOGO.webp',
     h1: 'Rust Pirata en Argentina',
     content: 'El mejor servidor de Rust Pirata en Argentina con ping bajo de 40-60ms desde Buenos Aires, Cordoba, Rosario y todo el pais. Mas de 10,000 jugadores argentinos activos jugando Rust 2275 OldRecoil y Rust 2388 Actualizado.',
     features: ['Ping bajo 40-60ms desde Buenos Aires', '+10,000 jugadores argentinos activos', 'Rust 2275 OldRecoil y Rust 2388', '+30,000 plugins disponibles', 'AntiCheat profesional', 'Soporte 24/7 en espanol'],
@@ -28,7 +28,7 @@ const seoPages = {
     description: 'Baixe Rust Pirata gratis no Brasil. Ping baixo 15-30ms, +10,000 jogadores ativos. Rust 2275 e 2388 disponiveis. Jogue agora.',
     keywords: 'rust pirata brasil, rust pirata gratis brasil, baixar rust pirata, servidor rust pirata brasil, rust 2275 brasil, rust 2388 brasil, rust pirata sao paulo, rust pirata rio de janeiro, rust pirata br gratis',
     locale: 'pt_BR',
-    image: 'https://latamrust.vercel.app/LATAMLOGO.webp',
+    image: 'https://latamrust.online/LATAMLOGO.webp',
     h1: 'Rust Pirata no Brasil',
     content: 'O melhor servidor de Rust Pirata no Brasil com ping baixo de 15-30ms de Sao Paulo e Rio de Janeiro. Mais de 10,000 jogadores brasileiros ativos jogando Rust 2275 OldRecoil e Rust 2388 Atualizado.',
     features: ['Ping baixo 15-30ms de Sao Paulo', '+10,000 jogadores brasileiros ativos', 'Rust 2275 OldRecoil e Rust 2388', '+30,000 plugins disponiveis', 'AntiCheat profissional', 'Suporte 24/7 em portugues'],
@@ -43,7 +43,7 @@ const seoPages = {
     description: 'Descarga Rust Pirata gratis en Mexico. Ping bajo 50-70ms desde CDMX, Monterrey, Guadalajara. +10,000 jugadores activos. Juega ahora.',
     keywords: 'rust pirata mexico, rust pirata gratis mexico, servidor rust pirata mexico, descargar rust pirata mexico, rust 2275 mexico, rust 2388 mexico, rust pirata cdmx, rust pirata monterrey',
     locale: 'es_MX',
-    image: 'https://latamrust.vercel.app/LATAMLOGO.webp',
+    image: 'https://latamrust.online/LATAMLOGO.webp',
     h1: 'Rust Pirata en Mexico',
     content: 'El mejor servidor de Rust Pirata en Mexico con ping bajo de 50-70ms desde CDMX, Monterrey, Guadalajara y todo el pais. Mas de 10,000 jugadores mexicanos activos.',
     features: ['Ping bajo 50-70ms desde CDMX', '+10,000 jugadores mexicanos activos', 'Rust 2275 OldRecoil y Rust 2388', '+30,000 plugins disponibles', 'AntiCheat profesional', 'Soporte 24/7 en espanol'],
@@ -57,7 +57,7 @@ const seoPages = {
     description: 'Descarga Rust Pirata gratis en Chile. Ping bajo 60-80ms desde Santiago, Valparaiso, Concepcion. +10,000 jugadores activos. Juega ahora.',
     keywords: 'rust pirata chile, rust pirata gratis chile, servidor rust pirata chile, descargar rust pirata chile, rust 2275 chile, rust 2388 chile, rust pirata santiago',
     locale: 'es_CL',
-    image: 'https://latamrust.vercel.app/LATAMLOGO.webp',
+    image: 'https://latamrust.online/LATAMLOGO.webp',
     h1: 'Rust Pirata en Chile',
     content: 'El mejor servidor de Rust Pirata en Chile con ping bajo de 60-80ms desde Santiago, Valparaiso, Concepcion y todo el pais. Mas de 10,000 jugadores chilenos activos.',
     features: ['Ping bajo 60-80ms desde Santiago', '+10,000 jugadores chilenos activos', 'Rust 2275 OldRecoil y Rust 2388', '+30,000 plugins disponibles', 'AntiCheat profesional', 'Soporte 24/7 en espanol'],
@@ -70,7 +70,7 @@ const seoPages = {
     description: 'Descarga Rust Pirata gratis en Colombia. Ping bajo 70-90ms desde Bogota, Medellin, Cali. +10,000 jugadores activos. Juega ahora.',
     keywords: 'rust pirata colombia, rust pirata gratis colombia, servidor rust pirata colombia, descargar rust pirata colombia, rust 2275 colombia, rust 2388 colombia, rust pirata bogota, rust pirata medellin',
     locale: 'es_CO',
-    image: 'https://latamrust.vercel.app/LATAMLOGO.webp',
+    image: 'https://latamrust.online/LATAMLOGO.webp',
     h1: 'Rust Pirata en Colombia',
     content: 'El mejor servidor de Rust Pirata en Colombia con ping bajo de 70-90ms desde Bogota, Medellin, Cali y todo el pais. Mas de 10,000 jugadores colombianos activos.',
     features: ['Ping bajo 70-90ms desde Bogota', '+10,000 jugadores colombianos activos', 'Rust 2275 OldRecoil y Rust 2388', '+30,000 plugins disponibles', 'AntiCheat profesional', 'Soporte 24/7 en espanol'],
@@ -84,7 +84,7 @@ const seoPages = {
     description: 'Descarga Rust Pirata gratis en Peru. Ping bajo 60-80ms desde Lima, Arequipa, Trujillo. +5,000 jugadores activos. Rust 2275 y 2388. Juega ahora.',
     keywords: 'rust pirata peru, rust pirata gratis peru, servidor rust pirata peru, descargar rust pirata peru, rust 2275 peru, rust pirata lima, rust pirata arequipa',
     locale: 'es_PE',
-    image: 'https://latamrust.vercel.app/LATAMLOGO.webp',
+    image: 'https://latamrust.online/LATAMLOGO.webp',
     h1: 'Rust Pirata en Peru',
     content: 'El mejor servidor de Rust Pirata en Peru con ping bajo de 60-80ms desde Lima, Arequipa, Trujillo y todo el pais. Mas de 5,000 jugadores peruanos activos jugando Rust 2275 y 2388.',
     features: ['Ping bajo 60-80ms desde Lima', '+5,000 jugadores peruanos activos', 'Rust 2275 OldRecoil y Rust 2388', '+30,000 plugins disponibles', 'AntiCheat profesional', 'Soporte 24/7 en espanol'],
@@ -98,7 +98,7 @@ const seoPages = {
     description: 'Descarga Rust Pirata gratis en Uruguay. Ping bajo 30-50ms desde Montevideo. +3,000 jugadores activos. Rust 2275 y 2388. Juega ahora.',
     keywords: 'rust pirata uruguay, rust pirata gratis uruguay, servidor rust pirata uruguay, descargar rust pirata uruguay, rust pirata montevideo',
     locale: 'es_UY',
-    image: 'https://latamrust.vercel.app/LATAMLOGO.webp',
+    image: 'https://latamrust.online/LATAMLOGO.webp',
     h1: 'Rust Pirata en Uruguay',
     content: 'El mejor servidor de Rust Pirata en Uruguay con ping bajo de 30-50ms desde Montevideo y todo el pais. Mas de 3,000 jugadores uruguayos activos.',
     features: ['Ping bajo 30-50ms desde Montevideo', '+3,000 jugadores uruguayos activos', 'Rust 2275 OldRecoil y Rust 2388', '+30,000 plugins disponibles', 'AntiCheat profesional', 'Soporte 24/7 en espanol'],
@@ -111,7 +111,7 @@ const seoPages = {
     description: 'Descarga Rust Pirata gratis en Paraguay. Ping bajo 20-40ms desde Asuncion. +2,000 jugadores activos. Rust 2275 y 2388. Juega ahora.',
     keywords: 'rust pirata paraguay, rust pirata gratis paraguay, servidor rust pirata paraguay, descargar rust pirata paraguay, rust pirata asuncion',
     locale: 'es_PY',
-    image: 'https://latamrust.vercel.app/LATAMLOGO.webp',
+    image: 'https://latamrust.online/LATAMLOGO.webp',
     h1: 'Rust Pirata en Paraguay',
     content: 'El mejor servidor de Rust Pirata en Paraguay con ping bajo de 20-40ms desde Asuncion. Mas de 2,000 jugadores paraguayos activos. Fundado por ParaguayRAIDER.',
     features: ['Ping bajo 20-40ms desde Asuncion', '+2,000 jugadores paraguayos activos', 'Rust 2275 OldRecoil y Rust 2388', '+30,000 plugins disponibles', 'AntiCheat profesional', 'Soporte 24/7 en espanol'],
@@ -125,7 +125,7 @@ const seoPages = {
     description: 'Descarga Rust Pirata gratis en Ecuador. Ping bajo 70-90ms desde Quito, Guayaquil. +3,000 jugadores activos. Rust 2275 y 2388. Juega ahora.',
     keywords: 'rust pirata ecuador, rust pirata gratis ecuador, servidor rust pirata ecuador, descargar rust pirata ecuador, rust pirata quito, rust pirata guayaquil',
     locale: 'es_EC',
-    image: 'https://latamrust.vercel.app/LATAMLOGO.webp',
+    image: 'https://latamrust.online/LATAMLOGO.webp',
     h1: 'Rust Pirata en Ecuador',
     content: 'El mejor servidor de Rust Pirata en Ecuador con ping bajo de 70-90ms desde Quito, Guayaquil y todo el pais. Mas de 3,000 jugadores ecuatorianos activos.',
     features: ['Ping bajo 70-90ms desde Quito', '+3,000 jugadores ecuatorianos activos', 'Rust 2275 OldRecoil y Rust 2388', '+30,000 plugins disponibles', 'AntiCheat profesional', 'Soporte 24/7 en espanol'],
@@ -138,7 +138,7 @@ const seoPages = {
     description: 'Descarga Rust Pirata gratis en Bolivia. Ping bajo 60-80ms desde La Paz, Santa Cruz. +2,000 jugadores activos. Rust 2275 y 2388. Juega ahora.',
     keywords: 'rust pirata bolivia, rust pirata gratis bolivia, servidor rust pirata bolivia, descargar rust pirata bolivia, rust pirata la paz, rust pirata santa cruz',
     locale: 'es_BO',
-    image: 'https://latamrust.vercel.app/LATAMLOGO.webp',
+    image: 'https://latamrust.online/LATAMLOGO.webp',
     h1: 'Rust Pirata en Bolivia',
     content: 'El mejor servidor de Rust Pirata en Bolivia con ping bajo de 60-80ms desde La Paz, Santa Cruz y todo el pais. Mas de 2,000 jugadores bolivianos activos.',
     features: ['Ping bajo 60-80ms desde La Paz', '+2,000 jugadores bolivianos activos', 'Rust 2275 OldRecoil y Rust 2388', '+30,000 plugins disponibles', 'AntiCheat profesional', 'Soporte 24/7 en espanol'],
@@ -151,7 +151,7 @@ const seoPages = {
     description: 'Descarga Rust Pirata gratis en Venezuela. Ping bajo 80-100ms desde Caracas, Maracaibo. +4,000 jugadores activos. Rust 2275 y 2388. Juega ahora.',
     keywords: 'rust pirata venezuela, rust pirata gratis venezuela, servidor rust pirata venezuela, descargar rust pirata venezuela, rust pirata caracas',
     locale: 'es_VE',
-    image: 'https://latamrust.vercel.app/LATAMLOGO.webp',
+    image: 'https://latamrust.online/LATAMLOGO.webp',
     h1: 'Rust Pirata en Venezuela',
     content: 'El mejor servidor de Rust Pirata en Venezuela con ping bajo de 80-100ms desde Caracas, Maracaibo y todo el pais. Mas de 4,000 jugadores venezolanos activos.',
     features: ['Ping bajo 80-100ms desde Caracas', '+4,000 jugadores venezolanos activos', 'Rust 2275 OldRecoil y Rust 2388', '+30,000 plugins disponibles', 'AntiCheat profesional', 'Soporte 24/7 en espanol'],
@@ -164,7 +164,7 @@ const seoPages = {
     description: 'Descarga Rust Pirata gratis en Costa Rica. Ping bajo 60-80ms desde San Jose. +2,000 jugadores activos. Rust 2275 y 2388. Juega ahora.',
     keywords: 'rust pirata costa rica, rust pirata gratis costa rica, servidor rust pirata costa rica, rust pirata san jose',
     locale: 'es_CR',
-    image: 'https://latamrust.vercel.app/LATAMLOGO.webp',
+    image: 'https://latamrust.online/LATAMLOGO.webp',
     h1: 'Rust Pirata en Costa Rica',
     content: 'El mejor servidor de Rust Pirata en Costa Rica con ping bajo de 60-80ms desde San Jose. Mas de 2,000 jugadores costarricenses activos.',
     features: ['Ping bajo 60-80ms desde San Jose', '+2,000 jugadores activos', 'Rust 2275 y 2388', '+30,000 plugins', 'AntiCheat profesional', 'Soporte 24/7'],
@@ -177,7 +177,7 @@ const seoPages = {
     description: 'Descarga Rust Pirata gratis en Panama. Ping bajo 50-70ms desde Panama City. +1,500 jugadores activos. Rust 2275 y 2388. Juega ahora.',
     keywords: 'rust pirata panama, rust pirata gratis panama, servidor rust pirata panama, rust pirata panama city',
     locale: 'es_PA',
-    image: 'https://latamrust.vercel.app/LATAMLOGO.webp',
+    image: 'https://latamrust.online/LATAMLOGO.webp',
     h1: 'Rust Pirata en Panama',
     content: 'El mejor servidor de Rust Pirata en Panama con ping bajo de 50-70ms desde Panama City. Mas de 1,500 jugadores panamenos activos.',
     features: ['Ping bajo 50-70ms desde Panama City', '+1,500 jugadores activos', 'Rust 2275 y 2388', '+30,000 plugins', 'AntiCheat profesional', 'Soporte 24/7'],
@@ -190,7 +190,7 @@ const seoPages = {
     description: 'Descarga Rust Pirata gratis en Republica Dominicana. Ping bajo 70-90ms desde Santo Domingo. +2,000 jugadores activos. Juega ahora.',
     keywords: 'rust pirata republica dominicana, rust pirata gratis rd, servidor rust pirata rd, rust pirata santo domingo',
     locale: 'es_DO',
-    image: 'https://latamrust.vercel.app/LATAMLOGO.webp',
+    image: 'https://latamrust.online/LATAMLOGO.webp',
     h1: 'Rust Pirata en Republica Dominicana',
     content: 'El mejor servidor de Rust Pirata en Republica Dominicana con ping bajo de 70-90ms desde Santo Domingo. Mas de 2,000 jugadores dominicanos activos.',
     features: ['Ping bajo 70-90ms desde Santo Domingo', '+2,000 jugadores activos', 'Rust 2275 y 2388', '+30,000 plugins', 'AntiCheat profesional', 'Soporte 24/7'],
@@ -204,7 +204,7 @@ const seoPages = {
     description: 'Unete a Rust Family LATAMRUST, la mayor comunidad de Rust Pirata en LATAM con mas de 10,000 miembros activos. Eventos, torneos y mas.',
     keywords: 'rust family, rust family brasil, rust family argentina, comunidad rust pirata, rust family latam, rust family 2026, comunidad rust',
     locale: 'es_ES',
-    image: 'https://latamrust.vercel.app/LATAMLOGO.webp',
+    image: 'https://latamrust.online/LATAMLOGO.webp',
     h1: 'Rust Family LATAMRUST',
     content: 'La mayor comunidad de Rust Pirata en Latinoamerica. Mas de 10,000 miembros activos jugando en servidores Rust 2275 y 2388 con plugins personalizados.',
     features: ['+10,000 miembros activos', 'Eventos y torneos semanales', 'Servidores Rust 2275 y 2388', 'Comunidad hispanohablante', 'Soporte 24/7', 'Plugins personalizados'],
@@ -217,7 +217,7 @@ const seoPages = {
     description: 'Lista completa de los mejores servidores Rust Pirata 2026 en LATAM. Comparativa, reviews, ping, jugadores. LATAMRUST #1 ranking.',
     keywords: 'servidores rust pirata, mejores servidores rust pirata, servidores rust pirata brasil, servidores rust pirata argentina, top servidores rust, ranking servidores rust',
     locale: 'es_ES',
-    image: 'https://latamrust.vercel.app/LATAMLOGO.webp',
+    image: 'https://latamrust.online/LATAMLOGO.webp',
     h1: 'Mejores Servidores Rust Pirata',
     content: 'Descubre los mejores servidores de Rust Pirata en Latinoamerica. Comparativa completa de ping, jugadores, plugins y soporte. LATAMRUST lidera el ranking.',
     features: ['Ranking actualizado 2026', 'Comparativa de ping por pais', 'Reviews de jugadores reales', 'Informacion de plugins', 'Planes y precios', 'Soporte tecnico'],
@@ -230,7 +230,7 @@ const seoPages = {
     description: 'A maior comunidade Rust Family do Brasil. Entre no Discord LATAMRUST com mais de 10,000 jogadores ativos. Eventos, torneios e suporte 24/7.',
     keywords: 'comunidade rust family, rust family brasil, comunidade rust pirata brasil, discord rust family, rust family latam, comunidade rust',
     locale: 'pt_BR',
-    image: 'https://latamrust.vercel.app/LATAMLOGO.webp',
+    image: 'https://latamrust.online/LATAMLOGO.webp',
     h1: 'Comunidade Rust Family Brasil',
     content: 'A maior comunidade de Rust Pirata do Brasil. Mais de 10,000 jogadores brasileiros ativos jogando em servidores Rust 2275 e 2388.',
     features: ['+10,000 jogadores brasileiros', 'Eventos e torneios semanais', 'Servidores Rust 2275 e 2388', 'Comunidade lusofona', 'Suporte 24/7 em portugues', 'Plugins personalizados'],
@@ -243,7 +243,7 @@ const seoPages = {
     description: 'Servidor Rust Family premium com hardware dedicado, ping baixo 15-30ms Brasil, uptime 99.9%, anti-cheat profissional.',
     keywords: 'servidor rust family, servidor rust pirata premium, servidor rust dedicado, rust family server, servidor premium rust',
     locale: 'pt_BR',
-    image: 'https://latamrust.vercel.app/LATAMLOGO.webp',
+    image: 'https://latamrust.online/LATAMLOGO.webp',
     h1: 'Servidor Rust Family Premium',
     content: 'Servidor Rust Family premium con hardware dedicado de ultima generacion. Ping bajo 15-30ms en Brasil, uptime 99.9% garantizado, anti-cheat profesional.',
     features: ['Hardware dedicado de ultima generacion', 'Ping bajo 15-30ms Brasil', 'Uptime 99.9% garantizado', 'Anti-cheat profissional', 'Soporte prioritario 24/7', '+30,000 plugins'],
@@ -256,7 +256,7 @@ const seoPages = {
     description: 'Servidor DayZ Pirata 1.28 gratis para LATAM. Descargar DayZ pirata, ping bajo, +1000 jugadores. Survival, zombies, PvP.',
     keywords: 'dayz pirata, dayz 1.28, dayz gratis, descargar dayz pirata, servidor dayz pirata, dayz pirata brasil, dayz pirata argentina, dayz pirata mexico',
     locale: 'es_ES',
-    image: 'https://latamrust.vercel.app/LATAMLOGO.webp',
+    image: 'https://latamrust.online/LATAMLOGO.webp',
     h1: 'DayZ Pirata Gratis',
     content: 'Servidor DayZ Pirata 1.28 gratis para Latinoamerica. Descarga DayZ pirata y juega con miles de jugadores. Survival, zombies, PvP.',
     features: ['DayZ 1.28 ultima version', 'Ping bajo LATAM', '+1000 jugadores activos', 'Survival y PvP', 'Zombies y ambientacion', 'Servidor 24/7'],
@@ -270,7 +270,7 @@ const seoPages = {
     description: 'Guia completa para crear tu servidor de Rust Pirata 2275 o 2388. Paso a paso con plugins, AntiCheat, configuracion y soporte 24/7.',
     keywords: 'como crear servidor rust pirata, crear servidor rust 2275, crear servidor rust 2388, configurar servidor rust, servidor rust paso a paso, montar servidor rust',
     locale: 'es_ES',
-    image: 'https://latamrust.vercel.app/LATAMLOGO.webp',
+    image: 'https://latamrust.online/LATAMLOGO.webp',
     h1: 'Como Crear un Servidor de Rust Pirata',
     content: 'Guia completa paso a paso para crear tu servidor de Rust Pirata. Aprende a configurar Rust 2275 o 2388 con plugins, AntiCheat y optimizacion para LATAM.',
     features: ['Paso a paso detallado', 'Configuracion de Rust 2275 y 2388', 'Instalacion de plugins', 'AntiCheat configurado', 'Optimizacion para LATAM', 'Soporte 24/7'],
@@ -285,7 +285,7 @@ const seoPages = {
     description: 'Los mejores plugins gratis para Rust Pirata 2275 y 2388. Kits, economia, anti-cheat, tiendas, VIP y mas. Lista actualizada 2026.',
     keywords: 'mejores plugins rust pirata, plugins rust 2275, plugins rust 2388, oxide plugins rust, umod plugins, plugins gratis rust, tienda plugins rust, economia rust',
     locale: 'es_ES',
-    image: 'https://latamrust.vercel.app/LATAMLOGO.webp',
+    image: 'https://latamrust.online/LATAMLOGO.webp',
     h1: 'Mejores Plugins para Rust Pirata',
     content: 'Los 30 mejores plugins gratis para servidores Rust Pirata. Desde kits y economia hasta anti-cheat y tiendas. Lista actualizada para 2026.',
     features: ['Top 30 plugins gratis', 'Plugins para Rust 2275 y 2388', 'Kits, economia, tiendas', 'Anti-cheat profesional', 'Guia de instalacion', 'Configs recomendados'],
@@ -299,7 +299,7 @@ const seoPages = {
     description: 'Descarga Rust Pirata gratis 2026. Rust 2275 OldRecoil y Rust 2388 Actualizado. Sin Steam, sin Epic Games. Link seguro sin virus.',
     keywords: 'descargar rust pirata, rust pirata gratis, rust 2275 descargar, rust 2388 descargar, rust pirata pc, rust sin steam, rust sin epic games, rust pirata download, baixar rust pirata',
     locale: 'es_ES',
-    image: 'https://latamrust.vercel.app/LATAMLOGO.webp',
+    image: 'https://latamrust.online/LATAMLOGO.webp',
     h1: 'Descargar Rust Pirata Gratis',
     content: 'Descarga Rust Pirata gratis en tu PC. Disponible Rust 2275 OldRecoil y Rust 2388 Actualizado. Sin necesidad de Steam ni Epic Games. Archivo seguro verificado.',
     features: ['Descarga gratis y segura', 'Rust 2275 OldRecoil', 'Rust 2388 Actualizado', 'Sin Steam ni Epic Games', 'Archivos verificados sin virus', 'Instalacion rapida'],
@@ -314,7 +314,7 @@ const seoPages = {
     description: 'Juega Rust Pirata gratis en 2026. Sin pagar Steam ni Epic Games. Rust 2275 y 2388 disponibles. Servidores con +30,000 plugins.',
     keywords: 'rust pirata gratis, rust gratis, jugar rust gratis, rust sin pagar, rust 2275 gratis, rust 2388 gratis, rust pirata free, rust online gratis',
     locale: 'es_ES',
-    image: 'https://latamrust.vercel.app/LATAMLOGO.webp',
+    image: 'https://latamrust.online/LATAMLOGO.webp',
     h1: 'Rust Pirata Gratis',
     content: 'Juega Rust pirata gratis en 2026. Sin pagar Steam ni Epic Games. Disponible Rust 2275 y 2388 con +30,000 plugins. Servidores con ping bajo en toda LATAM.',
     features: ['100% gratis', 'Rust 2275 y 2388', '+30,000 plugins', 'Sin pagar Steam', 'Ping bajo LATAM', 'Soporte 24/7'],
@@ -328,7 +328,7 @@ const seoPages = {
     description: 'Descarga Rust 2275 OldRecoil gratis. La version clasica con recoil original. +30,000 plugins. Servidores con ping bajo LATAM.',
     keywords: 'rust 2275, rust 2275 oldrecoil, rust 2275 descargar, rust oldrecoil, rust clasico, rust recoil original, rust 2275 gratis, rust 2275 pc',
     locale: 'es_ES',
-    image: 'https://latamrust.vercel.app/LATAMLOGO.webp',
+    image: 'https://latamrust.online/LATAMLOGO.webp',
     h1: 'Rust 2275 OldRecoil',
     content: 'Rust 2275 OldRecoil, la version clasica favorita de la comunidad. Recoil original que todos conocen y aman. Descarga gratis y juega en servidores LATAM.',
     features: ['Version 2275 estable', 'Recoil clasico original', '+30,000 plugins', 'Servidores optimizados', 'Ping bajo LATAM', 'Descarga gratis'],
@@ -342,7 +342,7 @@ const seoPages = {
     description: 'Descarga Rust 2388 Actualizado gratis. La ultima version con mejores graficos y optimizaciones. +30,000 plugins premium.',
     keywords: 'rust 2388, rust 2388 actualizado, rust 2388 descargar, rust ultima version, rust 2026, rust nuevo, rust 2388 gratis, rust 2388 pc',
     locale: 'es_ES',
-    image: 'https://latamrust.vercel.app/LATAMLOGO.webp',
+    image: 'https://latamrust.online/LATAMLOGO.webp',
     h1: 'Rust 2388 Actualizado',
     content: 'Rust 2388 Actualizado, la ultima version de Rust con mejores graficos, optimizaciones y nuevas funciones. Descarga gratis y juega con +30,000 plugins.',
     features: ['Ultima version estable', 'Mejores graficos', '+30,000 plugins premium', 'Optimizado para LATAM', 'Nuevas funciones', 'Descarga gratis'],
@@ -356,7 +356,7 @@ const seoPages = {
     description: 'Descarga plugins Oxide gratis para Rust pirata. +30,000 plugins disponibles. Kits, economia, tiendas, anti-cheat y mas.',
     keywords: 'plugins oxide rust, oxide plugins, rust plugins, umod plugins, plugins gratis rust, tienda plugins rust, economia rust, kits rust',
     locale: 'es_ES',
-    image: 'https://latamrust.vercel.app/LATAMLOGO.webp',
+    image: 'https://latamrust.online/LATAMLOGO.webp',
     h1: 'Plugins Oxide para Rust',
     content: 'Descarga miles de plugins Oxide gratis para tu servidor de Rust pirata. Desde kits y economia hasta anti-cheat y tiendas. Compatible con Rust 2275 y 2388.',
     features: ['+30,000 plugins gratis', 'Compatible con Rust 2275 y 2388', 'Kits y economia', 'Tiendas y VIP', 'Anti-cheat', 'Fácil instalacion'],
@@ -370,7 +370,7 @@ const seoPages = {
     description: 'Juega Rust pirata sin Steam ni Epic Games. Descarga gratis, sin cuentas, sin pagos. Rust 2275 y 2388 disponibles.',
     keywords: 'rust pirata sin steam, rust sin steam, rust sin epic games, rust sin cuenta, rust gratis sin steam, rust pirata offline, rust sin Conexion',
     locale: 'es_ES',
-    image: 'https://latamrust.vercel.app/LATAMLOGO.webp',
+    image: 'https://latamrust.online/LATAMLOGO.webp',
     h1: 'Rust Pirata Sin Steam',
     content: 'Juega Rust pirata sin necesidad de Steam ni Epic Games. Descarga gratis, ejecuta y juega. Disponible Rust 2275 y 2388 con servidores online.',
     features: ['Sin Steam ni Epic Games', 'Sin cuentas necesarias', 'Descarga gratis', 'Rust 2275 y 2388', 'Servidores online', 'Jugando en minutos'],
@@ -384,7 +384,7 @@ const seoPages = {
     description: 'Guia para configurar tu servidor Rust pirata. Plugins, AntiCheat, optimizacion, reglas y mas. Soporte 24/7.',
     keywords: 'configurar servidor rust, configurar rust pirata, servidor rust plugins, anti-cheat rust, optimizar servidor rust, reglas servidor rust',
     locale: 'es_ES',
-    image: 'https://latamrust.vercel.app/LATAMLOGO.webp',
+    image: 'https://latamrust.online/LATAMLOGO.webp',
     h1: 'Configurar Servidor Rust Pirata',
     content: 'Aprende a configurar tu servidor de Rust pirata con los mejores plugins, AntiCheat, optimizacion y reglas. Guia completa para administradores.',
     features: ['Configuracion paso a paso', 'Plugins recomendados', 'Anti-cheat configurado', 'Optimizacion de rendimiento', 'Reglas de servidor', 'Soporte 24/7'],
@@ -402,7 +402,7 @@ let baseHTML = fs.readFileSync(indexPath, 'utf-8');
 // Generar HTML para cada página
 Object.keys(seoPages).forEach(pagePath => {
   const seo = seoPages[pagePath];
-  const url = `https://latamrust.vercel.app/${pagePath}`;
+  const url = `https://latamrust.online/${pagePath}`;
   
   // Generar FAQ Schema
   const faqSchema = {
@@ -427,7 +427,7 @@ Object.keys(seoPages).forEach(pagePath => {
         "@type": "ListItem",
         "position": 1,
         "name": "Inicio",
-        "item": "https://latamrust.vercel.app/"
+        "item": "https://latamrust.online/"
       },
       {
         "@type": "ListItem",
@@ -465,7 +465,7 @@ Object.keys(seoPages).forEach(pagePath => {
 // Generar sitemap.xml
 const sitemapPages = Object.keys(seoPages).map(pagePath => {
   return `  <url>
-    <loc>https://latamrust.vercel.app/${pagePath}/</loc>
+    <loc>https://latamrust.online/${pagePath}/</loc>
     <lastmod>2026-06-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -475,7 +475,7 @@ const sitemapPages = Object.keys(seoPages).map(pagePath => {
 const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://latamrust.vercel.app/</loc>
+    <loc>https://latamrust.online/</loc>
     <lastmod>2026-06-03</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
@@ -490,7 +490,7 @@ console.log('✓ Generado: /sitemap.xml');
 const robots = `User-agent: *
 Allow: /
 
-Sitemap: https://latamrust.vercel.app/sitemap.xml
+Sitemap: https://latamrust.online/sitemap.xml
 
 User-agent: Googlebot
 Allow: /
