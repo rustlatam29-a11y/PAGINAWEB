@@ -33,8 +33,8 @@ const Process: React.FC = () => {
   const { elementRef, isVisible } = useScrollAnimation();
 
   return (
-    <section ref={elementRef} className="py-20 px-4 bg-[#0a0a0a]" id="proceso">
-      <div className="max-w-6xl mx-auto">
+    <section ref={elementRef} className="py-24 bg-[#0a0a0a] border-t border-white/5" id="proceso">
+      <div className="max-w-screen-xl mx-auto px-8 md:px-12">
         <div
           className={`text-center mb-16 transition-all duration-500 ${
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
@@ -67,14 +67,14 @@ const Process: React.FC = () => {
                 )}
 
                 <div className="text-center">
-                  <div className="text-6xl font-black text-white/[0.03] mb-4">{step.step}</div>
+                  <div className="text-7xl font-black text-white/[0.02] mb-4">{step.step}</div>
 
-                  <div className="w-16 h-16 rounded-2xl bg-red-500/10 border border-red-500/20 flex items-center justify-center mx-auto mb-5">
-                    <Icon className="w-7 h-7 text-red-500" />
+                  <div className="w-20 h-20 rounded-2xl bg-red-500/10 border border-red-500/20 flex items-center justify-center mx-auto mb-5">
+                    <Icon className="w-9 h-9 text-red-500" />
                   </div>
 
                   <h3 className="text-white font-bold text-lg mb-2">{step.title}</h3>
-                  <p className="text-gray-400 text-sm leading-relaxed">{step.description}</p>
+                  <p className="text-gray-400 text-sm leading-relaxed max-w-xs mx-auto">{step.description}</p>
                 </div>
               </div>
             );

@@ -1,0 +1,99 @@
+========================================
+PROMPT PARA PRÓXIMA SESIÓN - LATAMRUST
+========================================
+
+SITIO: https://latamrust.vercel.app (GitHub: rustlatam29-a11y/PAGINAWEB)
+REPO: https://github.com/rustlatam29-a11y/PAGINAWEB
+STACK: React + TypeScript + Vite + Tailwind CSS v4
+WHATSAPP: +595981144534 (ParaguayRAIDER)
+DISCORD: paraguayservers
+
+========================================
+ESTRUCTURA DE LA PÁGINA (HOME)
+========================================
+
+1. Header fijo con logo, nav y botón WhatsApp
+2. Hero: "RUST PIRATA" + badge 24/7 + botón consultar
+3. Servicios (6 cards): Servidores, Plugins, Desarrollo, AntiCheat, Soporte, Configuración
+4. Planes ($17 Rust 2275 / $25 Rust 2388) - diseño moderno
+5. Beneficios + Card del fundador con stats
+6. Proyectos (RustSpain, Brasa.gg, LATAMRUST)
+7. Proceso (4 pasos: Contacto → Config → Listo → Soporte)
+8. Testimonios (6 clientes)
+9. FAQ (8 preguntas con accordion)
+10. Footer (marca, enlaces, Discord: paraguayservers)
+
+========================================
+LO QUE LE GUSTA AL USUARIO
+========================================
+
+✅ Diseño dark/oscuro con fondo #0a0a0a (negro sólido)
+✅ Colores rojo (#dc2626) y negro - ESTA PALETA
+✅ Hero limpio sin imagen de fondo, solo texto
+✅ Header con borde inferior siempre visible
+✅ Logo usa imagen "loader-bg.png" (ChatGPT Image)
+✅ Loader con fondo negro sólido + imagen nueva como logo
+✅ Sección de planes moderna y profesional
+✅ Textos formales y profesionales, nada de IA
+✅ Animaciones reducidas para mejor SEO/rendimiento
+✅ Nada de emojis, glow, partículas, ni efectos ruidosos
+✅ Discord: solo "paraguayservers" (no paraguayraider)
+✅ Todo redirige a WhatsApp, nada de Discord para ventas
+
+========================================
+LO QUE NO LE GUSTA AL USUARIO
+========================================
+
+❌ Fondo con imagen en Hero (quiere solo negro)
+❌ Textos genéricos de IA ("revolucionario", "innovador")
+❌ Mucho texto largo sin espacios
+❌ Emojis por todos lados
+❌ Efectos de partículas, glow, lightning
+❌ Discord paraguayraider (quiere solo paraguayservers)
+❌ Fondo con grid animado o glow pulsante
+❌ Animaciones excesivas que afecten el rendimiento
+❌ Header transparente sin separador visual
+❌ Textos informales ("VENDEmos", "echo por")
+❌ Cards de planes poco profesuales
+
+========================================
+IMÁGENES DEL PROYECTO
+========================================
+
+- /loader-bg.png → Logo principal (ChatGPT Image 3 jun 2026)
+- /LATAMLOGO.webp → Logo anterior (ya no se usa en header/loader)
+- /img1.webp → Imagen anterior (ya no se usa)
+- /paraguayraider.png → Foto del fundador (ya no se usa, reemplazada)
+
+========================================
+SECCIONES SEO (28 PÁGINAS ESTÁTICAS)
+========================================
+
+- 14 páginas por país: Argentina, Brasil, México, Chile, Colombia, Perú, Uruguay, Paraguay, Ecuador, Bolivia, Venezuela, Costa Rica, Panamá, Rep. Dominicana
+- 14 guías/tutoriales: crear servidor, mejores plugins, descargar, gratis, 2275, 2388, plugins oxide, sin steam, configurar, rust-family, comunidades, servidor, DayZ, servidores pirata
+
+========================================
+COMANDOS IMPORTANTES
+========================================
+
+- Node/npm path: $env:PATH = "C:\Program Files\nodejs;" + $env:PATH
+- Git path: "C:\Program Files\Git\cmd\git.exe"
+- Dev server: npm run dev (port 5173)
+- Build: npm run build
+- Deploy: vercel --prod --yes
+- Start dev: Start-Process -FilePath "cmd.exe" -ArgumentList "/k cd /d C:\Users\Administrator\Desktop\PAGINAWEB && npm run dev"
+
+========================================
+NOTAS IMPORTANTES
+========================================
+
+- NO usar discord para ventas, TODO por WhatsApp
+- Textos siempre formales y profesionales
+- Fondo siempre negro sólido #0a0a0a
+- Colores: rojo #dc2626 como acento
+- Animaciones mínimas para SEO
+- Imagen nueva "loader-bg.png" es el logo actual
+- Header siempre con borde inferior para separación
+- Precio: $17 (2275) y $25 (2388) - pago único
+- Host NO incluido, VPS aparte
+- Soporte 24/7 por WhatsApp

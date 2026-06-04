@@ -42,12 +42,14 @@ const Loader: React.FC<LoaderProps> = ({ onLoadComplete }) => {
         <img
           src="/loader-bg.png"
           alt="LATAMRUST"
+          width="80"
+          height="80"
           className="w-20 h-20 rounded-2xl mx-auto mb-6 object-cover"
         />
 
-        <h1 className="text-white font-black text-2xl tracking-tight mb-1">
+        <p className="text-white font-black text-2xl tracking-tight mb-1">
           Paraguay<span className="text-red-500">RAIDER</span>
-        </h1>
+        </p>
         <p className="text-gray-500 text-xs tracking-widest uppercase mb-8">
           Servidores y Plugins de Rust
         </p>

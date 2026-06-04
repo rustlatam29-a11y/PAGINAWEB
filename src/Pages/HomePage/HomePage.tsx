@@ -1,6 +1,7 @@
 import Header from "../../Components/Header/Header";
+import LatamrustBanner from "../../Components/LatamrustBanner/LatamrustBanner";
 import Hero from "../../Components/Hero/Hero";
-import Services from "../../Components/Services/Services";
+import VideoSection from "../../Components/VideoSection/VideoSection";
 import Benefits from "../../Components/Benefits/Benefits";
 import Projects from "../../Components/Projects/Projects";
 import ServerPlans from "../../Components/ServerPlans/ServerPlans";
@@ -14,14 +15,17 @@ function HomePage() {
   return (
     <GlobalBackground>
       <Header />
-      <Hero />
-      <Services />
-      <ServerPlans />
-      <Benefits />
-      <Projects />
-      <Process />
-      <Testimonials />
-      <FAQ />
+      <main>
+        <LatamrustBanner />
+        <Hero />
+        <VideoSection />
+        <ServerPlans />
+        <Benefits />
+        <Projects />
+        <Process />
+        <Testimonials />
+        <FAQ />
+      </main>
       <Footer />
     </GlobalBackground>
   );

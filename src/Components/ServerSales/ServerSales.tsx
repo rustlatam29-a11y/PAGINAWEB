@@ -88,7 +88,7 @@ const ServerSales: React.FC = () => {
         itemScope
         itemType="https://schema.org/Product"
       >
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="relative max-w-screen-xl mx-auto px-8 md:px-12">
 
               {/* ===================== HEADER ===================== */}
               <div className="text-center mb-12">

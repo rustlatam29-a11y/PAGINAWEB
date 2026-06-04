@@ -30,8 +30,8 @@ const Projects: React.FC = () => {
   const { elementRef, isVisible } = useScrollAnimation();
 
   return (
-    <section ref={elementRef} className="py-20 px-4 bg-[#0a0a0a]" id="proyectos">
-      <div className="max-w-6xl mx-auto">
+    <section ref={elementRef} className="py-24 bg-[#0a0a0a] border-t border-white/5" id="proyectos">
+      <div className="max-w-screen-xl mx-auto px-8 md:px-12">
         <div
           className={`text-center mb-16 transition-all duration-500 ${
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
@@ -52,7 +52,7 @@ const Projects: React.FC = () => {
           {projects.map((project, index) => (
             <div
               key={index}
-              className={`group relative p-6 rounded-2xl border border-white/5 bg-white/[0.02] hover:bg-white/[0.04] hover:border-red-500/20 transition-all duration-300 ${
+              className={`group relative p-8 rounded-2xl border border-white/5 bg-white/[0.02] hover:bg-white/[0.04] hover:border-red-500/20 transition-all duration-300 ${
                 isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
               }`}
               style={{ transitionDelay: `${index * 100}ms` }}
@@ -64,6 +64,7 @@ const Projects: React.FC = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-gray-500 hover:text-red-500 transition-colors"
+                  aria-label={`Visitar ${project.name}`}
                 >
                   <ExternalLink className="w-4 h-4" />
                 </a>

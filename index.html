@@ -8,9 +8,12 @@
     <!-- DNS Prefetch & Preconnect -->
     <link rel="dns-prefetch" href="https://api.exchangerate-api.com" />
     <link rel="preconnect" href="https://api.exchangerate-api.com" crossorigin />
+    <link rel="dns-prefetch" href="https://api.counterapi.dev" />
+    <link rel="dns-prefetch" href="https://www.youtube.com" />
+    <link rel="preconnect" href="https://www.youtube.com" crossorigin />
     
     <!-- Preload Critical Resources -->
-    <link rel="preload" href="/img1.webp" as="image" type="image/webp" fetchpriority="high" />
+    <link rel="preload" href="/decoracion-pagina.png" as="image" type="image/png" fetchpriority="high" />
     
     <!-- Theme Color -->
     <meta name="theme-color" content="#000000" />
@@ -120,6 +123,59 @@
           "urlTemplate": "https://latamrust.vercel.app/?q={search_term_string}"
         },
         "query-input": "required name=search_term_string"
+      }
+    }
+    </script>
+    
+    <!-- LocalBusiness Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "LATAMRUST",
+      "alternateName": "Servidores Rust Pirata",
+      "url": "https://latamrust.vercel.app",
+      "logo": "https://latamrust.vercel.app/logo_latam_embed.svg",
+      "image": "https://latamrust.vercel.app/LATAMLOGO.webp",
+      "description": "Servidores de Rust Pirata 2275 y 2388 para Latinoamerica. +30,000 plugins, AntiCheat, soporte 24/7.",
+      "priceRange": "$$",
+      "currenciesAccepted": "USD",
+      "paymentAccepted": "Cash, Credit Card, PayPal",
+      "areaServed": [
+        {"@type": "Country", "name": "Brasil"},
+        {"@type": "Country", "name": "Argentina"},
+        {"@type": "Country", "name": "Mexico"},
+        {"@type": "Country", "name": "Chile"},
+        {"@type": "Country", "name": "Colombia"},
+        {"@type": "Country", "name": "Peru"},
+        {"@type": "Country", "name": "Uruguay"},
+        {"@type": "Country", "name": "Paraguay"}
+      ],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Servidores Rust Pirata",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Servidor Rust 2275 OldRecoil",
+              "description": "Servidor Rust pirata version 2275 con OldRecoil, +30,000 plugins y soporte 24/7"
+            },
+            "price": "17",
+            "priceCurrency": "USD"
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Servidor Rust 2388 Actualizado",
+              "description": "Servidor Rust pirata version 2388 actualizado con plugins premium y soporte prioritario"
+            },
+            "price": "25",
+            "priceCurrency": "USD"
+          }
+        ]
       }
     }
     </script>
@@ -293,7 +349,7 @@
   </head>
   <body>
     <!-- Skip to main content -->
-    <a href="#root" style="position:absolute;left:-9999px;top:0;z-index:999;padding:1em;background:#dc2626;color:#fff;text-decoration:none;">Skip to main content</a>
+    <a href="#root" aria-label="Ir al contenido principal" style="position:absolute;left:-9999px;top:0;z-index:999;padding:1em;background:#dc2626;color:#fff;text-decoration:none;">Skip to main content</a>
     
     <div id="root"></div>
     <script type="module" src="/src/App/main.tsx"></script>

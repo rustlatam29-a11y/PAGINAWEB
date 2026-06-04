@@ -1,43 +1,88 @@
 import React from "react";
-import { ArrowRight, MessageCircle } from "lucide-react";
+import { ArrowRight, Check, MessageCircle } from "lucide-react";
+
+const advantages = [
+  "Setup Inmediato",
+  "Soporte 24/7",
+  "Plugins Incluidos",
+  "Anti-lag",
+];
 
 const Hero: React.FC = () => {
   return (
-    <section className="relative min-h-[90vh] flex items-center justify-center px-4 pt-24 pb-16">
-      {/* Content */}
-      <div className="relative z-10 text-center px-4 max-w-5xl mx-auto">
-        {/* Badge */}
-        <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-white/10 bg-white/5 mb-8">
-          <div className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
-          <span className="text-gray-300 text-sm font-medium">Servidores activos 24/7</span>
+    <section className="relative min-h-[90vh] flex items-center py-24 overflow-hidden border-t border-white/5">
+      {/* Glow rojo izquierda */}
+      <div className="absolute top-1/2 -left-32 -translate-y-1/2 w-[500px] h-[500px] bg-red-600/20 rounded-full blur-[120px] pointer-events-none" />
+
+      <div className="relative z-10 w-full max-w-screen-xl mx-auto px-8 md:px-12 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        {/* Izquierda - Texto */}
+        <div>
+          {/* Badge */}
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-white/10 bg-white/5 mb-8">
+            <div className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
+            <span className="text-gray-300 text-sm font-medium">Servidores activos 24/7</span>
+          </div>
+
+          {/* Titulo */}
+          <h1 className="text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-black text-white leading-[0.85] tracking-tight mb-6">
+            RUST
+            <br />
+            <span className="text-red-500">PIRATA</span>
+          </h1>
+
+          {/* Subtitulo impactante */}
+          <p className="text-white text-xl sm:text-2xl md:text-3xl font-bold leading-relaxed mb-4">
+            ¿Querés tu propio servidor? Lo armamos, lo configuramos y te damos soporte real.
+          </p>
+
+          {/* Texto descriptivo */}
+          <p className="text-gray-400 text-base sm:text-lg leading-relaxed mb-10 max-w-xl">
+            Venta de servidores, plugins y soporte técnico para{" "}
+            <span className="text-white font-semibold">Rust 2275</span> y{" "}
+            <span className="text-white font-semibold">Rust 2388</span>. Más de 8 años
+            administrando comunidades gaming.
+          </p>
+
+          {/* Fila de ventajas */}
+          <div className="flex flex-wrap gap-4 mb-10">
+            {advantages.map((advantage, index) => (
+              <div key={index} className="flex items-center gap-2">
+                <div className="w-5 h-5 rounded-full bg-red-500/20 flex items-center justify-center">
+                  <Check className="w-3 h-3 text-red-500" />
+                </div>
+                <span className="text-gray-300 text-sm font-medium">{advantage}</span>
+              </div>
+            ))}
+          </div>
+
+          {/* Boton CTA */}
+          <a
+            href="https://api.whatsapp.com/send?phone=595981144534"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group inline-flex items-center gap-3 bg-red-600 hover:bg-red-700 text-white font-bold px-10 py-5 rounded-xl text-xl transition-all duration-300 hover:scale-105 shadow-lg shadow-red-500/25"
+          >
+            <MessageCircle className="w-6 h-6" />
+            <span>CONSULTAR AHORA</span>
+            <ArrowRight className="w-6 h-6 transition-transform group-hover:translate-x-1" />
+          </a>
         </div>
 
-        {/* Main heading */}
-        <h1 className="text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-black text-white leading-[0.85] tracking-tight mb-6">
-          RUST
-          <br />
-          <span className="text-red-500">PIRATA</span>
-        </h1>
-
-        {/* Subtitle */}
-        <p className="text-gray-300 text-lg sm:text-xl max-w-2xl mx-auto mb-10 leading-relaxed">
-          Venta de servidores, plugins y soporte técnico para{" "}
-          <span className="text-white font-semibold">Rust 2275</span> y{" "}
-          <span className="text-white font-semibold">Rust 2388</span>.
-          Más de 8 años de experiencia administrando comunidades gaming.
-        </p>
-
-        {/* CTA */}
-        <a
-          href="https://api.whatsapp.com/send?phone=595981144534"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="group inline-flex items-center gap-3 bg-red-600 hover:bg-red-700 text-white font-bold px-8 py-4 rounded-xl text-lg transition-all duration-300"
-        >
-          <MessageCircle className="w-5 h-5" />
-          <span>CONSULTAR AHORA</span>
-          <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
-        </a>
+        {/* Derecha - Decoracion */}
+        <div className="hidden lg:flex items-center justify-center">
+          <div className="relative">
+            {/* Glow atras de la imagen */}
+            <div className="absolute inset-0 bg-red-600/10 rounded-3xl blur-3xl" />
+            <img
+              src="/decoracion-pagina.png"
+              alt="Rust Pirata"
+              width="800"
+              height="600"
+              className="relative w-full max-w-lg rounded-3xl object-cover"
+              loading="eager"
+            />
+          </div>
+        </div>
       </div>
     </section>
   );

@@ -1,37 +1,32 @@
 import React from "react";
-import { Server, Code, ShoppingCart, Headphones, Shield, Zap } from "lucide-react";
+import { Server, Download, Shield, Headphones, Zap } from "lucide-react";
 import { useScrollAnimation } from "../../Hooks/useScrollAnimation";
 
 const services = [
   {
+    icon: Download,
+    title: "Descargar Rust Pirata Gratis",
+    description: "Rust 2275 y 2388 sin Steam. Archivo seguro verificado.",
+  },
+  {
     icon: Server,
-    title: "Servidores Rust Pirata",
-    description: "Rust 2275 OldRecoil y Rust 2388. Configuración completa, IP dedicada y mundo personalizado.",
-  },
-  {
-    icon: ShoppingCart,
-    title: "+30,000 Plugins",
-    description: "Economía, kits, tiendas, anti-cheat, eventos y más. Compatibles con Oxide y uMod.",
-  },
-  {
-    icon: Code,
-    title: "Desarrollo a Medida",
-    description: "Plugins personalizados para tu servidor. Experiencia real con grandes comunidades Rust.",
+    title: "Servidores con Ping Bajo",
+    description: "15-30ms Brasil, 40-60ms Argentina. Uptime 99.9%.",
   },
   {
     icon: Shield,
-    title: "AntiCheat Profesional",
-    description: "Protección contra hackers y cheaters. Configurado y listo para usar.",
-  },
-  {
-    icon: Headphones,
-    title: "Soporte 24/7",
-    description: "Te ayudo con la instalación, configuración y cualquier problema que tengas.",
+    title: "AntiCheat Incluido",
+    description: "Proteccion contra hackers. Ban automatico.",
   },
   {
     icon: Zap,
-    title: "Configuración Rápida",
-    description: "Tu servidor listo en menos de 24 horas. Sin demoras ni complicaciones.",
+    title: "Plugins y Mods",
+    description: "+30,000 plugins. Kits, economia, tiendas, VIP.",
+  },
+  {
+    icon: Headphones,
+    title: "Soporte Directo",
+    description: "WhatsApp 24/7. Sin tickets, sin colas.",
   },
 ];
 
@@ -53,8 +48,7 @@ const Services: React.FC = () => {
             Todo lo que necesitás
           </h2>
           <p className="text-gray-400 text-lg max-w-xl mx-auto">
-            Desde la creación del servidor hasta plugins personalizados.
-            Un solo lugar para todo.
+            Descarga, servidor, plugins y soporte. Un solo lugar.
           </p>
         </div>
 

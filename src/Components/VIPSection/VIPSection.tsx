@@ -3,8 +3,8 @@ import { Zap, Globe, Star, Sparkles, Shield, Check, Crown, Rocket, Award } from 
 
 const VIPSection: React.FC = () => {
   return (
-    <section id="vip-section" className="relative pt-12 pb-12 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-7xl mx-auto">
+    <section id="vip-section" className="relative pt-12 pb-12">
+      <div className="max-w-screen-xl mx-auto px-8 md:px-12">
         
         {/* Header Premium con Animaciones */}
         <div className="text-center mb-8 animate-fade-in">
@@ -88,6 +88,9 @@ const VIPSection: React.FC = () => {
                   <img 
                     src="/vip-supremo.png" 
                     alt="VIP Supremo" 
+                    width="400"
+                    height="300"
+                    loading="lazy"
                     className="w-full h-auto object-cover"
                   />
                 </div>
@@ -184,6 +187,9 @@ const VIPSection: React.FC = () => {
                   <img 
                     src="/vip-basic.png" 
                     alt="VIP Basic" 
+                    width="400"
+                    height="300"
+                    loading="lazy"
                     className="w-full h-auto object-cover"
                   />
                 </div>

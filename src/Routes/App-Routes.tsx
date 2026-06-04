@@ -19,6 +19,12 @@ const RustFamily = lazy(() => import("../Pages/RustFamily/RustFamily"));
 const ServidoresRustPirata = lazy(() => import("../Pages/ServidoresRustPirata/ServidoresRustPirata"));
 const ComunidadRustFamily = lazy(() => import("../Pages/ComunidadRustFamily/ComunidadRustFamily"));
 const ServidorRustFamily = lazy(() => import("../Pages/ServidorRustFamily/ServidorRustFamily"));
+const ComoCrearServidorRust = lazy(() => import("../Pages/ComoCrearServidorRust/ComoCrearServidorRust"));
+const DescargarRustPirata = lazy(() => import("../Pages/DescargarRustPirata/DescargarRustPirata"));
+const MejoresPluginsRust = lazy(() => import("../Pages/MejoresPluginsRust/MejoresPluginsRust"));
+const Rust2275OldRecoil = lazy(() => import("../Pages/Rust2275OldRecoil/Rust2275OldRecoil"));
+const Rust2388Actualizado = lazy(() => import("../Pages/Rust2388Actualizado/Rust2388Actualizado"));
+const Latamrust = lazy(() => import("../Pages/Latamrust/Latamrust"));
 
 // Minimal loading fallback
 const PageLoader = () => (
@@ -62,6 +68,12 @@ function AppRoutes() {
         <Route path="/servidores-rust-pirata" element={<ServidoresRustPirata />} />
         <Route path="/comunidade-rust-family" element={<ComunidadRustFamily />} />
         <Route path="/servidor-rust-family" element={<ServidorRustFamily />} />
+        <Route path="/como-crear-servidor-rust-pirata" element={<ComoCrearServidorRust />} />
+        <Route path="/descargar-rust-pirata" element={<DescargarRustPirata />} />
+        <Route path="/mejores-plugins-rust-pirata" element={<MejoresPluginsRust />} />
+        <Route path="/rust-2275-oldrecoil" element={<Rust2275OldRecoil />} />
+        <Route path="/rust-2388-actualizado" element={<Rust2388Actualizado />} />
+        <Route path="/latamrust" element={<Latamrust />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </Suspense>

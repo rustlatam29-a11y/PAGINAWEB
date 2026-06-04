@@ -33,9 +33,9 @@ const Benefits: React.FC = () => {
   const { elementRef, isVisible } = useScrollAnimation();
 
   return (
-    <section ref={elementRef} className="py-20 px-4 bg-[#0a0a0a]">
-      <div className="max-w-6xl mx-auto">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+    <section ref={elementRef} className="py-24 bg-[#0a0a0a] border-t border-white/5" id="servicios">
+      <div className="max-w-screen-xl mx-auto px-8 md:px-12">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div
             className={`transition-all duration-500 ${
               isVisible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-4"
@@ -67,7 +67,7 @@ const Benefits: React.FC = () => {
                     <Check className="w-3 h-3 text-red-500" />
                   </div>
                   <div>
-                    <h4 className="text-white font-semibold text-sm">{benefit.title}</h4>
+                    <h3 className="text-white font-semibold text-sm">{benefit.title}</h3>
                     <p className="text-gray-500 text-sm">{benefit.description}</p>
                   </div>
                 </div>
@@ -86,6 +86,8 @@ const Benefits: React.FC = () => {
                   <img
                     src="/loader-bg.png"
                     alt="ParaguayRAIDER"
+                    width="80"
+                    height="80"
                     className="w-full h-full object-cover"
                     loading="lazy"
                   />
@@ -94,22 +96,22 @@ const Benefits: React.FC = () => {
                 <p className="text-gray-500 text-sm">Fundador de LATAMRUST</p>
               </div>
 
-              <div className="grid grid-cols-2 gap-4 mb-6">
-                <div className="text-center p-4 rounded-xl bg-white/[0.03]">
-                  <div className="text-2xl font-black text-red-500">8+</div>
-                  <div className="text-gray-500 text-xs">Años en Rust</div>
+              <div className="grid grid-cols-2 gap-4 mb-4">
+                <div className="text-center p-5 rounded-xl bg-white/[0.03] border border-white/5">
+                  <div className="text-3xl font-black text-red-500">8+</div>
+                  <div className="text-gray-500 text-xs mt-1">Años en Rust</div>
                 </div>
-                <div className="text-center p-4 rounded-xl bg-white/[0.03]">
-                  <div className="text-2xl font-black text-red-500">10K+</div>
-                  <div className="text-gray-500 text-xs">Horas jugando</div>
+                <div className="text-center p-5 rounded-xl bg-white/[0.03] border border-white/5">
+                  <div className="text-3xl font-black text-red-500">10K+</div>
+                  <div className="text-gray-500 text-xs mt-1">Horas jugando</div>
                 </div>
-                <div className="text-center p-4 rounded-xl bg-white/[0.03]">
-                  <div className="text-2xl font-black text-red-500">200+</div>
-                  <div className="text-gray-500 text-xs">Servidores armados</div>
+                <div className="text-center p-5 rounded-xl bg-white/[0.03] border border-white/5">
+                  <div className="text-3xl font-black text-red-500">200+</div>
+                  <div className="text-gray-500 text-xs mt-1">Servidores armados</div>
                 </div>
-                <div className="text-center p-4 rounded-xl bg-white/[0.03]">
-                  <div className="text-2xl font-black text-red-500">500+</div>
-                  <div className="text-gray-500 text-xs">Clientes satisfechos</div>
+                <div className="text-center p-5 rounded-xl bg-white/[0.03] border border-white/5">
+                  <div className="text-3xl font-black text-red-500">500+</div>
+                  <div className="text-gray-500 text-xs mt-1">Clientes satisfechos</div>
                 </div>
               </div>
 

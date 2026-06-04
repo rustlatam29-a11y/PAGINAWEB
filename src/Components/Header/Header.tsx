@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Gamepad2 } from "lucide-react";
 
 const navLinks = [
   { label: "Servicios", href: "#servicios" },
@@ -26,22 +26,32 @@ const Header: React.FC = () => {
           : "bg-[#0a0a0a]/80 backdrop-blur-sm"
       }`}
     >
-      <nav className="max-w-7xl mx-auto px-5 md:px-10">
-        <div className="flex items-center justify-between h-18">
+      <nav className="max-w-screen-xl mx-auto px-8 md:px-12">
+        <div className="flex items-center h-18">
           {/* Logo */}
-          <a href="/" className="flex items-center gap-3">
+          <a href="/" className="flex items-center gap-3 flex-shrink-0">
             <img
               src="/loader-bg.png"
               alt="Logo"
+              width="40"
+              height="40"
               className="w-10 h-10 rounded-lg object-cover"
             />
-            <span className="text-white font-black text-xl tracking-tight">
-              Paraguay<span className="text-red-500">RAIDER</span>
-            </span>
+            <div>
+              <span className="text-white font-black text-xl tracking-tight block leading-tight">
+                Paraguay<span className="text-red-500">RAIDER</span>
+              </span>
+              <span className="text-gray-500 text-[10px] font-bold tracking-widest uppercase block leading-tight mt-1">
+                SERVIDORES PIRATAS!
+              </span>
+            </div>
           </a>
 
+          {/* Spacer */}
+          <div className="flex-1" />
+
           {/* Desktop nav */}
-          <div className="hidden md:flex items-center gap-8">
+          <div className="hidden md:flex items-center gap-5">
             {navLinks.map((link) => (
               <a
                 key={link.href}
@@ -52,12 +62,13 @@ const Header: React.FC = () => {
               </a>
             ))}
             <a
-              href="https://api.whatsapp.com/send?phone=595981144534"
+              href="https://discord.gg/hYxwFeMXp3"
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-red-600 hover:bg-red-700 text-white text-sm font-bold px-5 py-2.5 rounded-lg transition-all"
+              className="bg-[#5865F2] hover:bg-[#4752C4] text-white text-sm font-bold px-4 py-2.5 rounded-lg transition-all flex items-center gap-2"
             >
-              WhatsApp
+              <Gamepad2 className="w-4 h-4" />
+              DC DEV
             </a>
           </div>
 
@@ -84,12 +95,13 @@ const Header: React.FC = () => {
               </a>
             ))}
             <a
-              href="https://api.whatsapp.com/send?phone=595981144534"
+              href="https://discord.gg/hYxwFeMXp3"
               target="_blank"
               rel="noopener noreferrer"
-              className="block bg-red-600 text-white text-sm font-bold px-5 py-2.5 rounded-lg text-center"
+              className="block bg-[#5865F2] text-white text-sm font-bold px-5 py-2.5 rounded-lg text-center flex items-center justify-center gap-2"
             >
-              WhatsApp
+              <Gamepad2 className="w-4 h-4" />
+              DC DEV
             </a>
           </div>
         )}

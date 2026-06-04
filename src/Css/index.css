@@ -37,3 +37,25 @@ body {
   background: rgba(220, 38, 38, 0.3);
   color: white;
 }
+
+/* ===== BUTTON SHINE ===== */
+@keyframes shine {
+  0% { left: -100%; }
+  50%, 100% { left: 100%; }
+}
+
+.btn-shine {
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-shine::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.15), transparent);
+  animation: shine 3s ease-in-out infinite;
+}

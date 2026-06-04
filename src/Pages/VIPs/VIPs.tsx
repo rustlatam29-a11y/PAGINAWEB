@@ -127,6 +127,9 @@ const VIPs: React.FC = () => {
                     <img 
                       src="/vip-supremo.png" 
                       alt="VIP Supremo" 
+                      width="400"
+                      height="300"
+                      loading="lazy"
                       className="w-full h-auto object-cover"
                     />
                   </div>
@@ -223,6 +226,9 @@ const VIPs: React.FC = () => {
                     <img 
                       src="/vip-basic.png" 
                       alt="VIP Basic" 
+                      width="400"
+                      height="300"
+                      loading="lazy"
                       className="w-full h-auto object-cover"
                     />
                   </div>

@@ -68,6 +68,8 @@ const Section: React.FC = () => {
                     <img
                       src="/paraguayraider.png"
                       alt="ParaguayRAIDER"
+                      width="112"
+                      height="112"
                       className="w-full h-full object-cover"
                       loading="lazy"
                     />

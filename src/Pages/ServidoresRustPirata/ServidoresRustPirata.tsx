@@ -1,10 +1,67 @@
 import React from "react";
 import { Server, Users, Zap, Globe, Star, TrendingUp } from "lucide-react";
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 
 const ServidoresRustPirata: React.FC = () => {
   return (
     <div className="min-h-screen bg-black text-white">
+      <Helmet>
+        <title>Servidores Rust Pirata 2026 - Top Mejores Servidores LATAM | LATAMRUST</title>
+        <meta name="description" content="Lista completa de los mejores servidores Rust Pirata 2026 en LATAM. Comparativa de ping, jugadores, plugins y soporte. LATAMRUST #1 ranking." />
+        <meta name="keywords" content="servidores rust pirata, mejores servidores rust pirata, servidores rust pirata brasil, servidores rust pirata argentina, top servidores rust, ranking servidores rust, servidor rust 2275, servidor rust 2388, servidor rust brasil, servidor rust mexico" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://latamrust.vercel.app/servidores-rust-pirata" />
+        <meta property="og:title" content="Servidores Rust Pirata 2026 - Top Mejores Servidores LATAM" />
+        <meta property="og:description" content="Lista completa de los mejores servidores Rust Pirata 2026. Comparativa, reviews y ranking." />
+        <meta property="og:image" content="https://latamrust.vercel.app/LATAMLOGO.webp" />
+        <meta property="og:locale" content="es_ES" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Servidores Rust Pirata 2026 - Top Ranking" />
+        <meta name="twitter:description" content="Los mejores servidores Rust Pirata de LATAM. Comparativa completa 2026." />
+        <meta name="twitter:image" content="https://latamrust.vercel.app/LATAMLOGO.webp" />
+        <link rel="canonical" href="https://latamrust.vercel.app/servidores-rust-pirata" />
+        <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "ItemList",
+            "name": "Top Mejores Servidores Rust Pirata 2026",
+            "description": "Ranking de los mejores servidores de Rust Pirata en Latinoamerica",
+            "numberOfItems": 5,
+            "itemListElement": [
+              {"@type": "ListItem", "position": 1, "item": {"@type": "GameServer", "name": "LATAMRUST", "description": "Servidor #1 de Rust Pirata en LATAM con 10,000+ jugadores activos", "gameLocation": {"@type": "Place", "name": "Brasil/LATAM"}, "maximumAttendeeCapacity": 10000}},
+              {"@type": "ListItem", "position": 2, "item": {"@type": "GameServer", "name": "BRRust", "description": "Servidor brasileño de Rust Pirata"}},
+              {"@type": "ListItem", "position": 3, "item": {"@type": "GameServer", "name": "LatinRust", "description": "Servidor LATAM de Rust Pirata"}}
+            ]
+          })}
+        </script>
+
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+              {"@type": "Question", "name": "Qual e o melhor servidor de Rust Pirata do Brasil?", "acceptedAnswer": {"@type": "Answer", "text": "LATAMRUST e o melhor servidor de Rust Pirata do Brasil em 2026, com mais de 10.000 jogadores ativos, ping baixo, anti-cheat profissional e suporte 24/7."}},
+              {"@type": "Question", "name": "Como encontrar servidores de Rust Pirata?", "acceptedAnswer": {"@type": "Answer", "text": "Os melhores servidores estao listados nesta pagina. LATAMRUST lidera o ranking com a maior comunidade de Rust Pirata da LATAM."}},
+              {"@type": "Question", "name": "Servidores Rust Pirata tem lag?", "acceptedAnswer": {"@type": "Answer", "text": "Depende da qualidade. LATAMRUST nao tem lag pois usa hardware dedicado no Brasil. Servidores mal configurados causam lag."}},
+              {"@type": "Question", "name": "Quantos jogadores tem o maior servidor Rust Pirata?", "acceptedAnswer": {"@type": "Answer", "text": "LATAMRUST tem mais de 10.000 jogadores ativos, sendo o maior servidor de Rust Pirata da America Latina."}}
+            ]
+          })}
+        </script>
+
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              {"@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://latamrust.vercel.app/"},
+              {"@type": "ListItem", "position": 2, "name": "Servidores Rust Pirata", "item": "https://latamrust.vercel.app/servidores-rust-pirata"}
+            ]
+          })}
+        </script>
+      </Helmet>
       {/* Hero Section */}
       <section className="relative py-20 px-4 bg-gradient-to-b from-red-950/30 to-black">
         <div className="max-w-5xl mx-auto text-center">

@@ -42,11 +42,11 @@ const ServerPlans: React.FC = () => {
   const { elementRef, isVisible } = useScrollAnimation();
 
   return (
-    <section ref={elementRef} className="py-24 px-4 bg-[#0a0a0a]" id="planes">
-      <div className="max-w-6xl mx-auto">
+    <section ref={elementRef} className="py-24 bg-[#0a0a0a] border-t border-white/5" id="planes">
+      <div className="max-w-screen-xl mx-auto px-8 md:px-12">
         {/* Header */}
         <div
-          className={`text-center mb-20 transition-all duration-500 ${
+          className={`text-center mb-16 transition-all duration-500 ${
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
           }`}
         >
@@ -65,7 +65,7 @@ const ServerPlans: React.FC = () => {
         </div>
 
         {/* Plans */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {plans.map((plan, index) => (
             <div
               key={index}
@@ -131,9 +131,9 @@ const ServerPlans: React.FC = () => {
                   href="https://api.whatsapp.com/send?phone=595981144534"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className={`group/btn flex items-center justify-center gap-3 w-full py-4 rounded-2xl font-bold text-sm transition-all duration-300 ${
+                  className={`group/btn flex items-center justify-center gap-3 w-full py-5 rounded-2xl font-bold text-base transition-all duration-300 ${
                     plan.popular
-                      ? "bg-red-600 hover:bg-red-700 text-white shadow-lg shadow-red-500/20"
+                      ? "bg-red-600 hover:bg-red-700 text-white shadow-lg shadow-red-500/25"
                       : "bg-white/5 text-white border border-white/10 hover:bg-white/10 hover:border-white/20"
                   }`}
                 >

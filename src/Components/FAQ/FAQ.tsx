@@ -42,8 +42,8 @@ const FAQ: React.FC = () => {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   return (
-    <section ref={elementRef} className="py-20 px-4 bg-[#0a0a0a]" id="faq">
-      <div className="max-w-3xl mx-auto">
+    <section ref={elementRef} className="py-16 bg-[#0a0a0a] border-t border-white/5" id="faq">
+      <div className="max-w-4xl mx-auto px-8 md:px-12">
         <div
           className={`text-center mb-16 transition-all duration-500 ${
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
@@ -68,9 +68,9 @@ const FAQ: React.FC = () => {
             >
               <button
                 onClick={() => setOpenIndex(openIndex === index ? null : index)}
-                className="w-full flex items-center justify-between p-5 text-left"
+                className="w-full flex items-center justify-between p-6 text-left"
               >
-                <span className="text-white font-semibold text-sm pr-4">{faq.question}</span>
+                <span className="text-white font-semibold text-base pr-4">{faq.question}</span>
                 <ChevronDown
                   className={`w-5 h-5 text-gray-500 flex-shrink-0 transition-transform duration-200 ${
                     openIndex === index ? "rotate-180" : ""
@@ -82,7 +82,7 @@ const FAQ: React.FC = () => {
                   openIndex === index ? "max-h-40 opacity-100" : "max-h-0 opacity-0"
                 }`}
               >
-                <p className="px-5 pb-5 text-gray-400 text-sm leading-relaxed">
+                <p className="px-6 pb-6 text-gray-400 text-sm leading-relaxed">
                   {faq.answer}
                 </p>
               </div>
