@@ -2,6 +2,20 @@
   "buildCommand": "npm run build",
   "outputDirectory": "dist",
   "framework": "vite",
+  "redirects": [
+    {
+      "source": "/(.*)",
+      "destination": "https://latamrust.online/$1",
+      "has": [{ "type": "host", "value": "latamrust.vercel.app" }],
+      "permanent": true
+    },
+    {
+      "source": "/(.*)",
+      "destination": "https://latamrust.online/$1",
+      "has": [{ "type": "host", "value": "paginaweb-eight-kappa.vercel.app" }],
+      "permanent": true
+    }
+  ],
   "rewrites": [
     {
       "source": "/((?!google.*\\.html$).*)",

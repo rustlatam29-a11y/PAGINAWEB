@@ -12,22 +12,22 @@ const RustPirataArgentina: React.FC = () => {
         
         {/* Open Graph / Facebook */}
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://latamrust.vercel.app/rust-pirata-argentina" />
+        <meta property="og:url" content="https://latamrust.online/rust-pirata-argentina" />
         <meta property="og:title" content="Rust Pirata Argentina 🇦🇷 - Servidor #1 LATAMRUST" />
         <meta property="og:description" content="El mejor servidor de Rust Pirata en Argentina con ping bajo y más de 10.000 jugadores. 100% gratis, sin lag." />
-        <meta property="og:image" content="https://latamrust.vercel.app/LATAMLOGO.webp" />
+        <meta property="og:image" content="https://latamrust.online/LATAMLOGO.webp" />
         <meta property="og:locale" content="es_AR" />
         
         {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:url" content="https://latamrust.vercel.app/rust-pirata-argentina" />
+        <meta name="twitter:url" content="https://latamrust.online/rust-pirata-argentina" />
         <meta name="twitter:title" content="Rust Pirata Argentina 🇦🇷 - Servidor #1 LATAMRUST" />
         <meta name="twitter:description" content="El mejor servidor de Rust Pirata en Argentina con ping bajo y más de 10.000 jugadores. 100% gratis, sin lag." />
-        <meta name="twitter:image" content="https://latamrust.vercel.app/LATAMLOGO.webp" />
+        <meta name="twitter:image" content="https://latamrust.online/LATAMLOGO.webp" />
         
         {/* Additional SEO */}
         <meta name="keywords" content="rust pirata argentina, rust pirata gratis argentina, servidor rust pirata argentina, descargar rust pirata argentina, rust pirata 2026 argentina, rust pirata buenos aires, rust pirata cordoba, rust pirata rosario" />
-        <link rel="canonical" href="https://latamrust.vercel.app/rust-pirata-argentina" />
+        <link rel="canonical" href="https://latamrust.online/rust-pirata-argentina" />
         <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
         
         {/* Structured Data - Organization */}
@@ -37,7 +37,7 @@ const RustPirataArgentina: React.FC = () => {
             "@type": "VideoGame",
             "name": "Rust Pirata Argentina - LATAMRUST",
             "description": "Servidor #1 de Rust Pirata en Argentina con ping bajo y más de 10.000 jugadores activos",
-            "url": "https://latamrust.vercel.app/rust-pirata-argentina",
+            "url": "https://latamrust.online/rust-pirata-argentina",
             "operatingSystem": "Windows",
             "applicationCategory": "Game",
             "offers": {

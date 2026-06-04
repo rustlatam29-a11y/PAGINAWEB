@@ -10,21 +10,21 @@ const RustPirataChile: React.FC = () => {
         <title>Rust Pirata Chile 🇨🇱 Descargar Gratis 2026 - LATAMRUST #1</title>
         <meta name="description" content="Servidor #1 de Rust Pirata en Chile. Ping bajo 60-80ms desde Santiago, Valparaíso, Concepción. +10.000 jugadores weon. 100% gratis. ¡Juega ahora!" />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://latamrust.vercel.app/rust-pirata-chile" />
+        <meta property="og:url" content="https://latamrust.online/rust-pirata-chile" />
         <meta property="og:title" content="Rust Pirata Chile 🇨🇱 - Servidor #1 LATAMRUST" />
         <meta property="og:description" content="El mejor servidor de Rust Pirata en Chile con ping bajo y más de 10.000 jugadores weon. 100% gratis." />
-        <meta property="og:image" content="https://latamrust.vercel.app/LATAMLOGO.webp" />
+        <meta property="og:image" content="https://latamrust.online/LATAMLOGO.webp" />
         <meta property="og:locale" content="es_CL" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="keywords" content="rust pirata chile, rust pirata gratis chile, servidor rust pirata chile, descargar rust pirata chile, rust pirata 2026 chile, rust pirata santiago, rust pirata valparaiso" />
-        <link rel="canonical" href="https://latamrust.vercel.app/rust-pirata-chile" />
+        <link rel="canonical" href="https://latamrust.online/rust-pirata-chile" />
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
             "@type": "VideoGame",
             "name": "Rust Pirata Chile - LATAMRUST",
             "description": "Servidor #1 de Rust Pirata en Chile con ping bajo y más de 10.000 jugadores activos",
-            "url": "https://latamrust.vercel.app/rust-pirata-chile",
+            "url": "https://latamrust.online/rust-pirata-chile",
             "offers": {"@type": "Offer", "price": "0", "priceCurrency": "CLP"},
             "aggregateRating": {"@type": "AggregateRating", "ratingValue": "4.8", "ratingCount": "10000"},
             "inLanguage": "es-CL"

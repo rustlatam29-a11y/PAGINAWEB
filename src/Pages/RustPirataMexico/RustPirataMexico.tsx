@@ -10,21 +10,21 @@ const RustPirataMexico: React.FC = () => {
         <title>Rust Pirata México 🇲🇽 Descargar Gratis 2026 - LATAMRUST #1</title>
         <meta name="description" content="Servidor #1 de Rust Pirata en México. Ping bajo 50-70ms desde CDMX, Monterrey, Guadalajara. +10.000 jugadores activos wey. 100% gratis. ¡Juega ahora!" />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://latamrust.vercel.app/rust-pirata-mexico" />
+        <meta property="og:url" content="https://latamrust.online/rust-pirata-mexico" />
         <meta property="og:title" content="Rust Pirata México 🇲🇽 - Servidor #1 LATAMRUST" />
         <meta property="og:description" content="El mejor servidor de Rust Pirata en México con ping bajo y más de 10.000 jugadores. 100% gratis wey." />
-        <meta property="og:image" content="https://latamrust.vercel.app/LATAMLOGO.webp" />
+        <meta property="og:image" content="https://latamrust.online/LATAMLOGO.webp" />
         <meta property="og:locale" content="es_MX" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="keywords" content="rust pirata mexico, rust pirata gratis mexico, servidor rust pirata mexico, descargar rust pirata mexico, rust pirata 2026 mexico, rust pirata cdmx, rust pirata monterrey, rust pirata guadalajara" />
-        <link rel="canonical" href="https://latamrust.vercel.app/rust-pirata-mexico" />
+        <link rel="canonical" href="https://latamrust.online/rust-pirata-mexico" />
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
             "@type": "VideoGame",
             "name": "Rust Pirata México - LATAMRUST",
             "description": "Servidor #1 de Rust Pirata en México con ping bajo y más de 10.000 jugadores activos",
-            "url": "https://latamrust.vercel.app/rust-pirata-mexico",
+            "url": "https://latamrust.online/rust-pirata-mexico",
             "offers": {"@type": "Offer", "price": "0", "priceCurrency": "MXN"},
             "aggregateRating": {"@type": "AggregateRating", "ratingValue": "4.8", "ratingCount": "10000"},
             "inLanguage": "es-MX"

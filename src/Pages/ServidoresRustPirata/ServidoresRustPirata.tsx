@@ -11,16 +11,16 @@ const ServidoresRustPirata: React.FC = () => {
         <meta name="description" content="Lista completa de los mejores servidores Rust Pirata 2026 en LATAM. Comparativa de ping, jugadores, plugins y soporte. LATAMRUST #1 ranking." />
         <meta name="keywords" content="servidores rust pirata, mejores servidores rust pirata, servidores rust pirata brasil, servidores rust pirata argentina, top servidores rust, ranking servidores rust, servidor rust 2275, servidor rust 2388, servidor rust brasil, servidor rust mexico" />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://latamrust.vercel.app/servidores-rust-pirata" />
+        <meta property="og:url" content="https://latamrust.online/servidores-rust-pirata" />
         <meta property="og:title" content="Servidores Rust Pirata 2026 - Top Mejores Servidores LATAM" />
         <meta property="og:description" content="Lista completa de los mejores servidores Rust Pirata 2026. Comparativa, reviews y ranking." />
-        <meta property="og:image" content="https://latamrust.vercel.app/LATAMLOGO.webp" />
+        <meta property="og:image" content="https://latamrust.online/LATAMLOGO.webp" />
         <meta property="og:locale" content="es_ES" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Servidores Rust Pirata 2026 - Top Ranking" />
         <meta name="twitter:description" content="Los mejores servidores Rust Pirata de LATAM. Comparativa completa 2026." />
-        <meta name="twitter:image" content="https://latamrust.vercel.app/LATAMLOGO.webp" />
-        <link rel="canonical" href="https://latamrust.vercel.app/servidores-rust-pirata" />
+        <meta name="twitter:image" content="https://latamrust.online/LATAMLOGO.webp" />
+        <link rel="canonical" href="https://latamrust.online/servidores-rust-pirata" />
         <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
 
         <script type="application/ld+json">
@@ -56,8 +56,8 @@ const ServidoresRustPirata: React.FC = () => {
             "@context": "https://schema.org",
             "@type": "BreadcrumbList",
             "itemListElement": [
-              {"@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://latamrust.vercel.app/"},
-              {"@type": "ListItem", "position": 2, "name": "Servidores Rust Pirata", "item": "https://latamrust.vercel.app/servidores-rust-pirata"}
+              {"@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://latamrust.online/"},
+              {"@type": "ListItem", "position": 2, "name": "Servidores Rust Pirata", "item": "https://latamrust.online/servidores-rust-pirata"}
             ]
           })}
         </script>
