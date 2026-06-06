@@ -72,49 +72,23 @@ const Benefits: React.FC = () => {
             }}
           >
             <div className="bg-white/[0.02] border border-white/5 rounded-3xl p-8 sm:p-10 hover-lift">
-              <div className="flex items-center justify-center gap-6 sm:gap-8 mb-8">
-                {/* ParaguayRAIDER */}
-                <div className="text-center">
-                  <div className="w-20 h-20 rounded-full overflow-hidden border-4 border-white/10 mx-auto mb-3">
-                    <img
-                      src="/loader-bg.png"
-                      alt="ParaguayRAIDER"
-                      width="80"
-                      height="80"
-                      className="w-full h-full object-cover"
-                      loading="lazy"
-                    />
-                  </div>
-                  <h3 className="text-base font-bold text-white">
-                    ParaguayRAIDER
-                  </h3>
-                  <p className="text-gray-500 text-xs">
-                    Fundador de LATAMRUST · Rust Old School
-                  </p>
+              <div className="text-center mb-8">
+                <div className="w-20 h-20 rounded-full overflow-hidden border-4 border-white/10 mx-auto mb-4">
+                  <img
+                    src="/loader-bg.png"
+                    alt="ParaguayRAIDER"
+                    width="80"
+                    height="80"
+                    className="w-full h-full object-cover"
+                    loading="lazy"
+                  />
                 </div>
-
-                {/* Divider */}
-                <div className="w-px h-16 bg-white/10 flex-shrink-0" />
-
-                {/* SergioKLV */}
-                <div className="text-center">
-                  <div className="w-20 h-20 rounded-full overflow-hidden border-4 border-white/10 mx-auto mb-3">
-                    <img
-                      src="/Sergioklv.png"
-                      alt="SergioKLV"
-                      width="80"
-                      height="80"
-                      className="w-full h-full object-cover"
-                      loading="lazy"
-                    />
-                  </div>
-                  <h3 className="text-base font-bold text-white">
-                    SergioKLV
-                  </h3>
-                  <p className="text-gray-500 text-xs">
-                    Diseñador de AntiCheat Argos · Rust Old School
-                  </p>
-                </div>
+                <h3 className="text-xl font-bold text-white">
+                  {t("benefits.profileName")}
+                </h3>
+                <p className="text-gray-500 text-sm">
+                  {t("benefits.profileRole")}
+                </p>
               </div>
 
               <div className="border-t border-white/5 pt-6">
