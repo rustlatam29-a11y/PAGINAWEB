@@ -31,7 +31,8 @@ const translations: Record<Language, Record<string, any>> = {
       "Buscá \"RUST OLD SCHOOL\"",
       "Seleccioná y hacé clic en Conectar",
     ],
-    "banner.cta": "JUGAR GRATIS AHORA",
+    "banner.cta": "DESCARGAR",
+    "banner.discord": "DISCORD",
     "banner.stats": [
       { value: "15ms", label: "PING LATAM" },
       { value: "0", label: "LAG" },
@@ -106,6 +107,33 @@ const translations: Record<Language, Record<string, any>> = {
         "Soporte prioritario 24/7",
       ],
     },
+
+    // Payment Methods
+    "payment.label": "Pagos",
+    "payment.title": "Métodos de Pago",
+    "payment.subtitle": "Aceptamos los siguientes métodos para la compra de servidores.",
+    "payment.methods": [
+      {
+        icon: "pix",
+        name: "PIX",
+        desc: "Transferencia instantánea y directa. Método de pago principal.",
+        badge: "Principal",
+      },
+      {
+        icon: "belo",
+        name: "Belo",
+        desc: "Enviá dinero desde tu cuenta Belo y se acredita como PIX.",
+        badge: "LATAM → PIX",
+      },
+      {
+        icon: "astropay",
+        name: "AstroPay",
+        desc: "Enviá dinero desde tu cuenta AstroPay y se acredita como PIX.",
+        badge: "LATAM → PIX",
+      },
+    ],
+    "payment.note": "⚠️ Solo recibimos pagos por PIX. Belo y AstroPay son billeteras digitales que permiten enviar dinero desde cualquier país de LATAM, el cual se recibe como PIX en mi cuenta brasileña. No hay otra forma de pago.",
+    "payment.highlight": "Método único de cobro: PIX",
 
     // Benefits
     "benefits.label": "Por qué elegirme",
@@ -204,7 +232,8 @@ const translations: Record<Language, Record<string, any>> = {
       "Pesquise \"RUST OLD SCHOOL\"",
       "Selecione e clique em Conectar",
     ],
-    "banner.cta": "JOGAR GRÁTIS AGORA",
+    "banner.cta": "BAIXAR",
+    "banner.discord": "DISCORD",
     "banner.stats": [
       { value: "15ms", label: "PING LATAM" },
       { value: "0", label: "LAG" },
@@ -279,6 +308,33 @@ const translations: Record<Language, Record<string, any>> = {
         "Suporte prioritário 24/7",
       ],
     },
+
+    // Payment Methods (PT)
+    "payment.label": "Pagamentos",
+    "payment.title": "Métodos de Pagamento",
+    "payment.subtitle": "Aceitamos os seguintes métodos para compra de servidores.",
+    "payment.methods": [
+      {
+        icon: "pix",
+        name: "PIX",
+        desc: "Transferência instantânea e direta. Método de pagamento principal.",
+        badge: "Principal",
+      },
+      {
+        icon: "belo",
+        name: "Belo",
+        desc: "Envie dinheiro da sua conta Belo e é creditado como PIX.",
+        badge: "LATAM → PIX",
+      },
+      {
+        icon: "astropay",
+        name: "AstroPay",
+        desc: "Envie dinheiro da sua conta AstroPay e é creditado como PIX.",
+        badge: "LATAM → PIX",
+      },
+    ],
+    "payment.note": "⚠️ Aceitamos apenas pagamentos via PIX. Belo e AstroPay são carteiras digitais que permitem enviar dinheiro de qualquer país da LATAM, que é recebido como PIX na minha conta brasileira. Não há outra forma de pagamento.",
+    "payment.highlight": "Método único de cobro: PIX",
 
     // Benefits
     "benefits.label": "Por que me escolher",

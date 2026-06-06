@@ -172,24 +172,44 @@ body {
   50% { transform: translateY(-4px); }
 }
 
-/* ===== ONLINE DOT BREATHING ===== */
-.dot-blink {
-  animation: breathe 3s ease-in-out infinite;
+/* ===== ONLINE DOT CORE ===== */
+.dot-core {
+  animation: dot-core-pulse 3s ease-in-out infinite;
 }
 
-@keyframes breathe {
-  0%, 100% { opacity: 0.15; }
-  50% { opacity: 1; }
+@keyframes dot-core-pulse {
+  0%, 100% { opacity: 0.8; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.15); }
 }
 
-/* ===== BADGE BORDER BREATHING ===== */
-.badge-breathe {
-  animation: badge-breathe 3s ease-in-out infinite;
+/* ===== RADAR RING SONAR ===== */
+.radar-ring-1 {
+  animation: radar-expand 2s ease-out infinite;
 }
 
-@keyframes badge-breathe {
-  0%, 100% { border-color: rgba(34, 197, 94, 0.1); background-color: rgba(34, 197, 94, 0.03); }
-  50% { border-color: rgba(34, 197, 94, 0.4); background-color: rgba(34, 197, 94, 0.1); }
+.radar-ring-2 {
+  animation: radar-expand 2s ease-out 0.6s infinite;
+}
+
+@keyframes radar-expand {
+  0% { transform: scale(1); opacity: 0.7; }
+  100% { transform: scale(2.8); opacity: 0; }
+}
+
+/* ===== BADGE GLOW ===== */
+.badge-glow {
+  animation: badge-glow 3s ease-in-out infinite;
+}
+
+@keyframes badge-glow {
+  0%, 100% { box-shadow: 0 0 6px rgba(34, 197, 94, 0.1), inset 0 0 6px rgba(34, 197, 94, 0.03); border-color: rgba(34, 197, 94, 0.15); }
+  50% { box-shadow: 0 0 18px rgba(34, 197, 94, 0.25), inset 0 0 12px rgba(34, 197, 94, 0.08); border-color: rgba(34, 197, 94, 0.4); }
+}
+
+/* ===== BADGE TEXT ===== */
+.badge-text {
+  font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
+  letter-spacing: 0.15em;
 }
 
 /* ===== SECTION CONTAINMENT ===== */

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useScrollAnimation } from "../../Hooks/useScrollAnimation";
 import { useLanguage } from "../../Context/LanguageContext";
-import { ArrowRight, Search, Gamepad2, MapPin, Zap } from "lucide-react";
+import { ArrowRight, Search, Gamepad2, MapPin, Zap, Download } from "lucide-react";
 
 const iconMap: Record<string, React.FC<any>> = { MapPin, Zap, Gamepad2 };
 
@@ -38,6 +38,7 @@ const LatamrustBanner: React.FC = () => {
   const howTo = t("banner.howTo");
   const steps = tList("banner.steps");
   const cta = t("banner.cta");
+  const discordText = t("banner.discord");
   const badges = tObj("banner.badges");
 
   const badgesArr = Array.isArray(badges) ? badges : [];
@@ -47,7 +48,7 @@ const LatamrustBanner: React.FC = () => {
   return (
     <section
       ref={elementRef}
-      className="relative min-h-screen flex items-center bg-[#0a0a0a] overflow-hidden border-t border-white/5"
+      className="relative flex items-center bg-[#0a0a0a] overflow-hidden border-t border-white/5"
       style={{ contain: "layout style" }}
     >
       {/* Grid background */}
@@ -57,7 +58,7 @@ const LatamrustBanner: React.FC = () => {
       <div className="absolute top-0 right-0 w-[500px] h-[800px] bg-red-600/8 rounded-full blur-[180px] pointer-events-none" />
       <div className="absolute bottom-[-200px] left-[-100px] w-[500px] h-[500px] bg-red-600/5 rounded-full blur-[150px] pointer-events-none" />
 
-      <div className="relative z-10 w-full max-w-screen-xl mx-auto px-8 md:px-12 py-24 md:py-32">
+      <div className="relative z-10 w-full max-w-screen-xl mx-auto px-8 md:px-12 py-12 md:py-16">
         {/* Top bar */}
         <div
           className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 mb-16"
@@ -67,9 +68,13 @@ const LatamrustBanner: React.FC = () => {
             transition: "opacity 500ms ease-out, transform 500ms ease-out",
           }}
         >
-          <div className="inline-flex items-center gap-2 border border-green-500/30 bg-green-500/10 px-4 py-2 rounded-full float-badge badge-breathe">
-            <div className="w-2 h-2 rounded-full bg-green-400 dot-blink" />
-            <span className="text-green-400 text-xs font-bold tracking-widest uppercase">
+          <div className="inline-flex items-center gap-2 border border-green-500/30 bg-green-500/10 px-4 py-2 rounded-full float-badge badge-glow">
+            <span className="relative flex h-2 w-2">
+              <span className="absolute inline-flex h-full w-full rounded-full bg-green-400/70 radar-ring-1" />
+              <span className="absolute inline-flex h-full w-full rounded-full bg-green-400/50 radar-ring-2" />
+              <span className="relative inline-flex h-2 w-2 rounded-full bg-green-400 dot-core" />
+            </span>
+            <span className="text-green-400 text-xs font-bold uppercase badge-text">
               {badge}
             </span>
           </div>
@@ -154,17 +159,28 @@ const LatamrustBanner: React.FC = () => {
               })}
             </div>
 
-            {/* CTA */}
-            <a
-              href="https://discord.gg/7Vz4YBamFG"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="group inline-flex items-center gap-3 bg-red-600 hover:bg-red-500 text-white font-bold px-10 py-5 rounded-xl text-lg transition-transform duration-300 hover:scale-[1.02] shadow-lg shadow-red-600/20"
-            >
-              <Gamepad2 className="w-5 h-5" />
-              <span>{cta}</span>
-              <ArrowRight className="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1" />
-            </a>
+            {/* CTAs */}
+            <div className="flex flex-wrap gap-4">
+              <a
+                href="https://gofile.io/d/1oifPA"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group inline-flex items-center gap-3 bg-red-600 hover:bg-red-500 text-white font-bold px-10 py-5 rounded-xl text-lg transition-transform duration-300 hover:scale-[1.02] shadow-lg shadow-red-600/20"
+              >
+                <Download className="w-5 h-5" />
+                <span>{cta}</span>
+                <ArrowRight className="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1" />
+              </a>
+              <a
+                href="https://discord.gg/7Vz4YBamFG"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group inline-flex items-center gap-3 bg-white/10 hover:bg-white/20 border border-white/20 text-white font-bold px-10 py-5 rounded-xl text-lg transition-transform duration-300 hover:scale-[1.02]"
+              >
+                <Gamepad2 className="w-5 h-5" />
+                <span>{discordText}</span>
+              </a>
+            </div>
           </div>
 
           {/* Right — How to join */}

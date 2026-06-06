@@ -12,6 +12,7 @@ import FAQ from "../../Components/FAQ/FAQ";
 import Footer from "../../Components/Footer/Footer";
 import GlobalBackground from "../../Components/GlobalBackground/GlobalBackground";
 import ArgosEyesPartner from "../../Components/ArgosEyesPartner/ArgosEyesPartner";
+import PaymentMethods from "../../Components/PaymentMethods/PaymentMethods";
 
 function HomePage() {
   return (
@@ -35,6 +36,7 @@ function HomePage() {
 
         {/* TIER 3 — SECOND SCROLL: Plans + trust + social proof */}
         <ServerPlans />
+        <PaymentMethods />
         <Benefits />
         <Process />
         <Testimonials />
