@@ -46,7 +46,7 @@ const Header: React.FC = () => {
             aria-label="LATAMRUST - Ir al inicio"
           >
             <img
-              src="/loader-bg.png"
+              src="/loader-bg.webp"
               alt="LATAMRUST"
               width="40"
               height="40"

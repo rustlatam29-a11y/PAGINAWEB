@@ -67,7 +67,7 @@ const Hero: React.FC = () => {
           <div className="relative">
             <div className="absolute inset-0 bg-red-600/10 rounded-3xl blur-3xl" />
             <img
-              src="/decoracion-pagina.png"
+              src="/decoracion-pagina.webp"
               alt="Rust Pirata"
               width="800"
               height="600"

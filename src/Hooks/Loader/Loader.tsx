@@ -40,7 +40,7 @@ const Loader: React.FC<LoaderProps> = ({ onLoadComplete }) => {
     >
       <div className="text-center px-6">
         <img
-          src="/loader-bg.png"
+          src="/loader-bg.webp"
           alt="LATAMRUST"
           width="80"
           height="80"

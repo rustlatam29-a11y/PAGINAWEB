@@ -86,7 +86,7 @@ const VIPSection: React.FC = () => {
                 {/* Imagen */}
                 <div className="mb-4 rounded-2xl overflow-hidden border-2 border-red-600/30 shadow-2xl transform group-hover:scale-105 transition-transform duration-500">
                   <img 
-                    src="/vip-supremo.png" 
+                    src="/vip-supremo.webp" 
                     alt="VIP Supremo" 
                     width="400"
                     height="300"
@@ -185,7 +185,7 @@ const VIPSection: React.FC = () => {
                 {/* Imagen */}
                 <div className="mb-6 rounded-2xl overflow-hidden border-2 border-gray-700/30 shadow-2xl transform group-hover:scale-105 transition-transform duration-500">
                   <img 
-                    src="/vip-basic.png" 
+                    src="/vip-basic.webp" 
                     alt="VIP Basic" 
                     width="400"
                     height="300"

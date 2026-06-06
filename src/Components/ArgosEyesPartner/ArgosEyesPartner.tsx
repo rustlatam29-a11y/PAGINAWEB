@@ -22,7 +22,7 @@ const ArgosEyesPartner: React.FC = () => {
               <div className="relative">
                 <div className="absolute inset-0 bg-red-500/20 rounded-2xl blur-xl" />
                 <img
-                  src="/splash.png"
+                  src="/splash.webp"
                   alt="ArgosEyes AntiCheat"
                   width="100"
                   height="100"

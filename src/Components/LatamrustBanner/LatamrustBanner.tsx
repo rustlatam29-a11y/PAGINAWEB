@@ -90,7 +90,7 @@ const LatamrustBanner: React.FC = () => {
             {/* Logo + Title */}
             <div className="flex items-center gap-6 mb-6">
               <img
-                src="/rust-old-school-logo.png"
+                src="/rust-old-school-logo.webp"
                 alt="Rust Old School"
                 width="120"
                 height="120"
