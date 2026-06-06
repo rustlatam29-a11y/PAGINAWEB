@@ -57,16 +57,16 @@ const PaymentMethods: React.FC = () => {
             transition: "opacity 500ms ease-out 150ms",
           }}
         >
-          <div className="inline-flex items-center gap-3 px-6 py-3 rounded-xl border border-green-500/30 bg-green-500/5">
-            <div className="w-2 h-2 rounded-full bg-green-400 animate-pulse" />
-            <span className="text-green-400 text-sm font-bold tracking-wide uppercase">
+          <div className="inline-flex items-center gap-3 px-6 py-3 rounded-xl border border-red-500/20 bg-red-500/5">
+            <CreditCard className="w-4 h-4 text-red-400" />
+            <span className="text-red-400 text-sm font-bold tracking-wide uppercase">
               {highlight}
             </span>
           </div>
         </div>
 
         {/* Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-10">
           {methods.map((method: any, index: number) => (
             <div
               key={index}
@@ -93,6 +93,10 @@ const PaymentMethods: React.FC = () => {
                 ) : method.icon === "belo" ? (
                   <div className="w-12 h-12 rounded-xl bg-purple-500/10 border border-purple-500/20 flex items-center justify-center">
                     <span className="text-purple-400 font-black text-lg">Be</span>
+                  </div>
+                ) : method.icon === "mercadopago" ? (
+                  <div className="w-12 h-12 rounded-xl bg-blue-500/10 border border-blue-500/20 flex items-center justify-center">
+                    <span className="text-blue-400 font-black text-lg">MP</span>
                   </div>
                 ) : (
                   <div className="w-12 h-12 rounded-xl bg-orange-500/10 border border-orange-500/20 flex items-center justify-center">

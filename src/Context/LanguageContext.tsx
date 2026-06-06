@@ -131,9 +131,15 @@ const translations: Record<Language, Record<string, any>> = {
         desc: "Enviá dinero desde tu cuenta AstroPay y se acredita como PIX.",
         badge: "LATAM → PIX",
       },
+      {
+        icon: "mercadopago",
+        name: "MercadoPago",
+        desc: "Enviá dinero desde tu cuenta MercadoPago (Argentina) y se acredita como PIX.",
+        badge: "Principal",
+      },
     ],
-    "payment.note": "⚠️ Solo recibimos pagos por PIX. Belo y AstroPay son billeteras digitales que permiten enviar dinero desde cualquier país de LATAM, el cual se recibe como PIX en mi cuenta brasileña. No hay otra forma de pago.",
-    "payment.highlight": "Método único de cobro: PIX",
+    "payment.note": "⚠️ Solo recibimos pagos por PIX. MercadoPago, Belo y AstroPay son billeteras digitales que permiten enviar dinero desde cualquier país de LATAM, el cual se recibe como PIX en mi cuenta brasileña. No hay otra forma de pago.",
+    "payment.highlight": "Métodos aceptados: PIX · MercadoPago · Belo · AstroPay",
 
     // Benefits
     "benefits.label": "Por qué elegirme",
@@ -332,9 +338,15 @@ const translations: Record<Language, Record<string, any>> = {
         desc: "Envie dinheiro da sua conta AstroPay e é creditado como PIX.",
         badge: "LATAM → PIX",
       },
+      {
+        icon: "mercadopago",
+        name: "MercadoPago",
+        desc: "Envie dinheiro da sua conta MercadoPago (Argentina) e é creditado como PIX.",
+        badge: "Principal",
+      },
     ],
-    "payment.note": "⚠️ Aceitamos apenas pagamentos via PIX. Belo e AstroPay são carteiras digitais que permitem enviar dinheiro de qualquer país da LATAM, que é recebido como PIX na minha conta brasileira. Não há outra forma de pagamento.",
-    "payment.highlight": "Método único de cobro: PIX",
+    "payment.note": "⚠️ Aceitamos apenas pagamentos via PIX. MercadoPago, Belo e AstroPay são carteiras digitais que permitem enviar dinheiro de qualquer país da LATAM, que é recebido como PIX na minha conta brasileira. Não há outra forma de pagamento.",
+    "payment.highlight": "Métodos aceitos: PIX · MercadoPago · Belo · AstroPay",
 
     // Benefits
     "benefits.label": "Por que me escolher",
