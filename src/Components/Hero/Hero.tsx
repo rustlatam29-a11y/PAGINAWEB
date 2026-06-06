@@ -1,14 +1,11 @@
 import React from "react";
 import { ArrowRight, Check, MessageCircle } from "lucide-react";
-
-const advantages = [
-  "Setup Inmediato",
-  "Soporte 24/7",
-  "Plugins Incluidos",
-  "Anti-lag",
-];
+import { useLanguage } from "../../Context/LanguageContext";
 
 const Hero: React.FC = () => {
+  const { t, tList } = useLanguage();
+  const advantages = tList("hero.advantages");
+
   return (
     <section className="relative min-h-[90vh] flex items-center py-24 overflow-hidden border-t border-white/5">
       {/* Glow rojo izquierda */}
@@ -20,42 +17,47 @@ const Hero: React.FC = () => {
           {/* Badge */}
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-white/10 bg-white/5 mb-8">
             <div className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
-            <span className="text-gray-300 text-sm font-medium">Servidores activos 24/7</span>
+            <span className="text-gray-300 text-sm font-medium">
+              {t("hero.badge")}
+            </span>
           </div>
 
           {/* Titulo */}
           <h1 className="text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-black text-white leading-[0.85] tracking-tight mb-6">
-            RUST
+            {t("hero.title1")}
             <br />
-            <span className="text-red-500">PIRATA</span>
+            <span className="text-red-500">{t("hero.title2")}</span>
           </h1>
 
-          {/* Subtitulo impactante */}
+          {/* Subtitulo */}
           <p className="text-white text-xl sm:text-2xl md:text-3xl font-bold leading-relaxed mb-4">
-            ¿Querés tu propio servidor? Lo armamos, lo configuramos y te damos soporte real.
+            {t("hero.subtitle")}
           </p>
 
-          {/* Texto descriptivo */}
+          {/* Descripcion */}
           <p className="text-gray-400 text-base sm:text-lg leading-relaxed mb-10 max-w-xl">
-            Venta de servidores, plugins y soporte técnico para{" "}
-            <span className="text-white font-semibold">Rust 2275</span> y{" "}
-            <span className="text-white font-semibold">Rust 2388</span>. Más de 8 años
-            administrando comunidades gaming.
+            {t("hero.desc1")}{" "}
+            <span className="text-white font-semibold">Rust 2275</span>{" "}
+            {t("hero.desc2")}{" "}
+            <span className="text-white font-semibold">Rust 2388</span>
+            {t("hero.desc3")}
           </p>
 
-          {/* Fila de ventajas */}
+          {/* Ventajas */}
           <div className="flex flex-wrap gap-4 mb-10">
-            {advantages.map((advantage, index) => (
+            {advantages.map((advantage: string, index: number) => (
               <div key={index} className="flex items-center gap-2">
                 <div className="w-5 h-5 rounded-full bg-red-500/20 flex items-center justify-center">
                   <Check className="w-3 h-3 text-red-500" />
                 </div>
-                <span className="text-gray-300 text-sm font-medium">{advantage}</span>
+                <span className="text-gray-300 text-sm font-medium">
+                  {advantage}
+                </span>
               </div>
             ))}
           </div>
 
-          {/* Boton CTA */}
+          {/* CTA */}
           <a
             href="https://api.whatsapp.com/send?phone=595981144534"
             target="_blank"
@@ -63,7 +65,7 @@ const Hero: React.FC = () => {
             className="group inline-flex items-center gap-3 bg-red-600 hover:bg-red-700 text-white font-bold px-10 py-5 rounded-xl text-xl transition-all duration-300 hover:scale-105 shadow-lg shadow-red-500/25"
           >
             <MessageCircle className="w-6 h-6" />
-            <span>CONSULTAR AHORA</span>
+            <span>{t("hero.cta")}</span>
             <ArrowRight className="w-6 h-6 transition-transform group-hover:translate-x-1" />
           </a>
         </div>
@@ -71,7 +73,6 @@ const Hero: React.FC = () => {
         {/* Derecha - Decoracion */}
         <div className="hidden lg:flex items-center justify-center">
           <div className="relative">
-            {/* Glow atras de la imagen */}
             <div className="absolute inset-0 bg-red-600/10 rounded-3xl blur-3xl" />
             <img
               src="/decoracion-pagina.png"

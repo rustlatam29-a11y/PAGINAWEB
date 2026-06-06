@@ -1,93 +1,85 @@
 import React, { useState } from "react";
 import { useScrollAnimation } from "../../Hooks/useScrollAnimation";
+import { useLanguage } from "../../Context/LanguageContext";
 import { ChevronDown } from "lucide-react";
-
-const faqs = [
-  {
-    question: "¿Qué incluye el servidor Rust pirata?",
-    answer: "Incluye la licencia del servidor, configuración completa, AntiCheat, panel de control, backups automáticos y soporte 24/7. El hosting (VPS) no está incluido, pero te ayudo a elegir el mejor.",
-  },
-  {
-    question: "¿Cuál es la diferencia entre Rust 2275 y 2388?",
-    answer: "Rust 2275 es la versión clásica con OldRecoil, la favorita de la comunidad. Rust 2388 es la última versión actualizada con todos los gráficos y mejoras oficiales. Ambas son excelentes, depende de tu preferencia.",
-  },
-  {
-    question: "¿El pago es mensual o único?",
-    answer: "Es un pago único. Pagás una vez y el servidor es tuyo. No hay cargos mensuales ni suscripciones ocultas.",
-  },
-  {
-    question: "¿Necesito un VPS por separado?",
-    answer: "Sí, el hosting (VPS) no está incluido en el precio. Pero te ayudo a elegir el mejor VPS para tu servidor y te guío en la configuración.",
-  },
-  {
-    question: "¿Cuánto tarda en estar listo mi servidor?",
-    answer: "Generalmente menos de 24 horas. Depende de la complejidad de la configuración y los plugins que necesites.",
-  },
-  {
-    question: "¿Puedo elegir mi propio seed y mundo?",
-    answer: "Sí, podés elegir el seed que quieras. Configuro el mundo exacto que necesitás.",
-  },
-  {
-    question: "¿Qué pasa si tengo un problema después?",
-    answer: "Me contactás por WhatsApp y te ayudo. Soporte 24/7, sin tickets ni colas.",
-  },
-  {
-    question: "¿Hacés plugins personalizados?",
-    answer: "Sí, desarrollo plugins a medida para tu servidor. Tengo experiencia en las comunidades más grandes del ecosistema Rust.",
-  },
-];
 
 const FAQ: React.FC = () => {
   const { elementRef, isVisible } = useScrollAnimation();
+  const { t, tList } = useLanguage();
   const [openIndex, setOpenIndex] = useState<number | null>(null);
+  const faqs = tList("faq.list");
 
   return (
-    <section ref={elementRef} className="py-16 bg-[#0a0a0a] border-t border-white/5" id="faq">
+    <section
+      ref={elementRef}
+      className="py-16 bg-[#0a0a0a] border-t border-white/5"
+      id="faq"
+      style={{ contain: "layout style" }}
+    >
       <div className="max-w-4xl mx-auto px-8 md:px-12">
         <div
-          className={`text-center mb-16 transition-all duration-500 ${
-            isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
-          }`}
+          className="text-center mb-16"
+          style={{
+            opacity: isVisible ? 1 : 0,
+            transform: isVisible ? "translateY(0)" : "translateY(16px)",
+            transition: "opacity 500ms ease-out, transform 500ms ease-out",
+          }}
         >
           <span className="text-red-500 text-sm font-bold tracking-widest uppercase">
-            Preguntas frecuentes
+            {t("faq.label")}
           </span>
           <h2 className="text-3xl sm:text-4xl font-black text-white mt-3 mb-4">
-            Dudas comunes
+            {t("faq.title")}
           </h2>
         </div>
 
         <div className="space-y-3">
-          {faqs.map((faq, index) => (
-            <div
-              key={index}
-              className={`border border-white/5 rounded-xl overflow-hidden transition-all duration-300 ${
-                openIndex === index ? "bg-white/[0.03] border-red-500/20" : "bg-white/[0.01]"
-              } ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-2"}`}
-              style={{ transitionDelay: `${index * 40}ms` }}
-            >
-              <button
-                onClick={() => setOpenIndex(openIndex === index ? null : index)}
-                className="w-full flex items-center justify-between p-6 text-left"
-              >
-                <span className="text-white font-semibold text-base pr-4">{faq.question}</span>
-                <ChevronDown
-                  className={`w-5 h-5 text-gray-500 flex-shrink-0 transition-transform duration-200 ${
-                    openIndex === index ? "rotate-180" : ""
-                  }`}
-                />
-              </button>
+          {Array.isArray(faqs) &&
+            faqs.map((faq: any, index: number) => (
               <div
-                className={`overflow-hidden transition-all duration-200 ${
-                  openIndex === index ? "max-h-40 opacity-100" : "max-h-0 opacity-0"
+                key={index}
+                className={`border border-white/5 rounded-xl overflow-hidden transition-colors duration-300 hover-lift ${
+                  openIndex === index
+                    ? "bg-white/[0.03] border-red-500/20"
+                    : "bg-white/[0.01]"
                 }`}
+                style={{
+                  opacity: isVisible ? 1 : 0,
+                  transform: isVisible ? "translateY(0)" : "translateY(8px)",
+                  transition: `opacity 500ms ease-out ${index * 40}ms, transform 500ms ease-out ${index * 40}ms, background-color 300ms ease-out, border-color 300ms ease-out`,
+                }}
               >
-                <p className="px-6 pb-6 text-gray-400 text-sm leading-relaxed">
-                  {faq.answer}
-                </p>
+                <button
+                  onClick={() =>
+                    setOpenIndex(openIndex === index ? null : index)
+                  }
+                  className="w-full flex items-center justify-between p-6 text-left"
+                  aria-expanded={openIndex === index}
+                  aria-controls={`faq-answer-${index}`}
+                >
+                  <span className="text-white font-semibold text-base pr-4">
+                    {faq.q}
+                  </span>
+                  <ChevronDown
+                    className={`w-5 h-5 text-gray-500 flex-shrink-0 transition-transform duration-200 ${
+                      openIndex === index ? "rotate-180" : ""
+                    }`}
+                  />
+                </button>
+                <div
+                  id={`faq-answer-${index}`}
+                  role="region"
+                  className="accordion-content"
+                  data-open={openIndex === index ? "true" : "false"}
+                >
+                  <div>
+                    <p className="px-6 pb-6 text-gray-400 text-sm leading-relaxed">
+                      {faq.a}
+                    </p>
+                  </div>
+                </div>
               </div>
-            </div>
-          ))}
+            ))}
         </div>
       </div>
     </section>

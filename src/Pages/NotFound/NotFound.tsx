@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Helmet } from "react-helmet-async";
 import {
   Gamepad2,
   Home,
@@ -53,7 +54,12 @@ const EpicRustNotFound: React.FC = () => {
   const titleText = "PÁGINA NO ENCONTRADA".split("");
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-black to-red-900 overflow-hidden relative flex items-center justify-center">
+    <>
+      <Helmet>
+        <title>Página No Encontrada (404) - LATAMRUST</title>
+        <meta name="robots" content="noindex, nofollow" />
+      </Helmet>
+      <div className="min-h-screen bg-gradient-to-br from-gray-900 via-black to-red-900 overflow-hidden relative flex items-center justify-center">
       {/* Animated Background */}
       <div className="absolute inset-0">
         {/* Apocalyptic pattern */}
@@ -454,6 +460,7 @@ const EpicRustNotFound: React.FC = () => {
         }
       `}</style>
     </div>
+    </>
   );
 };
 

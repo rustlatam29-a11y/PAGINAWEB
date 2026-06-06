@@ -18,7 +18,7 @@
   ],
   "rewrites": [
     {
-      "source": "/((?!google.*\\.html$).*)",
+      "source": "/((?!assets/|google.*\\.html$|.*\\.webp$|.*\\.svg$|.*\\.png$|.*\\.jpg$|.*\\.ico$|robots\\.txt$|sitemap\\.xml$|rust-pirata-brasil/|rust-pirata-argentina/|rust-pirata-mexico/|rust-pirata-chile/|rust-pirata-colombia/|rust-pirata-peru/|rust-pirata-uruguay/|rust-pirata-paraguay/|rust-pirata-ecuador/|rust-pirata-bolivia/|rust-pirata-venezuela/|rust-pirata-costa-rica/|rust-pirata-panama/|rust-pirata-republica-dominicana/|rust-pirata-gratis/|rust-pirata-sin-steam/|configurar-servidor-rust/|plugins-oxide-rust/|como-crear-servidor-rust/|mejores-plugins-rust/|descargar-rust-pirata/|rust-pirata-gratis-online/|rust-2275/|rust-2388/|rust-family/|comunidad-rust-family/|servidor-rust-family/).*)",
       "destination": "/index.html"
     }
   ],
@@ -35,12 +35,12 @@
           "value": "DENY"
         },
         {
-          "key": "X-XSS-Protection",
-          "value": "1; mode=block"
-        },
-        {
           "key": "Referrer-Policy",
           "value": "strict-origin-when-cross-origin"
+        },
+        {
+          "key": "Permissions-Policy",
+          "value": "camera=(), microphone=(), geolocation=()"
         }
       ]
     },

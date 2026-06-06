@@ -59,3 +59,135 @@ body {
   background: linear-gradient(90deg, transparent, rgba(255,255,255,0.15), transparent);
   animation: shine 3s ease-in-out infinite;
 }
+
+/* ===== GRID BACKGROUND ===== */
+.rs-grid-bg {
+  background-image:
+    linear-gradient(rgba(255,255,255,0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.04) 1px, transparent 1px);
+  background-size: 80px 80px;
+  animation: grid-drift 30s linear infinite;
+}
+
+@keyframes grid-drift {
+  0% { background-position: 0 0; }
+  100% { background-position: 80px 80px; }
+}
+
+/* ===== FADE IN ANIMATION ===== */
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fade-in 0.6s ease-out forwards;
+}
+
+/* ===== SMOOTH ACCORDION (FAQ) ===== */
+.accordion-content {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 300ms ease-out;
+}
+
+.accordion-content[data-open="true"] {
+  grid-template-rows: 1fr;
+}
+
+.accordion-content > div {
+  overflow: hidden;
+}
+
+/* ===== TESTIMONIAL CROSSFADE ===== */
+.testimonial-slide {
+  animation: testimonial-in 500ms ease-out forwards;
+}
+
+@keyframes testimonial-in {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ===== SUBTLE CARD HOVER ===== */
+.hover-lift {
+  will-change: transform;
+  transition: transform 300ms ease-out;
+}
+
+.hover-lift:hover {
+  transform: translateY(-3px);
+}
+
+/* ===== SUBTLE BORDER GLOW ===== */
+.hover-glow {
+  will-change: border-color;
+  transition: border-color 300ms ease-out;
+}
+
+.hover-glow:hover {
+  border-color: rgba(239, 68, 68, 0.3);
+}
+
+/* ===== STAGGERED GRID FADE-IN ===== */
+.stagger-item {
+  opacity: 0;
+  transform: translateY(12px);
+  animation: stagger-in 500ms ease-out forwards;
+}
+
+.stagger-item:nth-child(1) { animation-delay: 0ms; }
+.stagger-item:nth-child(2) { animation-delay: 60ms; }
+.stagger-item:nth-child(3) { animation-delay: 120ms; }
+.stagger-item:nth-child(4) { animation-delay: 180ms; }
+.stagger-item:nth-child(5) { animation-delay: 240ms; }
+.stagger-item:nth-child(6) { animation-delay: 300ms; }
+
+@keyframes stagger-in {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ===== FLOATING BADGE ===== */
+.float-badge {
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-4px); }
+}
+
+/* ===== SECTION CONTAINMENT ===== */
+section {
+  contain: layout style;
+}
+
+/* ===== REDUCE MOTION ===== */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  .rs-grid-bg {
+    animation: none;
+  }
+}

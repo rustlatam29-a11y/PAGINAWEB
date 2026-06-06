@@ -1,0 +1,68 @@
+=====================================
+   LINKS SEO - VERIFICAR UNO POR UNO
+   latamrust.online
+=====================================
+
+--- PAGINA PRINCIPAL ---
+http://localhost:3000/
+
+--- PAISES (14) ---
+http://localhost:3000/rust-pirata-argentina/
+http://localhost:3000/rust-pirata-brasil/
+http://localhost:3000/rust-pirata-mexico/
+http://localhost:3000/rust-pirata-chile/
+http://localhost:3000/rust-pirata-colombia/
+http://localhost:3000/rust-pirata-peru/
+http://localhost:3000/rust-pirata-uruguay/
+http://localhost:3000/rust-pirata-paraguay/
+http://localhost:3000/rust-pirata-ecuador/
+http://localhost:3000/rust-pirata-bolivia/
+http://localhost:3000/rust-pirata-venezuela/
+http://localhost:3000/rust-pirata-costa-rica/
+http://localhost:3000/rust-pirata-panama/
+http://localhost:3000/rust-pirata-republica-dominicana/
+
+--- CONTENIDO (15) ---
+http://localhost:3000/descargar-rust-pirata/
+http://localhost:3000/rust-pirata-gratis/
+http://localhost:3000/rust-pirata-online/
+http://localhost:3000/rust-pirata-pc/
+http://localhost:3000/rust-pirata-servidor/
+http://localhost:3000/rust-pirata-sin-steam/
+http://localhost:3000/como-crear-servidor-rust-pirata/
+http://localhost:3000/mejores-plugins-rust-pirata/
+http://localhost:3000/plugins-oxide-rust/
+http://localhost:3000/configurar-servidor-rust/
+http://localhost:3000/servidores-rust-pirata/
+http://localhost:3000/rust-2275-oldrecoil/
+http://localhost:3000/rust-2388-actualizado/
+http://localhost:3000/dayz/
+http://localhost:3000/jugar-rust-gratis/
+
+--- RUST FAMILY (6) ---
+http://localhost:3000/rust-family/
+http://localhost:3000/rust-family-discord/
+http://localhost:3000/rust-family-gratis/
+http://localhost:3000/rustfamily/
+http://localhost:3000/rustfamily-brasil/
+http://localhost:3000/rustfamily-argentina/
+http://localhost:3000/rustfamily-servidores/
+http://localhost:3000/rustfamily-comunidad/
+http://localhost:3000/rustfamily-guia/
+http://localhost:3000/comunidade-rust-family/
+http://localhost:3000/servidor-rust-family/
+
+--- BR PRIRATA (1) ---
+http://localhost:3000/rust-br-pirata/
+
+=====================================
+   CHECKLIST POR PAGINA:
+=====================================
+[ ] Sin WhatsApp (texto ni links)
+[ ] Sin numero 595981144534
+[ ] Links internos apuntan a latamrust.online/
+[ ] Titulo correcto
+[ ] Descripcion correcta
+[ ] Imagenes cargan
+[ ] Sin errores visuales
+=====================================

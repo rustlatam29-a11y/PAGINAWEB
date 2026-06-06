@@ -1,48 +1,64 @@
-import React, { useState, useEffect } from "react";
-import { Menu, X, Gamepad2 } from "lucide-react";
-
-const navLinks = [
-  { label: "Servicios", href: "#servicios" },
-  { label: "Planes", href: "#planes" },
-  { label: "Proyectos", href: "#proyectos" },
-  { label: "FAQ", href: "#faq" },
-];
+import React, { useState, useEffect, useCallback } from "react";
+import { Menu, X, Gamepad2, Globe } from "lucide-react";
+import { useLanguage } from "../../Context/LanguageContext";
 
 const Header: React.FC = () => {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
+  const { language, setLanguage, t, tList } = useLanguage();
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 50);
-    window.addEventListener("scroll", handleScroll);
+    window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  const handleToggleKeyDown = useCallback((e: React.KeyboardEvent) => {
+    if (e.key === "Enter" || e.key === " ") {
+      e.preventDefault();
+      setMobileOpen((prev) => !prev);
+    }
+  }, []);
+
+  const navLabels = tList("header.nav");
+
   return (
     <header
-      className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 border-b border-white/10 ${
+      className={`fixed top-0 left-0 w-full z-50 border-b border-white/10 ${
         scrolled
-          ? "bg-[#0a0a0a]/95 backdrop-blur-md"
-          : "bg-[#0a0a0a]/80 backdrop-blur-sm"
+          ? "bg-[#0a0a0a]/95 backdrop-blur-sm"
+          : "bg-[#0a0a0a]/80"
       }`}
+      style={{
+        transition:
+          "background-color 300ms ease-out, backdrop-filter 300ms ease-out",
+      }}
     >
-      <nav className="max-w-screen-xl mx-auto px-8 md:px-12">
+      <nav
+        className="max-w-screen-xl mx-auto px-8 md:px-12"
+        aria-label="Menu principal"
+      >
         <div className="flex items-center h-18">
           {/* Logo */}
-          <a href="/" className="flex items-center gap-3 flex-shrink-0">
+          <a
+            href="/"
+            className="flex items-center gap-3 flex-shrink-0"
+            aria-label="LATAMRUST - Ir al inicio"
+          >
             <img
               src="/loader-bg.png"
               alt="LATAMRUST"
               width="40"
               height="40"
               className="w-10 h-10 rounded-lg object-cover"
+              loading="eager"
             />
             <div>
               <span className="text-white font-black text-xl tracking-tight block leading-tight">
                 Paraguay<span className="text-red-500">RAIDER</span>
               </span>
               <span className="text-gray-500 text-[10px] font-bold tracking-widest uppercase block leading-tight mt-1">
-                SERVIDORES PIRATAS!
+                {t("header.tagline")}
               </span>
             </div>
           </a>
@@ -52,59 +68,139 @@ const Header: React.FC = () => {
 
           {/* Desktop nav */}
           <div className="hidden md:flex items-center gap-5">
-            {navLinks.map((link) => (
-              <a
-                key={link.href}
-                href={link.href}
-                className="text-gray-300 hover:text-red-500 text-sm font-bold tracking-wide transition-colors border-b-2 border-transparent hover:border-red-500 pb-1"
+            {Array.isArray(navLabels) &&
+              navLabels.map((label: string, i: number) => {
+                const hrefs = ["#servicios", "#planes", "#proyectos", "#faq"];
+                return (
+                  <a
+                    key={i}
+                    href={hrefs[i]}
+                    className="text-gray-300 hover:text-red-500 text-sm font-bold tracking-wide transition-colors border-b-2 border-transparent hover:border-red-500 pb-1"
+                  >
+                    {label}
+                  </a>
+                );
+              })}
+
+            {/* Language Switcher */}
+            <div className="inline-flex items-center border border-white/10 bg-white/[0.02] ml-2">
+              <button
+                onClick={() => setLanguage("es")}
+                className={`px-3 py-1.5 text-[10px] font-bold tracking-[0.15em] uppercase transition-colors duration-200 ${
+                  language === "es"
+                    ? "bg-red-600 text-white"
+                    : "text-gray-500 hover:text-white"
+                }`}
+                aria-label="Cambiar a español"
               >
-                {link.label}
-              </a>
-            ))}
+                <Globe className="w-3 h-3 inline mr-1 -mt-0.5" />
+                ES
+              </button>
+              <div className="w-px h-4 bg-white/10" />
+              <button
+                onClick={() => setLanguage("pt")}
+                className={`px-3 py-1.5 text-[10px] font-bold tracking-[0.15em] uppercase transition-colors duration-200 ${
+                  language === "pt"
+                    ? "bg-red-600 text-white"
+                    : "text-gray-500 hover:text-white"
+                }`}
+                aria-label="Mudar para português"
+              >
+                <Globe className="w-3 h-3 inline mr-1 -mt-0.5" />
+                PT
+              </button>
+            </div>
+
             <a
               href="https://discord.gg/hYxwFeMXp3"
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-[#5865F2] hover:bg-[#4752C4] text-white text-sm font-bold px-4 py-2.5 rounded-lg transition-all flex items-center gap-2"
+              className="bg-[#5865F2] hover:bg-[#4752C4] text-white text-sm font-bold px-4 py-2.5 rounded-lg transition-colors duration-200 flex items-center gap-2"
             >
               <Gamepad2 className="w-4 h-4" />
-              DC DEV
+              {t("header.dc")}
             </a>
           </div>
 
           {/* Mobile toggle */}
           <button
             onClick={() => setMobileOpen(!mobileOpen)}
+            onKeyDown={handleToggleKeyDown}
             className="md:hidden text-white"
+            aria-label={mobileOpen ? "Cerrar menu" : "Abrir menu"}
+            aria-expanded={mobileOpen}
+            aria-controls="mobile-menu"
           >
-            {mobileOpen ? <X className="w-7 h-7" /> : <Menu className="w-7 h-7" />}
+            {mobileOpen ? (
+              <X className="w-7 h-7" />
+            ) : (
+              <Menu className="w-7 h-7" />
+            )}
           </button>
         </div>
 
         {/* Mobile menu */}
-        {mobileOpen && (
-          <div className="md:hidden border-t border-white/10 py-4 space-y-3">
-            {navLinks.map((link) => (
-              <a
-                key={link.href}
-                href={link.href}
-                onClick={() => setMobileOpen(false)}
-                className="block text-gray-300 hover:text-red-500 text-sm font-bold py-2 transition-colors"
-              >
-                {link.label}
-              </a>
-            ))}
-            <a
-              href="https://discord.gg/hYxwFeMXp3"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="block bg-[#5865F2] text-white text-sm font-bold px-5 py-2.5 rounded-lg text-center flex items-center justify-center gap-2"
+        <div
+          id="mobile-menu"
+          role="menu"
+          aria-hidden={!mobileOpen}
+          className={`md:hidden border-t border-white/10 py-4 space-y-3 overflow-hidden transition-all duration-300 ${
+            mobileOpen
+              ? "max-h-96 opacity-100"
+              : "max-h-0 opacity-0 border-t-0"
+          }`}
+        >
+          {Array.isArray(navLabels) &&
+            navLabels.map((label: string, i: number) => {
+              const hrefs = ["#servicios", "#planes", "#proyectos", "#faq"];
+              return (
+                <a
+                  key={i}
+                  href={hrefs[i]}
+                  onClick={() => setMobileOpen(false)}
+                  role="menuitem"
+                  className="block text-gray-300 hover:text-red-500 text-sm font-bold py-2 transition-colors"
+                >
+                  {label}
+                </a>
+              );
+            })}
+
+          {/* Mobile Language Switcher */}
+          <div className="flex gap-2 py-2">
+            <button
+              onClick={() => setLanguage("es")}
+              className={`px-4 py-2 text-xs font-bold tracking-[0.15em] uppercase rounded-lg transition-colors duration-200 ${
+                language === "es"
+                  ? "bg-red-600 text-white"
+                  : "bg-white/5 text-gray-500 border border-white/10"
+              }`}
             >
-              <Gamepad2 className="w-4 h-4" />
-              DC DEV
-            </a>
+              ES
+            </button>
+            <button
+              onClick={() => setLanguage("pt")}
+              className={`px-4 py-2 text-xs font-bold tracking-[0.15em] uppercase rounded-lg transition-colors duration-200 ${
+                language === "pt"
+                  ? "bg-red-600 text-white"
+                  : "bg-white/5 text-gray-500 border border-white/10"
+              }`}
+            >
+              PT
+            </button>
           </div>
-        )}
+
+          <a
+            href="https://discord.gg/hYxwFeMXp3"
+            target="_blank"
+            rel="noopener noreferrer"
+            role="menuitem"
+            className="block bg-[#5865F2] text-white text-sm font-bold px-5 py-2.5 rounded-lg text-center flex items-center justify-center gap-2"
+          >
+            <Gamepad2 className="w-4 h-4" />
+            {t("header.dc")}
+          </a>
+        </div>
       </nav>
     </header>
   );

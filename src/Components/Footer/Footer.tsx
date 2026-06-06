@@ -1,9 +1,11 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { useLanguage } from "../../Context/LanguageContext";
 import VisitorCounter from "../VisitorCounter/VisitorCounter";
 
 const Footer: React.FC = () => {
   const year = new Date().getFullYear();
+  const { t } = useLanguage();
 
   return (
     <footer className="bg-[#111] border-t border-white/5">
@@ -14,12 +16,18 @@ const Footer: React.FC = () => {
           </span>
 
           <div className="flex items-center gap-3 text-xs text-gray-500">
-            <Link to="/terms" className="hover:text-white transition-colors">
-              Términos
+            <Link
+              to="/terms"
+              className="hover:text-white transition-colors"
+            >
+              {t("footer.terms")}
             </Link>
             <span className="text-gray-700">|</span>
-            <Link to="/privacy" className="hover:text-white transition-colors">
-              Privacidad
+            <Link
+              to="/privacy"
+              className="hover:text-white transition-colors"
+            >
+              {t("footer.privacy")}
             </Link>
             <span className="text-gray-700">|</span>
             <a
@@ -37,14 +45,14 @@ const Footer: React.FC = () => {
               rel="noopener noreferrer"
               className="hover:text-white transition-colors"
             >
-              Discord: paraguayservers
+              Discord
             </a>
           </div>
 
           <VisitorCounter />
 
           <p className="text-gray-600 text-xs">
-            &copy; {year} ParaguayRAIDER. Todos los derechos reservados.
+            &copy; {year} ParaguayRAIDER. {t("footer.rights")}
           </p>
         </div>
       </div>

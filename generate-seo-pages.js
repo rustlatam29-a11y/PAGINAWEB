@@ -402,7 +402,7 @@ let baseHTML = fs.readFileSync(indexPath, 'utf-8');
 // Generar HTML para cada página
 Object.keys(seoPages).forEach(pagePath => {
   const seo = seoPages[pagePath];
-  const url = `https://latamrust.online/${pagePath}`;
+  const url = `https://latamrust.online/${pagePath}/`;
   
   // Generar FAQ Schema
   const faqSchema = {

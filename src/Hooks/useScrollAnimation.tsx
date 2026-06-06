@@ -20,12 +20,17 @@ export const useScrollAnimation = (options: ScrollAnimationOptions = {}) => {
     const element = elementRef.current;
     if (!element) return;
 
+    element.style.willChange = 'opacity, transform';
+
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
-          setIsVisible(true);
+          requestAnimationFrame(() => {
+            setIsVisible(true);
+          });
           if (triggerOnce) {
             observer.unobserve(element);
+            element.style.willChange = 'auto';
           }
         } else if (!triggerOnce) {
           setIsVisible(false);
