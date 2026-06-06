@@ -1,7 +1,7 @@
 import React from "react";
 import { useScrollAnimation } from "../../Hooks/useScrollAnimation";
 import { useLanguage } from "../../Context/LanguageContext";
-import { CreditCard } from "lucide-react";
+import { CreditCard, ExternalLink } from "lucide-react";
 
 const PaymentMethods: React.FC = () => {
   const { elementRef, isVisible } = useScrollAnimation();
@@ -109,9 +109,22 @@ const PaymentMethods: React.FC = () => {
               <h3 className="text-white font-bold text-xl mb-2">{method.name}</h3>
 
               {/* Description */}
-              <p className="text-gray-400 text-sm leading-relaxed">
+              <p className="text-gray-400 text-sm leading-relaxed mb-4">
                 {method.desc}
               </p>
+
+              {/* Link */}
+              {method.link && (
+                <a
+                  href={method.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 text-xs font-bold text-white/60 hover:text-white border border-white/10 hover:border-white/30 px-4 py-2 rounded-lg transition-all duration-200"
+                >
+                  <span>{method.linkText}</span>
+                  <ExternalLink className="w-3 h-3" />
+                </a>
+              )}
             </div>
           ))}
         </div>
