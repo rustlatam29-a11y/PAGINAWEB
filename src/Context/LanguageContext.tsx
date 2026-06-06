@@ -20,7 +20,7 @@ const translations: Record<Language, Record<string, any>> = {
     "header.dc": "DC DEV",
 
     // LatamrustBanner
-    "banner.badge": "SERVIDOR GRATUITO",
+    "banner.badge": "SERVIDOR GRATUITO ACTIVO",
     "banner.title": "RUST OLD SCHOOL",
     "banner.subtitle": "La vieja escuela. Semi-vanilla. Sin pay to win.",
     "banner.desc": "Servidor ubicado en LATAM con ping ultra bajo y máquina dedicada sin lag. Únete a cientos de jugadores en el mejor Rust pirata old school de la región.",
@@ -193,7 +193,7 @@ const translations: Record<Language, Record<string, any>> = {
     "header.dc": "DC DEV",
 
     // LatamrustBanner
-    "banner.badge": "SERVIDOR GRATUITO",
+    "banner.badge": "SERVIDOR GRATUITO ACTIVO",
     "banner.title": "RUST OLD SCHOOL",
     "banner.subtitle": "A velha escola. Semi-vanilla. Sem pay to win.",
     "banner.desc": "Servidor localizado na LATAM com ping ultra baixo e máquina dedicada sem lag. Junte-se a centenas de jogadores no melhor Rust pirata old school da região.",

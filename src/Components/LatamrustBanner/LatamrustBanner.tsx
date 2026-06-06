@@ -1,9 +1,31 @@
-import React from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { useScrollAnimation } from "../../Hooks/useScrollAnimation";
 import { useLanguage } from "../../Context/LanguageContext";
 import { ArrowRight, Search, Gamepad2, MapPin, Zap } from "lucide-react";
 
 const iconMap: Record<string, React.FC<any>> = { MapPin, Zap, Gamepad2 };
+
+function useRealisticPing(): number {
+  const [ping, setPing] = useState(15);
+
+  useEffect(() => {
+    const tick = () => {
+      setPing((prev) => {
+        const drift = Math.floor(Math.random() * 5) - 2;
+        const next = prev + drift;
+        if (next < 12) return 13;
+        if (next > 38) return 36;
+        return next;
+      });
+      const delay = 1200 + Math.random() * 2500;
+      timer = setTimeout(tick, delay);
+    };
+    let timer = setTimeout(tick, 1000);
+    return () => clearTimeout(timer);
+  }, []);
+
+  return ping;
+}
 
 const LatamrustBanner: React.FC = () => {
   const { elementRef, isVisible } = useScrollAnimation();
@@ -16,11 +38,11 @@ const LatamrustBanner: React.FC = () => {
   const howTo = t("banner.howTo");
   const steps = tList("banner.steps");
   const cta = t("banner.cta");
-  const stats = tObj("banner.stats");
   const badges = tObj("banner.badges");
 
-  const statsArr = Array.isArray(stats) ? stats : [];
   const badgesArr = Array.isArray(badges) ? badges : [];
+
+  const ping = useRealisticPing();
 
   return (
     <section
@@ -45,9 +67,9 @@ const LatamrustBanner: React.FC = () => {
             transition: "opacity 500ms ease-out, transform 500ms ease-out",
           }}
         >
-          <div className="inline-flex items-center gap-2 border border-red-500/20 bg-red-500/5 px-4 py-2 rounded-full float-badge">
-            <div className="w-2 h-2 rounded-full bg-red-500 animate-pulse" />
-            <span className="text-red-400 text-xs font-bold tracking-widest uppercase">
+          <div className="inline-flex items-center gap-2 border border-green-500/30 bg-green-500/10 px-4 py-2 rounded-full float-badge badge-breathe">
+            <div className="w-2 h-2 rounded-full bg-green-400 dot-blink" />
+            <span className="text-green-400 text-xs font-bold tracking-widest uppercase">
               {badge}
             </span>
           </div>
@@ -65,9 +87,20 @@ const LatamrustBanner: React.FC = () => {
                 "opacity 700ms ease-out 100ms, transform 700ms ease-out 100ms",
             }}
           >
-            <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black text-white leading-[0.9] tracking-tight mb-6">
-              {title}
-            </h1>
+            {/* Logo + Title */}
+            <div className="flex items-center gap-6 mb-6">
+              <img
+                src="/rust-old-school-logo.png"
+                alt="Rust Old School"
+                width="120"
+                height="120"
+                className="w-24 h-24 sm:w-28 sm:h-28 md:w-32 md:h-32 object-contain flex-shrink-0"
+                loading="eager"
+              />
+              <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black text-white leading-[0.9] tracking-tight">
+                {title}
+              </h1>
+            </div>
 
             <p className="text-xl sm:text-2xl text-gray-300 font-semibold mb-4">
               {subtitle}
@@ -77,18 +110,32 @@ const LatamrustBanner: React.FC = () => {
               {desc}
             </p>
 
-            {/* Stats */}
+            {/* Dynamic Stats */}
             <div className="flex gap-10 sm:gap-14 mb-10">
-              {statsArr.map((stat: any, i: number) => (
-                <div key={i} className="text-center">
-                  <div className="text-4xl sm:text-5xl font-black text-white leading-none mb-2">
-                    {stat.value}
-                  </div>
-                  <div className="text-[10px] font-bold tracking-[0.2em] text-gray-500 uppercase">
-                    {stat.label}
-                  </div>
+              <div className="text-center">
+                <div className="text-4xl sm:text-5xl font-black text-white leading-none mb-2">
+                  {ping}<span className="text-red-500 text-2xl">ms</span>
                 </div>
-              ))}
+                <div className="text-[10px] font-bold tracking-[0.2em] text-gray-500 uppercase">
+                  PING LATAM
+                </div>
+              </div>
+              <div className="text-center">
+                <div className="text-4xl sm:text-5xl font-black text-white leading-none mb-2">
+                  0
+                </div>
+                <div className="text-[10px] font-bold tracking-[0.2em] text-gray-500 uppercase">
+                  LAG
+                </div>
+              </div>
+              <div className="text-center">
+                <div className="text-4xl sm:text-5xl font-black text-white leading-none mb-2">
+                  24/7
+                </div>
+                <div className="text-[10px] font-bold tracking-[0.2em] text-gray-500 uppercase">
+                  ACTIVO
+                </div>
+              </div>
             </div>
 
             {/* Badges */}

@@ -172,6 +172,26 @@ body {
   50% { transform: translateY(-4px); }
 }
 
+/* ===== ONLINE DOT BREATHING ===== */
+.dot-blink {
+  animation: breathe 3s ease-in-out infinite;
+}
+
+@keyframes breathe {
+  0%, 100% { opacity: 0.15; }
+  50% { opacity: 1; }
+}
+
+/* ===== BADGE BORDER BREATHING ===== */
+.badge-breathe {
+  animation: badge-breathe 3s ease-in-out infinite;
+}
+
+@keyframes badge-breathe {
+  0%, 100% { border-color: rgba(34, 197, 94, 0.1); background-color: rgba(34, 197, 94, 0.03); }
+  50% { border-color: rgba(34, 197, 94, 0.4); background-color: rgba(34, 197, 94, 0.1); }
+}
+
 /* ===== SECTION CONTAINMENT ===== */
 section {
   contain: layout style;

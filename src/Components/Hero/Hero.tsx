@@ -14,14 +14,6 @@ const Hero: React.FC = () => {
       <div className="relative z-10 w-full max-w-screen-xl mx-auto px-8 md:px-12 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
         {/* Izquierda - Texto */}
         <div>
-          {/* Badge */}
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-white/10 bg-white/5 mb-8">
-            <div className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
-            <span className="text-gray-300 text-sm font-medium">
-              {t("hero.badge")}
-            </span>
-          </div>
-
           {/* Titulo */}
           <h1 className="text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-black text-white leading-[0.85] tracking-tight mb-6">
             {t("hero.title1")}
