@@ -1,13 +1,13 @@
 import React from "react";
 import { useScrollAnimation } from "../../Hooks/useScrollAnimation";
 import { useLanguage } from "../../Context/LanguageContext";
-import { ArrowRight, Search, Gamepad2, MapPin, Zap, Globe } from "lucide-react";
+import { ArrowRight, Search, Gamepad2, MapPin, Zap } from "lucide-react";
 
 const iconMap: Record<string, React.FC<any>> = { MapPin, Zap, Gamepad2 };
 
 const LatamrustBanner: React.FC = () => {
   const { elementRef, isVisible } = useScrollAnimation();
-  const { t, tList, tObj, language } = useLanguage();
+  const { t, tList, tObj } = useLanguage();
 
   const badge = t("banner.badge");
   const title = t("banner.title");
