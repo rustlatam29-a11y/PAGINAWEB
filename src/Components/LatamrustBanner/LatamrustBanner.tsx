@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect } from "react";
 import { useScrollAnimation } from "../../Hooks/useScrollAnimation";
 import { useLanguage } from "../../Context/LanguageContext";
 import { ArrowRight, Search, Gamepad2, MapPin, Zap } from "lucide-react";
