@@ -29,24 +29,6 @@ const Footer: React.FC = () => {
             >
               {t("footer.privacy")}
             </Link>
-            <span className="text-gray-700">|</span>
-            <a
-              href="https://discord.com/invite/7Vz4YBamFG"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:text-white transition-colors"
-            >
-              Discord
-            </a>
-            <span className="text-gray-700">|</span>
-            <a
-              href="https://discord.gg/hYxwFeMXp3"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:text-white transition-colors"
-            >
-              Discord
-            </a>
           </div>
 
           <VisitorCounter />

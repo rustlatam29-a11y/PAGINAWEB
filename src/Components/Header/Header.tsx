@@ -112,7 +112,7 @@ const Header: React.FC = () => {
             </div>
 
             <a
-              href="https://discord.gg/hYxwFeMXp3"
+              href="https://discord.gg/zH4u5C7NW8"
               target="_blank"
               rel="noopener noreferrer"
               className="bg-[#5865F2] hover:bg-[#4752C4] text-white text-sm font-bold px-4 py-2.5 rounded-lg transition-colors duration-200 flex items-center gap-2"
@@ -191,7 +191,7 @@ const Header: React.FC = () => {
           </div>
 
           <a
-            href="https://discord.gg/hYxwFeMXp3"
+            href="https://discord.gg/zH4u5C7NW8"
             target="_blank"
             rel="noopener noreferrer"
             role="menuitem"
