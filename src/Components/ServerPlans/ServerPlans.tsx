@@ -21,7 +21,7 @@ const ServerPlans: React.FC = () => {
     {
       name: "Rust 2388",
       subtitle: plan2388.subtitle || "Actualizado",
-      price: "$28",
+      price: "$30",
       description: plan2388.description || "",
       popular: true,
       features: Array.isArray(plan2388.features) ? plan2388.features : [],
