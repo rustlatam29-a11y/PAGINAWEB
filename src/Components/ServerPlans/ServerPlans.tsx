@@ -136,7 +136,7 @@ const ServerPlans: React.FC = () => {
                 </ul>
 
                 <a
-                  href="https://discord.com/invite/7Vz4YBamFG"
+                  href="https://api.whatsapp.com/send?phone=595981144534"
                   target="_blank"
                   rel="noopener noreferrer"
                   className={`group/btn flex items-center justify-center gap-3 w-full py-5 rounded-2xl font-bold text-base transition-colors duration-300 ${

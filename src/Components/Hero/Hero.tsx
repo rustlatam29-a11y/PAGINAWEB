@@ -51,7 +51,7 @@ const Hero: React.FC = () => {
 
           {/* CTA */}
           <a
-            href="https://discord.com/invite/7Vz4YBamFG"
+              href="https://api.whatsapp.com/send?phone=595981144534"
             target="_blank"
             rel="noopener noreferrer"
             className="group inline-flex items-center gap-3 bg-red-600 hover:bg-red-700 text-white font-bold px-10 py-5 rounded-xl text-xl transition-all duration-300 hover:scale-105 shadow-lg shadow-red-500/25"

@@ -168,7 +168,7 @@ const ServerSales: React.FC = () => {
                   </ul>
 
                   <a
-                    href="https://discord.com/invite/7Vz4YBamFG"
+                      href="https://api.whatsapp.com/send?phone=595981144534"
                     target="_blank"
                     rel="noopener noreferrer"
                     className={`group flex items-center justify-center gap-2 w-full py-3.5 px-6 rounded-xl font-bold text-sm transition-all duration-300 ${
