@@ -120,7 +120,7 @@ const MejoresPluginsRust: React.FC = () => {
             <strong className="text-white"> Kits, economia, tiendas, anti-cheat y mas.</strong>
           </p>
           <div className="flex flex-wrap gap-4 justify-center">
-            <a href="https://api.whatsapp.com/send?phone=595981144534" target="_blank" rel="noopener noreferrer" className="px-8 py-4 bg-red-600 hover:bg-red-700 rounded-xl font-bold text-lg transition-all transform hover:scale-105 flex items-center gap-2">
+            <a href="https://discord.com/invite/7Vz4YBamFG" target="_blank" rel="noopener noreferrer" className="px-8 py-4 bg-red-600 hover:bg-red-700 rounded-xl font-bold text-lg transition-all transform hover:scale-105 flex items-center gap-2">
               <Zap className="w-5 h-5" />
               INSTALAR PLUGINS AHORA
             </a>
@@ -277,7 +277,7 @@ const MejoresPluginsRust: React.FC = () => {
           <p className="text-xl text-gray-300 mb-6">
             +30,000 plugins disponibles. Kits, economia, tiendas, anti-cheat y mas.
           </p>
-          <a href="https://api.whatsapp.com/send?phone=595981144534" target="_blank" rel="noopener noreferrer" className="inline-block px-10 py-5 bg-red-600 hover:bg-red-700 rounded-xl font-bold text-xl transition-all transform hover:scale-105">
+          <a href="https://discord.com/invite/7Vz4YBamFG" target="_blank" rel="noopener noreferrer" className="inline-block px-10 py-5 bg-red-600 hover:bg-red-700 rounded-xl font-bold text-xl transition-all transform hover:scale-105">
             INSTALAR PLUGINS AHORA
           </a>
         </section>

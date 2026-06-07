@@ -36,7 +36,7 @@ const SEOContent: React.FC = () => {
         {/* CTA */}
         <div className="text-center">
           <a
-            href="https://api.whatsapp.com/send?phone=595981144534"
+            href="https://discord.com/invite/7Vz4YBamFG"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 bg-green-600 hover:bg-green-700 text-white font-bold px-8 py-4 rounded-xl transition-all"
@@ -44,7 +44,7 @@ const SEOContent: React.FC = () => {
             Contactar Ahora
           </a>
           <p className="text-gray-500 text-sm mt-3">
-            WhatsApp directo • Respuesta inmediata
+            Discord directo • Respuesta inmediata
           </p>
         </div>
       </div>

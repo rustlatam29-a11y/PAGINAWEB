@@ -44,7 +44,7 @@ const RustPirataMexico: React.FC = () => {
             <Link to="/" className="px-8 py-4 bg-red-600 hover:bg-red-700 rounded-xl font-bold text-lg transition-all transform hover:scale-105">
               ¡JUGAR AHORITA! →
             </Link>
-            <a href="https://api.whatsapp.com/send?phone=595981144534" target="_blank" rel="noopener noreferrer" className="px-8 py-4 bg-gray-800 hover:bg-gray-700 rounded-xl font-bold text-lg transition-all">
+            <a href="https://discord.com/invite/7Vz4YBamFG" target="_blank" rel="noopener noreferrer" className="px-8 py-4 bg-gray-800 hover:bg-gray-700 rounded-xl font-bold text-lg transition-all">
               Discord México
             </a>
           </div>

@@ -32,7 +32,7 @@ const ServidorRustFamily: React.FC = () => {
               CONECTAR NO SERVIDOR →
             </Link>
             <a 
-              href="https://api.whatsapp.com/send?phone=595981144534"
+              href="https://discord.com/invite/7Vz4YBamFG"
               target="_blank"
               rel="noopener noreferrer"
               className="px-10 py-5 bg-gray-800 hover:bg-gray-700 rounded-xl font-bold text-xl transition-all"
@@ -272,7 +272,7 @@ const ServidorRustFamily: React.FC = () => {
               <div>
                 <h3 className="text-xl font-bold mb-2">Baixe Rust Pirata 2275</h3>
                 <p className="text-gray-300">
-                  Acesse nosso WhatsApp (<a href="https://api.whatsapp.com/send?phone=595981144534" className="text-green-400 underline" target="_blank" rel="noopener noreferrer">WhatsApp LATAMRUST</a>) 
+                  Acesse nosso Discord (<a href="https://discord.com/invite/7Vz4YBamFG" className="text-green-400 underline" target="_blank" rel="noopener noreferrer">Discord LATAMRUST</a>) 
                   e baixe o Rust Pirata atualizado no canal #downloads.
                 </p>
               </div>
@@ -357,7 +357,7 @@ const ServidorRustFamily: React.FC = () => {
             {[
               {
                 q: "Qual o IP do servidor rust family LATAMRUST?",
-                a: "O IP é atualizado regularmente e está disponível no nosso WhatsApp oficial (WhatsApp LATAMRUST) no canal de atención. Fazemos isso para evitar ataques DDoS e garantir estabilidade do servidor."
+                a: "O IP é atualizado regularmente e está disponível no nosso Discord oficial (Discord LATAMRUST) no canal de atención. Fazemos isso para evitar ataques DDoS e garantir estabilidade do servidor."
               },
               {
                 q: "O servidor rust family tem lag?",
@@ -419,7 +419,7 @@ const ServidorRustFamily: React.FC = () => {
               JOGAR AGORA
             </Link>
             <a 
-              href="https://api.whatsapp.com/send?phone=595981144534"
+              href="https://discord.com/invite/7Vz4YBamFG"
               target="_blank"
               rel="noopener noreferrer"
               className="px-12 py-6 bg-gray-800 hover:bg-gray-700 rounded-xl font-bold text-2xl transition-all"

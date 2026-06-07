@@ -48,13 +48,13 @@ const ComoCrearServidorRust: React.FC = () => {
             "@type": "FAQPage",
             "mainEntity": [
               {"@type": "Question", "name": "Cuanto cuesta crear un servidor Rust pirata?", "acceptedAnswer": {"@type": "Answer", "text": "El servidor premium cuesta desde $17 USD (pago unico) para Rust 2275 y $25 USD para Rust 2388. El hosting VPS se contrata por separado desde $5/mes."}},
-              {"@type": "Question", "name": "Necesito conocimientos tecnicos para crear un servidor Rust?", "acceptedAnswer": {"@type": "Answer", "text": "No, nosotros nos encargamos de toda la configuracion tecnica. Solo necesitas contactarnos por WhatsApp y te guiamos en cada paso."}},
+              {"@type": "Question", "name": "Necesito conocimientos tecnicos para crear un servidor Rust?", "acceptedAnswer": {"@type": "Answer", "text": "No, nosotros nos encargamos de toda la configuracion tecnica. Solo necesitas contactarnos por Discord y te guiamos en cada paso."}},
               {"@type": "Question", "name": "Cuanto tiempo tarda en estar listo mi servidor?", "acceptedAnswer": {"@type": "Answer", "text": "Tu servidor puede estar listo en menos de 5 minutos despues del pago. La configuracion completa toma menos de 24 horas."}},
               {"@type": "Question", "name": "Que VPS es mejor para un servidor Rust pirata?", "acceptedAnswer": {"@type": "Answer", "text": "Recomendamos VPS con minimo 8GB RAM, 4 cores, y ubicacion en Brasil o USA para ping bajo. DigitalOcean, Vultr y Hetzner son buenas opciones."}},
               {"@type": "Question", "name": "Puedo instalar plugins en mi servidor Rust pirata?", "acceptedAnswer": {"@type": "Answer", "text": "Si, tu servidor viene con soporte para Oxide y uMod con +30,000 plugins disponibles. Kits, economia, tiendas, anti-cheat y mas."}},
               {"@type": "Question", "name": "Cuantos jugadores puede soportar mi servidor?", "acceptedAnswer": {"@type": "Answer", "text": "Depende del VPS. Con 8GB RAM puedes tener 50-100 jugadores. Con 16GB, hasta 200. Con 32GB, mas de 300 jugadores simultaneos."}},
               {"@type": "Question", "name": "Que plugins son esenciales para un servidor Rust?", "acceptedAnswer": {"@type": "Answer", "text": "Los esenciales son: Kits, BetterChat, Vanish, NoEscape, Backpacks, Economics, ServerRewards, and RustAdmin AntiCheat."}},
-              {"@type": "Question", "name": "Puedo cambiar de Rust 2275 a 2388 despues?", "acceptedAnswer": {"@type": "Answer", "text": "Si, puedes migrar tu servidor de una version a otra. Contactanos por WhatsApp y te ayudamos con la migracion."}}
+              {"@type": "Question", "name": "Puedo cambiar de Rust 2275 a 2388 despues?", "acceptedAnswer": {"@type": "Answer", "text": "Si, puedes migrar tu servidor de una version a otra. Contactanos por Discord y te ayudamos con la migracion."}}
             ]
           })}
         </script>
@@ -86,7 +86,7 @@ const ComoCrearServidorRust: React.FC = () => {
             Configuracion, plugins, AntiCheat y hosting. Desde <strong className="text-white">$17 USD</strong>.
           </p>
           <div className="flex flex-wrap gap-4 justify-center">
-            <a href="https://api.whatsapp.com/send?phone=595981144534" target="_blank" rel="noopener noreferrer" className="px-8 py-4 bg-red-600 hover:bg-red-700 rounded-xl font-bold text-lg transition-all transform hover:scale-105 flex items-center gap-2">
+            <a href="https://discord.com/invite/7Vz4YBamFG" target="_blank" rel="noopener noreferrer" className="px-8 py-4 bg-red-600 hover:bg-red-700 rounded-xl font-bold text-lg transition-all transform hover:scale-105 flex items-center gap-2">
               <Zap className="w-5 h-5" />
               CREAR MI SERVIDOR AHORA
             </a>
@@ -277,7 +277,7 @@ const ComoCrearServidorRust: React.FC = () => {
           <div className="space-y-4">
             {[
               { q: "Cuanto cuesta crear un servidor Rust pirata?", a: "El servidor premium cuesta desde $17 USD (pago unico) para Rust 2275 y $25 USD para Rust 2388. El hosting VPS se contrata por separado desde $5/mes." },
-              { q: "Necesito conocimientos tecnicos?", a: "No, nosotros nos encargamos de toda la configuracion tecnica. Solo necesitas contactarnos por WhatsApp y te guiamos en cada paso." },
+              { q: "Necesito conocimientos tecnicos?", a: "No, nosotros nos encargamos de toda la configuracion tecnica. Solo necesitas contactarnos por Discord y te guiamos en cada paso." },
               { q: "Cuanto tiempo tarda en estar listo?", a: "Tu servidor puede estar listo en menos de 5 minutos despues del pago. La configuracion completa toma menos de 24 horas." },
               { q: "Que VPS es mejor para Rust pirata?", a: "Recomendamos VPS con minimo 8GB RAM, 4 cores, y ubicacion en Brasil o USA para ping bajo. DigitalOcean, Vultr y Hetzner son buenas opciones." },
               { q: "Puedo instalar plugins?", a: "Si, tu servidor viene con soporte para Oxide y uMod con +30,000 plugins disponibles. Kits, economia, tiendas, anti-cheat y mas." },
@@ -298,7 +298,7 @@ const ComoCrearServidorRust: React.FC = () => {
           <p className="text-xl text-gray-300 mb-6">
             Desde $17 USD. Configuracion completa, plugins, AntiCheat y soporte 24/7.
           </p>
-          <a href="https://api.whatsapp.com/send?phone=595981144534" target="_blank" rel="noopener noreferrer" className="inline-block px-10 py-5 bg-red-600 hover:bg-red-700 rounded-xl font-bold text-xl transition-all transform hover:scale-105">
+          <a href="https://discord.com/invite/7Vz4YBamFG" target="_blank" rel="noopener noreferrer" className="inline-block px-10 py-5 bg-red-600 hover:bg-red-700 rounded-xl font-bold text-xl transition-all transform hover:scale-105">
             CREAR MI SERVIDOR AHORA
           </a>
         </section>

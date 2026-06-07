@@ -32,7 +32,7 @@ const DescargarRustPirata: React.FC = () => {
             "image": "https://latamrust.online/LATAMLOGO.webp",
             "totalTime": "PT15M",
             "step": [
-              {"@type": "HowToStep", "name": "Contactar por WhatsApp", "text": "Escribe por WhatsApp y solicita el enlace de descarga seguro."},
+              {"@type": "HowToStep", "name": "Contactar por Discord", "text": "Escribe por Discord y solicita el enlace de descarga seguro."},
               {"@type": "HowToStep", "name": "Descargar el archivo", "text": "Descarga Rust Pirata 2275 o 2388 desde el enlace seguro que te enviamos."},
               {"@type": "HowToStep", "name": "Extraer los archivos", "text": "Extrae el archivo .zip o .rar en una carpeta de tu PC."},
               {"@type": "HowToStep", "name": "Instalar el juego", "text": "Ejecuta el instalador y sigue los pasos. No necesitas Steam ni Epic Games."},
@@ -83,7 +83,7 @@ const DescargarRustPirata: React.FC = () => {
             <strong className="text-white"> Archivo seguro verificado sin virus.</strong>
           </p>
           <div className="flex flex-wrap gap-4 justify-center">
-            <a href="https://api.whatsapp.com/send?phone=595981144534" target="_blank" rel="noopener noreferrer" className="px-8 py-4 bg-red-600 hover:bg-red-700 rounded-xl font-bold text-lg transition-all transform hover:scale-105 flex items-center gap-2">
+            <a href="https://discord.com/invite/7Vz4YBamFG" target="_blank" rel="noopener noreferrer" className="px-8 py-4 bg-red-600 hover:bg-red-700 rounded-xl font-bold text-lg transition-all transform hover:scale-105 flex items-center gap-2">
               <Download className="w-5 h-5" />
               DESCARGAR AHORA GRATIS
             </a>
@@ -111,7 +111,7 @@ const DescargarRustPirata: React.FC = () => {
                 <li className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-green-500" /> Mas estable y optimizado</li>
                 <li className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-green-500" /> Ideal para PvP competitivo</li>
               </ul>
-              <a href="https://api.whatsapp.com/send?phone=595981144534" target="_blank" rel="noopener noreferrer" className="block text-center py-3 bg-red-600 hover:bg-red-700 rounded-xl font-bold transition-all">
+              <a href="https://discord.com/invite/7Vz4YBamFG" target="_blank" rel="noopener noreferrer" className="block text-center py-3 bg-red-600 hover:bg-red-700 rounded-xl font-bold transition-all">
                 DESCARGAR 2275
               </a>
             </div>
@@ -126,7 +126,7 @@ const DescargarRustPirata: React.FC = () => {
                 <li className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-green-500" /> Nuevas armas y features</li>
                 <li className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-green-500" /> Optimizado para LATAM</li>
               </ul>
-              <a href="https://api.whatsapp.com/send?phone=595981144534" target="_blank" rel="noopener noreferrer" className="block text-center py-3 bg-blue-600 hover:bg-blue-700 rounded-xl font-bold transition-all">
+              <a href="https://discord.com/invite/7Vz4YBamFG" target="_blank" rel="noopener noreferrer" className="block text-center py-3 bg-blue-600 hover:bg-blue-700 rounded-xl font-bold transition-all">
                 DESCARGAR 2388
               </a>
             </div>
@@ -140,8 +140,8 @@ const DescargarRustPirata: React.FC = () => {
             {[
               {
                 step: "01",
-                title: "Contacta por WhatsApp",
-                description: "Escríbenos por WhatsApp y solicita el enlace de descarga de Rust Pirata. Te enviamos un link 100% seguro y verificado.",
+                title: "Contacta por Discord",
+                description: "Escríbenos por Discord y solicita el enlace de descarga de Rust Pirata. Te enviamos un link 100% seguro y verificado.",
                 icon: Zap
               },
               {
@@ -268,7 +268,7 @@ const DescargarRustPirata: React.FC = () => {
           <p className="text-xl text-gray-300 mb-6">
             Rust 2275 y 2388 disponibles. Sin Steam, sin virus, 100% gratis.
           </p>
-          <a href="https://api.whatsapp.com/send?phone=595981144534" target="_blank" rel="noopener noreferrer" className="inline-block px-10 py-5 bg-red-600 hover:bg-red-700 rounded-xl font-bold text-xl transition-all transform hover:scale-105">
+          <a href="https://discord.com/invite/7Vz4YBamFG" target="_blank" rel="noopener noreferrer" className="inline-block px-10 py-5 bg-red-600 hover:bg-red-700 rounded-xl font-bold text-xl transition-all transform hover:scale-105">
             DESCARGAR AHORA GRATIS
           </a>
         </section>

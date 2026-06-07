@@ -35,7 +35,7 @@ const ComunidadRustFamily: React.FC = () => {
               <Crown /> ENTRAR NA RUST FAMILY
             </Link>
             <a 
-              href="https://api.whatsapp.com/send?phone=595981144534"
+              href="https://discord.com/invite/7Vz4YBamFG"
               target="_blank"
               rel="noopener noreferrer"
               className="px-10 py-5 bg-gray-800 hover:bg-gray-700 rounded-xl font-bold text-xl transition-all flex items-center gap-2 shadow-2xl"
@@ -256,7 +256,7 @@ const ComunidadRustFamily: React.FC = () => {
               <div>
                 <h3 className="text-xl font-bold mb-2">Entre no Discord Oficial</h3>
                 <p className="text-gray-300">
-                  Acesse <a href="https://api.whatsapp.com/send?phone=595981144534" className="text-green-400 underline" target="_blank" rel="noopener noreferrer">WhatsApp LATAMRUST</a> - 
+                  Acesse <a href="https://discord.com/invite/7Vz4YBamFG" className="text-green-400 underline" target="_blank" rel="noopener noreferrer">Discord LATAMRUST</a> - 
                   Este é o coração da <strong>comunidade rust family</strong> LATAMRUST com 10,000+ membros ativos.
                 </p>
               </div>
@@ -377,7 +377,7 @@ const ComunidadRustFamily: React.FC = () => {
               <Crown /> ENTRAR AGORA
             </Link>
             <a 
-              href="https://api.whatsapp.com/send?phone=595981144534"
+              href="https://discord.com/invite/7Vz4YBamFG"
               target="_blank"
               rel="noopener noreferrer"
               className="px-12 py-6 bg-gray-800 hover:bg-gray-700 rounded-xl font-bold text-2xl transition-all flex items-center gap-3 shadow-2xl"

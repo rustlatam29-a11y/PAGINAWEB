@@ -26,7 +26,7 @@ const services = [
   {
     icon: Headphones,
     title: "Soporte Directo",
-    description: "WhatsApp 24/7. Sin tickets, sin colas.",
+    description: "Discord 24/7. Sin tickets, sin colas.",
   },
 ];
 

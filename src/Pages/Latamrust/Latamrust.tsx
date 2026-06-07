@@ -64,10 +64,10 @@ const Latamrust: React.FC = () => {
           </p>
           <p className="text-lg text-gray-400 max-w-2xl mx-auto mb-10">
             Rust 2275 OldRecoil y Rust 2388. +30,000 plugins, AntiCheat profesional,
-            soporte directo por WhatsApp y ping bajo en toda LATAM.
+            soporte directo por Discord y ping bajo en toda LATAM.
           </p>
           <a
-            href="https://api.whatsapp.com/send?phone=595981144534"
+            href="https://discord.com/invite/7Vz4YBamFG"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-3 bg-red-600 hover:bg-red-700 text-white font-bold px-8 py-4 rounded-xl text-lg transition-all duration-300"
@@ -134,7 +134,7 @@ const Latamrust: React.FC = () => {
               { icon: Server, title: "Servidores Rust Pirata", desc: "Rust 2275 y 2388 con configuracion completa y IP dedicada." },
               { icon: Shield, title: "AntiCheat Profesional", desc: "Proteccion contra hackers. Ban automatico 24/7." },
               { icon: Zap, title: "+30,000 Plugins", desc: "Economia, kits, tiendas, VIP. Oxide y uMod." },
-              { icon: Headphones, title: "Soporte 24/7", desc: "WhatsApp directo. Sin tickets, sin colas." },
+              { icon: Headphones, title: "Soporte 24/7", desc: "Discord directo. Sin tickets, sin colas." },
               { icon: Users, title: "Comunidad Activa", desc: "10,000+ jugadores en toda Latinoamerica." },
               { icon: Star, title: "Configuracion Gratis", desc: "Setup completo incluido en el precio." },
             ].map((service, index) => {
@@ -180,15 +180,15 @@ const Latamrust: React.FC = () => {
             Unite a <span className="text-red-500">LATAMRUST</span>
           </h2>
           <p className="text-gray-400 text-lg mb-10 max-w-2xl mx-auto">
-            Contactanos por WhatsApp y armamos tu servidor Rust pirata en menos de 24 horas.
+            Contactanos por Discord y armamos tu servidor Rust pirata en menos de 24 horas.
           </p>
           <a
-            href="https://api.whatsapp.com/send?phone=595981144534"
+            href="https://discord.com/invite/7Vz4YBamFG"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-3 bg-red-600 hover:bg-red-700 text-white font-bold px-8 py-4 rounded-xl text-lg transition-all duration-300"
           >
-            WhatsApp Directo
+            Discord Directo
             <ArrowRight className="w-5 h-5" />
           </a>
         </div>

@@ -31,12 +31,12 @@ const Footer: React.FC = () => {
             </Link>
             <span className="text-gray-700">|</span>
             <a
-              href="https://wa.me/595981144534"
+              href="https://discord.com/invite/7Vz4YBamFG"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-white transition-colors"
             >
-              WhatsApp
+              Discord
             </a>
             <span className="text-gray-700">|</span>
             <a

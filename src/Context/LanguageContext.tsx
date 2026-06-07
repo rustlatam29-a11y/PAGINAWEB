@@ -61,12 +61,12 @@ const translations: Record<Language, Record<string, any>> = {
     "video.label": "¿Por qué elegirnos?",
     "video.title": "Tu servidor Rust listo en minutos, sin complicaciones",
     "video.titleHighlight": "sin complicaciones",
-    "video.description": "No perdás tiempo con configuraciones complicadas. Tu servidor pirata con plugins, AntiCheat y soporte directo por WhatsApp. Así de simple.",
+    "video.description": "No perdás tiempo con configuraciones complicadas. Tu servidor pirata con plugins, AntiCheat y soporte directo por Discord. Así de simple.",
     "video.features": [
       { title: "Servidores Rust Pirata", desc: "Rust 2275 OldRecoil y Rust 2388. Configuración completa." },
       { title: "+30.000 Plugins", desc: "Economía, kits, tiendas, anti-cheat. Oxide y uMod." },
       { title: "AntiCheat Profesional", desc: "Protección contra hackers. Ban automático." },
-      { title: "Soporte 24/7", desc: "WhatsApp directo. Sin tickets, sin colas." },
+      { title: "Soporte 24/7", desc: "Discord directo. Sin tickets, sin colas." },
     ],
 
     // ServerPlans
@@ -166,7 +166,7 @@ const translations: Record<Language, Record<string, any>> = {
       { title: "Pago único, sin suscripciones", desc: "Pagás una vez y el servidor es tuyo. Sin cargos mensuales ocultos." },
       { title: "Experiencia real en Rust", desc: "Más de 10,000 horas jugando y administrando servidores. Sé lo que funciona." },
       { title: "Experiencia con grandes servidores", desc: "Trabajé con las comunidades más reconocidas del ecosistema Rust como RustSpain y Brasa.gg, entre otras." },
-      { title: "Soporte directo y rápido", desc: "WhatsApp directo. Sin tickets, sin colas, sin esperas." },
+      { title: "Soporte directo y rápido", desc: "Discord directo. Sin tickets, sin colas, sin esperas." },
       { title: "Configuración incluida", desc: "No tenés que configurar nada solo. Me encargo de todo." },
       { title: "Backup automático", desc: "Tus datos se guardan automáticamente. No perdés nada." },
     ],
@@ -189,7 +189,7 @@ const translations: Record<Language, Record<string, any>> = {
     "process.title": "Cómo funciona",
     "process.subtitle": "Simple, rápido y sin complicaciones. Cuatro pasos y tu servidor está listo.",
     "process.steps": [
-      { title: "Contactás por WhatsApp", desc: "Me contás qué necesitás. Si es un servidor, plugins o soporte. Te respondo rápido." },
+      { title: "Contactás por Discord", desc: "Me contás qué necesitás. Si es un servidor, plugins o soporte. Te respondo rápido." },
       { title: "Configuro tu servidor", desc: "Me encargo de todo: instalación, plugins, AntiCheat, mundo personalizado. Todo listo." },
       { title: "Tu servidor está listo", desc: "En menos de 24 horas tenés tu servidor funcionando. IP dedicada, backups y todo configurado." },
       { title: "Soporte continuo", desc: "Si necesitás ayuda después, estoy disponible 24/7. Sin tickets, sin colas." },
@@ -218,7 +218,7 @@ const translations: Record<Language, Record<string, any>> = {
       { q: "¿Necesito un VPS por separado?", a: "Sí, el hosting (VPS) no está incluido en el precio. Pero te ayudo a elegir el mejor VPS para tu servidor y te guío en la configuración." },
       { q: "¿Cuánto tarda en estar listo mi servidor?", a: "Generalmente menos de 24 horas. Depende de la complejidad de la configuración y los plugins que necesites." },
       { q: "¿Puedo elegir mi propio seed y mundo?", a: "Sí, podés elegir el seed que quieras. Configuro el mundo exacto que necesitás." },
-      { q: "¿Qué pasa si tengo un problema después?", a: "Me contactás por WhatsApp y te ayudo. Soporte 24/7, sin tickets ni colas." },
+      { q: "¿Qué pasa si tengo un problema después?", a: "Me contactás por Discord y te ayudo. Soporte 24/7, sin tickets ni colas." },
       { q: "¿Hacés plugins personalizados?", a: "Sí, desarrollo plugins a medida para tu servidor. Tengo experiencia en las comunidades más grandes del ecosistema Rust." },
     ],
 
@@ -284,12 +284,12 @@ const translations: Record<Language, Record<string, any>> = {
     "video.label": "Por que nos escolher?",
     "video.title": "Teu servidor Rust pronto em minutos, sem complicações",
     "video.titleHighlight": "sem complicações",
-    "video.description": "Não percas tempo com configurações complicadas. Teu servidor pirata com plugins, AntiCheat e suporte direto por WhatsApp. Assim de simples.",
+    "video.description": "Não percas tempo com configurações complicadas. Teu servidor pirata com plugins, AntiCheat e suporte direto por Discord. Assim de simples.",
     "video.features": [
       { title: "Servidores Rust Pirata", desc: "Rust 2275 OldRecoil e Rust 2388. Configuração completa." },
       { title: "+30.000 Plugins", desc: "Economia, kits, lojas, anti-cheat. Oxide e uMod." },
       { title: "AntiCheat Profissional", desc: "Proteção contra hackers. Ban automático." },
-      { title: "Suporte 24/7", desc: "WhatsApp direto. Sem tickets, sem filas." },
+      { title: "Suporte 24/7", desc: "Discord direto. Sem tickets, sem filas." },
     ],
 
     // ServerPlans
@@ -389,7 +389,7 @@ const translations: Record<Language, Record<string, any>> = {
       { title: "Pagamento único, sem assinaturas", desc: "Pagas uma vez e o servidor é teu. Sem taxas mensais ocultas." },
       { title: "Experiência real em Rust", desc: "Mais de 10.000 horas jogando e administrando servidores. Sei o que funciona." },
       { title: "Experiência com grandes servidores", desc: "Trabalhei com as comunidades mais reconhecidas do ecossistema Rust como RustSpain e Brasa.gg, entre outras." },
-      { title: "Suporte direto e rápido", desc: "WhatsApp direto. Sem tickets, sem filas, sem esperas." },
+      { title: "Suporte direto e rápido", desc: "Discord direto. Sem tickets, sem filas, sem esperas." },
       { title: "Configuração incluída", desc: "Não tens que configurar nada sozinho. Eu cuido de tudo." },
       { title: "Backup automático", desc: "Teus dados são salvos automaticamente. Não perdes nada." },
     ],
@@ -412,7 +412,7 @@ const translations: Record<Language, Record<string, any>> = {
     "process.title": "Como funciona",
     "process.subtitle": "Simples, rápido e sem complicações. Quatro passos e teu servidor está pronto.",
     "process.steps": [
-      { title: "Contacta pelo WhatsApp", desc: "Me conta o que precisas. Se é um servidor, plugins ou suporte. Respondo rápido." },
+      { title: "Contacta pelo Discord", desc: "Me conta o que precisas. Se é um servidor, plugins ou suporte. Respondo rápido." },
       { title: "Configuro teu servidor", desc: "Cuido de tudo: instalação, plugins, AntiCheat, mundo personalizado. Tudo pronto." },
       { title: "Teu servidor está pronto", desc: "Em menos de 24 horas tens teu servidor funcionando. IP dedicada, backups e tudo configurado." },
       { title: "Suporte contínuo", desc: "Se precisar de ajuda depois, estou disponível 24/7. Sem tickets, sem filas." },
@@ -441,7 +441,7 @@ const translations: Record<Language, Record<string, any>> = {
       { q: "Preciso de um VPS separado?", a: "Sim, o hosting (VPS) não está incluído no preço. Mas te ajudo a escolher o melhor VPS para teu servidor e te guio na configuração." },
       { q: "Quanto tempo demora para ficar pronto meu servidor?", a: "Geralmente menos de 24 horas. Depende da complexidade da configuração e dos plugins que precisas." },
       { q: "Posso escolher meu próprio seed e mundo?", a: "Sim, podes escolher o seed que quiseres. Configuro o mundo exato que precisas." },
-      { q: "O que acontece se tiver um problema depois?", a: "Contactas-me pelo WhatsApp e te ajudo. Suporte 24/7, sem tickets nem filas." },
+      { q: "O que acontece se tiver um problema depois?", a: "Contactas-me pelo Discord e te ajudo. Suporte 24/7, sem tickets nem filas." },
       { q: "Fazes plugins personalizados?", a: "Sim, desenvolvo plugins à medida para teu servidor. Tenho experiência nas maiores comunidades do ecossistema Rust." },
     ],
 

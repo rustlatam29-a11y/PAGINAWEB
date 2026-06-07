@@ -75,7 +75,7 @@ const RustPirataArgentina: React.FC = () => {
               JUGAR AHORA →
             </Link>
             <a 
-              href="https://api.whatsapp.com/send?phone=595981144534"
+              href="https://discord.com/invite/7Vz4YBamFG"
               target="_blank"
               rel="noopener noreferrer"
               className="px-8 py-4 bg-gray-800 hover:bg-gray-700 rounded-xl font-bold text-lg transition-all"
@@ -225,7 +225,7 @@ const RustPirataArgentina: React.FC = () => {
               <div>
                 <h3 className="text-xl font-bold mb-2">Unite al Discord LATAMRUST</h3>
                 <p className="text-gray-300">
-                  Entrá a nuestro WhatsApp oficial en <a href="https://api.whatsapp.com/send?phone=595981144534" className="text-green-400 underline" target="_blank" rel="noopener noreferrer">WhatsApp LATAMRUST</a>. 
+                  Entrá a nuestro Discord oficial en <a href="https://discord.com/invite/7Vz4YBamFG" className="text-green-400 underline" target="_blank" rel="noopener noreferrer">Discord LATAMRUST</a>. 
                   Todos los links para <strong>descargar rust pirata argentina</strong> están en #downloads.
                 </p>
               </div>
@@ -360,7 +360,7 @@ const RustPirataArgentina: React.FC = () => {
               JUGAR AHORA 🇦🇷
             </Link>
             <a 
-              href="https://api.whatsapp.com/send?phone=595981144534"
+              href="https://discord.com/invite/7Vz4YBamFG"
               target="_blank"
               rel="noopener noreferrer"
               className="px-8 py-4 bg-gray-800 hover:bg-gray-700 rounded-xl font-bold text-lg transition-all"

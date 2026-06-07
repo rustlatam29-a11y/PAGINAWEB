@@ -38,7 +38,7 @@ const RustPirataChile: React.FC = () => {
           <p className="text-xl text-gray-300 mb-8">Servidor LATAMRUST - El mejor servidor Rust Pirata en Chile con ping bajo, +10,000 jugadores weon</p>
           <div className="flex flex-wrap gap-4 justify-center">
             <Link to="/" className="px-8 py-4 bg-red-600 hover:bg-red-700 rounded-xl font-bold text-lg transition-all transform hover:scale-105">¡JUGAR AHORA WEON!</Link>
-            <a href="https://api.whatsapp.com/send?phone=595981144534" target="_blank" rel="noopener noreferrer" className="px-8 py-4 bg-gray-800 hover:bg-gray-700 rounded-xl font-bold text-lg transition-all">Discord Chile</a>
+            <a href="https://discord.com/invite/7Vz4YBamFG" target="_blank" rel="noopener noreferrer" className="px-8 py-4 bg-gray-800 hover:bg-gray-700 rounded-xl font-bold text-lg transition-all">Discord Chile</a>
           </div>
         </div>
       </section>

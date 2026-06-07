@@ -81,7 +81,7 @@ const Rust2275OldRecoil: React.FC = () => {
             +30,000 plugins. Servidores con ping bajo LATAM.
           </p>
           <div className="flex flex-wrap gap-4 justify-center">
-            <a href="https://api.whatsapp.com/send?phone=595981144534" target="_blank" rel="noopener noreferrer" className="px-8 py-4 bg-red-600 hover:bg-red-700 rounded-xl font-bold text-lg transition-all transform hover:scale-105 flex items-center gap-2">
+            <a href="https://discord.com/invite/7Vz4YBamFG" target="_blank" rel="noopener noreferrer" className="px-8 py-4 bg-red-600 hover:bg-red-700 rounded-xl font-bold text-lg transition-all transform hover:scale-105 flex items-center gap-2">
               <Download className="w-5 h-5" />
               DESCARGAR RUST 2275 GRATIS
             </a>
@@ -234,7 +234,7 @@ const Rust2275OldRecoil: React.FC = () => {
           <p className="text-xl text-gray-300 mb-6">
             La version clasica favorita. Recoil original, +30,000 plugins.
           </p>
-          <a href="https://api.whatsapp.com/send?phone=595981144534" target="_blank" rel="noopener noreferrer" className="inline-block px-10 py-5 bg-red-600 hover:bg-red-700 rounded-xl font-bold text-xl transition-all transform hover:scale-105">
+          <a href="https://discord.com/invite/7Vz4YBamFG" target="_blank" rel="noopener noreferrer" className="inline-block px-10 py-5 bg-red-600 hover:bg-red-700 rounded-xl font-bold text-xl transition-all transform hover:scale-105">
             DESCARGAR RUST 2275 AHORA
           </a>
         </section>
