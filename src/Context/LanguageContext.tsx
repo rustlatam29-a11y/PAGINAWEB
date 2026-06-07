@@ -145,9 +145,17 @@ const translations: Record<Language, Record<string, any>> = {
         link: "https://www.astropay.com/",
         linkText: "Crear cuenta",
       },
+      {
+        icon: "paypal",
+        name: "PayPal",
+        desc: "Enviá dinero desde tu cuenta PayPal y se acredita como PIX.",
+        badge: "Principal",
+        link: "https://www.paypal.com/",
+        linkText: "Crear cuenta",
+      },
     ],
     "payment.note": "⚠️ Solo recibimos pagos por PIX. MercadoPago, Belo y AstroPay son billeteras digitales que permiten enviar dinero desde cualquier país de LATAM, el cual se recibe como PIX en mi cuenta brasileña. No hay otra forma de pago.",
-    "payment.highlight": "Métodos aceptados: PIX · MercadoPago · Belo · AstroPay",
+    "payment.highlight": "Métodos aceptados: PIX · MercadoPago · PayPal · Belo · AstroPay",
 
     // Benefits
     "benefits.label": "Por qué elegirme",
@@ -358,6 +366,14 @@ const translations: Record<Language, Record<string, any>> = {
         desc: "Envie dinheiro da sua conta AstroPay e é creditado como PIX.",
         badge: "LATAM → PIX",
         link: "https://www.astropay.com/",
+        linkText: "Criar conta",
+      },
+      {
+        icon: "paypal",
+        name: "PayPal",
+        desc: "Envie dinheiro da sua conta PayPal e é creditado como PIX.",
+        badge: "Principal",
+        link: "https://www.paypal.com/",
         linkText: "Criar conta",
       },
     ],

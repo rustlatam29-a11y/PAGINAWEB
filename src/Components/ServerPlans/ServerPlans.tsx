@@ -14,14 +14,14 @@ const ServerPlans: React.FC = () => {
     {
       name: "Rust 2275",
       subtitle: plan2275.subtitle || "OldRecoil",
-      price: "$17",
+      price: "$20",
       description: plan2275.description || "",
       features: Array.isArray(plan2275.features) ? plan2275.features : [],
     },
     {
       name: "Rust 2388",
       subtitle: plan2388.subtitle || "Actualizado",
-      price: "$25",
+      price: "$28",
       description: plan2388.description || "",
       popular: true,
       features: Array.isArray(plan2388.features) ? plan2388.features : [],

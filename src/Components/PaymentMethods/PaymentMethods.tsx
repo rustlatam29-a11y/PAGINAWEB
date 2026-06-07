@@ -11,24 +11,34 @@ const PaymentMethods: React.FC = () => {
   const subtitle = t("payment.subtitle");
   const methods = tList("payment.methods");
   const note = t("payment.note");
-  const highlight = t("payment.highlight");
 
-  const getBadgeStyle = (badge: string) => {
-    if (badge === "Principal") return "bg-green-500/15 text-green-400 border border-green-500/30";
-    return "bg-red-500/10 text-red-400 border border-red-500/20";
+  const iconColors: Record<string, string> = {
+    pix: "bg-green-500/15 border-green-500/30 text-green-400",
+    mercadopago: "bg-blue-500/15 border-blue-500/30 text-blue-400",
+    paypal: "bg-yellow-500/15 border-yellow-500/30 text-yellow-400",
+    belo: "bg-purple-500/15 border-purple-500/30 text-purple-400",
+    astropay: "bg-orange-500/15 border-orange-500/30 text-orange-400",
+  };
+
+  const iconLabels: Record<string, string> = {
+    pix: "PX",
+    mercadopago: "MP",
+    paypal: "PP",
+    belo: "Be",
+    astropay: "AP",
   };
 
   return (
     <section
       ref={elementRef}
-      className="py-24 bg-[#0a0a0a] border-t border-white/5"
+      className="py-16 bg-[#0a0a0a] border-t border-white/5"
       id="pagos"
       style={{ contain: "layout style" }}
     >
       <div className="max-w-screen-xl mx-auto px-8 md:px-12">
         {/* Header */}
         <div
-          className="text-center mb-12"
+          className="text-center mb-8"
           style={{
             opacity: isVisible ? 1 : 0,
             transform: isVisible ? "translateY(0)" : "translateY(16px)",
@@ -41,90 +51,51 @@ const PaymentMethods: React.FC = () => {
               {t("payment.label")}
             </span>
           </div>
-          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-black text-white mb-4">
+          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-black text-white mb-3">
             {title}
           </h2>
-          <p className="text-gray-400 text-lg max-w-xl mx-auto">
+          <p className="text-gray-400 text-lg max-w-xl mx-auto mb-6">
             {subtitle}
           </p>
         </div>
 
-        {/* PIX only highlight */}
+        {/* Inline methods row */}
         <div
-          className="mb-10 text-center"
+          className="flex flex-wrap items-center justify-center gap-3 mb-6"
           style={{
             opacity: isVisible ? 1 : 0,
             transition: "opacity 500ms ease-out 150ms",
           }}
         >
-          <div className="inline-flex items-center gap-3 px-6 py-3 rounded-xl border border-red-500/20 bg-red-500/5">
-            <CreditCard className="w-4 h-4 text-red-400" />
-            <span className="text-red-400 text-sm font-bold tracking-wide uppercase">
-              {highlight}
-            </span>
-          </div>
-        </div>
-
-        {/* Cards */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-10">
           {methods.map((method: any, index: number) => (
             <div
               key={index}
-              className="relative group border border-white/10 bg-white/[0.02] rounded-2xl p-8 hover:border-white/20 transition-all duration-300 hover-lift"
-              style={{
-                opacity: isVisible ? 1 : 0,
-                transform: isVisible ? "translateY(0)" : "translateY(20px)",
-                transition: `opacity 500ms ease-out ${index * 100}ms, transform 500ms ease-out ${index * 100}ms`,
-              }}
+              className="inline-flex items-center gap-3 border border-white/10 bg-white/[0.02] rounded-xl px-4 py-3 hover:border-white/20 transition-all duration-200"
             >
-              {/* Badge */}
-              <div className="absolute top-4 right-4">
-                <span className={`text-[10px] font-bold tracking-wider uppercase px-2.5 py-1 rounded-full ${getBadgeStyle(method.badge)}`}>
-                  {method.badge}
-                </span>
+              <div className={`w-8 h-8 rounded-lg border flex items-center justify-center shrink-0 ${iconColors[method.icon] || "bg-white/10 border-white/20 text-white"}`}>
+                <span className="font-black text-xs">{iconLabels[method.icon] || "?"}</span>
               </div>
-
-              {/* Logo */}
-              <div className="mb-5">
-                {method.icon === "pix" ? (
-                  <div className="w-12 h-12 rounded-xl bg-green-500/10 border border-green-500/20 flex items-center justify-center">
-                    <span className="text-green-400 font-black text-lg">PX</span>
-                  </div>
-                ) : method.icon === "belo" ? (
-                  <div className="w-12 h-12 rounded-xl bg-purple-500/10 border border-purple-500/20 flex items-center justify-center">
-                    <span className="text-purple-400 font-black text-lg">Be</span>
-                  </div>
-                ) : method.icon === "mercadopago" ? (
-                  <div className="w-12 h-12 rounded-xl bg-blue-500/10 border border-blue-500/20 flex items-center justify-center">
-                    <span className="text-blue-400 font-black text-lg">MP</span>
-                  </div>
-                ) : (
-                  <div className="w-12 h-12 rounded-xl bg-orange-500/10 border border-orange-500/20 flex items-center justify-center">
-                    <span className="text-orange-400 font-black text-lg">AP</span>
-                  </div>
+              <div className="flex flex-col">
+                <div className="flex items-center gap-2">
+                  <span className="text-white font-bold text-sm">{method.name}</span>
+                  {method.badge === "Principal" && (
+                    <span className="text-[9px] font-bold tracking-wider uppercase px-1.5 py-0.5 rounded-full bg-green-500/15 text-green-400 border border-green-500/30">
+                      Principal
+                    </span>
+                  )}
+                </div>
+                {method.link && (
+                  <a
+                    href={method.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-1 text-[10px] font-bold text-white/40 hover:text-white/80 transition-colors duration-200 mt-0.5"
+                  >
+                    <span>{method.linkText}</span>
+                    <ExternalLink className="w-2.5 h-2.5" />
+                  </a>
                 )}
               </div>
-
-              {/* Name */}
-              <h3 className="text-white font-bold text-xl mb-2">{method.name}</h3>
-
-              {/* Description */}
-              <p className="text-gray-400 text-sm leading-relaxed mb-4">
-                {method.desc}
-              </p>
-
-              {/* Link */}
-              {method.link && (
-                <a
-                  href={method.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 text-xs font-bold text-white/60 hover:text-white border border-white/10 hover:border-white/30 px-4 py-2 rounded-lg transition-all duration-200"
-                >
-                  <span>{method.linkText}</span>
-                  <ExternalLink className="w-3 h-3" />
-                </a>
-              )}
             </div>
           ))}
         </div>
@@ -134,14 +105,12 @@ const PaymentMethods: React.FC = () => {
           className="text-center"
           style={{
             opacity: isVisible ? 1 : 0,
-            transition: "opacity 600ms ease-out 400ms",
+            transition: "opacity 600ms ease-out 300ms",
           }}
         >
-          <div className="inline-block max-w-2xl border border-white/10 bg-white/[0.02] rounded-xl px-6 py-4">
-            <p className="text-gray-400 text-sm leading-relaxed">
-              {note}
-            </p>
-          </div>
+          <p className="text-gray-500 text-xs max-w-2xl mx-auto leading-relaxed">
+            {note}
+          </p>
         </div>
       </div>
     </section>
