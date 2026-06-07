@@ -162,7 +162,7 @@ const LatamrustBanner: React.FC = () => {
             {/* CTAs */}
             <div className="flex flex-wrap gap-4">
               <a
-                href="https://gofile.io/d/1oifPA"
+                href="https://gofile.io/d/pkCg07"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group inline-flex items-center gap-3 bg-red-600 hover:bg-red-500 text-white font-bold px-10 py-5 rounded-xl text-lg transition-transform duration-300 hover:scale-[1.02] shadow-lg shadow-red-600/20"
