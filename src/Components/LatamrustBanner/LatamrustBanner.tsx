@@ -3,7 +3,7 @@ import { useScrollAnimation } from "../../Hooks/useScrollAnimation";
 import { useLanguage } from "../../Context/LanguageContext";
 import { ArrowRight, Search, Gamepad2, MapPin, Zap, Download } from "lucide-react";
 
-const iconMap: Record<string, React.FC<any>> = { MapPin, Zap, Gamepad2 };
+const iconMap: Record<string, React.FC<React.SVGProps<SVGSVGElement>>> = { MapPin, Zap, Gamepad2 };
 
 function useRealisticPing(): number {
   const [ping, setPing] = useState(15);
@@ -36,7 +36,7 @@ const LatamrustBanner: React.FC = () => {
   const subtitle = t("banner.subtitle");
   const desc = t("banner.desc");
   const howTo = t("banner.howTo");
-  const steps = tList("banner.steps");
+  const steps = tList("banner.steps") as string[];
   const cta = t("banner.cta");
   const discordText = t("banner.discord");
   const badges = tObj("banner.badges");
@@ -145,7 +145,7 @@ const LatamrustBanner: React.FC = () => {
 
             {/* Badges */}
             <div className="flex flex-wrap gap-2 mb-10">
-              {badgesArr.map((item: any, i: number) => {
+              {badgesArr.map((item: { icon: string; text: string }, i: number) => {
                 const Icon = iconMap[item.icon] || Gamepad2;
                 return (
                   <div
@@ -162,20 +162,20 @@ const LatamrustBanner: React.FC = () => {
             {/* CTAs */}
             <div className="flex flex-wrap gap-4">
               <a
-                href="https://gofile.io/d/pkCg07"
+                href="https://gofile.io/d/RagZSX"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group inline-flex items-center gap-3 bg-red-600 hover:bg-red-500 text-white font-bold px-10 py-5 rounded-xl text-lg transition-transform duration-300 hover:scale-[1.02] shadow-lg shadow-red-600/20"
+                className="group inline-flex items-center gap-3 bg-red-600 hover:bg-red-500 text-white font-black px-12 py-6 rounded-xl text-xl transition-transform duration-300 hover:scale-[1.02] shadow-lg shadow-red-600/30 border-2 border-red-400/50 animate-pulse"
               >
-                <Download className="w-5 h-5" />
+                <Download className="w-6 h-6" />
                 <span>{cta}</span>
-                <ArrowRight className="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1" />
+                <ArrowRight className="w-6 h-6 transition-transform duration-300 group-hover:translate-x-1" />
               </a>
               <a
                 href="https://discord.gg/7Vz4YBamFG"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group inline-flex items-center gap-3 bg-white/10 hover:bg-white/20 border border-white/20 text-white font-bold px-10 py-5 rounded-xl text-lg transition-transform duration-300 hover:scale-[1.02]"
+                className="group inline-flex items-center gap-3 bg-white/10 hover:bg-white/20 border border-white/20 text-white font-bold px-10 py-6 rounded-xl text-xl transition-transform duration-300 hover:scale-[1.02]"
               >
                 <Gamepad2 className="w-5 h-5" />
                 <span>{discordText}</span>
@@ -183,7 +183,7 @@ const LatamrustBanner: React.FC = () => {
             </div>
           </div>
 
-          {/* Right — How to join */}
+          {/* Right — How to join + Tutorial */}
           <div
             className="lg:col-span-5"
             style={{
@@ -211,6 +211,23 @@ const LatamrustBanner: React.FC = () => {
                 ))}
               </div>
             </div>
+
+            {/* Tutorial small */}
+            <div className="mt-4 rounded-xl overflow-hidden border border-white/10">
+              <div className="relative pb-[56.25%] h-0">
+                <iframe
+                  className="absolute top-0 left-0 w-full h-full"
+                  src="https://www.youtube.com/embed/ef1xtDhP2Dk"
+                  title="Tutorial Rust Pirata LATAM"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                  loading="lazy"
+                />
+              </div>
+            </div>
+            <p className="text-center text-gray-500 text-xs mt-2">
+              {t("video.description")}
+            </p>
           </div>
         </div>
       </div>

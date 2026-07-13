@@ -7,7 +7,7 @@ const FAQ: React.FC = () => {
   const { elementRef, isVisible } = useScrollAnimation();
   const { t, tList } = useLanguage();
   const [openIndex, setOpenIndex] = useState<number | null>(null);
-  const faqs = tList("faq.list");
+  const faqs = tList("faq.list") as { q: string; a: string }[];
 
   return (
     <section
@@ -35,7 +35,7 @@ const FAQ: React.FC = () => {
 
         <div className="space-y-3">
           {Array.isArray(faqs) &&
-            faqs.map((faq: any, index: number) => (
+            faqs.map((faq: { q: string; a: string }, index: number) => (
               <div
                 key={index}
                 className={`border border-white/5 rounded-xl overflow-hidden transition-colors duration-300 hover-lift ${

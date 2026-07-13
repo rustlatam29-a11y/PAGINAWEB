@@ -2,7 +2,6 @@ import { Helmet } from "react-helmet-async";
 import Header from "../../Components/Header/Header";
 import LatamrustBanner from "../../Components/LatamrustBanner/LatamrustBanner";
 import Hero from "../../Components/Hero/Hero";
-import VideoSection from "../../Components/VideoSection/VideoSection";
 import Benefits from "../../Components/Benefits/Benefits";
 import Projects from "../../Components/Projects/Projects";
 import ServerPlans from "../../Components/ServerPlans/ServerPlans";
@@ -32,7 +31,6 @@ function HomePage() {
 
         {/* TIER 2 — FIRST SCROLL: Features + why us */}
         <Hero />
-        <VideoSection />
 
         {/* TIER 3 — SECOND SCROLL: Plans + trust + social proof */}
         <ServerPlans />

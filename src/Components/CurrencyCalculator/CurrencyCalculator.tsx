@@ -264,7 +264,7 @@ const CurrencyCalculator: React.FC = () => {
 
                 {/* CTA Button */}
                 <a
-                    href="https://api.whatsapp.com/send?phone=595981144534"
+                    href="https://discord.gg/7Vz4YBamFG"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center justify-center gap-2 w-full py-4 bg-green-600 hover:bg-green-700 text-white font-bold rounded-xl transition-all"

@@ -8,7 +8,7 @@ function counterPlugin(): Plugin {
     configureServer(server) {
       server.middlewares.use("/api/counter", async (_req, res) => {
         try {
-          const apiRes = await (globalThis as any).fetch("https://api.counterapi.dev/v1/latamrust/visits/up");
+          const apiRes = await (globalThis as { fetch: typeof fetch }).fetch("https://api.counterapi.dev/v1/latamrust/visits/up");
           const data = await apiRes.json();
           res.setHeader("Content-Type", "application/json");
           res.end(JSON.stringify(data));

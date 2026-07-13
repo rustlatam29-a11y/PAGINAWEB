@@ -8,7 +8,7 @@ const urls = ["https://rustspain.com", "https://brasa.gg", "#"];
 const Projects: React.FC = () => {
   const { elementRef, isVisible } = useScrollAnimation();
   const { t, tList } = useLanguage();
-  const projects = tList("projects.list");
+  const projects = tList("projects.list") as { name: string; role: string; desc: string; tags?: string[] }[];
 
   return (
     <section
@@ -39,7 +39,7 @@ const Projects: React.FC = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {Array.isArray(projects) &&
-            projects.map((project: any, index: number) => (
+            projects.map((project: { name: string; role: string; desc: string; tags?: string[] }, index: number) => (
               <div
                 key={index}
                 className="group relative p-8 rounded-2xl border border-white/5 bg-white/[0.02] hover:bg-white/[0.04] hover:border-red-500/20 transition-colors duration-300 hover-lift"

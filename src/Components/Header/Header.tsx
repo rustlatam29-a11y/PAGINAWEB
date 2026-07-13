@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useCallback } from "react";
-import { Menu, X, Gamepad2, Globe } from "lucide-react";
+import { Menu, X, Globe } from "lucide-react";
 import { useLanguage } from "../../Context/LanguageContext";
 
 const Header: React.FC = () => {
@@ -20,7 +20,7 @@ const Header: React.FC = () => {
     }
   }, []);
 
-  const navLabels = tList("header.nav");
+  const navLabels = tList("header.nav") as string[];
 
   return (
     <header
@@ -110,16 +110,6 @@ const Header: React.FC = () => {
                 PT
               </button>
             </div>
-
-            <a
-              href="https://discord.gg/zH4u5C7NW8"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="bg-[#5865F2] hover:bg-[#4752C4] text-white text-sm font-bold px-4 py-2.5 rounded-lg transition-colors duration-200 flex items-center gap-2"
-            >
-              <Gamepad2 className="w-4 h-4" />
-              {t("header.dc")}
-            </a>
           </div>
 
           {/* Mobile toggle */}
@@ -189,17 +179,6 @@ const Header: React.FC = () => {
               PT
             </button>
           </div>
-
-          <a
-            href="https://discord.gg/zH4u5C7NW8"
-            target="_blank"
-            rel="noopener noreferrer"
-            role="menuitem"
-            className="block bg-[#5865F2] text-white text-sm font-bold px-5 py-2.5 rounded-lg text-center flex items-center justify-center gap-2"
-          >
-            <Gamepad2 className="w-4 h-4" />
-            {t("header.dc")}
-          </a>
         </div>
       </nav>
     </header>

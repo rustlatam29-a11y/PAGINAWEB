@@ -6,7 +6,7 @@ import { Star, ChevronLeft, ChevronRight, Quote } from "lucide-react";
 const Testimonials: React.FC = () => {
   const { elementRef, isVisible } = useScrollAnimation();
   const { t, tList } = useLanguage();
-  const testimonials = tList("testimonials.list");
+  const testimonials = tList("testimonials.list") as { text: string; location: string }[];
   const [current, setCurrent] = useState(0);
   const [isPaused, setIsPaused] = useState(false);
 
@@ -130,7 +130,7 @@ const Testimonials: React.FC = () => {
 
           {/* Dots */}
           <div className="flex justify-center gap-2 mt-8">
-            {testimonials.map((_: any, i: number) => (
+            {testimonials.map((_: unknown, i: number) => (
               <button
                 key={i}
                 onClick={() => setCurrent(i)}

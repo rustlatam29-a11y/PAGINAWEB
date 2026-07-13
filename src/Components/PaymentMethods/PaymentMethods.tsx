@@ -9,7 +9,7 @@ const PaymentMethods: React.FC = () => {
 
   const title = t("payment.title");
   const subtitle = t("payment.subtitle");
-  const methods = tList("payment.methods");
+  const methods = tList("payment.methods") as { icon: string; name: string; badge?: string; link?: string; linkText?: string }[];
   const note = t("payment.note");
 
   const iconColors: Record<string, string> = {
@@ -67,7 +67,7 @@ const PaymentMethods: React.FC = () => {
             transition: "opacity 500ms ease-out 150ms",
           }}
         >
-          {methods.map((method: any, index: number) => (
+          {methods.map((method: { icon: string; name: string; badge?: string; link?: string; linkText?: string }, index: number) => (
             <div
               key={index}
               className="inline-flex items-center gap-3 border border-white/10 bg-white/[0.02] rounded-xl px-4 py-3 hover:border-white/20 transition-all duration-200"

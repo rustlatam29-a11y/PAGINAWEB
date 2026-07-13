@@ -6,7 +6,7 @@ import { Check } from "lucide-react";
 const Benefits: React.FC = () => {
   const { elementRef, isVisible } = useScrollAnimation();
   const { t, tList } = useLanguage();
-  const benefits = tList("benefits.list");
+  const benefits = tList("benefits.list") as { title: string; desc: string }[];
 
   return (
     <section
@@ -39,7 +39,7 @@ const Benefits: React.FC = () => {
 
             <div className="space-y-4">
               {Array.isArray(benefits) &&
-                benefits.map((benefit: any, index: number) => (
+                benefits.map((benefit: { title: string; desc: string }, index: number) => (
                   <div
                     key={index}
                     className="flex items-start gap-3"

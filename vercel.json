@@ -2,23 +2,9 @@
   "buildCommand": "npm run build",
   "outputDirectory": "dist",
   "framework": "vite",
-  "redirects": [
-    {
-      "source": "/(.*)",
-      "destination": "https://latamrust.online/$1",
-      "has": [{ "type": "host", "value": "latamrust.vercel.app" }],
-      "permanent": true
-    },
-    {
-      "source": "/(.*)",
-      "destination": "https://latamrust.online/$1",
-      "has": [{ "type": "host", "value": "paginaweb-eight-kappa.vercel.app" }],
-      "permanent": true
-    }
-  ],
   "rewrites": [
     {
-      "source": "/((?!assets/|google.*\\.html$|.*\\.webp$|.*\\.svg$|.*\\.png$|.*\\.jpg$|.*\\.ico$|robots\\.txt$|sitemap\\.xml$|rust-pirata-brasil/|rust-pirata-argentina/|rust-pirata-mexico/|rust-pirata-chile/|rust-pirata-colombia/|rust-pirata-peru/|rust-pirata-uruguay/|rust-pirata-paraguay/|rust-pirata-ecuador/|rust-pirata-bolivia/|rust-pirata-venezuela/|rust-pirata-costa-rica/|rust-pirata-panama/|rust-pirata-republica-dominicana/|rust-pirata-gratis/|rust-pirata-sin-steam/|configurar-servidor-rust/|plugins-oxide-rust/|como-crear-servidor-rust/|mejores-plugins-rust/|descargar-rust-pirata/|rust-pirata-gratis-online/|rust-2275/|rust-2388/|rust-family/|comunidad-rust-family/|servidor-rust-family/).*)",
+      "source": "/((?!assets/|google.*\\.html$|.*\\.webp$|.*\\.svg$|.*\\.png$|.*\\.jpg$|.*\\.ico$|robots\\.txt$|sitemap\\.xml$|rust-pirata-brasil/|rust-pirata-argentina/|rust-pirata-mexico/|rust-pirata-chile/|rust-pirata-colombia/|rust-pirata-peru/|rust-pirata-uruguay/|rust-pirata-paraguay/|rust-pirata-ecuador/|rust-pirata-bolivia/|rust-pirata-venezuela/|baixar-rust-pirata-brasil/|rust-2275-brasil/|rust-2388-brasil/|rust-pirata-gratis/|rust-pirata-sin-steam/|configurar-servidor-rust/|plugins-oxide-rust/|como-crear-servidor-rust-pirata/|mejores-plugins-rust-pirata/|descargar-rust-pirata/|rust-2275-oldrecoil/|rust-2388-actualizado/|servidores-rust-pirata/|dayz/|comunidade-rust-family/|servidor-rust-family/).*)",
       "destination": "/index.html"
     }
   ],

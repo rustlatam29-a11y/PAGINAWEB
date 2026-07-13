@@ -4,7 +4,7 @@ import { useLanguage } from "../../Context/LanguageContext";
 
 const Hero: React.FC = () => {
   const { t, tList } = useLanguage();
-  const advantages = tList("hero.advantages");
+  const advantages = tList("hero.advantages") as string[];
 
   return (
     <section className="relative min-h-[90vh] flex items-center py-24 overflow-hidden border-t border-white/5">
@@ -51,7 +51,7 @@ const Hero: React.FC = () => {
 
           {/* CTA */}
           <a
-              href="https://api.whatsapp.com/send?phone=595981144534"
+              href="https://discord.gg/7Vz4YBamFG"
             target="_blank"
             rel="noopener noreferrer"
             className="group inline-flex items-center gap-3 bg-red-600 hover:bg-red-700 text-white font-bold px-10 py-5 rounded-xl text-xl transition-all duration-300 hover:scale-105 shadow-lg shadow-red-500/25"

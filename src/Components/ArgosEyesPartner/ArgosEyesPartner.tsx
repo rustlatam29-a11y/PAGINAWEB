@@ -4,7 +4,7 @@ import { Shield, Check, Zap, Eye } from "lucide-react";
 
 const ArgosEyesPartner: React.FC = () => {
   const { t, tList } = useLanguage();
-  const features = tList("partner.features");
+  const features = tList("partner.features") as string[];
 
   return (
     <section

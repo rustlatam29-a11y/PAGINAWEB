@@ -6,13 +6,13 @@ interface LanguageContextType {
   language: Language;
   setLanguage: (lang: Language) => void;
   t: (key: string) => string;
-  tList: (key: string) => any[];
-  tObj: (key: string) => Record<string, any>;
+  tList: (key: string) => unknown[];
+  tObj: (key: string) => Record<string, string>;
 }
 
 const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
 
-const translations: Record<Language, Record<string, any>> = {
+const translations: Record<Language, Record<string, unknown>> = {
   es: {
     // Header
     "header.nav": ["Servicios", "Planes", "Proyectos", "FAQ"],
@@ -20,18 +20,18 @@ const translations: Record<Language, Record<string, any>> = {
     "header.dc": "DC DEV",
 
     // LatamrustBanner
-    "banner.badge": "SERVIDOR GRATUITO ACTIVO",
-    "banner.title": "RUST OLD SCHOOL",
-    "banner.subtitle": "La vieja escuela. Semi-vanilla. Sin pay to win.",
-    "banner.desc": "Servidor ubicado en LATAM con ping ultra bajo y máquina dedicada sin lag. Únete a cientos de jugadores en el mejor Rust pirata old school de la región.",
-    "banner.howTo": "¿CÓMO ENTRAR?",
+    "banner.badge": "100% GRATIS · SIN STEAM",
+    "banner.title": "RUST PIRATA",
+    "banner.subtitle": "Descargá Rust gratis sin comprarlo · Servidor activo 24/7",
+    "banner.desc": "Jugá y dominá el servidor. Descargá Rust de forma gratis sin comprarlo. Comunidad activa con +300 jugadores conectados. Rust 2275 OldRecoil con ping bajo y Anti-Cheat profesional.",
+    "banner.howTo": "¿CÓMO JUGAR GRATIS?",
     "banner.steps": [
-      "Abrí Rust Pirata 2275",
-      "Andá a la pestaña 'Servidores'",
-      "Buscá \"RUST OLD SCHOOL\"",
-      "Seleccioná y hacé clic en Conectar",
+      "Hacé clic en DESCARGAR (es gratis)",
+      "Descargá Rust Pirata 2275",
+      "Instalalo en tu PC",
+      "Conectate al servidor y jugá",
     ],
-    "banner.cta": "DESCARGAR",
+    "banner.cta": "⚡ DESCARGAR GRATIS",
     "banner.discord": "DISCORD",
     "banner.stats": [
       { value: "15ms", label: "PING LATAM" },
@@ -58,10 +58,10 @@ const translations: Record<Language, Record<string, any>> = {
     "hero.communityDesc": "+10K jugadores LATAM",
 
     // VideoSection
-    "video.label": "¿Por qué elegirnos?",
-    "video.title": "Tu servidor Rust listo en minutos, sin complicaciones",
+    "video.label": "TUTORIAL",
+    "video.title": "Así se juega Rust Pirata gratis",
     "video.titleHighlight": "sin complicaciones",
-    "video.description": "No perdás tiempo con configuraciones complicadas. Tu servidor pirata con plugins, AntiCheat y soporte directo por Discord. Así de simple.",
+    "video.description": "100% GRATIS · SIN STEAM · Rust Old School · Descargá Rust gratis sin comprarlo · Servidor activo 24/7",
     "video.features": [
       { title: "Servidores Rust Pirata", desc: "Rust 2275 OldRecoil y Rust 2388. Configuración completa." },
       { title: "+30.000 Plugins", desc: "Economía, kits, tiendas, anti-cheat. Oxide y uMod." },
@@ -243,18 +243,18 @@ const translations: Record<Language, Record<string, any>> = {
     "header.dc": "DC DEV",
 
     // LatamrustBanner
-    "banner.badge": "SERVIDOR GRATUITO ACTIVO",
-    "banner.title": "RUST OLD SCHOOL",
-    "banner.subtitle": "A velha escola. Semi-vanilla. Sem pay to win.",
-    "banner.desc": "Servidor localizado na LATAM com ping ultra baixo e máquina dedicada sem lag. Junte-se a centenas de jogadores no melhor Rust pirata old school da região.",
-    "banner.howTo": "COMO ENTRAR?",
+    "banner.badge": "100% GRÁTIS · SEM STEAM",
+    "banner.title": "RUST PIRATA",
+    "banner.subtitle": "Baixe Rust grátis sem comprar · Servidor ativo 24/7",
+    "banner.desc": "Jogue e domine o servidor. Baixe Rust de forma grátis sem comprar. Comunidade ativa com +300 jogadores conectados. Rust 2275 OldRecoil com ping baixo e Anti-Cheat profissional.",
+    "banner.howTo": "COMO JOGAR GRÁTIS?",
     "banner.steps": [
-      "Abra o Rust Pirata 2275",
-      "Vá na aba 'Servidores'",
-      "Pesquise \"RUST OLD SCHOOL\"",
-      "Selecione e clique em Conectar",
+      "Clique em BAIXAR (é grátis)",
+      "Baixe o Rust Pirata 2275",
+      "Instale no seu PC",
+      "Conecte ao servidor e jogue",
     ],
-    "banner.cta": "BAIXAR",
+    "banner.cta": "⚡ BAIXAR GRÁTIS",
     "banner.discord": "DISCORD",
     "banner.stats": [
       { value: "15ms", label: "PING LATAM" },
@@ -281,10 +281,10 @@ const translations: Record<Language, Record<string, any>> = {
     "hero.communityDesc": "+10K jogadores LATAM",
 
     // VideoSection
-    "video.label": "Por que nos escolher?",
-    "video.title": "Teu servidor Rust pronto em minutos, sem complicações",
+    "video.label": "TUTORIAL",
+    "video.title": "Assim se joga Rust Pirata grátis",
     "video.titleHighlight": "sem complicações",
-    "video.description": "Não percas tempo com configurações complicadas. Teu servidor pirata com plugins, AntiCheat e suporte direto por Discord. Assim de simples.",
+    "video.description": "100% GRÁTIS · SEM STEAM · Rust Old School · Baixe Rust grátis sem comprar · Servidor ativo 24/7",
     "video.features": [
       { title: "Servidores Rust Pirata", desc: "Rust 2275 OldRecoil e Rust 2388. Configuração completa." },
       { title: "+30.000 Plugins", desc: "Economia, kits, lojas, anti-cheat. Oxide e uMod." },
@@ -477,19 +477,19 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
   }, [language]);
 
   const t = (key: string): string => {
-    const value = (translations[language] as Record<string, any>)?.[key];
+    const value = (translations[language] as Record<string, unknown>)?.[key];
     if (typeof value === "string") return value;
     return key;
   };
 
-  const tList = (key: string): any[] => {
-    const value = (translations[language] as Record<string, any>)?.[key];
-    return Array.isArray(value) ? value : [];
+  const tList = (key: string): string[] => {
+    const value = (translations[language] as Record<string, unknown>)?.[key];
+    return Array.isArray(value) ? value.map(String) : [];
   };
 
-  const tObj = (key: string): Record<string, any> => {
-    const value = (translations[language] as Record<string, any>)?.[key];
-    return typeof value === "object" && value !== null ? value : {};
+  const tObj = (key: string): Record<string, string> => {
+    const value = (translations[language] as Record<string, unknown>)?.[key];
+    return typeof value === "object" && value !== null ? value as Record<string, string> : {};
   };
 
   return (
@@ -499,6 +499,7 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
   );
 }
 
+// eslint-disable-next-line react-refresh/only-export-components
 export function useLanguage() {
   const context = useContext(LanguageContext);
   if (!context) {

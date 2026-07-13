@@ -1,7 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { useLanguage } from "../../Context/LanguageContext";
-import VisitorCounter from "../VisitorCounter/VisitorCounter";
 
 const Footer: React.FC = () => {
   const year = new Date().getFullYear();
@@ -30,8 +29,6 @@ const Footer: React.FC = () => {
               {t("footer.privacy")}
             </Link>
           </div>
-
-          <VisitorCounter />
 
           <p className="text-gray-600 text-xs">
             &copy; {year} ParaguayRAIDER. {t("footer.rights")}

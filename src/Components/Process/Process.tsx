@@ -8,7 +8,7 @@ const icons = [MessageCircle, Settings, Rocket, Headphones];
 const Process: React.FC = () => {
   const { elementRef, isVisible } = useScrollAnimation();
   const { t, tList } = useLanguage();
-  const steps = tList("process.steps");
+  const steps = tList("process.steps") as { title: string; desc: string }[];
 
   return (
     <section
@@ -39,7 +39,7 @@ const Process: React.FC = () => {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {Array.isArray(steps) &&
-            steps.map((step: any, index: number) => {
+            steps.map((step: { title: string; desc: string }, index: number) => {
               const Icon = icons[index] || MessageCircle;
               return (
                 <div

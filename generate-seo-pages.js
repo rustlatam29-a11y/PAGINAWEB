@@ -29,28 +29,151 @@ Más de 10,000 jugadores argentinos ya juegan en nuestros servidores. La comunid
       { q: '¿Qué versión de Rust funciona en Argentina?', a: 'Tenemos Rust 2275 OldRecoil (clásico) y Rust 2388 Actualizado (última versión). Ambos funcionan perfectamente en Argentina.' },
       { q: '¿Necesito VPN para jugar desde Argentina?', a: 'No, no necesitás VPN. Nuestros servidores están en LATAM con ping bajo para Argentina directamente.' }
     ],
-    related: ['rust-pirata-brasil', 'rust-pirata-chile', 'descargar-rust-pirata']
+    related: ['baixar-rust-pirata-brasil', 'rust-pirata-chile', 'descargar-rust-pirata']
   },
   'rust-pirata-brasil': {
     title: 'Rust Pirata Brasil - Baixar Gratis 2026 - LATAMRUST',
     description: 'Baixe Rust Pirata gratis no Brasil. Ping baixo 15-30ms, +10,000 jogadores ativos. Rust 2275 e 2388 disponíveis. Jogue agora.',
-    keywords: 'rust pirata brasil, rust pirata gratis brasil, baixar rust pirata, servidor rust pirata brasil, rust 2275 brasil, rust 2388 brasil, rust pirata são paulo, rust pirata rio de janeiro, rust br gratis, jogar rust pirata',
+    keywords: 'rust pirata brasil, rust pirata gratis brasil, baixar rust pirata, servidor rust pirata brasil, rust 2275 brasil, rust 2388 brasil, rust pirata são paulo, rust pirata rio de janeiro, rust br gratis, jogar rust pirata, rust pirata online brasil, servidor rust brasil, rust brasil gratis 2026',
     locale: 'pt_BR',
     h1: 'Rust Pirata no Brasil',
     content: `Rust Pirata no Brasil é a melhor forma de jogar Rust sem pagar Steam. Com servidores dedicados na LATAM, o ping de São Paulo, Rio de Janeiro, Curitiba e outras cidades brasileiras é de apenas 15-30ms, ideal para PvP competitivo.
 
 Nosso servidor Rust Old School opera com as versões 2275 OldRecoil e 2388 Atualizado, com mais de 30,000 plugins disponíveis incluindo kits, economia, lojas, anti-cheat e mais.
 
-Mais de 10,000 jogadores brasileiros já jogam nos nossos servidores. A comunidade é ativa 24/7 com eventos, torneios e suporte direto por Discord.`,
-    features: ['Ping baixo 15-30ms de São Paulo', '+10,000 jogadores brasileiros ativos', 'Rust 2275 OldRecoil e Rust 2388', '+30,000 plugins disponíveis', 'AntiCheat profissional', 'Suporte 24/7 em português'],
+Mais de 10,000 jogadores brasileiros já jogam nos nossos servidores. A comunidade é ativa 24/7 com eventos, torneos e suporte direto por Discord.
+
+## Como Baixar Rust Pirata no Brasil
+
+O processo é simples e rápido. Primeiro, entre em contato pelo nosso Discord oficial. Lá você receberá o link de download seguro do jogo. Não precisa de Steam, Epic Games ou qualquer outra plataforma. Basta baixar, instalar e jogar.
+
+O download é totalmente gratuito e os arquivos são verificados, sem vírus. Funciona em qualquer PC com Windows 10 ou superior. O peso do jogo é aproximadamente 4GB para Rust 2275 e 5GB para Rust 2388.
+
+## Versões Disponíveis
+
+Rust 2275 OldRecoil é a versão clássica que a comunidade mais ama. Tem o recoil original que todos conhecem e é preferido para PvP competitivo. Muitos servidores profissionais usam esta versão.
+
+Rust 2388 Atualizado é a versão mais recente com gráficos melhorados, novas armas e otimizações de rendimento. Se você quer o que há de novo em Rust, esta é a versão para você.
+
+## Por que Escolher LATAMRUST?
+
+Nossa comunidade é a maior de Rust Pirata na América Latina. Com mais de 8 anos de experiência, oferecemos o melhor suporte, Anti-Cheat profissional e servidores otimizados para ping baixo no Brasil inteiro.`,
+    features: ['Ping baixo 15-30ms de São Paulo', '+10,000 jogadores brasileiros ativos', 'Rust 2275 OldRecoil e Rust 2388', '+30,000 plugins disponíveis', 'AntiCheat profissional', 'Suporte 24/7 em português', 'Download gratuito e seguro', 'Sem precisar de Steam ou Epic Games'],
     faq: [
-      { q: 'Como baixar Rust Pirata no Brasil?', a: 'Entre em contato pelo Discord e enviamos o link de download seguro. Funciona em todo o Brasil sem problemas de latência.' },
+      { q: 'Como baixar Rust Pirata no Brasil?', a: 'Entre em contato pelo nosso Discord oficial e enviamos o link de download seguro. Funciona em todo o Brasil sem problemas de latência.' },
       { q: 'Qual ping de São Paulo?', a: 'De São Paulo o ping médio é de 15-30ms, ideal para jogar Rust Pirata sem lag. Servidores otimizados para Brasil.' },
       { q: 'Rust Pirata é gratis no Brasil?', a: 'Sim, o download do jogo é gratis. Servidores premium têm custo único a partir de $20 USD com suporte incluído.' },
       { q: 'Preciso de VPN para jogar no Brasil?', a: 'Não, não precisa de VPN. Nossos servidores estão na LATAM com ping baixo para o Brasil diretamente.' },
-      { q: 'Qual a diferença entre Rust 2275 e 2388?', a: 'O 2275 tem o recoil clássico preferido por muitos, o 2388 é a versão mais recente com gráficos melhorados.' }
+      { q: 'Qual a diferença entre Rust 2275 e 2388?', a: 'O 2275 tem o recoil clássico preferido por muitos, o 2388 é a versão mais recente com gráficos melhorados.' },
+      { q: 'Preciso de Steam para jogar?', a: 'Não, Rust pirata não precisa de Steam nem Epic Games. Se executa diretamente no seu PC Windows.' },
+      { q: 'É seguro baixar Rust Pirata?', a: 'Sim, nossos arquivos são verificados e 100% livres de vírus. Download totalmente seguro.' }
     ],
-    related: ['rust-pirata-argentina', 'comunidade-rust-family', 'rust-pirata-mexico']
+    related: ['baixar-rust-pirata-brasil', 'rust-pirata-argentina', 'comunidade-rust-family']
+  },
+  'baixar-rust-pirata-brasil': {
+    title: 'Baixar Rust Pirata Gratis Brasil 2026 - Download Seguro LATAMRUST',
+    description: 'Baixe Rust Pirata gratis no Brasil 2026. Rust 2275 e 2388 disponíveis. Download seguro, sem vírus, sem Steam. Ping baixo 15-30ms.',
+    keywords: 'baixar rust pirata, baixar rust pirata brasil, rust pirata download brasil, rust gratis download, rust 2275 baixar, rust 2388 baixar, rust pirata sem steam, rust brasil download gratis',
+    locale: 'pt_BR',
+    h1: 'Baixar Rust Pirata Gratis no Brasil',
+    content: `Baixe Rust Pirata gratis no Brasil de forma rápida e segura. Temos as duas versões mais populares: Rust 2275 OldRecoil (a clássica que a comunidade ama) e Rust 2388 Atualizado (a versão mais recente com gráficos melhorados).
+
+Ambas as versões são completamente gratuitas para baixar. Não precisa de Steam nem Epic Games. Os arquivos são verificados, sem vírus, e a instalação é rápida e simples.
+
+Após baixar, você pode se conectar ao nosso servidor LATAMRUST com ping baixo de qualquer país da América Latina. A comunidade tem mais de 10,000 jogadores ativos 24/7.
+
+## Passo a Passo para Baixar
+
+1. Entre no nosso Discord oficial
+2. Receba o link de download seguro
+3. Baixe o arquivo (aproximadamente 4-5GB)
+4. Extraia e instale no seu PC
+5. Abra o jogo e conecte ao servidor
+
+## Requisitos do Sistema
+
+- Sistema operacional: Windows 10 ou superior
+- Processador: Intel i5 ou equivalente
+- Memória RAM: 8GB mínimo
+- Placa de vídeo: GTX 960 ou superior
+- Espaço em disco: 10GB livres
+- Internet: Conexão banda larga`,
+    features: ['Download gratuito e seguro', 'Rust 2275 OldRecoil', 'Rust 2388 Atualizado', 'Sem Steam nem Epic Games', 'Arquivos verificados sem vírus', 'Instalação rápida', 'Funciona em Windows 10+', 'Ping baixo Brasil'],
+    faq: [
+      { q: 'Rust pirata é realmente grátis?', a: 'Sim, o download e o jogo são grátis. Você só paga se quiser um servidor premium.' },
+      { q: 'É seguro baixar Rust pirata?', a: 'Sim, nossos arquivos são verificados e 100% livres de vírus.' },
+      { q: 'Preciso de Steam para jogar?', a: 'Não, Rust pirata não precisa de Steam nem Epic Games.' },
+      { q: 'Quanto pesa o download?', a: 'Rust 2275 pesa aproximadamente 4GB e Rust 2388 cerca de 5GB.' },
+      { q: 'Funciona no Windows 10 e 11?', a: 'Sim, funciona perfeitamente em Windows 10 e Windows 11.' }
+    ],
+    related: ['rust-pirata-brasil', 'rust-pirata-gratis', 'rust-2275-brasil']
+  },
+  'rust-2275-brasil': {
+    title: 'Rust 2275 Brasil - Baixar Gratis OldRecoil 2026 - LATAMRUST',
+    description: 'Baixe Rust 2275 OldRecoil gratis no Brasil. A versão clássica com recoil original. Ping baixo 15-30ms São Paulo. +10,000 jogadores.',
+    keywords: 'rust 2275 brasil, rust 2275 oldrecoil brasil, baixar rust 2275, rust 2275 gratis brasil, rust 2275 são paulo, rust 2275 rio de janeiro, rust 2275 download, rust recoil classico brasil',
+    locale: 'pt_BR',
+    h1: 'Rust 2275 OldRecoil no Brasil',
+    content: `Rust 2275 OldRecoil é a versão clássica favorita da comunidade brasileira. Tem o recoil original que todos conhecem e amam, o que ficou famoso pelos grandes youtubers de Rust.
+
+Esta versão é perfeita para PvP competitivo porque o recoil é previsível e pode ser aprendido. Muitos servidores profissionais usam esta versão exatamente.
+
+Baixe gratuitamente Rust 2275 OldRecoil e conecte ao nosso servidor LATAMRUST. Temos +30,000 plugins, Anti-Cheat e suporte 24/7 em português.
+
+## Por que Jogar Rust 2275?
+
+O recoil do 2275 é considerado o melhor da história de Rust. É constante, previsível e recompensante. Jogadores profissionais preferem esta versão para torneios e competições.
+
+Além disso, o 2275 é mais leve que versões recentes, funcionando melhor em PCs mais fracos. Se você tem um PC básico, o 2275 é a melhor opção.
+
+## Servidores 2275 no Brasil
+
+Nossa comunidade tem os melhores servidores 2275 do Brasil. Com ping de 15-30ms em São Paulo e 20-40ms no Rio de Janeiro, você joga sem lag e sem interpolação.`,
+    features: ['Versão 2275 estável', 'Recoil clássico original', '+30,000 plugins', 'Servidores otimizados', 'Ping baixo Brasil', 'Download gratuito', 'Funciona em PC básico', 'Suporte 24/7 português'],
+    faq: [
+      { q: 'O que é Rust 2275 OldRecoil?', a: 'É a versão 2275 de Rust com o recoil clássico original que a comunidade prefere.' },
+      { q: 'Por que jogar 2275 em vez de 2388?', a: 'Porque o recoil clássico é mais previsível e a comunidade prefere para PvP competitivo.' },
+      { q: 'Quantos servidores 2275 tem no Brasil?', a: 'Há centenas de servidores 2275 ativos no Brasil. Nosso servidor é um dos mais populares.' },
+      { q: 'Os plugins funcionam igual?', a: 'Sim, os plugins de Oxide/uMod funcionam igual no 2275 que no 2388.' }
+    ],
+    related: ['rust-pirata-brasil', 'rust-2388-brasil', 'baixar-rust-pirata-brasil']
+  },
+  'rust-2388-brasil': {
+    title: 'Rust 2388 Brasil - Baixar Gratis Atualizado 2026 - LATAMRUST',
+    description: 'Baixe Rust 2388 Atualizado gratis no Brasil. A última versão com gráficos melhores. Ping baixo 15-30ms. +30,000 plugins.',
+    keywords: 'rust 2388 brasil, rust 2388 atualizado brasil, baixar rust 2388, rust 2388 gratis brasil, rust 2388 são paulo, rust 2388 download, rust ultima versão brasil, rust 2026 brasil',
+    locale: 'pt_BR',
+    h1: 'Rust 2388 Atualizado no Brasil',
+    content: `Rust 2388 Atualizado é a última versão de Rust com gráficos melhorados, otimizações de rendimento e novas funções que melhoram a experiência de jogo.
+
+Se você quer o último em Rust, esta é sua versão. Tem texturas melhores, otimização de rendimento, novas armas e melhorias no gameplay que a versão anterior não tem.
+
+Baixe gratuitamente Rust 2388 e conecte ao nosso servidor LATAMRUST. +30,000 plugins premium, Anti-Cheat e suporte 24/7 em português.
+
+## O que há de Novo no 2388?
+
+- Gráficos significativamente melhorados
+- Novas armas e equipamentos
+- Otimização de rendimento para PCs modestos
+- Novos sistemas de gameplay
+- Melhorias na construção de bases
+- Novos eventos e encontros
+
+## Requisitos para Rust 2388
+
+O 2388 é mais otimizado que versões anteriores. Funciona bem em PCs de gama média:
+- Processador: Intel i5 ou AMD Ryzen 5
+- Memória RAM: 8GB
+- Placa de vídeo: GTX 1050 ou superior
+- Espaço: 10GB livres`,
+    features: ['Última versão estável', 'Melhores gráficos', '+30,000 plugins premium', 'Otimizado para Brasil', 'Novas funções', 'Download gratuito', 'Melhorias de rendimento', 'Suporte 24/7 português'],
+    faq: [
+      { q: 'O que há de novo no Rust 2388?', a: 'Melhores gráficos, otimizações de rendimento, novas armas e melhorias no gameplay.' },
+      { q: 'Rust 2388 é melhor que 2275?', a: 'Depende da sua preferência. 2388 tem melhores gráficos, mas 2275 tem o recoil clássico.' },
+      { q: 'Preciso de PC melhor para 2388?', a: 'Não, 2388 é mais otimizado que versões anteriores. Funciona bem em PCs de gama média.' },
+      { q: 'Os plugins de 2275 funcionam no 2388?', a: 'A maioria sim, mas alguns plugins antigos podem precisar de atualizações.' }
+    ],
+    related: ['rust-pirata-brasil', 'rust-2275-brasil', 'baixar-rust-pirata-brasil']
   },
   'rust-pirata-mexico': {
     title: 'Rust Pirata México - Descargar Gratis 2026 - LATAMRUST',
@@ -78,14 +201,30 @@ Más de 10,000 jugadores mexicanos ya juegan en nuestros servidores. La comunida
     keywords: 'rust pirata chile, rust pirata gratis chile, servidor rust pirata chile, descargar rust pirata chile, rust 2275 chile, rust 2388 chile, rust pirata santiago, rust pirata valparaíso, jugar rust gratis chile',
     locale: 'es_CL',
     h1: 'Rust Pirata en Chile',
-    content: `Rust Pirata en Chile es la mejor forma de jugar Rust sin pagar Steam. Con servidores dedicados en LATAM, el ping desde Santiago, Valparaíso, Concepción y otras ciudades chilenas es de solo 60-80ms.
+    content: `Rust Pirata en Chile es la mejor forma de jugar Rust sin pagar Steam. Con servidores dedicados en LATAM, el ping desde Santiago, Valparaíso, Concepción y otras ciudades chilenas es de solo 60-80ms, ideal para PvP competitivo.
 
-Nuestro servidor Rust Old School opera con las versiones 2275 OldRecoil y 2388 Actualizado, con más de 30,000 plugins disponibles. Más de 5,000 jugadores chilenos ya juegan en nuestros servidores con soporte 24/7.`,
-    features: ['Ping bajo 60-80ms desde Santiago', '+5,000 jugadores chilenos activos', 'Rust 2275 OldRecoil y Rust 2388', '+30,000 plugins disponibles', 'AntiCheat profesional', 'Soporte 24/7 en español'],
+Nuestro servidor Rust Old School opera con las versiones 2275 OldRecoil y 2388 Actualizado, con más de 30,000 plugins disponibles incluyendo kits, economía, tiendas, anti-cheat y más.
+
+Más de 5,000 jugadores chilenos ya juegan en nuestros servidores. La comunidad es activa 24/7 con eventos, torneos y soporte directo por Discord.
+
+## Cómo Descargar Rust Pirata en Chile
+
+El proceso es simple. Entrá a nuestro Discord oficial y ahí te dan el link de descarga seguro. No necesitás Steam ni Epic Games. Basta descargar, instalar y conectarte al servidor.
+
+El juego funciona en cualquier PC con Windows 10 o superior. Para Rust 2275 necesitás 4GB de espacio y para 2388 unos 5GB. Ambas versiones son gratuitas.
+
+## Por Qué Elegir LATAMRUST en Chile
+
+Nuestra comunidad tiene los mejores servidores de Rust Pirata para Chile. Con ping optimizado para Santiago y ciudades principales, jugás sin lag. El Anti-Cheat profissional mantiene el juego limpio de trampas.
+
+Además, tenemos soporte en español las 24 horas. Si tenés cualquier problema, nuestro equipo te ayuda por Discord al instante.`,
+    features: ['Ping bajo 60-80ms desde Santiago', '+5,000 jugadores chilenos activos', 'Rust 2275 OldRecoil y Rust 2388', '+30,000 plugins disponibles', 'AntiCheat profesional', 'Soporte 24/7 en español', 'Download gratuito y seguro', 'Sin precisar Steam ni Epic Games'],
     faq: [
       { q: '¿Cómo descargar Rust Pirata en Chile?', a: 'Contactanos por Discord y te enviamos el enlace de descarga seguro. Funciona en todo Chile sin problemas de latencia.' },
       { q: '¿Cuánto ping tengo desde Santiago?', a: 'Desde Santiago el ping promedio es de 60-80ms, ideal para jugar Rust Pirata sin lag.' },
-      { q: '¿Rust Pirata es gratis en Chile?', a: 'Sí, la descarga del juego es gratis. Los servidores premium tienen un costo único desde $20 USD.' }
+      { q: '¿Rust Pirata es gratis en Chile?', a: 'Sí, la descarga del juego es gratis. Los servidores premium tienen un costo único desde $20 USD.' },
+      { q: '¿Funciona en Valparaíso y Concepción?', a: 'Sí, funciona en todas las ciudades de Chile con ping bajo y estable.' },
+      { q: '¿Necesito VPN para jugar en Chile?', a: 'No, no necesitás VPN. Nuestros servidores están en LATAM con ping bajo para Chile directamente.' }
     ],
     related: ['rust-pirata-argentina', 'rust-pirata-peru', 'descargar-rust-pirata']
   },
@@ -95,14 +234,30 @@ Nuestro servidor Rust Old School opera con las versiones 2275 OldRecoil y 2388 A
     keywords: 'rust pirata colombia, rust pirata gratis colombia, servidor rust pirata colombia, descargar rust pirata colombia, rust 2275 colombia, rust 2388 colombia, rust pirata bogotá, rust pirata medellín, jugar rust gratis colombia',
     locale: 'es_CO',
     h1: 'Rust Pirata en Colombia',
-    content: `Rust Pirata en Colombia es la mejor forma de jugar Rust sin pagar Steam. Con servidores dedicados en LATAM, el ping desde Bogotá, Medellín, Cali y otras ciudades colombianas es de solo 70-90ms.
+    content: `Rust Pirata en Colombia es la mejor forma de jugar Rust sin pagar Steam. Con servidores dedicados en LATAM, el ping desde Bogotá, Medellín, Cali y otras ciudades colombianas es de solo 70-90ms, ideal para PvP competitivo.
 
-Nuestro servidor Rust Old School opera con las versiones 2275 OldRecoil y 2388 Actualizado, con más de 30,000 plugins disponibles. Más de 10,000 jugadores colombianos ya juegan en nuestros servidores con soporte 24/7.`,
-    features: ['Ping bajo 70-90ms desde Bogotá', '+10,000 jugadores colombianos activos', 'Rust 2275 OldRecoil y Rust 2388', '+30,000 plugins disponibles', 'AntiCheat profesional', 'Soporte 24/7 en español'],
+Nuestro servidor Rust Old School opera con las versiones 2275 OldRecoil y 2388 Actualizado, con más de 30,000 plugins disponibles incluyendo kits, economía, tiendas, anti-cheat y más.
+
+Más de 10,000 jugadores colombianos ya juegan en nuestros servidores. La comunidad es activa 24/7 con eventos, torneos y soporte directo por Discord.
+
+## Cómo Descargar Rust Pirata en Colombia
+
+Entrá a nuestro Discord oficial y ahí te dan el link de descarga seguro. No necesitás Steam ni Epic Games. Basta descargar, instalar y conectarte al servidor.
+
+El juego funciona en cualquier PC con Windows 10 o superior. Para Rust 2275 necesitás 4GB de espacio y para 2388 unos 5GB. Ambas versiones son gratuitas.
+
+## Por Qué Elegir LATAMRUST en Colombia
+
+Nuestra comunidad tiene los mejores servidores de Rust Pirata para Colombia. Con ping optimizado para Bogotá, Medellín y Cali, jugás sin lag. El Anti-Cheat profissional mantiene el juego limpio.
+
+Además, tenemos soporte en español las 24 horas. Si tenés cualquier problema, nuestro equipo te ayuda por Discord al instante.`,
+    features: ['Ping bajo 70-90ms desde Bogotá', '+10,000 jugadores colombianos activos', 'Rust 2275 OldRecoil y Rust 2388', '+30,000 plugins disponibles', 'AntiCheat profesional', 'Soporte 24/7 en español', 'Download gratuito y seguro', 'Sin precisar Steam ni Epic Games'],
     faq: [
       { q: '¿Cómo descargar Rust Pirata en Colombia?', a: 'Contactanos por Discord y te enviamos el enlace de descarga seguro. Funciona en toda Colombia sin problemas de latencia.' },
       { q: '¿Cuánto ping tengo desde Bogotá?', a: 'Desde Bogotá el ping promedio es de 70-90ms, ideal para jugar Rust Pirata sin lag.' },
-      { q: '¿Rust Pirata es gratis en Colombia?', a: 'Sí, la descarga del juego es gratis. Los servidores premium tienen un costo único desde $20 USD.' }
+      { q: '¿Rust Pirata es gratis en Colombia?', a: 'Sí, la descarga del juego es gratis. Los servidores premium tienen un costo único desde $20 USD.' },
+      { q: '¿Funciona en Medellín y Cali?', a: 'Sí, funciona en todas las ciudades de Colombia con ping bajo y estable.' },
+      { q: '¿Necesito VPN para jugar en Colombia?', a: 'No, no necesitás VPN. Nuestros servidores están en LATAM con ping bajo para Colombia directamente.' }
     ],
     related: ['rust-pirata-argentina', 'rust-pirata-venezuela', 'descargar-rust-pirata']
   },
@@ -112,14 +267,30 @@ Nuestro servidor Rust Old School opera con las versiones 2275 OldRecoil y 2388 A
     keywords: 'rust pirata perú, rust pirata gratis perú, servidor rust pirata perú, descargar rust pirata perú, rust 2275 perú, rust pirata lima, rust pirata arequipa, jugar rust gratis perú',
     locale: 'es_PE',
     h1: 'Rust Pirata en Perú',
-    content: `Rust Pirata en Perú es la mejor forma de jugar Rust sin pagar Steam. Con servidores dedicados en LATAM, el ping desde Lima, Arequipa, Trujillo y otras ciudades peruanas es de solo 60-80ms.
+    content: `Rust Pirata en Perú es la mejor forma de jugar Rust sin pagar Steam. Con servidores dedicados en LATAM, el ping desde Lima, Arequipa, Trujillo y otras ciudades peruanas es de solo 60-80ms, ideal para PvP competitivo.
 
-Nuestro servidor Rust Old School opera con las versiones 2275 OldRecoil y 2388 Actualizado, con más de 30,000 plugins disponibles. Más de 5,000 jugadores peruanos ya juegan en nuestros servidores con soporte 24/7.`,
-    features: ['Ping bajo 60-80ms desde Lima', '+5,000 jugadores peruanos activos', 'Rust 2275 OldRecoil y Rust 2388', '+30,000 plugins disponibles', 'AntiCheat profesional', 'Soporte 24/7 en español'],
+Nuestro servidor Rust Old School opera con las versiones 2275 OldRecoil y 2388 Actualizado, con más de 30,000 plugins disponibles incluyendo kits, economía, tiendas, anti-cheat y más.
+
+Más de 5,000 jugadores peruanos ya juegan en nuestros servidores. La comunidad es activa 24/7 con eventos, torneos y soporte directo por Discord.
+
+## Cómo Descargar Rust Pirata en Perú
+
+Entrá a nuestro Discord oficial y ahí te dan el link de descarga seguro. No necesitás Steam ni Epic Games. Basta descargar, instalar y conectarte al servidor.
+
+El juego funciona en cualquier PC con Windows 10 o superior. Para Rust 2275 necesitás 4GB de espacio y para 2388 unos 5GB. Ambas versiones son gratuitas.
+
+## Por Qué Elegir LATAMRUST en Perú
+
+Nuestra comunidad tiene los mejores servidores de Rust Pirata para Perú. Con ping optimizado para Lima y ciudades principales, jugás sin lag. El Anti-Cheat profissional mantiene el juego limpio.
+
+Además, tenemos soporte en español las 24 horas. Si tenés cualquier problema, nuestro equipo te ayuda por Discord al instante.`,
+    features: ['Ping bajo 60-80ms desde Lima', '+5,000 jugadores peruanos activos', 'Rust 2275 OldRecoil y Rust 2388', '+30,000 plugins disponibles', 'AntiCheat profesional', 'Soporte 24/7 en español', 'Download gratuito y seguro', 'Sin precisar Steam ni Epic Games'],
     faq: [
       { q: '¿Cómo descargar Rust Pirata en Perú?', a: 'Contactanos por Discord y te enviamos el enlace de descarga seguro. Funciona en todo Perú sin problemas de latencia.' },
       { q: '¿Cuánto ping tengo desde Lima?', a: 'Desde Lima el ping promedio es de 60-80ms, ideal para jugar Rust Pirata sin lag.' },
-      { q: '¿Rust Pirata es gratis en Perú?', a: 'Sí, la descarga del juego es gratis. Los servidores premium tienen un costo único desde $20 USD.' }
+      { q: '¿Rust Pirata es gratis en Perú?', a: 'Sí, la descarga del juego es gratis. Los servidores premium tienen un costo único desde $20 USD.' },
+      { q: '¿Funciona en Arequipa y Trujillo?', a: 'Sí, funciona en todas las ciudades de Perú con ping bajo y estable.' },
+      { q: '¿Necesito VPN para jugar en Perú?', a: 'No, no necesitás VPN. Nuestros servidores están en LATAM con ping bajo para Perú directamente.' }
     ],
     related: ['rust-pirata-chile', 'rust-pirata-ecuador', 'descargar-rust-pirata']
   },
@@ -129,14 +300,29 @@ Nuestro servidor Rust Old School opera con las versiones 2275 OldRecoil y 2388 A
     keywords: 'rust pirata uruguay, rust pirata gratis uruguay, servidor rust pirata uruguay, descargar rust pirata uruguay, rust pirata montevideo, jugar rust gratis uruguay',
     locale: 'es_UY',
     h1: 'Rust Pirata en Uruguay',
-    content: `Rust Pirata en Uruguay es la mejor forma de jugar Rust sin pagar Steam. Con servidores dedicados en LATAM, el ping desde Montevideo y todo el país es de solo 30-50ms, uno de los más bajos de la región.
+    content: `Rust Pirata en Uruguay es la mejor forma de jugar Rust sin pagar Steam. Con ping de solo 30-50ms desde Montevideo y todo el país, Uruguay tiene uno de los pings más bajos de toda LATAM, ideal para PvP competitivo.
 
-Nuestro servidor Rust Old School opera con las versiones 2275 OldRecoil y 2388 Actualizado, con más de 30,000 plugins disponibles. Más de 3,000 jugadores uruguayos ya juegan en nuestros servidores con soporte 24/7.`,
-    features: ['Ping bajo 30-50ms desde Montevideo', '+3,000 jugadores uruguayos activos', 'Rust 2275 OldRecoil y Rust 2388', '+30,000 plugins disponibles', 'AntiCheat profesional', 'Soporte 24/7 en español'],
+Nuestro servidor Rust Old School opera con las versiones 2275 OldRecoil y 2388 Actualizado, con más de 30,000 plugins disponibles incluyendo kits, economía, tiendas, anti-cheat y más.
+
+Más de 3,000 jugadores uruguayos ya juegan en nuestros servidores. La comunidad es activa 24/7 con eventos, torneos y soporte directo por Discord.
+
+## Cómo Descargar Rust Pirata en Uruguay
+
+Entrá a nuestro Discord oficial y ahí te dan el link de descarga seguro. No necesitás Steam ni Epic Games. Basta descargar, instalar y conectarte al servidor.
+
+El juego funciona en cualquier PC con Windows 10 o superior. Para Rust 2275 necesitás 4GB de espacio y para 2388 unos 5GB. Ambas versiones son gratuitas.
+
+## Por Qué Elegir LATAMRUST en Uruguay
+
+Con ping de 30-50ms, Uruguay tiene una de las mejores conexiones de toda LATAM. Jugás sin lag y sin interpolación. El Anti-Cheat profissional mantiene el juego limpio.
+
+Además, tenemos soporte en español las 24 horas. Si tenés cualquier problema, nuestro equipo te ayuda por Discord al instante.`,
+    features: ['Ping bajo 30-50ms desde Montevideo', '+3,000 jugadores uruguayos activos', 'Rust 2275 OldRecoil y Rust 2388', '+30,000 plugins disponibles', 'AntiCheat profesional', 'Soporte 24/7 en español', 'Download gratuito y seguro', 'Sin precisar Steam ni Epic Games'],
     faq: [
       { q: '¿Cómo descargar Rust Pirata en Uruguay?', a: 'Contactanos por Discord y te enviamos el enlace de descarga seguro. Funciona en todo Uruguay.' },
       { q: '¿Cuánto ping tengo desde Montevideo?', a: 'Desde Montevideo el ping promedio es de 30-50ms, ideal para jugar Rust Pirata sin lag.' },
-      { q: '¿Rust Pirata es gratis en Uruguay?', a: 'Sí, la descarga del juego es gratis. Los servidores premium tienen un costo único desde $20 USD.' }
+      { q: '¿Rust Pirata es gratis en Uruguay?', a: 'Sí, la descarga del juego es gratis. Los servidores premium tienen un costo único desde $20 USD.' },
+      { q: '¿Necesito VPN para jugar en Uruguay?', a: 'No, no necesitás VPN. Nuestros servidores están en LATAM con ping bajo para Uruguay directamente.' }
     ],
     related: ['rust-pirata-argentina', 'rust-pirata-brasil', 'descargar-rust-pirata']
   },
@@ -163,13 +349,30 @@ Más de 2,000 jugadores paraguayos ya juegan en nuestros servidores con Rust 227
     keywords: 'rust pirata ecuador, rust pirata gratis ecuador, servidor rust pirata ecuador, descargar rust pirata ecuador, rust pirata quito, rust pirata guayaquil, jugar rust gratis ecuador',
     locale: 'es_EC',
     h1: 'Rust Pirata en Ecuador',
-    content: `Rust Pirata en Ecuador es la mejor forma de jugar Rust sin pagar Steam. Con ping de 70-90ms desde Quito, Guayaquil y todo el país, podés jugar cómodamente.
+    content: `Rust Pirata en Ecuador es la mejor forma de jugar Rust sin pagar Steam. Con ping de 70-90ms desde Quito, Guayaquil y todo el país, podés jugar cómodamente sin lag.
 
-Nuestro servidor Rust Old School opera con las versiones 2275 OldRecoil y 2388 Actualizado, con más de 30,000 plugins disponibles. Más de 3,000 jugadores ecuatorianos ya juegan en nuestros servidores con soporte 24/7.`,
-    features: ['Ping bajo 70-90ms desde Quito', '+3,000 jugadores ecuatorianos activos', 'Rust 2275 OldRecoil y Rust 2388', '+30,000 plugins disponibles', 'AntiCheat profesional', 'Soporte 24/7 en español'],
+Nuestro servidor Rust Old School opera con las versiones 2275 OldRecoil y 2388 Actualizado, con más de 30,000 plugins disponibles incluyendo kits, economía, tiendas, anti-cheat y más.
+
+Más de 3,000 jugadores ecuatorianos ya juegan en nuestros servidores. La comunidad es activa 24/7 con eventos, torneos y soporte directo por Discord.
+
+## Cómo Descargar Rust Pirata en Ecuador
+
+Entrá a nuestro Discord oficial y ahí te dan el link de descarga seguro. No necesitás Steam ni Epic Games. Basta descargar, instalar y conectarte al servidor.
+
+El juego funciona en cualquier PC con Windows 10 o superior. Para Rust 2275 necesitás 4GB de espacio y para 2388 unos 5GB. Ambas versiones son gratuitas.
+
+## Por Qué Elegir LATAMRUST en Ecuador
+
+Nuestra comunidad tiene los mejores servidores de Rust Pirata para Ecuador. Con ping optimizado para Quito y Guayaquil, jugás sin lag. El Anti-Cheat profissional mantiene el juego limpio.
+
+Además, tenemos soporte en español las 24 horas. Si tenés cualquier problema, nuestro equipo te ayuda por Discord al instante.`,
+    features: ['Ping bajo 70-90ms desde Quito', '+3,000 jugadores ecuatorianos activos', 'Rust 2275 OldRecoil y Rust 2388', '+30,000 plugins disponibles', 'AntiCheat profesional', 'Soporte 24/7 en español', 'Download gratuito y seguro', 'Sin precisar Steam ni Epic Games'],
     faq: [
       { q: '¿Cómo descargar Rust Pirata en Ecuador?', a: 'Contactanos por Discord y te enviamos el enlace de descarga seguro. Funciona en todo Ecuador.' },
-      { q: '¿Rust Pirata es gratis en Ecuador?', a: 'Sí, la descarga del juego es gratis. Los servidores premium tienen un costo único desde $20 USD.' }
+      { q: '¿Cuánto ping tengo desde Quito?', a: 'Desde Quito el ping promedio es de 70-90ms, ideal para jugar Rust Pirata sin lag.' },
+      { q: '¿Rust Pirata es gratis en Ecuador?', a: 'Sí, la descarga del juego es gratis. Los servidores premium tienen un costo único desde $20 USD.' },
+      { q: '¿Funciona en Guayaquil?', a: 'Sí, funciona en todas las ciudades de Ecuador con ping bajo y estable.' },
+      { q: '¿Necesito VPN para jugar en Ecuador?', a: 'No, no necesitás VPN. Nuestros servidores están en LATAM con ping bajo para Ecuador directamente.' }
     ],
     related: ['rust-pirata-peru', 'rust-pirata-colombia', 'descargar-rust-pirata']
   },
@@ -181,11 +384,28 @@ Nuestro servidor Rust Old School opera con las versiones 2275 OldRecoil y 2388 A
     h1: 'Rust Pirata en Bolivia',
     content: `Rust Pirata en Bolivia es la mejor forma de jugar Rust sin pagar Steam. Con ping de 60-80ms desde La Paz, Santa Cruz y todo el país, podés jugar sin lag.
 
-Nuestro servidor Rust Old School opera con las versiones 2275 OldRecoil y 2388 Actualizado, con más de 30,000 plugins disponibles. Más de 2,000 jugadores bolivianos ya juegan en nuestros servidores con soporte 24/7.`,
-    features: ['Ping bajo 60-80ms desde La Paz', '+2,000 jugadores bolivianos activos', 'Rust 2275 OldRecoil y Rust 2388', '+30,000 plugins disponibles', 'AntiCheat profesional', 'Soporte 24/7 en español'],
+Nuestro servidor Rust Old School opera con las versiones 2275 OldRecoil y 2388 Actualizado, con más de 30,000 plugins disponibles incluyendo kits, economía, tiendas, anti-cheat y más.
+
+Más de 2,000 jugadores bolivianos ya juegan en nuestros servidores. La comunidad es activa 24/7 con eventos, torneos y soporte directo por Discord.
+
+## Cómo Descargar Rust Pirata en Bolivia
+
+Entrá a nuestro Discord oficial y ahí te dan el link de descarga seguro. No necesitás Steam ni Epic Games. Basta descargar, instalar y conectarte al servidor.
+
+El juego funciona en cualquier PC con Windows 10 o superior. Para Rust 2275 necesitás 4GB de espacio y para 2388 unos 5GB. Ambas versiones son gratuitas.
+
+## Por Qué Elegir LATAMRUST en Bolivia
+
+Nuestra comunidad tiene los mejores servidores de Rust Pirata para Bolivia. Con ping optimizado para La Paz y Santa Cruz, jugás sin lag. El Anti-Cheat profissional mantiene el juego limpio.
+
+Además, tenemos soporte en español las 24 horas. Si tenés cualquier problema, nuestro equipo te ayuda por Discord al instante.`,
+    features: ['Ping bajo 60-80ms desde La Paz', '+2,000 jugadores bolivianos activos', 'Rust 2275 OldRecoil y Rust 2388', '+30,000 plugins disponibles', 'AntiCheat profesional', 'Soporte 24/7 en español', 'Download gratuito y seguro', 'Sin precisar Steam ni Epic Games'],
     faq: [
       { q: '¿Cómo descargar Rust Pirata en Bolivia?', a: 'Contactanos por Discord y te enviamos el enlace de descarga seguro. Funciona en toda Bolivia.' },
-      { q: '¿Rust Pirata es gratis en Bolivia?', a: 'Sí, la descarga del juego es gratis. Los servidores premium tienen un costo único desde $20 USD.' }
+      { q: '¿Cuánto ping tengo desde La Paz?', a: 'Desde La Paz el ping promedio es de 60-80ms, ideal para jugar Rust Pirata sin lag.' },
+      { q: '¿Rust Pirata es gratis en Bolivia?', a: 'Sí, la descarga del juego es gratis. Los servidores premium tienen un costo único desde $20 USD.' },
+      { q: '¿Funciona en Santa Cruz?', a: 'Sí, funciona en todas las ciudades de Bolivia con ping bajo y estable.' },
+      { q: '¿Necesito VPN para jugar en Bolivia?', a: 'No, no necesitás VPN. Nuestros servidores están en LATAM con ping bajo para Bolivia directamente.' }
     ],
     related: ['rust-pirata-peru', 'rust-pirata-argentina', 'descargar-rust-pirata']
   },
@@ -197,11 +417,28 @@ Nuestro servidor Rust Old School opera con las versiones 2275 OldRecoil y 2388 A
     h1: 'Rust Pirata en Venezuela',
     content: `Rust Pirata en Venezuela es la mejor forma de jugar Rust sin pagar Steam. Con ping de 80-100ms desde Caracas, Maracaibo y todo el país, podés jugar cómodamente.
 
-Nuestro servidor Rust Old School opera con las versiones 2275 OldRecoil y 2388 Actualizado, con más de 30,000 plugins disponibles. Más de 4,000 jugadores venezolanos ya juegan en nuestros servidores con soporte 24/7.`,
-    features: ['Ping bajo 80-100ms desde Caracas', '+4,000 jugadores venezolanos activos', 'Rust 2275 OldRecoil y Rust 2388', '+30,000 plugins disponibles', 'AntiCheat profesional', 'Soporte 24/7 en español'],
+Nuestro servidor Rust Old School opera con las versiones 2275 OldRecoil y 2388 Actualizado, con más de 30,000 plugins disponibles incluyendo kits, economía, tiendas, anti-cheat y más.
+
+Más de 4,000 jugadores venezolanos ya juegan en nuestros servidores. La comunidad es activa 24/7 con eventos, torneos y soporte directo por Discord.
+
+## Cómo Descargar Rust Pirata en Venezuela
+
+Entrá a nuestro Discord oficial y ahí te dan el link de descarga seguro. No necesitás Steam ni Epic Games. Basta descargar, instalar y conectarte al servidor.
+
+El juego funciona en cualquier PC con Windows 10 o superior. Para Rust 2275 necesitás 4GB de espacio y para 2388 unos 5GB. Ambas versiones son gratuitas.
+
+## Por Qué Elegir LATAMRUST en Venezuela
+
+Nuestra comunidad tiene los mejores servidores de Rust Pirata para Venezuela. Con ping optimizado para Caracas y Maracaibo, jugás sin lag. El Anti-Cheat profissional mantiene el juego limpio.
+
+Además, tenemos soporte en español las 24 horas. Si tenés cualquier problema, nuestro equipo te ayuda por Discord al instante.`,
+    features: ['Ping bajo 80-100ms desde Caracas', '+4,000 jugadores venezolanos activos', 'Rust 2275 OldRecoil y Rust 2388', '+30,000 plugins disponibles', 'AntiCheat profesional', 'Soporte 24/7 en español', 'Download gratuito y seguro', 'Sin precisar Steam ni Epic Games'],
     faq: [
       { q: '¿Cómo descargar Rust Pirata en Venezuela?', a: 'Contactanos por Discord y te enviamos el enlace de descarga seguro. Funciona en toda Venezuela.' },
-      { q: '¿Rust Pirata es gratis en Venezuela?', a: 'Sí, la descarga del juego es gratis. Los servidores premium tienen un costo único desde $20 USD.' }
+      { q: '¿Cuánto ping tengo desde Caracas?', a: 'Desde Caracas el ping promedio es de 80-100ms, ideal para jugar Rust Pirata sin lag.' },
+      { q: '¿Rust Pirata es gratis en Venezuela?', a: 'Sí, la descarga del juego es gratis. Los servidores premium tienen un costo único desde $20 USD.' },
+      { q: '¿Funciona en Maracaibo?', a: 'Sí, funciona en todas las ciudades de Venezuela con ping bajo y estable.' },
+      { q: '¿Necesito VPN para jugar en Venezuela?', a: 'No, no necesitás VPN. Nuestros servidores están en LATAM con ping bajo para Venezuela directamente.' }
     ],
     related: ['rust-pirata-colombia', 'rust-pirata-brasil', 'descargar-rust-pirata']
   },
@@ -382,7 +619,7 @@ Nuestro equipo se encarga de toda la configuración si lo preferís. Soporte dir
     faq: [
       { q: '¿Cuántos plugins puedo instalar?', a: 'Depende de tu VPS. Recomendamos máximo 50-80 plugins para mejor rendimiento.' },
       { q: '¿Cuál es el mejor AntiCheat?', a: 'RustAdmin AntiCheat es el más utilizado y efectivo para servidores pirata.' },
-      { q: '¿Cómo优化o el rendimiento?', a: 'Reduce draw distance, optimiza plugins, usa backup automático y monitorea el uso de RAM.' },
+      { q: '¿Cómo optimizo el rendimiento?', a: 'Reduce draw distance, optimiza plugins, usa backup automático y monitorea el uso de RAM.' },
       { q: '¿Cómo creo reglas para mi servidor?', a: 'Edita el archivo server.cfg y configura las reglas que quieras. También podés usar plugins de reglas.' }
     ],
     related: ['como-crear-servidor-rust-pirata', 'mejores-plugins-rust-pirata', 'plugins-oxide-rust']
@@ -424,6 +661,202 @@ Nuestro servidor LATAMRUST ofrece DayZ 1.28 con ping bajo en toda LATAM, eventos
       { q: '¿Puedo jugar con amigos?', a: 'Sí, si ellos también tienen DayZ pirata pueden unirse al mismo servidor.' }
     ],
     related: ['descargar-rust-pirata', 'rust-pirata-gratis', 'servidores-rust-pirata']
+  },
+  // === PÁGINAS DE KEYWORDS DE COLA LARGA ===
+  'jugar-rust-pirata-gratis': {
+    title: 'Jugar Rust Pirata Gratis 2026 - Sin Steam Sin Epic Games LATAMRUST',
+    description: 'Juega Rust Pirata gratis ahora. Sin Steam, sin Epic Games. Rust 2275 y 2388 con +30,000 plugins. Ping bajo LATAM. Discord oficial.',
+    keywords: 'jugar rust pirata gratis, jugar rust gratis, rust gratis online, rust sin pagar, jugar rust sin steam, rust pirata ahora, rust 2275 gratis, rust 2388 gratis',
+    locale: 'es_ES',
+    h1: 'Jugar Rust Pirata Gratis',
+    content: `Juega Rust Pirata gratis ahora mismo. Sin necesidad de Steam ni Epic Games. Solo necesitás tu PC con Windows y una conexión a internet.
+
+Tenemos dos versiones disponibles: Rust 2275 OldRecoil (la clásica con recoil original) y Rust 2388 Actualizado (la última versión con mejores gráficos). Ambas son 100% gratis.
+
+## Cómo Empezar a Jugar
+
+1. Entrá a nuestro Discord oficial: https://discord.gg/7Vz4YBamFG
+2. Descargá el juego (Rust 2275 o 2388)
+3. Instalalo en tu PC
+4. Conectate al servidor y empezá a jugar
+
+Todo el proceso toma menos de 10 minutos. No necesitás cuenta, no necesitás pagar nada.
+
+## Requisitos Mínimos
+
+- Windows 10 o superior
+- 4GB de RAM
+- GTX 960 o superior
+- 5GB de espacio libre
+- Conexión a internet estable`,
+    features: ['100% gratis', 'Sin Steam ni Epic Games', 'Rust 2275 y 2388', '+30,000 plugins', 'Ping bajo LATAM', 'Soporte 24/7', 'Instalación rápida', 'Comunidad activa'],
+    faq: [
+      { q: '¿Realmente es gratis jugar Rust pirata?', a: 'Sí, el juego es 100% gratis. Solo pagás si querés un servidor premium.' },
+      { q: '¿Necesito Steam para jugar?', a: 'No, Rust pirata se ejecuta directamente sin Steam ni Epic Games.' },
+      { q: '¿Cuánto tarda en descargar?', a: 'Depende de tu internet, pero generalmente toma entre 5 y 15 minutos.' },
+      { q: '¿Puedo jugar con amigos?', a: 'Sí, si ellos también tienen Rust pirata pueden jugar juntos en el mismo servidor.' }
+    ],
+    related: ['descargar-rust-pirata', 'rust-pirata-gratis', 'rust-pirata-sin-steam']
+  },
+  'rust-pirata-seguro': {
+    title: 'Rust Pirata Seguro - Sin Virus 2026 - LATAMRUST',
+    description: 'Descarga Rust Pirata seguro y sin virus. Archivos verificados 100% seguros. Sin malware, sin adware. Descarga confiable.',
+    keywords: 'rust pirata seguro, rust pirata sin virus, rust pirata sin malware, descargar rust seguro, rust pirata confiable, rust pirata limpio, rust sin adware',
+    locale: 'es_ES',
+    h1: 'Rust Pirata Seguro y Sin Virus',
+    content: `Descargá Rust Pirata seguro y sin virus. Todos nuestros archivos están verificados y son 100% seguros. Sin malware, sin adware, sin sorpresas.
+
+La seguridad es nuestra prioridad. Cada archivo pasa por un escaneo antivirus antes de ser publicado. Podés descargar con total confianza.
+
+## Por Qué Somos Seguros
+
+- Archivos verificados por antivirus
+- Sin malware ni adware
+- Sin miners ni software no deseado
+- Sin redirecciones sospechosas
+- Descarga directa sin acortadores
+- Soporte 24/7 si tenés problemas
+
+## Cómo Verificar la Seguridad
+
+Si querés, podés escanear los archivos tú mismo antes de instalarlos. Usá tu antivirus habitual o Windows Defender. Nuestros archivos están limpios.`,
+    features: ['Archivos 100% seguros', 'Sin virus ni malware', 'Sin adware', 'Escaneados por antivirus', 'Descarga directa', 'Sin acortadores', 'Soporte 24/7', 'Totalmente confiable'],
+    faq: [
+      { q: '¿Rust pirata tiene virus?', a: 'No, nuestros archivos están verificados y son 100% seguros.' },
+      { q: '¿Es seguro descargar de ustedes?', a: 'Sí,nuestros archivos passan por escaneo antivirus antes de ser publicados.' },
+      { q: '¿Hay malware o adware?', a: 'No,nuestros archivos no contienen malware, adware ni ningún software no deseado.' },
+      { q: '¿Puedo verificar los archivos?', a: 'Sí, podés escanear los archivos con tu antivirus antes de instalarlos.' }
+    ],
+    related: ['descargar-rust-pirata', 'rust-pirata-gratis', 'rust-pirata-sin-steam']
+  },
+  'rust-pirata-online': {
+    title: 'Rust Pirata Online 2026 - Jugar con Amigos LATAMRUST',
+    description: 'Juega Rust Pirata online con amigos. Servidores con +10,000 jugadores. Ping bajo LATAM. Eventos y torneos 24/7.',
+    keywords: 'rust pirata online, rust online, jugar rust online, rust pirata multijugador, rust pirata con amigos, rust online gratis, rust multijugador gratis',
+    locale: 'es_ES',
+    h1: 'Rust Pirata Online',
+    content: `Juega Rust Pirata online con miles de jugadores. Nuestros servidores tienen +10,000 jugadores activos 24/7 con ping bajo en toda LATAM.
+
+Rust es un juego multijugador de supervivencia donde construís bases, juntás recursos y peleás contra otros jugadores. En pirata, todo esto es gratis.
+
+## Características del Servidor
+
+- +10,000 jugadores activos
+- Ping bajo en toda LATAM (15-100ms)
+- Anti-Cheat profissional
+- +30,000 plugins
+- Eventos y torneos diarios
+- Soporte 24/7
+
+## Cómo Jugar Online
+
+1. Descargá el juego desde nuestro Discord
+2. Instalalo en tu PC
+3. Conectate al servidor
+4. Empezá a jugar con otros jugadores
+
+No necesitás cuenta ni registro. Solo descargá, instalá y jugá.`,
+    features: ['+10,000 jugadores activos', 'Ping bajo LATAM', 'Anti-Cheat profissional', '+30,000 plugins', 'Eventos diarios', 'Torneos', 'Soporte 24/7', 'Sin registro'],
+    faq: [
+      { q: '¿Puedo jugar online con amigos?', a: 'Sí, si ellos también tienen Rust pirata pueden jugar juntos en el mismo servidor.' },
+      { q: '¿Cuántos jugadores hay online?', a: 'Hay +10,000 jugadores activos en nuestros servidores 24/7.' },
+      { q: '¿Hay lag al jugar online?', a: 'No,nuestros servidores tienen ping bajo en toda LATAM para que jugues sin lag.' },
+      { q: '¿Hay eventos o torneos?', a: 'Sí,nuestros comunidad organiza eventos y torneos diarios con premios.' }
+    ],
+    related: ['descargar-rust-pirata', 'rust-pirata-gratis', 'servidores-rust-pirata']
+  },
+  'rust-pirata-2275-vs-2388': {
+    title: 'Rust 2275 vs 2388 - Cuál Elegir 2026 - LATAMRUST',
+    description: 'Comparación completa Rust 2275 vs 2388. Cuál es mejor para PvP, cuál tiene mejor rendimiento. Guía para elegir.',
+    keywords: 'rust 2275 vs 2388, diferencia rust 2275 2388, cuál es mejor rust 2275 o 2388, rust 2275 recoil, rust 2388 gráficos, comparación rust',
+    locale: 'es_ES',
+    h1: 'Rust 2275 vs 2388 - Cuál Elegir',
+    content: `Comparación completa entre Rust 2275 OldRecoil y Rust 2388 Actualizado. Cuál es mejor para PvP, cuál tiene mejor rendimiento, y cuál deberías elegir.
+
+## Rust 2275 OldRecoil
+
+El 2275 es la versión clásica que la comunidad más ama. Tiene el recoil original que todos conocen y es preferido para PvP competitivo.
+
+**Ventajas:**
+- Recoil clássico y predecible
+- Más ligero (funciona en PCs básicos)
+- La comunidad competitiva lo prefiere
+- Más servidores disponibles
+
+**Desventajas:**
+- Gráficos más antiguos
+- Menos optimizado para PCs modernos
+
+## Rust 2388 Actualizado
+
+El 2388 es la última versión con gráficos mejorados y nuevas funciones. Si querés lo más nuevo, esta es tu versión.
+
+**Ventajas:**
+- Mejores gráficos
+- Más optimizado para PCs modernos
+- Nuevas armas y funciones
+- Mejores texturas
+
+**Desventajas:**
+- Recoil diferente (no el clásico)
+- Requiere mejor PC
+
+## Cuál Elegir
+
+Si sos jugador competitivo y querés PvP serio: **2275**
+Si querés gráficos bonitos y lo más nuevo: **2388**`,
+    features: ['Comparación completa', 'Ventajas y desventajas', 'Guía para elegir', 'PvP competitivo', 'Mejores gráficos', 'Rendimiento', 'Comunidad', 'Soporte 24/7'],
+    faq: [
+      { q: '¿Cuál es mejor, 2275 o 2388?', a: 'Depende de tu preferencia. 2275 es mejor para PvP competitivo, 2388 para gráficos bonitos.' },
+      { q: '¿El recoil es igual en ambos?', a: 'No, el 2275 tiene el recoil clásico y el 2388 tiene un recoil diferente.' },
+      { q: '¿Cuál es más ligero?', a: 'El 2275 es más ligero y funciona en PCs más básicos.' },
+      { q: '¿Puedo jugar los dos?', a: 'Sí, puedes alternar entre las dos versiones cuando quieras.' }
+    ],
+    related: ['rust-2275-oldrecoil', 'rust-2388-actualizado', 'descargar-rust-pirata']
+  },
+  'rust-pirata-como-jugar': {
+    title: 'Cómo Jugar Rust Pirata - Guía para Principiantes 2026 - LATAMRUST',
+    description: 'Guía completa para jugar Rust pirata. Desde la instalación hasta consejos avanzados. Todo lo que necesitás saber.',
+    keywords: 'como jugar rust pirata, guía rust pirata, principiantes rust pirata, rust pirata tutorial, rust pirata tips, rust pirata consejos, empezar a jugar rust',
+    locale: 'es_ES',
+    h1: 'Cómo Jugar Rust Pirata - Guía para Principiantes',
+    content: `Guía completa para empezar a jugar Rust Pirata. Desde la instalación hasta consejos para sobrevivir tu primera noche.
+
+## Paso 1: Descargar el Juego
+
+Entrá a nuestro Discord oficial y descargá Rust 2275 o 2388. Ambos son gratis.
+
+## Paso 2: Instalar
+
+Extraé los archivos y ejecutá el instalador. Toma menos de 5 minutos.
+
+## Paso 3: Conectarse
+
+Abrí el juego y conectate al servidor. No necesitás cuenta ni registro.
+
+## Consejos para Principiantes
+
+1. **Construí cerca del agua** - Así tenés acceso fácil a recursos
+2. **Juntá piedra y madera primero** - Son los recursos más importantes
+3. **Hacé una cabaña pequeña** - Para protegerte de la noche
+4. **No peleés al principio** - Primero sobreviví, después peleá
+5. **Unite a un clan** - Es más fácil sobrevivir en grupo
+
+## Controles Básicos
+
+- WASD: Mover
+- Mouse: Mirar
+- Click izquierdo: Golpear/Disparar
+- E: Interactuar
+- Tab: Inventario`,
+    features: ['Guía paso a paso', 'Consejos para principiantes', 'Controles básicos', 'Tips de supervivencia', 'Instalación rápida', 'Soporte 24/7', 'Comunidad activa', 'Sin registro'],
+    faq: [
+      { q: '¿Es difícil jugar Rust pirata?', a: 'No, es fácil de empezar. Con la guía paso a paso podés jugar en minutos.' },
+      { q: '¿Necesito saber jugar Steam?', a: 'No, Rust pirata es igual que Steam pero gratis.' },
+      { q: '¿Puedo jugar solo?', a: 'Sí, pero es más fácil jugar en grupo. Unite a un clan por Discord.' },
+      { q: '¿Cuánto tarda en aprenderse?', a: 'Los básicos los aprendés en una hora. Lo avanzado toma más tiempo.' }
+    ],
+    related: ['descargar-rust-pirata', 'jugar-rust-pirata-gratis', 'rust-pirata-online']
   }
 };
 
@@ -588,8 +1021,11 @@ function generatePageHTML(seo, pagePath) {
         <a href="/">Inicio</a>
         <a href="/descargar-rust-pirata/">Descargar</a>
         <a href="/rust-pirata-brasil/">Brasil</a>
+        <a href="/baixar-rust-pirata-brasil/">Baixar Brasil</a>
         <a href="/rust-pirata-argentina/">Argentina</a>
         <a href="/rust-pirata-mexico/">México</a>
+        <a href="/rust-2275-brasil/">Rust 2275</a>
+        <a href="/rust-2388-brasil/">Rust 2388</a>
       </nav>
     </footer>
   </body>
@@ -622,7 +1058,7 @@ Object.keys(seoPages).forEach(pagePath => {
 // Generate sitemap.xml
 const sitemapPages = Object.keys(seoPages).map(pagePath => {
   return `  <url>
-    <loc>https://latamrust.online/${pagePath}/</loc>
+    <loc>https://latamrust.online/${pagePath}</loc>
     <lastmod>2026-06-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
