@@ -2,16 +2,8 @@ import { Helmet } from "react-helmet-async";
 import Header from "../../Components/Header/Header";
 import LatamrustBanner from "../../Components/LatamrustBanner/LatamrustBanner";
 import Hero from "../../Components/Hero/Hero";
-import Benefits from "../../Components/Benefits/Benefits";
-import Projects from "../../Components/Projects/Projects";
-import ServerPlans from "../../Components/ServerPlans/ServerPlans";
-import Process from "../../Components/Process/Process";
-import Testimonials from "../../Components/Testimonials/Testimonials";
-import FAQ from "../../Components/FAQ/FAQ";
 import Footer from "../../Components/Footer/Footer";
 import GlobalBackground from "../../Components/GlobalBackground/GlobalBackground";
-import ArgosEyesPartner from "../../Components/ArgosEyesPartner/ArgosEyesPartner";
-import PaymentMethods from "../../Components/PaymentMethods/PaymentMethods";
 
 function HomePage() {
   return (
@@ -31,20 +23,6 @@ function HomePage() {
 
         {/* TIER 2 — FIRST SCROLL: Features + why us */}
         <Hero />
-
-        {/* TIER 3 — SECOND SCROLL: Plans + trust + social proof */}
-        <ServerPlans />
-        <PaymentMethods />
-        <Benefits />
-        <Process />
-        <Testimonials />
-        <Projects />
-
-        {/* TIER 4 — TRUST SIGNAL: Partners */}
-        <ArgosEyesPartner />
-
-        {/* TIER 5 — SEO + support */}
-        <FAQ />
       </main>
       <Footer />
     </GlobalBackground>
