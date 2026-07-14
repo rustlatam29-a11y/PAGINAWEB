@@ -10,6 +10,17 @@
   ],
   "redirects": [
     {
+      "source": "/",
+      "has": [
+        {
+          "type": "host",
+          "value": "latamrust.vercel.app"
+        }
+      ],
+      "destination": "https://latamrust.online/",
+      "permanent": true
+    },
+    {
       "source": "/:path*",
       "has": [
         {
