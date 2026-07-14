@@ -1,4 +1,4 @@
-import React from "react";
+﻿import React from "react";
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import { CheckCircle, ArrowRight, Server, Shield, Zap, Settings } from "lucide-react";
@@ -7,20 +7,20 @@ const ComoCrearServidorRust: React.FC = () => {
   return (
     <div className="min-h-screen bg-black text-white">
       <Helmet>
-        <title>Como Crear Servidor Rust Pirata 2275/2388 - Guia Completa 2026 | LATAMRUST</title>
+        <title>Como Crear Servidor Rust Pirata 2275/2388 - Guia Completa 2026 | Rust Pirata</title>
         <meta name="description" content="Guia completa paso a paso para crear tu servidor de Rust Pirata 2275 o 2388. Configuracion, plugins, AntiCheat, hosting y soporte 24/7. Desde $17 USD." />
         <meta name="keywords" content="crear servidor rust pirata, crear servidor rust 2275, crear servidor rust 2388, montar servidor rust, configurar servidor rust, servidor rust paso a paso, como hacer servidor rust, hosting rust pirata, vps rust server" />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://latamrust.online/como-crear-servidor-rust-pirata" />
+        <meta property="og:url" content="https://Rust Pirata.vercel.app/como-crear-servidor-rust-pirata/" />
         <meta property="og:title" content="Como Crear Servidor Rust Pirata 2275/2388 - Guia Completa 2026" />
         <meta property="og:description" content="Guia completa paso a paso para crear tu servidor de Rust Pirata. Configuracion, plugins, AntiCheat y soporte 24/7." />
-        <meta property="og:image" content="https://latamrust.online/LATAMLOGO.webp" />
+        <meta property="og:image" content="https://Rust Pirata.vercel.app/rust-old-school-logo.webp" />
         <meta property="og:locale" content="es_ES" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Como Crear Servidor Rust Pirata - Guia Completa 2026" />
         <meta name="twitter:description" content="Guia completa para crear tu servidor de Rust Pirata 2275 o 2388 con plugins, AntiCheat y soporte." />
-        <meta name="twitter:image" content="https://latamrust.online/LATAMLOGO.webp" />
-        <link rel="canonical" href="https://latamrust.online/como-crear-servidor-rust-pirata" />
+        <meta name="twitter:image" content="https://Rust Pirata.vercel.app/rust-old-school-logo.webp" />
+        <link rel="canonical" href="https://Rust Pirata.vercel.app/como-crear-servidor-rust-pirata/" />
         <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
 
         <script type="application/ld+json">
@@ -29,7 +29,7 @@ const ComoCrearServidorRust: React.FC = () => {
             "@type": "HowTo",
             "name": "Como Crear un Servidor de Rust Pirata 2275/2388",
             "description": "Guia completa paso a paso para crear y configurar tu servidor de Rust Pirata con plugins, AntiCheat y optimizacion para LATAM.",
-            "image": "https://latamrust.online/LATAMLOGO.webp",
+            "image": "https://Rust Pirata.vercel.app/rust-old-school-logo.webp",
             "totalTime": "PT30M",
             "step": [
               {"@type": "HowToStep", "name": "Elegir version de Rust", "text": "Elige entre Rust 2275 OldRecoil o Rust 2388 Actualizado segun tu preferencia."},
@@ -51,7 +51,7 @@ const ComoCrearServidorRust: React.FC = () => {
               {"@type": "Question", "name": "Necesito conocimientos tecnicos para crear un servidor Rust?", "acceptedAnswer": {"@type": "Answer", "text": "No, nosotros nos encargamos de toda la configuracion tecnica. Solo necesitas contactarnos por Discord y te guiamos en cada paso."}},
               {"@type": "Question", "name": "Cuanto tiempo tarda en estar listo mi servidor?", "acceptedAnswer": {"@type": "Answer", "text": "Tu servidor puede estar listo en menos de 5 minutos despues del pago. La configuracion completa toma menos de 24 horas."}},
               {"@type": "Question", "name": "Que VPS es mejor para un servidor Rust pirata?", "acceptedAnswer": {"@type": "Answer", "text": "Recomendamos VPS con minimo 8GB RAM, 4 cores, y ubicacion en Brasil o USA para ping bajo. DigitalOcean, Vultr y Hetzner son buenas opciones."}},
-              {"@type": "Question", "name": "Puedo instalar plugins en mi servidor Rust pirata?", "acceptedAnswer": {"@type": "Answer", "text": "Si, tu servidor viene con soporte para Oxide y uMod con +30,000 plugins disponibles. Kits, economia, tiendas, anti-cheat y mas."}},
+              {"@type": "Question", "name": "Puedo instalar plugins en mi servidor Rust pirata?", "acceptedAnswer": {"@type": "Answer", "text": "Si, tu servidor viene con soporte para Oxide y uMod con plugins disponibles. Kits, economia, tiendas, anti-cheat y mas."}},
               {"@type": "Question", "name": "Cuantos jugadores puede soportar mi servidor?", "acceptedAnswer": {"@type": "Answer", "text": "Depende del VPS. Con 8GB RAM puedes tener 50-100 jugadores. Con 16GB, hasta 200. Con 32GB, mas de 300 jugadores simultaneos."}},
               {"@type": "Question", "name": "Que plugins son esenciales para un servidor Rust?", "acceptedAnswer": {"@type": "Answer", "text": "Los esenciales son: Kits, BetterChat, Vanish, NoEscape, Backpacks, Economics, ServerRewards, and RustAdmin AntiCheat."}},
               {"@type": "Question", "name": "Puedo cambiar de Rust 2275 a 2388 despues?", "acceptedAnswer": {"@type": "Answer", "text": "Si, puedes migrar tu servidor de una version a otra. Contactanos por Discord y te ayudamos con la migracion."}}
@@ -64,8 +64,8 @@ const ComoCrearServidorRust: React.FC = () => {
             "@context": "https://schema.org",
             "@type": "BreadcrumbList",
             "itemListElement": [
-              {"@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://latamrust.online/"},
-              {"@type": "ListItem", "position": 2, "name": "Crear Servidor Rust Pirata", "item": "https://latamrust.online/como-crear-servidor-rust-pirata"}
+              {"@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://Rust Pirata.vercel.app/"},
+              {"@type": "ListItem", "position": 2, "name": "Crear Servidor Rust Pirata", "item": "https://Rust Pirata.vercel.app/como-crear-servidor-rust-pirata"}
             ]
           })}
         </script>
@@ -138,7 +138,7 @@ const ComoCrearServidorRust: React.FC = () => {
                 <li>• <strong>Rust 2275 OldRecoil:</strong> $17 USD</li>
                 <li>• <strong>Rust 2388 Actualizado:</strong> $25 USD</li>
                 <li>• Configuracion completa incluida</li>
-                <li>• +30,000 plugins Oxide/uMod</li>
+                <li>• plugins Oxide/uMod</li>
                 <li>• AntiCheat profesional</li>
                 <li>• Soporte tecnico 24/7</li>
               </ul>
@@ -179,7 +179,7 @@ const ComoCrearServidorRust: React.FC = () => {
               {
                 step: "05",
                 title: "Configura Plugins y Reglas",
-                description: "Instala los plugins que necesites para tu servidor. Desde kits y economia hasta tiendas y eventos. Con +30,000 plugins disponibles, podes personalizar tu servidor como quieras.",
+                description: "Instala los plugins que necesites para tu servidor. Desde kits y economia hasta tiendas y eventos. Con plugins disponibles, podes personalizar tu servidor como quieras.",
                 tips: ["Kits de inicio para nuevos jugadores", "Sistema de economia y tienda", "AntiCheat configurado automaticamente"]
               },
               {
@@ -280,7 +280,7 @@ const ComoCrearServidorRust: React.FC = () => {
               { q: "Necesito conocimientos tecnicos?", a: "No, nosotros nos encargamos de toda la configuracion tecnica. Solo necesitas contactarnos por Discord y te guiamos en cada paso." },
               { q: "Cuanto tiempo tarda en estar listo?", a: "Tu servidor puede estar listo en menos de 5 minutos despues del pago. La configuracion completa toma menos de 24 horas." },
               { q: "Que VPS es mejor para Rust pirata?", a: "Recomendamos VPS con minimo 8GB RAM, 4 cores, y ubicacion en Brasil o USA para ping bajo. DigitalOcean, Vultr y Hetzner son buenas opciones." },
-              { q: "Puedo instalar plugins?", a: "Si, tu servidor viene con soporte para Oxide y uMod con +30,000 plugins disponibles. Kits, economia, tiendas, anti-cheat y mas." },
+              { q: "Puedo instalar plugins?", a: "Si, tu servidor viene con soporte para Oxide y uMod con plugins disponibles. Kits, economia, tiendas, anti-cheat y mas." },
               { q: "Cuantos jugadores puede soportar?", a: "Depende del VPS. Con 8GB RAM puedes tener 50-100 jugadores. Con 16GB, hasta 200. Con 32GB, mas de 300 jugadores simultaneos." }
             ].map((faq, i) => (
               <div key={i} className="bg-gray-800/50 rounded-xl p-6 border border-gray-700/30">

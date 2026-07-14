@@ -1,10 +1,22 @@
-import React from "react";
+﻿import React from "react";
 import { Users, Heart, Shield, Zap, Trophy, MessageCircle, Star, Crown, ChevronRight } from "lucide-react";
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 
 const ComunidadRustFamily: React.FC = () => {
   return (
     <div className="min-h-screen bg-black text-white">
+      <Helmet>
+        <title>{'Comunidad Rust Family | Rust Pirata'}</title>
+        <meta name="description" content="Comunidad oficial Rust Family. Eventos, torneos y más." />
+        <meta name="robots" content="index, follow" />
+        <link rel="canonical" href="https://Rust Pirata.vercel.app/comunidade-rust-family/" />
+        <meta property="og:title" content={'Comunidad Rust Family | Rust Pirata'} />
+        <meta property="og:description" content="Comunidad oficial Rust Family. Eventos, torneos y más." />
+        <meta property="og:url" content="https://Rust Pirata.vercel.app/comunidade-rust-family/" />
+        <meta property="og:image" content="https://Rust Pirata.vercel.app/rust-old-school-logo.webp" />
+        <meta property="og:type" content="website" />
+      </Helmet>
       {/* Hero Section */}
       <section className="relative py-20 px-4 bg-gradient-to-b from-red-950/30 to-black">
         <div className="max-w-4xl mx-auto text-center">
@@ -18,11 +30,11 @@ const ComunidadRustFamily: React.FC = () => {
           </h1>
           
           <h2 className="text-2xl md:text-4xl font-bold text-gray-200 mb-6">
-            LATAMRUST - A Comunidade Rust Family #1 da América Latina
+            Rust Pirata - A Comunidade Rust Family #1 da América Latina
           </h2>
           
           <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-            Procurando por uma <strong>comunidade rust family</strong>? LATAMRUST é a maior e mais unida 
+            Procurando por uma <strong>comunidade rust family</strong>? Rust Pirata é a maior e mais unida 
             <strong> rust family</strong> do Brasil e LATAM. Mais de 10.000 jogadores ativos, eventos diários, 
             suporte 24/7 em português e a melhor experiência <strong>rust family</strong> que você vai encontrar.
           </p>
@@ -56,27 +68,27 @@ const ComunidadRustFamily: React.FC = () => {
             <p>
               Uma <strong>comunidade rust family</strong> vai muito além de um simples servidor de jogo. É um grupo 
               unido de jogadores que se tratam como família, onde veteranos ensinam iniciantes, todos compartilham 
-              recursos, e o sucesso de um é o sucesso de todos. A <strong>comunidade rust family LATAMRUST</strong> 
+              recursos, e o sucesso de um é o sucesso de todos. A <strong>comunidade rust family Rust Pirata</strong> 
               leva esse conceito ao extremo.
             </p>
             <p>
               Diferente de clãs competitivos ou grupos desorganizados, uma verdadeira <strong>rust family</strong> 
-              cria laços reais entre jogadores. No LATAMRUST, milhares de brasileiros e latinos encontraram não 
+              cria laços reais entre jogadores. No Rust Pirata, milhares de brasileiros e latinos encontraram não 
               apenas parceiros de jogo, mas amigos verdadeiros que jogam juntos há anos.
             </p>
             <p>
-              A <strong>comunidade rust family</strong> LATAMRUST foi fundada em 2020 com um objetivo claro: criar 
+              A <strong>comunidade rust family</strong> Rust Pirata foi fundada em 2020 com um objetivo claro: criar 
               o melhor ambiente familiar para jogadores de <strong>Rust Pirata</strong> em toda América Latina. 
               Hoje, somos mais de 10.000 membros ativos que jogam, riem e crescem juntos todos os dias.
             </p>
           </div>
         </section>
 
-        {/* Por Que LATAMRUST é a Melhor Comunidade */}
+        {/* Por Que Rust Pirata é a Melhor Comunidade */}
         <section className="mb-12 bg-gray-900/50 rounded-2xl p-8 border border-red-900/30">
           <h2 className="text-3xl font-black mb-6 text-red-500 flex items-center gap-3">
             <Trophy className="w-10 h-10" />
-            Por Que LATAMRUST é a Melhor Comunidade Rust Family?
+            Por Que Rust Pirata é a Melhor Comunidade Rust Family?
           </h2>
           
           <div className="space-y-6">
@@ -86,10 +98,10 @@ const ComunidadRustFamily: React.FC = () => {
                 10,000+ Membros Ativos Todos os Dias
               </h3>
               <p className="text-gray-300 leading-relaxed">
-                A <strong>comunidade rust family</strong> LATAMRUST não é apenas grande - é ATIVA. Todos os dias, 
+                A <strong>comunidade rust family</strong> Rust Pirata não é apenas grande - é ATIVA. Todos os dias, 
                 milhares de jogadores online, eventos acontecendo, raids organizadas, PvP intenso. Nunca vai faltar 
                 ação ou companhia para jogar. Outras <strong>comunidades rust family</strong> prometem números, 
-                mas LATAMRUST ENTREGA resultados reais.
+                mas Rust Pirata ENTREGA resultados reais.
               </p>
             </div>
 
@@ -99,10 +111,10 @@ const ComunidadRustFamily: React.FC = () => {
                 Cultura Familiar Real, Não Fake
               </h3>
               <p className="text-gray-300 leading-relaxed">
-                Muitas <strong>comunidades rust family</strong> se chamam "family" mas agem como empresas. No LATAMRUST, 
+                Muitas <strong>comunidades rust family</strong> se chamam "family" mas agem como empresas. No Rust Pirata, 
                 a família é REAL. Veteranos dedicam horas ensinando novatos. Jogadores compartilham bases, recursos e 
                 conhecimento livremente. Se você cai, a family te levanta. Se você cresce, a family celebra junto. 
-                Essa é a diferença entre LATAMRUST e as outras <strong>rust family</strong> por aí.
+                Essa é a diferença entre Rust Pirata e as outras <strong>rust family</strong> por aí.
               </p>
             </div>
 
@@ -112,7 +124,7 @@ const ComunidadRustFamily: React.FC = () => {
                 Proteção e Segurança da Family
               </h3>
               <p className="text-gray-300 leading-relaxed">
-                Na <strong>comunidade rust family</strong> LATAMRUST, ninguém joga sozinho. Sofrendo raid? A family 
+                Na <strong>comunidade rust family</strong> Rust Pirata, ninguém joga sozinho. Sofrendo raid? A family 
                 responde em minutos. Precisa de recursos? Veteranos ajudam. Tem dúvidas? Suporte 24/7 em português. 
                 Anti-cheat profissional garante que hackers são eliminados rapidamente. Sua experiência é nossa prioridade.
               </p>
@@ -124,7 +136,7 @@ const ComunidadRustFamily: React.FC = () => {
                 Servidores Premium Brasil/LATAM
               </h3>
               <p className="text-gray-300 leading-relaxed">
-                A melhor <strong>comunidade rust family</strong> merece os melhores servidores. LATAMRUST investe em 
+                A melhor <strong>comunidade rust family</strong> merece os melhores servidores. Rust Pirata investe em 
                 hardware dedicado no Brasil, garantindo ping baixíssimo (15-30ms média), uptime 99.9%, e zero lag. 
                 Outras <strong>rust family</strong> usam servidores baratos que caem toda hora. Nós investimos em qualidade.
               </p>
@@ -136,7 +148,7 @@ const ComunidadRustFamily: React.FC = () => {
                 Eventos e Conteúdo Exclusivo
               </h3>
               <p className="text-gray-300 leading-relaxed">
-                Toda semana, a <strong>comunidade rust family</strong> LATAMRUST organiza eventos épicos: torneios PvP 
+                Toda semana, a <strong>comunidade rust family</strong> Rust Pirata organiza eventos épicos: torneios PvP 
                 com prêmios reais, raids family vs family, eventos de construção, giveaways de skins e VIPs. Nenhuma 
                 outra <strong>rust family</strong> oferece essa variedade de conteúdo constantemente.
               </p>
@@ -146,14 +158,14 @@ const ComunidadRustFamily: React.FC = () => {
 
         {/* Comparação com Outras Rust Family */}
         <section className="mb-12">
-          <h2 className="text-3xl font-black mb-6 text-red-500">LATAMRUST vs Outras Comunidades Rust Family</h2>
+          <h2 className="text-3xl font-black mb-6 text-red-500">Rust Pirata vs Outras Comunidades Rust Family</h2>
           
           <div className="overflow-x-auto">
             <table className="w-full bg-gray-900/50 rounded-xl overflow-hidden">
               <thead className="bg-red-900/30">
                 <tr>
                   <th className="p-4 text-left">Característica</th>
-                  <th className="p-4 text-center">LATAMRUST</th>
+                  <th className="p-4 text-center">Rust Pirata</th>
                   <th className="p-4 text-center">Outras Rust Family</th>
                 </tr>
               </thead>
@@ -208,19 +220,19 @@ const ComunidadRustFamily: React.FC = () => {
             {[
               {
                 name: "João - São Paulo, BR",
-                text: "Já passei por várias comunidades rust family, mas LATAMRUST é diferente. Aqui a galera ajuda de verdade, não é só papo. Em 2 semanas já tinha base compartilhada, grupo de farm e amigos reais."
+                text: "Já passei por várias comunidades rust family, mas Rust Pirata é diferente. Aqui a galera ajuda de verdade, não é só papo. Em 2 semanas já tinha base compartilhada, grupo de farm e amigos reais."
               },
               {
                 name: "Maria - Rio de Janeiro, BR",
-                text: "Sou iniciante no Rust e tinha medo de começar sozinha. Na comunidade rust family LATAMRUST me ensinaram tudo: desde craftear até PvP. Hoje já ajudo outros novatos!"
+                text: "Sou iniciante no Rust e tinha medo de começar sozinha. Na comunidade rust family Rust Pirata me ensinaram tudo: desde craftear até PvP. Hoje já ajudo outros novatos!"
               },
               {
                 name: "Carlos - Minas Gerais, BR",
-                text: "Comunidade rust family LATAMRUST não é só pra jogar. Fiz amigos que converso todo dia, já até nos encontramos pessoalmente. Essa family é real!"
+                text: "Comunidade rust family Rust Pirata não é só pra jogar. Fiz amigos que converso todo dia, já até nos encontramos pessoalmente. Essa family é real!"
               },
               {
                 name: "Pedro - Bahia, BR",
-                text: "Testei rustfamily.com.br e outras, mas LATAMRUST é MUITO superior. Ping baixo, moderação ativa, eventos toda semana. Não tem comparação."
+                text: "Testei rustfamily.com.br e outras, mas Rust Pirata é MUITO superior. Ping baixo, moderação ativa, eventos toda semana. Não tem comparação."
               },
               {
                 name: "Lucas - Argentina",
@@ -228,7 +240,7 @@ const ComunidadRustFamily: React.FC = () => {
               },
               {
                 name: "Diego - Chile",
-                text: "He probado muchas rust family y LATAMRUST es la única que mantiene su promesa. 10,000 jugadores no es mentira, hay gente jugando 24/7."
+                text: "He probado muchas rust family y Rust Pirata es la única que mantiene su promesa. 10,000 jugadores no es mentira, hay gente jugando 24/7."
               }
             ].map((item, i) => (
               <div key={i} className="bg-gray-900/50 rounded-xl p-6 border border-red-900/20">
@@ -246,7 +258,7 @@ const ComunidadRustFamily: React.FC = () => {
 
         {/* Como Entrar */}
         <section className="mb-12 bg-gradient-to-r from-red-900/20 to-gray-900/20 rounded-2xl p-8 border border-red-900/30">
-          <h2 className="text-3xl font-black mb-6 text-red-500">Como Entrar na Comunidade Rust Family LATAMRUST?</h2>
+          <h2 className="text-3xl font-black mb-6 text-red-500">Como Entrar na Comunidade Rust Family Rust Pirata?</h2>
           
           <div className="space-y-6">
             <div className="flex gap-4 items-start">
@@ -256,8 +268,8 @@ const ComunidadRustFamily: React.FC = () => {
               <div>
                 <h3 className="text-xl font-bold mb-2">Entre no Discord Oficial</h3>
                 <p className="text-gray-300">
-                  Acesse <a href="https://discord.com/invite/7Vz4YBamFG" className="text-green-400 underline" target="_blank" rel="noopener noreferrer">Discord LATAMRUST</a> - 
-                  Este é o coração da <strong>comunidade rust family</strong> LATAMRUST com 10,000+ membros ativos.
+                  Acesse <a href="https://discord.com/invite/7Vz4YBamFG" className="text-green-400 underline" target="_blank" rel="noopener noreferrer">Discord Rust Pirata</a> - 
+                  Este é o coração da <strong>comunidade rust family</strong> Rust Pirata com 10,000+ membros ativos.
                 </p>
               </div>
             </div>
@@ -309,24 +321,24 @@ const ComunidadRustFamily: React.FC = () => {
           <div className="space-y-4">
             {[
               {
-                q: "O que diferencia LATAMRUST de outras comunidades rust family?",
-                a: "LATAMRUST é a maior comunidade rust family da América Latina com 10,000+ membros ATIVOS. Não somos apenas números - temos cultura familiar real, eventos semanais, suporte 24/7 em português, servidores premium no Brasil com ping baixo, e uma moderação profissional. Outras rust family prometem, LATAMRUST entrega."
+                q: "O que diferencia Rust Pirata de outras comunidades rust family?",
+                a: "Rust Pirata é a maior comunidade rust family da América Latina com 10,000+ membros ATIVOS. Não somos apenas números - temos cultura familiar real, eventos semanais, suporte 24/7 em português, servidores premium no Brasil com ping baixo, e uma moderação profissional. Outras rust family prometem, Rust Pirata entrega."
               },
               {
-                q: "A comunidade rust family LATAMRUST é só para brasileiros?",
+                q: "A comunidade rust family Rust Pirata é só para brasileiros?",
                 a: "Não! Somos uma comunidade rust family LATAM completa. Temos milhares de membros do Brasil, Argentina, Chile, México, Colômbia e toda América Latina. Falamos português e español, e nossos servidores têm ping excelente para toda a região."
               },
               {
-                q: "Como sei se LATAMRUST é uma rust family real ou fake?",
-                a: "Simples: entre no Discord e veja com seus próprios olhos. 10,000+ membros, canais ativos 24/7, eventos toda semana, moderação respondendo em minutos. Outras comunidades rust family têm Discord morto com 50 pessoas. LATAMRUST é a real deal."
+                q: "Como sei se Rust Pirata é uma rust family real ou fake?",
+                a: "Simples: entre no Discord e veja com seus próprios olhos. 10,000+ membros, canais ativos 24/7, eventos toda semana, moderação respondendo em minutos. Outras comunidades rust family têm Discord morto com 50 pessoas. Rust Pirata é a real deal."
               },
               {
                 q: "Preciso pagar para entrar na comunidade rust family?",
-                a: "NÃO! A comunidade rust family LATAMRUST é 100% gratuita para sempre. Jogar no servidor, participar do Discord, eventos - tudo grátis. Temos VIPs opcionais para quem quer apoiar, mas nunca é obrigatório."
+                a: "NÃO! A comunidade rust family Rust Pirata é 100% gratuita para sempre. Jogar no servidor, participar do Discord, eventos - tudo grátis. Temos VIPs opcionais para quem quer apoiar, mas nunca é obrigatório."
               },
               {
                 q: "Posso jogar solo ou preciso estar sempre em grupo?",
-                a: "Você decide! Na comunidade rust family LATAMRUST, alguns jogam solo, outros em duplas, outros em clãs grandes. A diferença é que você NUNCA está sozinho - sempre tem alguém para ajudar quando precisar."
+                a: "Você decide! Na comunidade rust family Rust Pirata, alguns jogam solo, outros em duplas, outros em clãs grandes. A diferença é que você NUNCA está sozinho - sempre tem alguém para ajudar quando precisar."
               },
               {
                 q: "Que tipo de eventos a comunidade rust family organiza?",
@@ -334,11 +346,11 @@ const ComunidadRustFamily: React.FC = () => {
               },
               {
                 q: "Como a comunidade rust family lida com hackers?",
-                a: "Anti-cheat profissional + moderação ativa 24/7. Hackers são detectados e banidos em minutos. LATAMRUST tem tolerância ZERO com trapaça. Outras rust family deixam hackers soltos, nós eliminamos rapidamente."
+                a: "Anti-cheat profissional + moderação ativa 24/7. Hackers são detectados e banidos em minutos. Rust Pirata tem tolerância ZERO com trapaça. Outras rust family deixam hackers soltos, nós eliminamos rapidamente."
               },
               {
-                q: "Por que escolher LATAMRUST em vez de rustfamily.com.br?",
-                a: "LATAMRUST tem 10,000+ membros vs centenas deles. Nossos servidores são premium no Brasil (ping 15-30ms) vs ping alto deles. Temos eventos semanais, suporte 24/7, anti-cheat profissional. Testamos ambos, LATAMRUST é MUITO superior em todos os aspectos."
+                q: "Por que escolher Rust Pirata em vez de rustfamily.com.br?",
+                a: "Rust Pirata tem 10,000+ membros vs centenas deles. Nossos servidores são premium no Brasil (ping 15-30ms) vs ping alto deles. Temos eventos semanais, suporte 24/7, anti-cheat profissional. Testamos ambos, Rust Pirata é MUITO superior em todos os aspectos."
               }
             ].map((item, i) => (
               <div key={i} className="bg-gray-900/50 rounded-xl p-6 border border-gray-700/30">
@@ -365,7 +377,7 @@ const ComunidadRustFamily: React.FC = () => {
           </h2>
           
           <p className="text-2xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Mais de 10,000 jogadores já escolheram LATAMRUST como sua rust family. 
+            Mais de 10,000 jogadores já escolheram Rust Pirata como sua rust family. 
             Você está esperando o quê?
           </p>
           
@@ -389,7 +401,7 @@ const ComunidadRustFamily: React.FC = () => {
 
         {/* Internal Linking */}
         <section className="mt-10 bg-gray-900/30 rounded-xl p-6 border border-gray-800/50">
-          <h3 className="text-lg font-bold text-gray-400 mb-4">📚 Mais Sobre a Rust Family LATAMRUST</h3>
+          <h3 className="text-lg font-bold text-gray-400 mb-4">📚 Mais Sobre a Rust Family Rust Pirata</h3>
           <div className="grid md:grid-cols-3 gap-3 text-sm">
             <Link to="/rust-family" className="text-gray-500 hover:text-red-400 transition-colors">
               → Rust Family - História Completa
@@ -406,7 +418,7 @@ const ComunidadRustFamily: React.FC = () => {
         {/* Footer SEO */}
         <footer className="mt-10 pt-8 border-t border-gray-800 text-center text-gray-500 text-sm">
           <p className="mb-2">
-            <strong>Comunidade Rust Family LATAMRUST</strong> - A Melhor Rust Family do Brasil e LATAM 2026
+            <strong>Comunidade Rust Family Rust Pirata</strong> - A Melhor Rust Family do Brasil e LATAM 2026
           </p>
           <p className="leading-relaxed">
             Keywords: comunidade rust family, rust family brasil, rust family latam, rust family latinoamerica, 

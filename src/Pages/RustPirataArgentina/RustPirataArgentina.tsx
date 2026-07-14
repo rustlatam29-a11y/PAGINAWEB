@@ -1,4 +1,4 @@
-import React from "react";
+﻿import React from "react";
 import { Download, Server, Users, Zap } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
@@ -7,27 +7,27 @@ const RustPirataArgentina: React.FC = () => {
   return (
     <div className="min-h-screen bg-black text-white">
       <Helmet>
-        <title>Rust Pirata Argentina 🇦🇷 Descargar Gratis 2026 - LATAMRUST #1</title>
+        <title>Rust Pirata Argentina 🇦🇷 Descargar Gratis 2026 - Rust Pirata #1</title>
         <meta name="description" content="Servidor #1 de Rust Pirata en Argentina. Ping bajo 40-60ms desde Buenos Aires, Córdoba, Rosario. +10.000 jugadores activos. 100% gratis, sin lag. ¡Jugá ahora!" />
         
         {/* Open Graph / Facebook */}
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://latamrust.online/rust-pirata-argentina" />
-        <meta property="og:title" content="Rust Pirata Argentina 🇦🇷 - Servidor #1 LATAMRUST" />
+        <meta property="og:url" content="https://Rust Pirata.vercel.app/rust-pirata-argentina/" />
+        <meta property="og:title" content="Rust Pirata Argentina 🇦🇷 - Servidor #1 Rust Pirata" />
         <meta property="og:description" content="El mejor servidor de Rust Pirata en Argentina con ping bajo y más de 10.000 jugadores. 100% gratis, sin lag." />
-        <meta property="og:image" content="https://latamrust.online/LATAMLOGO.webp" />
+        <meta property="og:image" content="https://Rust Pirata.vercel.app/rust-old-school-logo.webp" />
         <meta property="og:locale" content="es_AR" />
         
         {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:url" content="https://latamrust.online/rust-pirata-argentina" />
-        <meta name="twitter:title" content="Rust Pirata Argentina 🇦🇷 - Servidor #1 LATAMRUST" />
+        <meta name="twitter:url" content="https://Rust Pirata.vercel.app/rust-pirata-argentina" />
+        <meta name="twitter:title" content="Rust Pirata Argentina 🇦🇷 - Servidor #1 Rust Pirata" />
         <meta name="twitter:description" content="El mejor servidor de Rust Pirata en Argentina con ping bajo y más de 10.000 jugadores. 100% gratis, sin lag." />
-        <meta name="twitter:image" content="https://latamrust.online/LATAMLOGO.webp" />
+        <meta name="twitter:image" content="https://Rust Pirata.vercel.app/rust-old-school-logo.webp" />
         
         {/* Additional SEO */}
         <meta name="keywords" content="rust pirata argentina, rust pirata gratis argentina, servidor rust pirata argentina, descargar rust pirata argentina, rust pirata 2026 argentina, rust pirata buenos aires, rust pirata cordoba, rust pirata rosario" />
-        <link rel="canonical" href="https://latamrust.online/rust-pirata-argentina" />
+        <link rel="canonical" href="https://Rust Pirata.vercel.app/rust-pirata-argentina/" />
         <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
         
         {/* Structured Data - Organization */}
@@ -35,22 +35,15 @@ const RustPirataArgentina: React.FC = () => {
           {JSON.stringify({
             "@context": "https://schema.org",
             "@type": "VideoGame",
-            "name": "Rust Pirata Argentina - LATAMRUST",
+            "name": "Rust Pirata Argentina - Rust Pirata",
             "description": "Servidor #1 de Rust Pirata en Argentina con ping bajo y más de 10.000 jugadores activos",
-            "url": "https://latamrust.online/rust-pirata-argentina",
+            "url": "https://Rust Pirata.vercel.app/rust-pirata-argentina",
             "operatingSystem": "Windows",
             "applicationCategory": "Game",
             "offers": {
               "@type": "Offer",
               "price": "0",
               "priceCurrency": "USD"
-            },
-            "aggregateRating": {
-              "@type": "AggregateRating",
-              "ratingValue": "4.8",
-              "ratingCount": "10000",
-              "bestRating": "5",
-              "worstRating": "1"
             },
             "inLanguage": "es-AR",
             "countryOfOrigin": "Argentina"
@@ -65,7 +58,7 @@ const RustPirataArgentina: React.FC = () => {
             Rust Pirata Argentina - Descargar Gratis 2026
           </h1>
           <p className="text-xl text-gray-300 mb-8">
-            Servidor LATAMRUST - El mejor servidor de Rust Pirata en Argentina con ping bajo y más de 10.000 jugadores
+            Servidor Rust Pirata - El mejor servidor de Rust Pirata en Argentina con ping bajo y más de 10.000 jugadores
           </p>
           <div className="flex flex-wrap gap-4 justify-center">
             <Link 
@@ -103,13 +96,13 @@ const RustPirataArgentina: React.FC = () => {
           <p className="text-lg text-gray-300 leading-relaxed mb-4">
             El <strong>Rust Pirata Argentina</strong> se ha vuelto extremadamente popular en el país debido a que permite jugar 
             gratuitamente sin necesidad de comprar el juego en Steam. Con más de 10.000 jugadores activos diariamente en LATAM, miles 
-            son argentinos que disfrutan del mejor servidor de Rust Pirata de la región. LATAMRUST tiene servidores con excelente 
+            son argentinos que disfrutan del mejor servidor de Rust Pirata de la región. Rust Pirata tiene servidores con excelente 
             conectividad para Argentina, garantizando ping bajo de 40-60ms desde Buenos Aires, CABA, GBA, Córdoba, Rosario, Mendoza, 
             La Plata, Mar del Plata, Tucumán y todas las provincias argentinas.
           </p>
 
           <p className="text-lg text-gray-300 leading-relaxed mb-4">
-            A diferencia de otros servidores piratas inseguros o mal administrados, LATAMRUST es profesional y confiable. Contamos con 
+            A diferencia de otros servidores piratas inseguros o mal administrados, Rust Pirata es profesional y confiable. Contamos con 
             sistema anti-cheat que bane hackers automáticamente, moderación en español argentino que entiende la cultura y el lenguaje 
             local, soporte técnico 24/7 en español, actualizaciones constantes, backup diario de datos y hardware dedicado de alta 
             performance. Podés <strong>descargar Rust pirata gratis</strong> con total seguridad, sin virus, sin malware y sin costos 
@@ -124,13 +117,13 @@ const RustPirataArgentina: React.FC = () => {
           </p>
         </section>
 
-        {/* SECCIÓN 2: Por Qué LATAMRUST es el Mejor para Argentina */}
+        {/* SECCIÓN 2: Por Qué Rust Pirata es el Mejor para Argentina */}
         <section className="mb-12">
-          <h2 className="text-3xl font-bold mb-6 text-red-500">Por Qué LATAMRUST es el Mejor Servidor Rust Pirata de Argentina</h2>
+          <h2 className="text-3xl font-bold mb-6 text-red-500">Por Qué Rust Pirata es el Mejor Servidor Rust Pirata de Argentina</h2>
           
           <h3 className="text-2xl font-bold mb-4 text-white">1. Conectividad Optimizada para Argentina - Ping Bajo Garantizado</h3>
           <p className="text-lg text-gray-300 mb-6 leading-relaxed">
-            LATAMRUST utiliza routing optimizado y servidores en ubicaciones estratégicas que garantizan excelente conectividad para 
+            Rust Pirata utiliza routing optimizado y servidores en ubicaciones estratégicas que garantizan excelente conectividad para 
             jugadores argentinos. El ping promedio es de 40-60ms desde Buenos Aires y CABA, 45-65ms desde Córdoba y Rosario, 50-70ms 
             desde Mendoza y Tucumán, y 60-80ms desde el interior del país. Esto es significativamente mejor que servidores internacionales 
             que suelen tener 200-400ms de latencia. Con ping bajo, tenés ventaja competitiva en combates PvP, construcción rápida sin 
@@ -139,7 +132,7 @@ const RustPirataArgentina: React.FC = () => {
 
           <h3 className="text-2xl font-bold mb-4 text-white">2. Comunidad Argentina Activa - Miles de Jugadores Argentinos</h3>
           <p className="text-lg text-gray-300 mb-6 leading-relaxed">
-            LATAMRUST tiene la comunidad argentina más grande y activa de Rust Pirata. Con miles de argentinos conectados diariamente, 
+            Rust Pirata tiene la comunidad argentina más grande y activa de Rust Pirata. Con miles de argentinos conectados diariamente, 
             siempre encontrás gente para jugar, armar clanes, hacer trades, participar en raids y eventos. El Discord oficial tiene 
             canales específicos en español argentino donde podés buscar clan, coordinar estrategias, hacer amigos y socializar. La 
             moderación entiende perfectamente el argentino, las expresiones locales y la cultura gaming del país. Organizamos torneos 
@@ -148,7 +141,7 @@ const RustPirataArgentina: React.FC = () => {
 
           <h3 className="text-2xl font-bold mb-4 text-white">3. Sistema Anti-Cheat Profesional - Juego Limpio Sin Hackers</h3>
           <p className="text-lg text-gray-300 mb-6 leading-relaxed">
-            LATAMRUST toma muy en serio el fair play. Nuestro sistema anti-cheat detecta y banea automáticamente jugadores usando hacks, 
+            Rust Pirata toma muy en serio el fair play. Nuestro sistema anti-cheat detecta y banea automáticamente jugadores usando hacks, 
             aimbots, ESP, wall hacks, speed hacks y cualquier tipo de trampa. Tenemos equipo de moderadores que analiza reportes 24/7 
             y toma acción inmediata contra hackers. Los baneos son permanentes e incluyen hardware ID ban para prevenir que los tramposos 
             vuelvan con cuentas nuevas. Resultado: ambiente de juego limpio donde la habilidad real es lo que cuenta.
@@ -156,7 +149,7 @@ const RustPirataArgentina: React.FC = () => {
 
           <h3 className="text-2xl font-bold mb-4 text-white">4. Soporte en Español Argentino 24/7 - Te Entendemos</h3>
           <p className="text-lg text-gray-300 mb-6 leading-relaxed">
-            A diferencia de servidores internacionales donde tenés que comunicarte en inglés, LATAMRUST ofrece soporte completo en 
+            A diferencia de servidores internacionales donde tenés que comunicarte en inglés, Rust Pirata ofrece soporte completo en 
             español argentino. Nuestros moderadores y admins entienden perfectamente el lunfardo, las expresiones locales y la cultura 
             argentina. Podés abrir tickets en Discord en español, reportar problemas, pedir ayuda técnica, reportar hackers y recibir 
             asistencia rápida. Tiempo promedio de respuesta: menos de 30 minutos para problemas urgentes.
@@ -164,7 +157,7 @@ const RustPirataArgentina: React.FC = () => {
 
           <h3 className="text-2xl font-bold mb-4 text-white">5. Actualizaciones Constantes - Siempre la Versión Más Nueva</h3>
           <p className="text-lg text-gray-300 mb-6 leading-relaxed">
-            LATAMRUST mantiene el Rust Pirata siempre actualizado a la build 2275. Aplicamos parches de seguridad semanalmente, 
+            Rust Pirata mantiene el Rust Pirata siempre actualizado a la build 2275. Aplicamos parches de seguridad semanalmente, 
             corregimos bugs reportados por la comunidad e implementamos nuevas features apenas están disponibles. El servidor nunca 
             se queda en versiones viejas - siempre tenés acceso al contenido más reciente del Rust.
           </p>
@@ -172,7 +165,7 @@ const RustPirataArgentina: React.FC = () => {
 
         {/* Ventajas Argentina */}
         <section className="mb-12 bg-gray-900/50 rounded-2xl p-8">
-          <h2 className="text-3xl font-bold mb-6 text-red-500">Por Qué LATAMRUST es el Mejor Servidor Rust Pirata Argentina</h2>
+          <h2 className="text-3xl font-bold mb-6 text-red-500">Por Qué Rust Pirata es el Mejor Servidor Rust Pirata Argentina</h2>
           
           <div className="grid md:grid-cols-2 gap-6">
             <div className="bg-black/40 rounded-xl p-6 border border-blue-900/30">
@@ -223,9 +216,9 @@ const RustPirataArgentina: React.FC = () => {
                 1
               </div>
               <div>
-                <h3 className="text-xl font-bold mb-2">Unite al Discord LATAMRUST</h3>
+                <h3 className="text-xl font-bold mb-2">Unite al Discord Rust Pirata</h3>
                 <p className="text-gray-300">
-                  Entrá a nuestro Discord oficial en <a href="https://discord.com/invite/7Vz4YBamFG" className="text-green-400 underline" target="_blank" rel="noopener noreferrer">Discord LATAMRUST</a>. 
+                  Entrá a nuestro Discord oficial en <a href="https://discord.com/invite/7Vz4YBamFG" className="text-green-400 underline" target="_blank" rel="noopener noreferrer">Discord Rust Pirata</a>. 
                   Todos los links para <strong>descargar rust pirata argentina</strong> están en #downloads.
                 </p>
               </div>
@@ -293,7 +286,7 @@ const RustPirataArgentina: React.FC = () => {
             <div className="bg-gray-800/50 backdrop-blur-lg rounded-xl p-6 border border-gray-700/50">
               <h3 className="text-lg font-bold text-red-400 mb-2">¿Rust Pirata funciona bien en Argentina?</h3>
               <p className="text-gray-300">
-                Sí, <strong>Rust Pirata Argentina</strong> funciona perfectamente. LATAMRUST tiene servidores optimizados para LATAM 
+                Sí, <strong>Rust Pirata Argentina</strong> funciona perfectamente. Rust Pirata tiene servidores optimizados para LATAM 
                 con ping de 40-60ms desde Buenos Aires, Córdoba, Rosario, Mendoza y toda Argentina. Thousands de argentinos juegan 
                 sin problemas todos los días.
               </p>
@@ -303,14 +296,14 @@ const RustPirataArgentina: React.FC = () => {
               <h3 className="text-lg font-bold text-red-400 mb-2">¿Es gratis Rust Pirata en Argentina?</h3>
               <p className="text-gray-300">
                 Sí, <strong>Rust Pirata es 100% gratis</strong> en Argentina y todo el mundo. Podés <strong>descargar rust pirata gratis</strong> 
-                desde el Discord de LATAMRUST y jugar ilimitadamente sin pagar nada. No hay costos ocultos, es gratis para siempre che.
+                desde el Discord de Rust Pirata y jugar ilimitadamente sin pagar nada. No hay costos ocultos, es gratis para siempre che.
               </p>
             </div>
 
             <div className="bg-gray-800/50 backdrop-blur-lg rounded-xl p-6 border border-gray-700/50">
               <h3 className="text-lg font-bold text-red-400 mb-2">¿Cuánto ping tengo desde Argentina?</h3>
               <p className="text-gray-300">
-                El ping desde Argentina al <strong>servidor rust pirata</strong> LATAMRUST es de 40-60ms desde Buenos Aires, 
+                El ping desde Argentina al <strong>servidor rust pirata</strong> Rust Pirata es de 40-60ms desde Buenos Aires, 
                 Córdoba, Rosario y principales ciudades. Desde el interior puede ser 60-80ms. Es el mejor ping que vas a encontrar 
                 en cualquier <strong>servidor rust argentina</strong>.
               </p>
@@ -319,7 +312,7 @@ const RustPirataArgentina: React.FC = () => {
             <div className="bg-gray-800/50 backdrop-blur-lg rounded-xl p-6 border border-gray-700/50">
               <h3 className="text-lg font-bold text-red-400 mb-2">¿Hay argentinos jugando Rust Pirata?</h3>
               <p className="text-gray-300">
-                ¡Claro boludo! Miles de argentinos juegan <strong>Rust Pirata Argentina</strong> en LATAMRUST todos los días. 
+                ¡Claro boludo! Miles de argentinos juegan <strong>Rust Pirata Argentina</strong> en Rust Pirata todos los días. 
                 Tenemos clan argentino oficial, moderadores argentinos que hablan bien porteño, y eventos especiales para la comunidad argentina. 
                 Es el <strong>servidor rust argentina</strong> con más jugadores argentinos.
               </p>
@@ -328,8 +321,8 @@ const RustPirataArgentina: React.FC = () => {
             <div className="bg-gray-800/50 backdrop-blur-lg rounded-xl p-6 border border-gray-700/50">
               <h3 className="text-lg font-bold text-red-400 mb-2">¿Es seguro descargar Rust Pirata en Argentina?</h3>
               <p className="text-gray-300">
-                Sí, <strong>descargar Rust Pirata desde LATAMRUST es 100% seguro</strong>. Sin virus, sin malware, sin trampas. 
-                Más de 10.000 argentinos confían en nosotros. Solo descargá desde los links oficiales del Discord de LATAMRUST, 
+                Sí, <strong>descargar Rust Pirata desde Rust Pirata es 100% seguro</strong>. Sin virus, sin malware, sin trampas. 
+                Más de 10.000 argentinos confían en nosotros. Solo descargá desde los links oficiales del Discord de Rust Pirata, 
                 nunca de otros lados che.
               </p>
             </div>
@@ -347,7 +340,7 @@ const RustPirataArgentina: React.FC = () => {
 
         {/* CTA Final */}
         <section className="text-center bg-gradient-to-r from-red-900/20 to-black rounded-2xl p-8 border border-red-900/30 mb-8">
-          <h2 className="text-3xl font-bold mb-4">Unite a Miles de Argentinos en LATAMRUST</h2>
+          <h2 className="text-3xl font-bold mb-4">Unite a Miles de Argentinos en Rust Pirata</h2>
           <p className="text-xl text-gray-300 mb-6">
             El mejor <strong>servidor Rust Pirata Argentina</strong> te está esperando. 
             Descargá gratis, conectate y empezá a jugar con la comunidad argentina más grande de Rust.

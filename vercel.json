@@ -4,8 +4,61 @@
   "framework": "vite",
   "rewrites": [
     {
-      "source": "/((?!assets/|google.*\\.html$|.*\\.webp$|.*\\.svg$|.*\\.png$|.*\\.jpg$|.*\\.ico$|robots\\.txt$|sitemap\\.xml$|rust-pirata-brasil/|rust-pirata-argentina/|rust-pirata-mexico/|rust-pirata-chile/|rust-pirata-colombia/|rust-pirata-peru/|rust-pirata-uruguay/|rust-pirata-paraguay/|rust-pirata-ecuador/|rust-pirata-bolivia/|rust-pirata-venezuela/|baixar-rust-pirata-brasil/|rust-2275-brasil/|rust-2388-brasil/|rust-pirata-gratis/|rust-pirata-sin-steam/|configurar-servidor-rust/|plugins-oxide-rust/|como-crear-servidor-rust-pirata/|mejores-plugins-rust-pirata/|descargar-rust-pirata/|rust-2275-oldrecoil/|rust-2388-actualizado/|servidores-rust-pirata/|dayz/|comunidade-rust-family/|servidor-rust-family/).*)",
+      "source": "/((?!assets/|foro/|google.*\\.html$|.*\\.webp$|.*\\.svg$|.*\\.png$|.*\\.jpg$|.*\\.ico$|robots\\.txt$|sitemap\\.xml$|feed\\.xml$|rust-pirata-brasil/|rust-pirata-argentina/|rust-pirata-mexico/|rust-pirata-chile/|rust-pirata-colombia/|rust-pirata-peru/|rust-pirata-uruguay/|rust-pirata-paraguay/|rust-pirata-ecuador/|rust-pirata-bolivia/|rust-pirata-venezuela/|baixar-rust-pirata-brasil/|rust-2275-brasil/|rust-2388-brasil/|rust-pirata-gratis/|rust-pirata-sin-steam/|configurar-servidor-rust/|como-crear-servidor-rust-pirata/|descargar-rust-pirata/|rust-2275-oldrecoil/|rust-2388-actualizado/|servidores-rust-pirata/|dayz/|rust-pirata-seguro/|rust-pirata-online/|rust-pirata-2275-vs-2388/|rust-pirata-como-jugar/|jugar-rust-pirata-gratis/|rust-pirata-costa-rica/|rust-pirata-guatemala/|rust-pirata-honduras/|rust-pirata-el-salvador/|rust-pirata-nicaragua/|rust-pirata-panama/|rust-pirata-republica-dominicana/|rust-pirata-puerto-rico/|rust-2275-descargar/|rust-pirata-consejos/|rust-old-school-2275/|rust-pirata-requisitos/|rust-pirata-hosting/|rust-pirata-wipe/|rust-pirata-descargar-gratis/|rust-pirata-tutorial/).*)",
       "destination": "/index.html"
+    }
+  ],
+  "redirects": [
+    {
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "latamrust.vercel.app"
+        }
+      ],
+      "destination": "https://latamrust.online/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/:path((?!.*\\.[a-zA-Z0-9]{2,6}$)(?<!\\/$).+)",
+      "destination": "/:path/",
+      "permanent": true
+    },
+    {
+      "source": "/mejores-plugins-rust-pirata/:path*",
+      "destination": "/servidores-rust-pirata/",
+      "permanent": true
+    },
+    {
+      "source": "/rust-family/:path*",
+      "destination": "/rust-pirata-brasil/",
+      "permanent": true
+    },
+    {
+      "source": "/comunidade-rust-family/:path*",
+      "destination": "/rust-pirata-brasil/",
+      "permanent": true
+    },
+    {
+      "source": "/servidor-rust-family/:path*",
+      "destination": "/rust-old-school-2275/",
+      "permanent": true
+    },
+    {
+      "source": "/latamrust/:path*",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/vip/:path*",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/vips/:path*",
+      "destination": "/",
+      "permanent": true
     }
   ],
   "headers": [
@@ -40,7 +93,43 @@
       ]
     },
     {
+      "source": "/(.*).html",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=3600, stale-while-revalidate=86400"
+        }
+      ]
+    },
+    {
       "source": "/(.*).webp",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
+      ]
+    },
+    {
+      "source": "/(.*).png",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
+      ]
+    },
+    {
+      "source": "/(.*).jpg",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
+      ]
+    },
+    {
+      "source": "/(.*).gif",
       "headers": [
         {
           "key": "Cache-Control",

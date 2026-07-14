@@ -1,4 +1,4 @@
-import React from "react";
+﻿import React from "react";
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import { ArrowRight, Download, Shield, Zap, Crosshair, Package } from "lucide-react";
@@ -7,20 +7,20 @@ const Rust2275OldRecoil: React.FC = () => {
   return (
     <div className="min-h-screen bg-black text-white">
       <Helmet>
-        <title>Rust 2275 OldRecoil - Descargar Gratis 2026 | Servidor #1 LATAMRUST</title>
-        <meta name="description" content="Rust 2275 OldRecoil la version clasica favorita. Recoil original, +30,000 plugins, AntiCheat profesional. Servidores con ping bajo LATAM. Descarga gratis." />
+        <title>Rust 2275 OldRecoil - Descargar Gratis 2026 | Servidor #1 Rust Pirata</title>
+        <meta name="description" content="Rust 2275 OldRecoil la version clasica favorita. Recoil original, plugins, AntiCheat profesional. Servidores con ping bajo LATAM. Descarga gratis." />
         <meta name="keywords" content="rust 2275, rust 2275 oldrecoil, rust 2275 descargar, rust oldrecoil, rust clasico, rust recoil original, rust 2275 gratis, rust 2275 pc, server rust 2275, servidor rust 2275, rust 2275 2026, como jugar rust 2275, rust 2275 online" />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://latamrust.online/rust-2275-oldrecoil" />
-        <meta property="og:title" content="Rust 2275 OldRecoil - Descargar Gratis 2026 | LATAMRUST" />
-        <meta property="og:description" content="Rust 2275 OldRecoil, la version clasica favorita. Recoil original, +30,000 plugins. Servidores LATAM." />
-        <meta property="og:image" content="https://latamrust.online/LATAMLOGO.webp" />
+        <meta property="og:url" content="https://Rust Pirata.vercel.app/rust-2275-oldrecoil/" />
+        <meta property="og:title" content="Rust 2275 OldRecoil - Descargar Gratis 2026 | Rust Pirata" />
+        <meta property="og:description" content="Rust 2275 OldRecoil, la version clasica favorita. Recoil original, plugins. Servidores LATAM." />
+        <meta property="og:image" content="https://Rust Pirata.vercel.app/rust-old-school-logo.webp" />
         <meta property="og:locale" content="es_ES" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Rust 2275 OldRecoil - Descargar Gratis 2026" />
         <meta name="twitter:description" content="La version clasica de Rust con recoil original. Descarga gratis y juega en servidores LATAM." />
-        <meta name="twitter:image" content="https://latamrust.online/LATAMLOGO.webp" />
-        <link rel="canonical" href="https://latamrust.online/rust-2275-oldrecoil" />
+        <meta name="twitter:image" content="https://Rust Pirata.vercel.app/rust-old-school-logo.webp" />
+        <link rel="canonical" href="https://Rust Pirata.vercel.app/rust-2275-oldrecoil/" />
         <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
 
         <script type="application/ld+json">
@@ -32,9 +32,8 @@ const Rust2275OldRecoil: React.FC = () => {
             "gamePlatform": ["PC"],
             "applicationCategory": "Game",
             "operatingSystem": "Windows",
-            "description": "Rust 2275 OldRecoil, la version clasica de Rust con recoil original. Descarga gratis y juega en servidores LATAM con +30,000 plugins.",
+            "description": "Rust 2275 OldRecoil, la version clasica de Rust con recoil original. Descarga gratis y juega en servidores LATAM con plugins.",
             "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD", "availability": "https://schema.org/InStock"},
-            "aggregateRating": {"@type": "AggregateRating", "ratingValue": "4.9", "ratingCount": "15000", "bestRating": "5", "worstRating": "1"},
             "inLanguage": ["es", "pt-BR"],
             "keywords": "rust 2275, rust 2275 oldrecoil, rust 2275 gratis, rust clasico, servidor rust 2275"
           })}
@@ -59,8 +58,8 @@ const Rust2275OldRecoil: React.FC = () => {
             "@context": "https://schema.org",
             "@type": "BreadcrumbList",
             "itemListElement": [
-              {"@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://latamrust.online/"},
-              {"@type": "ListItem", "position": 2, "name": "Rust 2275 OldRecoil", "item": "https://latamrust.online/rust-2275-oldrecoil"}
+              {"@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://Rust Pirata.vercel.app/"},
+              {"@type": "ListItem", "position": 2, "name": "Rust 2275 OldRecoil", "item": "https://Rust Pirata.vercel.app/rust-2275-oldrecoil"}
             ]
           })}
         </script>
@@ -78,7 +77,7 @@ const Rust2275OldRecoil: React.FC = () => {
           </h1>
           <p className="text-xl text-gray-300 mb-8 leading-relaxed">
             La version clasica favorita de la comunidad. <strong className="text-white">Recoil original que todos conocen y aman.</strong> 
-            +30,000 plugins. Servidores con ping bajo LATAM.
+            plugins. Servidores con ping bajo LATAM.
           </p>
           <div className="flex flex-wrap gap-4 justify-center">
             <a href="https://discord.com/invite/7Vz4YBamFG" target="_blank" rel="noopener noreferrer" className="px-8 py-4 bg-red-600 hover:bg-red-700 rounded-xl font-bold text-lg transition-all transform hover:scale-105 flex items-center gap-2">
@@ -187,9 +186,9 @@ const Rust2275OldRecoil: React.FC = () => {
 
         {/* Server */}
         <section className="mb-12 bg-gray-900/50 rounded-2xl p-8">
-          <h2 className="text-3xl font-bold mb-6 text-red-500">Servidor Rust 2275 OldRecoil - LATAMRUST</h2>
+          <h2 className="text-3xl font-bold mb-6 text-red-500">Servidor Rust 2275 OldRecoil - Rust Pirata</h2>
           <p className="text-gray-300 mb-6">
-            LATAMRUST ofrece el mejor <strong>servidor Rust 2275 OldRecoil</strong> de Latinoamerica. Con mas de 10,000 jugadores activos, 
+            Rust Pirata ofrece el mejor <strong>servidor Rust 2275 OldRecoil</strong> de Latinoamerica. Con mas de 10,000 jugadores activos, 
             ping bajo desde Brasil, Argentina, Mexico y todos los paises LATAM, es la comunidad ideal para jugar Rust 2275.
           </p>
           <div className="grid md:grid-cols-3 gap-4">
@@ -232,7 +231,7 @@ const Rust2275OldRecoil: React.FC = () => {
           <Crosshair className="w-16 h-16 text-red-500 mx-auto mb-4" />
           <h2 className="text-4xl font-black mb-4">Descarga Rust 2275 OldRecoil Gratis</h2>
           <p className="text-xl text-gray-300 mb-6">
-            La version clasica favorita. Recoil original, +30,000 plugins.
+            La version clasica favorita. Recoil original, plugins.
           </p>
           <a href="https://discord.com/invite/7Vz4YBamFG" target="_blank" rel="noopener noreferrer" className="inline-block px-10 py-5 bg-red-600 hover:bg-red-700 rounded-xl font-bold text-xl transition-all transform hover:scale-105">
             DESCARGAR RUST 2275 AHORA

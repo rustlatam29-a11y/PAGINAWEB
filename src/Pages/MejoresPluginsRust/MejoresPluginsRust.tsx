@@ -1,4 +1,4 @@
-import React from "react";
+﻿import React from "react";
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import { CheckCircle, ArrowRight, Star, Zap, Package } from "lucide-react";
@@ -41,20 +41,20 @@ const MejoresPluginsRust: React.FC = () => {
   return (
     <div className="min-h-screen bg-black text-white">
       <Helmet>
-        <title>Mejores Plugins Rust Pirata 2026 - Top 30+ Plugins Gratis | LATAMRUST</title>
+        <title>Mejores Plugins Rust Pirata 2026 - Top 30+ Plugins Gratis | Rust Pirata</title>
         <meta name="description" content="Los mejores plugins gratis para Rust Pirata 2275 y 2388. Kits, economia, anti-cheat, tiendas, VIP, mochilas y mas. Lista completa actualizada 2026 con +30 plugins." />
         <meta name="keywords" content="mejores plugins rust pirata, plugins rust 2275, plugins rust 2388, oxide plugins rust, umod plugins, plugins gratis rust, tienda plugins rust, economia rust, kits rust, anti-cheat rust, mochilas rust, plugins server rust" />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://latamrust.online/mejores-plugins-rust-pirata" />
+        <meta property="og:url" content="https://Rust Pirata.vercel.app/mejores-plugins-rust-pirata/" />
         <meta property="og:title" content="Mejores Plugins Rust Pirata 2026 - Top 30+ Plugins Gratis" />
         <meta property="og:description" content="Los mejores plugins gratis para servidores Rust Pirata. Kits, economia, tiendas, anti-cheat y mas." />
-        <meta property="og:image" content="https://latamrust.online/LATAMLOGO.webp" />
+        <meta property="og:image" content="https://Rust Pirata.vercel.app/rust-old-school-logo.webp" />
         <meta property="og:locale" content="es_ES" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Mejores Plugins Rust Pirata 2026" />
         <meta name="twitter:description" content="Top 30+ plugins gratis para servidores Rust Pirata 2275 y 2388." />
-        <meta name="twitter:image" content="https://latamrust.online/LATAMLOGO.webp" />
-        <link rel="canonical" href="https://latamrust.online/mejores-plugins-rust-pirata" />
+        <meta name="twitter:image" content="https://Rust Pirata.vercel.app/rust-old-school-logo.webp" />
+        <link rel="canonical" href="https://Rust Pirata.vercel.app/mejores-plugins-rust-pirata/" />
         <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
 
         <script type="application/ld+json">
@@ -98,8 +98,8 @@ const MejoresPluginsRust: React.FC = () => {
             "@context": "https://schema.org",
             "@type": "BreadcrumbList",
             "itemListElement": [
-              {"@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://latamrust.online/"},
-              {"@type": "ListItem", "position": 2, "name": "Mejores Plugins Rust Pirata", "item": "https://latamrust.online/mejores-plugins-rust-pirata"}
+              {"@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://Rust Pirata.vercel.app/"},
+              {"@type": "ListItem", "position": 2, "name": "Mejores Plugins Rust Pirata", "item": "https://Rust Pirata.vercel.app/mejores-plugins-rust-pirata"}
             ]
           })}
         </script>
@@ -143,7 +143,7 @@ const MejoresPluginsRust: React.FC = () => {
             eventos, anti-cheat y mucho mas.
           </p>
           <p className="text-lg text-gray-300 leading-relaxed">
-            En <strong>LATAMRUST</strong> tenemos acceso a mas de 30,000 plugins compatibles con Rust 2275 y 2388. Los plugins se instalan 
+            En <strong>Rust Pirata</strong> tenemos acceso a plugins compatibles con Rust 2275 y 2388. Los plugins se instalan 
             facilmente usando <strong>Oxide</strong> o <strong>uMod</strong>, los sistemas de plugins mas populares para servidores Rust pirata.
           </p>
         </section>
@@ -275,7 +275,7 @@ const MejoresPluginsRust: React.FC = () => {
           <Package className="w-16 h-16 text-red-500 mx-auto mb-4" />
           <h2 className="text-4xl font-black mb-4">Instala los Mejores Plugins en tu Servidor</h2>
           <p className="text-xl text-gray-300 mb-6">
-            +30,000 plugins disponibles. Kits, economia, tiendas, anti-cheat y mas.
+            plugins disponibles. Kits, economia, tiendas, anti-cheat y mas.
           </p>
           <a href="https://discord.com/invite/7Vz4YBamFG" target="_blank" rel="noopener noreferrer" className="inline-block px-10 py-5 bg-red-600 hover:bg-red-700 rounded-xl font-bold text-xl transition-all transform hover:scale-105">
             INSTALAR PLUGINS AHORA

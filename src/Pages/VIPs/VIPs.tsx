@@ -1,13 +1,25 @@
-import React from "react";
+﻿import React from "react";
 import Header from "../../Components/Header/Header";
 import Footer from "../../Components/Footer/Footer";
 import GlobalBackground from "../../Components/GlobalBackground/GlobalBackground";
 import Breadcrumbs from "../../Components/Breadcrumbs/Breadcrumbs";
+import { Helmet } from "react-helmet-async";
 import { Zap, Globe, Star, Sparkles, Shield, Check, Crown, Rocket, Award, Gift } from "lucide-react";
 
 const VIPs: React.FC = () => {
   return (
     <GlobalBackground>
+      <Helmet>
+        <title>{'Planes VIP | Rust Pirata'}</title>
+        <meta name="description" content="Planes VIP premium para Rust Pirata. Servidores dedicados, soporte prioritario, plugins exclusivos." />
+        <meta name="robots" content="index, follow" />
+        <link rel="canonical" href="https://Rust Pirata.vercel.app/vip/" />
+        <meta property="og:title" content={'Planes VIP | Rust Pirata'} />
+        <meta property="og:description" content="Planes VIP premium para Rust Pirata. Servidores dedicados, soporte prioritario, plugins exclusivos." />
+        <meta property="og:url" content="https://Rust Pirata.vercel.app/vip/" />
+        <meta property="og:image" content="https://Rust Pirata.vercel.app/rust-old-school-logo.webp" />
+        <meta property="og:type" content="website" />
+      </Helmet>
       <Header />
       <Breadcrumbs />
       
@@ -30,7 +42,7 @@ const VIPs: React.FC = () => {
             </h1>
             
             <p className="text-gray-300 text-xl md:text-2xl max-w-3xl mx-auto font-light leading-relaxed mb-4">
-              Eleva tu experiencia en LATAMRUST al siguiente nivel
+              Eleva tu experiencia en Rust Pirata al siguiente nivel
             </p>
             
             <div className="flex flex-wrap items-center justify-center gap-4 text-sm md:text-base text-gray-400">
@@ -321,7 +333,7 @@ const VIPs: React.FC = () => {
             {/* CTA Final Mejorado */}
             <div className="text-center">
               <a 
-                href="https://wa.link/6wker8?text=Hola!%20Tengo%20dudas%20sobre%20los%20planes%20VIP%20de%20LATAMRUST" 
+                href="https://wa.link/6wker8?text=Hola!%20Tengo%20dudas%20sobre%20los%20planes%20VIP%20de%20Rust Pirata" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="inline-flex items-center space-x-3 px-10 py-5 bg-gradient-to-r from-red-600 to-red-800 hover:from-red-700 hover:to-red-900 text-white font-bold rounded-2xl transition-all duration-300 transform hover:scale-105 shadow-2xl hover:shadow-red-900/50 text-lg"

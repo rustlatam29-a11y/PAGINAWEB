@@ -14,64 +14,84 @@ const LanguageContext = createContext<LanguageContextType | undefined>(undefined
 
 const translations: Record<Language, Record<string, unknown>> = {
   es: {
-    // Header
-    "header.nav": ["Servicios", "Planes", "Proyectos", "FAQ"],
-    "header.tagline": "SERVIDORES PIRATAS!",
-    "header.dc": "DC DEV",
+    // ===== Header =====
+    "header.nav": ["Servidor", "Versión", "Videos", "Planes", "FAQ"],
+    "header.tagline": "SERVIDOR RUST OLD SCHOOL",
+    "header.brand": "RUST PIRATA",
 
-    // LatamrustBanner
+    // ===== Marca y servidor =====
+    "brand.name": "RUST PIRATA",
+    "brand.server": "RUST OLD SCHOOL",
+
+    // ===== Banner principal =====
     "banner.badge": "100% GRATIS · SIN STEAM",
     "banner.title": "RUST PIRATA",
-    "banner.subtitle": "Descargá Rust gratis sin comprarlo · Servidor activo 24/7",
-    "banner.desc": "Jugá y dominá el servidor. Descargá Rust de forma gratis sin comprarlo. Comunidad activa con +300 jugadores conectados. Rust 2275 OldRecoil con ping bajo y Anti-Cheat profesional.",
+    "banner.subtitle": "Descargá Rust gratis y jugá al servidor RUST OLD SCHOOL · Activo 24/7",
+    "banner.desc": "Jugá y dominá el servidor RUST OLD SCHOOL. Descargá Rust de forma gratis sin comprarlo. Comunidad activa con +300 jugadores conectados. Rust 2275 OldRecoil con ping bajo y Anti-Cheat profesional.",
     "banner.howTo": "¿CÓMO JUGAR GRATIS?",
     "banner.steps": [
       "Hacé clic en DESCARGAR (es gratis)",
-      "Descargá Rust Pirata 2275",
-      "Instalalo en tu PC",
-      "Conectate al servidor y jugá",
+      "Descargá Rust Pirata 2275 OldRecoil",
+      "Instalalo en tu PC sin Steam",
+      "Conectate al servidor RUST OLD SCHOOL y jugá",
     ],
-    "banner.cta": "⚡ DESCARGAR GRATIS",
+    "banner.cta": "DESCARGAR GRATIS",
     "banner.discord": "DISCORD",
-    "banner.stats": [
-      { value: "15ms", label: "PING LATAM" },
-      { value: "0", label: "LAG" },
-      { value: "24/7", label: "ONLINE" },
-    ],
     "banner.badges": [
       { icon: "MapPin", text: "LATAM · Ping 15-40ms" },
       { icon: "Zap", text: "0 Lag · Dedicado" },
       { icon: "Gamepad2", text: "AntiCheat · 24/7" },
     ],
 
-    // Hero
+    // ===== Hero =====
     "hero.badge": "Servidores activos 24/7",
     "hero.title1": "RUST",
     "hero.title2": "PIRATA",
-    "hero.subtitle": "¿Querés tu propio servidor? Lo armamos, lo configuramos y te damos soporte real.",
-    "hero.desc1": "Venta de servidores, plugins y soporte técnico para",
-    "hero.desc2": "y",
-    "hero.desc3": ". Más de 8 años administrando comunidades gaming.",
-    "hero.advantages": ["Setup Inmediato", "Soporte 24/7", "Plugins Incluidos", "Anti-lag"],
-    "hero.cta": "CONSULTAR AHORA",
-    "hero.community": "Comunidad Activa",
-    "hero.communityDesc": "+10K jugadores LATAM",
+    "hero.subtitle": "El servidor RUST OLD SCHOOL más estable de Latinoamérica. Rust 2275 OldRecoil, ping bajo y comunidad activa 24/7.",
+    "hero.advantages": ["Setup Inmediato", "Sin Steam", "AntiCheat Pro", "Ping LATAM"],
+    "hero.cta": "UNIRME AL DISCORD",
 
-    // VideoSection
-    "video.label": "TUTORIAL",
-    "video.title": "Así se juega Rust Pirata gratis",
-    "video.titleHighlight": "sin complicaciones",
-    "video.description": "100% GRATIS · SIN STEAM · Rust Old School · Descargá Rust gratis sin comprarlo · Servidor activo 24/7",
-    "video.features": [
-      { title: "Servidores Rust Pirata", desc: "Rust 2275 OldRecoil y Rust 2388. Configuración completa." },
-      { title: "+30.000 Plugins", desc: "Economía, kits, tiendas, anti-cheat. Oxide y uMod." },
-      { title: "AntiCheat Profesional", desc: "Protección contra hackers. Ban automático." },
-      { title: "Soporte 24/7", desc: "Discord directo. Sin tickets, sin colas." },
+// ===== Servidor RUST OLD SCHOOL =====
+    "server.label": "Servidor Pirata · 100% GRATIS",
+    "server.title": "RUST OLD SCHOOL",
+    "server.desc": "El servidor de Rust Pirata 100% gratis más estable de Latinoamérica. Basado en Rust 2275 OldRecoil con el recoil clásico que la comunidad ama. AntiCheat profesional y +300 jugadores activos 24/7. Sin Steam, sin pagar.",
+    "server.stats": [
+      { value: "+300", label: "JUGADORES ONLINE" },
+      { value: "15-40ms", label: "PING LATAM" },
+      { value: "24/7", label: "UPTIME" },
+      { value: "2275", label: "VERSIÓN" },
+    ],
+    "server.features": [
+      { title: "Recoil clásico 2275", desc: "El OldRecoil original que hizo famoso a Rust. Predecible, competitivo y amado por la comunidad." },
+      { title: "AntiCheat profesional", desc: "Protección en tiempo real contra aimbots, ESP, speedhack y toda trampa conocida." },
+      { title: "Ping bajo LATAM", desc: "Servidores optimizados para Brasil, Argentina, México, Chile, Paraguay y todo Latinoamérica." },
+    ],
+    "server.cta": "CONSEGUIR EL ACCESO",
+
+    // ===== Ficha técnica 2275 =====
+    "version2275.label": "Versión estable",
+    "version2275.title": "Rust 2275 OldRecoil",
+    "version2275.subtitle": "La versión clásica preferida por la comunidad",
+    "version2275.desc": "Rust 2275 es la versión OldRecoil que marcó la historia del Rust pirata. El recoil original, predecible y competitivo que los grandes youtubers hicieron famoso. Más ligero, más estable y más PvP puro.",
+    "version2275.badge": "PIONERO EN LATINOAMÉRICA · 2275.202.1",
+    "version2275.specs": [
+      { key: "PROTOCOLO", value: "2275.202.1" },
+      { key: "BUILD", value: "01/21/2021 16:48:26" },
+      { key: "UNITY", value: "2019.4.7f1" },
+      { key: "CHANGESET", value: "57843" },
+      { key: "RAMA", value: "release" },
+    ],
+    "version2275.reasonsTitle": "Por qué Rust 2275",
+    "version2275.reasons": [
+      { title: "Recoil clásico puro", desc: "El OldRecoil original, predecible y competitivo. El que la comunidad domina desde hace años." },
+      { title: "Más ligero y fluido", desc: "Funciona en PC modesto sin lag. Ideal para PvP masivo y raids largos." },
+      { title: "Preferido para competitivo", desc: "Servidores profesionales y torneos usan 2275. El estándar del Rust pirata competitivo." },
+      { title: "Estable y sin bugs", desc: "Versión pulida con años de soporte. La más probada y estable del ecosistema pirata." },
     ],
 
-    // ServerPlans
+    // ===== Planes / Ventas de servidores =====
     "plans.label": "Planes",
-    "plans.title": "Elegí tu servidor",
+    "plans.title": "Comprá tu servidor",
     "plans.subtitle": "Pago único. Sin suscripciones. Todo incluido.",
     "plans.popular": "MÁS VENDIDO",
     "plans.oneTime": "pago único",
@@ -84,7 +104,6 @@ const translations: Record<Language, Record<string, unknown>> = {
       description: "La versión clásica que la comunidad ama",
       features: [
         "Recoil clásico conocido por todos",
-        "+30,000 plugins Oxide/uMod",
         "AntiCheat configurado",
         "Panel de control WebPanel",
         "Backup automático diario",
@@ -97,204 +116,129 @@ const translations: Record<Language, Record<string, unknown>> = {
       description: "La última versión con todo actualizado",
       features: [
         "Última versión estable",
-        "+30,000 plugins Premium",
         "AntiCheat avanzado",
         "Panel de control premium",
         "Backup cada 6 horas",
         "IP dedicada exclusiva",
-        "Mods y plugins premium",
         "Mundo personalizado con seed",
         "Soporte prioritario 24/7",
       ],
     },
 
-    // Payment Methods
-    "payment.label": "Pagos",
-    "payment.title": "Métodos de Pago",
-    "payment.subtitle": "Aceptamos los siguientes métodos para la compra de servidores.",
-    "payment.methods": [
-      {
-        icon: "pix",
-        name: "PIX",
-        desc: "Transferencia instantánea y directa. Método de pago principal.",
-        badge: "Principal",
-        link: null,
-        linkText: null,
-      },
-      {
-        icon: "mercadopago",
-        name: "MercadoPago",
-        desc: "Enviá dinero desde tu cuenta MercadoPago (Argentina) y se acredita como PIX.",
-        badge: "Principal",
-        link: "https://www.mercadopago.com.ar/",
-        linkText: "Crear cuenta",
-      },
-      {
-        icon: "belo",
-        name: "Belo",
-        desc: "Enviá dinero desde tu cuenta Belo y se acredita como PIX.",
-        badge: "LATAM → PIX",
-        link: "https://www.belo.app/",
-        linkText: "Crear cuenta",
-      },
-      {
-        icon: "astropay",
-        name: "AstroPay",
-        desc: "Enviá dinero desde tu cuenta AstroPay y se acredita como PIX.",
-        badge: "LATAM → PIX",
-        link: "https://www.astropay.com/",
-        linkText: "Crear cuenta",
-      },
-      {
-        icon: "paypal",
-        name: "PayPal",
-        desc: "Enviá dinero desde tu cuenta PayPal y se acredita como PIX.",
-        badge: "Principal",
-        link: "https://www.paypal.com/",
-        linkText: "Crear cuenta",
-      },
-    ],
-    "payment.note": "⚠️ Solo recibimos pagos por PIX. MercadoPago, Belo y AstroPay son billeteras digitales que permiten enviar dinero desde cualquier país de LATAM, el cual se recibe como PIX en mi cuenta brasileña. No hay otra forma de pago.",
-    "payment.highlight": "Métodos aceptados: PIX · MercadoPago · PayPal · Belo · AstroPay",
+    // ===== Videos =====
+    "videos.label": "Media",
+    "videos.title": "Trailer del servidor",
+    "videos.subtitle": "Así se vive el RUST OLD SCHOOL. Rust 2275 OldRecoil puro.",
+    "videos.trailerLabel": "TRAILER OFICIAL",
+    "videos.trailerTitle": "RUST OLD SCHOOL — Trailer",
+    "videos.trailerDesc": "Mirá el trailer oficial del servidor pirata más estable de LATAM. Rust 2275 OldRecoil puro.",
+    "videos.tutorialLabel": "TUTORIAL",
+    "videos.tutorialTitle": "Cómo descargar y jugar",
+    "videos.tutorialDesc": "Paso a paso para descargar Rust pirata 2275 y conectarte al servidor RUST OLD SCHOOL sin Steam.",
 
-    // Benefits
-    "benefits.label": "Por qué elegirme",
-    "benefits.title": "No soy una empresa.",
-    "benefits.titleHighlight": "Soy alguien que sabe del tema.",
-    "benefits.description": "Administré servidores de Rust por más de 8 años. Desarrollé plugins para las comunidades más grandes de Latinoamérica. No vendo humo, vendo resultados.",
-    "benefits.list": [
-      { title: "Pago único, sin suscripciones", desc: "Pagás una vez y el servidor es tuyo. Sin cargos mensuales ocultos." },
-      { title: "Experiencia real en Rust", desc: "Más de 10,000 horas jugando y administrando servidores. Sé lo que funciona." },
-      { title: "Experiencia con grandes servidores", desc: "Trabajé con las comunidades más reconocidas del ecosistema Rust como RustSpain y Brasa.gg, entre otras." },
-      { title: "Soporte directo y rápido", desc: "Discord directo. Sin tickets, sin colas, sin esperas." },
-      { title: "Configuración incluida", desc: "No tenés que configurar nada solo. Me encargo de todo." },
-      { title: "Backup automático", desc: "Tus datos se guardan automáticamente. No perdés nada." },
-    ],
-    "benefits.profileName": "ParaguayRAIDER",
-    "benefits.profileRole": "Fundador de LATAMRUST",
-
-    // Projects
-    "projects.label": "Proyectos",
-    "projects.title": "Donde trabajé",
-    "projects.subtitle": "Experiencia real en comunidades gaming de Latinoamérica y España.",
-    "projects.list": [
-      { name: "RustSpain", role: "Desarrollador de Plugins", desc: "Plugin de economía, tienda y kits para la comunidad más grande de Rust en España.", tags: ["Economía", "Tienda", "Kits"] },
-      { name: "Brasa.gg", role: "Desarrollador de Plugins", desc: "Sistema de VIP, rangos y eventos personalizados para la comunidad brasileña.", tags: ["VIP", "Rangos", "Eventos"] },
-      { name: "LATAMRUST", role: "Fundador y Administrador", desc: "Comunidad de servidores pirata LATAM con más de 10,000 jugadores activos.", tags: ["Comunidad", "Servidores", "Soporte"] },
-    ],
-    "projects.visit": "Visitar",
-
-    // Process
-    "process.label": "Proceso",
-    "process.title": "Cómo funciona",
-    "process.subtitle": "Simple, rápido y sin complicaciones. Cuatro pasos y tu servidor está listo.",
-    "process.steps": [
-      { title: "Contactás por Discord", desc: "Me contás qué necesitás. Si es un servidor, plugins o soporte. Te respondo rápido." },
-      { title: "Configuro tu servidor", desc: "Me encargo de todo: instalación, plugins, AntiCheat, mundo personalizado. Todo listo." },
-      { title: "Tu servidor está listo", desc: "En menos de 24 horas tenés tu servidor funcionando. IP dedicada, backups y todo configurado." },
-      { title: "Soporte continuo", desc: "Si necesitás ayuda después, estoy disponible 24/7. Sin tickets, sin colas." },
-    ],
-
-    // Testimonials
-    "testimonials.label": "Testimonios",
-    "testimonials.title": "Lo que dicen mis clientes",
-    "testimonials.subtitle": "Gente que ya tiene su servidor armandose con nosotros.",
-    "testimonials.list": [
-      { location: "Buenos Aires, Argentina", text: "la posta, le escribi a las 11 de la mañana y a las 2pm ya tenia el server 2275 andando. me guio por discord paso a paso porque yo era un queso con esto jaja. 10/10" },
-      { location: "CDMX, México", text: "ya habia comprado en otro lado y era todo mentira, el server se cayaba cada 2 dias. aca compre de nuevo y ya van 5 meses sin un solo crash. le escribo a cualquier hora y responde rapido, eso me sorprendio." },
-      { location: "Medellín, Colombia", text: "necesitaba un plugin custom que nadie me queria hacer. aca me lo armaron en 24 horas y me cobraron barato. ya le pedi como 3 cosas mas despues jaja, muy bueno el servicio" },
-      { location: "Santiago, Chile", text: "tenia dudas entre el 2275 y el 2388 y me ayudo a elegir. me explico todo bien y quedo el server andando con 30ms desde santiago. recomendado si no tenes idea" },
-      { location: "Lima, Perú", text: "lo mejor es que no te suscriben a nada, pagas una vez y listo. ya hice 2 servidores con ellos, uno para mi y otro para mi hermano. los dos funcionan perfecto" },
-      { location: "Montevideo, Uruguay", text: "queria un seed especifico y me lo configuro asi nomas. tambien me ayudo a poner los plugins de kits y la tienda. si no sabes nada de servidores de rust, te salva el tipo este" },
-    ],
-
-    // FAQ
+// ===== FAQ =====
     "faq.label": "Preguntas frecuentes",
-    "faq.title": "Dudas comunes",
-    "faq.list": [
-      { q: "¿Qué incluye el servidor Rust pirata?", a: "Incluye la licencia del servidor, configuración completa, AntiCheat, panel de control, backups automáticos y soporte 24/7. El hosting (VPS) no está incluido, pero te ayudo a elegir el mejor." },
-      { q: "¿Cuál es la diferencia entre Rust 2275 y 2388?", a: "Rust 2275 es la versión clásica con OldRecoil, la favorita de la comunidad. Rust 2388 es la última versión actualizada con todos los gráficos y mejoras oficiales. Ambas son excelentes, depende de tu preferencia." },
-      { q: "¿El pago es mensual o único?", a: "Es un pago único. Pagás una vez y el servidor es tuyo. No hay cargos mensuales ni suscripciones ocultas." },
-      { q: "¿Necesito un VPS por separado?", a: "Sí, el hosting (VPS) no está incluido en el precio. Pero te ayudo a elegir el mejor VPS para tu servidor y te guío en la configuración." },
-      { q: "¿Cuánto tarda en estar listo mi servidor?", a: "Generalmente menos de 24 horas. Depende de la complejidad de la configuración y los plugins que necesites." },
-      { q: "¿Puedo elegir mi propio seed y mundo?", a: "Sí, podés elegir el seed que quieras. Configuro el mundo exacto que necesitás." },
-      { q: "¿Qué pasa si tengo un problema después?", a: "Me contactás por Discord y te ayudo. Soporte 24/7, sin tickets ni colas." },
-      { q: "¿Hacés plugins personalizados?", a: "Sí, desarrollo plugins a medida para tu servidor. Tengo experiencia en las comunidades más grandes del ecosistema Rust." },
+    "faq.title": "Dudas comunes sobre Rust 2275 pirata",
+    "faq.subtitle": "Todo lo que preguntás antes de entrar al servidor RUST OLD SCHOOL.",
+"faq.list": [
+      { q: "¿Qué es RUST OLD SCHOOL?", a: "Es el servidor pirata oficial de RUST PIRATA basado en Rust 2275 OldRecoil. Tiene el recoil clásico original, AntiCheat Profesional y comunidad activa 24/7." },
+      { q: "¿Qué versión de Rust usa el servidor?", a: "Usa Rust 2275 OldRecoil (protocolo 2275.202.1, build 01/21/2021). Es la versión clásica favorita de la comunidad, con recoil puro y predecible para PvP competitivo." },
+      { q: "¿Rust pirata es gratis?", a: "Sí, el juego se descarga gratis. No pagás Steam ni Epic Games. Solo descargás, instalás y entrás al servidor sin costos." },
+      { q: "¿Necesito Steam para jugar?", a: "No. Rust pirata 2275 no necesita Steam. Se ejecuta directamente en tu PC con Windows 10 o superior." },
+      { q: "¿Es seguro descargar Rust pirata?", a: "Sí. Los archivos del RUST OLD SCHOOL están verificados y libres de virus. Descarga 100% segura." },
+      { q: "¿Cuánto ping tengo desde mi país?", a: "Depende: Brasil 15-30ms, Paraguay 20-40ms, Argentina 40-60ms, Uruguay 30-50ms, Chile 60-80ms, México 50-70ms, Perú 60-80ms, Colombia 70-90ms. Todos optimizados para LATAM." },
+      { q: "¿Cuántos jugadores hay online?", a: "El servidor RUST OLD SCHOOL mantiene +300 jugadores activos durante el día, con picos en horario prime LATAM." },
+      { q: "¿Puedo jugar con amigos?", a: "Sí. Compartí el link de descarga y tu Discord, y entren juntos al servidor. Es como Steam pero gratis." },
+      { q: "¿Cómo consigo el link de descarga?", a: "Hacé clic en DESCARGAR GRATIS o entrá al Discord oficial. Ahí te pasamos el link seguro y la guía de instalación." },
+      { q: "¿Qué requisitos necesita mi PC?", a: "Windows 10+, Intel i5 o equivalente, 8GB RAM, GTX 960 o superior y 10GB libres. El 2275 es ligero y corre bien en PC modesto." },
     ],
 
-    // ArgosEyes Partner
-    "partner.badge": "Socio Oficial",
-    "partner.title": "AntiCheat ArgosEyes",
-    "partner.desc": "El anticheat más completo para Rust pirata. Compatible con todas las versiones — 2275, 2388 y más. Protege tu servidor contra aimbots, ESP, speedhack y cualquier trampa. La misma protección que usamos en nuestro servidor.",
-    "partner.features": ["Todas las versiones de Rust", "Detección en tiempo real", "Anti aimbot + ESP", "Sin lag, sin falsos positivos"],
-    "partner.cta": "Unirme a Discord",
-
-    // Footer
+    // ===== Footer =====
     "footer.terms": "Términos",
     "footer.privacy": "Privacidad",
     "footer.rights": "Todos los derechos reservados.",
-    "footer.made": "Hecho con pasión por la comunidad Rust.",
+    "footer.tagline": "Servidor pirata Rust 2275 estable en LATAM.",
   },
 
   pt: {
-    // Header
-    "header.nav": ["Serviços", "Planos", "Projetos", "FAQ"],
-    "header.tagline": "SERVIDORES PIRATAS!",
-    "header.dc": "DC DEV",
+    // ===== Header =====
+    "header.nav": ["Servidor", "Versão", "Vídeos", "Planos", "FAQ"],
+    "header.tagline": "SERVIDOR RUST OLD SCHOOL",
+    "header.brand": "RUST PIRATA",
 
-    // LatamrustBanner
+    // ===== Marca e servidor =====
+    "brand.name": "RUST PIRATA",
+    "brand.server": "RUST OLD SCHOOL",
+
+    // ===== Banner =====
     "banner.badge": "100% GRÁTIS · SEM STEAM",
     "banner.title": "RUST PIRATA",
-    "banner.subtitle": "Baixe Rust grátis sem comprar · Servidor ativo 24/7",
-    "banner.desc": "Jogue e domine o servidor. Baixe Rust de forma grátis sem comprar. Comunidade ativa com +300 jogadores conectados. Rust 2275 OldRecoil com ping baixo e Anti-Cheat profissional.",
+    "banner.subtitle": "Baixe Rust grátis e jogue no servidor RUST OLD SCHOOL · Ativo 24/7",
+    "banner.desc": "Jogue e domine o servidor RUST OLD SCHOOL. Baixe Rust grátis sem comprar. Comunidade ativa com +300 jogadores conectados. Rust 2275 OldRecoil com ping baixo e Anti-Cheat profissional.",
     "banner.howTo": "COMO JOGAR GRÁTIS?",
     "banner.steps": [
       "Clique em BAIXAR (é grátis)",
-      "Baixe o Rust Pirata 2275",
-      "Instale no seu PC",
-      "Conecte ao servidor e jogue",
+      "Baixe Rust Pirata 2275 OldRecoil",
+      "Instale no seu PC sem Steam",
+      "Conecte ao servidor RUST OLD SCHOOL e jogue",
     ],
-    "banner.cta": "⚡ BAIXAR GRÁTIS",
+    "banner.cta": "BAIXAR GRÁTIS",
     "banner.discord": "DISCORD",
-    "banner.stats": [
-      { value: "15ms", label: "PING LATAM" },
-      { value: "0", label: "LAG" },
-      { value: "24/7", label: "ONLINE" },
-    ],
     "banner.badges": [
       { icon: "MapPin", text: "LATAM · Ping 15-40ms" },
       { icon: "Zap", text: "0 Lag · Dedicado" },
       { icon: "Gamepad2", text: "AntiCheat · 24/7" },
     ],
 
-    // Hero
+    // ===== Hero =====
     "hero.badge": "Servidores ativos 24/7",
     "hero.title1": "RUST",
     "hero.title2": "PIRATA",
-    "hero.subtitle": "Querés teu próprio servidor? Montamos, configuramos e damos suporte real.",
-    "hero.desc1": "Venda de servidores, plugins e suporte técnico para",
-    "hero.desc2": "e",
-    "hero.desc3": ". Mais de 8 anos administrando comunidades gaming.",
-    "hero.advantages": ["Setup Imediato", "Suporte 24/7", "Plugins Inclusos", "Anti-lag"],
-    "hero.cta": "CONSULTAR AGORA",
-    "hero.community": "Comunidade Ativa",
-    "hero.communityDesc": "+10K jogadores LATAM",
+    "hero.subtitle": "O servidor RUST OLD SCHOOL mais estável da América Latina. Rust 2275 OldRecoil, ping baixo e comunidade ativa 24/7.",
+    "hero.advantages": ["Setup Imediato", "Sem Steam", "AntiCheat Pro", "Ping LATAM"],
+    "hero.cta": "ENTRAR NO DISCORD",
 
-    // VideoSection
-    "video.label": "TUTORIAL",
-    "video.title": "Assim se joga Rust Pirata grátis",
-    "video.titleHighlight": "sem complicações",
-    "video.description": "100% GRÁTIS · SEM STEAM · Rust Old School · Baixe Rust grátis sem comprar · Servidor ativo 24/7",
-    "video.features": [
-      { title: "Servidores Rust Pirata", desc: "Rust 2275 OldRecoil e Rust 2388. Configuração completa." },
-      { title: "+30.000 Plugins", desc: "Economia, kits, lojas, anti-cheat. Oxide e uMod." },
-      { title: "AntiCheat Profissional", desc: "Proteção contra hackers. Ban automático." },
-      { title: "Suporte 24/7", desc: "Discord direto. Sem tickets, sem filas." },
+    // ===== Servidor RUST OLD SCHOOL =====
+    "server.label": "Servidor Pirata · 100% GRÁTIS",
+    "server.title": "RUST OLD SCHOOL",
+    "server.desc": "O servidor de Rust Pirata 100% grátis mais estável da América Latina. Baseado em Rust 2275 OldRecoil com o recoil clássico que a comunidade ama. AntiCheat profissional e +300 jogadores ativos 24/7. Sem Steam, sem pagar.",
+    "server.stats": [
+      { value: "+300", label: "JOGADORES ONLINE" },
+      { value: "15-40ms", label: "PING LATAM" },
+      { value: "24/7", label: "UPTIME" },
+      { value: "2275", label: "VERSÃO" },
+    ],
+"server.features": [
+      { title: "Recoil clássico 2275", desc: "O OldRecoil original que tornou Rust famoso. Previsível, competitivo e amado pela comunidade." },
+      { title: "AntiCheat profissional", desc: "Proteção em tempo real contra aimbots, ESP, speedhack e qualquer trapaça." },
+      { title: "Ping baixo LATAM", desc: "Servidores otimizados para Brasil, Argentina, México, Chile, Paraguai e toda a América Latina." },
+    ],
+    "server.cta": "CONSEGUIR ACESSO",
+
+    // ===== Ficha técnica 2275 =====
+    "version2275.label": "Versão estável",
+    "version2275.title": "Rust 2275 OldRecoil",
+    "version2275.subtitle": "A versão clássica preferida da comunidade",
+    "version2275.desc": "Rust 2275 é a versão OldRecoil que marcou a história do Rust pirata. O recoil original, previsível e competitivo que os grandes youtubers tornaram famoso. Mais leve, mais estável e PvP mais puro.",
+    "version2275.badge": "PIONEIRO NA AMÉRICA LATINA · 2275.202.1",
+    "version2275.specs": [
+      { key: "PROTOCOLO", value: "2275.202.1" },
+      { key: "BUILD", value: "01/21/2021 16:48:26" },
+      { key: "UNITY", value: "2019.4.7f1" },
+      { key: "CHANGESET", value: "57843" },
+      { key: "RAMO", value: "release" },
+    ],
+    "version2275.reasonsTitle": "Por que Rust 2275",
+    "version2275.reasons": [
+      { title: "Recoil clássico puro", desc: "O OldRecoil original, previsível e competitivo. O que a comunidade domina há anos." },
+      { title: "Mais leve e fluido", desc: "Funciona em PC modesto sem lag. Ideal para PvP massivo e raids longas." },
+      { title: "Preferido para competitivo", desc: "Servidores profissionais e torneios usam 2275. O padrão do Rust pirata competitivo." },
+      { title: "Estável e sem bugs", desc: "Versão polida com anos de suporte. A mais testada e estável do ecossistema pirata." },
     ],
 
-    // ServerPlans
+    // ===== Planos / Vendas de servidores =====
     "plans.label": "Planos",
-    "plans.title": "Escolha teu servidor",
+    "plans.title": "Compre teu servidor",
     "plans.subtitle": "Pagamento único. Sem assinaturas. Tudo incluído.",
     "plans.popular": "MAIS VENDIDO",
     "plans.oneTime": "pagamento único",
@@ -307,7 +251,6 @@ const translations: Record<Language, Record<string, unknown>> = {
       description: "A versão clássica que a comunidade ama",
       features: [
         "Recoil clássico conhecido por todos",
-        "+30.000 plugins Oxide/uMod",
         "AntiCheat configurado",
         "Painel de controle WebPanel",
         "Backup automático diário",
@@ -320,143 +263,48 @@ const translations: Record<Language, Record<string, unknown>> = {
       description: "A última versão com tudo atualizado",
       features: [
         "Última versão estável",
-        "+30.000 plugins Premium",
         "AntiCheat avançado",
         "Painel de controle premium",
         "Backup a cada 6 horas",
         "IP dedicada exclusiva",
-        "Mods e plugins premium",
         "Mundo personalizado com seed",
         "Suporte prioritário 24/7",
       ],
     },
 
-    // Payment Methods (PT)
-    "payment.label": "Pagamentos",
-    "payment.title": "Métodos de Pagamento",
-    "payment.subtitle": "Aceitamos os seguintes métodos para compra de servidores.",
-    "payment.methods": [
-      {
-        icon: "pix",
-        name: "PIX",
-        desc: "Transferência instantânea e direta. Método de pagamento principal.",
-        badge: "Principal",
-        link: null,
-        linkText: null,
-      },
-      {
-        icon: "mercadopago",
-        name: "MercadoPago",
-        desc: "Envie dinheiro da sua conta MercadoPago (Argentina) e é creditado como PIX.",
-        badge: "Principal",
-        link: "https://www.mercadopago.com.ar/",
-        linkText: "Criar conta",
-      },
-      {
-        icon: "belo",
-        name: "Belo",
-        desc: "Envie dinheiro da sua conta Belo e é creditado como PIX.",
-        badge: "LATAM → PIX",
-        link: "https://www.belo.app/",
-        linkText: "Criar conta",
-      },
-      {
-        icon: "astropay",
-        name: "AstroPay",
-        desc: "Envie dinheiro da sua conta AstroPay e é creditado como PIX.",
-        badge: "LATAM → PIX",
-        link: "https://www.astropay.com/",
-        linkText: "Criar conta",
-      },
-      {
-        icon: "paypal",
-        name: "PayPal",
-        desc: "Envie dinheiro da sua conta PayPal e é creditado como PIX.",
-        badge: "Principal",
-        link: "https://www.paypal.com/",
-        linkText: "Criar conta",
-      },
-    ],
-    "payment.note": "⚠️ Aceitamos apenas pagamentos via PIX. MercadoPago, Belo e AstroPay são carteiras digitais que permitem enviar dinheiro de qualquer país da LATAM, que é recebido como PIX na minha conta brasileira. Não há outra forma de pagamento.",
-    "payment.highlight": "Métodos aceitos: PIX · MercadoPago · Belo · AstroPay",
+    // ===== Videos =====
+    "videos.label": "Mídia",
+    "videos.title": "Trailer do servidor",
+    "videos.subtitle": "Assim se vive o RUST OLD SCHOOL. Rust 2275 OldRecoil puro.",
+    "videos.trailerLabel": "TRAILER OFICIAL",
+    "videos.trailerTitle": "RUST OLD SCHOOL — Trailer",
+    "videos.trailerDesc": "Veja o trailer oficial do servidor pirata mais estável da LATAM. Rust 2275 OldRecoil puro.",
+    "videos.tutorialLabel": "TUTORIAL",
+    "videos.tutorialTitle": "Como baixar e jogar",
+    "videos.tutorialDesc": "Passo a passo para baixar Rust pirata 2275 e conectar ao servidor RUST OLD SCHOOL sem Steam.",
 
-    // Benefits
-    "benefits.label": "Por que me escolher",
-    "benefits.title": "Não sou uma empresa.",
-    "benefits.titleHighlight": "Sou alguém que sabe do assunto.",
-    "benefits.description": "Administrei servidores de Rust por mais de 8 anos. Desenvolvi plugins para as maiores comunidades da América Latina. Não vendo fumaça, vendo resultados.",
-    "benefits.list": [
-      { title: "Pagamento único, sem assinaturas", desc: "Pagas uma vez e o servidor é teu. Sem taxas mensais ocultas." },
-      { title: "Experiência real em Rust", desc: "Mais de 10.000 horas jogando e administrando servidores. Sei o que funciona." },
-      { title: "Experiência com grandes servidores", desc: "Trabalhei com as comunidades mais reconhecidas do ecossistema Rust como RustSpain e Brasa.gg, entre outras." },
-      { title: "Suporte direto e rápido", desc: "Discord direto. Sem tickets, sem filas, sem esperas." },
-      { title: "Configuração incluída", desc: "Não tens que configurar nada sozinho. Eu cuido de tudo." },
-      { title: "Backup automático", desc: "Teus dados são salvos automaticamente. Não perdes nada." },
-    ],
-    "benefits.profileName": "ParaguayRAIDER",
-    "benefits.profileRole": "Fundador do LATAMRUST",
-
-    // Projects
-    "projects.label": "Projetos",
-    "projects.title": "Onde trabalhei",
-    "projects.subtitle": "Experiência real em comunidades gaming da América Latina e Espanha.",
-    "projects.list": [
-      { name: "RustSpain", role: "Desenvolvedor de Plugins", desc: "Plugin de economia, loja e kits para a comunidade maior de Rust na Espanha.", tags: ["Economia", "Loja", "Kits"] },
-      { name: "Brasa.gg", role: "Desenvolvedor de Plugins", desc: "Sistema de VIP, ranks e eventos personalizados para a comunidade brasileira.", tags: ["VIP", "Ranks", "Eventos"] },
-      { name: "LATAMRUST", role: "Fundador e Administrador", desc: "Comunidade de servidores pirata LATAM com mais de 10.000 jogadores ativos.", tags: ["Comunidade", "Servidores", "Suporte"] },
-    ],
-    "projects.visit": "Visitar",
-
-    // Process
-    "process.label": "Processo",
-    "process.title": "Como funciona",
-    "process.subtitle": "Simples, rápido e sem complicações. Quatro passos e teu servidor está pronto.",
-    "process.steps": [
-      { title: "Contacta pelo Discord", desc: "Me conta o que precisas. Se é um servidor, plugins ou suporte. Respondo rápido." },
-      { title: "Configuro teu servidor", desc: "Cuido de tudo: instalação, plugins, AntiCheat, mundo personalizado. Tudo pronto." },
-      { title: "Teu servidor está pronto", desc: "Em menos de 24 horas tens teu servidor funcionando. IP dedicada, backups e tudo configurado." },
-      { title: "Suporte contínuo", desc: "Se precisar de ajuda depois, estou disponível 24/7. Sem tickets, sem filas." },
-    ],
-
-    // Testimonials
-    "testimonials.label": "Depoimentos",
-    "testimonials.title": "O que dizem meus clientes",
-    "testimonials.subtitle": "Pessoas que já tem seu servidor sendo montado conosco.",
-    "testimonials.list": [
-      { location: "Buenos Aires, Argentina", text: "la posta, le escribi a las 11 de la mañana y a las 2pm ya tenia el server 2275 andando. me guio por discord paso a paso porque yo era un queso con esto jaja. 10/10" },
-      { location: "CDMX, México", text: "ya habia comprado en otro lado y era todo mentira, el server se cayaba cada 2 dias. aca compre de nuevo y ya van 5 meses sin un solo crash. le escribo a cualquier hora y responde rapido, eso me sorprendio." },
-      { location: "Medellín, Colombia", text: "necesitaba un plugin custom que nadie me queria hacer. aca me lo armaron en 24 horas y me cobraron barato. ya le pedi como 3 cosas mas despues jaja, muy bueno el servicio" },
-      { location: "Santiago, Chile", text: "tenia dudas entre el 2275 y el 2388 y me ayudo a elegir. me explico todo bien y quedo el server andando con 30ms desde santiago. recomendado si no tenes idea" },
-      { location: "Lima, Perú", text: "lo mejor es que no te suscriben a nada, pagas una vez y listo. ya hice 2 servidores con ellos, uno para mi y otro para mi hermano. los dos funcionan perfecto" },
-      { location: "Montevideo, Uruguay", text: "queria un seed especifico y me lo configuro asi nomas. tambien me ayudo a poner los plugins de kits y la tienda. si no sabes nada de servidores de rust, te salva el tipo este" },
-    ],
-
-    // FAQ
+    // ===== FAQ =====
     "faq.label": "Perguntas frequentes",
-    "faq.title": "Dúvidas comuns",
+    "faq.title": "Dúvidas comuns sobre Rust 2275 pirata",
+    "faq.subtitle": "Tudo que perguntas antes de entrar no servidor RUST OLD SCHOOL.",
     "faq.list": [
-      { q: "O que inclui o servidor Rust pirata?", a: "Inclui a licença do servidor, configuração completa, AntiCheat, painel de controle, backups automáticos e suporte 24/7. O hosting (VPS) não está incluído, mas te ajudo a escolher o melhor." },
-      { q: "Qual é a diferença entre Rust 2275 e 2388?", a: "Rust 2275 é a versão clássica com OldRecoil, a favorita da comunidade. Rust 2388 é a última versão atualizada com todos os gráficos e melhorias oficiais. Ambas são excelentes, depende da tua preferência." },
-      { q: "O pagamento é mensal ou único?", a: "É um pagamento único. Pagas uma vez e o servidor é teu. Não há taxas mensais nem assinaturas ocultas." },
-      { q: "Preciso de um VPS separado?", a: "Sim, o hosting (VPS) não está incluído no preço. Mas te ajudo a escolher o melhor VPS para teu servidor e te guio na configuração." },
-      { q: "Quanto tempo demora para ficar pronto meu servidor?", a: "Geralmente menos de 24 horas. Depende da complexidade da configuração e dos plugins que precisas." },
-      { q: "Posso escolher meu próprio seed e mundo?", a: "Sim, podes escolher o seed que quiseres. Configuro o mundo exato que precisas." },
-      { q: "O que acontece se tiver um problema depois?", a: "Contactas-me pelo Discord e te ajudo. Suporte 24/7, sem tickets nem filas." },
-      { q: "Fazes plugins personalizados?", a: "Sim, desenvolvo plugins à medida para teu servidor. Tenho experiência nas maiores comunidades do ecossistema Rust." },
+      { q: "O que é RUST OLD SCHOOL?", a: "É o servidor pirata oficial da RUST PIRATA baseado em Rust 2275 OldRecoil. Tem o recoil clássico original, AntiCheat profissional e comunidade ativa 24/7." },
+      { q: "Qual versão de Rust o servidor usa?", a: "Usa Rust 2275 OldRecoil (protocolo 2275.202.1, build 01/21/2021). É a versão clássica favorita da comunidade, com recoil puro e previsível para PvP competitivo." },
+      { q: "Rust pirata é grátis?", a: "Sim, o jogo é grátis para baixar. Não pagas Steam nem Epic Games. Só baixas, instalas e entras no servidor sem custos." },
+      { q: "Preciso de Steam para jogar?", a: "Não. Rust pirata 2275 não precisa de Steam. Roda direto no teu PC com Windows 10 ou superior." },
+      { q: "É seguro baixar Rust pirata?", a: "Sim. Os arquivos do RUST OLD SCHOOL são verificados e livres de vírus. Download 100% seguro." },
+      { q: "Qual ping do meu país?", a: "Depende: Brasil 15-30ms, Paraguai 20-40ms, Argentina 40-60ms, Uruguai 30-50ms, Chile 60-80ms, México 50-70ms, Peru 60-80ms, Colômbia 70-90ms. Todos otimizados para LATAM." },
+      { q: "Quantos jogadores há online?", a: "O servidor RUST OLD SCHOOL mantém +300 jogadores ativos durante o dia, com picos no horário prime LATAM." },
+      { q: "Posso jogar com amigos?", a: "Sim. Compartilhe o link de download e o Discord e entrem juntos no servidor. É como Steam mas grátis." },
+      { q: "Como consigo o link de download?", a: "Clique em BAIXAR GRÁTIS ou entre no Discord oficial. Lá passamos o link seguro e o guia de instalação." },
+      { q: "Que requisitos meu PC precisa?", a: "Windows 10+, Intel i5 ou equivalente, 8GB RAM, GTX 960 ou superior e 10GB livres. O 2275 é leve e roda bem em PC modesto." },
     ],
 
-    // ArgosEyes Partner
-    "partner.badge": "Parceiro Oficial",
-    "partner.title": "AntiCheat ArgosEyes",
-    "partner.desc": "O anticheat mais completo para Rust pirata. Compatível com todas as versões — 2275, 2388 e mais. Protege seu servidor contra aimbots, ESP, speedhack e qualquer trapaça. A mesma proteção que usamos no nosso servidor.",
-    "partner.features": ["Todas as versões de Rust", "Detecção em tempo real", "Anti aimbot + ESP", "Sem lag, sem falsos positivos"],
-    "partner.cta": "Entrar no Discord",
-
-    // Footer
+    // ===== Footer =====
     "footer.terms": "Termos",
     "footer.privacy": "Privacidade",
     "footer.rights": "Todos os direitos reservados.",
-    "footer.made": "Feito com paixão pela comunidade Rust.",
+    "footer.tagline": "Servidor pirata Rust 2275 estável na LATAM.",
   },
 };
 
@@ -482,14 +330,16 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
     return key;
   };
 
-  const tList = (key: string): string[] => {
+  const tList = (key: string): unknown[] => {
     const value = (translations[language] as Record<string, unknown>)?.[key];
-    return Array.isArray(value) ? value.map(String) : [];
+    return Array.isArray(value) ? value : [];
   };
 
   const tObj = (key: string): Record<string, string> => {
     const value = (translations[language] as Record<string, unknown>)?.[key];
-    return typeof value === "object" && value !== null ? value as Record<string, string> : {};
+    return typeof value === "object" && value !== null && !Array.isArray(value)
+      ? (value as Record<string, string>)
+      : {};
   };
 
   return (

@@ -6,37 +6,37 @@ const Latamrust: React.FC = () => {
   return (
     <div className="min-h-screen bg-black text-white">
       <Helmet>
-        <title>LATAMRUST - Servidores Rust Pirata #1 Latinoamerica | Rust 2275 y 2388</title>
-        <meta name="description" content="LATAMRUST es el servicio #1 de servidores Rust Pirata en Latinoamerica. Rust 2275 OldRecoil y Rust 2388 con +30,000 plugins, AntiCheat y soporte 24/7. Ping bajo en Brasil, Argentina, Mexico." />
-        <meta name="keywords" content="latamrust, latam rust, rust pirata, servidores rust pirata, rust 2275, rust 2388, servidor rust brasil, servidor rust argentina, rust pirata gratis, crear servidor rust" />
-        <link rel="canonical" href="https://latamrust.online/latamrust" />
+        <title>Rust Pirata - Servidores #1 Latinoamérica | Rust 2275 y 2388</title>
+        <meta name="description" content="Rust Pirata es el servicio #1 de servidores Rust en Latinoamérica. Rust 2275 OldRecoil y Rust 2388 con AntiCheat y soporte 24/7. Ping bajo en Brasil, Argentina, México." />
+        <meta name="keywords" content="rust pirata, servidores rust pirata, rust 2275, rust 2388, servidor rust brasil, servidor rust argentina, rust pirata gratis, crear servidor rust" />
+        <link rel="canonical" href="https://latamrust.online/rust-pirata-online/" />
         <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
 
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://latamrust.online/latamrust" />
-        <meta property="og:title" content="LATAMRUST - Servidores Rust Pirata #1 Latinoamerica" />
-        <meta property="og:description" content="El servicio #1 de servidores Rust Pirata en Latinoamerica. Rust 2275 y 2388, +30K plugins, soporte 24/7." />
-        <meta property="og:image" content="https://latamrust.online/LATAMLOGO.webp" />
-        <meta property="og:locale" content="es_ES" />
-        <meta property="og:site_name" content="LATAMRUST" />
+        <meta property="og:url" content="https://latamrust.online/rust-pirata-online/" />
+        <meta property="og:title" content="Rust Pirata - Servidores #1 Latinoamérica" />
+        <meta property="og:description" content="El servicio #1 de servidores Rust Pirata 2275 y 2388 en Latinoamérica. AntiCheat, soporte 24/7." />
+        <meta property="og:image" content="https://latamrust.online/rust-old-school-logo.webp" />
+        <meta property="og:locale" content="es_419" />
+        <meta property="og:site_name" content="Rust Pirata" />
 
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="LATAMRUST - Servidores Rust Pirata #1" />
+        <meta name="twitter:title" content="Rust Pirata - Servidores #1 LATAM" />
         <meta name="twitter:description" content="Servicio #1 de servidores Rust Pirata en LATAM. Rust 2275 y 2388." />
-        <meta name="twitter:image" content="https://latamrust.online/LATAMLOGO.webp" />
+        <meta name="twitter:image" content="https://latamrust.online/rust-old-school-logo.webp" />
 
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
             "@type": "WebPage",
-            "name": "LATAMRUST - Servidores Rust Pirata #1 Latinoamerica",
-            "description": "LATAMRUST es el servicio #1 de servidores Rust Pirata en Latinoamerica",
-            "url": "https://latamrust.online/latamrust",
+            "name": "Rust Pirata - Servidores #1 Latinoamérica",
+            "description": "Rust Pirata es el servicio #1 de servidores Rust Pirata en Latinoamérica",
+            "url": "https://latamrust.online/rust-pirata-online",
             "mainEntity": {
               "@type": "Organization",
-              "name": "LATAMRUST",
+              "name": "Rust Pirata",
               "url": "https://latamrust.online",
-              "description": "Servidores de Rust Pirata 2275 y 2388 para Latinoamerica"
+              "description": "Servidores de Rust Pirata 2275 y 2388 para Latinoamérica"
             }
           })}
         </script>
@@ -47,7 +47,7 @@ const Latamrust: React.FC = () => {
             "@type": "BreadcrumbList",
             "itemListElement": [
               {"@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://latamrust.online/"},
-              {"@type": "ListItem", "position": 2, "name": "LATAMRUST", "item": "https://latamrust.online/latamrust"}
+              {"@type": "ListItem", "position": 2, "name": "Servidores Rust Pirata", "item": "https://latamrust.online/rust-pirata-online"}
             ]
           })}
         </script>
@@ -57,13 +57,13 @@ const Latamrust: React.FC = () => {
       <section className="relative py-20 px-4 bg-gradient-to-b from-red-950/30 to-black">
         <div className="max-w-5xl mx-auto text-center">
           <h1 className="text-5xl md:text-7xl font-black mb-6">
-            <span className="text-red-500">LATAM</span>RUST
+            <span className="text-red-500">Rust</span> Pirata
           </h1>
           <p className="text-2xl md:text-3xl font-bold text-gray-200 mb-4">
-            El servicio #1 de servidores Rust Pirata en Latinoamerica
+            El servicio #1 de servidores Rust Pirata en Latinoamérica
           </p>
           <p className="text-lg text-gray-400 max-w-2xl mx-auto mb-10">
-            Rust 2275 OldRecoil y Rust 2388. +30,000 plugins, AntiCheat profesional,
+            Rust 2275 OldRecoil y Rust 2388. AntiCheat profesional,
             soporte directo por Discord y ping bajo en toda LATAM.
           </p>
           <a
@@ -78,27 +78,27 @@ const Latamrust: React.FC = () => {
         </div>
       </section>
 
-      {/* Que es LATAMRUST */}
+      {/* Que es Rust Pirata */}
       <section className="py-20 px-4 bg-black">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-black text-center mb-12">
-            Que es <span className="text-red-500">LATAMRUST</span>?
+            Qué es <span className="text-red-500">Rust Pirata</span>?
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             <div>
               <p className="text-gray-300 text-lg leading-relaxed mb-6">
-                LATAMRUST es una comunidad de servidores Rust pirata fundada en 2024.
-                Ofrecemos servidores dedicados con la mejor configuracion, plugins
-                personalizados y soporte directo para jugadores de toda Latinoamerica.
+                Rust Pirata es una comunidad de servidores Rust pirata con años de experiencia.
+                Ofrecemos servidores dedicados con la mejor configuración, configuración
+                personalizada y soporte directo para jugadores de toda Latinoamérica.
               </p>
               <p className="text-gray-400 leading-relaxed mb-6">
-                Nuestro equipo tiene mas de 8 anos de experiencia administrando
-                servidores Rust. Trabajamos con las comunidades mas grandes del
+                Nuestro equipo tiene más de 8 años de experiencia administrando
+                servidores Rust. Trabajamos con las comunidades más grandes del
                 ecosistema como RustSpain y Brasa.gg.
               </p>
               <p className="text-gray-400 leading-relaxed">
-                Si buscas un servidor Rust pirata con ping bajo, AntiCheat y soporte
-                real, LATAMRUST es tu mejor opcion.
+                Si buscás un servidor Rust pirata con ping bajo, AntiCheat y soporte
+                real, Rust Pirata es tu mejor opción.
               </p>
             </div>
             <div className="grid grid-cols-2 gap-4">
@@ -109,10 +109,6 @@ const Latamrust: React.FC = () => {
               <div className="text-center p-6 rounded-2xl bg-white/[0.03] border border-white/5">
                 <div className="text-3xl font-black text-red-500 mb-2">200+</div>
                 <div className="text-gray-400 text-sm">Servidores armados</div>
-              </div>
-              <div className="text-center p-6 rounded-2xl bg-white/[0.03] border border-white/5">
-                <div className="text-3xl font-black text-red-500 mb-2">30K+</div>
-                <div className="text-gray-400 text-sm">Plugins disponibles</div>
               </div>
               <div className="text-center p-6 rounded-2xl bg-white/[0.03] border border-white/5">
                 <div className="text-3xl font-black text-red-500 mb-2">24/7</div>
@@ -127,16 +123,16 @@ const Latamrust: React.FC = () => {
       <section className="py-20 px-4 bg-[#0a0a0a]">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-black text-center mb-12">
-            Que ofrecemos en <span className="text-red-500">LATAMRUST</span>
+            Qué ofrecemos en <span className="text-red-500">Rust Pirata</span>
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
-              { icon: Server, title: "Servidores Rust Pirata", desc: "Rust 2275 y 2388 con configuracion completa y IP dedicada." },
-              { icon: Shield, title: "AntiCheat Profesional", desc: "Proteccion contra hackers. Ban automatico 24/7." },
-              { icon: Zap, title: "+30,000 Plugins", desc: "Economia, kits, tiendas, VIP. Oxide y uMod." },
+              { icon: Server, title: "Servidores Rust Pirata", desc: "Rust 2275 y 2388 con configuración completa y IP dedicada." },
+              { icon: Shield, title: "AntiCheat Profesional", desc: "Protección contra hackers. Ban automático 24/7." },
+              { icon: Zap, title: "Configuración Avanzada", desc: "Economía, kits, tiendas, VIP. Configurado a medida." },
               { icon: Headphones, title: "Soporte 24/7", desc: "Discord directo. Sin tickets, sin colas." },
-              { icon: Users, title: "Comunidad Activa", desc: "10,000+ jugadores en toda Latinoamerica." },
-              { icon: Star, title: "Configuracion Gratis", desc: "Setup completo incluido en el precio." },
+              { icon: Users, title: "Comunidad Activa", desc: "10,000+ jugadores en toda Latinoamérica." },
+              { icon: Star, title: "Configuración Gratis", desc: "Setup completo incluido en el precio." },
             ].map((service, index) => {
               const Icon = service.icon;
               return (
@@ -177,7 +173,7 @@ const Latamrust: React.FC = () => {
       <section className="py-20 px-4 bg-[#0a0a0a]">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-black mb-6">
-            Unite a <span className="text-red-500">LATAMRUST</span>
+            Unite a <span className="text-red-500">Rust Pirata</span>
           </h2>
           <p className="text-gray-400 text-lg mb-10 max-w-2xl mx-auto">
             Contactanos por Discord y armamos tu servidor Rust pirata en menos de 24 horas.

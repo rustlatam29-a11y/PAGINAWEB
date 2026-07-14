@@ -1,4 +1,4 @@
-import React from "react";
+﻿import React from "react";
 import { Download, Server, Users, Zap } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
@@ -7,26 +7,25 @@ const RustPirataColombia: React.FC = () => {
   return (
     <div className="min-h-screen bg-black text-white">
       <Helmet>
-        <title>Rust Pirata Colombia 🇨🇴 Descargar Gratis 2026 - LATAMRUST #1</title>
+        <title>Rust Pirata Colombia 🇨🇴 Descargar Gratis 2026 - Rust Pirata #1</title>
         <meta name="description" content="Servidor #1 de Rust Pirata en Colombia. Ping bajo 70-90ms desde Bogotá, Medellín, Cali. +10.000 jugadores parcero. 100% gratis chimba. ¡Juega ahora!" />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://latamrust.online/rust-pirata-colombia" />
-        <meta property="og:title" content="Rust Pirata Colombia 🇨🇴 - Servidor #1 LATAMRUST" />
+        <meta property="og:url" content="https://Rust Pirata.vercel.app/rust-pirata-colombia/" />
+        <meta property="og:title" content="Rust Pirata Colombia 🇨🇴 - Servidor #1 Rust Pirata" />
         <meta property="og:description" content="El mejor servidor de Rust Pirata en Colombia con ping bajo y más de 10.000 jugadores parcero. 100% gratis chimba." />
-        <meta property="og:image" content="https://latamrust.online/LATAMLOGO.webp" />
+        <meta property="og:image" content="https://Rust Pirata.vercel.app/rust-old-school-logo.webp" />
         <meta property="og:locale" content="es_CO" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="keywords" content="rust pirata colombia, rust pirata gratis colombia, servidor rust pirata colombia, descargar rust pirata colombia, rust pirata 2026 colombia, rust pirata bogota, rust pirata medellin, rust pirata cali" />
-        <link rel="canonical" href="https://latamrust.online/rust-pirata-colombia" />
+        <link rel="canonical" href="https://Rust Pirata.vercel.app/rust-pirata-colombia/" />
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
             "@type": "VideoGame",
-            "name": "Rust Pirata Colombia - LATAMRUST",
+            "name": "Rust Pirata Colombia - Rust Pirata",
             "description": "Servidor #1 de Rust Pirata en Colombia con ping bajo y más de 10.000 jugadores activos",
-            "url": "https://latamrust.online/rust-pirata-colombia",
+            "url": "https://Rust Pirata.vercel.app/rust-pirata-colombia",
             "offers": {"@type": "Offer", "price": "0", "priceCurrency": "COP"},
-            "aggregateRating": {"@type": "AggregateRating", "ratingValue": "4.8", "ratingCount": "10000"},
             "inLanguage": "es-CO"
           })}
         </script>
@@ -35,7 +34,7 @@ const RustPirataColombia: React.FC = () => {
         <div className="max-w-4xl mx-auto text-center">
           <div className="text-6xl mb-4">🇨🇴</div>
           <h1 className="text-4xl md:text-6xl font-black mb-6">Rust Pirata Colombia - Descargar Gratis 2026</h1>
-          <p className="text-xl text-gray-300 mb-8">Servidor LATAMRUST - Mejor servidor Rust Pirata Colombia con ping bajo, +10,000 jugadores parcero</p>
+          <p className="text-xl text-gray-300 mb-8">Servidor Rust Pirata - Mejor servidor Rust Pirata Colombia con ping bajo, +10,000 jugadores parcero</p>
           <div className="flex flex-wrap gap-4 justify-center">
             <Link to="/" className="px-8 py-4 bg-red-600 hover:bg-red-700 rounded-xl font-bold text-lg transition-all transform hover:scale-105">¡JUGAR AHORA PARCERO!</Link>
             <a href="https://discord.com/invite/7Vz4YBamFG" target="_blank" rel="noopener noreferrer" className="px-8 py-4 bg-gray-800 hover:bg-gray-700 rounded-xl font-bold text-lg transition-all">Discord Colombia</a>
@@ -45,7 +44,7 @@ const RustPirataColombia: React.FC = () => {
       <article className="max-w-4xl mx-auto px-4 py-12">
         <section className="mb-12">
           <h2 className="text-3xl font-bold mb-6 text-red-500">¿Qué es Rust Pirata Colombia?</h2>
-          <p className="text-lg text-gray-300 leading-relaxed mb-4"><strong>Rust Pirata Colombia</strong> es la versión gratuita de <strong>rust pirata</strong> para colombianos parcero. LATAMRUST ofrece el <strong>mejor servidor rust pirata colombia</strong> con ping 70-90ms desde Bogotá, Medellín, Cali, Barranquilla, Cartagena. Miles de colombianos jugando <strong>rust pirata gratis</strong> todos los días.</p>
+          <p className="text-lg text-gray-300 leading-relaxed mb-4"><strong>Rust Pirata Colombia</strong> es la versión gratuita de <strong>rust pirata</strong> para colombianos parcero. Rust Pirata ofrece el <strong>mejor servidor rust pirata colombia</strong> con ping 70-90ms desde Bogotá, Medellín, Cali, Barranquilla, Cartagena. Miles de colombianos jugando <strong>rust pirata gratis</strong> todos los días.</p>
           <p className="text-lg text-gray-300 leading-relaxed mb-4">Si buscas <strong>descargar rust pirata colombia</strong> o <strong>servidor rust colombia</strong>, somos la mejor opción parcero. Juega <strong>rust pirata 2275</strong> gratis con colombianos. <strong>Rust pirata</strong> chimba en Colombia.</p>
         </section>
         <section className="mb-12">
@@ -55,7 +54,7 @@ const RustPirataColombia: React.FC = () => {
             <p className="text-gray-300">1. Únete al Discord para <strong>descargar rust pirata colombia gratis</strong></p>
             <p className="text-gray-300">2. Descarga <strong>rust pirata 2275</strong> desde el canal oficial</p>
             <p className="text-gray-300">3. Instala <strong>rust pirata</strong> en tu PC parcero</p>
-            <p className="text-gray-300">4. Conecta al <strong>servidor rust pirata</strong> LATAMRUST chimba</p>
+            <p className="text-gray-300">4. Conecta al <strong>servidor rust pirata</strong> Rust Pirata chimba</p>
           </div>
         </section>
         <section className="mb-12">
@@ -72,7 +71,7 @@ const RustPirataColombia: React.FC = () => {
           </div>
         </section>
         <section className="mb-12 bg-gray-900/50 rounded-2xl p-8">
-          <h2 className="text-3xl font-bold mb-6 text-red-500">Por Qué LATAMRUST es Chimba pa' Colombia</h2>
+          <h2 className="text-3xl font-bold mb-6 text-red-500">Por Qué Rust Pirata es Chimba pa' Colombia</h2>
           <div className="grid md:grid-cols-2 gap-6">
             <div className="bg-black/40 rounded-xl p-6"><Zap className="w-10 h-10 text-yellow-400 mb-4" /><h3 className="text-xl font-bold mb-3">Ping Bajo Colombia</h3><p className="text-gray-300">70-90ms Bogotá, Medellín, Cali. Optimizado pa' Colombia.</p></div>
             <div className="bg-black/40 rounded-xl p-6"><Users className="w-10 h-10 text-yellow-400 mb-4" /><h3 className="text-xl font-bold mb-3">Comunidad Colombiana</h3><p className="text-gray-300">Miles de colombianos online 24/7. Moderadores paisas.</p></div>

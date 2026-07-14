@@ -24,40 +24,42 @@ const Header: React.FC = () => {
 
   return (
     <header
-      className={`fixed top-0 left-0 w-full z-50 border-b border-white/10 ${
+      className={`fixed top-0 left-0 w-full z-50 border-b transition-all duration-300 ${
         scrolled
-          ? "bg-[#0a0a0a]/95 backdrop-blur-sm"
-          : "bg-[#0a0a0a]/80"
+          ? "bg-[#0a0a0a]/95 backdrop-blur-md border-red-500/15"
+          : "bg-[#0a0a0a]/80 border-white/5"
       }`}
       style={{
-        transition:
-          "background-color 300ms ease-out, backdrop-filter 300ms ease-out",
+        boxShadow: scrolled ? "0 8px 28px -10px rgba(239, 68, 68, 0.18)" : "none",
       }}
     >
       <nav
-        className="max-w-screen-xl mx-auto px-8 md:px-12"
+        className="max-w-screen-xl mx-auto px-6 md:px-12"
         aria-label="Menu principal"
       >
-        <div className="flex items-center h-18">
+        <div className="flex items-center h-[72px]">
           {/* Logo */}
           <a
             href="/"
             className="flex items-center gap-3 flex-shrink-0"
-            aria-label="LATAMRUST - Ir al inicio"
+            aria-label="RUST PIRATA - Ir al inicio"
           >
-            <img
-              src="/loader-bg.webp"
-              alt="LATAMRUST"
-              width="40"
-              height="40"
-              className="w-10 h-10 rounded-lg object-cover"
-              loading="eager"
-            />
+            <div className="relative">
+              <div className="absolute inset-0 bg-red-500/30 blur-md rounded-md" />
+              <img
+                src="/rust-old-school-logo.webp"
+                alt="RUST OLD SCHOOL"
+                width="40"
+                height="40"
+                className="relative w-10 h-10 rounded-md object-cover"
+                loading="eager"
+              />
+            </div>
             <div>
-              <span className="text-white font-black text-xl tracking-tight block leading-tight">
-                Paraguay<span className="text-red-500">RAIDER</span>
+              <span className="rp-display text-white font-bold text-xl tracking-tight block leading-tight">
+                RUST <span className="text-red-500">PIRATA</span>
               </span>
-              <span className="text-gray-500 text-[10px] font-bold tracking-widest uppercase block leading-tight mt-1">
+              <span className="text-gray-500 text-[9px] font-bold tracking-[0.2em] uppercase block leading-tight mt-0.5 rp-mono">
                 {t("header.tagline")}
               </span>
             </div>
@@ -70,12 +72,12 @@ const Header: React.FC = () => {
           <div className="hidden md:flex items-center gap-5">
             {Array.isArray(navLabels) &&
               navLabels.map((label: string, i: number) => {
-                const hrefs = ["#servicios", "#planes", "#proyectos", "#faq"];
+                const hrefs = ["#servidor", "#version", "#videos", "#planes", "#faq"];
                 return (
                   <a
                     key={i}
                     href={hrefs[i]}
-                    className="text-gray-300 hover:text-red-500 text-sm font-bold tracking-wide transition-colors border-b-2 border-transparent hover:border-red-500 pb-1"
+                    className="rp-mono text-gray-300 hover:text-red-500 text-xs font-bold tracking-[0.15em] uppercase transition-colors border-b-2 border-transparent hover:border-red-500 pb-1"
                   >
                     {label}
                   </a>
@@ -83,7 +85,7 @@ const Header: React.FC = () => {
               })}
 
             {/* Language Switcher */}
-            <div className="inline-flex items-center border border-white/10 bg-white/[0.02] ml-2">
+            <div className="inline-flex items-center border border-white/10 bg-white/[0.02] ml-2 rp-hud-sm overflow-hidden">
               <button
                 onClick={() => setLanguage("es")}
                 className={`px-3 py-1.5 text-[10px] font-bold tracking-[0.15em] uppercase transition-colors duration-200 ${
@@ -121,11 +123,7 @@ const Header: React.FC = () => {
             aria-expanded={mobileOpen}
             aria-controls="mobile-menu"
           >
-            {mobileOpen ? (
-              <X className="w-7 h-7" />
-            ) : (
-              <Menu className="w-7 h-7" />
-            )}
+            {mobileOpen ? <X className="w-7 h-7" /> : <Menu className="w-7 h-7" />}
           </button>
         </div>
 
@@ -135,21 +133,19 @@ const Header: React.FC = () => {
           role="menu"
           aria-hidden={!mobileOpen}
           className={`md:hidden border-t border-white/10 py-4 space-y-3 overflow-hidden transition-all duration-300 ${
-            mobileOpen
-              ? "max-h-96 opacity-100"
-              : "max-h-0 opacity-0 border-t-0"
+            mobileOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0 border-t-0"
           }`}
         >
           {Array.isArray(navLabels) &&
             navLabels.map((label: string, i: number) => {
-              const hrefs = ["#servicios", "#planes", "#proyectos", "#faq"];
+              const hrefs = ["#servidor", "#version", "#videos", "#planes", "#faq"];
               return (
                 <a
                   key={i}
                   href={hrefs[i]}
                   onClick={() => setMobileOpen(false)}
                   role="menuitem"
-                  className="block text-gray-300 hover:text-red-500 text-sm font-bold py-2 transition-colors"
+                  className="block rp-mono text-gray-300 hover:text-red-500 text-xs font-bold tracking-[0.15em] uppercase py-2 transition-colors"
                 >
                   {label}
                 </a>
@@ -160,7 +156,7 @@ const Header: React.FC = () => {
           <div className="flex gap-2 py-2">
             <button
               onClick={() => setLanguage("es")}
-              className={`px-4 py-2 text-xs font-bold tracking-[0.15em] uppercase rounded-lg transition-colors duration-200 ${
+              className={`px-4 py-2 text-xs font-bold tracking-[0.15em] uppercase rounded transition-colors duration-200 rp-ui ${
                 language === "es"
                   ? "bg-red-600 text-white"
                   : "bg-white/5 text-gray-500 border border-white/10"
@@ -170,7 +166,7 @@ const Header: React.FC = () => {
             </button>
             <button
               onClick={() => setLanguage("pt")}
-              className={`px-4 py-2 text-xs font-bold tracking-[0.15em] uppercase rounded-lg transition-colors duration-200 ${
+              className={`px-4 py-2 text-xs font-bold tracking-[0.15em] uppercase rounded transition-colors duration-200 rp-ui ${
                 language === "pt"
                   ? "bg-red-600 text-white"
                   : "bg-white/5 text-gray-500 border border-white/10"

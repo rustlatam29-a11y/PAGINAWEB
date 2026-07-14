@@ -1,4 +1,4 @@
-import React from 'react';
+﻿import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { ChevronRight, Home } from 'lucide-react';
 
@@ -14,10 +14,10 @@ const Breadcrumbs: React.FC = () => {
   const breadcrumbMap: { [key: string]: string } = {
     '': 'Inicio - Rust Pirata & DayZ Pirata LATAM',
     'dayz': 'DayZ Pirata 1.28 Gratis - Servidor BR-LATAM',
-    'vip': 'Planes VIP - LATAMRUST',
-    'vips': 'Planes VIP - LATAMRUST',
-    'rp': 'Tienda RP - LATAMRUST',
-    'reglas': 'Reglas del Servidor - LATAMRUST',
+    'vip': 'Planes VIP - Rust Pirata',
+    'vips': 'Planes VIP - Rust Pirata',
+    'rp': 'Tienda RP - Rust Pirata',
+    'reglas': 'Reglas del Servidor - Rust Pirata',
     'terms': 'Términos de Servicio',
     'privacy': 'Política de Privacidad',
   };
@@ -40,7 +40,7 @@ const Breadcrumbs: React.FC = () => {
       "@type": "ListItem",
       "position": index + 1,
       "name": item.label,
-      "item": `https://latamrust.online${item.path}`
+      "item": `https://Rust Pirata.vercel.app${item.path}`
     }))
   };
 

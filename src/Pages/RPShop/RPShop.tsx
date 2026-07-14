@@ -1,8 +1,9 @@
-import React from "react";
+﻿import React from "react";
 import Header from "../../Components/Header/Header";
 import Footer from "../../Components/Footer/Footer";
 import GlobalBackground from "../../Components/GlobalBackground/GlobalBackground";
 import Breadcrumbs from "../../Components/Breadcrumbs/Breadcrumbs";
+import { Helmet } from "react-helmet-async";
 import { ShoppingCart, Gem, Zap, Sparkles, Crown, Rocket, Gift, Star, Award } from "lucide-react";
 
 const RPShop: React.FC = () => {
@@ -17,8 +18,8 @@ const RPShop: React.FC = () => {
       glowColor: "shadow-blue-600/50",
       titleES: "Pack Básico",
       titlePT: "Pacote Básico",
-      descES: "Pack básico de 10.000 RP LATAMRUST, ideal para compras en /shop y beneficios VIP.",
-      descPT: "Pacote básico com 10.000 RP LATAMRUST, ideal para compras na /shop e benefícios VIP.",
+      descES: "Pack básico de 10.000 RP Rust Pirata, ideal para compras en /shop y beneficios VIP.",
+      descPT: "Pacote básico com 10.000 RP Rust Pirata, ideal para compras na /shop e benefícios VIP.",
       badge: "💎"
     },
     {
@@ -31,8 +32,8 @@ const RPShop: React.FC = () => {
       glowColor: "shadow-purple-600/50",
       titleES: "Pack Avanzado",
       titlePT: "Pacote Avançado",
-      descES: "Pack avanzado de 18.000 RP LATAMRUST para mejorar tu experiencia en /shop y VIP.",
-      descPT: "Pacote avançado com 18.000 RP LATAMRUST para melhorar sua experiência na /shop e VIP.",
+      descES: "Pack avanzado de 18.000 RP Rust Pirata para mejorar tu experiencia en /shop y VIP.",
+      descPT: "Pacote avançado com 18.000 RP Rust Pirata para melhorar sua experiência na /shop e VIP.",
       badge: "✨",
       popular: true
     },
@@ -46,8 +47,8 @@ const RPShop: React.FC = () => {
       glowColor: "shadow-red-600/50",
       titleES: "Pack Premium",
       titlePT: "Pacote Premium",
-      descES: "Pack premium de 35.000 RP LATAMRUST, pensado para jugadores frecuentes en /shop y VIP.",
-      descPT: "Pacote premium com 35.000 RP LATAMRUST, pensado para jogadores frequentes na /shop e VIP.",
+      descES: "Pack premium de 35.000 RP Rust Pirata, pensado para jugadores frecuentes en /shop y VIP.",
+      descPT: "Pacote premium com 35.000 RP Rust Pirata, pensado para jogadores frequentes na /shop e VIP.",
       badge: "🚀"
     },
     {
@@ -60,14 +61,25 @@ const RPShop: React.FC = () => {
       glowColor: "shadow-yellow-600/50",
       titleES: "Pack Élite",
       titlePT: "Pacote Elite",
-      descES: "Pack élite de 55.000 RP LATAMRUST para maximizar ventajas en /shop y benefícios VIP.",
-      descPT: "Pacote elite com 55.000 RP LATAMRUST para maximizar vantagens na /shop e benefícios VIP.",
+      descES: "Pack élite de 55.000 RP Rust Pirata para maximizar ventajas en /shop y benefícios VIP.",
+      descPT: "Pacote elite com 55.000 RP Rust Pirata para maximizar vantagens na /shop e benefícios VIP.",
       badge: "👑"
     }
   ];
 
   return (
     <GlobalBackground>
+      <Helmet>
+        <title>{'Tienda RP Shop | Rust Pirata'}</title>
+        <meta name="description" content="Tienda oficial de Rust Pirata. Comprá ítems, skins y ventajas para el servidor." />
+        <meta name="robots" content="index, follow" />
+        <link rel="canonical" href="https://Rust Pirata.vercel.app/rp/" />
+        <meta property="og:title" content={'Tienda RP Shop | Rust Pirata'} />
+        <meta property="og:description" content="Tienda oficial de Rust Pirata. Comprá ítems, skins y ventajas para el servidor." />
+        <meta property="og:url" content="https://Rust Pirata.vercel.app/rp/" />
+        <meta property="og:image" content="https://Rust Pirata.vercel.app/rust-old-school-logo.webp" />
+        <meta property="og:type" content="website" />
+      </Helmet>
       <Header />
       <Breadcrumbs />
       
@@ -91,10 +103,10 @@ const RPShop: React.FC = () => {
             
             <div className="max-w-4xl mx-auto space-y-4">
               <p className="text-gray-300 text-lg md:text-xl font-light leading-relaxed">
-                <span className="font-semibold text-purple-400">ES:</span> RP es la moneda oficial de LATAMRUST. Con RP se pueden comprar ítems en <span className="text-purple-400 font-semibold">/shop</span> y acceder a beneficios VIP.
+                <span className="font-semibold text-purple-400">ES:</span> RP es la moneda oficial de Rust Pirata. Con RP se pueden comprar ítems en <span className="text-purple-400 font-semibold">/shop</span> y acceder a beneficios VIP.
               </p>
               <p className="text-gray-300 text-lg md:text-xl font-light leading-relaxed">
-                <span className="font-semibold text-purple-400">PT:</span> RP é a moeda oficial do LATAMRUST. Com RP é possível comprar itens na <span className="text-purple-400 font-semibold">/shop</span> e ter benefícios VIP.
+                <span className="font-semibold text-purple-400">PT:</span> RP é a moeda oficial do Rust Pirata. Com RP é possível comprar itens na <span className="text-purple-400 font-semibold">/shop</span> e ter benefícios VIP.
               </p>
             </div>
 
@@ -202,7 +214,7 @@ const RPShop: React.FC = () => {
                 Para comprar RP, contáctanos directamente y te ayudaremos con el proceso de pago
               </p>
               <a 
-                href="https://wa.link/6wker8?text=Hola!%20Quiero%20comprar%20RP%20en%20LATAMRUST" 
+                href="https://wa.link/6wker8?text=Hola!%20Quiero%20comprar%20RP%20en%20Rust Pirata" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="inline-flex items-center space-x-3 px-8 py-4 bg-gradient-to-r from-purple-600 to-purple-800 hover:from-purple-700 hover:to-purple-900 text-white font-bold rounded-xl transition-all duration-300 transform hover:scale-105 shadow-2xl"

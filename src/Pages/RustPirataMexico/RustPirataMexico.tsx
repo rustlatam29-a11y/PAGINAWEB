@@ -1,4 +1,4 @@
-import React from "react";
+﻿import React from "react";
 import { Download, Server, Users, Zap } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
@@ -7,26 +7,25 @@ const RustPirataMexico: React.FC = () => {
   return (
     <div className="min-h-screen bg-black text-white">
       <Helmet>
-        <title>Rust Pirata México 🇲🇽 Descargar Gratis 2026 - LATAMRUST #1</title>
+        <title>Rust Pirata México 🇲🇽 Descargar Gratis 2026 - Rust Pirata #1</title>
         <meta name="description" content="Servidor #1 de Rust Pirata en México. Ping bajo 50-70ms desde CDMX, Monterrey, Guadalajara. +10.000 jugadores activos wey. 100% gratis. ¡Juega ahora!" />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://latamrust.online/rust-pirata-mexico" />
-        <meta property="og:title" content="Rust Pirata México 🇲🇽 - Servidor #1 LATAMRUST" />
+        <meta property="og:url" content="https://Rust Pirata.vercel.app/rust-pirata-mexico/" />
+        <meta property="og:title" content="Rust Pirata México 🇲🇽 - Servidor #1 Rust Pirata" />
         <meta property="og:description" content="El mejor servidor de Rust Pirata en México con ping bajo y más de 10.000 jugadores. 100% gratis wey." />
-        <meta property="og:image" content="https://latamrust.online/LATAMLOGO.webp" />
+        <meta property="og:image" content="https://Rust Pirata.vercel.app/rust-old-school-logo.webp" />
         <meta property="og:locale" content="es_MX" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="keywords" content="rust pirata mexico, rust pirata gratis mexico, servidor rust pirata mexico, descargar rust pirata mexico, rust pirata 2026 mexico, rust pirata cdmx, rust pirata monterrey, rust pirata guadalajara" />
-        <link rel="canonical" href="https://latamrust.online/rust-pirata-mexico" />
+        <link rel="canonical" href="https://Rust Pirata.vercel.app/rust-pirata-mexico/" />
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
             "@type": "VideoGame",
-            "name": "Rust Pirata México - LATAMRUST",
+            "name": "Rust Pirata México - Rust Pirata",
             "description": "Servidor #1 de Rust Pirata en México con ping bajo y más de 10.000 jugadores activos",
-            "url": "https://latamrust.online/rust-pirata-mexico",
+            "url": "https://Rust Pirata.vercel.app/rust-pirata-mexico",
             "offers": {"@type": "Offer", "price": "0", "priceCurrency": "MXN"},
-            "aggregateRating": {"@type": "AggregateRating", "ratingValue": "4.8", "ratingCount": "10000"},
             "inLanguage": "es-MX"
           })}
         </script>
@@ -38,7 +37,7 @@ const RustPirataMexico: React.FC = () => {
             Rust Pirata México - Descargar Gratis 2026
           </h1>
           <p className="text-xl text-gray-300 mb-8">
-            Servidor LATAMRUST - El mejor servidor Rust Pirata en México con ping bajo y +10,000 jugadores wey
+            Servidor Rust Pirata - El mejor servidor Rust Pirata en México con ping bajo y +10,000 jugadores wey
           </p>
           <div className="flex flex-wrap gap-4 justify-center">
             <Link to="/" className="px-8 py-4 bg-red-600 hover:bg-red-700 rounded-xl font-bold text-lg transition-all transform hover:scale-105">
@@ -66,12 +65,12 @@ const RustPirataMexico: React.FC = () => {
           <p className="text-lg text-gray-300 leading-relaxed mb-4">
             El <strong>Rust Pirata México</strong> se ha vuelto súper popular en el país porque permite jugar gratuitamente sin necesidad 
             de comprar el juego en Steam. Con más de 10.000 jugadores activos diariamente en LATAM, miles son mexicanos que disfrutan del 
-            mejor servidor de Rust Pirata de la región. LATAMRUST garantiza excelente conectividad para México con ping bajo de 50-70ms 
+            mejor servidor de Rust Pirata de la región. Rust Pirata garantiza excelente conectividad para México con ping bajo de 50-70ms 
             desde CDMX, Monterrey, Guadalajara, Tijuana, Puebla, León, Querétaro y todos los estados de México.
           </p>
 
           <p className="text-lg text-gray-300 leading-relaxed mb-4">
-            A diferencia de otros servidores piratas inseguros, LATAMRUST es profesional y confiable. Tenemos sistema anti-cheat que banea 
+            A diferencia de otros servidores piratas inseguros, Rust Pirata es profesional y confiable. Tenemos sistema anti-cheat que banea 
             hackers automáticamente, moderación en español mexicano que entiende el slang y la cultura local, soporte técnico 24/7 en español, 
             actualizaciones constantes y hardware dedicado. Puedes <strong>descargar Rust pirata gratis</strong> con total seguridad, sin 
             virus, sin malware. Es 100% gratuito para siempre compa.
@@ -84,20 +83,20 @@ const RustPirataMexico: React.FC = () => {
           </p>
         </section>
 
-        {/* SECCIÓN 2: Por Qué LATAMRUST México */}
+        {/* SECCIÓN 2: Por Qué Rust Pirata México */}
         <section className="mb-12">
-          <h2 className="text-3xl font-bold mb-6 text-red-500">Por Qué LATAMRUST es el Mejor Servidor Rust Pirata de México</h2>
+          <h2 className="text-3xl font-bold mb-6 text-red-500">Por Qué Rust Pirata es el Mejor Servidor Rust Pirata de México</h2>
           
           <h3 className="text-2xl font-bold mb-4 text-white">1. Conectividad Optimizada para México - Ping Bajo</h3>
           <p className="text-lg text-gray-300 mb-6 leading-relaxed">
-            LATAMRUST utiliza routing optimizado para garantizar excelente conectividad desde México. El ping promedio es de 50-70ms 
+            Rust Pirata utiliza routing optimizado para garantizar excelente conectividad desde México. El ping promedio es de 50-70ms 
             desde CDMX, Monterrey, Guadalajara y Tijuana. Esto es mucho mejor que servidores gringos con 150-300ms. Con ping bajo 
             tienes ventaja en PvP, construcción rápida y experiencia sin lag wey.
           </p>
 
           <h3 className="text-2xl font-bold mb-4 text-white">2. Comunidad Mexicana Activa - Miles de Jugadores</h3>
           <p className="text-lg text-gray-300 mb-6 leading-relaxed">
-            LATAMRUST tiene la comunidad mexicana más grande de Rust Pirata. Miles de mexicanos conectados diariamente, siempre 
+            Rust Pirata tiene la comunidad mexicana más grande de Rust Pirata. Miles de mexicanos conectados diariamente, siempre 
             hay gente para armar clanes, hacer trades y raids. Discord con canales en español mexicano, moderación que entiende 
             el slang local y torneos especiales para la comunidad mexicana.
           </p>
@@ -132,7 +131,7 @@ const RustPirataMexico: React.FC = () => {
         </section>
 
         <section className="mb-12 bg-gray-900/50 rounded-2xl p-8">
-          <h2 className="text-3xl font-bold mb-6 text-red-500">Por Qué LATAMRUST es el Mejor Servidor Rust Pirata México</h2>
+          <h2 className="text-3xl font-bold mb-6 text-red-500">Por Qué Rust Pirata es el Mejor Servidor Rust Pirata México</h2>
           <div className="grid md:grid-cols-2 gap-6">
             <div className="bg-black/40 rounded-xl p-6 border border-red-900/30">
               <Zap className="w-10 h-10 text-red-400 mb-4" />
@@ -166,8 +165,8 @@ const RustPirataMexico: React.FC = () => {
             <div className="flex gap-4">
               <div className="flex-shrink-0 w-12 h-12 bg-red-600 rounded-full flex items-center justify-center font-bold text-xl">1</div>
               <div>
-                <h3 className="text-xl font-bold mb-2">Únete al Discord LATAMRUST</h3>
-                <p className="text-gray-300">Entra al Discord oficial de LATAMRUST. Todos los links oficiales para <strong>descargar rust pirata méxico</strong> están en el canal #downloads. Link 100% seguro para <strong>rust pirata gratis</strong>.</p>
+                <h3 className="text-xl font-bold mb-2">Únete al Discord Rust Pirata</h3>
+                <p className="text-gray-300">Entra al Discord oficial de Rust Pirata. Todos los links oficiales para <strong>descargar rust pirata méxico</strong> están en el canal #downloads. Link 100% seguro para <strong>rust pirata gratis</strong>.</p>
               </div>
             </div>
             <div className="flex gap-4">
@@ -188,7 +187,7 @@ const RustPirataMexico: React.FC = () => {
               <div className="flex-shrink-0 w-12 h-12 bg-green-600 rounded-full flex items-center justify-center font-bold text-xl">4</div>
               <div>
                 <h3 className="text-xl font-bold mb-2 text-green-400">Conecta y Juega Rust Pirata</h3>
-                <p className="text-gray-300">Abre <strong>rust pirata</strong>, usa F1 y conecta al <strong>servidor rust pirata mexico</strong> LATAMRUST. ¡A jugar con miles de mexicanos wey! <strong>Rust pirata gratis</strong> para siempre.</p>
+                <p className="text-gray-300">Abre <strong>rust pirata</strong>, usa F1 y conecta al <strong>servidor rust pirata mexico</strong> Rust Pirata. ¡A jugar con miles de mexicanos wey! <strong>Rust pirata gratis</strong> para siempre.</p>
               </div>
             </div>
           </div>
@@ -199,7 +198,7 @@ const RustPirataMexico: React.FC = () => {
           <div className="space-y-4">
             <div className="bg-gray-800/50 rounded-xl p-6">
               <h3 className="text-lg font-bold text-red-400 mb-2">¿Es gratis Rust Pirata en México?</h3>
-              <p className="text-gray-300">Sí, <strong>rust pirata mexico</strong> es 100% gratis. Puedes <strong>descargar rust pirata</strong> sin costo y jugar en el <strong>servidor rust pirata</strong> LATAMRUST ilimitadamente wey.</p>
+              <p className="text-gray-300">Sí, <strong>rust pirata mexico</strong> es 100% gratis. Puedes <strong>descargar rust pirata</strong> sin costo y jugar en el <strong>servidor rust pirata</strong> Rust Pirata ilimitadamente wey.</p>
             </div>
             <div className="bg-gray-800/50 rounded-xl p-6">
               <h3 className="text-lg font-bold text-red-400 mb-2">¿Cuánto ping tengo desde México en Rust Pirata?</h3>

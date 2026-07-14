@@ -1,7 +1,8 @@
-import React from "react";
+﻿import React from "react";
 import { Link } from "react-router-dom";
 import { ArrowLeft, Server, Users, Shield, MessageSquare, Copy, CheckCircle } from "lucide-react";
 import Breadcrumbs from "../../Components/Breadcrumbs/Breadcrumbs";
+import { Helmet } from "react-helmet-async";
 
 const DayZ: React.FC = () => {
   const [copied, setCopied] = React.useState(false);
@@ -15,6 +16,17 @@ const DayZ: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-black via-gray-950 to-black text-white">
+      <Helmet>
+        <title>{'DayZ Pirata 1.28 Gratis | Servidor LATAM'}</title>
+        <meta name="description" content="Servidor DayZ Pirata 1.28 gratis para LATAM. Ping bajo, +1000 jugadores. Survival, zombies, PvP." />
+        <meta name="robots" content="index, follow" />
+        <link rel="canonical" href="https://Rust Pirata.vercel.app/dayz/" />
+        <meta property="og:title" content={'DayZ Pirata 1.28 Gratis | Servidor LATAM'} />
+        <meta property="og:description" content="Servidor DayZ Pirata 1.28 gratis para LATAM. Ping bajo, +1000 jugadores. Survival, zombies, PvP." />
+        <meta property="og:url" content="https://Rust Pirata.vercel.app/dayz/" />
+        <meta property="og:image" content="https://Rust Pirata.vercel.app/rust-old-school-logo.webp" />
+        <meta property="og:type" content="website" />
+      </Helmet>
       <Breadcrumbs />
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         {/* Back button */}

@@ -1,10 +1,22 @@
-import React from "react";
+﻿import React from "react";
 import { Link } from "react-router-dom";
 import { ArrowLeft, Shield } from "lucide-react";
+import { Helmet } from "react-helmet-async";
 
 const Terms: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-b from-black via-gray-950 to-black text-white">
+      <Helmet>
+        <title>{'Términos y Condiciones | Rust Pirata'}</title>
+        <meta name="description" content="Términos y condiciones de uso de Rust Pirata." />
+        <meta name="robots" content="index, follow" />
+        <link rel="canonical" href="https://Rust Pirata.vercel.app/terms/" />
+        <meta property="og:title" content={'Términos y Condiciones | Rust Pirata'} />
+        <meta property="og:description" content="Términos y condiciones de uso de Rust Pirata." />
+        <meta property="og:url" content="https://Rust Pirata.vercel.app/terms/" />
+        <meta property="og:image" content="https://Rust Pirata.vercel.app/rust-old-school-logo.webp" />
+        <meta property="og:type" content="website" />
+      </Helmet>
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         {/* Back button */}
         <Link 

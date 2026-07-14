@@ -1,4 +1,4 @@
-import React from "react";
+﻿import React from "react";
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import { CheckCircle, ArrowRight, Download, Shield, Star, Code, Zap, Settings } from "lucide-react";
@@ -7,20 +7,20 @@ const DescargarRustPirata: React.FC = () => {
   return (
     <div className="min-h-screen bg-black text-white">
       <Helmet>
-        <title>Descargar Rust Pirata Gratis 2026 - Rust 2275 y 2388 | LATAMRUST</title>
+        <title>Descargar Rust Pirata Gratis 2026 - Rust 2275 y 2388 | Rust Pirata</title>
         <meta name="description" content="Descarga Rust Pirata gratis 2026. Rust 2275 OldRecoil y Rust 2388 Actualizado. Sin Steam, sin Epic Games. Archivo seguro verificado sin virus. Link de descarga directa." />
         <meta name="keywords" content="descargar rust pirata, rust pirata gratis, rust 2275 descargar, rust 2388 descargar, rust pirata pc, rust sin steam, rust sin epic games, rust pirata download, baixar rust pirata, rust gratis, como bajar rust pirata" />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://latamrust.online/descargar-rust-pirata" />
+        <meta property="og:url" content="https://Rust Pirata.vercel.app/descargar-rust-pirata/" />
         <meta property="og:title" content="Descargar Rust Pirata Gratis 2026 - Rust 2275 y 2388" />
         <meta property="og:description" content="Descarga Rust Pirata gratis. Rust 2275 OldRecoil y Rust 2388 Actualizado. Sin Steam, sin virus. Link seguro." />
-        <meta property="og:image" content="https://latamrust.online/LATAMLOGO.webp" />
+        <meta property="og:image" content="https://Rust Pirata.vercel.app/rust-old-school-logo.webp" />
         <meta property="og:locale" content="es_ES" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Descargar Rust Pirata Gratis 2026" />
         <meta name="twitter:description" content="Descarga Rust 2275 y 2388 gratis. Sin Steam ni Epic Games. Archivo seguro." />
-        <meta name="twitter:image" content="https://latamrust.online/LATAMLOGO.webp" />
-        <link rel="canonical" href="https://latamrust.online/descargar-rust-pirata" />
+        <meta name="twitter:image" content="https://Rust Pirata.vercel.app/rust-old-school-logo.webp" />
+        <link rel="canonical" href="https://Rust Pirata.vercel.app/descargar-rust-pirata/" />
         <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
 
         <script type="application/ld+json">
@@ -29,14 +29,14 @@ const DescargarRustPirata: React.FC = () => {
             "@type": "HowTo",
             "name": "Como Descargar Rust Pirata Gratis 2026",
             "description": "Guia paso a paso para descargar Rust Pirata 2275 o 2388 gratis de forma segura sin virus.",
-            "image": "https://latamrust.online/LATAMLOGO.webp",
+            "image": "https://Rust Pirata.vercel.app/rust-old-school-logo.webp",
             "totalTime": "PT15M",
             "step": [
               {"@type": "HowToStep", "name": "Contactar por Discord", "text": "Escribe por Discord y solicita el enlace de descarga seguro."},
               {"@type": "HowToStep", "name": "Descargar el archivo", "text": "Descarga Rust Pirata 2275 o 2388 desde el enlace seguro que te enviamos."},
               {"@type": "HowToStep", "name": "Extraer los archivos", "text": "Extrae el archivo .zip o .rar en una carpeta de tu PC."},
               {"@type": "HowToStep", "name": "Instalar el juego", "text": "Ejecuta el instalador y sigue los pasos. No necesitas Steam ni Epic Games."},
-              {"@type": "HowToStep", "name": "Conectar al servidor", "text": "Abre Rust Pirata y conecta al servidor LATAMRUST para jugar gratis."}
+              {"@type": "HowToStep", "name": "Conectar al servidor", "text": "Abre Rust Pirata y conecta al servidor Rust Pirata para jugar gratis."}
             ]
           })}
         </script>
@@ -50,7 +50,7 @@ const DescargarRustPirata: React.FC = () => {
               {"@type": "Question", "name": "Es seguro descargar Rust pirata?", "acceptedAnswer": {"@type": "Answer", "text": "Si, nuestros archivos estan verificados y libres de virus. Descarga 100% segura. Mas de 10,000 jugadores confian en nosotros."}},
               {"@type": "Question", "name": "Necesito Steam para jugar Rust pirata?", "acceptedAnswer": {"@type": "Answer", "text": "No, Rust pirata no necesita Steam ni Epic Games. Se ejecuta directamente en tu PC Windows sin cuentas externas."}},
               {"@type": "Question", "name": "Cual es la diferencia entre Rust 2275 y 2388?", "acceptedAnswer": {"@type": "Answer", "text": "Rust 2275 es la version clasica con recoil original. Rust 2388 es la ultima version con mejores graficos. Ambas son gratis para descargar."}},
-              {"@type": "Question", "name": "Rust pirata tiene virus?", "acceptedAnswer": {"@type": "Answer", "text": "No, los archivos de LATAMRUST estan verificados y son 100% seguros. Algunos antivirus dan falso positivo por los archivos crackeados, pero es normal."}},
+              {"@type": "Question", "name": "Rust pirata tiene virus?", "acceptedAnswer": {"@type": "Answer", "text": "No, los archivos de Rust Pirata estan verificados y son 100% seguros. Algunos antivirus dan falso positivo por los archivos crackeados, pero es normal."}},
               {"@type": "Question", "name": "Cuanto pesa la descarga de Rust pirata?", "acceptedAnswer": {"@type": "Answer", "text": "El archivo completo pesa entre 8-10 GB. Con internet de 100 Mbps tarda aproximadamente 15-20 minutos en descargar."}}
             ]
           })}
@@ -61,8 +61,8 @@ const DescargarRustPirata: React.FC = () => {
             "@context": "https://schema.org",
             "@type": "BreadcrumbList",
             "itemListElement": [
-              {"@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://latamrust.online/"},
-              {"@type": "ListItem", "position": 2, "name": "Descargar Rust Pirata", "item": "https://latamrust.online/descargar-rust-pirata"}
+              {"@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://Rust Pirata.vercel.app/"},
+              {"@type": "ListItem", "position": 2, "name": "Descargar Rust Pirata", "item": "https://Rust Pirata.vercel.app/descargar-rust-pirata"}
             ]
           })}
         </script>
@@ -107,7 +107,7 @@ const DescargarRustPirata: React.FC = () => {
               <p className="text-gray-300 mb-4">La version clasica favorita de la comunidad. Recoil original que todos conocen.</p>
               <ul className="space-y-2 text-gray-300 text-sm mb-6">
                 <li className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-green-500" /> Recoil clasico predecible</li>
-                <li className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-green-500" /> +30,000 plugins compatibles</li>
+                <li className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-green-500" /> plugins compatibles</li>
                 <li className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-green-500" /> Mas estable y optimizado</li>
                 <li className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-green-500" /> Ideal para PvP competitivo</li>
               </ul>

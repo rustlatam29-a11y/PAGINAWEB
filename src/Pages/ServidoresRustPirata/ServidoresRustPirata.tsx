@@ -1,4 +1,4 @@
-import React from "react";
+﻿import React from "react";
 import { Server, Users, Zap, Globe, Star, TrendingUp } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
@@ -7,20 +7,20 @@ const ServidoresRustPirata: React.FC = () => {
   return (
     <div className="min-h-screen bg-black text-white">
       <Helmet>
-        <title>Servidores Rust Pirata 2026 - Top Mejores Servidores LATAM | LATAMRUST</title>
-        <meta name="description" content="Lista completa de los mejores servidores Rust Pirata 2026 en LATAM. Comparativa de ping, jugadores, plugins y soporte. LATAMRUST #1 ranking." />
+        <title>Servidores Rust Pirata 2026 - Top Mejores Servidores LATAM | Rust Pirata</title>
+        <meta name="description" content="Lista completa de los mejores servidores Rust Pirata 2026 en LATAM. Comparativa de ping, jugadores, plugins y soporte. Rust Pirata #1 ranking." />
         <meta name="keywords" content="servidores rust pirata, mejores servidores rust pirata, servidores rust pirata brasil, servidores rust pirata argentina, top servidores rust, ranking servidores rust, servidor rust 2275, servidor rust 2388, servidor rust brasil, servidor rust mexico" />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://latamrust.online/servidores-rust-pirata" />
+        <meta property="og:url" content="https://Rust Pirata.vercel.app/servidores-rust-pirata/" />
         <meta property="og:title" content="Servidores Rust Pirata 2026 - Top Mejores Servidores LATAM" />
         <meta property="og:description" content="Lista completa de los mejores servidores Rust Pirata 2026. Comparativa, reviews y ranking." />
-        <meta property="og:image" content="https://latamrust.online/LATAMLOGO.webp" />
+        <meta property="og:image" content="https://Rust Pirata.vercel.app/rust-old-school-logo.webp" />
         <meta property="og:locale" content="es_ES" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Servidores Rust Pirata 2026 - Top Ranking" />
         <meta name="twitter:description" content="Los mejores servidores Rust Pirata de LATAM. Comparativa completa 2026." />
-        <meta name="twitter:image" content="https://latamrust.online/LATAMLOGO.webp" />
-        <link rel="canonical" href="https://latamrust.online/servidores-rust-pirata" />
+        <meta name="twitter:image" content="https://Rust Pirata.vercel.app/rust-old-school-logo.webp" />
+        <link rel="canonical" href="https://Rust Pirata.vercel.app/servidores-rust-pirata/" />
         <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
 
         <script type="application/ld+json">
@@ -31,7 +31,7 @@ const ServidoresRustPirata: React.FC = () => {
             "description": "Ranking de los mejores servidores de Rust Pirata en Latinoamerica",
             "numberOfItems": 5,
             "itemListElement": [
-              {"@type": "ListItem", "position": 1, "item": {"@type": "GameServer", "name": "LATAMRUST", "description": "Servidor #1 de Rust Pirata en LATAM con 10,000+ jugadores activos", "gameLocation": {"@type": "Place", "name": "Brasil/LATAM"}, "maximumAttendeeCapacity": 10000}},
+              {"@type": "ListItem", "position": 1, "item": {"@type": "GameServer", "name": "Rust Pirata", "description": "Servidor #1 de Rust Pirata en LATAM con 10,000+ jugadores activos", "gameLocation": {"@type": "Place", "name": "Brasil/LATAM"}, "maximumAttendeeCapacity": 10000}},
               {"@type": "ListItem", "position": 2, "item": {"@type": "GameServer", "name": "BRRust", "description": "Servidor brasileño de Rust Pirata"}},
               {"@type": "ListItem", "position": 3, "item": {"@type": "GameServer", "name": "LatinRust", "description": "Servidor LATAM de Rust Pirata"}}
             ]
@@ -43,10 +43,10 @@ const ServidoresRustPirata: React.FC = () => {
             "@context": "https://schema.org",
             "@type": "FAQPage",
             "mainEntity": [
-              {"@type": "Question", "name": "Qual e o melhor servidor de Rust Pirata do Brasil?", "acceptedAnswer": {"@type": "Answer", "text": "LATAMRUST e o melhor servidor de Rust Pirata do Brasil em 2026, com mais de 10.000 jogadores ativos, ping baixo, anti-cheat profissional e suporte 24/7."}},
-              {"@type": "Question", "name": "Como encontrar servidores de Rust Pirata?", "acceptedAnswer": {"@type": "Answer", "text": "Os melhores servidores estao listados nesta pagina. LATAMRUST lidera o ranking com a maior comunidade de Rust Pirata da LATAM."}},
-              {"@type": "Question", "name": "Servidores Rust Pirata tem lag?", "acceptedAnswer": {"@type": "Answer", "text": "Depende da qualidade. LATAMRUST nao tem lag pois usa hardware dedicado no Brasil. Servidores mal configurados causam lag."}},
-              {"@type": "Question", "name": "Quantos jogadores tem o maior servidor Rust Pirata?", "acceptedAnswer": {"@type": "Answer", "text": "LATAMRUST tem mais de 10.000 jogadores ativos, sendo o maior servidor de Rust Pirata da America Latina."}}
+              {"@type": "Question", "name": "Qual e o melhor servidor de Rust Pirata do Brasil?", "acceptedAnswer": {"@type": "Answer", "text": "Rust Pirata e o melhor servidor de Rust Pirata do Brasil em 2026, com mais de 10.000 jogadores ativos, ping baixo, anti-cheat profissional e suporte 24/7."}},
+              {"@type": "Question", "name": "Como encontrar servidores de Rust Pirata?", "acceptedAnswer": {"@type": "Answer", "text": "Os melhores servidores estao listados nesta pagina. Rust Pirata lidera o ranking com a maior comunidade de Rust Pirata da LATAM."}},
+              {"@type": "Question", "name": "Servidores Rust Pirata tem lag?", "acceptedAnswer": {"@type": "Answer", "text": "Depende da qualidade. Rust Pirata nao tem lag pois usa hardware dedicado no Brasil. Servidores mal configurados causam lag."}},
+              {"@type": "Question", "name": "Quantos jogadores tem o maior servidor Rust Pirata?", "acceptedAnswer": {"@type": "Answer", "text": "Rust Pirata tem mais de 10.000 jogadores ativos, sendo o maior servidor de Rust Pirata da America Latina."}}
             ]
           })}
         </script>
@@ -56,8 +56,8 @@ const ServidoresRustPirata: React.FC = () => {
             "@context": "https://schema.org",
             "@type": "BreadcrumbList",
             "itemListElement": [
-              {"@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://latamrust.online/"},
-              {"@type": "ListItem", "position": 2, "name": "Servidores Rust Pirata", "item": "https://latamrust.online/servidores-rust-pirata"}
+              {"@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://Rust Pirata.vercel.app/"},
+              {"@type": "ListItem", "position": 2, "name": "Servidores Rust Pirata", "item": "https://Rust Pirata.vercel.app/servidores-rust-pirata"}
             ]
           })}
         </script>
@@ -79,7 +79,7 @@ const ServidoresRustPirata: React.FC = () => {
           
           <p className="text-xl text-gray-300 mb-8 leading-relaxed">
             Descubra os <strong>melhores servidores de Rust Pirata</strong> em 2026. Lista atualizada com 
-            <strong> servidores brasileiros</strong>, ping baixo, alta população e sem lag. LATAMRUST lidera 
+            <strong> servidores brasileiros</strong>, ping baixo, alta população e sem lag. Rust Pirata lidera 
             o ranking como o servidor #1 de Rust Pirata no Brasil e toda América Latina.
           </p>
           
@@ -113,7 +113,7 @@ const ServidoresRustPirata: React.FC = () => {
           </h2>
           
           <div className="space-y-4">
-            {/* #1 LATAMRUST */}
+            {/* #1 Rust Pirata */}
             <div className="bg-gradient-to-r from-yellow-900/30 to-red-900/30 rounded-2xl p-6 border-2 border-yellow-500/50 relative overflow-hidden">
               <div className="absolute top-0 left-0 bg-yellow-500 text-black px-4 py-1 font-black text-sm">
                 #1 MELHOR SERVIDOR
@@ -121,7 +121,7 @@ const ServidoresRustPirata: React.FC = () => {
               <div className="mt-6">
                 <div className="flex items-start justify-between mb-4">
                   <div>
-                    <h3 className="text-3xl font-black text-yellow-400 mb-2">LATAMRUST</h3>
+                    <h3 className="text-3xl font-black text-yellow-400 mb-2">Rust Pirata</h3>
                     <p className="text-gray-300 mb-2">
                       O servidor de Rust Pirata mais popular do Brasil e LATAM com mais de 10.000 jogadores ativos.
                     </p>
@@ -259,7 +259,7 @@ const ServidoresRustPirata: React.FC = () => {
               <h3 className="text-xl font-bold text-white mb-3">1. Verifique a População</h3>
               <p className="leading-relaxed">
                 Um <strong>servidor de Rust Pirata</strong> precisa ter pelo menos 1,000 jogadores ativos para garantir 
-                ação constante, PvP dinâmico e economia de mercado funcionando. O LATAMRUST com 10,000+ jogadores 
+                ação constante, PvP dinâmico e economia de mercado funcionando. O Rust Pirata com 10,000+ jogadores 
                 garante que você sempre encontrará pessoas para jogar.
               </p>
             </div>
@@ -276,7 +276,7 @@ const ServidoresRustPirata: React.FC = () => {
               <h3 className="text-xl font-bold text-white mb-3">3. Confirme Anti-Cheat Ativo</h3>
               <p className="leading-relaxed">
                 Nada arruina mais o jogo que hackers. Escolha <strong>servidores de Rust Pirata</strong> com anti-cheat 
-                profissional e moderação ativa 24/7. LATAMRUST bane hackers em minutos.
+                profissional e moderação ativa 24/7. Rust Pirata bane hackers em minutos.
               </p>
             </div>
 
@@ -306,35 +306,35 @@ const ServidoresRustPirata: React.FC = () => {
             {[
               {
                 q: "Qual é o melhor servidor de Rust Pirata do Brasil?",
-                a: "LATAMRUST é o melhor servidor de Rust Pirata do Brasil em 2026, com mais de 10.000 jogadores ativos, ping baixo (15ms média), anti-cheat profissional e comunidade ativa 24/7 em português."
+                a: "Rust Pirata é o melhor servidor de Rust Pirata do Brasil em 2026, com mais de 10.000 jogadores ativos, ping baixo (15ms média), anti-cheat profissional e comunidade ativa 24/7 em português."
               },
               {
                 q: "Como encontrar servidores de Rust Pirata brasileiros?",
-                a: "Os melhores servidores Rust Pirata brasileiros estão listados aqui. LATAMRUST é hospedado no Brasil, garantindo ping baixo para todo BR. Entre no Discord para ver lista completa e IPs atualizados."
+                a: "Os melhores servidores Rust Pirata brasileiros estão listados aqui. Rust Pirata é hospedado no Brasil, garantindo ping baixo para todo BR. Entre no Discord para ver lista completa e IPs atualizados."
               },
               {
                 q: "Servidores de Rust Pirata são seguros?",
-                a: "Sim, servidores estabelecidos como LATAMRUST são seguros. Evite servidores desconhecidos sem moderação. Sempre baixe Rust Pirata de fontes verificadas no Discord oficial."
+                a: "Sim, servidores estabelecidos como Rust Pirata são seguros. Evite servidores desconhecidos sem moderação. Sempre baixe Rust Pirata de fontes verificadas no Discord oficial."
               },
               {
                 q: "Quantos jogadores tem o maior servidor Rust Pirata?",
-                a: "LATAMRUST, o maior servidor de Rust Pirata da América Latina, tem mais de 10.000 jogadores ativos. Servidores menores têm entre 500-2.000 jogadores."
+                a: "Rust Pirata, o maior servidor de Rust Pirata da América Latina, tem mais de 10.000 jogadores ativos. Servidores menores têm entre 500-2.000 jogadores."
               },
               {
                 q: "Servidores Rust Pirata tem lag?",
-                a: "Depende da qualidade do servidor. LATAMRUST não tem lag pois usa hardware dedicado no Brasil. Servidores mal configurados ou com hardware fraco causam lag constante."
+                a: "Depende da qualidade do servidor. Rust Pirata não tem lag pois usa hardware dedicado no Brasil. Servidores mal configurados ou com hardware fraco causam lag constante."
               },
               {
                 q: "Posso jogar em servidores Rust Pirata de outros países?",
-                a: "Sim, mas o ping será alto. Servidores europeus ou americanos causam 150ms+ ping para brasileiros. Recomendamos servidores BR/LATAM como LATAMRUST para melhor experiência."
+                a: "Sim, mas o ping será alto. Servidores europeus ou americanos causam 150ms+ ping para brasileiros. Recomendamos servidores BR/LATAM como Rust Pirata para melhor experiência."
               },
               {
                 q: "Como conectar em servidores de Rust Pirata?",
-                a: "Abra Rust Pirata, pressione F1 (console) e digite: client.connect IP:PORT. O IP do servidor está no Discord. LATAMRUST fornece IP atualizado 24/7 no Discord oficial."
+                a: "Abra Rust Pirata, pressione F1 (console) e digite: client.connect IP:PORT. O IP do servidor está no Discord. Rust Pirata fornece IP atualizado 24/7 no Discord oficial."
               },
               {
                 q: "Servidores Rust Pirata são grátis?",
-                a: "Sim, jogar em servidores de Rust Pirata é 100% grátis. LATAMRUST e outros servidores são mantidos por doações voluntárias, sem custo obrigatório para jogar."
+                a: "Sim, jogar em servidores de Rust Pirata é 100% grátis. Rust Pirata e outros servidores são mantidos por doações voluntárias, sem custo obrigatório para jogar."
               }
             ].map((item, i) => (
               <div key={i} className="bg-gray-900/50 rounded-xl p-6 border border-gray-700/30">
@@ -350,7 +350,7 @@ const ServidoresRustPirata: React.FC = () => {
           <Server className="w-16 h-16 text-red-500 mx-auto mb-4" />
           <h2 className="text-4xl font-black mb-4">Jogue no Melhor Servidor de Rust Pirata</h2>
           <p className="text-xl text-gray-300 mb-6">
-            LATAMRUST - #1 Servidor Rust Pirata Brasil com 10,000+ jogadores ativos
+            Rust Pirata - #1 Servidor Rust Pirata Brasil com 10,000+ jogadores ativos
           </p>
           <Link 
             to="/"
@@ -362,7 +362,7 @@ const ServidoresRustPirata: React.FC = () => {
 
         {/* Internal Linking SEO */}
         <section className="mt-8 bg-gray-900/30 rounded-xl p-6 border border-gray-800/50">
-          <h3 className="text-lg font-bold text-gray-400 mb-4">📚 Guias Completos LATAMRUST</h3>
+          <h3 className="text-lg font-bold text-gray-400 mb-4">📚 Guias Completos Rust Pirata</h3>
           <div className="grid md:grid-cols-3 gap-3 text-sm">
             <Link to="/rust-pirata-brasil" className="text-gray-500 hover:text-red-400 transition-colors">
               → Tutorial Completo Rust Pirata Brasil
@@ -371,7 +371,7 @@ const ServidoresRustPirata: React.FC = () => {
               → Rust Family - Como Entrar na Family
             </Link>
             <Link to="/" className="text-gray-500 hover:text-red-400 transition-colors">
-              → LATAMRUST - Jogar no Servidor #1
+              → Rust Pirata - Jogar no Servidor #1
             </Link>
           </div>
         </section>
@@ -379,7 +379,7 @@ const ServidoresRustPirata: React.FC = () => {
         {/* Footer SEO */}
         <footer className="mt-8 pt-8 border-t border-gray-800 text-center text-gray-500 text-sm">
           <p className="mb-2">
-            <strong>Servidores Rust Pirata Brasil 2026</strong> - Lista Atualizada | LATAMRUST #1
+            <strong>Servidores Rust Pirata Brasil 2026</strong> - Lista Atualizada | Rust Pirata #1
           </p>
           <p>
             Keywords: servidores rust pirata, servidor rust pirata brasil, lista servidores rust pirata, 

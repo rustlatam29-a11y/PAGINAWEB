@@ -41,10 +41,11 @@ const Loader: React.FC<LoaderProps> = ({ onLoadComplete }) => {
       <div className="text-center px-6">
         <img
           src="/loader-bg.webp"
-          alt="LATAMRUST"
+          alt="Rust Pirata"
           width="80"
           height="80"
           className="w-20 h-20 rounded-2xl mx-auto mb-6 object-cover"
+          decoding="async"
         />
 
         <p className="text-white font-black text-2xl tracking-tight mb-1">

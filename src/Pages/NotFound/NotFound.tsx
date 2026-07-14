@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+﻿import React, { useState, useEffect } from "react";
 import { Helmet } from "react-helmet-async";
 import {
   Gamepad2,
@@ -56,7 +56,7 @@ const EpicRustNotFound: React.FC = () => {
   return (
     <>
       <Helmet>
-        <title>Página No Encontrada (404) - LATAMRUST</title>
+        <title>Página No Encontrada (404) - Rust Pirata</title>
         <meta name="robots" content="noindex, nofollow" />
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-gray-900 via-black to-red-900 overflow-hidden relative flex items-center justify-center">

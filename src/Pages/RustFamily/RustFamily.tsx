@@ -1,10 +1,22 @@
-import React from "react";
+﻿import React from "react";
 import { Users, Trophy, Heart, Zap, Shield, Globe, Crown } from "lucide-react";
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 
 const RustFamily: React.FC = () => {
   return (
     <div className="min-h-screen bg-black text-white">
+      <Helmet>
+        <title>{'Rust Family - Comunidad Rust'}</title>
+        <meta name="description" content="Rust Family, la comunidad de Rust más grande de LATAM. Únete a miles de jugadores." />
+        <meta name="robots" content="index, follow" />
+        <link rel="canonical" href="https://Rust Pirata.vercel.app/rust-family/" />
+        <meta property="og:title" content={'Rust Family - Comunidad Rust'} />
+        <meta property="og:description" content="Rust Family, la comunidad de Rust más grande de LATAM. Únete a miles de jugadores." />
+        <meta property="og:url" content="https://Rust Pirata.vercel.app/rust-family/" />
+        <meta property="og:image" content="https://Rust Pirata.vercel.app/rust-old-school-logo.webp" />
+        <meta property="og:type" content="website" />
+      </Helmet>
       {/* Hero Section */}
       <section className="relative py-20 px-4 bg-gradient-to-b from-red-950/30 to-black">
         <div className="max-w-4xl mx-auto text-center">
@@ -17,11 +29,11 @@ const RustFamily: React.FC = () => {
           </div>
           
           <h2 className="text-2xl md:text-4xl font-bold text-gray-200 mb-6">
-            A Maior Família de Rust Pirata do Brasil e LATAM - LATAMRUST
+            A Maior Família de Rust Pirata do Brasil e LATAM - Rust Pirata
           </h2>
           
           <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-            Junte-se à <strong>Rust Family LATAMRUST</strong>, a comunidade mais unida e ativa de 
+            Junte-se à <strong>Rust Family Rust Pirata</strong>, a comunidade mais unida e ativa de 
             <strong> Rust Pirata no Brasil</strong>. Mais de 10.000 membros brasileiros jogando juntos, 
             ajudando uns aos outros e dominando os servidores.
           </p>
@@ -55,7 +67,7 @@ const RustFamily: React.FC = () => {
             <p>
               A <strong>Rust Family</strong> (também conhecida como <strong>Família Rust</strong> ou <strong>Family Rust</strong>) 
               é o termo usado para descrever comunidades unidas de jogadores de Rust que jogam juntos como uma grande família. 
-              No <strong>LATAMRUST</strong>, criamos a maior e mais forte Rust Family do Brasil e toda América Latina.
+              No <strong>Rust Pirata</strong>, criamos a maior e mais forte Rust Family do Brasil e toda América Latina.
             </p>
             <p>
               Diferente de clãs tradicionais, a <strong>Rust Family Brasil</strong> funciona como uma verdadeira família onde 
@@ -65,16 +77,16 @@ const RustFamily: React.FC = () => {
             <p>
               Se você está procurando por <strong>"rust family"</strong>, <strong>"rust family brasil"</strong>, 
               <strong>"familia rust"</strong> ou <strong>"rust family server"</strong>, você encontrou o lugar certo. 
-              LATAMRUST é o lar da maior e mais ativa Rust Family em português do mundo.
+              Rust Pirata é o lar da maior e mais ativa Rust Family em português do mundo.
             </p>
           </div>
         </section>
 
-        {/* Por Que LATAMRUST é a Melhor Rust Family */}
+        {/* Por Que Rust Pirata é a Melhor Rust Family */}
         <section className="mb-12 bg-gray-900/50 rounded-2xl p-8">
           <h2 className="text-3xl font-black mb-6 text-red-500 flex items-center gap-3">
             <Trophy className="w-8 h-8" />
-            Por Que LATAMRUST é a Melhor Rust Family do Brasil?
+            Por Que Rust Pirata é a Melhor Rust Family do Brasil?
           </h2>
           
           <div className="grid md:grid-cols-2 gap-4">
@@ -123,7 +135,7 @@ const RustFamily: React.FC = () => {
 
         {/* Como Entrar na Rust Family */}
         <section className="mb-12">
-          <h2 className="text-3xl font-black mb-6 text-red-500">Como Entrar na Rust Family LATAMRUST?</h2>
+          <h2 className="text-3xl font-black mb-6 text-red-500">Como Entrar na Rust Family Rust Pirata?</h2>
           
           <div className="space-y-6">
             <div className="flex gap-4">
@@ -133,7 +145,7 @@ const RustFamily: React.FC = () => {
               <div>
                 <h3 className="text-xl font-bold mb-2">Entre no Discord da Family</h3>
                 <p className="text-gray-300 mb-2">
-                  Acesse nosso Discord oficial em <a href="https://discord.com/invite/7Vz4YBamFG" className="text-green-400 underline" target="_blank" rel="noopener noreferrer">Discord LATAMRUST</a>. 
+                  Acesse nosso Discord oficial em <a href="https://discord.com/invite/7Vz4YBamFG" className="text-green-400 underline" target="_blank" rel="noopener noreferrer">Discord Rust Pirata</a>. 
                   Este é o coração da Rust Family Brasil, onde todos os membros se conectam.
                 </p>
               </div>
@@ -186,7 +198,7 @@ const RustFamily: React.FC = () => {
                 <h3 className="text-xl font-bold mb-2 text-green-400">Bem-vindo à Family!</h3>
                 <p className="text-gray-300">
                   Agora você faz parte da maior Rust Family do Brasil. Jogue, ajude, cresça junto com mais de 10.000 
-                  jogadores brasileiros. Família LATAMRUST nunca deixa ninguém para trás!
+                  jogadores brasileiros. Família Rust Pirata nunca deixa ninguém para trás!
                 </p>
               </div>
             </div>
@@ -217,7 +229,7 @@ const RustFamily: React.FC = () => {
             <div className="border-l-4 border-red-500 pl-4">
               <h3 className="font-bold text-white mb-2">3. Jogo Limpo (No Cheat)</h3>
               <p className="text-gray-300">
-                Rust Family LATAMRUST é 100% limpa. Hackers são banidos imediatamente. Jogamos com habilidade, 
+                Rust Family Rust Pirata é 100% limpa. Hackers são banidos imediatamente. Jogamos com habilidade, 
                 não com trapaça.
               </p>
             </div>
@@ -256,11 +268,11 @@ const RustFamily: React.FC = () => {
               },
               {
                 name: "Gabriel - Minas Gerais",
-                text: "A Rust Family LATAMRUST é diferente. Todo mundo se ajuda de verdade. Já doei e recebi recursos várias vezes. União forte!"
+                text: "A Rust Family Rust Pirata é diferente. Todo mundo se ajuda de verdade. Já doei e recebi recursos várias vezes. União forte!"
               },
               {
                 name: "Rafael - Bahia",
-                text: "Jogo Rust há anos, mas só na LATAMRUST encontrei uma family de verdade. Eventos toda semana, raids épicos, diversão garantida!"
+                text: "Jogo Rust há anos, mas só na Rust Pirata encontrei uma family de verdade. Eventos toda semana, raids épicos, diversão garantida!"
               }
             ].map((item, i) => (
               <div key={i} className="bg-gray-900/50 rounded-xl p-6 border border-gray-700/30">
@@ -283,7 +295,7 @@ const RustFamily: React.FC = () => {
               <strong> servidor rust family</strong>, <strong>rust family community</strong>.
             </p>
             <p>
-              Se você procura por qualquer uma dessas variações, LATAMRUST é a maior e melhor 
+              Se você procura por qualquer uma dessas variações, Rust Pirata é a maior e melhor 
               <strong> rust family do Brasil</strong> com mais de 10.000 membros ativos em 2026.
             </p>
           </div>
@@ -300,12 +312,12 @@ const RustFamily: React.FC = () => {
                 a: "Rust Family (Família Rust) é uma comunidade unida de jogadores de Rust que jogam juntos como uma grande família. Diferente de clãs tradicionais, a family valoriza união, ajuda mútua e progressão coletiva ao invés de apenas vitórias individuais."
               },
               {
-                q: "Como posso entrar na Rust Family LATAMRUST?",
-                a: "Entre no nosso Discord (Discord LATAMRUST), apresente-se, baixe o Rust Pirata 2275 e conecte ao servidor. É 100% grátis e todos são bem-vindos!"
+                q: "Como posso entrar na Rust Family Rust Pirata?",
+                a: "Entre no nosso Discord (Discord Rust Pirata), apresente-se, baixe o Rust Pirata 2275 e conecte ao servidor. É 100% grátis e todos são bem-vindos!"
               },
               {
                 q: "Preciso ter experiência em Rust para entrar na Family?",
-                a: "NÃO! A Rust Family LATAMRUST aceita tanto iniciantes quanto veteranos. Temos veteranos dedicados a ensinar novatos. Todos começaram do zero em algum momento."
+                a: "NÃO! A Rust Family Rust Pirata aceita tanto iniciantes quanto veteranos. Temos veteranos dedicados a ensinar novatos. Todos começaram do zero em algum momento."
               },
               {
                 q: "A Rust Family aceita jogadores solo?",
@@ -316,7 +328,7 @@ const RustFamily: React.FC = () => {
                 a: "Proteção contra raids (a family protege seus membros), ajuda com recursos, tutoriais e dicas de veteranos, eventos exclusivos, base compartilhada (opcional), e uma comunidade ativa 24/7 em português."
               },
               {
-                q: "A Rust Family LATAMRUST é só para brasileiros?",
+                q: "A Rust Family Rust Pirata é só para brasileiros?",
                 a: "Somos focados no Brasil mas aceitamos toda LATAM (Argentina, Chile, México, Colômbia, etc). Falamos português e español. Nosso ping é otimizado para toda América Latina."
               },
               {
@@ -363,7 +375,7 @@ const RustFamily: React.FC = () => {
 
         {/* Internal Linking SEO */}
         <section className="mt-8 bg-gray-900/30 rounded-xl p-6 border border-gray-800/50">
-          <h3 className="text-lg font-bold text-gray-400 mb-4">📚 Mais Sobre LATAMRUST</h3>
+          <h3 className="text-lg font-bold text-gray-400 mb-4">📚 Mais Sobre Rust Pirata</h3>
           <div className="grid md:grid-cols-3 gap-3 text-sm">
             <Link to="/rust-pirata-brasil" className="text-gray-500 hover:text-red-400 transition-colors">
               → Como Baixar Rust Pirata 2275 Brasil
@@ -372,7 +384,7 @@ const RustFamily: React.FC = () => {
               → Top 10 Servidores Rust Pirata Brasil
             </Link>
             <Link to="/" className="text-gray-500 hover:text-red-400 transition-colors">
-              → LATAMRUST Homepage - Entrar Servidor
+              → Rust Pirata Homepage - Entrar Servidor
             </Link>
           </div>
         </section>
@@ -380,7 +392,7 @@ const RustFamily: React.FC = () => {
         {/* Footer SEO */}
         <footer className="mt-8 pt-8 border-t border-gray-800 text-center text-gray-500 text-sm">
           <p className="mb-2">
-            <strong>LATAMRUST Rust Family</strong> - A Maior Família de Rust Pirata do Brasil | Comunidade LATAM 2026
+            <strong>Rust Pirata Rust Family</strong> - A Maior Família de Rust Pirata do Brasil | Comunidade LATAM 2026
           </p>
           <p>
             Keywords: rust family, família rust, family rust, rust family brasil, rust family server, familia rust pirata, 

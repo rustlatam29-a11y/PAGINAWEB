@@ -1,10 +1,22 @@
-import React from "react";
+﻿import React from "react";
 import { Server, Shield, Users, Globe, Wifi, HardDrive, Activity, Award, ChevronRight } from "lucide-react";
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 
 const ServidorRustFamily: React.FC = () => {
   return (
     <div className="min-h-screen bg-black text-white">
+      <Helmet>
+        <title>{'Servidor Rust Family | Rust Pirata'}</title>
+        <meta name="description" content="Servidor oficial Rust Family. Ping bajo LATAM, +10,000 jugadores." />
+        <meta name="robots" content="index, follow" />
+        <link rel="canonical" href="https://Rust Pirata.vercel.app/servidor-rust-family/" />
+        <meta property="og:title" content={'Servidor Rust Family | Rust Pirata'} />
+        <meta property="og:description" content="Servidor oficial Rust Family. Ping bajo LATAM, +10,000 jugadores." />
+        <meta property="og:url" content="https://Rust Pirata.vercel.app/servidor-rust-family/" />
+        <meta property="og:image" content="https://Rust Pirata.vercel.app/rust-old-school-logo.webp" />
+        <meta property="og:type" content="website" />
+      </Helmet>
       {/* Hero Section */}
       <section className="relative py-20 px-4 bg-gradient-to-b from-red-950/30 to-black">
         <div className="max-w-4xl mx-auto text-center">
@@ -15,11 +27,11 @@ const ServidorRustFamily: React.FC = () => {
           </h1>
           
           <h2 className="text-2xl md:text-4xl font-bold text-gray-200 mb-6">
-            LATAMRUST - O Servidor Rust Family #1 da América Latina
+            Rust Pirata - O Servidor Rust Family #1 da América Latina
           </h2>
           
           <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-            Procurando o melhor <strong>servidor rust family</strong>? LATAMRUST oferece o servidor mais poderoso, 
+            Procurando o melhor <strong>servidor rust family</strong>? Rust Pirata oferece o servidor mais poderoso, 
             estável e otimizado para <strong>rust family</strong> em toda LATAM. Ping 15-30ms no Brasil, uptime 99.9%, 
             10,000+ jogadores ativos e infraestrutura premium dedicada.
           </p>
@@ -48,7 +60,7 @@ const ServidorRustFamily: React.FC = () => {
         
         {/* Especificações Técnicas */}
         <section className="mb-12">
-          <h2 className="text-4xl font-black mb-6 text-red-500">Especificações do Servidor Rust Family LATAMRUST</h2>
+          <h2 className="text-4xl font-black mb-6 text-red-500">Especificações do Servidor Rust Family Rust Pirata</h2>
           
           <div className="grid md:grid-cols-2 gap-6">
             <div className="bg-gray-900/50 rounded-xl p-6 border border-red-900/30">
@@ -109,7 +121,7 @@ const ServidorRustFamily: React.FC = () => {
         <section className="mb-12 bg-gradient-to-r from-red-900/20 to-gray-900/20 rounded-2xl p-8 border border-red-900/30">
           <h2 className="text-3xl font-black mb-6 text-red-500 flex items-center gap-3">
             <Award className="w-10 h-10" />
-            Por Que o Servidor Rust Family LATAMRUST é o Melhor?
+            Por Que o Servidor Rust Family Rust Pirata é o Melhor?
           </h2>
           
           <div className="space-y-6">
@@ -125,7 +137,7 @@ const ServidorRustFamily: React.FC = () => {
               </p>
               <p className="text-gray-300 leading-relaxed">
                 Outros <strong>servidores rust family</strong> usam hosting barato na Europa ou EUA, resultando em 
-                ping 100-200ms. No LATAMRUST, você sente a diferença no PvP imediatamente.
+                ping 100-200ms. No Rust Pirata, você sente a diferença no PvP imediatamente.
               </p>
             </div>
 
@@ -137,7 +149,7 @@ const ServidorRustFamily: React.FC = () => {
               <p className="text-gray-300 leading-relaxed mb-2">
                 Investimos pesado em infraestrutura. Nosso <strong>servidor rust family</strong> roda em Ryzen 9 5950X 
                 com 128GB RAM e SSDs NVMe em Raid 10. Enquanto outros <strong>servidores rust family</strong> compartilham 
-                recursos com 10+ servidores, LATAMRUST tem hardware dedicado exclusivo.
+                recursos com 10+ servidores, Rust Pirata tem hardware dedicado exclusivo.
               </p>
               <p className="text-gray-300 leading-relaxed">
                 O que isso significa? Zero lag, mesmo com 500 jogadores online. Builds instantâneos. Raids sem freeze. 
@@ -157,7 +169,7 @@ const ServidorRustFamily: React.FC = () => {
               </p>
               <p className="text-gray-300 leading-relaxed">
                 Outros <strong>servidores rust family</strong> caem toda semana, perdem progresso de jogadores, ficam offline 
-                horas. LATAMRUST? Está sempre disponível quando você quer jogar.
+                horas. Rust Pirata? Está sempre disponível quando você quer jogar.
               </p>
             </div>
 
@@ -193,7 +205,7 @@ const ServidorRustFamily: React.FC = () => {
         {/* Comparação com Outros Servidores */}
         <section className="mb-12">
           <h2 className="text-3xl font-black mb-6 text-red-500">
-            Servidor Rust Family LATAMRUST vs Outros Servidores
+            Servidor Rust Family Rust Pirata vs Outros Servidores
           </h2>
           
           <div className="overflow-x-auto">
@@ -201,7 +213,7 @@ const ServidorRustFamily: React.FC = () => {
               <thead className="bg-red-900/30">
                 <tr>
                   <th className="p-4 text-left">Especificação</th>
-                  <th className="p-4 text-center">LATAMRUST</th>
+                  <th className="p-4 text-center">Rust Pirata</th>
                   <th className="p-4 text-center">rustfamily.com.br</th>
                   <th className="p-4 text-center">Outros Servidores</th>
                 </tr>
@@ -272,7 +284,7 @@ const ServidorRustFamily: React.FC = () => {
               <div>
                 <h3 className="text-xl font-bold mb-2">Baixe Rust Pirata 2275</h3>
                 <p className="text-gray-300">
-                  Acesse nosso Discord (<a href="https://discord.com/invite/7Vz4YBamFG" className="text-green-400 underline" target="_blank" rel="noopener noreferrer">Discord LATAMRUST</a>) 
+                  Acesse nosso Discord (<a href="https://discord.com/invite/7Vz4YBamFG" className="text-green-400 underline" target="_blank" rel="noopener noreferrer">Discord Rust Pirata</a>) 
                   e baixe o Rust Pirata atualizado no canal #downloads.
                 </p>
               </div>
@@ -312,7 +324,7 @@ const ServidorRustFamily: React.FC = () => {
 
         {/* Regras do Servidor */}
         <section className="mb-12">
-          <h2 className="text-3xl font-black mb-6 text-red-500">Regras do Servidor Rust Family LATAMRUST</h2>
+          <h2 className="text-3xl font-black mb-6 text-red-500">Regras do Servidor Rust Family Rust Pirata</h2>
           
           <div className="grid md:grid-cols-2 gap-4">
             {[
@@ -356,8 +368,8 @@ const ServidorRustFamily: React.FC = () => {
           <div className="space-y-4">
             {[
               {
-                q: "Qual o IP do servidor rust family LATAMRUST?",
-                a: "O IP é atualizado regularmente e está disponível no nosso Discord oficial (Discord LATAMRUST) no canal de atención. Fazemos isso para evitar ataques DDoS e garantir estabilidade do servidor."
+                q: "Qual o IP do servidor rust family Rust Pirata?",
+                a: "O IP é atualizado regularmente e está disponível no nosso Discord oficial (Discord Rust Pirata) no canal de atención. Fazemos isso para evitar ataques DDoS e garantir estabilidade do servidor."
               },
               {
                 q: "O servidor rust family tem lag?",
@@ -384,8 +396,8 @@ const ServidorRustFamily: React.FC = () => {
                 a: "Sim, plugins equilibrados que melhoram a experiência: teleports, kits iniciais, sistema de ranks, economia. Nada que desequilibre o jogo ou dê vantagens injustas."
               },
               {
-                q: "Por que escolher LATAMRUST em vez de rustfamily.com.br?",
-                a: "Simples: ping mais baixo (15-30ms vs 50-80ms), hardware superior (dedicado vs compartilhado), comunidade 5x maior (10,000+ vs 2,000), uptime melhor (99.9% vs 95%), e moderação profissional ativa 24/7. Testamos ambos, LATAMRUST é objetivamente superior."
+                q: "Por que escolher Rust Pirata em vez de rustfamily.com.br?",
+                a: "Simples: ping mais baixo (15-30ms vs 50-80ms), hardware superior (dedicado vs compartilhado), comunidade 5x maior (10,000+ vs 2,000), uptime melhor (99.9% vs 95%), e moderação profissional ativa 24/7. Testamos ambos, Rust Pirata é objetivamente superior."
               }
             ].map((item, i) => (
               <div key={i} className="bg-gray-900/50 rounded-xl p-6 border border-gray-700/30">
@@ -437,7 +449,7 @@ const ServidorRustFamily: React.FC = () => {
               → Rust Family - História e Benefícios
             </Link>
             <Link to="/comunidade-rust-family" className="text-gray-500 hover:text-red-400 transition-colors">
-              → Comunidade Rust Family LATAMRUST
+              → Comunidade Rust Family Rust Pirata
             </Link>
             <Link to="/rust-pirata-brasil" className="text-gray-500 hover:text-red-400 transition-colors">
               → Tutorial Baixar Rust Pirata
@@ -448,7 +460,7 @@ const ServidorRustFamily: React.FC = () => {
         {/* Footer SEO */}
         <footer className="mt-10 pt-8 border-t border-gray-800 text-center text-gray-500 text-sm">
           <p className="mb-2">
-            <strong>Servidor Rust Family LATAMRUST</strong> - O Melhor Servidor Rust Family do Brasil e LATAM 2026
+            <strong>Servidor Rust Family Rust Pirata</strong> - O Melhor Servidor Rust Family do Brasil e LATAM 2026
           </p>
           <p className="leading-relaxed">
             Keywords: servidor rust family, rust family server, servidor rust family brasil, servidor rust family latam, 

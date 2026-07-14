@@ -1,5 +1,6 @@
-import React, { useState, useEffect, useMemo } from "react";
+﻿import React, { useState, useEffect, useMemo } from "react";
 import { Shield, AlertTriangle, Ban, Eye, Scale, Users, FileText, CheckCircle, XCircle } from "lucide-react";
+import { Helmet } from "react-helmet-async";
 
 // Componente para iconos de reglas
 const RuleIcon: React.FC<{ icon: React.ReactNode; color: string }> = React.memo(({ icon, color }) => (
@@ -183,6 +184,17 @@ const RulesSection: React.FC = () => {
 
   return (
     <section className="relative py-20 bg-gradient-to-br from-slate-900 via-red-900 to-orange-900 overflow-hidden">
+      <Helmet>
+        <title>{'Reglas del Servidor | Rust Pirata'}</title>
+        <meta name="description" content="Reglas oficiales del servidor Rust Pirata. Lee todas las normas antes de jugar." />
+        <meta name="robots" content="index, follow" />
+        <link rel="canonical" href="https://Rust Pirata.vercel.app/reglas/" />
+        <meta property="og:title" content={'Reglas del Servidor | Rust Pirata'} />
+        <meta property="og:description" content="Reglas oficiales del servidor Rust Pirata. Lee todas las normas antes de jugar." />
+        <meta property="og:url" content="https://Rust Pirata.vercel.app/reglas/" />
+        <meta property="og:image" content="https://Rust Pirata.vercel.app/rust-old-school-logo.webp" />
+        <meta property="og:type" content="website" />
+      </Helmet>
       {/* Fondo animado */}
       <div className="absolute inset-0">
         {/* Patrón de fondo */}
@@ -227,7 +239,7 @@ const RulesSection: React.FC = () => {
               </div>
             </div>
             <p className="text-xl text-orange-200 font-bold max-w-3xl mx-auto">
-              LATAMRUST mantiene una política de tolerancia cero frente a trampas, software externo o conductas que comprometan la integridad y respeto
+              Rust Pirata mantiene una política de tolerancia cero frente a trampas, software externo o conductas que comprometan la integridad y respeto
             </p>
           </div>
         </div>

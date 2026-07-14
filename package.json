@@ -8,11 +8,12 @@
   },
   "scripts": {
     "dev": "vite",
-    "build": "tsc -b && vite build && node generate-seo-pages.js",
+    "build": "tsc -b && vite build && node generate-seo-pages.js && node generate-forum-pages.js",
     "lint": "eslint .",
     "preview": "vite preview"
   },
   "dependencies": {
+    "@supabase/supabase-js": "^2.110.3",
     "@tailwindcss/vite": "^4.1.12",
     "lucide-react": "^0.539.0",
     "react": "^19.1.1",
